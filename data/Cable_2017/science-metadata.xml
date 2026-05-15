@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packageId="doi:10.18739/A23N20D37" system="https://arcticdata.io" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 eml.xsd">
+  <dataset>
+    <alternateIdentifier>587c64b2-717f-11e4-a77e-00c0f03d5b7c</alternateIdentifier>
+    <title>Network of Permafrost Observatories in Western Alaska</title>
+    <creator id="4160206903551391">
+      <individualName>
+        <givenName>William</givenName>
+        <surName>Cable</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>903 Koyukuk Dr.
+Geophysical Institute</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>wlcable@alaska.edu</electronicMailAddress>
+    </creator>
+    <creator id="6126940340303111">
+      <individualName>
+        <givenName>Vladimir</givenName>
+        <surName>Romanovsky</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>903 Koyukuk Dr.
+Geophysical Institute</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>veromanovsky@alaska.edu</electronicMailAddress>
+    </creator>
+    <metadataProvider id="3381913489169790">
+      <individualName>
+        <givenName>William</givenName>
+        <surName>Cable</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>903 Koyukuk Dr.
+Geophysical Institute</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>wlcable@alaska.edu</electronicMailAddress>
+    </metadataProvider>
+    <associatedParty id="7211740496017864">
+      <individualName>
+        <givenName>Vladimir</givenName>
+        <surName>Romanovsky</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>903 Koyukuk Dr.
+Geophysical Institute</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>veromanovsky@alaska.edu</electronicMailAddress>
+      <role>principalInvestigator</role>
+    </associatedParty>
+    <pubDate>2017-02-22</pubDate>
+    <abstract>
+      <para>This data set contains shallow borehole temperature and surface meteorological data from a network of sites in and around the Selawik NWR in Western Alaska. Find more information about this project at http://permafrost.gi.alaska.edu/project/Selawik_NWR or read our publication:
+Cable, W.L., Romanovsky, V.E., and Jorgenson, M. T. 2016. Scaling-up permafrost thermal measurements in western Alaska using an ecotype approach. The Cryosphere. doi:10.5194/tc-2016-30</para>
+    </abstract>
+    <keywordSet>
+      <keyword>EARTH SCIENCE &gt; CRYOSPHERE &gt; FROZEN GROUND &gt; PERMAFROST</keyword>
+      <keyword>IN SITU/LABORATORY INSTRUMENTS &gt; RECORDERS/LOGGERS &gt; TEMPERATURE LOGGERS</keyword>
+      <keyword>IN SITU/LABORATORY INSTRUMENTS &gt; RECORDERS/LOGGERS &gt; AWS &gt; AUTOMATED WEATHER SYSTEM</keyword>
+      <keyword>OBSERVATORY</keyword>
+      <keyword>POINT</keyword>
+      <keyword>DAILY TO WEEKLY</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>POINT</keyword>
+      <keywordThesaurus>ACADIS Keywords</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>environment</keyword>
+      <keywordThesaurus>ISO 19115:2003 MD_TopicCategoryCode</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+</para>
+    </intellectualRights>
+    <distribution>
+      <offline>
+        <mediumName>digital </mediumName>
+      </offline>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>UNITED STATES OF AMERICA &gt; ALASKA</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-162.0000</westBoundingCoordinate>
+          <eastBoundingCoordinate>-155.0000</eastBoundingCoordinate>
+          <northBoundingCoordinate>68.0000</northBoundingCoordinate>
+          <southBoundingCoordinate>65.0000</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2011-07-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2014-07-01</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact id="1821399108475319">
+      <individualName>
+        <givenName>William</givenName>
+        <surName>Cable</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>903 Koyukuk Dr.
+Geophysical Institute</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <electronicMailAddress>wlcable@alaska.edu</electronicMailAddress>
+    </contact>
+    <project>
+      <title>Network of Permafrost Observatories in Western Alaska</title>
+      <personnel>
+        <individualName>
+          <givenName>Vladimir</givenName>
+          <surName>Romanovsky</surName>
+        </individualName>
+        <role>originator</role>
+      </personnel>
+      <funding>
+        <para>0856864</para>
+        <para>1304271</para>
+      </funding>
+    </project>
+    <dataTable>
+      <entityName>network_sampling_sites.csv</entityName>
+      <physical scope="document">
+        <objectName>network_sampling_sites.csv</objectName>
+        <size>129552</size>
+        <authentication method="SHA1">20dafdc6768d2c2de6c368d1626140b126165d01</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution id="20dafdc6768d2c2de6c368d1626140b126165d01" scope="document">
+          <online>
+            <url function="download">ecogrid://knb/arctic-data.10032.2</url>
+          </online>
+          <access order="allowFirst" authSystem="knb">
+            <allow>
+              <principal>CN=arctic-data-admins,DC=dataone,DC=org</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>http://orcid.org/0000-0001-7932-2122</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>public</principal>
+              <permission>read</permission>
+            </allow>
+          </access>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>Date of sampling</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>DD-MM-YY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>siteCode</attributeName>
+          <attributeDefinition>Network of sites around the Selawik National Wildlife Refuge in Western Alaska</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Code for the name of sampling site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>siteName</attributeName>
+          <attributeDefinition>Network of sites around the Selawik National Wildlife Refuge in Western Alaska</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Name of the sampling site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ecotypeCode</attributeName>
+          <attributeDefinition>Basic vegetation groups that indicates permafrost thermal state</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Code for the ecotype of the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ecotypeName</attributeName>
+          <attributeDefinition>Basic vegetation groups that indicates permafrost thermal state</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Name for the ectotype of the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>latitude</attributeName>
+          <attributeDefinition>Latitude measurement of the sampling site</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>longitude</attributeName>
+          <attributeDefinition>Longitude measurement of the sampling site</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>soilDescription</attributeName>
+          <attributeDefinition>Description of the soil in the ecotype of the sample</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Measure of soil, fibric, humic and silt in cm</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp3cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 3 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp25cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 25 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp75cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 75 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp100cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 100 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp115cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 115 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>temp150cm</attributeName>
+          <attributeDefinition>Temperature at a depth of 150 cm from the moss (ground) surface</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>Kugurak_Cabin.csv</entityName>
+      <physical scope="document">
+        <objectName>Kugurak_Cabin.csv</objectName>
+        <size>129552</size>
+        <authentication method="SHA1">097dca3899797af751b0df2931b31d3ed8e95ef2</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution id="097dca3899797af751b0df2931b31d3ed8e95ef2" scope="document">
+          <online>
+            <url function="download">ecogrid://knb/arctic-data.10032.2</url>
+          </online>
+          <access order="allowFirst" authSystem="knb">
+            <allow>
+              <principal>CN=arctic-data-admins,DC=dataone,DC=org</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>http://orcid.org/0000-0001-7932-2122</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>public</principal>
+              <permission>read</permission>
+            </allow>
+          </access>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Timestamp</attributeName>
+          <attributeLabel>Sampling range from 8/1/2012 - 7/31/2014</attributeLabel>
+          <attributeDefinition>Day that measurement was taken from Selawik Thaw Slump (STS)</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_2cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_5cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 5 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_10cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 10 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_15cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 15 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_20cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 20 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_25cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 25 cm snow depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_30cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 30 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_35cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 35 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_40cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 40 cm snow depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_50cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 50 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_60cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 60 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_70cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 70 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_80cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 80 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_100cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 100 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_125cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 125 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_150cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 150 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Air.Temperature</attributeName>
+          <attributeDefinition>Measurement of the average temperature in the air</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tdeep_2.0m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tdeep_2.5m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2.5 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tdeep_3.0m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 3 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SnowDepth</attributeName>
+          <attributeDefinition>Average depth of the snow in this time period</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>Selawik_Thaw_Slump.csv</entityName>
+      <physical scope="document">
+        <objectName>Selawik_Thaw_Slump.csv</objectName>
+        <size>129552</size>
+        <authentication method="SHA1">117d5e182a700519763f320da273422cd7e26aa2</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution id="117d5e182a700519763f320da273422cd7e26aa2" scope="document">
+          <online>
+            <url function="download">ecogrid://knb/arctic-data.10032.2</url>
+          </online>
+          <access order="allowFirst" authSystem="knb">
+            <allow>
+              <principal>CN=arctic-data-admins,DC=dataone,DC=org</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>http://orcid.org/0000-0001-7932-2122</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>public</principal>
+              <permission>read</permission>
+            </allow>
+          </access>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Timestamp</attributeName>
+          <attributeLabel>Sampling range from 8/1/2012 - 7/31/2014</attributeLabel>
+          <attributeDefinition>Day that measurement was taken from Kugurak Cabin (KC1)</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_2cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_5cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 5 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_10cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 10 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_15cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 15 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_20cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 20 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_25cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 25 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_30cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 30 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_35cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 35 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_40cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 40 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_50cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 50 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_60cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 60 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_70cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 70 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_80cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 80 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_100cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 100 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_125cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 125 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_150cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 150 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Air.Temperature</attributeName>
+          <attributeDefinition>Measurement of the average temperature in the air</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>2.0m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>2.5m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2.5 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>3.0m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 3 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SnowDepth</attributeName>
+          <attributeDefinition>Average depth of the snow in this time period</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable>
+      <entityName>Selawik_Village.csv</entityName>
+      <physical scope="document">
+        <objectName>Selawik_Village.csv</objectName>
+        <size>129552</size>
+        <authentication method="SHA1">4296de042717d3d00f3b1073968f490762fbcbc9</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution id="4296de042717d3d00f3b1073968f490762fbcbc9" scope="document">
+          <online>
+            <url function="download">ecogrid://knb/arctic-data.10032.2</url>
+          </online>
+          <access order="allowFirst" authSystem="knb">
+            <allow>
+              <principal>CN=arctic-data-admins,DC=dataone,DC=org</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>http://orcid.org/0000-0001-7932-2122</principal>
+              <permission>all</permission>
+            </allow>
+            <allow>
+              <principal>public</principal>
+              <permission>read</permission>
+            </allow>
+          </access>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Timestamp</attributeName>
+          <attributeLabel>Sampling range from 8/1/2012 - 7/31/2014</attributeLabel>
+          <attributeDefinition>Day that measurement was taken from Selawik Village (SV)</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_2cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_5cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 5 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_10cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 10 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_15cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 15 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_20cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 20 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_25cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 25 cm snow depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_30cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 30 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_35cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 35 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_40cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 40 cm snow depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_50cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 50 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_60cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 60 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_70cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 70 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_80cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 80 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_100cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 100 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_125cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 125 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TP1_150cm</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 150 cm soil depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Air.Temperature</attributeName>
+          <attributeDefinition>Measurement of the average temperature in the air</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>1m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 1 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>2m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 2 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>3m</attributeName>
+          <attributeDefinition>Measurement of the average temperature at 3 m depth</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>SnowDepth</attributeName>
+          <attributeDefinition>Average depth of the snow in this time period</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>

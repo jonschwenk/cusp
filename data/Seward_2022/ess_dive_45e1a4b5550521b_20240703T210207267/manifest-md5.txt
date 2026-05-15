@@ -1,0 +1,5 @@
+5ae77d6c825966c853ce54b148352722 data/NGA544_UserGuide_Aug2022Survey.pdf
+47ebc2df10fce7b7e4125d1ae4b7b803 data/aug2022survey_dd.csv
+8e76fdaee23f73fe1be5734e782719b5 data/aug2022survey_flmd.csv
+7385067816a57c4c4a22ee20c8b87e38 data/Aug2022SurveyTarget_PFdata.csv
+3fb8542b6016d9959acc2b47ef5404f4 data/SurveyLocationsAug2022.kml

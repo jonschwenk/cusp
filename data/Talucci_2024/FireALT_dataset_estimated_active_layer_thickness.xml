@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="urn:uuid:c5384570-20ed-4e87-9444-563d40a45133" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="knb">
+  <dataset id="urn-uuid-edbeabac-93c1-4d45-ae77-9581769591be">
+    <title>FireALT dataset: estimated active layer thickness for paired burned unburned sites measured from 2001-2023</title>
+    <creator id="5281098775197652">
+      <individualName>
+        <givenName>Anna</givenName>
+        <surName>Talucci</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <electronicMailAddress>atalucci@woodwellclimate.org</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8415-4813</userId>
+    </creator>
+    <creator id="2861402675797268">
+      <individualName>
+        <givenName>Michael</givenName>
+        <surName>Loranty</surName>
+      </individualName>
+      <organizationName>Colgate University</organizationName>
+      <address>
+        <city>Hamilton</city>
+        <administrativeArea>NY</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8851-7386</userId>
+    </creator>
+    <creator id="3768293991622701">
+      <individualName>
+        <givenName>Jean</givenName>
+        <surName>Holloway</surName>
+      </individualName>
+      <organizationName>12, Department of Geography, Environment and Geomatics, University of Ottawa,</organizationName>
+      <address>
+        <city>Ottawa</city>
+        <administrativeArea>ON</administrativeArea>
+        <country>Canada</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-3246-1090</userId>
+    </creator>
+    <creator id="1064774792864514">
+      <individualName>
+        <givenName>Brendan</givenName>
+        <surName>Rogers</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-6711-8466</userId>
+    </creator>
+    <creator id="4321956706100284">
+      <individualName>
+        <givenName>Heather</givenName>
+        <surName>Alexander</surName>
+      </individualName>
+      <organizationName>College of Forestry, Wildlife, and Environment, Auburn University</organizationName>
+      <address>
+        <city>Auburn</city>
+        <administrativeArea>AL</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-1307-8483</userId>
+    </creator>
+    <creator id="5266157671138218">
+      <individualName>
+        <givenName>Natalie</givenName>
+        <surName>Baillargeon</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-0201-775X</userId>
+    </creator>
+    <creator id="8353372532163649">
+      <individualName>
+        <givenName>Jennifer</givenName>
+        <surName>Baltzer</surName>
+      </individualName>
+      <organizationName>Biology Department, Wilfrid Laurier University</organizationName>
+      <address>
+        <city>Waterloo</city>
+        <administrativeArea>ON</administrativeArea>
+        <country>Canada</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7476-5928</userId>
+    </creator>
+    <creator id="6189311874696320">
+      <individualName>
+        <givenName>Logan</givenName>
+        <surName>Berner</surName>
+      </individualName>
+      <organizationName>School of Informatics, Computing, and Cyber Systems, Northern Arizona University</organizationName>
+      <address>
+        <city>Flagstaff</city>
+        <administrativeArea>AZ</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8947-0479</userId>
+    </creator>
+    <creator id="7335634072617277">
+      <individualName>
+        <givenName>Amy</givenName>
+        <surName>Breen</surName>
+      </individualName>
+      <organizationName>International Arctic Research Center, University of Alaska Fairbanks</organizationName>
+      <address>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1109-3906</userId>
+    </creator>
+    <creator id="5720099531773458">
+      <individualName>
+        <givenName>Leya</givenName>
+        <surName>Brodt</surName>
+      </individualName>
+      <organizationName>Tyumen State University</organizationName>
+      <address>
+        <country>Russia</country>
+      </address>
+    </creator>
+    <creator id="2154338080288071">
+      <individualName>
+        <givenName>Brian</givenName>
+        <surName>Buma</surName>
+      </individualName>
+      <organizationName>Integrative Biology, Environmental Defense Fund and University of Colorado</organizationName>
+      <address>
+        <city>Denver</city>
+        <administrativeArea>CO</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-2402-7737</userId>
+    </creator>
+    <creator id="4877106077902661">
+      <individualName>
+        <givenName>Clement</givenName>
+        <surName>Delcourt</surName>
+      </individualName>
+      <organizationName>Faculty of Science, Vrije Universiteit Amsterdam</organizationName>
+      <address>
+        <city>Amsterdam</city>
+        <country>The Netherlands</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-9663-8695</userId>
+    </creator>
+    <creator id="5614033368770700">
+      <individualName>
+        <givenName>Lucas</givenName>
+        <surName>Diaz</surName>
+      </individualName>
+      <organizationName>Faculty of Science, Vrije Universiteit Amsterdam</organizationName>
+      <address>
+        <city>Amsterdam</city>
+        <country>The Netherlands</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-8091-9011</userId>
+    </creator>
+    <creator id="3127006576240054">
+      <individualName>
+        <givenName>Catherine</givenName>
+        <surName>Dieleman</surName>
+      </individualName>
+      <organizationName>School of Environmental Sciences, University of Guelph</organizationName>
+      <address>
+        <city>Guelph</city>
+        <administrativeArea>ON</administrativeArea>
+        <country>Canada</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4280-5849</userId>
+    </creator>
+    <creator id="3345345007854736">
+      <individualName>
+        <givenName>Thomas</givenName>
+        <surName>Douglas</surName>
+      </individualName>
+      <organizationName>U.S. Army Cold Regions Research and Engineering Laboratory</organizationName>
+      <address>
+        <city>Fort Wainwright USA</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>UAS</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-1314-1905</userId>
+    </creator>
+    <creator id="5046238954266567">
+      <individualName>
+        <givenName>Gerald</givenName>
+        <surName>Frost</surName>
+      </individualName>
+      <organizationName>Alaska Biological Research, Inc.</organizationName>
+      <address>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5134-0334</userId>
+    </creator>
+    <creator id="5543955709753380">
+      <individualName>
+        <givenName>Benjamin</givenName>
+        <surName>Gaglioti</surName>
+      </individualName>
+      <organizationName>Water and Environmental Research Center, University of Alaska Fairbanks</organizationName>
+      <address>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-0591-5253</userId>
+    </creator>
+    <creator id="8595333031193872">
+      <individualName>
+        <givenName>Rebecca</givenName>
+        <surName>Hewitt</surName>
+      </individualName>
+      <organizationName>Department of Environmental Studies, Amherst College</organizationName>
+      <address>
+        <city>Amherst</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-6668-8472</userId>
+    </creator>
+    <creator id="9604460876010804">
+      <individualName>
+        <givenName>Teresa</givenName>
+        <surName>Hollingsworth</surName>
+      </individualName>
+      <organizationName>Pacific Northwest Research Station, USDA Forest Service, University of Alaska Fairbanks and Aldo Leopold Wilderness Research Institute, Rocky Mountain Research Station,</organizationName>
+      <address>
+        <city>Missoula</city>
+        <administrativeArea>MT</administrativeArea>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator id="6752743486216041">
+      <individualName>
+        <givenName>M. Torre</givenName>
+        <surName>Jorgenson</surName>
+      </individualName>
+      <organizationName>Alaska Ecoscience</organizationName>
+      <address>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-9834-8851</userId>
+    </creator>
+    <creator id="8564858854607016">
+      <individualName>
+        <givenName>Mark</givenName>
+        <surName>Lara</surName>
+      </individualName>
+      <organizationName>Department(s) of Plant Biology and Geography, University of Illinois Urbana-Champaign</organizationName>
+      <address>
+        <city>Urbana</city>
+        <administrativeArea>IL</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4670-7031</userId>
+    </creator>
+    <creator id="2350474347405360">
+      <individualName>
+        <givenName>Rachel</givenName>
+        <surName>Loehman</surName>
+      </individualName>
+      <organizationName>Alaska Science Center, U.S. Geological Survey</organizationName>
+      <address>
+        <city>Anchorage</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7680-1865</userId>
+    </creator>
+    <creator id="4981142224877930">
+      <individualName>
+        <givenName>Michelle</givenName>
+        <surName>Mack</surName>
+      </individualName>
+      <organizationName>Center for Ecosystem Science and Society and Department of Biological Sciences, Northern Arizona University</organizationName>
+      <address>
+        <city>Flagstaff</city>
+        <administrativeArea>AZ</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-1279-4242</userId>
+    </creator>
+    <creator id="8906000668826459">
+      <individualName>
+        <givenName>Kristen</givenName>
+        <surName>Manies</surName>
+      </individualName>
+      <organizationName>U.S. Geological Survey</organizationName>
+      <address>
+        <city>Moffett Field</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-4941-9657</userId>
+    </creator>
+    <creator id="6251716991270187">
+      <individualName>
+        <givenName>Christina</givenName>
+        <surName>Minions</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-8514-8818</userId>
+    </creator>
+    <creator id="4332653465527332">
+      <individualName>
+        <givenName>Susan</givenName>
+        <surName>Natali</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-3010-2994</userId>
+    </creator>
+    <creator id="4105230474739106">
+      <individualName>
+        <givenName>Jonathon</givenName>
+        <surName>O'Donnell</surName>
+      </individualName>
+      <organizationName>Arctic Network, National Park Service</organizationName>
+      <address>
+        <city>Anchorage</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7031-9808</userId>
+    </creator>
+    <creator id="4202650223638266">
+      <individualName>
+        <givenName>David</givenName>
+        <surName>Olefeldt</surName>
+      </individualName>
+      <organizationName>Department of Renewable Resources, University of Alberta</organizationName>
+      <address>
+        <city>Edmonton</city>
+        <administrativeArea>AB</administrativeArea>
+        <country>Canada</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5976-1475</userId>
+    </creator>
+    <creator id="3058080676844576">
+      <individualName>
+        <givenName>Alison</givenName>
+        <surName>Paulson</surName>
+      </individualName>
+      <organizationName>Humboldt-Toiyabe National Forest, U.S. Forest Service</organizationName>
+      <address>
+        <city>Sparks</city>
+        <administrativeArea>NV</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-2068-3999</userId>
+    </creator>
+    <creator id="2407163332312474">
+      <individualName>
+        <givenName>Adrian</givenName>
+        <surName>Rocha</surName>
+      </individualName>
+      <organizationName>Department of Biological Sciences, University of Notre Dame</organizationName>
+      <address>
+        <city>Notre Dame</city>
+        <administrativeArea>IN</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4618-2407</userId>
+    </creator>
+    <creator id="4013808668064898">
+      <individualName>
+        <givenName>Lisa</givenName>
+        <surName>Saperstein</surName>
+      </individualName>
+      <organizationName>Alaska Regional Office, U.S. Fish and Wildlife Service</organizationName>
+      <address>
+        <city>Anchorage</city>
+        <administrativeArea>AK</administrativeArea>
+        <country>USA</country>
+      </address>
+    </creator>
+    <creator id="1695205436209323">
+      <individualName>
+        <givenName>Tatiana</givenName>
+        <surName>Shestakova</surName>
+      </individualName>
+      <organizationName>Department of Agricultural and Forest Sciences and Engineering, University of Lleida and Joint Research Unit CTFC–AGROTECNIO–CERCA and Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Lleida</city>
+        <administrativeArea>Catalonia</administrativeArea>
+        <country>Spain</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5605-0299</userId>
+    </creator>
+    <creator id="2121615427719566">
+      <individualName>
+        <givenName>Seeta</givenName>
+        <surName>Sistla</surName>
+      </individualName>
+      <organizationName>Natural Resources Management &amp; Environmental Sciences, Cal Poly</organizationName>
+      <address>
+        <city>San Luis Obispo</city>
+        <administrativeArea>CA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-6345-462X</userId>
+    </creator>
+    <creator id="4531124313770262">
+      <individualName>
+        <givenName>Oleg</givenName>
+        <surName>Sizov</surName>
+      </individualName>
+      <organizationName>Oil and Gas Research Institute RAS</organizationName>
+      <address>
+        <city>Moscow</city>
+        <country>Russia</country>
+      </address>
+    </creator>
+    <creator id="9895745245555776">
+      <individualName>
+        <givenName>Andrey</givenName>
+        <surName>Soromotin</surName>
+      </individualName>
+      <organizationName>Tyumen State University</organizationName>
+      <address>
+        <city>Tyumen</city>
+        <country>Russia</country>
+      </address>
+    </creator>
+    <creator id="6183479470343397">
+      <individualName>
+        <givenName>Merritt</givenName>
+        <surName>Turetsky</surName>
+      </individualName>
+      <organizationName>Renewable and Sustainable Energy Institute, Department of Ecology and Evolutionary Biology, University of Colorado Boulder</organizationName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>CO</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-0155-8666</userId>
+    </creator>
+    <creator id="5916084536867899">
+      <individualName>
+        <givenName>Sander</givenName>
+        <surName>Veraverbeke</surName>
+      </individualName>
+      <organizationName>Faculty of Science, Vrije Universiteit Amsterdam</organizationName>
+      <address>
+        <city>Amsterdam</city>
+        <country>The Netherlands</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-1362-5125</userId>
+    </creator>
+    <creator id="2930714324464613">
+      <individualName>
+        <givenName>Michelle</givenName>
+        <surName>Walvoord</surName>
+      </individualName>
+      <organizationName>U.S. Geological Survey, Earth System Processes Division</organizationName>
+      <address>
+        <city>Denver</city>
+        <administrativeArea>CO</administrativeArea>
+        <country>USA</country>
+      </address>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-4269-8366</userId>
+    </creator>
+    <pubDate>2024</pubDate>
+    <abstract>
+      <para>As the northern high latitude permafrost zone experiences accelerated warming, permafrost has become vulnerable to widespread thaw. Simultaneously, wildfire activity across northern boreal forests and Arctic/subarctic tundra regions impacts permafrost stability through the combustion of insulating organic matter, vegetation, and post-fire changes in albedo. Despite the importance of wildfire-permafrost interactions, little research has been conducted to understand differences across ecosystem types. To address this knowledge gap, we solicited observations of active layer thickness from paired burned and unburned sites across the northern high-latitude permafrost region. We compiled 52,466 permafrost thaw depth observations from 18 contributors collected as part of individual field studies. As thaw depths were taken at various times throughout the season, we estimated end-of-season active layer thickness for each measurement using the square root of additional air thawing degree days between the day of measurement and the date of the end of the thawing season at each site. The FireALT dataset includes 47,952 estimations (27,747 burned, 20,205 unburned) with 32 attributes. There are 193 unique paired burned/unburned measures based on pair id (76), fire year (37 unique years), fire events (63 unique events), and time since fire spread across 12 ecozones that span Canada, Russia, and the United States. The data were collected between 2001 and 2023 and span fire events from 1900 to 2022. Time since fire ranges from zero to 114 years. The FireALT dataset addresses a key challenge: the ability to assess the impacts of wildfire on ALT when measurements are taken at various times throughout the thaw season depending on the time of field campaigns (typically June through August) by estimating ALT at the end of the season maximum.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>permafrost</keyword>
+      <keyword>wildfire</keyword>
+      <keyword>thaw depth</keyword>
+      <keyword>active layer</keyword>
+      <keyword>active layer thickness</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Northern high-latitude permafrost zone with measurements from Russia.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>73.88074</westBoundingCoordinate>
+          <eastBoundingCoordinate>162.214</eastBoundingCoordinate>
+          <northBoundingCoordinate>69.95472</northBoundingCoordinate>
+          <southBoundingCoordinate>59.34583</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Northern high-latitude permafrost zone with measurements from Alaska and Canada.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-166.4104</westBoundingCoordinate>
+          <eastBoundingCoordinate>-113.382</eastBoundingCoordinate>
+          <northBoundingCoordinate>69.95472</northBoundingCoordinate>
+          <southBoundingCoordinate>59.34583</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2001</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2023</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <annotation>
+      <propertyURI label="Data Sensitivity Category">http://purl.dataone.org/odo/SENSO_00000005</propertyURI>
+      <valueURI label="Non-sensitive data">http://purl.dataone.org/odo/SENSO_00000002</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Cryology">https://purl.dataone.org/odo/ADCAD_00080</valueURI>
+    </annotation>
+    <contact id="1051021769041031">
+      <individualName>
+        <givenName>Anna</givenName>
+        <surName>Talucci</surName>
+      </individualName>
+      <organizationName>Woodwell Climate Research Center</organizationName>
+      <address>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <country>USA</country>
+      </address>
+      <electronicMailAddress>atalucci@woodwellclimate.org</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8415-4813</userId>
+    </contact>
+    <publisher id="9474094746245728">
+      <organizationName>NSF Arctic Data Center</organizationName>
+      <electronicMailAddress>support@arcticdata.io</electronicMailAddress>
+      <onlineUrl>http://arcticdata.io</onlineUrl>
+      <userId directory="unknown">Q77285095</userId>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Ethical Research Practices</title>
+            <para>The FireALT dataset is compiled based on existing datasets that were contributed to the synthesis effort. The data can be used to address research in the physical sciences realm related to interactions between wildfire and permafrost. There is no sensitive information in this dataset.</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>A call for data was sent to ecology, wildfire, permafrost, Arctic, and boreal research communities. Data contributors submitted a Google form and a formatted Google sheet to Talucci containing thaw depth measurements from burned and unburned sites with accompanying site data.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Thaw depth measurements had to include the measurement's month, day, and year. The measurement from the burned site(s) also had to have a measurement from a nearby unburned site(s) that had similar ecology and biogeoclimatic conditions to the prefire conditions of the burned sites. The contributor had to submit their data in a formatted Google sheet that required the following attributes: last name, the country where data were collected, latitude, longitude, biome, vegetation cover class, site identifier, plot identifier, the year the data were collected, the month the data was collected, the day the data were collected, fire identifier, fire year, whether it is burned or unburned, organic layer depth, thaw depth, whether the probe hit rocks, whether the depth was greater than the length of the probe, contributors assigned a designation of 'thaw' or 'active' to indicate early-mid or late season measurements respectively, slope, topographic position, pairing, and whether surface water was present.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Talucci and Loranty performed initial quality control measures, verifying that site metadata was complete, checking for latitude and longitude coordinate issues, and verifying that missing data was identified using R statistical software. Further quality assurance quality control (QA/QC) was conducted on this in data analysis for publication, which was specific to the scope of the study.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>The CSV file was converted into a shapefile and uploaded to Google Earth Engine to extract air temperature from ERA5-Land. We estimate end-of-season Active Layer Thickness (ALT) for each measurement based on the day, month, year, and depth of the field measurement and the thawing degree days calculated from ERA5-Land. See R scripts for more details. The final dataset includes 32 attributes: last name, the country where data was collected, latitude, longitude, biome, vegetation cover class, site identifier, plot identifier, year data was collected, month data was collected, day data was collected, fire identifier, fire year, whether it is burned or unburned, organic layer depth, thaw depth, whether the probe hit rocks, whether the depth was greater than the length of the probe, contributors assigned a designation of ‘thaw’ or ‘active’ to indicate early-mid or late season measurements respectively, slope, topographic position, pairing, whether surface water was present, code for pairing burned/unburned, measurement day of the year, the biome from the resolve dataset, the ecozone name from the resolve dataset, the permafrost extent from the circum-Arctic Map of permafrost, the estimated day of the year, estimated depth, time since fire, and time since fire class.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>R scripts</para>
+          <para>1. `DataCleanToPointCombine.Rmd` --- This script takes each data contribution and checks abnormalities and formatting issues. It fixes any issues. Data is then combines into a single data frame and converted in to a spatial data set and saved as a shapefile.</para>
+          <para>2. `SpatialAdds.Rmd` ---This scripts takes the output from step 1 and adds spatial attributes including ecozones and permafrost extent.</para>
+          <para>3. `ERA5GeeScript.Rmd` --- GEE Script for pulling ERA5 data using JavaScript Code editor.</para>
+          <para>4. `ERA5CleanOrganizeData.Rmd` --- Takes the EE ERA5 Land Temperature data and organize it into a single csv.</para>
+          <para>5. `EstimateALT.Rmd` --- Takes the output from 4 and predict ALT measurements.</para>
+          <para>6. `FinalizeAttributes.Rmd` --- Takes the output from 5 and finalizes attributes.</para>
+          <para>7. `PairsAggregate.Rmd` --- Takes the output from 6 and aggregates the data by burned-unburned pairs.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Brown, J., Ferrians, O., Heginbottom, J. A., and Melnikov, E.: Circum-Arctic Map of Permafrost and Ground-Ice Conditions, Version 2 [Data Set], https://doi.org/10.7265/skbg-kf16, 1998.</para>
+          <para>Dinerstein, E., Olson, D., Joshi, A., Vynne, C., Burgess, N. D., Wikramanayake, E., Hahn, N., Palminteri, S., Hedao, P., Noss, R., Hansen, M., Locke, H., Ellis, E. C., Jones, B., Barber, C. V., Hayes, R., Kormos, C., Martin, V., Crist, E., Sechrest, W., Price, L., Baillie, J. E. M., Weeden, D., Suckling, K., Davis, C., Sizer, N., Moore, R., Thau, D., Birch, T., Potapov, P., Turubanova, S., Tyukavina, A., De Souza, N., Pintea, L., Brito, J. C., Llewellyn, O. A., Miller, A. G., Patzelt, A., Ghazanfar, S. A., Timberlake, J., Klöser, H., Shennan-Farpón, Y., Kindt, R., Lillesø, J.-P. B., Van Breugel, P., Graudal, L., Voge, M., Al-Shammari, K. F., and Saleem, M.: An Ecoregion-Based Approach to Protecting Half the Terrestrial Realm, BioScience, 67, 534–545, https://doi.org/10.1093/biosci/bix014, 2017.</para>
+        </description>
+      </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Northern high latitude permafrost zone across Canada, Russia, and the United States.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Data contributions were from various fire events in Arctic and boreal biomes across the northern high-latitude permafrost zone.</para>
+        </samplingDescription>
+      </sampling>
+    </methods>
+    <project>
+      <title>Collaborative Research:   Fire Influences on Forest Recovery and Associated Ecosystem Feedbacks in Arctic Larch Forests.</title>
+      <title>Collaborative Research: Will changes in vegetation composition slow climate-driven wildfire growth in the boreal forests of northwestern North America?</title>
+      <personnel>
+        <individualName>
+          <givenName>Michael</givenName>
+          <surName>Loranty</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Brendan</givenName>
+          <surName>M Rogers</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1708322</awardNumber>
+        <title>Collaborative Research:   Fire Influences on Forest Recovery and Associated Ecosystem Feedbacks in Arctic Larch Forests.</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1708322</awardUrl>
+      </award>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>2116864</awardNumber>
+        <title>Collaborative Research: Will changes in vegetation composition slow climate-driven wildfire growth in the boreal forests of northwestern North America?</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=2116864</awardUrl>
+      </award>
+    </project>
+    <dataTable id="urn-uuid-887d14ed-02d3-4d15-83b3-363789f0752e" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>FireALTdataset.csv</entityName>
+      <entityDescription>CSV file for estimated ALT paired burned unburned dataset</entityDescription>
+      <physical>
+        <objectName>PermafrostFireDatacubeFinal.csv</objectName>
+        <size unit="bytes">8271121</size>
+        <authentication method="MD5">f8da2cb7e8ead7e1d14a9532199835e2</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:28149d22-842b-4c9d-a6d4-54779b8d677f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="M8DzCPo8RUAFfVU58oWhUZ7N3Lse5t">
+          <attributeName>plotId</attributeName>
+          <attributeDefinition>A unique identifier assigned by the data contributor to identify the field plot.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="plot identifier">http://purl.dataone.org/odo/ECSO_00002432</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="0mNQdNJD7JGaWTidSTJWdnnndrZmF0">
+          <attributeName>siteId</attributeName>
+          <attributeDefinition>Site name assigned by the data contributor specific to the fieldwork.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="V10UEmZ3uIaFoweedw21Fwbf5NiNzU">
+          <attributeName>year</attributeName>
+          <attributeDefinition>Four-digit year the data was collected provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="L2ikLq0bbsD1w4KNTDhUB3I0Mkeyx3">
+          <attributeName>cntryId</attributeName>
+          <attributeLabel>country identifier</attributeLabel>
+          <attributeDefinition>Dropdown list of two-digit code: Russia (RU), USA (US), Canada (CA), Finland (FI), Norway (NO), Sweden (SE), Iceland (IS), Greenland (GL) assigned by the data contributor</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>RU</code>
+                    <definition>Russia</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>US</code>
+                    <definition>United States</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>CA</code>
+                    <definition>Canada</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>FI</code>
+                    <definition>Finland</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>NO</code>
+                    <definition>Norway</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>SE</code>
+                    <definition>Sweden</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of site location">http://purl.dataone.org/odo/ECSO_00002170</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="cnHm8bW3i2TV76rNLeGz4kVxNi9vIG">
+          <attributeName>lastNm</attributeName>
+          <attributeLabel>last name</attributeLabel>
+          <attributeDefinition>Last name(s) of the person contributing the data provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="name of person">http://purl.dataone.org/odo/ECSO_00002998</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="wRT5kqtvFqJIxqpS9FKG3WCafsNlDN">
+          <attributeName>submitNm</attributeName>
+          <attributeLabel>submitter's last name</attributeLabel>
+          <attributeDefinition>Single last name from the data contributor that submitted the form.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="name of person">http://purl.dataone.org/odo/ECSO_00002998</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="RHaTsFL9znthUOd2K07kgFZh4oUUez">
+          <attributeName>lat</attributeName>
+          <attributeLabel>latitude</attributeLabel>
+          <attributeDefinition>Latitude in decimal degrees in WGS 84 provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="KqtRMT20dhziryJifaeENK16W4pXVM">
+          <attributeName>lon</attributeName>
+          <attributeLabel>longitude</attributeLabel>
+          <attributeDefinition>Longitude in decimal degrees in WGS 84 provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="LDlPp5JJw646lzoJ6COS99CqO2svwv">
+          <attributeName>month</attributeName>
+          <attributeDefinition>Two-digit month (values 01-12 accepted) the data was collected provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="month of year">http://purl.dataone.org/odo/ECSO_00002047</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="SXAkcGZ5izayw9vGBuqIf0UOZKZbBi">
+          <attributeName>day</attributeName>
+          <attributeDefinition>Day the data was collected values 1-31 accepted provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>DD</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="day of month">http://purl.dataone.org/odo/ECSO_00002122</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="HVVPWOXvUHWVzpUT1vc0KQT6hQDhqC">
+          <attributeName>biome</attributeName>
+          <attributeDefinition>Boreal (B) or tundra (T) assigned by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>B</code>
+                    <definition>Boreal</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>T</code>
+                    <definition>Tundra</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of biome">http://purl.dataone.org/odo/ECSO_00002727</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="ZOfoUu9XoSnacPAtVhEnTiTgW8soTn">
+          <attributeName>distur</attributeName>
+          <attributeLabel>disturbance</attributeLabel>
+          <attributeDefinition>Categorical variable to identify location as burned or unburned provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>burned</code>
+                    <definition>site burned in wildfire</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>unburned</code>
+                    <definition>site unburned in wildfire</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study site burn history">http://purl.dataone.org/odo/ECSO_00002453</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="pbtKKRyIV5s0l4zuWSIv8J9K98g7N1">
+          <attributeName>fireYr</attributeName>
+          <attributeLabel>fire year</attributeLabel>
+          <attributeDefinition>Four-digit year the fire event occurred provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="number of years">http://purl.dataone.org/odo/ECSO_00001636</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="qlONAVKBOIPMe0kRvw5ZPlUTgFmp9w">
+          <attributeName>fireId</attributeName>
+          <attributeLabel>Unique id to identify the fire event</attributeLabel>
+          <attributeDefinition>Identifying code for the fire event provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="JeSTuK9x0Ccd8PPoxkNM2fOwpEAlrx">
+          <attributeName>paired</attributeName>
+          <attributeLabel>Unique id to identify paired burned/unburned sites</attributeLabel>
+          <attributeDefinition>Identifying code for pairing burned sites with unburned site provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="iBihric93FRgNvFElIJBRhH2HbGSUS">
+          <attributeName>gtProbe</attributeName>
+          <attributeLabel>greater than permafrost probe</attributeLabel>
+          <attributeDefinition>Permafrost thaw depth exceeds (i.e., greater than [gt]) the length of probe yes (y) or no (n) provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>y</code>
+                    <definition>yes</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>n</code>
+                    <definition>no</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="koTMCuVDe2sB0grb08BUGnI2XylPsF">
+          <attributeName>hitRock</attributeName>
+          <attributeLabel>hit rock</attributeLabel>
+          <attributeDefinition>Probe hit rock yes (y) or no (n) provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>y</code>
+                    <definition>yes</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>n</code>
+                    <definition>no</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="LPUssZSrr5GiSqKaI8ITACIyKFDyly">
+          <attributeName>orgDepth</attributeName>
+          <attributeLabel>organic layer depth</attributeLabel>
+          <attributeDefinition>Organic layer thickness measured from the ground/moss surface to the organic-mineral interface as a site mean in cm provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="soil organic layer depth">http://purl.dataone.org/odo/ECSO_00001548</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="3ttvwUXHqcf2R46ehu59Q5LNgCgQfi">
+          <attributeName>srfH2O</attributeName>
+          <attributeLabel>surface water</attributeLabel>
+          <attributeDefinition>A categorical variable describing if plot locations experience seasonal inundation (i.e., standing surface water during the early season that is dry by late season). Seasonal inundation (Y: yes) or not (N: no) or unknown (U). Provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Y</code>
+                    <definition>yes</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>N</code>
+                    <definition>no</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute id="EX6XUqrfsa2t85yQ1hKHc0AF4y7OwG">
+          <attributeName>topoPos</attributeName>
+          <attributeLabel>topographic position</attributeLabel>
+          <attributeDefinition>Categorical variable describing the topographic position of plot locations as Upland (U), midslope (M), lowland (L). Provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>Upland (U)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>M</code>
+                    <definition>midslope (M)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>L</code>
+                    <definition>lowland (L)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="AlSKBpUES2B19oaNr2KfDfIcvx9pTx">
+          <attributeName>slope</attributeName>
+          <attributeLabel>slope angle</attributeLabel>
+          <attributeDefinition>Numeric value indicating slope angle provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="surface slope">http://purl.dataone.org/odo/ECSO_00002642</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="x95KARiWUMtxvq23zOknyZyUmknhp0">
+          <attributeName>vegCvr</attributeName>
+          <attributeLabel>vegetation cover type</attributeLabel>
+          <attributeDefinition>Evergreen needle-leaf (EN); Deciduous broadleaf (BD); Deciduous needle-leaf (DN); Mixed needle-leaf majority MNM; Mixed (M); Mixed broadleaf majority (MBM); barrens (B), graminoid tussock dominated (GT), graminoid non-tussock dominated (GNT), prostrate shrub dominated (P), erect-shrub dominated (S), and wetlands (W). Provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>EN</code>
+                    <definition>Evergreen needle-leaf (EN)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>BD</code>
+                    <definition>Deciduous broadleaf (BD)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DN</code>
+                    <definition>Deciduous needle-leaf (DN)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MNM</code>
+                    <definition>Mixed needle-leaf majority MNM</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>M</code>
+                    <definition>Mixed (M)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MBM</code>
+                    <definition>Mixed broadleaf majority (MBM)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>B</code>
+                    <definition>barrens (B)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>GT</code>
+                    <definition>graminoid tussock dominated (GT)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>GNT</code>
+                    <definition>graminoid non-tussock dominated (GNT),</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>P</code>
+                    <definition>prostrate shrub dominated (P), </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>erect-shrub dominated (S)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>W</code>
+                    <definition>and wetlands (W)</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of vegetation">http://purl.dataone.org/odo/ECSO_00002207</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="hAtGrPixUbICHgtAS7TRqw8x0DkATk">
+          <attributeName>msrDoy</attributeName>
+          <attributeLabel>field measurement day of year</attributeLabel>
+          <attributeDefinition>Day of year (DOY) for the day of measurement calculated from YYYY-MM-DD.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>Day of year</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="day of year">http://purl.dataone.org/odo/ECSO_00002058</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="SaT8NfHvygliBLs2uPF3EsEUUwxel0">
+          <attributeName>msrType</attributeName>
+          <attributeLabel>field measurement type</attributeLabel>
+          <attributeDefinition>A categorical variable of thaw (T) or active (A). Active refers to active layer thickness (i.e. maximum seasonal thaw at the end of growing season), or thaw refers to thaw depth (i.e. less than seasonal maximum taken earlier than the end of thawing season). Provided by the data contributor.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>A</code>
+                    <definition>active </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>T</code>
+                    <definition>thaw</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="BTWWF4s8RCGCBWi98G6KXLd5nfobV0">
+          <attributeName>msrDepth</attributeName>
+          <attributeLabel>measured thaw depth</attributeLabel>
+          <attributeDefinition>Field measured thaw depth</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="wbPJdfq6X5yTZZPONKFNvuK5Mn7cZc">
+          <attributeName>estDoy</attributeName>
+          <attributeLabel>Estimate Day of Year to use for estimating ALT depth</attributeLabel>
+          <attributeDefinition>The predicted ALT in cm; calculated using air temperature from ERA5 Land and field measured permafrost thaw depth.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>Day of year</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="day of year">http://purl.dataone.org/odo/ECSO_00002058</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="KCybsrtlqNDetCmhK5qkUBJsCdQouF">
+          <attributeName>estDepth</attributeName>
+          <attributeLabel>estimate ALT depth</attributeLabel>
+          <attributeDefinition>Estimate active layer thickness (ALT) depth in cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Soil Active Layer Depth">http://purl.dataone.org/odo/ECSO_00001210</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="akxgAeJzOekP5f1yVu9pll1Kbsq4vT">
+          <attributeName>tsf</attributeName>
+          <attributeLabel>Time since fire</attributeLabel>
+          <attributeDefinition>Time since fire in years based on fire year</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="number of years">http://purl.dataone.org/odo/ECSO_00001636</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="bwuvEW3c4v9AfPXn7nUEJT6uUIlONB">
+          <attributeName>tsfClass</attributeName>
+          <attributeLabel>Time since fire class</attributeLabel>
+          <attributeDefinition>Binned classes oftime since fire</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>year range based on time since fire (tsf)</definition>
+                  <pattern>0-3, 4-10, 11-20, 21-40, &gt;40</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="tityiqzvXvBSd5fNxXZcPIQ5UputpN">
+          <attributeName>resBiome</attributeName>
+          <attributeLabel>Resolve Biome</attributeLabel>
+          <attributeDefinition>Biome assigned by spatial join with the Resolve data product ‘BIOME_NAME’ (Dinerstein et al., 2017).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Tundra</code>
+                    <definition>Tundra</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Boreal Forests/Taiga</code>
+                    <definition>Boreal Forests/Taiga</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="7BBEDmB0txeWAWU8TiqHqN5PlZtDU6">
+          <attributeName>resName</attributeName>
+          <attributeLabel>Ecozone names from RESOLVE Data</attributeLabel>
+          <attributeDefinition>Ecozone name assigned by spatial join with the Resolve data product ‘ECO_NAME’ (Dinerstein et al., 2017).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="PTQ7BdNkcmEGUwWaRdvqT4dZq3r6DF">
+          <attributeName>permaExtent</attributeName>
+          <attributeLabel>Extent of Permafrost</attributeLabel>
+          <attributeDefinition>Permafrost extent assigned by spatial join with permafrost ground-ice map ‘EXTENT’ as C=continuous, D=discontinuous, S=sporadic (Brown et al., 1998).</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>C</code>
+                    <definition>continuous,</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>D</code>
+                    <definition>discontinuous</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>sporadic</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not Available</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <otherEntity id="urn-uuid-1123cb50-697d-43fe-ada9-adebee86a72e" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>SpatialAdds.Rmd</entityName>
+      <entityDescription>Script 2 ---This scripts takes the output from step 1 and adds spatial attributes including ecozones and permafrost extent.</entityDescription>
+      <physical>
+        <objectName>SpatialAddsDatacube.Rmd</objectName>
+        <size unit="bytes">2841</size>
+        <authentication method="MD5">4d6c9de4987b0a38c7c6208b622c7a9d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:f69163f8-bdcd-4a76-9f5e-efa55c18c779</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-f9ad3088-b7d6-4229-ba5a-f7425f1b5f95" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>EstimateALT.Rmd</entityName>
+      <entityDescription>Script 5 --- Takes the output from 4 and predict ALT measurements.</entityDescription>
+      <physical>
+        <objectName>PredictAltMeasurements.Rmd</objectName>
+        <size unit="bytes">2769</size>
+        <authentication method="MD5">1c56e8cb72720e435de3ef45ebeaca25</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:7d98a8c3-2fdb-433e-9d4e-27f11cbadc78</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-44150cb1-c601-4e7d-9a31-34000d0e8baf" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>FinalizeAttributes.Rmd</entityName>
+      <entityDescription>Script 6 --- Takes the output from 5 and finalizes attributes.</entityDescription>
+      <physical>
+        <objectName>FinalizeDatacubeAttributes.Rmd</objectName>
+        <size unit="bytes">2096</size>
+        <authentication method="MD5">8d0f267643b61414ac46f08d27135216</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:aecd0722-eaaa-4761-9fa0-28bf10a85d8c</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-31353f40-6564-48fc-8e70-8e74dd16a291" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>ERA5GeeScript.Rmd</entityName>
+      <entityDescription>Script 3 --- GEE Script for pulling ERA5 data using JavaScript Code editor.</entityDescription>
+      <physical>
+        <objectName>ERA5GeeScript.Rmd</objectName>
+        <size unit="bytes">4878</size>
+        <authentication method="MD5">82ddb5b047fec43464fbf48b0027ac4b</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5c2686ba-5261-4b1c-9f7f-c0da6c5c53e5</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-b9cb05fe-cb29-45cc-b67c-a4f6fa5cde87" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>ERA5CleanOrganizeData.Rmd</entityName>
+      <entityDescription>Script 4 --- Takes the EE ERA5 Land Temperature data and organize it into a single csv.</entityDescription>
+      <physical>
+        <objectName>ERA5CleanOrganizeData.Rmd</objectName>
+        <size unit="bytes">9074</size>
+        <authentication method="MD5">d5a18c11d588bddcb095f406461c786c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6602d513-bed6-45f3-b3ea-e63b7ea02ae0</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-6e3de337-3511-428a-b11d-06f10352e2f9" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>DataCleanPointCombine.Rmd</entityName>
+      <entityDescription>Script 1 --- This script takes each data contribution and checks abnormalities and formatting issues. It fixes any issues. Data is then combines into a single data frame and converted in to a spatial data set and saved as a shapefile.</entityDescription>
+      <physical>
+        <objectName>DataCleanPointCombine.Rmd</objectName>
+        <size unit="bytes">41217</size>
+        <authentication method="MD5">aa4c8fed7edef444169574945e27ae22</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:1db68691-33b6-4de6-bd53-e306121de1c1</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-ff5d0644-d60c-48c7-8e2d-a0497270c402" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>PairsAggregate.Rmd</entityName>
+      <entityDescription>Script 7 --- Takes the output from 6 and aggregates the data by burned-unburned pairs.</entityDescription>
+      <physical>
+        <objectName>AggregatePairedBurnUnburn.Rmd</objectName>
+        <size unit="bytes">1646</size>
+        <authentication method="MD5">60716d52e46bb9ba98239d91a08d3652</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/x-rmarkdown</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:01ae833d-38ce-4538-9141-bba211ea630d</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+  </dataset>
+</eml:eml>

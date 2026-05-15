@@ -1,0 +1,403 @@
+
+   
+      
+         uid=ARC,o=EDI,dc=edirepository,dc=org
+         all
+      
+      
+         public
+         read
+      
+   
+   
+      doi:10.6073/pasta/6ed482c5c7dd3fd5871b2e463734ce75Imnavait Watershed Thaw Depth Survey Summary for 2003 to 2024, Arctic LTER, Toolik Research Station, Alaska.
+      
+         George Kling
+         University of Michigan
+         gwk@umich.edu
+         https://orcid.org/0000-0002-6349-8227
+      
+      2025-07-18
+      
+         
+         Thaw depth was measured using a steel probe in the Imnavait Creek watershed, near Toolik Lake, Alaska. The thaw grid includes measurements made from the valley bottom (on both sides of the stream), up the hillslope. The thaw grid is near Imnavait water tracks 7 and 8, and measurements have been made from the 2003 season until present. At least two surveys are conducted each summer, on 2 July and on 11 August (plus or minus a couple of days on either side of those dates).
+      
+      
+         ARC
+         LTER-ARC
+         moist tussock tundra
+         arctic tundra
+         Imnavait Creek
+         Arctic LTER
+      
+      
+         thaw depth
+         permafrost
+         disturbance
+         https://vocab.lternet.edu/
+      
+      
+         This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+      
+      https://doi.org/10.6073/pasta/6ed482c5c7dd3fd5871b2e463734ce75
+         
+            Imnavait Kling Thaw Grid Imnavait Creek Watershed, North Slope, Alaska (approximately 68º30'N and 149º15'W, elevation at Imnavait Weir = 884 m asl)
+            
+               -149.318476
+               -149.29872499999999
+               68.611245999999994
+               68.609437
+            
+         
+         
+            
+               
+                  2003-06-17
+               
+               
+                  2024-09-06
+               
+            
+         
+      
+      
+         Entered metadata into new metadata form.; Version 2: LTERNET Data Access server proxy changed from das.lternet.edu to metacat.lternet.edu.; Version 3: Added LTERNET Data Access server proxy for Excel files.; 1/26/2010 JMK- Updated to add the 2009 Data; Version 4: Update LTERNET Data Access server proxy link for Excel and comma delimited data files. Changed from knb to das in url. Feb 210 JimL; Version 5: Updated the form to new version; updated the title to .. To present. JimL 22Aug11; Version 6: Updated file and title to reflect dates of measurement to 2009 rather than "present"; updated metadata sheet for PASTA. JD-21/11/13; Version 7: Checked keywords against the LTER network preferred list and replaced non-preferred terms. Jim L 15Jan14; Version 8: Update from George to 2013.; Version 9: Updated to 2016 and added AON info; Version 10: All data updated from 2003 to 2018.; Version 11: Added in data from 2019 to 2022; Version 12: Added in data from 2023, G. Kling; version 13: Added 2024 data, J.Dobkowski
+      
+      
+         George Kling
+         University of Michigan
+         gwk@umich.edu
+         https://orcid.org/0000-0002-6349-8227
+      
+      
+         ARCTIC LTER
+         Information Manger
+         arc_im@mbl.edu
+      
+      
+         Environmental Data Initiative
+         info@edirepository.org
+         https://edirepository.org
+         0330j0z60
+      
+      Environmental Data Initiative
+      
+         
+            
+               Sampling Description: Starting in 2003, thaw depth has been measured in the Imnavait Creek watershed at least twice and often several times during the summer season. Two surveys are consistently made each year as close to 2 July and 11 August as possible (plus or minus a couple of days). The UTM grid (stakes are in a grid at every 100 meters) was used to locate the starting points, and a tape measure was used to mark points every 25 m in between the UTM stakes. The thaw sampling grid covers the watershed from the valley bottom on both sides of the stream (in wet sedge tundra), up the hillslope of moist acid tussock tundra. At each of 75 sites on the grid a ruled stainless steel rod was inserted in non-tussock microhabitat (that is, not on top of a tussock but in the inter-tussock space between tussocks) until the frozen layer was reached, and the distance was measured to the top of the upper soil organic mat (beneath the uppermost moss layer if present). Three measurements are made at each site (point on the grid) within a 100 cm radius of each location point on the grid. The measurements for all sites are averaged to arrive at a single number (plus error) each year.
+            
+         
+      
+      
+         Collaborative Research on Carbon, Water, and Energy Balance of the Arctic Landscape at Flagship Observatories in Alaska and Siberia
+         
+            George Kling
+            University of Michigan
+            gwk@umich.edu
+            https://orcid.org/0000-0002-6349-8227
+            PI
+         
+         NFS 1107593
+         
+            National Science Foundation (NSF)
+            https://ror.org/021nxhr62
+            1107593
+            Collaborative Research on Carbon, Water, and Energy Balance of the Arctic Landscape at Flagship Observatories in Alaska and Siberia
+            https://www.nsf.gov/awardsearch/showAward?AWD_ID=1107593
+         
+         
+            Collaborative Research on Carbon, Water, and Energy Balance of the Arctic Landscape at Flagship Observatories in Alaska and Siberia
+            
+               Gaius Shaver
+               gshaver@mbl.edu
+               0000-0002-6745-9989
+               Principal Investigator
+            
+            NSF 1107707
+            
+               National Science Foundation (NSF)
+               https://ror.org/021nxhr62
+               1107707
+               Collaborative Research on Carbon, Water, and Energy Balance of the Arctic Landscape at Flagship Observatories in Alaska and Siberia
+               https://www.nsf.gov/awardsearch/showAward?AWD_ID=1107707
+            
+            
+               National Science Foundation (NSF)
+               https://ror.org/021nxhr62
+               0632139
+               IPY: Collaborative Research on Carbon, Water, and Energy Balance of the Arctic Landscape at Flagship Observatories and in a PanArctic Network
+               https://www.nsf.gov/awardsearch/showAward?AWD_ID=0632139
+            
+         
+      
+      
+         2003_present_Imnavait_Thaw_Kling_csv
+         Imnavait Watershed Thaw Depth Survey Summary for 2003 to 2024, Arctic LTER, Toolik Research Station, Alaska.
+         
+            2003_present_Imnavait_Thaw_Kling.13.csv
+            4231
+            b01c9cccfa4423e5f478d358bd310ca5
+            
+               
+                  1
+                  \r\n
+                  column
+                  
+                     ,
+                     "
+                  
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/knb-lter-arc/1626/13/b283c2073b3a99bde835513d2ad1d6f1
+               
+            
+         
+         
+            
+               Date
+               Date of measurement
+               date
+               
+                  
+                     YYYY-MM-DD
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+            
+            
+               Mean_thaw_cm
+               Average thaw depth for sample date
+               float
+               
+                  
+                     
+                        centimeter
+                     
+                     
+                        real
+                        
+                           7.4
+                           55.2
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/CentiM
+               
+            
+            
+               Standard_Devation_cm
+               Standard deviation of thaw depth for sample date
+               float
+               
+                  
+                     
+                        centimeter
+                     
+                     
+                        real
+                        
+                           2.2
+                           14.2
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/CentiM
+               
+            
+            
+               Standard_Error_cm
+               Standard Error of thaw depth for sample date
+               float
+               
+                  
+                     
+                        centimeter
+                     
+                     
+                        real
+                        
+                           0.1
+                           0.9
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/CentiM
+               
+            
+            
+               N
+               Number of measurements of thaw depth for sample date
+               float
+               
+                  
+                     
+                        number
+                     
+                     
+                        natural
+                        
+                           213
+                           258
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/NUM
+               
+            
+            
+               Minimum_cm
+               Minimum individual thaw depth recorded for sample date
+               float
+               
+                  
+                     
+                        centimeter
+                     
+                     
+                        real
+                        
+                           1.5
+                           52.5
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/CentiM
+               
+            
+            
+               Maximum_cm
+               Maximum individual thaw depth recorded for sample date
+               float
+               
+                  
+                     
+                        centimeter
+                     
+                     
+                        real
+                        
+                           13
+                           118
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/CentiM
+               
+            
+            
+               CV_%
+               Coefficient of variation calculated for all thaw measurements on one date
+               float
+               
+                  
+                     
+                        percent
+                     
+                     
+                        real
+                        
+                           17.4
+                           44
+                        
+                     
+                  
+               
+               
+                  .
+                  Missing or Not Measured
+               
+               
+                  http://qudt.org/schema/qudt/hasUnit
+                  http://qudt.org/vocab/unit/PERCENT
+               
+            
+         
+         no
+         104
+      
+      
+         2003_present_Imnavait_Thaw_Kling_xlsx
+         Excel file with metadata and data sheets: Imnavait Watershed Thaw Depth Survey Summary for 2003 to 2023, Arctic LTER, Toolik Research Station, Alaska.
+         
+            2003_present_Imnavait_Thaw_Kling.xlsx
+            133773
+            c008d0155930e0106bd5fbafc8110f23
+            
+               
+                  application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+               
+            
+            
+               
+                  https://pasta.lternet.edu/package/data/eml/knb-lter-arc/1626/13/d7ecbc29b6b37f0f6f50d091658134bd
+               
+            
+         
+         unknown
+      
+   
+   
+      
+         
+            urn:node:ADC
+         
+      
+   
+   
+      
+         
+      
+   
+   
+      
+         
+      
+   

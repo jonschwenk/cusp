@@ -1,0 +1,6 @@
+File_Name,File_Description,Standard,UTC_Offset,File_Version,Contact,Date_Start,Date_End,Northwest_Latitude_Coordinate,Northwest_Longitude_Coordinate,Southeast_Latitude_Coordinate,Southeast_Longitude_Coordinate,Latitude,Longitude,Missing_Value_Codes,Data_Orientation,Notes
+NGA544_UserGuide_Aug2022Survey.pdf,Document with extended metadata and methods including site selection and processing workflow.,-9999,-9999,-9999,Katrina Bennett,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A
+Aug2022SurveyTarget_PFdata.csv,File with data,ESS-DIVE CSV v1,-9999,v1,Katrina Bennett,2022-08-14,2022-08-20,64.985654,-166.218477,64.973908,-166.204303,-9999,-9999,-9999,-9999,N/A
+SurveyLocationsAug2022.kml,Spatial format of the data,-9999,-9999,-9999,Katrina Bennett,-9999,-9999,64.985654,-166.218477,64.973908,-166.204303,-9999,-9999,-9999,-9999,N/A
+aug2022survey_dd.csv,Information about the columns in the data csv,ESS-DIVE CSV v1,-9999,v1,Katrina Bennett,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A
+aug2022survey_flmd.csv,Information about the files - file-level metadata,ESS-DIVE FLMD v1,-9999,v1,Katrina Bennett,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,-9999,N/A

@@ -1,0 +1,78 @@
+:root {
+  --cusp-ink: #173b3a;
+  --cusp-muted: #5f6f70;
+  --cusp-rule: #d7e5e3;
+  --cusp-warm: #b45f1b;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0;
+}
+
+.md-typeset h1 {
+  color: var(--cusp-ink);
+  font-weight: 720;
+}
+
+.md-typeset .cusp-hero {
+  background: linear-gradient(135deg, #eef8f6 0%, #ffffff 72%);
+  border: 1px solid var(--cusp-rule);
+  border-top: 4px solid var(--cusp-warm);
+  border-radius: 8px;
+  margin: 0 0 1.6rem;
+  padding: 2.2rem;
+}
+
+.md-typeset .cusp-hero h1 {
+  margin-bottom: 0.45rem;
+}
+
+.md-typeset .cusp-hero p {
+  color: var(--cusp-muted);
+  font-size: 1.05rem;
+  max-width: 52rem;
+}
+
+.md-typeset .cusp-card-grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+  margin: 1.4rem 0 2rem;
+}
+
+.md-typeset .cusp-card {
+  background: #ffffff;
+  border: 1px solid var(--cusp-rule);
+  border-radius: 8px;
+  box-shadow: 0 0.25rem 0.9rem rgba(23, 59, 58, 0.05);
+  padding: 1rem;
+}
+
+.md-typeset .cusp-card h3 {
+  margin-top: 0;
+}
+
+.md-typeset .cusp-card p {
+  color: var(--cusp-muted);
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+.md-typeset .cusp-wide-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.md-typeset .cusp-wide-table table {
+  min-width: 62rem;
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .cusp-hero {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,68 @@
+site_name: CUSP
+site_description: CommUnity near-Surface Permafrost dataset documentation
+repo_url: https://github.com/jonschwenk/cusp
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: teal
+      accent: orange
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - getting-started/index.md
+      - What CUSP Is: getting-started/what-is-cusp.md
+      - Caveats: getting-started/caveats.md
+      - Release Products: getting-started/release-products.md
+      - Installation: getting-started/installation.md
+      - Data Schema: user/data-schema.md
+      - Attribution: user/data-use-and-attribution.md
+  - User Guide:
+      - user/index.md
+      - Command Examples: user/cli-examples.md
+      - Aggregation: user/aggregation-guide.md
+      - Feature Sampling: user/feature-sampling.md
+  - Contributing:
+      - contributing/index.md
+      - Suggest a Dataset: contributing/suggest-dataset.md
+      - Adding Data: contributing/adding-data.md
+      - Adding GEE Features: contributing/adding-gee-features.md
+      - Process Script Headers: contributing/process-script-header-guidelines.md
+  - Reproducibility:
+      - reproducibility/index.md
+      - Rebuild CUSP: reproducibility/rebuild-cusp.md
+      - External Data Sources: reproducibility/external-data-sources.md
+      - Known Exceptions: reproducibility/reproducibility-exceptions.md
+  - For Maintainers:
+      - maintainers/index.md
+      - Source Release Clearance: maintainers/source-release-clearance-guidelines.md
+      - release/index.md
+      - Versioning And Exports: release/versioning-and-exports.md
+      - QA Validation: release/qa-validation.md
+      - Observation Build Validation: release/observation-build-validation.md
+      - Aggregation Validation: release/aggregation-validation.md
+      - Reproducibility Audit: reproducibility/reproducibility-audit.md

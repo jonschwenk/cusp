@@ -1,0 +1,396 @@
+Site_ID	Loc_ID	Easting	Northing	Ref_syst	EPSG	Soil_type	ALT_2020 [cm]	ALT_2021 [cm]	Landform	Periglacial_features	Transition	Drainage	FlorSurv_Date	FlorSurv_area [m2]	NV [%]	S [%]	F [%]	G [%]	GG [%]	GS [%]	GTS [%]	GR [%]	L [%]	B [%]	P [%]	Comments	GT_V_name	Fines	LONGITUDE	LATITUDE
+G2018-V10	ILU	496944.5462	7678967.123	GR96	3182	SILT																					BLDST	1	-51.07717	69.22064
+ILU16001T	ILU	498178	7681781	GR96	3182	CLAY	67		Flat wetland with grassy water channels			Partly inundated	03-09-2020													WTC and ALT_2016 measurements from drilling log  information (08-2016) / Casing surrounded by pond and creek running close by / Between TSGT and BRSGT	BRSGT	1	-51.04607	69.24589
+ILU16002T	ILU	498173	7681843	GR96	3182	CLAY	68.6		At the transition between grassy area and shrubby mounds		YES	Moist	03-09-2020		0	25	10	60	15	15	15	15	0	5	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016) / Switch to BRSGT eventually	TSGT_BLDST_BRSGT	1	-51.0462	69.24645
+ILU16010T	ILU	498816	7682840	GR96	3182	SAND			Sandy sedimentary area between bedrock outcrops			Dry	03-09-2020		20	20	0	25	7	9	0	9	5	30	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016)	EBDST	0	-51.02995	69.25539
+ILU16011T	ILU	498957	7682877	GR96	3182	SAND			Sandy sedimentary plateau, slightly elevated			Very dry to dry	03-09-2020		50	25	0	15	13	1	0	1	5	5	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016)	EBDST	0	-51.02639	69.25572
+ILU16013T	ILU	499233	7683526	GR96	3182	CLAY	85.6	107	Sedimentary area surrounded by bedrock outcrops and characterized by hummocks or small frost boils with bare tops	Frost boils		Partly inundated	03-09-2020		10	40	0	25	6.5	6.5	5.5	6.5	10	15	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016) / Ponds around casing at time of observation	BSBFB	1	-51.01941	69.26154
+ILU16015T	ILU	499051	7683404	GR96	3182	CLAY	90		Sedimentary area surrounded by bedrock outcrops, caracterized by frost boils with bare tops	Frost boils		Partly inundated	03-09-2020		10	40	0	20	6	6	2	6	10	20	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016) / Ponds around casing at time of observation	BSBFB	1	-51.02401	69.26045
+ILU16019T	ILU	499073	7683696	GR96	3182	CLAY	85.8	85	Sedimentary area surrounded by bedrock outcrops, characterized by hummocks or small frost boils with bare tops	Frost boils		Mesic to moist	03-09-2020													WTC and ALT_2016 measurements from drilling log  information (08-2016) / Ponds in the surroundings		1	-51.02346	69.26307
+ILU16022T	ILU	498261	7682614	GR96	3182	CLAY	64.6		Sedimentary area very close to shore, characterized by shrubby mounds			Mesic to moist	03-09-2020		10	65	0	15	5	5	0	5	0	10	0	PFT % estimated / WTC and ALT_2016 measurements from drilling log  information (08-2016) / Ponds in the surroundings / Could also be defined as BLDST	BSVFB	1	-51.04399	69.25336
+ILU2018-03	ILU	495778	7678265	GR96	3182	CLAY/ICE	47.6	61	Grassy field, in town			Moist	01-09-2020		0	0	10	90	50	15	5	15	0	0	0	PFT % estimated / ALT_2018 from drilling log information (08-2018)	GGT	1	-51.1066	69.21433
+ILU2018-04	ILU	497536.271	7681010.326	GR96	3182	CLAY	68.2	82	Frost boils with bare tops	Frost boils		Dry to mesic	03-09-2020		50	40	0	10	5	2.5	0	2.5	0	0	0	PFT % estimated / ALT_2018 from drilling log information (08-2018)	BSBFB	1	-51.06228	69.23897
+CALM_station	ILU	497819.81	7678824.14	GR96	3182	CLAY/SILT	44.5		Swampy field/water channel between frost boil areas		YES	Moist to wet	09-09-2020	0.04	0	10	0	60	10	40	0	10	0	30	0		BRSGT	1	-51.05506	69.21937
+ERT_station	ILU	497536.271	7681010.326	GR96	3182	SILT/CLAY	90.33		Frost boils with bare tops	Frost boils		Wet to partly inundated	11-09-2020		50	30	4	15	5	5	0	5	0	0	1	PFT % cover was estimated	BSBFB	1	-51.06228	69.23897
+Q50_01	ILU	497442.8986	7678229.32	GR96	3182			40.67	Slight shrubby mounds				22-09-2021	0.25	0	70	0	15	6	6	0	3	0	15	0		BLDST		-51.06457	69.21403
+Q50_02	ILU	497491.5872	7678319.478	GR96	3182			43	Slight shrubby mounds, with few bare tops	Frost boils			22-09-2021	0.25	0	54	0	6	2	2	0	2	30	10	0	Between BRSGT, BLDST and BSBFB	BLDST		-51.06334	69.21484
+Q50_03	ILU	497294.3246	7678393.285	GR96	3182				Flat swampy field with ponds				22-09-2021	0.25	0	10	0	80	10	10	50	10	0	10	0		TSGT		-51.06832	69.2155
+Q50_04	ILU	497328.3877	7678325.897	GR96	3182			85.33	Frost boils with bare tops	Frost boils			22-09-2021	0.25	25	34	4	4	1.5	1.5	0	1	13	15	5	Could also be classified as LBFB	SGCBFB		-51.06746	69.2149
+Q50_05	ILU	497359.8728	7678326.197	GR96	3182			73.33	Frost boils with bare tops	Frost boils			22-09-2021	0.25	15	40	6	12	4	4	0	4	13	9	5		SGCBFB		-51.06666	69.2149
+Q50_06	ILU	497396.9475	7678331.621	GR96	3182			74.67	Ponds and water channels				22-09-2021	0.25	0	35	0	60	10	20	10	20	0	5	0		TSGT		-51.06573	69.21495
+Q50_07	ILU	497408.3911	7678329.936	GR96	3182			36.33	Flat swampy field between ponds and streams		YES		22-09-2021	0.25	0	25	0	20	6	7	0	7	0	55	0	Complicated landscape and vegetation patterns			-51.06544	69.21493
+Q50_08	ILU	497445.6206	7678332.015	GR96	3182			35	Flat swampy field between ponds and streams		YES		22-09-2021	0.25	0	8	0	32	10	11	0	11	0	60	0	Complicated landscape and vegetation patterns			-51.0645	69.21495
+A	ILU	497333.6146	7678325.222	GR96	3182			78	Frost boils with bare tops	Frost boils			22-09-2021														SGCBFB		-51.06733	69.21489
+B	ILU	497339.2788	7678325.997	GR96	3182			84	Frost boils with bare tops	Frost boils			22-09-2021														LVFB		-51.06718	69.2149
+C	ILU	497345.3375	7678325.432	GR96	3182			80	Frost boils with bare tops	Frost boils			22-09-2021														LVFB		-51.06703	69.21489
+D	ILU	497352.1887	7678325.202	GR96	3182			65	Frost boils with bare tops	Frost boils			22-09-2021														LVFB		-51.06686	69.21489
+E	ILU	497365.0236	7678328.31	GR96	3182			48	Transition between bare frost boils and water channel	Frost boils	YES		22-09-2021																-51.06653	69.21492
+F	ILU	497371.5197	7678329.418	GR96	3182			49	Transition between bare frost boils and water channel		YES		22-09-2021																-51.06637	69.21493
+G	ILU	497378.57	7678330.191	GR96	3182			41	Transition between bare frost boils and water channel		YES		22-09-2021														BRSGT		-51.06619	69.21494
+H	ILU	497384.1158	7678331.412	GR96	3182			53	Transition between bare frost boils and water channel				22-09-2021														BRSGT		-51.06605	69.21495
+I	ILU	497389.6214	7678332.075	GR96	3182			37	Close to water channel		YES		22-09-2021														BRSGT_TSGT		-51.06591	69.21495
+J	ILU	497403.7605	7678332.729	GR96	3182			41	Flat swampy field between ponds and streams		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06556	69.21496
+K	ILU	497414.6492	7678330.598	GR96	3182			78	Transition to ponds and water channels				22-09-2021														TSGT		-51.06528	69.21494
+L	ILU	497419.3246	7678332.712	GR96	3182			73	Ponds and water channels				22-09-2021														TSGT		-51.06516	69.21496
+M	ILU	497426.6113	7678332.37	GR96	3182			83	Ponds and water channels				22-09-2021														TSGT		-51.06498	69.21496
+N	ILU	497433.4636	7678333.255	GR96	3182			62	Flat swampy field between ponds and streams		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06481	69.21496
+O	ILU	497439.3246	7678332.914	GR96	3182			34	Flat swampy field between ponds and streams		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06466	69.21496
+P	ILU	497451.9187	7678333.124	GR96	3182			33	Flat swampy field between ponds and streams		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06434	69.21496
+Q	ILU	497458.4529	7678332.782	GR96	3182			34	Shrubby hummock		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06418	69.21496
+R	ILU	497465.068	7678334.113	GR96	3182			45	Flat swampy field at the transition with ponds and water channels		YES		22-09-2021													Complicated landscape and vegetation patterns			-51.06401	69.21497
+S	ILU	497469.3845	7678333.774	GR96	3182			93	At the edge of water channel				22-09-2021														TSGT		-51.0639	69.21497
+T	ILU	497475.5223	7678333.099	GR96	3182			42	At the edge of water channel				22-09-2021													Between BRSGT, BLDST and BSBFB	BLDST		-51.06374	69.21496
+U	ILU	497480.1172	7678333.986	GR96	3182			52	Slight shrubby mounds, with few bare tops	Frost boils			22-09-2021													Between BRSGT, BLDST and BSBFB	BLDST		-51.06363	69.21497
+V	ILU	497488.8306	7678334.646	GR96	3182			43	Slight shrubby mounds, with few bare tops	Frost boils			22-09-2021													Between BRSGT, BLDST and BSBFB	BLDST		-51.06341	69.21498
+W	ILU	497494.3743	7678333.86	GR96	3182			42	Slight shrubby mounds, with few bare tops	Frost boils			22-09-2021													Between BRSGT, BLDST and BSBFB	BLDST		-51.06327	69.21497
+X	ILU	497501.991	7678334.897	GR96	3182			60	At the edge of water channel		YES		22-09-2021														BSBFB		-51.06308	69.21498
+Q50_09	ILU	498661.7919	7678601.668	GR96	3182			43	Slight shrubby mounds				22-09-2021	0.25	0	47	2	6	3	1.5	0	1.5	0	45	0		BLDST		-51.03379	69.21738
+Q50_10	ILU	498661.4598	7678573.792	GR96	3182			92	Flat swampy field with ponds				22-09-2021	0.25	0	5	0	80	20	20	20	20	0	15	0		TSGT		-51.0338	69.21713
+Q50_11	ILU	498627.5362	7678526.978	GR96	3182			75	Frost boils with few bare tops	Frost boils			22-09-2021	0.25	6	13	3	19	6	7	0	6	28	25	5		SGCBFB		-51.03466	69.21671
+Q50_12	ILU	498609.5316	7678481.493	GR96	3182			46.33	Vegetated frost boils	Frost boils			22-09-2021	0.25	0	33	0	15	5	5	0	5	35	15	2		SGCVFB		-51.03511	69.2163
+Q50_P1	ILU	498563.1862	7678393.875	GR96	3182			47	Gentle slope alternating between graminoid fields and vegetated frost boils				22-09-2021	0.25	0	15	0	80	20	30	0	30	1	4	0		SGBT_LVFB		-51.03628	69.21552
+Q50_R1	ILU	498545.5044	7678361.994	GR96	3182			57	Gentle slope alternating between graminoid fields and vegetated frost boils	Frost boils			22-09-2021	0.25	0	19	0	11	3	4	0	4	43	27	0		LVFB		-51.03673	69.21523
+Q50_S1	ILU	498535.3167	7678345.832	GR96	3182			46	Top of gentle hill with shrubby mounds and frost boils with bare tops				22-09-2021	0.25	0	45	35	7	5	1	0	1	3	10	0		BLDST		-51.03698	69.21508
+A1	ILU	498654.9755	7678591.859	GR96	3182			38	Slight shrubby mounds				22-09-2021														BLDST		-51.03397	69.21729
+B1	ILU	498651.1671	7678579.484	GR96	3182			70	Flat swampy field with ponds				22-09-2021													Could also be classified as TSGT	BRSGT		-51.03406	69.21718
+C1	ILU	498646.6075	7678569.451	GR96	3182			70	Flat swampy field with ponds				22-09-2021													Could also be classified as TSGT	BRSGT		-51.03418	69.21709
+D1	ILU	498641.0175	7678557.857	GR96	3182			80	Flat swampy field with ponds				22-09-2021														TSGT		-51.03432	69.21699
+E1	ILU	498635.3089	7678546.71	GR96	3182			41	Transition from swampy field to frost boils		YES		22-09-2021																-51.03446	69.21689
+F1	ILU	498631.383	7678537.011	GR96	3182			49	Frost boils with few bare tops	Frost boils			22-09-2021																-51.03456	69.2168
+G1	ILU	498622.8581	7678517.725	GR96	3182			62	Frost boils with few bare tops	Frost boils			22-09-2021														SGCBFB		-51.03478	69.21663
+H1	ILU	498617.7446	7678508.807	GR96	3182			70	Frost boils with few bare tops	Frost boils			22-09-2021														SGCBFB		-51.0349	69.21655
+I1	ILU	498610.8828	7678489.744	GR96	3182			51	Vegetated frost boils	Frost boils			22-09-2021														SGCVFB		-51.03508	69.21638
+J1	ILU	498602.2761	7678466.666	GR96	3182			62	Vegetated frost boils	Frost boils			22-09-2021														SGCVFB		-51.03529	69.21617
+K1	ILU	498592.9596	7678449.054	GR96	3182			52	Vegetated frost boils	Frost boils			22-09-2021														SGCVFB		-51.03553	69.21601
+L1	ILU	498587.4496	7678439.802	GR96	3182			62	Vegetated frost boils at the transition with graminoid field	Frost boils	YES		22-09-2021														SGBT_SGCVFB		-51.03567	69.21593
+M1	ILU	498581.8197	7678428.766	GR96	3182			51	Vegetated frost boils at the transition with graminoid field	Frost boils			22-09-2021														SGBT		-51.03581	69.21583
+N1	ILU	498575.0405	7678416.281	GR96	3182			54	Gentle slope alternating between graminoid fields and vegetated frost boils		YES		22-09-2021														SGBT_LVFB		-51.03598	69.21572
+O1	ILU	498581.0514	7678401.558	GR96	3182			54	Gentle slope alternating between graminoid fields and vegetated frost boils				22-09-2021														LVFB		-51.03583	69.21559
+Q1	ILU	498554.3053	7678377.154	GR96	3182			57	Gentle slope alternating between graminoid fields and vegetated frost boils	Frost boils			22-09-2021														LVFB		-51.03651	69.21537
+Q50_13	ILU	497752.3672	7680650.919	GR96	3182			36.33	Slight shrubby mounds				24-09-2021	0.25	0	68	0	4	2	1	0	1	16	12	0		BLDST		-51.05681	69.23575
+Q50_14	ILU	497814.9586	7680613.321	GR96	3182			38	Slight shrubby mounds				24-09-2021	0.25	0	64	7	6	2	2	0	2	3	20	0		BLDST		-51.05523	69.23541
+Q50_15	ILU	497927.742	7680543.864	GR96	3182			83.33	Frost boils with bare tops	Frost boils			24-09-2021	0.25	0	20	2	6	2	2	0	2	40	27	5		LBFB		-51.05237	69.23479
+A2	ILU	497922.5135	7680537.29	GR96	3182			79	Frost boils with bare tops	Frost boils			22-09-2021														LBFB		-51.05251	69.23473
+Q50_B2	ILU	497918.9473	7680531.383	GR96	3182			99	Transition between frost boils and swampy field				22-09-2021	0.25	0	17	0	38	5	11	11	11	0	45	0		BRSGT		-51.0526	69.23468
+C2	ILU	497913.4817	7680525.255	GR96	3182			36	Transition between swampy field and shrubby mounds				22-09-2021														BLDST		-51.05273	69.23463
+Q50_D2	ILU	497907.8172	7680517.9	GR96	3182			39	Slight shrubby mounds				22-09-2021	0.25	0	84	0.5	5.5	4.5	0.5	0	0.5	0	10	0		BLDST		-51.05288	69.23456
+E2	ILU	497903.4579	7680509.987	GR96	3182			90	Water channel				22-09-2021														TSGT		-51.05299	69.23449
+Q50_F2	ILU	497896.3702	7680504.083	GR96	3182			51	Swampy field between water channels				22-09-2021	0.25	0	10	0	55	13	14	14	14	0	35	0	Could also be classified as TSGT	BRSGT		-51.05316	69.23444
+G2	ILU	497891.3378	7680495.724	GR96	3182			39	Swampy field between water channels				22-09-2021														BRSGT		-51.05329	69.23436
+H2	ILU	497888.5642	7680491.378	GR96	3182			107	At the edge of water channel				22-09-2021													Out of range	TSGT		-51.05336	69.23432
+I2	ILU	497884.4033	7680484.245	GR96	3182			82	Frost boils with bare tops	Frost boils			22-09-2021														LBFB		-51.05347	69.23426
+Q50_J2	ILU	497877.1562	7680477.227	GR96	3182			76	Frost boils with bare tops	Frost boils			22-09-2021	0.25	20	20	0	6	2	2	0	2	36	10	8		LBFB		-51.05365	69.2342
+K2	ILU	497868.2036	7680465.749	GR96	3182			76	Frost boils with bare tops	Frost boils			22-09-2021														LBFB		-51.05388	69.23409
+CALM_A1	ILU	497851.5882	7678784.755	GR96	3182		46	49.5	Small frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05426	69.21902
+CALM_B1	ILU	497847.6397	7678787.656	GR96	3182		83	84	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05436	69.21904
+CALM_C1	ILU	497843.6913	7678790.558	GR96	3182		69	61.5	Between frost boils (mossy)	Frost boils		Moist to wet															SGCBFB		-51.05446	69.21907
+CALM_D1	ILU	497839.7428	7678793.459	GR96	3182		60.5	66.5	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.05456	69.21909
+CALM_E1	ILU	497835.7943	7678796.361	GR96	3182		72.5	72.5	At the edge of water channel, between frost boils (mossy)	Frost boils		Moist to wet															SGCBFB		-51.05466	69.21912
+CALM_F1	ILU	497831.8458	7678799.263	GR96	3182		87.5	75	Frost boil side, at the edge with water channel	Frost boils		Wet to partly inundated															SGCBFB		-51.05476	69.21915
+CALM_G1	ILU	497827.8973	7678802.164	GR96	3182		84	77.5	Edge of small frost boil	Frost boils		Wet to partly inundated															SGCBFB		-51.05486	69.21917
+CALM_H1	ILU	497823.9488	7678805.066	GR96	3182		90	90.5	Frost boil side, at the edge with water channel, dominated by sedges			Moist to wet														Could also be classified as BRSGT	BRSGT		-51.05496	69.2192
+CALM_I1	ILU	497820.0003	7678807.968	GR96	3182		67.5	69	Flattened vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05506	69.21922
+CALM_J1	ILU	497816.0518	7678810.869	GR96	3182		69	64.5	Flattened vegetated frost boil, dominated by sedges	Frost boils		Mesic to moist															SGCVFB		-51.05516	69.21925
+CALM_K1	ILU	497812.3468	7678813.592	GR96	3182		73.5	76	Flattened vegetated frost boil, dominated by sedges	Frost boils		Mesic to moist															SGCVFB		-51.05525	69.21928
+CALM_A2	ILU	497848.7057	7678780.792	GR96	3182		51	61.5	Between frost boils	Frost boils		Moist to wet															SGCBFB		-51.05433	69.21898
+CALM_B2	ILU	497844.7571	7678783.694	GR96	3182		82	88.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05443	69.21901
+CALM_C2	ILU	497840.8086	7678786.595	GR96	3182		83	89.5	Depression with water pond, dominated by sedges and mosses			Partly inundated															SGCBFB		-51.05453	69.21903
+CALM_D2	ILU	497836.8601	7678789.497	GR96	3182		82.5	78.5	Vegetated frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05463	69.21906
+CALM_E2	ILU	497832.9116	7678792.399	GR96	3182		69	68.5	Vegetated frost boil side, at the edge with water channel	Frost boils		Moist to wet														Could also be classified as BRSGT	BRSGT		-51.05473	69.21909
+CALM_F2	ILU	497828.963	7678795.3	GR96	3182		79.5	78.5	Frost boil edge (mossy)	Frost boils		Moist														Could also be classified as BRSGT	BRSGT		-51.05483	69.21911
+CALM_G2	ILU	497825.0145	7678798.202	GR96	3182		57	46.5	Flattened vegetated frost boil, dominated by sedges	Frost boils		Mesic to moist															SGCVFB		-51.05493	69.21914
+CALM_H2	ILU	497821.066	7678801.104	GR96	3182		63	70	Flattened vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05503	69.21916
+CALM_I2	ILU	497817.1174	7678804.005	GR96	3182		65.5	75	Frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05513	69.21919
+CALM_J2	ILU	497813.1689	7678806.907	GR96	3182		77.5	78.5	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05523	69.21922
+CALM_K2	ILU	497809.2204	7678809.809	GR96	3182		67	65	Between frost boils (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05533	69.21924
+CALM_A3	ILU	497845.8232	7678776.83	GR96	3182		76.5	83	Water channel between frost boils, dominated my mosses and sedges			Wet to partly inundated															BRSGT		-51.0544	69.21895
+CALM_B3	ILU	497841.8747	7678779.731	GR96	3182		73	72	At the edge of frost boil and water channel, dominated by sedges and mosses			Moist to wet															BRSGT		-51.0545	69.21897
+CALM_C3	ILU	497837.9261	7678782.633	GR96	3182		74	79	Frost boil edge or small vegetated frost boil, dominated by sedges and mosses	Frost boils		Moist															BRSGT		-51.0546	69.219
+CALM_D3	ILU	497833.9776	7678785.534	GR96	3182		66.5	66	Small vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.0547	69.21902
+CALM_E3	ILU	497830.0291	7678788.436	GR96	3182		68	71.5	Vegetated frost boil edge	Frost boils		Moist															SGCVFB		-51.0548	69.21905
+CALM_F3	ILU	497824.8659	7678790.354	GR96	3182		72.5	67.5	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05493	69.21907
+CALM_G3	ILU	497822.132	7678794.239	GR96	3182		63.5	63	Frost boil edge	Frost boils		Moist															SGCVFB		-51.055	69.2191
+CALM_H3	ILU	497818.1835	7678797.141	GR96	3182		55.5	56.5	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCVFB		-51.0551	69.21913
+CALM_I3	ILU	497813.6511	7678797.79	GR96	3182		73	72	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05522	69.21913
+CALM_J3	ILU	497810.2864	7678802.944	GR96	3182		82	82	Frost boil edge (mossy)	Frost boils		Moist															SGCBFB		-51.0553	69.21918
+CALM_K3	ILU	497806.3379	7678805.846	GR96	3182		81	78	Between frost boil (mossy)	Frost boils		Moist to wet															SGCBFB		-51.0554	69.21921
+CALM_A4	ILU	497842.9408	7678772.867	GR96	3182		65	60.5	Small frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05448	69.21891
+CALM_B4	ILU	497838.9922	7678775.769	GR96	3182		70	70.5	Small vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05458	69.21894
+CALM_C4	ILU	497835.0436	7678778.67	GR96	3182		53	53	Between frost boils, wet and dominated by mosses	Frost boils		Wet															SGCVFB		-51.05468	69.21896
+CALM_D4	ILU	497831.0951	7678781.572	GR96	3182		55.5	66	Frost boil edge	Frost boils		Moist															SGCBFB		-51.05478	69.21899
+CALM_E4	ILU	497827.1466	7678784.474	GR96	3182		66.5	70.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05488	69.21901
+CALM_F4	ILU	497823.198	7678787.375	GR96	3182		69	60	In depression between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.05498	69.21904
+CALM_G4	ILU	497819.2495	7678790.277	GR96	3182		80	78	Frost boil edge (mossy)	Frost boils		Moist															SGCBFB		-51.05508	69.21907
+CALM_H4	ILU	497815.301	7678793.179	GR96	3182		72	72.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05517	69.21909
+CALM_I4	ILU	497811.3525	7678796.08	GR96	3182		76	78.5	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05527	69.21912
+CALM_J4	ILU	497807.4039	7678798.982	GR96	3182		77	75	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05537	69.21914
+CALM_K4	ILU	497803.4554	7678801.884	GR96	3182		77.5	82	Small frost boil, or frost boil edge	Frost boils		Mesic to moist															SGCBFB		-51.05547	69.21917
+CALM_A5	ILU	497840.0583	7678768.904	GR96	3182		56.5	59	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.05455	69.21887
+CALM_B5	ILU	497836.1097	7678771.806	GR96	3182		75.5	81.5	Frost boil edge	Frost boils		Moist															SGCBFB		-51.05465	69.2189
+CALM_C5	ILU	497832.1611	7678774.708	GR96	3182		69	72	Between frost boils, wet and dominated by mosses and sedges	Frost boils		Wet															SGCBFB		-51.05475	69.21893
+CALM_D5	ILU	497828.2126	7678777.609	GR96	3182		64	72	Small frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05485	69.21895
+CALM_E5	ILU	497824.2641	7678780.511	GR96	3182		65	72.5	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05495	69.21898
+CALM_F5	ILU	497820.3156	7678783.413	GR96	3182		71.5	72.5	Between frost boils	Frost boils		Moist to wet															SGCBFB		-51.05505	69.219
+CALM_G5	ILU	497816.367	7678786.314	GR96	3182		67.5	71	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05515	69.21903
+CALM_H5	ILU	497812.4185	7678789.216	GR96	3182		72	76.5	Vegetated frost boil	Frost boils		Mesic to moist	02-09-2020		5	15	0	20	6	7	0	7	25	35	0	Data from iB A5-A30 included here / PFT % estimated	SGCVFB		-51.05525	69.21906
+CALM_I5	ILU	497808.47	7678792.118	GR96	3182		65.5	74	Between frost boils (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05535	69.21908
+CALM_J5	ILU	497804.5214	7678795.019	GR96	3182		73	76.5	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05545	69.21911
+CALM_K5	ILU	497800.5729	7678797.921	GR96	3182		75.5	83.5	Between frost boils (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05555	69.21913
+CALM_A6	ILU	497836.7214	7678764.317	GR96	3182		48	51	Frost boil edge, mixed vegetation and mosses	Frost boils		Moist															SGCBFB		-51.05463	69.21883
+CALM_B6	ILU	497833.2272	7678767.843	GR96	3182		64	67	Between frost boils, dominated by mosses and very wet	Frost boils		Wet															SGCBFB		-51.05472	69.21886
+CALM_C6	ILU	497829.4661	7678771.761	GR96	3182		76	69.5	Frost boil edge or small vegetated frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05482	69.2189
+CALM_D6	ILU	497825.3301	7678773.647	GR96	3182		78.5	82.5	Small frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05492	69.21892
+CALM_E6	ILU	497821.3816	7678776.548	GR96	3182		64	77.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05502	69.21894
+CALM_F6	ILU	497817.433	7678779.45	GR96	3182		73	74	Between frost boils with bare tops (mossy), near rock	Frost boils		Moist to wet	02-09-2020		10	45	0	20	6	7	0	7	15	10	0	Data from iB B7-ABB included here / PFT % estimated	SGCBFB		-51.05512	69.21897
+CALM_G6	ILU	497813.4845	7678782.352	GR96	3182		70.5	67	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05522	69.21899
+CALM_H6	ILU	497809.536	7678785.253	GR96	3182		76	73	Between frost boils, or frost boil edge (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05532	69.21902
+CALM_I6	ILU	497805.5875	7678788.155	GR96	3182		73	66.5	Between frost boils, or frost boil edge	Frost boils		Moist to wet															SGCVFB		-51.05542	69.21905
+CALM_J6	ILU	497801.6389	7678791.057	GR96	3182		73	80.5	Frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05552	69.21907
+CALM_K6	ILU	497797.6904	7678793.958	GR96	3182		75.5	87.5	Frost boil edge	Frost boils		Moist															SGCBFB		-51.05562	69.2191
+CALM_A7	ILU	497834.4057	7678760.901	GR96	3182		83	86.5	Hight frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05469	69.2188
+CALM_B7	ILU	497830.4524	7678763.802	GR96	3182		78	83	Frost boil edge or small frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05479	69.21883
+CALM_C7	ILU	497826.5011	7678766.705	GR96	3182		81.5	83	Small frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05489	69.21885
+CALM_D7	ILU	497822.5497	7678769.609	GR96	3182		87.5	99	Frost boil (with bare top) edge	Frost boils		Moist	02-09-2020		10	22	0	20	6	7	0	7	25	20	3	Data from iB E7-D3E included here / PFT % cover estimated	SGCBFB		-51.05499	69.21888
+CALM_E7	ILU	497818.5984	7678772.513	GR96	3182		74.5	80	Between frost boils, or frost boil edge	Frost boils		Moist to wet															SGCBFB		-51.05509	69.21891
+CALM_F7	ILU	497814.647	7678775.417	GR96	3182		88.5	91	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05519	69.21893
+CALM_G7	ILU	497810.6957	7678778.32	GR96	3182		68	65.5	Between frost boils, or frost boil edge (mossy)	Frost boils		Moist to wet															SGCBFB		-51.05529	69.21896
+CALM_H7	ILU	497806.7443	7678781.224	GR96	3182		71	81.5	Frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05539	69.21898
+CALM_I7	ILU	497802.793	7678784.128	GR96	3182		62	75.5	Vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05549	69.21901
+CALM_J7	ILU	497798.8416	7678787.032	GR96	3182		76	68	Frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05559	69.21904
+CALM_K7	ILU	497794.8903	7678789.935	GR96	3182		75	78.5	Between frost boils (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05569	69.21906
+CALM_A8	ILU	497831.6563	7678756.845	GR96	3182		91	95.5	Frost boil (bare to vegetated)	Frost boils		Mesic to moist															SGCBFB		-51.05476	69.21877
+CALM_B8	ILU	497827.7011	7678759.743	GR96	3182		91.5	96.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05486	69.21879
+CALM_C8	ILU	497823.7498	7678762.646	GR96	3182		80	89.5	Frost boil edge (mossy)	Frost boils		Moist															SGCBFB		-51.05496	69.21882
+CALM_D8	ILU	497819.7984	7678765.55	GR96	3182		85	93.5	Small frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05506	69.21884
+CALM_E8	ILU	497815.8471	7678768.454	GR96	3182		71	83	Between frost boils, or frost boil edge	Frost boils		Moist to wet															SGCBFB		-51.05516	69.21887
+CALM_F8	ILU	497811.8958	7678771.358	GR96	3182		82.5	82	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05526	69.2189
+CALM_G8	ILU	497807.9444	7678774.261	GR96	3182		88.5	92	Between frost boils, with water ponding and dominated by mosses	Frost boils		Partly inundated															SGCBFB		-51.05536	69.21892
+CALM_H8	ILU	497803.9931	7678777.165	GR96	3182		95.5	94.5	Depression with water between frost boils, dominated by sedges and mosses			Partly inundated															BRSGT		-51.05546	69.21895
+CALM_I8	ILU	497800.0417	7678780.069	GR96	3182		90	89.5	Between frost boils, with water ponding and dominated my mosses and sedges			Partly inundated															SGCVFB		-51.05556	69.21897
+CALM_J8	ILU	497796.0904	7678782.973	GR96	3182		80	86.5	Between frost boils (mossy)	Frost boils		Moist to wet															SGCVFB		-51.05566	69.219
+CALM_K8	ILU	497792.139	7678785.876	GR96	3182		72.5	76	Frost boil edge (mossy)	Frost boils		Partly inundated															SGCVFB		-51.05576	69.21903
+CALM_A9	ILU	497828.9069	7678752.788	GR96	3182		64	64.5	Small vegetated frost boil	Frost boils		Mesic to moist															SGCVFB		-51.05483	69.21873
+CALM_B9	ILU	497824.9499	7678755.684	GR96	3182		62.5	54	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCVFB		-51.05493	69.21876
+CALM_C9	ILU	497820.9985	7678758.587	GR96	3182		79.5	87.5	Small frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.05503	69.21878
+CALM_D9	ILU	497817.0472	7678761.491	GR96	3182		69.5	73.5	Small vegetated frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05513	69.21881
+CALM_E9	ILU	497813.0958	7678764.395	GR96	3182		73	69.5	Between frost boils (mossy)	Frost boils		Moist to wet															SGCBFB		-51.05523	69.21883
+CALM_F9	ILU	497809.1445	7678767.299	GR96	3182		62	66	Frost boil (bare to vegetated)	Frost boils		Mesic to moist															SGCBFB		-51.05533	69.21886
+CALM_G9	ILU	497805.1931	7678770.202	GR96	3182		68.5	71.5	Frost boil edge	Frost boils		Moist															SGCBFB		-51.05543	69.21889
+CALM_H9	ILU	497801.2418	7678773.106	GR96	3182		81.5	89	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05553	69.21891
+CALM_I9	ILU	497797.2904	7678776.01	GR96	3182		79	83	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.05563	69.21894
+CALM_J9	ILU	497793.3391	7678778.914	GR96	3182		97	101.5	Small frost boil	Frost boils		Partly inundated															BRSGT		-51.05573	69.21896
+CALM_K9	ILU	497789.3878	7678781.817	GR96	3182		83	81	Between frost boils, with water ponding and dominated by mosses and sedges	Frost boils		Partly inundated															SGCVFB		-51.05583	69.21899
+CALM_A10	ILU	497826.1576	7678748.732	GR96	3182		74.5	82	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.0549	69.21869
+CALM_B10	ILU	497822.1986	7678751.625	GR96	3182		69	71	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.055	69.21872
+CALM_C10	ILU	497818.2472	7678754.529	GR96	3182		85	81.5	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.0551	69.21875
+CALM_D10	ILU	497814.2959	7678757.432	GR96	3182		62.5	59.5	Small depression between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.0552	69.21877
+CALM_E10	ILU	497810.3445	7678760.336	GR96	3182		82.5	81	Frost boil with bare top	Frost boils		Mesic to moist															SGCBFB		-51.0553	69.2188
+CALM_F10	ILU	497806.3932	7678763.24	GR96	3182		66	70.5	Frost boil (bare to vegetated)	Frost boils		Mesic to moist															SGCBFB		-51.0554	69.21882
+CALM_G10	ILU	497802.4419	7678766.143	GR96	3182		67.5	80.5	Frost boil edge	Frost boils		Moist															SGCBFB		-51.0555	69.21885
+CALM_H10	ILU	497798.4905	7678769.047	GR96	3182		82	87.5	Between frost  boils (mossy)	Frost boils		Moist to wet															SGCBFB		-51.0556	69.21888
+CALM_I10	ILU	497794.5392	7678771.951	GR96	3182		63	60.5	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCBFB		-51.0557	69.2189
+CALM_J10	ILU	497790.5878	7678774.855	GR96	3182		73	67	Between frost boils, dominated by mosses	Frost boils		Moist to wet															SGCVFB		-51.0558	69.21893
+CALM_K10	ILU	497786.6365	7678777.758	GR96	3182		87.5	96	Flattened vegetated frost boil	Frost boils		Moist to wet															SGCVFB		-51.0559	69.21895
+CALM_A11	ILU	497823.5025	7678744.815	GR96	3182		67	63	Flat area between frost boils, mixed vegetation	Frost boils		Moist to wet															SGCBFB		-51.05497	69.21866
+CALM_B11	ILU	497819.4473	7678747.566	GR96	3182		65.5	67.5	Frost boil edge (mossy)	Frost boils		Moist															SGCBFB		-51.05507	69.21868
+CALM_C11	ILU	497815.496	7678750.47	GR96	3182		73.5	81	Between frost boils, dominated  by mosses	Frost boils		Moist to wet															SGCBFB		-51.05517	69.21871
+CALM_D11	ILU	497811.5446	7678753.373	GR96	3182		78	64.5	Frost boil edge (mossy)	Frost boils		Moist															SGCBFB		-51.05527	69.21873
+CALM_E11	ILU	497807.5933	7678756.277	GR96	3182		79	77.5	Between frost boils	Frost boils		Moist to wet															SGCBFB		-51.05537	69.21876
+CALM_F11	ILU	497803.7168	7678758.772	GR96	3182		82	89	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05547	69.21878
+CALM_G11	ILU	497799.6906	7678762.084	GR96	3182		81	90	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05557	69.21881
+CALM_H11	ILU	497795.7392	7678764.988	GR96	3182		91.5	89.5	Frost boil	Frost boils		Mesic to moist															SGCBFB		-51.05567	69.21884
+CALM_I11	ILU	497791.7879	7678767.892	GR96	3182		70.5	79.5	Frost boil to between frost boils (mossy)	Frost boils		Moist to wet															SGCBFB		-51.05577	69.21886
+CALM_J11	ILU	497787.8365	7678770.796	GR96	3182		72	75.5	Between frost boils, dominated  by mosses	Frost boils		Moist to wet															SGCBFB		-51.05587	69.21889
+CALM_K11	ILU	497783.8852	7678773.699	GR96	3182		79.5	79	Between frost boils, with water ponding and dominated by mosses and sedges	Frost boils		Partly inundated															BRSGT		-51.05597	69.21892
+ERT_CALM_01	ILU	497670.9549	7678570.08	GR96	3182			53	Shrubs																	Could also be classified as BSVFB	BLDST		-51.05882	69.21709
+ERT_CALM_02	ILU	497672.3303	7678572.167	GR96	3182			41																		Could also be classified as BSVFB	BLDST		-51.05878	69.21711
+ERT_CALM_03	ILU	497673.7057	7678574.255	GR96	3182			51																		Could also be classified as BSVFB	BLDST		-51.05875	69.21713
+ERT_CALM_04	ILU	497675.0811	7678576.343	GR96	3182			51																		Could also be classified as BSVFB	BLDST		-51.05871	69.21715
+ERT_CALM_05	ILU	497676.4565	7678578.43	GR96	3182			35																		Could also be classified as BSVFB	BLDST		-51.05868	69.21716
+ERT_CALM_06	ILU	497677.8319	7678580.518	GR96	3182			72			YES																		-51.05864	69.21718
+ERT_CALM_07	ILU	497679.2073	7678582.606	GR96	3182			90	Transition to grassy area																		TSGT		-51.05861	69.2172
+ERT_CALM_08	ILU	497680.5827	7678584.693	GR96	3182			96																			TSGT		-51.05857	69.21722
+ERT_CALM_09	ILU	497681.9581	7678586.781	GR96	3182			60	Transition to shrubs		YES																		-51.05854	69.21724
+ERT_CALM_10	ILU	497683.3335	7678588.869	GR96	3182			55			YES																		-51.0585	69.21726
+ERT_CALM_11	ILU	497684.709	7678590.956	GR96	3182			58			YES																		-51.05847	69.21728
+ERT_CALM_12	ILU	497686.0844	7678593.044	GR96	3182			41			YES																		-51.05843	69.2173
+ERT_CALM_13	ILU	497687.4598	7678595.132	GR96	3182			41			YES																		-51.0584	69.21731
+ERT_CALM_14	ILU	497688.8352	7678597.219	GR96	3182			36			YES																		-51.05836	69.21733
+ERT_CALM_15	ILU	497690.2106	7678599.307	GR96	3182			50			YES																		-51.05833	69.21735
+ERT_CALM_16	ILU	497691.586	7678601.394	GR96	3182			64			YES																		-51.05829	69.21737
+ERT_CALM_17	ILU	497692.9614	7678603.482	GR96	3182			60			YES																		-51.05826	69.21739
+ERT_CALM_18	ILU	497694.3368	7678605.57	GR96	3182			73	Thicken frost layer	Frost boils																	BSBFB		-51.05823	69.21741
+ERT_CALM_19	ILU	497695.7122	7678607.657	GR96	3182			79		Frost boils																	BSBFB		-51.05819	69.21743
+ERT_CALM_20	ILU	497697.0876	7678609.745	GR96	3182			89		Frost boils																	BSBFB		-51.05816	69.21745
+ERT_CALM_21	ILU	497698.1197	7678611.312	GR96	3182			61		Frost boils																	BSBFB		-51.05813	69.21746
+ERT_CALM_22	ILU	497700.1169	7678614.148	GR96	3182			72		Frost boils																Measurement not reliable / ALT might be superior to indicated value, as soil was very hard/sticky	BSBFB		-51.05808	69.21749
+ERT_CALM_23	ILU	497701.5561	7678616.193	GR96	3182			66		Frost boils																	BSBFB		-51.05804	69.2175
+ERT_CALM_24	ILU	497702.9953	7678618.237	GR96	3182			44		Frost boils																	BSBFB		-51.05801	69.21752
+ERT_CALM_25	ILU	497704.4345	7678620.281	GR96	3182			52		Frost boils																	BSBFB		-51.05797	69.21754
+ERT_CALM_26	ILU	497705.8737	7678622.325	GR96	3182			48		Frost boils																	BSBFB		-51.05793	69.21756
+ERT_CALM_27	ILU	497707.3129	7678624.369	GR96	3182			40		Frost boils																	BSBFB		-51.0579	69.21758
+ERT_CALM_28	ILU	497708.7521	7678626.413	GR96	3182			65		Frost boils																	BSBFB		-51.05786	69.2176
+ERT_CALM_29	ILU	497710.1914	7678628.458	GR96	3182			71		Frost boils																	BSBFB		-51.05783	69.21761
+ERT_CALM_30	ILU	497711.6306	7678630.502	GR96	3182			76		Frost boils																	BSBFB		-51.05779	69.21763
+ERT_CALM_31	ILU	497713.0698	7678632.546	GR96	3182			70		Frost boils																	BSBFB		-51.05775	69.21765
+ERT_CALM_32	ILU	497714.509	7678634.59	GR96	3182			76		Frost boils																	BSBFB		-51.05772	69.21767
+ERT_CALM_33	ILU	497715.9482	7678636.634	GR96	3182			51		Frost boils																	BSBFB		-51.05768	69.21769
+ERT_CALM_34	ILU	497717.3874	7678638.679	GR96	3182			64		Frost boils																	BSBFB		-51.05764	69.21771
+ERT_CALM_35	ILU	497718.8266	7678640.723	GR96	3182			48		Frost boils																	BSBFB		-51.05761	69.21772
+ERT_CALM_36	ILU	497720.2658	7678642.767	GR96	3182			82		Frost boils																	BSBFB		-51.05757	69.21774
+ERT_CALM_37	ILU	497721.705	7678644.811	GR96	3182			77		Frost boils																	BSBFB		-51.05754	69.21776
+ERT_CALM_38	ILU	497723.1443	7678646.855	GR96	3182			68		Frost boils																	BSBFB		-51.0575	69.21778
+ERT_CALM_39	ILU	497724.5835	7678648.899	GR96	3182			103	Transition to grassy wet area																	Frozen	TSGT		-51.05746	69.2178
+ERT_CALM_40	ILU	497726.0227	7678650.944	GR96	3182			110	Grassy swampy area			Wet to partly inundated														Top frozen / Out of range	TSGT		-51.05743	69.21782
+ERT_CALM_41	ILU	497727.4619	7678652.988	GR96	3182			110	Grassy swampy area			Wet to partly inundated														Top frozen / Out of range	TSGT		-51.05739	69.21783
+ERT_CALM_42	ILU	497728.7834	7678655.11	GR96	3182			110	Grassy swampy area			Wet to partly inundated														Ice thickness 14 cm / Out of range	TSGT		-51.05736	69.21785
+ERT_CALM_43	ILU	497730.105	7678657.232	GR96	3182			110	Grassy swampy area			Wet to partly inundated															TSGT		-51.05732	69.21787
+ERT_CALM_44	ILU	497731.4265	7678659.354	GR96	3182			85	Grassy area (drier)																		TSGT		-51.05729	69.21789
+ERT_CALM_45	ILU	497732.7481	7678661.476	GR96	3182			83	Transition to shrubs	Frost boils	YES																		-51.05726	69.21791
+ERT_CALM_46	ILU	497734.0696	7678663.598	GR96	3182			74		Frost boils																	SGCBFB		-51.05722	69.21793
+ERT_CALM_47	ILU	497735.3912	7678665.721	GR96	3182			53		Frost boils																	SGCBFB		-51.05719	69.21795
+ERT_CALM_48	ILU	497736.7127	7678667.843	GR96	3182			71		Frost boils																	SGCBFB		-51.05716	69.21797
+ERT_CALM_49	ILU	497738.0343	7678669.965	GR96	3182			64		Frost boils																	SGCBFB		-51.05712	69.21799
+ERT_CALM_50	ILU	497739.3558	7678672.087	GR96	3182			68		Frost boils																	SGCBFB		-51.05709	69.21801
+ERT_CALM_51	ILU	497740.6774	7678674.209	GR96	3182			58		Frost boils																	SGCBFB		-51.05706	69.21802
+ERT_CALM_52	ILU	497741.9989	7678676.331	GR96	3182			58		Frost boils																	SGCBFB		-51.05702	69.21804
+ERT_CALM_53	ILU	497743.3205	7678678.454	GR96	3182			79		Frost boils																	SGCBFB		-51.05699	69.21806
+ERT_CALM_54	ILU	497744.642	7678680.576	GR96	3182			67		Frost boils																	SGCBFB		-51.05696	69.21808
+ERT_CALM_55	ILU	497745.9636	7678682.698	GR96	3182			57		Frost boils																	SGCBFB		-51.05692	69.2181
+ERT_CALM_56	ILU	497747.2851	7678684.82	GR96	3182			77		Frost boils																	SGCBFB		-51.05689	69.21812
+ERT_CALM_57	ILU	497748.6067	7678686.942	GR96	3182			58		Frost boils																	SGCBFB		-51.05686	69.21814
+ERT_CALM_58	ILU	497749.9282	7678689.064	GR96	3182			78		Frost boils																	SGCBFB		-51.05682	69.21816
+ERT_CALM_59	ILU	497751.2497	7678691.186	GR96	3182			74		Frost boils																Measurement not reliable, ALT might be superior to indicated value, as soil was very hard/sticky			-51.05679	69.21818
+ERT_CALM_60	ILU	497752.5713	7678693.309	GR96	3182			62		Frost boils																	SGCBFB		-51.05676	69.2182
+ERT_CALM_61	ILU	497753.5563	7678694.89	GR96	3182			57		Frost boils																	SGCBFB		-51.05673	69.21821
+South	ILU	498703.8556	7678471.182	GR96	3182			67		Frost boils																	SGCBFB		-51.03273	69.21621
+Center	ILU	498732.7052	7678470.396	GR96	3182			110																		Out of range	TSGT		-51.032	69.2162
+North	ILU	498743.4558	7678469.377	GR96	3182			82																					-51.03173	69.21619
+North2	ILU	498751.3866	7678490.113	GR96	3182			45																			BLDST		-51.03153	69.21638
+ILU2021-02	ILU	497826.557	7678810.919	GR96	3182	CLAY		77.4	Frost boils with bare tops	Frost boils		Mesic															SGCBFB	1	-51.05489	69.21925
+00-CDD	ILU	497065.9293	7679107.087	GR96	3182		62.8	72.8	Frost boils (mostly vegetated but few bare tops)	Frost boils		Mesic to moist	30-08-2020		0	30	0	15	5	5	0	5	30	25	0	PFT % estimated	SGCBFB		-51.07411	69.2219
+0E-BE1	ILU	496501.0527	7679988.746	GR96	3182				Shrubby urban area		YES	Very dry to dry	31-08-2020		25	60	0	15	5	5	0	5	0	0	0	PFT % estimated	EBDST_BLDST		-51.08841	69.2298
+16-A41	ILU	495806.4576	7678598.232	GR96	3182	SAND			Sandy and grassy urban area			Very dry to dry	04-09-2020		50	0	25	25	25	0	0	0	0	0	0	PFT % estimated	FGG	0	-51.1059	69.21732
+1D-637	ILU	495746.8964	7678957.39	GR96	3182				Shrubby and grassy urban area		YES	Mesic to moist	04-09-2020		0	55	0	45	45	0	0	0	0	0	0	PFT % estimated	GGT_SLST		-51.10742	69.22054
+35-CCF	ILU	496670.7443	7679633.913	GR96	3182		66	66.6	Frost boils	Frost boils		Moist	30-08-2020		0	25	5	25	7	9	0	9	25	20	0	PFT % estimated	SGCVFB		-51.08411	69.22662
+36-C3E	ILU	497461.8849	7680287.505	GR96	3182		72	80.2	Small frost boils or small frost boils with bare tops	Frost boils		Mesic to moist	31-08-2020		0	30	0	20	6	7	0	7	30	20	0	PFT % estimated	SGCVFB		-51.06414	69.23249
+3D-CB8	ILU	495753.2235	7678952.919	GR96	3182				Grassy urban area			Mesic to moist	04-09-2020		0	10	0	90	80	0	10	0	0	0	0	PFT % estimated	GGT		-51.10726	69.2205
+55-8B7	ILU	496486.3642	7679957.545	GR96	3182				Shrubby urban area			Dry to very dry	31-08-2020														SLST		-51.08878	69.22952
+5F-DC9	ILU	496977.4951	7679942.387	GR96	3182		64.8	75	Relatively flat shrubby mounds	Frost boils		Moist	02-09-2020		0	50	0	15	5	5	0	5	15	20	0	PFT % estimated	BSVFB		-51.07637	69.22939
+61-A12	ILU	495229.6144	7678254.739	GR96	3182				Grassy urban area			Dry	04-09-2020		5	5	15	75	40	10	15	10	0	0	0	PFT % estimated	GGT		-51.12045	69.21423
+65-20F	ILU	496828.0124	7680638.386	GR96	3182		36.6	42.2	Sedimentary area characterized by slight NE facing slope			Mesic to moist	31-08-2020		0	30	0	55	10	22.5	0	22.5	0	15	0	PFT % estimated	SGBT		-51.08017	69.23563
+71-F05	ILU	498008.2113	7680579.145	GR96	3182		73.4	81.8	Frost boils with bare tops	Frost boils		Dry to mesic	31-08-2020		5	20	0	12	4	4	0	4	40	20	3	PFT % estimated	LBFB		-51.05034	69.23511
+7F-432	ILU	496497.2473	7679546.066	GR96	3182				Shrubby urban area			Dry to very dry	30-08-2020														SLST		-51.08849	69.22583
+80-03B	ILU	495508.584	7677266.251	GR96	3182			40	Relatively flat shrubby mounds			Dry	04-09-2020		0	45	0	10	2	4	0	4	10	35	0	PFT % estimated / Stony area, yearly ALT might not be reliable	EBDST		-51.11336	69.20537
+88-FA7	ILU	496498.0471	7679551.64	GR96	3182				Shrubby urban area			Dry to very dry	30-08-2020														SLST		-51.08847	69.22588
+89-BFF	ILU	496909.933	7678789.484	GR96	3182	CLAY	47.2	46.6	Sedimentary corridor between bedrock outcrops, with slight W facing slope, and characterized by the presence of relatively flat shrubby mounds		YES	Moist	30-08-2020													Soil type and OLT inferred from drilling log information from closest point Drill6	BLDST_SGBT	1	-51.07804	69.21905
+8B-205	ILU	496494.2973	7679969.799	GR96	3182				Shrubby urban area		YES	Dry to very dry	31-08-2020														SLST_EBDST		-51.08858	69.22963
+8E-C67	ILU	496388.3244	7680297.787	GR96	3182		66.6	63.4	Sedimentary area characterized by slight SW facing slope			Dry to mesic	31-08-2020		0	40	10	45	8	18.5	0	18.5	0	5	0	PFT % estimated	SGBT		-51.09127	69.23257
+94-724	ILU	495815.2508	7680710.172	GR96	3182		75.6	81.67	Coastal sedimentary area characterized by relatively flat shrubby mounds surrounded by wet grassy areas			Mesic to moist	31-08-2020		15	53	0	20	4	8	0	8	7	5	0	PFT % estimated / Ponds and very wet spots in the close vicinity / Switch to SGBT or transition point	EBDST		-51.10577	69.23626
+B0-DB6	ILU	496646.6048	7680210.44	GR96	3182		60	48.2	Sedimentary area characterized by slight SW facing slope			Mesic	31-08-2020		0	40	0	30	6	12	0	12	5	25	0	PFT % estimated / Transition between SGBT and EBDST	SGBT		-51.08474	69.23179
+B1-4E2	ILU	496076.3937	7680475.569	GR96	3182				Stony sedimentary area characterized by slight SW facing slope			Dry to mesic	31-08-2020		0	40	0	18	3	7.5	0	7.5	7	35	0	PFT % estimated	EBDST		-51.09916	69.23416
+C5-992	ILU	497254.0716	7680231.978	GR96	3182		80.4	94.6	Hummocks or small frost boils	Frost boils		Moist to wet	31-08-2020		0	25	0	20	6	7	0	7	30	25	0	PFT % estimated / Close to transition with BRSGT	SGCVFB		-51.06939	69.23199
+D4-0D7	ILU	496494.3086	7679977.605	GR96	3182				Shrubby urban area		YES	Dry to very dry	31-08-2020														SLST_EBDST		-51.08858	69.2297
+FC-52B	ILU	498572.3445	7678411.042	GR96	3182		47.2	54.6	Hummocky and grassy area		YES	Moist to wet	30-08-2020		0	20	0	65	21	22	0	22	10	5	0	PFT % estimated / Switch eventually to LVFB	SGBT_LVFB		-51.03605	69.21567
+FD-48D	ILU	497634.8111	7679474.44	GR96	3182		76.2	70	Frost boils or frost boils with bare tops	Frost boils		Moist	30-08-2020		0	30	0	15	5	5	0	5	20	35	0	PFT % estimated	SGCBFB		-51.05975	69.2252
+FD-B5D	ILU	496514.1961	7678117.63	GR96	3182		69.4	58.8	Wet grassy and shrubby field in town			Moist to wet	07-09-2020		0	15	5	70	40	7.5	15	7.5	0	10	0	PFT % estimated	GGT		-51.08801	69.21302
+ALT_1	ILU	496295.3653	7677986.376	GR96	3182		68		Grassy field in town			Moist to wet	01-09-2020														GGT		-51.09353	69.21184
+ALT_2	ILU	496523.2676	7678643.933	GR96	3182		43.8		Grassy and shrubby field in town			Moist	01-09-2020														GGT		-51.0878	69.21774
+ALT_3	ILU	497000.323	7680159.799	GR96	3182				Cushiony shrubs			Mesic to dry	02-09-2020														EBDST		-51.0758	69.23134
+ALT_4	ILU	497592.1353	7679949.504	GR96	3182		64.67		Hummocks or small frost boils	Frost boils		Mesic	14-09-2020														SGCVFB		-51.06084	69.22946
+ALT_5	ILU	497465.6746	7678990.669	GR96	3182		52.33		Frost boils	Frost boils		Mesic to moist	14-09-2020														LVFB		-51.06401	69.22086
+ILU2018-01	ILU	496974.7066	7679927.894	GR96	3182	CLAY					YES																BSVFB_BRSGT	1	-51.07644	69.22926
+ILU2018-02	ILU	497378.1962	7680109.182	GR96	3182	CLAY/ICE				Frost boils																	SGCBFB	1	-51.06625	69.23089
+ALT_T_1	ILU	497569.4364	7679019.554	GR96	3182		49.5		Small frost boils	Frost boils		Mesic to moist	14-09-2020													Transect start	LBFB		-51.06139	69.22112
+ALT_T_10	ILU	497614.17	7679013.935	GR96	3182		49		Frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	28	0	0	0	0	0	0	58	7	7	45m offset from start	LVFB		-51.06026	69.22107
+ALT_T_11	ILU	497619.317	7679013.93	GR96	3182		56.5		Frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	28	0	0	0	0	0	0	58	7	7	50m offset from start	LVFB		-51.06013	69.22107
+ALT_T_12	ILU	497624.464	7679013.924	GR96	3182		55		Frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	28	0	0	0	0	0	0	58	7	7	55m offset from start	LVFB		-51.06	69.22107
+ALT_T_13	ILU	497630.0058	7679012.804	GR96	3182		48.5		Frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	28	0	0	0	0	0	0	58	7	7	60m offset from start	LVFB		-51.05986	69.22106
+ALT_T_14	ILU	497634.7558	7679011.684	GR96	3182		41.5		At the transition between frost boils and grassy water track	Frost boils		Mesic to moist	14-09-2020													65m offset from start	LVFB		-51.05974	69.22105
+ALT_T_15	ILU	497639.5058	7679010.565	GR96	3182		59.5		Transition area between water track with small ponds and relatively flat shrubby mounds		YES	Wet to partly inundated	14-09-2020	0.04	0	15	0	60	15	15	15	15	0	25	0	70m offset from start / Ponds in the surroundings	BRSGT_BLDST_LVFB		-51.05962	69.22104
+ALT_T_16	ILU	497645.4436	7679009.444	GR96	3182		45		Transition area between water track with small ponds and relatively flat shrubby mounds		YES	Wet to partly inundated	14-09-2020	0.04	0	15	0	60	15	15	15	15	0	25	0	75m offset from start /  Ponds in the surroundings	BRSGT_BLDST_LVFB		-51.05947	69.22103
+ALT_T_17	ILU	497649.7998	7679010.555	GR96	3182		47.5		Transition area between water track with small ponds and relatively flat shrubby mounds		YES	Wet to partly inundated	14-09-2020													80m offset from start / Ponds in the surroundings	BRSGT_BLDST_LVFB		-51.05936	69.22104
+ALT_T_18	ILU	497654.5498	7679009.435	GR96	3182		33		Sparse relatively flat shrubby mounds spread within grassy and bare ground areas, and small ponds			Wet to partly inundated	14-09-2020	0.04	0	60	1	3	1	1	0	1	4	32	0	85m offset from start	BLDST		-51.05924	69.22103
+ALT_T_19	ILU	497659.3009	7679009.43	GR96	3182		31.5		Sparse relatively flat shrubby mounds spread within grassy and bare ground areas, and small ponds			Wet to partly inundated	14-09-2020	0.04	0	60	1	3	1	1	0	1	4	32	0	90m offset from start	BLDST		-51.05912	69.22103
+ALT_T_2	ILU	497573.7915	7679019.55	GR96	3182		49.5		Small frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	13	0	20	6	7	0	7	50	15	2	5m offset from start	LVFB		-51.06128	69.22112
+ALT_T_20	ILU	497664.8427	7679008.31	GR96	3182		41.5		Sparse relatively flat shrubby mounds spread within grassy and bare ground areas, and small ponds			Wet to partly inundated	14-09-2020													95m offset from start / Ponds in the surroundings	BLDST		-51.05898	69.22102
+ALT_T_21	ILU	497668.8009	7679007.191	GR96	3182		46.5		Sparse relatively flat shrubby mounds spread within grassy and bare ground areas, and small ponds		YES	Wet to partly inundated	14-09-2020													100m offset from start / Ponds in the surroundings	BRSGT_BLDST		-51.05888	69.22101
+ALT_T_3	ILU	497580.1274	7679020.659	GR96	3182		55		Small frost boils	Frost boils		Mesic to moist	14-09-2020	0.04	0	13	0	20	6	7	0	7	50	15	2	10m offset from start	LVFB		-51.06112	69.22113
+ALT_T_4	ILU	497584.8773	7679019.539	GR96	3182		35.5		Small frost boils	Frost boils	YES	Mesic to moist	14-09-2020	0.04	0	40	0	20	6	7	0	7	35	5	0	15m offset from start	SGCVFB		-51.061	69.22112
+ALT_T_5	ILU	497590.8161	7679019.533	GR96	3182		36		At the transition between shrubby mounds and grassy water track		YES	Mesic	14-09-2020													20m offset from start	SGCVFB_BRSGT		-51.06085	69.22112
+ALT_T_6	ILU	497594.3794	7679019.529	GR96	3182		40		Shrubby mounds			Mesic	14-09-2020	0.04	0	60	0	3	1	1	0	1	7	30	0	25m offset from start	BLDST		-51.06076	69.22112
+ALT_T_7	ILU	497600.3183	7679019.524	GR96	3182		40.5		Shrubby mounds			Mesic to moist	14-09-2020	0.04	0	60	0	3	1	1	0	1	7	30	0	30m offset from start	BLDST		-51.06061	69.22112
+ALT_T_8	ILU	497604.6712	7679017.289	GR96	3182		64.5		Water track			Moist to wet	14-09-2020	0.04	0	20	0	75	19	19	18	19	0	5	0	35m offset from start	BRSGT		-51.0605	69.2211
+ALT_T_9	ILU	497609.816	7679015.054	GR96	3182		60.5		At the transition between relatively grassy water track and frost boils			Mesic to moist	14-09-2020													40m offset from start	BRSGT		-51.06037	69.22108
+Drill10	ILU	498508.1473	7678343.061	GR96	3182	CLAY	58		Top of slightly elevated plateau, or hill, with bare and vegetated frost boils	Frost boils		Mesic to moist	08-09-2020	0.04	0	10	3	3	3	0	0	0	64	15	5	Pond in the vicinity	LVFB	1	-51.03767	69.21506
+Drill11	ILU	496923.8042	7679423.944	GR96	3182	CLAY/SILT	76		Shrub dominated patch or hummocks			Mesic	10-09-2020	0.04	0	80	0	15	5	5	0	5	0	5	0	Almost at the transition between BRSGT and BSVFB	BSVFB	1	-51.07771	69.22474
+Drill13	ILU	497284.5812	7679206.074	GR96	3182	SAND	69.67		Flat area on slightly elevated plateau, crossed by water tracks and streams connecting the main lakes	Frost boils		Moist to wet	10-09-2020	0.04	0	37	3	5	1.5	2	0	1.5	10	40	5	Ponds and water accumulations in the close vicinity	LVFB	0	-51.06859	69.22279
+Drill14	ILU	497235.3784	7678760.1	GR96	3182	SAND/CLAY	92.67		Slightly elevated plateau, or hill, above wetland and surrounding main lakes, and characterized by relatively flat frost boils with bare tops	Frost boils		Dry to mesic	10-09-2020	0.04	6	20	3	3	1	1	0	1	40	20	8		LBFB	1	-51.06982	69.21879
+Drill15	ILU	498022.2016	7680268.027	GR96	3182	SILT/CLAY	53.33		Boring located at the transition between relatively flat shrubby mounds/hummocks and wet grassy areas			Wet to partly inundated	14-09-2020	0.04	0	15	0	60	15	15	15	15	0	25	0	Small pond in the close vicinity / At transition between BRSGT and BSVFB	BSVFB	1	-51.04998	69.23232
+Drill16_1	ILU	497828.5884	7680590.45	GR96	3182	CLAY	44.33		Grassy valley with running stream, located between surrounding hills with slight NW facing slope. First quadrat located on surrounding hummocks or frost boils		YES	Moist	14-09-2020	0.04	0	20	0	3	1	1	0	1	64	12	1	OLT comprising transition layer with decomposed OM	BRSGT_BLDST_LVFB	1	-51.05488	69.23521
+Drill16_2	ILU	497828.5884	7680590.45	GR96	3182	CLAY	44.33		Grassy valley with running stream, located between surrounding hills with slight NW facing slope. Second quadrat located in grassland.		YES	Moist	14-09-2020	0.04	0	15	0	73	16.5	20	16.5	20	0	12	0	OLT comprising transition layer with decomposed OM	BRSGT_BLDST_LVFB	1	-51.05488	69.23521
+Drill5	ILU	497701.5561	7679312.69	GR96	3182	SAND/CLAY	91.33		Relatively flat frost boils with bare tops, close to flooded dog sled track, and water pipeline	Frost boils		Mesic	10-09-2020	0.04	0	24	0	3	1	1	0	1	50	22	1	Ponds in surroundings / Between BSBFB and LBFB	LBFB	1	-51.05806	69.22375
+Drill6	ILU	496934.102	7678801.719	GR96	3182	CLAY	43		Sedimentary corridor between bedrock outcrops, with slight W facing slope, and characterized by the presence of relatively flat shrubby mounds		YES	Moist	10-09-2020	0.04	0	40	0	5	2	1.5	0	1.5	0	52	3	OLT comprising transition layer with decomposed OM	BLDST_SGBT	1	-51.07743	69.21916
+Drill7	ILU	497331.1256	7678330.689	GR96	3182	CLAY	80		Frost boils with bare tops to vegetated small frost boils or hummocks	Frost boils		Wet to partly inundated	08-09-2020	0.04	0	20	1	6	2	2	0	2	40	30	3	OLT comprising transition layer with decomposed OM / Ponds and water channels in the close vicinity	LBFB	1	-51.06739	69.21494
+T14_10	ILU	496912.1869	7679626.903	GR96	3182		66.5		Frost boils with bare tops	Frost boils		Mesic to moist	09-09-2020														SGCBFB		-51.07801	69.22656
+T14_11	ILU	496932.3724	7679625.762	GR96	3182		81		Grassy and mossy water track			Wet to partly inundated	09-09-2020														BRSGT		-51.0775	69.22655
+T14_12	ILU	496952.951	7679622.391	GR96	3182		100		Grassy water track			Wet to partly inundated	09-09-2020														TSGT		-51.07698	69.22652
+T14_13	ILU	496971.9463	7679619.022	GR96	3182		64.5		Frost boils with bare tops	Frost boils		Mesic to moist	09-09-2020														BSBFB		-51.0765	69.22649
+T14_14	ILU	497009.5414	7679612.285	GR96	3182		60		Grassy water track			Moist to wet	09-09-2020														BRSGT		-51.07555	69.22643
+T14_15	ILU	497029.3271	7679607.8	GR96	3182		84		Frost boils with bare tops	Frost boils		Mesic to moist	09-09-2020														SGCBFB		-51.07505	69.22639
+T14_16	ILU	497048.7199	7679605.546	GR96	3182		60		Grassy hummocks		YES	Mesic to moist	09-09-2020																-51.07456	69.22637
+T14_17	ILU	497068.1113	7679602.178	GR96	3182		67		Frost boils	Frost boils	YES	Mesic to moist	09-09-2020																-51.07407	69.22634
+T14_18	ILU	497086.7125	7679599.925	GR96	3182		90.5		Grassy and mossy water track			Wet to partly inundated	09-09-2020														BRSGT		-51.0736	69.22632
+T14_19	ILU	497106.5012	7679597.671	GR96	3182		89		At the transition between frost boils and grassy water track	Frost boils		Wet	09-09-2020														SGCBFB		-51.0731	69.2263
+T14_2	ILU	496764.5689	7679644.936	GR96	3182		70.5		Frost boils			Mesic to moist	09-09-2020														SGCVFB		-51.08174	69.22672
+T14_20	ILU	497127.0789	7679593.186	GR96	3182		75.5		Frost boils	Frost boils		Mesic to moist	09-09-2020														SGCBFB		-51.07258	69.22626
+T14_21	ILU	497146.4732	7679592.049	GR96	3182		82.5		Frost boils	Frost boils		Mesic to moist	09-09-2020														BSBFB		-51.07209	69.22625
+T14_3	ILU	496784.7498	7679640.449	GR96	3182		82.5		Wet and mossy water track			Wet	09-09-2020														BRSGT		-51.08123	69.22668
+T14_4	ILU	496805.3354	7679642.652	GR96	3182		73.5		Frost boils or frost boils with bare tops	Frost boils		Mesic to moist	09-09-2020														SGCBFB		-51.08071	69.2267
+T14_5	ILU	496813.6446	7679640.411	GR96	3182		78.5		Frost boils or frost boils with bare tops	Frost boils		Mesic to moist	09-09-2020														SGCBFB		-51.0805	69.22668
+T14_6	ILU	496833.8359	7679643.73	GR96	3182		82.5		Water track			Wet to partly inundated	09-09-2020													Could also be classified as BRSGT	TSGT		-51.07999	69.22671
+T14_7	ILU	496852.8294	7679639.245	GR96	3182		61.5		Vegetated frost boils at the edge of water track			Moist to wet	09-09-2020														BSVFB		-51.07951	69.22667
+T14_8	ILU	496874.1965	7679633.642	GR96	3182		74		Water track			Mesic to moist	09-09-2020														BRSGT		-51.07897	69.22662
+T14_9	ILU	496891.2126	7679630.275	GR96	3182		75		Mossy water track			Partly inundated	09-09-2020														BRSGT		-51.07854	69.22659
+T14_Drill1	ILU	496746.7585	7679646.075	GR96	3182	CLAY	67.5		Shrub dominated patch or hummocks			Mesic to moist	09-09-2020	0.04	0	25	0	30	10	10	0	10	0	45	0		BSVFB	1	-51.08219	69.22673
+T14_Drill4_1	ILU	497164.6826	7679593.142	GR96	3182	CLAY	75		Boring locations in between frost boils	Frost boils		Moist to wet	09-09-2020	0.04	15	28	2	10	2	4	0	4	24	21	0	OLT comprising transition layer with decomposed OM / Could also be classified as BSBFB	SGCBFB	1	-51.07163	69.22626
+T14_Drill4_2	ILU	497164.6826	7679593.142	GR96	3182	CLAY	75		Boring locations in between frost boils	Frost boils		Moist to wet	09-09-2020	0.04	0	77	0	2	2	0	0	0	13	8	0	OLT comprising transition layer with decomposed OM / Could also be classified as BSBFB	SGCBFB	1	-51.07163	69.22626
+T14_DrillA	ILU	496865.0984	7679638.114	GR96	3182	CLAY	67.67		Hummocky shrub patch			Mesic to moist	09-09-2020	0.04	0	55	0	40	10	15	0	15	0	5	0		BSVFB	1	-51.0792	69.22666
+T14_DrillB	ILU	496992.1251	7679612.306	GR96	3182	CLAY	59		Shrub dominated frost boils	Frost boils		Mesic	09-09-2020	0.04	0	80	0	3	1	1	0	1	6	6	5	Could also be classified as SGCVFB	BSVFB	1	-51.07599	69.22643
+avg_CALM_1	ILU	497840	7678780	GR96	3182		70.4	72.6																			SGCVFB		-51.05455	69.21897
+avg_CALM_2	ILU	497810	7678760	GR96	3182		72.6	71.6																			SGCBFB		-51.05531	69.21879
+avg_CALM_3	ILU	497820	7678790	GR96	3182		70.75	68.667																			SGCVFB		-51.05506	69.21906
+avg_CALM_4	ILU	497830	7678750	GR96	3182		69.25	73.25																			SGCBFB		-51.0548	69.2187
+avg_CALM_5	ILU	497820	7678800	GR96	3182		61.333	67.167																			SGCVFB		-51.05506	69.21915
+avg_CALM_6	ILU	497790	7678780	GR96	3182		89.167	92.833																			SGCVFB		-51.05581	69.21897
+avg_CALM_7	ILU	497840	7678770	GR96	3182		65.667	67																			SGCBFB		-51.05455	69.21888
+avg_CALM_8	ILU	497800	7678770	GR96	3182		77	85.667																			SGCBFB		-51.05556	69.21888
+avg_CALM_9	ILU	497810	7678800	GR96	3182		77	76.875																			SGCBFB		-51.05531	69.21915
+avg_CALM_10	ILU	497800	7678800	GR96	3182		75.333	80.667																			SGCVFB		-51.05556	69.21915
+avg_CALM_11	ILU	497820	7678740	GR96	3182		67	63																			SGCBFB		-51.05506	69.21862
+avg_CALM_12	ILU	497820	7678750	GR96	3182		73.25	75.25																			SGCBFB		-51.05506	69.2187
+avg_CALM_13	ILU	497830	7678780	GR96	3182		62	69.5																			SGCBFB		-51.0548	69.21897
+avg_CALM_14	ILU	497790	7678770	GR96	3182		69.625	70.625																			SGCBFB		-51.05581	69.21888
+avg_CALM_15	ILU	497820	7678780	GR96	3182		68.375	74.125																			SGCBFB		-51.05506	69.21897
+avg_CALM_16	ILU	497800	7678760	GR96	3182		84.833	89.5																			SGCBFB		-51.05556	69.21879
+avg_CALM_17	ILU	497830	7678770	GR96	3182		73.8	74.8																			SGCBFB		-51.0548	69.21888
+avg_CALM_18	ILU	497810	7678750	GR96	3182		78	64.5																			SGCBFB		-51.05531	69.2187
+avg_CALM_19	ILU	497840	7678760	GR96	3182		48	51																			SGCBFB		-51.05455	69.21879
+avg_CALM_20	ILU	497850	7678780	GR96	3182		57.833	64.667																			SGCBFB		-51.0543	69.21897
+avg_CALM_21	ILU	497810	7678790	GR96	3182		71.625	72.5																			SGCVFB		-51.05531	69.21906
+avg_CALM_22	ILU	497780	7678770	GR96	3182		79.5	79																			SGCVFB		-51.05607	69.21888
+avg_CALM_23	ILU	497800	7678790	GR96	3182		74.833	78.667																			SGCVFB		-51.05556	69.21906
+avg_CALM_24	ILU	497840	7678790	GR96	3182		73.75	74																			SGCBFB		-51.05455	69.21906
+avg_CALM_25	ILU	497810	7678780	GR96	3182		74.5	76.25																			SGCVFB		-51.05531	69.21897
+avg_CALM_26	ILU	497850	7678790	GR96	3182		83	84																			SGCBFB		-51.0543	69.21906
+avg_CALM_27	ILU	497820	7678770	GR96	3182		79.5	88.875																			SGCBFB		-51.05506	69.21888
+avg_CALM_28	ILU	497830	7678800	GR96	3182		77	69.375																			SGCBFB		-51.0548	69.21915
+avg_CALM_29	ILU	497830	7678760	GR96	3182		85.875	90.375																			SGCBFB		-51.0548	69.21879
+avg_CALM_30	ILU	497840	7678800	GR96	3182		72.5	72.5																			SGCBFB		-51.05455	69.21915
+avg_CALM_31	ILU	497790	7678790	GR96	3182		73.75	77.25																			SGCVFB		-51.05581	69.21906
+avg_CALM_32	ILU	497810	7678810	GR96	3182		74.75	74.375																			SGCVFB		-51.05531	69.21924
+avg_CALM_33	ILU	497800	7678780	GR96	3182		81.3	85.8																			SGCVFB		-51.05556	69.21897
+avg_CALM_34	ILU	497820	7678810	GR96	3182		75.5	74.67																			SGCVFB		-51.05506	69.21924
+avg_CALM_35	ILU	497810	7678770	GR96	3182		75.375	77.875																			SGCBFB		-51.05531	69.21888
+avg_CALM_36	ILU	497830	7678790	GR96	3182		67.833	68.667																			SGCVFB		-51.0548	69.21906
+avg_CALM_37	ILU	497820	7678760	GR96	3182		72.875	76.125																			SGCBFB		-51.05506	69.21879

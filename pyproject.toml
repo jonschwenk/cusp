@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cusp"
+version = "0.1"
+description = "Build, validate, aggregate, export, and sample features for the CommUnity near-Surface Permafrost dataset."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE.txt" }
+authors = [{ name = "CUSP contributors" }]
+keywords = [
+    "active-layer",
+    "earth-science",
+    "geospatial",
+    "permafrost",
+    "scientific-data",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "geopandas",
+    "numpy",
+    "pandas",
+    "scipy",
+    "shapely",
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+]
+earthengine = [
+    "earthengine-api",
+    "geemap",
+]
+source-processing = [
+    "netCDF4",
+    "openpyxl",
+    "scikit-learn",
+    "unidecode",
+    "utm",
+    "xarray",
+    "xlrd==1.2.*",
+    "xlsxwriter",
+]
+
+[project.urls]
+Homepage = "https://github.com/jonschwenk/cusp"
+Documentation = "https://github.com/jonschwenk/cusp/tree/main/docs"
+Issues = "https://github.com/jonschwenk/cusp/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["cusp*"]

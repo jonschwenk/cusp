@@ -1,0 +1,142 @@
+site_id,pf_observed,pf_depth,org_thick,Canopy and Surface,Burn Year,Relief,Soil Type,lat,lon,source,date,thaw_depth,obs_limit,method
+3,1,49.0,85.0,"Spruce; moss, lab tea, willow, birch.",1971,Low,"Clay, silt, with some stones",60.75907,-115.8616,Holloway_2019,2018-08-15,49.0,,tp
+4,0,,36.0,"Poplar, spruce, tamarack; Moss, willow, lab tea",,High,Sand and gravel,60.71378,-115.8896,Holloway_2019,2018-08-15,,,tp
+5,1,146.0,25.0,"Spruce, tamarack; moss, lab tea, horsetails, birch.",1971,Slope,Sand,60.71464,-115.8943,Holloway_2019,2018-08-15,146.0,,tp
+6,0,,30.0,"Poplar, spruce, willow",1981,High,Gravel,60.70697,-115.9038,Holloway_2019,2018-08-15,,,tp
+7,1,60.0,60.0,"Spruce, tamarack, willow; grass, labrador tea, moss",,River or stream valley,,60.67968,-115.95303,Holloway_2019,2018-08-15,60.0,,tp
+9,0,,,"Spruce, tamarack (small); Wet, sedge, willow, birch",,Low,Sand,60.6603,-116.01446,Holloway_2019,2018-08-15,,,tp
+11,0,,15.0,"Spruce, tamarack; hummocky sphagnum, lichen, lab tea",,Low,Sand,60.62586,-116.06358,Holloway_2019,2018-08-15,,,tp
+14,0,,15.0,"Poplar, jack pine, spruce",,High,Gravel,60.60585,-116.09553,Holloway_2019,2018-08-15,,,tp
+18,0,,20.0,"Spruce and tamarack; hummocky moss, grass, lab tea, lichen, birch",,Low,Sand,60.57663,-116.11031,Holloway_2019,2018-08-15,,,tp
+19,0,,38.0,"Spruce, tamarack; hummocky moss, horse tails, lab tea",,Low,Sand,60.5679,-116.11639,Holloway_2019,2018-08-15,,,tp
+20,0,,25.0,"Spruce, jack pine, tamarack; Moss, lichen, sedge",,Sloping,Sand,60.55503,-116.15326,Holloway_2019,2018-08-15,,,tp
+22,0,,16.0,"Poplar, spruce, jack pine",,High,"Sand, silt, clay, some stones",60.52057,-116.22886,Holloway_2019,2018-08-15,,,tp
+23,1,143.0,24.0,"Spruce and tamarack; moss, horsetails, willow",,Low,"Organic, sand, silt, clay",60.49422,-116.29705,Holloway_2019,2018-08-15,143.0,,tp
+24,0,,65.0,"Spruce, tamarack, willow; Wet moss",,Low,Silt,60.49135,-116.30062,Holloway_2019,2018-08-15,,,tp
+25,0,,64.0,"Tamarack, willow, spruce; sedge, moss, wet",,Low,"Silt, sand, some stones",60.48296,-116.318,Holloway_2019,2018-08-15,,,tp
+26,1,138.0,55.0,"Spruce; hummocky moss, grass, cranberry, rose",,Sloping,Sand and gravel,60.4699,-116.32596,Holloway_2019,2018-08-15,138.0,,tp
+28,0,,6.0,"Jack pine, poplar; forest litter",,High,"Clay, silt, some stones",60.44796,-116.34259,Holloway_2019,2018-08-15,,,tp
+31,1,51.0,60.0,"Spruce; hummocky moss, lab tea",,Low,"Sand, silt",60.41035,-116.36451,Holloway_2019,2018-08-15,51.0,,tp
+32,0,,70.0,"Spruce, jack pine, poplar; moss, willow",,Low,Scattered stones,60.33794,-116.46609,Holloway_2019,2018-08-15,,,tp
+33,1,129.0,70.0,"Spruce, willow, birch, tamarack; moss, lab tea, sedge, wet",,Low,"Wet gravel, clay",60.27453,-116.56459,Holloway_2019,2018-08-15,129.0,,tp
+34,0,,36.0,"Spruce, willow, birch, tamarack; moss, lab tea, sedge, wet",,Low,"Silt, sand, clay",60.27686,-116.56364,Holloway_2019,2018-08-15,,,tp
+35,0,,36.0,"Spruce, hummocky moss, lichen, lab tea",,Low,"Silt, sand, clay",60.27436,-116.56295,Holloway_2019,2018-08-15,,,tp
+36,0,,14.0,"Poplar, birch, spruce, jack pine",,High,Sand and gravel,60.20906,-116.64973,Holloway_2019,2018-08-15,,,tp
+37,0,,19.0,"Poplar, spruce",,High,"Silt, sand",60.17967,-116.68008,Holloway_2019,2018-08-15,,,tp
+38,0,,27.0,"Poplar, birch, spruce, tamarack, willow; moss, lab tea",,High,"Organic sand, silt, clay",60.10029,-116.76576,Holloway_2019,2018-08-15,,,tp
+39,1,71.0,120.0,"Spruce, tamarack, jack pine; hummocky sphagnum, lichen, lab tea",,Low,"Clay, silt",60.03948,-116.87433,Holloway_2019,2018-08-15,71.0,,tp
+41,1,54.0,80.0,"Spruce; hummocky sphagnum and moss, lichen, lab tea, cranberry",,Low,"Clay, silt, sand",59.9962,-116.9896,Holloway_2019,2018-08-15,54.0,,tp
+43,1,54.0,48.0,"Spruce, tamarack; sphagnum, moss, lichen, lab tea",,Low,,59.94423,-117.02242,Holloway_2019,2018-08-15,54.0,,tp
+45,0,,,"Spruce, jack pine, poplar; hummocky moss,",,Sloping,Clay,59.95052,-117.0226,Holloway_2019,2018-08-15,,,tp
+46,1,56.0,45.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Silt, clay",59.94542,-117.02686,Holloway_2019,2018-08-15,56.0,,tp
+48,0,,60.0,"Spruce, tamarack, willow; Moss",,Low,"Clay, silt",59.93747,-117.02764,Holloway_2019,2018-08-15,,,tp
+49,1,58.0,80.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Clay, silt",59.92448,-117.03551,Holloway_2019,2018-08-15,58.0,,tp
+50,1,60.0,40.0,"Spruce; sedge, wet",,Low,"Clay, silt",59.92441,-117.03552,Holloway_2019,2018-08-15,60.0,,tp
+51,0,,33.0,"Spruce, tamarack, poplar; moss, licen, grass, rose ",,High,"Silt, clay",59.90224,-117.0419,Holloway_2019,2018-08-15,,,tp
+52,0,,18.0,"Spruce, poplar; moss, forest litter",,High,"Silt, clay",59.90078,-117.04226,Holloway_2019,2018-08-15,,,tp
+53,1,95.0,30.0,"Spruce; sphagnum, lichen, lab tea, horsetail",,Low,"Clay, silt",59.89345,-117.04266,Holloway_2019,2018-08-15,95.0,,tp
+54,1,63.0,40.0,"Spruce; hummocky sphagnum and moss, lichen, lab tea",,Low,Clay,59.87871,-117.04252,Holloway_2019,2018-08-15,63.0,,tp
+55,0,,15.0,"Poplar, willow; grass, roses",,River or stream valley,Sand,59.8577,-117.03937,Holloway_2019,2018-08-15,,,tp
+56,1,62.0,132.0,"Spruce, tamarack; hummocky sphagnum, lichen, lab tea",,Low,"Clay, silt",59.82221,-117.04533,Holloway_2019,2018-08-15,62.0,,tp
+57,1,53.0,65.0,"Spruce, tamarack, birch; hummocky sphagnum and moss, lichen, lab tea, grass",2012,Low,,59.811,-117.05457,Holloway_2019,2018-08-15,53.0,,tp
+58,1,55.0,60.0,"Spruce, tamarack, birch; hummocky sphagnum, lichen, lab tea",2012,Low,"Clay, silt",59.79554,-117.06028,Holloway_2019,2018-08-15,55.0,,tp
+59,0,,1.0,"Poplar, spruce; forest litter",2012,High,Clay,59.77014,-117.07363,Holloway_2019,2018-08-15,,,tp
+60,1,144.0,46.0,"Spruce, willow; hummocky moss, horse tails, lab tea, wet",,Sloping,"Sand, clay, silt",59.75018,-117.08062,Holloway_2019,2018-08-15,144.0,,tp
+61,0,,15.0,"Poplar, spruce",,High,Sand and gravel,59.739,-117.08811,Holloway_2019,2018-08-15,,,tp
+62,1,110.0,46.0,"Spruce; moss and sphagnum, lichen, lab tea, horsetail, grass",,Low,"Silt, sand",59.6741,-117.1509,Holloway_2019,2018-08-15,110.0,,tp
+63,1,67.0,55.0,"Spruce, hummocky sphagnum, moss, lab tea, lichen",,Low,"Organic, silt, sand",59.61908,-117.17265,Holloway_2019,2018-08-15,67.0,,tp
+64,0,,30.0,"Spruce; hummocky moss, lab tea, lichen.",,Low,Sand,59.61836,-117.17267,Holloway_2019,2018-08-15,,,tp
+64A,1,,50.0,"Spruce; hummocky moss and sphagnum, lab tea, lichen",,Low,Sand,59.61836,-117.17267,Holloway_2019,2018-08-15,,,tp
+65,1,73.0,30.0,"Spruce, tamarack; hummocky sphagnum, moss, lab tea",,Low,"Silt, sand",59.58442,-117.19044,Holloway_2019,2018-08-15,73.0,,tp
+66,0,,7.0,"Spruce, poplar, willow; roses, forest litter",,River or stream valley,Gravel,59.57549,-117.19389,Holloway_2019,2018-08-15,,,tp
+67,1,,40.0,"Spruce; hummocky moss, lab tea, lichen",,Low,"Silt, clay",59.54106,-117.18603,Holloway_2019,2018-08-15,,,tp
+68,1,63.0,50.0,"Spruce; hummocky sphagnum and moss, lichen, lab tea",2000/2012,Low,"Silt, clay",59.52972,-117.18673,Holloway_2019,2018-08-15,63.0,,tp
+69,1,126.0,140.0,"Spruce; hummocky sphagnum and moss, lab tea",2007,Low,"Silt, clay",59.44915,-117.23153,Holloway_2019,2018-08-15,126.0,,tp
+70,0,,10.0,"Poplar, willow; moss, fire weed",,River or stream valley,Gravel and  clay,59.40496,-117.285,Holloway_2019,2018-08-15,,,tp
+71,0,,23.0,"Spruce, birch; hummocky sphagnum and moss, lab tea, horsetails, peat plateau ",2012,Low,"Clay, Silt",59.38885,-117.30077,Holloway_2019,2018-08-15,,,tp
+72,1,116.0,50.0,"Spruce, birch; hummocky sphagnum, lab tea",2012,Low,,59.37919,-117.30682,Holloway_2019,2018-08-15,116.0,,tp
+73,1,126.0,80.0,"Spruce; hummocky sphagnum, lab tea",2012,Low,"Organic, silt, clay",59.29908,-117.37759,Holloway_2019,2018-08-15,126.0,,tp
+74,0,,25.0,Grass,,Low,"Clay, sand, gravel",59.20103,-117.53072,Holloway_2019,2018-08-15,,,tp
+75,1,65.0,50.0,"Spruce; sphagnum, moss",,Low,"Silt, sand, gravel",59.19257,-117.54987,Holloway_2019,2018-08-15,65.0,,tp
+76,1,58.0,70.0,"Spruce; hummocky moss, lichen, lab tea",,Low,"Clay, silt",59.15883,-117.64358,Holloway_2019,2018-08-15,58.0,,tp
+78,1,72.0,80.0,"Spruce, tamarack; hummocky sphagnum, lab tea",,Low,"Silt, clay, sand",59.10526,-117.67385,Holloway_2019,2018-08-15,72.0,,tp
+80,0,,0.0,Poplar; moss. Possibly disturbed,,Sloping,Gravel,59.00904,-117.66958,Holloway_2019,2018-08-15,,,tp
+81,0,,,"Poplar, jack pine, spruce",,Low,Gravel,58.97108,-117.61462,Holloway_2019,2018-08-15,,,tp
+82,0,,80.0,"Spruce; sphagnum, lichen, lab tea, cranberry, wet",,Sloping,"Clay, silt, gravel",58.92592,-117.54022,Holloway_2019,2018-08-15,,,tp
+83,1,194.0,80.0,"Spruce, tamarack; sphagnum, sedge, lab tea, cranberry, cloudberry",,Low,Gravel,58.79031,-117.39533,Holloway_2019,2018-08-15,194.0,,tp
+85,0,,80.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Sand, organics",58.00439,-117.19946,Holloway_2019,2018-08-15,,,tp
+86,0,,,"Spruce; sphagnum, lichen, lab tea",,Low,,57.78964,-117.66701,Holloway_2019,2018-08-15,,,tp
+88,0,,2.0,Poplar,,Low,"Organic, silt, clay",57.78733,-117.71267,Holloway_2019,2018-08-15,,,tp
+1,0,,,"Jack pine, poplar, spruce",,High,,60.82131,-115.79008,Holloway_2019,1962-08-15,,,tp
+2,0,,,"Jack pine, poplar, spruce",,High,,60.81249,-115.79851,Holloway_2019,1962-08-15,,,tp
+3,1,84.0,91.0,Spruce; sphagnum,1971,Low,"Clay, silt, with some stones",60.75907,-115.8616,Holloway_2019,1962-08-15,84.0,,tp
+4,0,,,"Poplar, jack pine, spruce",,High,Sand and gravel,60.71378,-115.8896,Holloway_2019,1962-08-15,,,tp
+5,1,84.0,,"Spruce, tamarack; moss",1971,Slope,Sand,60.71464,-115.8943,Holloway_2019,1962-08-15,84.0,,tp
+6,0,,,"Jack pine, poplar, spruce",1981,High,Gravel,60.70697,-115.9038,Holloway_2019,1962-08-15,,,tp
+7,0,,,,,River or stream valley,,60.67968,-115.95303,Holloway_2019,1962-08-15,,,tp
+9,1,54.0,51.0,"Wet, hummocky moss with lichen",,Low,Sand,60.6603,-116.01446,Holloway_2019,1962-08-15,54.0,,tp
+11,0,,61.0,"Spruce, tamarack; hummocky sphagnum",,Low,Sand,60.62586,-116.06358,Holloway_2019,1962-08-15,,,tp
+14,0,,,"Poplar, jack pine, spruce",,High,Gravel,60.60585,-116.09553,Holloway_2019,1962-08-15,,,tp
+18,1,113.0,106.0,Spruce and tamarack; hummocky sphagnum,,Low,Sand,60.57663,-116.11031,Holloway_2019,1962-08-15,113.0,,tp
+19,0,,46.0,"Spruce; Hummocky moss, lichen, sphagnum",,Low,Sand,60.5679,-116.11639,Holloway_2019,1962-08-15,,,tp
+20,0,,15.0,"Spruce, jack pine, tamarack; Moss, lichen, sedge",,Sloping,Sand,60.55503,-116.15326,Holloway_2019,1962-08-15,,,tp
+22,0,,,"Spruce, jack pine, poplar; Moss, grass, sedge, lichen",,High,"Sand, silt, clay, some stones",60.52057,-116.22886,Holloway_2019,1962-08-15,,,tp
+23,1,60.0,56.0,"Spruce and tamarack; Peat plateau with hummocky moss, lichen, and labrador tea",,Low,"Organic, sand, silt, clay",60.49422,-116.29705,Holloway_2019,1962-08-15,60.0,,tp
+24,0,,,"Spruce, tamarack, willow; Wet moss",,Low,Silt,60.49135,-116.30062,Holloway_2019,1962-08-15,,,tp
+25,0,,61.0,"Spruce, tamarack, willow; Moss, sedge, willow",,Low,"Silt, sand, some stones",60.48296,-116.318,Holloway_2019,1962-08-15,,,tp
+26,1,60.0,61.0,"Spruce; Hummocky moss, lichen, grass",,Sloping,Sand and gravel,60.4699,-116.32596,Holloway_2019,1962-08-15,60.0,,tp
+28,0,,,"Jack pine, poplar; Forest litter",,High,"Clay, silt, some stones",60.44796,-116.34259,Holloway_2019,1962-08-15,,,tp
+31,1,84.0,91.0,Spruce; hummocky sphagnum and lab tea,,Low,"Sand, silt",60.41035,-116.36451,Holloway_2019,1962-08-15,84.0,,tp
+32,1,69.0,236.0,Spruce; hummocky sphagnum with lichen and lab tea,,Low,Scattered stones,60.33794,-116.46609,Holloway_2019,1962-08-15,69.0,,tp
+33,1,60.0,61.0,"Spruce, willow; Sphagnum, lichen, and lab tea",,Low,"Wet gravel, clay",60.27453,-116.56459,Holloway_2019,1962-08-15,60.0,,tp
+34,1,150.0,30.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Silt, sand, clay",60.27686,-116.56364,Holloway_2019,1962-08-15,150.0,,tp
+35,1,61.0,30.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Silt, sand, clay",60.27436,-116.56295,Holloway_2019,1962-08-15,61.0,,tp
+36,0,,,"Poplar, birch, jack pine",,High,Sand and gravel,60.20906,-116.64973,Holloway_2019,1962-08-15,,,tp
+37,0,,,"Jack pine, spruce, poplar",,High,"Silt, sand",60.17967,-116.68008,Holloway_2019,1962-08-15,,,tp
+38,0,,,"Poplar, birch, jack pine, spruce; forest litter",,High,"Organic sand, silt, clay",60.10029,-116.76576,Holloway_2019,1962-08-15,,,tp
+39,1,60.0,137.0,Spruce; sphagnum,,Low,"Clay, silt",60.03948,-116.87433,Holloway_2019,1962-08-15,60.0,,tp
+41,1,60.0,91.0,"Spruce; Hummocky sphagnum, lichen, and labrador tea",,Low,"Clay, silt, sand",59.9962,-116.9896,Holloway_2019,1962-08-15,60.0,,tp
+43,1,,,Spruce; sphagnum,,Low,,59.94423,-117.02242,Holloway_2019,1962-08-15,,,tp
+44,1,76.0,,Spruce; hummocky sphagnum,,Sloping,,59.95136,-117.02227,Holloway_2019,1962-08-15,76.0,,tp
+45,1,60.0,61.0,Spruce; hummocky sphagnum,,Sloping,Clay,59.95052,-117.0226,Holloway_2019,1962-08-15,60.0,,tp
+46,1,60.0,91.0,Spruce; hummocky sphagnum,,Low,"Silt, clay",59.94542,-117.02686,Holloway_2019,1962-08-15,60.0,,tp
+47,0,,61.0,Spruce; sphagnum wet,,Low,"Clay, silt",59.94048,-117.02804,Holloway_2019,1962-08-15,,,tp
+48,0,,61.0,"Spruce; sphagnum, wet",,Low,"Clay, silt",59.93747,-117.02764,Holloway_2019,1962-08-15,,,tp
+49,1,66.0,152.0,Spruce; Peat plateau with hummocky sphagnum and labrador tea,,Low,"Clay, silt",59.92448,-117.03551,Holloway_2019,1962-08-15,66.0,,tp
+50,0,,30.0,"Spruce; moss, sedge, wet",,Low,"Clay, silt",59.92441,-117.03552,Holloway_2019,1962-08-15,,,tp
+51,0,,76.0,"Spruce, tamarack; moss, lichen",,High,"Silt, clay",59.90224,-117.0419,Holloway_2019,1962-08-15,,,tp
+52,0,,30.0,"Spruce, poplar",,High,"Silt, clay",59.90078,-117.04226,Holloway_2019,1962-08-15,,,tp
+53,1,61.0,91.0,"Spruce; Hummocky sphagnum, lichen, and labrador tea",,Low,"Clay, silt",59.89345,-117.04266,Holloway_2019,1962-08-15,61.0,,tp
+54,1,61.0,60.0,Spruce; hummocky sphagnum,,Low,Clay,59.87871,-117.04252,Holloway_2019,1962-08-15,61.0,,tp
+55,1,244.0,,,,River or stream valley,Sand,59.8577,-117.03937,Holloway_2019,1962-08-15,244.0,,tp
+56,1,76.0,183.0,Spruce; hummocky sphangum,,Low,"Clay, silt",59.82221,-117.04533,Holloway_2019,1962-08-15,76.0,,tp
+57,1,61.0,61.0,Spruce; hummocky sphangum,2012,Low,,59.811,-117.05457,Holloway_2019,1962-08-15,61.0,,tp
+58,1,61.0,61.0,Spruce; hummocky sphangum,2012,Low,"Clay, silt",59.79554,-117.06028,Holloway_2019,1962-08-15,61.0,,tp
+59,0,,,"Poplar, jack pine, spruce",2012,High,Clay,59.77014,-117.07363,Holloway_2019,1962-08-15,,,tp
+60,0,,23.0,"Spruce; hummocky moss, lichen",,Sloping,"Sand, clay, silt",59.75018,-117.08062,Holloway_2019,1962-08-15,,,tp
+61,0,,,"Poplar, jack pine",,High,Sand and gravel,59.739,-117.08811,Holloway_2019,1962-08-15,,,tp
+62,1,61.0,91.0,Spruce; Hummocky sphagnum with labrador tea,,Low,"Silt, sand",59.6741,-117.1509,Holloway_2019,1962-08-15,61.0,,tp
+63,1,61.0,102.0,"Spruce; Hummocky sphagum, lichen, lab tea",,Low,"Organic, silt, sand",59.61908,-117.17265,Holloway_2019,1962-08-15,61.0,,tp
+64,1,76.0,76.0,Spruce; sphagnum,,Low,Sand,59.61836,-117.17267,Holloway_2019,1962-08-15,76.0,,tp
+64A,1,76.0,76.0,Spruce; sphagnum,,Low,Sand,59.61836,-117.17267,Holloway_2019,1962-08-15,76.0,,tp
+65,1,61.0,61.0,Spruce; hummocky sphagnum,,Low,"Silt, sand",59.58442,-117.19044,Holloway_2019,1962-08-15,61.0,,tp
+66,1,366.0,,"Poplar, spruce, jackpine",,River or stream valley,Gravel,59.57549,-117.19389,Holloway_2019,1962-08-15,366.0,,tp
+67,0,,76.0,"Spruce; hummocky sphagnum, lab tea, wet",,Low,"Silt, clay",59.54106,-117.18603,Holloway_2019,1962-08-15,,,tp
+68,1,61.0,112.0,Spruce; peat plateau with hummocky sphagnum and labrador tea,2000/2012,Low,"Silt, clay",59.52972,-117.18673,Holloway_2019,1962-08-15,61.0,,tp
+69,1,51.0,76.0,Spruce; Hummocky sphagnum and labrador tea,2007,Low,"Silt, clay",59.44915,-117.23153,Holloway_2019,1962-08-15,51.0,,tp
+70,1,,,,,River or stream valley,Gravel and  clay,59.40496,-117.285,Holloway_2019,1962-08-15,,,tp
+71,1,,,"Spruce; sphagnum, peat plateau",2012,Low,"Clay, Silt",59.38885,-117.30077,Holloway_2019,1962-08-15,,,tp
+72,1,61.0,61.0,Spruce; sphagnum,2012,Low,,59.37919,-117.30682,Holloway_2019,1962-08-15,61.0,,tp
+73,1,61.0,282.0,Spruce; hummocky sphagnum with lichen and labrador tea,2012,Low,"Organic, silt, clay",59.29908,-117.37759,Holloway_2019,1962-08-15,61.0,,tp
+74,1,61.0,61.0,"Sphagnum, lichen, lab tea",,Low,"Clay, sand, gravel",59.20103,-117.53072,Holloway_2019,1962-08-15,61.0,,tp
+75,1,,,Spruce; sphagnum,,Low,"Silt, sand, gravel",59.19257,-117.54987,Holloway_2019,1962-08-15,,,tp
+76,1,61.0,79.0,Spruce; hummocky sphagnum with lichen and labrador tea,,Low,"Clay, silt",59.15883,-117.64358,Holloway_2019,1962-08-15,61.0,,tp
+78,1,,61.0,"Spruce, tamarack; sphagnum, lab tea",,Low,"Silt, clay, sand",59.10526,-117.67385,Holloway_2019,1962-08-15,,,tp
+80,1,61.0,107.0,"Spruce, poplar; hummocky sphagnum, lichen, lab tea",,Sloping,Gravel,59.00904,-117.66958,Holloway_2019,1962-08-15,61.0,,tp
+81,0,,,"Poplar, jack pine, spruce",,Low,Gravel,58.97108,-117.61462,Holloway_2019,1962-08-15,,,tp
+82,0,,122.0,Spruce; sphagnum,,Sloping,"Clay, silt, gravel",58.92592,-117.54022,Holloway_2019,1962-08-15,,,tp
+83,1,61.0,114.0,Spruce; hummocky sphagnum,,Low,Gravel,58.79031,-117.39533,Holloway_2019,1962-08-15,61.0,,tp
+85,1,76.0,183.0,"Spruce; hummocky sphagnum, lichen, lab tea",,Low,"Sand, organics",58.00439,-117.19946,Holloway_2019,1962-08-15,76.0,,tp
+86,1,91.0,91.0,Spruce; sphagnum,,Low,,57.78964,-117.66701,Holloway_2019,1962-08-15,91.0,,tp
+87,1,84.0,84.0,Spruce; sphagnum,,Low,,57.78851,-117.69053,Holloway_2019,1962-08-15,84.0,,tp
+88,1,84.0,127.0,"Hummocky sphagnum, peat plateau",,Low,"Organic, silt, clay",57.78733,-117.71267,Holloway_2019,1962-08-15,84.0,,tp

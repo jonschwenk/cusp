@@ -1,0 +1,567 @@
+/* DATA DESCRIPTION:
+Citation:	Langer, Moritz; Kaiser, Soraya; Oehme, Alexander; Schneider von Deimling, Thomas; Jacobi, Stephan (2020): Active layer thickness (ALT) on the North Slope of Alaska (USA) and Manitoba (Canada) in summer 2018 and 2019 [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.913423
+Abstract:	Active layer thickness (ALT) on permafrost soils were measured with a metal rod in July/August 2018 and a year later at the same spots.
+	The spots were nearby the Dalton Highway on the Northslope of Alaska and in the surroundings of Churchill (Manitoba, Canada).
+Keyword(s):	Active Layer Thickness; ALT; Permafrost
+Project(s):	Permafrost Research (Periglacial Dynamics) @ AWI (AWI_PerDyn) (URI: https://www.awi.de/en/science/geosciences/permafrost-research.html)
+	Simulating erosion processes in permafrost landscapes under a warming climate – a risk assessment for ecosystems and infrastructure within the Arctic (PermaRisk) (URI: https://www.awi.de/en/science/junior-groups/permarisk.html)
+Funding:	Federal Ministry of Education and Research (BMBF) (URI: https://www.bmbf.de/), grant/award no. 01LN1709A: Simulating erosion processes in permafrost landscapes under a warming climate – a risk assessment for ecosystems and infrastructure within the Arctic (URI: https://foerderportal.bund.de/foekat/jsp/SucheAction.do?actionMode=view&fkz=01LN1709A)
+Coverage:	MEDIAN LATITUDE: 65.339827 * MEDIAN LONGITUDE: -127.290934 * SOUTH-BOUND LATITUDE: 58.181870 * WEST-BOUND LONGITUDE: -148.848726 * NORTH-BOUND LATITUDE: 70.223452 * EAST-BOUND LONGITUDE: -93.802791
+	DATE/TIME START: 2018-07-21T00:00:00 * DATE/TIME END: 2019-07-31T00:00:00
+Event(s):	Churchill-iButton101 * LATITUDE: 58.732746 * LONGITUDE: -93.802791 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton102 * LATITUDE: 58.732742 * LONGITUDE: -93.802885 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton103 * LATITUDE: 58.732729 * LONGITUDE: -93.802959 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton104 * LATITUDE: 58.732681 * LONGITUDE: -93.803249 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton105 * LATITUDE: 58.732686 * LONGITUDE: -93.803391 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton106 * LATITUDE: 58.732677 * LONGITUDE: -93.803512 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton107 * LATITUDE: 58.732665 * LONGITUDE: -93.803551 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton108 * LATITUDE: 58.732626 * LONGITUDE: -93.803685 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton109 * LATITUDE: 58.732637 * LONGITUDE: -93.803762 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton110 * LATITUDE: 58.733005 * LONGITUDE: -93.803806 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton111 * LATITUDE: 58.733007 * LONGITUDE: -93.803675 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton112 * LATITUDE: 58.732981 * LONGITUDE: -93.803514 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton113 * LATITUDE: 58.732970 * LONGITUDE: -93.803412 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton114 * LATITUDE: 58.732965 * LONGITUDE: -93.803312 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton115 * LATITUDE: 58.732936 * LONGITUDE: -93.803244 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton116 * LATITUDE: 58.732897 * LONGITUDE: -93.803156 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton117 * LATITUDE: 58.732890 * LONGITUDE: -93.803756 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton118 * LATITUDE: 58.732942 * LONGITUDE: -93.803712 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton119 * LATITUDE: 58.733062 * LONGITUDE: -93.803635 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton120 * LATITUDE: 58.733099 * LONGITUDE: -93.803641 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton121 * LATITUDE: 58.732120 * LONGITUDE: -93.803878 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton122 * LATITUDE: 58.732178 * LONGITUDE: -93.803884 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton123 * LATITUDE: 58.728222 * LONGITUDE: -93.836497 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton124 * LATITUDE: 58.728121 * LONGITUDE: -93.836515 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton125 * LATITUDE: 58.728111 * LONGITUDE: -93.836495 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton126 * LATITUDE: 58.727992 * LONGITUDE: -93.836390 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton127 * LATITUDE: 58.727845 * LONGITUDE: -93.836477 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton128 * LATITUDE: 58.727763 * LONGITUDE: -93.836558 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton129 * LATITUDE: 58.727664 * LONGITUDE: -93.836560 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton130 * LATITUDE: 58.727662 * LONGITUDE: -93.836319 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton131 * LATITUDE: 58.727638 * LONGITUDE: -93.836234 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton132 * LATITUDE: 58.727611 * LONGITUDE: -93.836243 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton133 * LATITUDE: 58.727567 * LONGITUDE: -93.836218 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton134 * LATITUDE: 58.727541 * LONGITUDE: -93.836313 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton135 * LATITUDE: 58.727567 * LONGITUDE: -93.835503 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton136 * LATITUDE: 58.727589 * LONGITUDE: -93.835376 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton137 * LATITUDE: 58.727552 * LONGITUDE: -93.835328 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton138 * LATITUDE: 58.727543 * LONGITUDE: -93.835202 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton139 * LATITUDE: 58.728006 * LONGITUDE: -93.835598 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton140 * LATITUDE: 58.728032 * LONGITUDE: -93.835376 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton141 * LATITUDE: 58.727023 * LONGITUDE: -93.835362 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton142 * LATITUDE: 58.726966 * LONGITUDE: -93.835396 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton143 * LATITUDE: 58.184521 * LONGITUDE: -94.145336 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton144 * LATITUDE: 58.184549 * LONGITUDE: -94.145515 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton145 * LATITUDE: 58.184556 * LONGITUDE: -94.145649 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton146 * LATITUDE: 58.184597 * LONGITUDE: -94.145777 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton147 * LATITUDE: 58.184605 * LONGITUDE: -94.145922 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton148 * LATITUDE: 58.184605 * LONGITUDE: -94.146213 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton149 * LATITUDE: 58.184600 * LONGITUDE: -94.146351 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton150 * LATITUDE: 58.184578 * LONGITUDE: -94.146509 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton151 * LATITUDE: 58.184569 * LONGITUDE: -94.146641 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton152 * LATITUDE: 58.184398 * LONGITUDE: -94.146773 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton153 * LATITUDE: 58.184400 * LONGITUDE: -94.146855 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton154 * LATITUDE: 58.184398 * LONGITUDE: -94.146961 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton155 * LATITUDE: 58.184414 * LONGITUDE: -94.147136 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton156 * LATITUDE: 58.184431 * LONGITUDE: -94.147312 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton157 * LATITUDE: 58.184429 * LONGITUDE: -94.147520 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton158 * LATITUDE: 58.184435 * LONGITUDE: -94.147891 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton159 * LATITUDE: 58.184519 * LONGITUDE: -94.148079 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton160 * LATITUDE: 58.184556 * LONGITUDE: -94.148422 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton161 * LATITUDE: 58.182002 * LONGITUDE: -94.146575 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton162 * LATITUDE: 58.181955 * LONGITUDE: -94.146486 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton163 * LATITUDE: 58.181940 * LONGITUDE: -94.146362 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton164 * LATITUDE: 58.181926 * LONGITUDE: -94.146164 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton165 * LATITUDE: 58.181870 * LONGITUDE: -94.145978 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton166 * LATITUDE: 58.181975 * LONGITUDE: -94.146711 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton167 * LATITUDE: 58.181979 * LONGITUDE: -94.146818 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton168 * LATITUDE: 58.181982 * LONGITUDE: -94.146898 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton169 * LATITUDE: 58.181993 * LONGITUDE: -94.146984 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Churchill-iButton170 * LATITUDE: 58.182007 * LONGITUDE: -94.147098 * LOCATION: Churchill, Canada * CAMPAIGN: CA-Land_2019_Churchill (Churchill_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton171 * LATITUDE: 68.925362 * LONGITUDE: -148.847890 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton172 * LATITUDE: 68.925329 * LONGITUDE: -148.848167 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton173 * LATITUDE: 68.925313 * LONGITUDE: -148.848330 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton174 * LATITUDE: 68.925294 * LONGITUDE: -148.848525 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton175 * LATITUDE: 68.925253 * LONGITUDE: -148.848696 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton176 * LATITUDE: 68.925152 * LONGITUDE: -148.848726 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton177 * LATITUDE: 68.925120 * LONGITUDE: -148.848610 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton178 * LATITUDE: 68.925121 * LONGITUDE: -148.848565 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton179 * LATITUDE: 68.925208 * LONGITUDE: -148.848597 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton180 * LATITUDE: 68.925196 * LONGITUDE: -148.848528 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton181 * LATITUDE: 68.925237 * LONGITUDE: -148.848487 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton182 * LATITUDE: 68.925205 * LONGITUDE: -148.848458 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton183 * LATITUDE: 68.925235 * LONGITUDE: -148.848239 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton184 * LATITUDE: 68.925188 * LONGITUDE: -148.848067 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton185 * LATITUDE: 68.925158 * LONGITUDE: -148.848153 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton186 * LATITUDE: 68.925150 * LONGITUDE: -148.848190 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton187 * LATITUDE: 68.925131 * LONGITUDE: -148.847975 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton188 * LATITUDE: 68.925115 * LONGITUDE: -148.848050 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton189 * LATITUDE: 68.925103 * LONGITUDE: -148.848101 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton199 * LATITUDE: 68.922450 * LONGITUDE: -148.846206 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton200 * LATITUDE: 69.316249 * LONGITUDE: -148.718701 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton201 * LATITUDE: 70.222958 * LONGITUDE: -148.471329 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton202 * LATITUDE: 70.222899 * LONGITUDE: -148.471408 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton203 * LATITUDE: 70.222860 * LONGITUDE: -148.471484 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton204 * LATITUDE: 70.222771 * LONGITUDE: -148.471567 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton205 * LATITUDE: 70.222608 * LONGITUDE: -148.471772 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton206 * LATITUDE: 70.222682 * LONGITUDE: -148.472138 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton207 * LATITUDE: 70.222762 * LONGITUDE: -148.471934 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton208 * LATITUDE: 70.222877 * LONGITUDE: -148.471815 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton209 * LATITUDE: 70.222957 * LONGITUDE: -148.471766 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton210 * LATITUDE: 70.223016 * LONGITUDE: -148.471730 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton211 * LATITUDE: 70.223138 * LONGITUDE: -148.471537 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton212 * LATITUDE: 70.223195 * LONGITUDE: -148.471499 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton213 * LATITUDE: 70.223238 * LONGITUDE: -148.471439 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton214 * LATITUDE: 70.223345 * LONGITUDE: -148.471256 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton215 * LATITUDE: 70.223404 * LONGITUDE: -148.471204 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton216 * LATITUDE: 70.223452 * LONGITUDE: -148.470699 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton217 * LATITUDE: 70.223401 * LONGITUDE: -148.470650 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton218 * LATITUDE: 70.223312 * LONGITUDE: -148.470700 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton219 * LATITUDE: 70.223203 * LONGITUDE: -148.470670 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton220 * LATITUDE: 70.223059 * LONGITUDE: -148.470643 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton221 * LATITUDE: 70.203931 * LONGITUDE: -148.459021 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton222 * LATITUDE: 70.204011 * LONGITUDE: -148.459095 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton223 * LATITUDE: 70.204036 * LONGITUDE: -148.459120 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton224 * LATITUDE: 70.204066 * LONGITUDE: -148.459151 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton225 * LATITUDE: 70.204153 * LONGITUDE: -148.459232 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton226 * LATITUDE: 70.204237 * LONGITUDE: -148.459349 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton227 * LATITUDE: 70.204249 * LONGITUDE: -148.459379 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton228 * LATITUDE: 70.204196 * LONGITUDE: -148.459632 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton229 * LATITUDE: 70.204142 * LONGITUDE: -148.459675 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton230 * LATITUDE: 70.204056 * LONGITUDE: -148.459582 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton231 * LATITUDE: 70.203969 * LONGITUDE: -148.459492 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton232 * LATITUDE: 70.203899 * LONGITUDE: -148.459457 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton233 * LATITUDE: 70.204054 * LONGITUDE: -148.459846 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton234 * LATITUDE: 70.204057 * LONGITUDE: -148.459413 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton235 * LATITUDE: 70.204075 * LONGITUDE: -148.459371 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton236 * LATITUDE: 70.204102 * LONGITUDE: -148.459016 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton237 * LATITUDE: 70.204100 * LONGITUDE: -148.458944 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton238 * LATITUDE: 70.204045 * LONGITUDE: -148.459134 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton239 * LATITUDE: 70.204020 * LONGITUDE: -148.459115 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton240 * LATITUDE: 70.203976 * LONGITUDE: -148.459066 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton241 * LATITUDE: 70.099198 * LONGITUDE: -148.512076 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton242 * LATITUDE: 70.099226 * LONGITUDE: -148.512312 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton243 * LATITUDE: 70.099271 * LONGITUDE: -148.512828 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton244 * LATITUDE: 70.099498 * LONGITUDE: -148.513873 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton245 * LATITUDE: 70.099866 * LONGITUDE: -148.515530 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton246 * LATITUDE: 70.100003 * LONGITUDE: -148.516167 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton247 * LATITUDE: 70.100087 * LONGITUDE: -148.516385 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton248 * LATITUDE: 70.100126 * LONGITUDE: -148.516658 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton249 * LATITUDE: 70.100161 * LONGITUDE: -148.516905 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton250 * LATITUDE: 70.100260 * LONGITUDE: -148.517472 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton251 * LATITUDE: 70.100794 * LONGITUDE: -148.515918 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton252 * LATITUDE: 70.100804 * LONGITUDE: -148.515912 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton253 * LATITUDE: 70.100815 * LONGITUDE: -148.515903 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton254 * LATITUDE: 70.100829 * LONGITUDE: -148.515915 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton255 * LATITUDE: 70.100861 * LONGITUDE: -148.515988 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton256 * LATITUDE: 70.099469 * LONGITUDE: -148.510931 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton257 * LATITUDE: 70.099431 * LONGITUDE: -148.510685 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton258 * LATITUDE: 70.099373 * LONGITUDE: -148.510448 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton259 * LATITUDE: 70.099302 * LONGITUDE: -148.510084 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton260 * LATITUDE: 70.099212 * LONGITUDE: -148.509441 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton261 * LATITUDE: 69.316558 * LONGITUDE: -148.729574 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton262 * LATITUDE: 69.316628 * LONGITUDE: -148.729217 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton263 * LATITUDE: 69.316504 * LONGITUDE: -148.728927 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton264 * LATITUDE: 69.316593 * LONGITUDE: -148.728709 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton265 * LATITUDE: 69.316629 * LONGITUDE: -148.728430 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton266 * LATITUDE: 69.316643 * LONGITUDE: -148.727972 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton267 * LATITUDE: 69.316656 * LONGITUDE: -148.727541 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton268 * LATITUDE: 69.316657 * LONGITUDE: -148.727073 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton269 * LATITUDE: 69.316644 * LONGITUDE: -148.726345 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton270 * LATITUDE: 69.316592 * LONGITUDE: -148.725586 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton271 * LATITUDE: 69.316598 * LONGITUDE: -148.725483 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton272 * LATITUDE: 69.316516 * LONGITUDE: -148.725113 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton273 * LATITUDE: 69.316448 * LONGITUDE: -148.724568 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton274 * LATITUDE: 69.316426 * LONGITUDE: -148.724528 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton275 * LATITUDE: 69.316406 * LONGITUDE: -148.723483 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton276 * LATITUDE: 69.316404 * LONGITUDE: -148.723431 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton277 * LATITUDE: 69.316618 * LONGITUDE: -148.722756 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton278 * LATITUDE: 69.316655 * LONGITUDE: -148.722563 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton279 * LATITUDE: 69.316690 * LONGITUDE: -148.722306 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton280 * LATITUDE: 69.316703 * LONGITUDE: -148.722097 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton281 * LATITUDE: 69.315820 * LONGITUDE: -148.719920 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton282 * LATITUDE: 69.315889 * LONGITUDE: -148.720191 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton283 * LATITUDE: 69.315962 * LONGITUDE: -148.720338 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton284 * LATITUDE: 69.316010 * LONGITUDE: -148.720484 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton285 * LATITUDE: 69.316034 * LONGITUDE: -148.720484 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton286 * LATITUDE: 69.316092 * LONGITUDE: -148.720657 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton287 * LATITUDE: 69.316114 * LONGITUDE: -148.720811 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton288 * LATITUDE: 69.316166 * LONGITUDE: -148.720979 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton289 * LATITUDE: 69.316159 * LONGITUDE: -148.721233 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+	Deadhorse-iButton290 * LATITUDE: 69.316114 * LONGITUDE: -148.721759 * LOCATION: Deadhorse, Alaska * CAMPAIGN: AK-Land_2019_Deadhorse (Deadhorse_2019) * BASIS: AWI Arctic Land Expedition * METHOD/DEVICE: Multiple investigations (MULT)
+Parameter(s):	Event label (Event) * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de)
+	Area/locality (Area) * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de)
+	Identification (ID) * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de) * COMMENT: iButton
+	LATITUDE (Latitude) * GEOCODE * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de)
+	LONGITUDE (Longitude) * GEOCODE * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de)
+	DATE/TIME (Date/Time) * GEOCODE * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de)
+	Active layer depth [cm] (ALD) * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de) * METHOD/DEVICE: Metal rod * COMMENT: Active Layer Thickness (ALT)
+	Comment (Comment) * PI: Langer, Moritz (https://orcid.org/0000-0002-2704-3655, Moritz.Langer@awi.de) * COMMENT: Description
+License:	Creative Commons Attribution 4.0 International (CC-BY-4.0) (URI: https://creativecommons.org/licenses/by/4.0/)
+Size:	1068 data points
+*/
+Event	Area	ID	Latitude	Longitude	Date/Time	ALD [cm]	Comment
+Churchill-iButton101	Churchill, Canada	101	58.73274610	-93.80279084	2018-07-21	41	
+Churchill-iButton101	Churchill, Canada	101	58.73274610	-93.80279084	2019-07-29	47	
+Churchill-iButton102	Churchill, Canada	102	58.73274222	-93.80288507	2018-07-21	52	
+Churchill-iButton102	Churchill, Canada	102	58.73274222	-93.80288507	2019-07-29	58	
+Churchill-iButton103	Churchill, Canada	103	58.73272882	-93.80295942	2018-07-21	77	
+Churchill-iButton103	Churchill, Canada	103	58.73272882	-93.80295942	2019-07-29	80	
+Churchill-iButton104	Churchill, Canada	104	58.73268072	-93.80324879	2018-07-21	115	
+Churchill-iButton104	Churchill, Canada	104	58.73268072	-93.80324879	2019-07-29	78	
+Churchill-iButton105	Churchill, Canada	105	58.73268640	-93.80339056	2018-07-21	145	
+Churchill-iButton105	Churchill, Canada	105	58.73268640	-93.80339056	2019-07-29	128	
+Churchill-iButton106	Churchill, Canada	106	58.73267697	-93.80351198	2018-07-21	85	
+Churchill-iButton106	Churchill, Canada	106	58.73267697	-93.80351198	2019-07-29	78	
+Churchill-iButton107	Churchill, Canada	107	58.73266516	-93.80355087	2018-07-21	70	
+Churchill-iButton107	Churchill, Canada	107	58.73266516	-93.80355087	2019-07-29	43	
+Churchill-iButton108	Churchill, Canada	108	58.73262614	-93.80368498	2018-07-21	35	
+Churchill-iButton108	Churchill, Canada	108	58.73262614	-93.80368498	2019-07-29	38	
+Churchill-iButton109	Churchill, Canada	109	58.73263723	-93.80376200	2018-07-21	25	
+Churchill-iButton109	Churchill, Canada	109	58.73263723	-93.80376200	2019-07-29	26	
+Churchill-iButton110	Churchill, Canada	110	58.73300510	-93.80380623	2018-07-21	50	
+Churchill-iButton110	Churchill, Canada	110	58.73300510	-93.80380623	2019-07-29	51	
+Churchill-iButton111	Churchill, Canada	111	58.73300662	-93.80367530	2018-07-21	43	
+Churchill-iButton111	Churchill, Canada	111	58.73300662	-93.80367530	2019-07-29	47	
+Churchill-iButton112	Churchill, Canada	112	58.73298068	-93.80351372	2018-07-21	121	
+Churchill-iButton112	Churchill, Canada	112	58.73298068	-93.80351372	2019-07-29	180	
+Churchill-iButton113	Churchill, Canada	113	58.73296981	-93.80341199	2018-07-21	122	
+Churchill-iButton113	Churchill, Canada	113	58.73296981	-93.80341199	2019-07-29	200	end of probe
+Churchill-iButton114	Churchill, Canada	114	58.73296465	-93.80331221	2018-07-21	40	
+Churchill-iButton114	Churchill, Canada	114	58.73296465	-93.80331221	2019-07-29	200	end of probe
+Churchill-iButton115	Churchill, Canada	115	58.73293563	-93.80324361	2018-07-21	41	
+Churchill-iButton115	Churchill, Canada	115	58.73293563	-93.80324361	2019-07-29	43	
+Churchill-iButton116	Churchill, Canada	116	58.73289727	-93.80315559	2018-07-21	145	
+Churchill-iButton116	Churchill, Canada	116	58.73289727	-93.80315559	2019-07-29	200	end of probe
+Churchill-iButton117	Churchill, Canada	117	58.73288951	-93.80375604	2018-07-21	29	
+Churchill-iButton117	Churchill, Canada	117	58.73288951	-93.80375604	2019-07-29	33	
+Churchill-iButton118	Churchill, Canada	118	58.73294217	-93.80371213	2018-07-21	53	
+Churchill-iButton118	Churchill, Canada	118	58.73294217	-93.80371213	2019-07-29	55	
+Churchill-iButton119	Churchill, Canada	119	58.73306198	-93.80363484	2018-07-21	30	
+Churchill-iButton119	Churchill, Canada	119	58.73306198	-93.80363484	2019-07-29	32	
+Churchill-iButton120	Churchill, Canada	120	58.73309910	-93.80364070	2018-07-21	48	
+Churchill-iButton120	Churchill, Canada	120	58.73309910	-93.80364070	2019-07-29	48	
+Churchill-iButton121	Churchill, Canada	121	58.73212022	-93.80387839			
+Churchill-iButton121	Churchill, Canada	121	58.73212022	-93.80387839	2019-07-29	84	water depth 30cm
+Churchill-iButton122	Churchill, Canada	122	58.73217784	-93.80388382			
+Churchill-iButton122	Churchill, Canada	122	58.73217784	-93.80388382	2019-07-29	78	water depth 29cm
+Churchill-iButton123	Churchill, Canada	123	58.72822191	-93.83649662	2018-07-23		
+Churchill-iButton123	Churchill, Canada	123	58.72822191	-93.83649662	2019-07-30	96	
+Churchill-iButton124	Churchill, Canada	124	58.72812138	-93.83651515	2018-07-23		
+Churchill-iButton124	Churchill, Canada	124	58.72812138	-93.83651515	2019-07-30	27	
+Churchill-iButton125	Churchill, Canada	125	58.72811134	-93.83649476	2018-07-23		
+Churchill-iButton125	Churchill, Canada	125	58.72811134	-93.83649476	2019-07-30	25	
+Churchill-iButton126	Churchill, Canada	126	58.72799205	-93.83639018	2018-07-23		
+Churchill-iButton126	Churchill, Canada	126	58.72799205	-93.83639018	2019-07-30	32	
+Churchill-iButton127	Churchill, Canada	127	58.72784511	-93.83647698	2018-07-23		
+Churchill-iButton127	Churchill, Canada	127	58.72784511	-93.83647698	2019-07-30	35	
+Churchill-iButton128	Churchill, Canada	128	58.72776276	-93.83655805	2018-07-23		
+Churchill-iButton128	Churchill, Canada	128	58.72776276	-93.83655805	2019-07-30	40	
+Churchill-iButton129	Churchill, Canada	129	58.72766363	-93.83655991	2018-07-23		
+Churchill-iButton129	Churchill, Canada	129	58.72766363	-93.83655991	2019-07-30	31	
+Churchill-iButton130	Churchill, Canada	130	58.72766180	-93.83631873	2018-07-23		
+Churchill-iButton130	Churchill, Canada	130	58.72766180	-93.83631873	2019-07-30	30	
+Churchill-iButton131	Churchill, Canada	131	58.72763817	-93.83623409	2018-07-23		
+Churchill-iButton131	Churchill, Canada	131	58.72763817	-93.83623409	2019-07-30	30	
+Churchill-iButton132	Churchill, Canada	132	58.72761146	-93.83624257	2018-07-23		
+Churchill-iButton132	Churchill, Canada	132	58.72761146	-93.83624257	2019-07-30	32	
+Churchill-iButton133	Churchill, Canada	133	58.72756661	-93.83621799	2018-07-23		
+Churchill-iButton133	Churchill, Canada	133	58.72756661	-93.83621799	2019-07-30	36	
+Churchill-iButton134	Churchill, Canada	134	58.72754090	-93.83631346	2018-07-23		
+Churchill-iButton134	Churchill, Canada	134	58.72754090	-93.83631346	2019-07-30	21	
+Churchill-iButton135	Churchill, Canada	135	58.72756677	-93.83550294	2018-07-23		
+Churchill-iButton135	Churchill, Canada	135	58.72756677	-93.83550294	2019-07-30	24	
+Churchill-iButton136	Churchill, Canada	136	58.72758918	-93.83537551	2018-07-23		
+Churchill-iButton136	Churchill, Canada	136	58.72758918	-93.83537551	2019-07-30	25	
+Churchill-iButton137	Churchill, Canada	137	58.72755156	-93.83532847	2018-07-23		
+Churchill-iButton137	Churchill, Canada	137	58.72755156	-93.83532847	2019-07-30	41	
+Churchill-iButton138	Churchill, Canada	138	58.72754314	-93.83520179	2018-07-23		
+Churchill-iButton138	Churchill, Canada	138	58.72754314	-93.83520179	2019-07-30	38	
+Churchill-iButton139	Churchill, Canada	139	58.72800648	-93.83559820	2018-07-23		
+Churchill-iButton139	Churchill, Canada	139	58.72800648	-93.83559820	2019-07-30	35	
+Churchill-iButton140	Churchill, Canada	140	58.72803165	-93.83537586	2018-07-23		
+Churchill-iButton140	Churchill, Canada	140	58.72803165	-93.83537586	2019-07-30	25	
+Churchill-iButton141	Churchill, Canada	141	58.72702346	-93.83536177	2018-07-23		
+Churchill-iButton141	Churchill, Canada	141	58.72702346	-93.83536177	2019-07-30	35	
+Churchill-iButton142	Churchill, Canada	142	58.72696593	-93.83539588	2018-07-23		
+Churchill-iButton142	Churchill, Canada	142	58.72696593	-93.83539588	2019-07-30	33	
+Churchill-iButton143	Churchill, Canada	143	58.18452076	-94.14533646	2018-07-25	60	
+Churchill-iButton143	Churchill, Canada	143	58.18452076	-94.14533646	2019-07-31	200	water
+Churchill-iButton144	Churchill, Canada	144	58.18454910	-94.14551534	2018-07-25	44	
+Churchill-iButton144	Churchill, Canada	144	58.18454910	-94.14551534	2019-07-31	39	
+Churchill-iButton145	Churchill, Canada	145	58.18455576	-94.14564859	2018-07-25	35	
+Churchill-iButton145	Churchill, Canada	145	58.18455576	-94.14564859	2019-07-31	38	
+Churchill-iButton146	Churchill, Canada	146	58.18459662	-94.14577679	2018-07-25	31	
+Churchill-iButton146	Churchill, Canada	146	58.18459662	-94.14577679	2019-07-31	34	
+Churchill-iButton147	Churchill, Canada	147	58.18460499	-94.14592210	2018-07-25	33	
+Churchill-iButton147	Churchill, Canada	147	58.18460499	-94.14592210	2019-07-31	32	
+Churchill-iButton148	Churchill, Canada	148	58.18460526	-94.14621296	2018-07-25	33	
+Churchill-iButton148	Churchill, Canada	148	58.18460526	-94.14621296	2019-07-31	41	
+Churchill-iButton149	Churchill, Canada	149	58.18460006	-94.14635067	2018-07-25	35	
+Churchill-iButton149	Churchill, Canada	149	58.18460006	-94.14635067	2019-07-31	35	
+Churchill-iButton150	Churchill, Canada	150	58.18457782	-94.14650921	2018-07-25	27	
+Churchill-iButton150	Churchill, Canada	150	58.18457782	-94.14650921	2019-07-31	36	
+Churchill-iButton151	Churchill, Canada	151	58.18456943	-94.14664083	2018-07-25	79	
+Churchill-iButton151	Churchill, Canada	151	58.18456943	-94.14664083	2019-07-31	130	
+Churchill-iButton152	Churchill, Canada	152	58.18439809	-94.14677290	2018-07-25	82	
+Churchill-iButton152	Churchill, Canada	152	58.18439809	-94.14677290	2019-07-31	65	
+Churchill-iButton153	Churchill, Canada	153	58.18439971	-94.14685457	2018-07-25	38	
+Churchill-iButton153	Churchill, Canada	153	58.18439971	-94.14685457	2019-07-31	40	
+Churchill-iButton154	Churchill, Canada	154	58.18439838	-94.14696102	2018-07-25	56	
+Churchill-iButton154	Churchill, Canada	154	58.18439838	-94.14696102	2019-07-31	64	
+Churchill-iButton155	Churchill, Canada	155	58.18441404	-94.14713556	2018-07-25	46	
+Churchill-iButton155	Churchill, Canada	155	58.18441404	-94.14713556	2019-07-31	48	
+Churchill-iButton156	Churchill, Canada	156	58.18443056	-94.14731180	2018-07-25	30	
+Churchill-iButton156	Churchill, Canada	156	58.18443056	-94.14731180	2019-07-31	30	
+Churchill-iButton157	Churchill, Canada	157	58.18442907	-94.14751993	2018-07-25	34	
+Churchill-iButton157	Churchill, Canada	157	58.18442907	-94.14751993	2019-07-31	35	
+Churchill-iButton158	Churchill, Canada	158	58.18443514	-94.14789103	2018-07-25	46	
+Churchill-iButton158	Churchill, Canada	158	58.18443514	-94.14789103	2019-07-31	41	
+Churchill-iButton159	Churchill, Canada	159	58.18451927	-94.14807855	2018-07-25	42	
+Churchill-iButton159	Churchill, Canada	159	58.18451927	-94.14807855	2019-07-31	34	
+Churchill-iButton160	Churchill, Canada	160	58.18455580	-94.14842247	2018-07-25	43	
+Churchill-iButton160	Churchill, Canada	160	58.18455580	-94.14842247	2019-07-31	45	
+Churchill-iButton161	Churchill, Canada	161	58.18200158	-94.14657489	2018-07-25	95	
+Churchill-iButton161	Churchill, Canada	161	58.18200158	-94.14657489	2019-07-31	140	
+Churchill-iButton162	Churchill, Canada	162	58.18195497	-94.14648585	2018-07-25	55	
+Churchill-iButton162	Churchill, Canada	162	58.18195497	-94.14648585	2019-07-31	62	
+Churchill-iButton163	Churchill, Canada	163	58.18193985	-94.14636234	2018-07-25	55	
+Churchill-iButton163	Churchill, Canada	163	58.18193985	-94.14636234	2019-07-31	57	
+Churchill-iButton164	Churchill, Canada	164	58.18192611	-94.14616446	2018-07-25	36	Two different heights?
+Churchill-iButton164	Churchill, Canada	164	58.18192615	-94.14616431	2018-07-25	36	Two different heights?
+Churchill-iButton164	Churchill, Canada	164	58.18192611	-94.14616446	2019-07-31	39	Two different heights?
+Churchill-iButton164	Churchill, Canada	164	58.18192615	-94.14616431	2019-07-31	39	Two different heights?
+Churchill-iButton165	Churchill, Canada	165	58.18186954	-94.14597816	2018-07-25	52	
+Churchill-iButton165	Churchill, Canada	165	58.18186954	-94.14597816	2019-07-31	50	
+Churchill-iButton166	Churchill, Canada	166	58.18197488	-94.14671056	2018-07-25	102	
+Churchill-iButton166	Churchill, Canada	166	58.18197488	-94.14671056	2019-07-31	105	
+Churchill-iButton167	Churchill, Canada	167	58.18197883	-94.14681802	2018-07-25	34	
+Churchill-iButton167	Churchill, Canada	167	58.18197883	-94.14681802	2019-07-31	34	
+Churchill-iButton168	Churchill, Canada	168	58.18198164	-94.14689757	2018-07-25	51	
+Churchill-iButton168	Churchill, Canada	168	58.18198164	-94.14689757	2019-07-31	55	
+Churchill-iButton169	Churchill, Canada	169	58.18199316	-94.14698370	2018-07-25	42	
+Churchill-iButton169	Churchill, Canada	169	58.18199316	-94.14698370	2019-07-31	48	
+Churchill-iButton170	Churchill, Canada	170	58.18200720	-94.14709824	2018-07-25	29	
+Churchill-iButton170	Churchill, Canada	170	58.18200720	-94.14709824	2019-07-31	31	
+Deadhorse-iButton171	Deadhorse, Alaska	171	68.92536210	-148.84789030	2018-08-07	40	
+Deadhorse-iButton171	Deadhorse, Alaska	171	68.92536210	-148.84789030	2019-07-18	39	
+Deadhorse-iButton172	Deadhorse, Alaska	172	68.92532915	-148.84816710	2018-08-07	40	
+Deadhorse-iButton172	Deadhorse, Alaska	172	68.92532915	-148.84816710	2019-07-18	36	
+Deadhorse-iButton173	Deadhorse, Alaska	173	68.92531286	-148.84832960	2018-08-07	58	
+Deadhorse-iButton173	Deadhorse, Alaska	173	68.92531286	-148.84832960	2019-07-18	46	
+Deadhorse-iButton174	Deadhorse, Alaska	174	68.92529398	-148.84852490	2018-08-07	40	
+Deadhorse-iButton174	Deadhorse, Alaska	174	68.92529398	-148.84852490	2019-07-18	77	
+Deadhorse-iButton175	Deadhorse, Alaska	175	68.92525328	-148.84869610	2018-08-07	41	
+Deadhorse-iButton175	Deadhorse, Alaska	175	68.92525328	-148.84869610	2019-07-18	45	
+Deadhorse-iButton176	Deadhorse, Alaska	176	68.92515172	-148.84872560	2018-08-07	43	
+Deadhorse-iButton176	Deadhorse, Alaska	176	68.92515172	-148.84872560	2019-07-18	45	rocks
+Deadhorse-iButton177	Deadhorse, Alaska	177	68.92511985	-148.84861030	2018-08-07		
+Deadhorse-iButton177	Deadhorse, Alaska	177	68.92511985	-148.84861030	2019-07-18	56	
+Deadhorse-iButton178	Deadhorse, Alaska	178	68.92512116	-148.84856470	2018-08-07		
+Deadhorse-iButton178	Deadhorse, Alaska	178	68.92512116	-148.84856470	2019-07-18	94	rocks
+Deadhorse-iButton179	Deadhorse, Alaska	179	68.92520786	-148.84859670	2018-08-07	45	
+Deadhorse-iButton179	Deadhorse, Alaska	179	68.92520786	-148.84859670	2019-07-18	118	
+Deadhorse-iButton180	Deadhorse, Alaska	180	68.92519649	-148.84852800	2018-08-07		
+Deadhorse-iButton180	Deadhorse, Alaska	180	68.92519649	-148.84852800	2019-07-18	115	rocks
+Deadhorse-iButton181	Deadhorse, Alaska	181	68.92523666	-148.84848660	2018-08-07	45	
+Deadhorse-iButton181	Deadhorse, Alaska	181	68.92523666	-148.84848660	2019-07-18	105	rocks
+Deadhorse-iButton182	Deadhorse, Alaska	182	68.92520484	-148.84845760	2018-08-07		
+Deadhorse-iButton182	Deadhorse, Alaska	182	68.92520484	-148.84845760	2019-07-18	172	rocks
+Deadhorse-iButton183	Deadhorse, Alaska	183	68.92523476	-148.84823940	2018-08-07		
+Deadhorse-iButton183	Deadhorse, Alaska	183	68.92523476	-148.84823940	2019-07-18	161	
+Deadhorse-iButton184	Deadhorse, Alaska	184	68.92518786	-148.84806700	2018-08-07	37	
+Deadhorse-iButton184	Deadhorse, Alaska	184	68.92518786	-148.84806700	2019-07-18	43	
+Deadhorse-iButton185	Deadhorse, Alaska	185	68.92515841	-148.84815280	2018-08-07	40	
+Deadhorse-iButton185	Deadhorse, Alaska	185	68.92515841	-148.84815280	2019-07-18	44	
+Deadhorse-iButton186	Deadhorse, Alaska	186	68.92515004	-148.84819040	2018-08-07		
+Deadhorse-iButton186	Deadhorse, Alaska	186	68.92515004	-148.84819040	2019-07-18	77	
+Deadhorse-iButton187	Deadhorse, Alaska	187	68.92513063	-148.84797550	2018-08-07	50	
+Deadhorse-iButton187	Deadhorse, Alaska	187	68.92513063	-148.84797550	2019-07-18	49	
+Deadhorse-iButton188	Deadhorse, Alaska	188	68.92511485	-148.84805040	2018-08-07	60	diagonally measured
+Deadhorse-iButton188	Deadhorse, Alaska	188	68.92511485	-148.84805040	2019-07-18	55	
+Deadhorse-iButton189	Deadhorse, Alaska	189	68.92510268	-148.84810130	2018-08-07		
+Deadhorse-iButton189	Deadhorse, Alaska	189	68.92510268	-148.84810130	2019-07-18	140	
+Deadhorse-iButton199	Deadhorse, Alaska	199	68.92244989	-148.84620620	2018-08-07		Shrub Button, air temperature
+Deadhorse-iButton199	Deadhorse, Alaska	199	68.92244989	-148.84620620	2019-07-18		
+Deadhorse-iButton200	Deadhorse, Alaska	200	69.31624886	-148.71870120			Shrub Button, air temperature
+Deadhorse-iButton200	Deadhorse, Alaska	200	69.31624886	-148.71870120	2019-07-19		
+Deadhorse-iButton201	Deadhorse, Alaska	201	70.22295800	-148.47132900	2018-08-03	145	end of probe
+Deadhorse-iButton201	Deadhorse, Alaska	201	70.22295800	-148.47132900	2019-07-20	40	
+Deadhorse-iButton202	Deadhorse, Alaska	202	70.22289900	-148.47140800	2018-08-03	55	
+Deadhorse-iButton202	Deadhorse, Alaska	202	70.22289900	-148.47140800	2019-07-20	52	
+Deadhorse-iButton203	Deadhorse, Alaska	203	70.22286000	-148.47148400	2018-08-03	65	
+Deadhorse-iButton203	Deadhorse, Alaska	203	70.22286000	-148.47148400	2019-07-20	61	
+Deadhorse-iButton204	Deadhorse, Alaska	204	70.22277100	-148.47156700	2018-08-03	63	
+Deadhorse-iButton204	Deadhorse, Alaska	204	70.22277100	-148.47156700	2019-07-20	62	
+Deadhorse-iButton205	Deadhorse, Alaska	205	70.22260800	-148.47177200	2018-08-03	50	
+Deadhorse-iButton205	Deadhorse, Alaska	205	70.22260800	-148.47177200	2019-07-20	43	
+Deadhorse-iButton206	Deadhorse, Alaska	206	70.22268200	-148.47213800	2018-08-03	55	
+Deadhorse-iButton206	Deadhorse, Alaska	206	70.22268200	-148.47213800	2019-07-20	57	
+Deadhorse-iButton207	Deadhorse, Alaska	207	70.22276200	-148.47193400	2018-08-03	62	
+Deadhorse-iButton207	Deadhorse, Alaska	207	70.22276200	-148.47193400	2019-07-20		
+Deadhorse-iButton208	Deadhorse, Alaska	208	70.22287700	-148.47181500	2018-08-03	51	
+Deadhorse-iButton208	Deadhorse, Alaska	208	70.22287700	-148.47181500	2019-07-20	52	
+Deadhorse-iButton209	Deadhorse, Alaska	209	70.22295700	-148.47176600	2018-08-03	62	
+Deadhorse-iButton209	Deadhorse, Alaska	209	70.22295700	-148.47176600	2019-07-20	62	
+Deadhorse-iButton210	Deadhorse, Alaska	210	70.22301600	-148.47173000	2018-08-03	145	end of probe
+Deadhorse-iButton210	Deadhorse, Alaska	210	70.22301600	-148.47173000	2019-07-20	51	
+Deadhorse-iButton211	Deadhorse, Alaska	211	70.22313800	-148.47153700	2018-08-03	80	
+Deadhorse-iButton211	Deadhorse, Alaska	211	70.22313800	-148.47153700	2019-07-20	42	
+Deadhorse-iButton212	Deadhorse, Alaska	212	70.22319500	-148.47149900	2018-08-03	60	
+Deadhorse-iButton212	Deadhorse, Alaska	212	70.22319500	-148.47149900	2019-07-20	55	
+Deadhorse-iButton213	Deadhorse, Alaska	213	70.22323800	-148.47143900	2018-08-03	50	
+Deadhorse-iButton213	Deadhorse, Alaska	213	70.22323800	-148.47143900	2019-07-20	44	
+Deadhorse-iButton214	Deadhorse, Alaska	214	70.22334500	-148.47125600	2018-08-03	51	
+Deadhorse-iButton214	Deadhorse, Alaska	214	70.22334500	-148.47125600	2019-07-20	53	
+Deadhorse-iButton215	Deadhorse, Alaska	215	70.22340400	-148.47120400	2018-08-03	57	
+Deadhorse-iButton215	Deadhorse, Alaska	215	70.22340400	-148.47120400	2019-07-20	58	
+Deadhorse-iButton216	Deadhorse, Alaska	216	70.22345200	-148.47069900	2018-08-03	51	
+Deadhorse-iButton216	Deadhorse, Alaska	216	70.22345200	-148.47069900	2019-07-20	50	
+Deadhorse-iButton217	Deadhorse, Alaska	217	70.22340100	-148.47065000	2018-08-03	53	
+Deadhorse-iButton217	Deadhorse, Alaska	217	70.22340100	-148.47065000	2019-07-20	48	
+Deadhorse-iButton218	Deadhorse, Alaska	218	70.22331200	-148.47070000	2018-08-03	56	
+Deadhorse-iButton218	Deadhorse, Alaska	218	70.22331200	-148.47070000	2019-07-20	58	
+Deadhorse-iButton219	Deadhorse, Alaska	219	70.22320300	-148.47067000	2018-08-03	54	
+Deadhorse-iButton219	Deadhorse, Alaska	219	70.22320300	-148.47067000	2019-07-20	47	
+Deadhorse-iButton220	Deadhorse, Alaska	220	70.22305900	-148.47064300	2018-08-03	59	
+Deadhorse-iButton220	Deadhorse, Alaska	220	70.22305900	-148.47064300	2019-07-20	59	
+Deadhorse-iButton221	Deadhorse, Alaska	221	70.20393057	-148.45902060	2018-08-04		
+Deadhorse-iButton221	Deadhorse, Alaska	221	70.20393057	-148.45902060	2019-07-20	80	
+Deadhorse-iButton222	Deadhorse, Alaska	222	70.20401051	-148.45909510	2018-08-04		
+Deadhorse-iButton222	Deadhorse, Alaska	222	70.20401051	-148.45909510	2019-07-20	66	
+Deadhorse-iButton223	Deadhorse, Alaska	223	70.20403594	-148.45912030	2018-08-04		
+Deadhorse-iButton223	Deadhorse, Alaska	223	70.20403594	-148.45912030	2019-07-20	56	
+Deadhorse-iButton224	Deadhorse, Alaska	224	70.20406609	-148.45915070	2018-08-04		
+Deadhorse-iButton224	Deadhorse, Alaska	224	70.20406609	-148.45915070	2019-07-20	61	
+Deadhorse-iButton225	Deadhorse, Alaska	225	70.20415320	-148.45923190	2018-08-04		
+Deadhorse-iButton225	Deadhorse, Alaska	225	70.20415320	-148.45923190	2019-07-20	60	
+Deadhorse-iButton226	Deadhorse, Alaska	226	70.20423681	-148.45934890	2018-08-04		
+Deadhorse-iButton226	Deadhorse, Alaska	226	70.20423681	-148.45934890	2019-07-20	39	
+Deadhorse-iButton227	Deadhorse, Alaska	227	70.20424903	-148.45937880	2018-08-04		
+Deadhorse-iButton227	Deadhorse, Alaska	227	70.20424903	-148.45937880	2019-07-20	52	
+Deadhorse-iButton228	Deadhorse, Alaska	228	70.20419587	-148.45963180	2018-08-04		
+Deadhorse-iButton228	Deadhorse, Alaska	228	70.20419587	-148.45963180	2019-07-20		
+Deadhorse-iButton229	Deadhorse, Alaska	229	70.20414154	-148.45967500	2018-08-04		
+Deadhorse-iButton229	Deadhorse, Alaska	229	70.20414154	-148.45967500	2019-07-20	50	iButton on the surface
+Deadhorse-iButton230	Deadhorse, Alaska	230	70.20405611	-148.45958170	2018-08-04		
+Deadhorse-iButton230	Deadhorse, Alaska	230	70.20405611	-148.45958170	2019-07-20	57	
+Deadhorse-iButton231	Deadhorse, Alaska	231	70.20396873	-148.45949150	2018-08-04		
+Deadhorse-iButton231	Deadhorse, Alaska	231	70.20396873	-148.45949150	2019-07-20	57	
+Deadhorse-iButton232	Deadhorse, Alaska	232	70.20389896	-148.45945660	2018-08-04		
+Deadhorse-iButton232	Deadhorse, Alaska	232	70.20389896	-148.45945660	2019-07-20	73	
+Deadhorse-iButton233	Deadhorse, Alaska	233	70.20405409	-148.45984570	2018-08-04		
+Deadhorse-iButton233	Deadhorse, Alaska	233	70.20405409	-148.45984570	2019-07-20	48	
+Deadhorse-iButton234	Deadhorse, Alaska	234	70.20405653	-148.45941330	2018-08-04		
+Deadhorse-iButton234	Deadhorse, Alaska	234	70.20405653	-148.45941330	2019-07-20	55	
+Deadhorse-iButton235	Deadhorse, Alaska	235	70.20407457	-148.45937130	2018-08-04		
+Deadhorse-iButton235	Deadhorse, Alaska	235	70.20407457	-148.45937130	2019-07-20	65	
+Deadhorse-iButton236	Deadhorse, Alaska	236	70.20410151	-148.45901640	2018-08-04		
+Deadhorse-iButton236	Deadhorse, Alaska	236	70.20410151	-148.45901640	2019-07-20	56	
+Deadhorse-iButton237	Deadhorse, Alaska	237	70.20410018	-148.45894350	2018-08-04		
+Deadhorse-iButton237	Deadhorse, Alaska	237	70.20410018	-148.45894350	2019-07-20	53	
+Deadhorse-iButton238	Deadhorse, Alaska	238	70.20404535	-148.45913420	2018-08-04		
+Deadhorse-iButton238	Deadhorse, Alaska	238	70.20404535	-148.45913420	2019-07-20	66	
+Deadhorse-iButton239	Deadhorse, Alaska	239	70.20401997	-148.45911470	2018-08-04		
+Deadhorse-iButton239	Deadhorse, Alaska	239	70.20401997	-148.45911470	2019-07-20	60	
+Deadhorse-iButton240	Deadhorse, Alaska	240	70.20397644	-148.45906560	2018-08-04		
+Deadhorse-iButton240	Deadhorse, Alaska	240	70.20397644	-148.45906560	2019-07-20	65	
+Deadhorse-iButton241	Deadhorse, Alaska	241	70.09919754	-148.51207620	2018-08-04	80	
+Deadhorse-iButton241	Deadhorse, Alaska	241	70.09919754	-148.51207620	2019-07-20	79	
+Deadhorse-iButton242	Deadhorse, Alaska	242	70.09922616	-148.51231210	2018-08-04	60	
+Deadhorse-iButton242	Deadhorse, Alaska	242	70.09922616	-148.51231210	2019-07-20	57	
+Deadhorse-iButton243	Deadhorse, Alaska	243	70.09927101	-148.51282780	2018-08-04	53	
+Deadhorse-iButton243	Deadhorse, Alaska	243	70.09927101	-148.51282780	2019-07-20	48	
+Deadhorse-iButton244	Deadhorse, Alaska	244	70.09949839	-148.51387300	2018-08-04	55	
+Deadhorse-iButton244	Deadhorse, Alaska	244	70.09949839	-148.51387300	2019-07-20	46	
+Deadhorse-iButton245	Deadhorse, Alaska	245	70.09986580	-148.51553030	2018-08-04	50	
+Deadhorse-iButton245	Deadhorse, Alaska	245	70.09986580	-148.51553030	2019-07-20	31	
+Deadhorse-iButton246	Deadhorse, Alaska	246	70.10000326	-148.51616670	2018-08-04	55	
+Deadhorse-iButton246	Deadhorse, Alaska	246	70.10000326	-148.51616670	2019-07-20	55	
+Deadhorse-iButton247	Deadhorse, Alaska	247	70.10008675	-148.51638510	2018-08-04	48	
+Deadhorse-iButton247	Deadhorse, Alaska	247	70.10008675	-148.51638510	2019-07-20	46	
+Deadhorse-iButton248	Deadhorse, Alaska	248	70.10012580	-148.51665790	2018-08-04	50	
+Deadhorse-iButton248	Deadhorse, Alaska	248	70.10012580	-148.51665790	2019-07-20	47	
+Deadhorse-iButton249	Deadhorse, Alaska	249	70.10016058	-148.51690470	2018-08-04	54	
+Deadhorse-iButton249	Deadhorse, Alaska	249	70.10016058	-148.51690470	2019-07-20	48	
+Deadhorse-iButton250	Deadhorse, Alaska	250	70.10025953	-148.51747220	2018-08-04	43	
+Deadhorse-iButton250	Deadhorse, Alaska	250	70.10025953	-148.51747220	2019-07-20		
+Deadhorse-iButton251	Deadhorse, Alaska	251	70.10079370	-148.51591760	2018-08-04	46	
+Deadhorse-iButton251	Deadhorse, Alaska	251	70.10079370	-148.51591760	2019-07-20		
+Deadhorse-iButton252	Deadhorse, Alaska	252	70.10080415	-148.51591170	2018-08-04	36	
+Deadhorse-iButton252	Deadhorse, Alaska	252	70.10080415	-148.51591170	2019-07-20		
+Deadhorse-iButton253	Deadhorse, Alaska	253	70.10081468	-148.51590270	2018-08-04	43	
+Deadhorse-iButton253	Deadhorse, Alaska	253	70.10081468	-148.51590270	2019-07-20		
+Deadhorse-iButton254	Deadhorse, Alaska	254	70.10082946	-148.51591450	2018-08-04	80	
+Deadhorse-iButton254	Deadhorse, Alaska	254	70.10082946	-148.51591450	2019-07-20		
+Deadhorse-iButton255	Deadhorse, Alaska	255	70.10086069	-148.51598760	2018-08-04	43	
+Deadhorse-iButton255	Deadhorse, Alaska	255	70.10086069	-148.51598760	2019-07-20		
+Deadhorse-iButton256	Deadhorse, Alaska	256	70.09946950	-148.51093070	2018-08-04	69	
+Deadhorse-iButton256	Deadhorse, Alaska	256	70.09946950	-148.51093070	2019-07-20	63	
+Deadhorse-iButton257	Deadhorse, Alaska	257	70.09943060	-148.51068460	2018-08-04	62	
+Deadhorse-iButton257	Deadhorse, Alaska	257	70.09943060	-148.51068460	2019-07-20	54	
+Deadhorse-iButton258	Deadhorse, Alaska	258	70.09937338	-148.51044800	2018-08-04	67	
+Deadhorse-iButton258	Deadhorse, Alaska	258	70.09937338	-148.51044800	2019-07-20	44	
+Deadhorse-iButton259	Deadhorse, Alaska	259	70.09930205	-148.51008360	2018-08-04	54	
+Deadhorse-iButton259	Deadhorse, Alaska	259	70.09930205	-148.51008360	2019-07-20	45	
+Deadhorse-iButton260	Deadhorse, Alaska	260	70.09921197	-148.50944090	2018-08-04	53	
+Deadhorse-iButton260	Deadhorse, Alaska	260	70.09921197	-148.50944090			
+Deadhorse-iButton261	Deadhorse, Alaska	261	69.31655788	-148.72957390	2018-08-06	85	ALD uncertain
+Deadhorse-iButton261	Deadhorse, Alaska	261	69.31655788	-148.72957390	2019-07-19	33	ALD uncertain, rocks
+Deadhorse-iButton262	Deadhorse, Alaska	262	69.31662823	-148.72921730	2018-08-06	55	ALD uncertain
+Deadhorse-iButton262	Deadhorse, Alaska	262	69.31662823	-148.72921730	2019-07-19	22	ALD uncertain, rocks
+Deadhorse-iButton263	Deadhorse, Alaska	263	69.31650362	-148.72892680	2018-08-06	35	ALD uncertain
+Deadhorse-iButton263	Deadhorse, Alaska	263	69.31650362	-148.72892680	2019-07-19		
+Deadhorse-iButton264	Deadhorse, Alaska	264	69.31659305	-148.72870870	2018-08-06	65	ALD uncertain, ranging from 55-75?
+Deadhorse-iButton264	Deadhorse, Alaska	264	69.31659305	-148.72870870	2019-07-19	23	ALD uncertain, rocks
+Deadhorse-iButton265	Deadhorse, Alaska	265	69.31662864	-148.72843000	2018-08-06	55	ALD uncertain
+Deadhorse-iButton265	Deadhorse, Alaska	265	69.31662864	-148.72843000	2019-07-19	24	ALD uncertain, rocks
+Deadhorse-iButton266	Deadhorse, Alaska	266	69.31664318	-148.72797180	2018-08-06	75	ALD uncertain
+Deadhorse-iButton266	Deadhorse, Alaska	266	69.31664318	-148.72797180	2019-07-19	58	ALD uncertain
+Deadhorse-iButton267	Deadhorse, Alaska	267	69.31665584	-148.72754100	2018-08-06	65	ALD uncertain
+Deadhorse-iButton267	Deadhorse, Alaska	267	69.31665584	-148.72754100	2019-07-19	69	ALD uncertain
+Deadhorse-iButton268	Deadhorse, Alaska	268	69.31665700	-148.72707350	2018-08-06	85	
+Deadhorse-iButton268	Deadhorse, Alaska	268	69.31665700	-148.72707350	2019-07-19	25	ALD uncertain, rocks
+Deadhorse-iButton269	Deadhorse, Alaska	269	69.31664395	-148.72634520	2018-08-06	90	
+Deadhorse-iButton269	Deadhorse, Alaska	269	69.31664395	-148.72634520	2019-07-19	97	
+Deadhorse-iButton270	Deadhorse, Alaska	270	69.31659216	-148.72558590	2018-08-06	42	
+Deadhorse-iButton270	Deadhorse, Alaska	270	69.31659216	-148.72558590	2019-07-19	39	
+Deadhorse-iButton271	Deadhorse, Alaska	271	69.31659847	-148.72548280	2018-08-06	45	
+Deadhorse-iButton271	Deadhorse, Alaska	271	69.31659847	-148.72548280	2019-07-19	32	
+Deadhorse-iButton272	Deadhorse, Alaska	272	69.31651611	-148.72511330	2018-08-06	55	
+Deadhorse-iButton272	Deadhorse, Alaska	272	69.31651611	-148.72511330	2019-07-19	56	
+Deadhorse-iButton273	Deadhorse, Alaska	273	69.31644765	-148.72456750	2018-08-06	30	
+Deadhorse-iButton273	Deadhorse, Alaska	273	69.31644765	-148.72456750	2019-07-19	33	
+Deadhorse-iButton274	Deadhorse, Alaska	274	69.31642637	-148.72452840	2018-08-06	40	
+Deadhorse-iButton274	Deadhorse, Alaska	274	69.31642637	-148.72452840	2019-07-19	39	
+Deadhorse-iButton275	Deadhorse, Alaska	275	69.31640608	-148.72348300	2018-08-06	48	
+Deadhorse-iButton275	Deadhorse, Alaska	275	69.31640608	-148.72348300	2019-07-19	43	
+Deadhorse-iButton276	Deadhorse, Alaska	276	69.31640434	-148.72343050	2018-08-06	43	
+Deadhorse-iButton276	Deadhorse, Alaska	276	69.31640434	-148.72343050	2019-07-19	48	
+Deadhorse-iButton277	Deadhorse, Alaska	277	69.31661805	-148.72275640	2018-08-06	35	
+Deadhorse-iButton277	Deadhorse, Alaska	277	69.31661805	-148.72275640	2019-07-19	34	
+Deadhorse-iButton278	Deadhorse, Alaska	278	69.31665534	-148.72256320	2018-08-06	55	
+Deadhorse-iButton278	Deadhorse, Alaska	278	69.31665534	-148.72256320	2019-07-19	58	
+Deadhorse-iButton279	Deadhorse, Alaska	279	69.31668958	-148.72230640	2018-08-06	38	
+Deadhorse-iButton279	Deadhorse, Alaska	279	69.31668958	-148.72230640	2019-07-19	44	
+Deadhorse-iButton280	Deadhorse, Alaska	280	69.31670339	-148.72209690	2018-08-06	73	
+Deadhorse-iButton280	Deadhorse, Alaska	280	69.31670339	-148.72209690	2019-07-19	78	
+Deadhorse-iButton281	Deadhorse, Alaska	281	69.31582019	-148.71992020	2018-08-06	145	end of probe
+Deadhorse-iButton281	Deadhorse, Alaska	281	69.31582019	-148.71992020	2019-07-19		
+Deadhorse-iButton282	Deadhorse, Alaska	282	69.31588929	-148.72019070	2018-08-06	90	
+Deadhorse-iButton282	Deadhorse, Alaska	282	69.31588929	-148.72019070	2019-07-19	89	
+Deadhorse-iButton283	Deadhorse, Alaska	283	69.31596216	-148.72033790	2018-08-06	85	
+Deadhorse-iButton283	Deadhorse, Alaska	283	69.31596216	-148.72033790	2019-07-19	86	
+Deadhorse-iButton284	Deadhorse, Alaska	284	69.31601001	-148.72048440	2018-08-06	145	end of probe
+Deadhorse-iButton284	Deadhorse, Alaska	284	69.31601001	-148.72048440	2019-07-19	123	
+Deadhorse-iButton285	Deadhorse, Alaska	285	69.31603353	-148.72048440	2018-08-06	74	from sediment
+Deadhorse-iButton285	Deadhorse, Alaska	285	69.31603353	-148.72048440	2019-07-19	77	
+Deadhorse-iButton286	Deadhorse, Alaska	286	69.31609161	-148.72065660	2018-08-06	100	
+Deadhorse-iButton286	Deadhorse, Alaska	286	69.31609161	-148.72065660	2019-07-19	128	iButton on the surface
+Deadhorse-iButton287	Deadhorse, Alaska	287	69.31611387	-148.72081110	2018-08-06	145	end of probe
+Deadhorse-iButton287	Deadhorse, Alaska	287	69.31611387	-148.72081110	2019-07-19	124	
+Deadhorse-iButton288	Deadhorse, Alaska	288	69.31616591	-148.72097950			
+Deadhorse-iButton288	Deadhorse, Alaska	288	69.31616591	-148.72097950	2019-07-19	134	iButton on the surface
+Deadhorse-iButton289	Deadhorse, Alaska	289	69.31615925	-148.72123300		100	
+Deadhorse-iButton289	Deadhorse, Alaska	289	69.31615925	-148.72123300	2019-07-19	97	
+Deadhorse-iButton290	Deadhorse, Alaska	290	69.31611365	-148.72175900		65	
+Deadhorse-iButton290	Deadhorse, Alaska	290	69.31611365	-148.72175900	2019-07-19	64	

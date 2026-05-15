@@ -1,0 +1,11 @@
+﻿Study site,Observers,Date,Data source,Transect name,Transect ID,Transect length (m),Latitude start,Longitude start,Latitude end,Longitude end,Notes
+NIRPO,"SW, MK, HB, EWC",8/17/2020,SW field notebook,Bear Pelt 1,BP-1,40,70.23556,-148.46225,70.23592,-148.46228,basal peat sample taken
+NIRPO,"SW, MK, HB, EWC",8/17/2020,SW field notebook,Bear Pelt 2,BP-2,40,70.23416,-148.46672,70.23445,-148.46739,
+NIRPO,"SW, MK, HB, EWC",8/17/2020,SW field notebook,Basin Margin 1,BM-1,40,70.23659,-148.45996,70.23695,-148.45985,basin margin
+NIRPO,"SW, MK, HB, EWC",8/17/2020,EWC field notebook,NIRPO 1,NIRPO-1,100,70.23998,-148.457647,70.239603,-148.460042,
+Joregenson,"SW, MK, HB, EWC",8/15/2020,Datasheet,Jorgenson,JS,250,70.228815,-148.4186287,70.22937,-148.425025,
+Colleen,"SW, EWC",8/15/2020,Datasheet,Transect 1,T1,200,70.22311221,-148.4712653,70.22472627,-148.468951,
+Colleen,"MK, HB",8/15/2020,Datasheet,Transect 2,T2,200,70.2229952,-148.471441,70.22138575,-148.4737789,
+Airport,"SW, HB, EWC",8/16/2020,SW field notebook,Transect 3,T3,100,70.19664328,-148.4240639,70.1959637,-148.4223366,
+Airport,"SW, MK, HB, EWC",8/16/2020,Datasheet,Transect 4,T4,100,70.19676856,-148.4243842,70.19745135,-148.4260973,
+Airport,"SW, EWC",8/16/2020,SW field notebook,Transect 5,T5,80,70.19573251,-148.4261357,70.19611017,-148.428531,

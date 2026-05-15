@@ -1,0 +1,47 @@
+﻿Field Name,Type,Description
+SiteIDYear,Text,Concatenated field using Project Code and Plot ID
+SiteID,Text,"Site ID, often concatenated field using Project Code and Plot ID"
+Year,Integer,Year of project
+Date,Date,Date of field work
+Project,Text,Project short name
+ObservEnv,Text,Observer for environmental information
+ObservSoil,Text,Soil observer last name or initials
+ObservVeg,Text,Vegetation species and structure observer initials
+LocEcoregion,Text,Ecoregion based on Nowacki et al. 2001
+LocLandmark,Text,Geographic landmark description
+LatWGS84,Number,"usually WGS84, units decimal degrees, but may be different if specified in ElevMethod
+"
+LonWGS84,Number,"usually WGS84, units decimal degrees, but may be different if specified in ElevMethod
+"
+ElevEllip_m,Number,"Elevation (m), Ellipsoid Ht NAD83, typical of raw gps data"
+PlotType,Text,"Plot type: MI=Monitoring Intensive, MS+Monitoring Single Parameter, SI-Survey Soil-Veg, SR=rapid/recon soil-veg,  V=Verification map, A=Air survey)"
+PlotSize,Text,"Plot size, radius or Length X Width in meters"
+PhysiogName,Text,"Physiography, see reference codes or field code sheet"
+TopoMacroName,Text,"Macrotopography, see reference codes or field code sheet"
+TopoMicroName,Text,"Microtopography, see reference codes or field code sheet"
+Terrain Title,Text,"Surface geomorphic unit, Final Revised Codes or field code sheet"
+TkarstName,Text,"Thermokarst type, see reference table or field code sheet"
+DrainageName,Text,Final Revised drainage codes or names or field code sheet
+NWI_name,Text,"codes or names for National Wetlands inventory hydrology, see REF_NWIWaterRegimeCodes or field code sheet
+"
+SoilMoistureName,Text,Final revised Soil Moisture codes or names  or field code sheet
+WaterDep_cm,Number,"Water depth above (+) or below (-) the soil surface, cm, 999 if no data"
+DomText_Name,Text,"Dominant overall texture in top 40 cm, see Soil Text Dom codes"
+SiteChem_name,Text,A=Alkaline; B=Basic; N=Circuneutral; S=Saline; E=brackish (see Ref_SiteChemistry for definitions)
+SitepH,Number,"Water pH or soil slurry pH, water used preferentially when available, 999 if no data"
+SiteEC_uScm,Number,"Water EC (uS/cm) or soil slurry EC, water used preferentially when available, uS/cm, 999 if no data"
+SoilOrgSurfThk_cm,Number,"Thickness (cm) of surface organic layer, use 999 when no data"
+SoilOrgCum40_cm,Number,"Cumulative thickness (cm) of surface and buried organic layer, use 999 when no data"
+SoilOrgPostTK_cm,Number,"Thickness (cm) of new peat formed after thermokarst, 999 if no data"
+SoilThawDep_cm,Number,"Thaw depth (cm), use 999 for no data"
+SoilCryoturb,Text,"Cryoturbation observed in soil profile: P-present or A-absent, U=Unknown"
+SoilPFrost,Text,"Permafrost present (either proven or highly likely): P-present or A-absent, U=Unknown"
+SoilRockDep_cm,Number,"Depth (cm) to rocks, when rocks are >15% volume, use 999 for no data"
+SoilIceWdgDep_cm,Number,"Depth (cm) to top of wedge ice, 999 if no data"
+SoilObsDep_cm,Number,"Depth (cm) to maximum soil observation (cm), includes frost probe depth, 9999 if no data"
+SoilStrat,Text,whether the soils were described: y/n
+SoilSamples,Text,whether soil samples were collected: y/n
+VegetationTitle,Text,"Viereck Veg class 4 Final call, see reference table REF_Site_VegCode4, ND=not determined"
+EcoStructName,Text,"Code for Ecotype Vegetation Structure, see Site_EcoStructure reference table"
+VegMethod,Text,"Method used to estimate plant cover: O=occular estimate, OP=occular estimate photo, PS=point sampling on grid or line-single hit, PM=point sampling, multihit L-line intercept, I-incidental (for area list)"
+Disturbance_Name,Text,"Disturbance class, natural or human induced, code or names, see REF_Site_DisturbClass"

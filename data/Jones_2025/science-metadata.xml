@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="urn:uuid:3e6dca1c-da5a-435b-abc7-3903376360b7" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="knb">
+  <dataset id="urn-uuid-a3c828ed-71d5-4454-8846-72c9b0d00d17">
+    <title>Near-surface permafrost studies near Bethel and remotely sensing ice wedge networks across the Yukon Kuskokwim Delta, Alaska 2025</title>
+    <creator id="9642281680122904">
+      <individualName>
+        <givenName>Benjamin</givenName>
+        <surName>Jones</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <address>
+        <deliveryPoint>1764 Tanana Loop Road</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <postalCode>99775</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">9072303260</phone>
+      <electronicMailAddress>bmjones3@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1517-4711</userId>
+    </creator>
+    <creator id="6160410839802100">
+      <individualName>
+        <givenName>Mikhail</givenName>
+        <surName>Kanevskiy</surName>
+      </individualName>
+      <electronicMailAddress>mkanevskiy@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-0565-0187</userId>
+    </creator>
+    <creator id="9149880829787776">
+      <individualName>
+        <givenName>Melissa</givenName>
+        <surName>Ward Jones</surName>
+      </individualName>
+      <electronicMailAddress>mkwardjones@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-3401-2515</userId>
+    </creator>
+    <creator id="3331089847751054">
+      <individualName>
+        <givenName>Phillip</givenName>
+        <surName>Wilson</surName>
+      </individualName>
+      <electronicMailAddress>prwilson@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0009-0002-7255-1840</userId>
+    </creator>
+    <creator id="2700723919085941">
+      <individualName>
+        <givenName>Isaiah</givenName>
+        <surName>Ditmer</surName>
+      </individualName>
+      <electronicMailAddress>iditmer@alaska.edu</electronicMailAddress>
+    </creator>
+    <creator id="1090226765124275">
+      <individualName>
+        <givenName>Benjamin</givenName>
+        <surName>Gaglioti</surName>
+      </individualName>
+      <electronicMailAddress>bvgaglioti@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-0591-5253</userId>
+    </creator>
+    <creator id="1219955307534872">
+      <individualName>
+        <givenName>Eric</givenName>
+        <surName>Klein</surName>
+      </individualName>
+      <electronicMailAddress>esklein@alaska.edu</electronicMailAddress>
+    </creator>
+    <creator id="8720551830563466">
+      <individualName>
+        <givenName>Rodrigo</givenName>
+        <surName>Rangel</surName>
+      </individualName>
+      <electronicMailAddress>rodrigo.rangel@utoronto.ca</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-0083-3665</userId>
+    </creator>
+    <creator id="4705206436436820">
+      <individualName>
+        <givenName>Kristi</givenName>
+        <surName>Wallace</surName>
+      </individualName>
+      <electronicMailAddress>kwallace@usgs.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-0962-048X</userId>
+    </creator>
+    <creator id="4410844856782096">
+      <individualName>
+        <givenName>Miriam</givenName>
+        <surName>Jones</surName>
+      </individualName>
+      <electronicMailAddress>miriamjones@usgs.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-6650-7619</userId>
+    </creator>
+    <creator id="7465487090789824">
+      <individualName>
+        <givenName>Matthew</givenName>
+        <surName>Wooller</surName>
+      </individualName>
+      <electronicMailAddress>mjwooller@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5065-4235</userId>
+    </creator>
+    <creator id="4950652105863064">
+      <individualName>
+        <givenName>Yuri</givenName>
+        <surName>Shur</surName>
+      </individualName>
+      <electronicMailAddress>yshur@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-6147-8786</userId>
+    </creator>
+    <pubDate>2025</pubDate>
+    <abstract>
+      <para>This dataset documents the occurrence, distribution, and characteristics of cryptic ice wedge networks in the Yukon-Kuskokwim Delta (YKD), Alaska. The dataset is derived from remote sensing analyses, field-based permafrost coring, ground-penetrating radar (GPR) surveys, and stable water isotope analyses. High-resolution aerial orthoimagery from 2018 enabled the identification of ~50 linear kilometers (km) of ice wedge trough networks within a 60 square kilometers (km²) study area near Bethel, Alaska, revealing ice wedge networks previously undocumented in the region. Fieldwork in 2023 and 2024 confirmed the presence of ice wedges up to 1.5 meter (m) wide and 2.5 m tall, with wedge tops averaging 0.9 m below the surface. GPR transects identified additional ice wedges beyond those visible in imagery, suggesting that remote sensing analyses may underestimate their true abundance. Coring of polygon centers revealed a suite of late-Quaternary deposits, including early Holocene peat, ice-rich late-Pleistocene permafrost (reworked Yedoma), charcoal layers indicating past tundra fires, and the Aniakchak CFE II tephra (~3,600 calendar years before present [cal yrs BP]). Stable water isotope analyses of wedge ice (mean δ¹⁸O = -15.7 ‰, δ²H = -113.1 ‰) indicate relatively enriched values compared to other Holocene ice wedges in Alaska, reflecting the region's warm maritime climate influence. Expanding the mapping analysis across the YKD using very high-resolution satellite imagery, we found that 95 % of observed ice wedge networks occur at elevations between 4 and 80 meters above sea level (m asl), predominantly within tundra vegetation classes. These areas, covering ~32 % of the YKD tundra region, may contain additional ice wedges, peat deposits, and relict Yedoma. This dataset provides a new framework for understanding the spatial distribution and environmental controls on ice wedge development in warm permafrost regions, with implications for permafrost resilience, climate change vulnerability, and land use planning in the YKD.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>Ice Wedges</keyword>
+      <keyword>Permafrost</keyword>
+      <keyword>Yukon Kuskokwim Delta</keyword>
+      <keyword>Bethel</keyword>
+      <keyword>Agriculture</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication. To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Bethel, Alaska study area</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-161.9513649</westBoundingCoordinate>
+          <eastBoundingCoordinate>-161.6649916</eastBoundingCoordinate>
+          <northBoundingCoordinate>60.8140616</northBoundingCoordinate>
+          <southBoundingCoordinate>60.7865519</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Yukon-Kuskokwim Delta study area</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-167.1281867</westBoundingCoordinate>
+          <eastBoundingCoordinate>-158.5516611</eastBoundingCoordinate>
+          <northBoundingCoordinate>63.3008082</northBoundingCoordinate>
+          <southBoundingCoordinate>59.6604587</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2025</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2025</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Physical Geography">https://purl.dataone.org/odo/ADCAD_00045</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Cryology">https://purl.dataone.org/odo/ADCAD_00080</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Geochemistry">https://purl.dataone.org/odo/ADCAD_00044</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="Data Sensitivity Category">http://purl.dataone.org/odo/SENSO_00000005</propertyURI>
+      <valueURI label="Non-sensitive data">http://purl.dataone.org/odo/SENSO_00000002</valueURI>
+    </annotation>
+    <contact id="5213467860533733">
+      <individualName>
+        <givenName>Benjamin</givenName>
+        <surName>Jones</surName>
+      </individualName>
+      <electronicMailAddress>bmjones3@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1517-4711</userId>
+    </contact>
+    <publisher id="2440994461688752">
+      <organizationName>NSF Arctic Data Center</organizationName>
+      <electronicMailAddress>support@arcticdata.io</electronicMailAddress>
+      <onlineUrl>http://arcticdata.io</onlineUrl>
+      <userId directory="unknown">Q77285095</userId>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Ethical Research Practices</title>
+            <para>We thank the Meyers Farm, Bethel Native Corporation, the Bureau of Indian Affairs, and the Alaska Department of Transportation for providing and permitting access to their lands to conduct our permafrost studies. Funding for this research was provided by the National Science Foundation (NSF) award for Permafrost Grown (RISE-2126965), a Navigating the New Arctic project. We also thank the NSF Research, Support, and Logistics program for field support through the Battelle Arctic Research Operations (ARO) contract.</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Mapping Trough Networks - Trough networks were mapped over a 60 square kilometer (km²) area within the greater Bethel region using a 20 centimeter (cm) resolution color-infrared orthoimage from 2018 provided by Kodiak Mapping, LLC. The troughs were manually digitized in ArcGIS Pro 3.4 at a scale of 1:1000 as polyline vector features. These networks were classified as either ice wedge networks or sand wedge networks based on field observations from boreholes. Ice wedge mapping across the Yukon-Kuskokwim Delta (YKD) followed a systematic transect-based and point sampling approach, covering approximately 2000 km² (~3% of the YKD). Transects were spaced 35 kilometers (km) apart in a north-south direction, with east-west transect lines used to locate ice wedge networks. The mapping process used very high-resolution satellite imagery available as basemaps in ArcGIS Pro 3.4. Ice wedge mapping results were further refined by integrating 5 m Interferometric Synthetic Aperture Radar elevation (IfSAR) elevation data and the 2016 National Land Cover Dataset (NLCD) to generate an ice wedge zone map. The IfSAR data helped identify and exclude areas outside suitable elevation thresholds, while the NLCD dataset allowed for land cover classification and exclusion of active river corridors. Geological constraints, such as near-coastal volcanic and mountain features, were removed using data from Coonrad (1957), ensuring the final ice wedge zone map accurately represented the most likely ice wedge occurrence areas in the YKD.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Field-Based Studies - Field campaigns in Bethel, Alaska, were conducted in three phases during 2023 and 2024 to characterize permafrost and ice wedge structures. In May 2023, borehole drilling was carried out using a 7.5 cm diameter SIPRE corer and a Kovacs auger to assess ice wedge geometries and subsurface permafrost conditions. Additional boreholes were drilled in June and September-October 2024, reaching depths of up to 5.5 m with the SIPRE corer and 7.5 m with the Kovacs auger. These boreholes were strategically placed along four profiles in two primary study areas to measure ice wedge dimensions and permafrost characteristics. To monitor ground temperature, iButton sensors were installed in a polygon center at depths of 15 cm and 100 cm. Thaw depths were measured along two 100 m transects in early October 2024 using a 1.5 m long graduated probe at 1 m intervals, with deeper thaw depths recorded using a Kovacs auger where necessary. Ground-penetrating radar (GPR) surveys were conducted concurrently along the same transects using a MALÅ Ground Explorer with a 160 megahertz (MHz) shielded antenna. The GPR system collected continuous subsurface data, and post-processing in ReflexW included distance corrections, noise filtering, and thaw depth calibration using manual probe measurements.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Lab Analyses of Samples - A total of 44 frozen soil samples were collected from SIPRE and Kovacs boreholes to assess ground-ice content, with samples taken from the frozen active layer, transient layer, and perennially frozen soil. Ice content was determined using gravimetric and volumetric moisture content analyses following established methods (Shur et al., 2021). Radiocarbon dating was performed on organic material selected from borehole cores to establish chronological constraints on organic deposits, ice wedge development, and permafrost formation. AMS radiocarbon dating was conducted at the National Ocean Sciences Accelerator Mass Spectrometry Facility (NOSAMS) Woods Hole facility, with dates calibrated using OxCal Online Calib version 4.4 and the IntCal20 dataset. Stable oxygen and hydrogen isotope analyses were performed on ice wedge samples at the Alaska Stable Isotope Facility (UAF), following standard laboratory procedures (Wang et al., 2009). Instrumental accuracy was maintained through pre- and post-run calibration with known standards. These combined analyses provided detailed insights into the distribution of ground ice, permafrost formation processes, and paleoenvironmental conditions influencing ice wedge development in Bethel, Alaska.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Wang, Y.V., O’Brien, D.M., Jenson, J., Francis, D., Wooller, M.J., 2009. The influence of diet and water on the stable oxygen and hydrogen isotope composition of Chironomidae (Diptera) with paleoecological implications. Oecologia 160, 225–233. https://doi.org/10.1007/s00442-009-1303-3</para>
+          <para>Shur, Y., Jones, B.M., Kanevskiy, M., Jorgenson, T., Jones, M.K.W., Fortier, D., Stephani, E., Vasiliev, A., 2021. Fluvio‐thermal erosion and thermal denudation in the yedoma region of northern Alaska: Revisiting the Itkillik River exposure. Permafrost &amp;amp; Periglacial 32, 277–298. https://doi.org/10.1002/ppp.2105</para>
+          <para>Coonrad, W.L., 1957, Geologic reconnaissance in the Yukon-Kuskokwim delta region, Alaska: U.S. Geological Survey Miscellaneous Geologic Investigations Map 223, 1 sheet, scale 1:500,000.</para>
+        </description>
+      </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>We conducted fieldwork near Bethel, Alaska. We mapped trough networks in a 60 square kilometer area near Bethel, Alaska. We mapped ice wedge networks across the Yukon-Kuskokwim Delta.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Mapping of Trough Networks and Ice Wedge Distribution - Trough networks were mapped using a 20 cm resolution color-infrared orthoimage from 2018, covering a 60 km² area in the Bethel region. Features were manually digitized at a scale of 1:1000 in ArcGIS Pro 3.4 as polyline vector features. Mapped trough networks were classified as either ice wedge or sand wedge networks based on field verification through borehole observations. A broader mapping effort for ice wedge networks across the Yukon-Kuskokwim Delta (YKD) was conducted using a systematic transect-based sampling approach. Transects were spaced 35 km apart in a north-south direction, with ice wedge points mapped along perpendicular east-west transects. Mapping was performed at a scale of 1:2000, with a 210 m field of view on either side of the transect lines, covering a total of ~2000 km² (~3% of the YKD). Individual ice wedge networks were mapped as point vector features. The ice wedge distribution data were further refined by integrating 5 m IfSAR elevation data and the 2016 National Land Cover Dataset (NLCD) to exclude unsuitable terrain. Areas with volcanic and mountain features were masked out using geological data from Coonrad (1957).</para>
+          <para>Borehole Sampling for Permafrost and Ice Wedge Characterization - Borehole sampling was conducted during three field campaigns in May 2023, June 2024, and September-October 2024. Borehole locations were selected to capture variability in ice wedge troughs, polygon centers, and permafrost conditions. Boreholes were drilled using a 7.5 cm diameter SIPRE corer and a Kovacs auger. The SIPRE corer was used for deeper permafrost sampling, reaching depths up to 5.5 m, while the Kovacs auger was used for shallower boreholes, reaching depths up to 7.5 m. Boreholes were strategically placed along four profiles in two primary study areas to measure ice wedge dimensions, including width and vertical extent. To monitor ground temperatures, iButton sensors were installed in a polygon center within a 1.5-inch diameter PVC tube at depths of 15 cm and 100 cm. Thaw depth measurements were taken along two 100 m transects in early October 2024 using a 1.5 m long graduated probe at 1 m intervals. Where thaw depths exceeded 1.5 m, the Kovacs auger was used to determine permafrost table depths.</para>
+          <para>Ground-Penetrating Radar Surveys - Ground-penetrating radar (GPR) surveys were conducted along the same 100 m transects in early October 2024. A MALÅ Ground Explorer with a 160 MHz shielded antenna was used to measure thaw depths and identify subsurface ice wedges. The antenna was hand-towed along each transect in a common-offset configuration, with a trace spacing of 0.5 m. GPR data were recorded with built-in GPS for spatial accuracy and processed using ReflexW software. Data processing included distance corrections, airwave alignment, low-frequency noise filtering, and background removal. Thaw depth probe measurements were used to calibrate GPR-derived thaw depths.</para>
+          <para>Permafrost Sample Collection and Laboratory Analyses - A total of 44 frozen soil samples were collected from SIPRE and Kovacs boreholes to analyze ground-ice content and permafrost properties. Samples were taken from the frozen active layer, transient layer, and perennially frozen soils. Gravimetric and volumetric moisture content and excess ice content were measured following the protocols outlined in Shur et al. (2021). Radiocarbon dating was performed on organic material extracted from selected borehole depths to establish a chronology of permafrost formation and ice wedge development. AMS radiocarbon dating was conducted at the NOSAMS Woods Hole laboratory, and dates were calibrated using OxCal Online Calib version 4.4 with the IntCal20 calibration dataset. Stable oxygen and hydrogen isotope analyses were conducted on ice wedge samples at the Alaska Stable Isotope Facility at the University of Alaska Fairbanks (UAF). Ice wedge water samples were analyzed following established methods (Wang et al., 2009), with instrumental accuracy verified using calibration standards.</para>
+          <para>These sampling procedures provided a comprehensive assessment of permafrost characteristics, ground-ice distribution, and ice wedge development in Bethel, Alaska.</para>
+        </samplingDescription>
+      </sampling>
+    </methods>
+    <project>
+      <title>NNA Research: Permafrost Grown: Cultivating convergence between farmers and researchers to foster sustainability for intensifying permafrost-agroecosystems</title>
+      <personnel>
+        <individualName>
+          <givenName>Glenna M</givenName>
+          <surName>Gannon</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mikhail Z</givenName>
+          <surName>Kanevskiy</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Tobias</givenName>
+          <surName>Schwoerer</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Benjamin M</givenName>
+          <surName>Jones</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Melissa K</givenName>
+          <surName>Ward Jones</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>2126965</awardNumber>
+        <title>NNA Research: Permafrost Grown: Cultivating convergence between farmers and researchers to foster sustainability for intensifying permafrost-agroecosystems</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=2126965</awardUrl>
+      </award>
+    </project>
+    <dataTable id="urn-uuid-45c6d4b3-0dec-4260-af67-2386db4430d8" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Bethel_Radiocarbon_Dating_Results.csv</entityName>
+      <entityDescription>We radiocarbon dated organic material by individually picking samples from various depths to establish an age framework for organic deposits within the permafrost. Dates were sampled by targeting stratigraphic boundaries associated with the buried peat layers and underlying mineral deposits. Samples for Accelerator Mass Spectrometry (AMS) radiocarbon analysis were washed in distilled reverse osmosis water, photographed, and oven-dried prior to shipment to the National Ocean Sciences Accelerator Mass Spectrometry Facility (NOSAMS) Woods Hole radiocarbon lab. The resulting dates were calibrated with OxCal Online Calib version 4.4 (https://c14.arch.ox.ac.uk/oxcal/OxCal.html), using the IntCal20 calibration dataset (Reimer et al., 2020). This dating provided constraining ages for organic layer development, charcoal horizons, tephra deposition, ice wedge development, and ice-rich late-Pleistocene permafrost preservation.</entityDescription>
+      <physical>
+        <objectName>Bethel_Radiocarbon_Dating_Results.csv</objectName>
+        <size unit="bytes">1465</size>
+        <authentication method="MD5">2efeaa58198b16fdef464c5fbe4be491</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:45c6d4b3-0dec-4260-af67-2386db4430d8</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="DoA2aqku8ccAnpT2AwcaFDJMdVBxSv">
+          <attributeName>Borehole ID</attributeName>
+          <attributeDefinition>Field site ID for the borehole</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="FC7sSE7aVAuqzod3fnwDiL1kxfAENc">
+          <attributeName>Depth</attributeName>
+          <attributeLabel>centimeters</attributeLabel>
+          <attributeDefinition>depth below ground surface</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="IXkwUEqLFD0kuFIocfE1H9NnFbrarm">
+          <attributeName>Lab ID</attributeName>
+          <attributeDefinition>Lab ID specific to NOSAMS for each sample</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="0AZctvlyHHyEQyxAUJkmlFk1TxOBJx">
+          <attributeName>Radiocarbon age</attributeName>
+          <attributeDefinition>Uncalibrated 14c Age</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>calendarYearBeforePresent</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="14C uncalibrated age">http://purl.dataone.org/odo/ECSO_00002300</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Os4Vv2vFATCbK15LzCT5LtaeM3DnrC">
+          <attributeName>Fraction modern</attributeName>
+          <attributeDefinition>Fraction modern of the sample</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="fraction modern">http://purl.dataone.org/odo/ECSO_00001962</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="aU4xLThDwsdkWKISlKrFkCz6RbhHNl">
+          <attributeName>Calibrated Age (2-sigma midpoint)</attributeName>
+          <attributeDefinition>2-sigma midpoint of the calibrated radiocarbon age cal yrs BP</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>calendarYearBeforePresent</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="14C calibrated age">http://purl.dataone.org/odo/ECSO_00002165</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="wxh1NOOfrKcwnb5aorpIhyfd1oGyTx">
+          <attributeName>Soil unit</attributeName>
+          <attributeDefinition>Soil unit that the sample was taken from</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="z388d3QWFoAI2fUygdIaI5WB1tx220">
+          <attributeName>Dated material</attributeName>
+          <attributeDefinition>The type of material dated</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of material sampled">http://purl.dataone.org/odo/ECSO_00002813</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="U8e0Zu4vqNFq5qrAAgSNQ8i2HgCCQI">
+          <attributeName>Sample Notes</attributeName>
+          <attributeDefinition>Context for the sample date</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-be4a7e71-cb9c-454f-96bf-063597a2e0d0" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Bethel_Thaw_Depth_Transects.csv</entityName>
+      <entityDescription>Thaw depth measurements were conducted along two, 100 meter (m) long transects during early October 2024. Measurements were taken on 1 October 2024 at the BET-31/-32 transect and on 3 October 2024 at the BET-7 transect. A 1.5 m long graduated probe was used to measure thaw depth to the nearest centimeter at 1 m intervals along each 100 m long transect. For instances where thaw depth exceeded 1.5 m, measurements were recorded as greater than 1.5 m. At the BET-31/-32 transect, a deeper thaw feature existed along the transect so we used the Kovacs auger to drill through unfrozen sediments to the permafrost table, enabling the determination of thaw depth beyond 1.5 m in this case. Ground surface elevations come from a differential Global Positioning System (GPS) survey at BET-7 and an uncrewed aerial vehicle (UAV) survey at BET-31/-32.</entityDescription>
+      <physical>
+        <objectName>Bethel_Thaw_Depth_Transects.csv</objectName>
+        <size unit="bytes">4586</size>
+        <authentication method="MD5">e5fc3bb92edc2b6f4d2d91740a5dc5f8</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:be4a7e71-cb9c-454f-96bf-063597a2e0d0</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="BpaGMTaEDdddU5wPtTpcZPVG039wa2">
+          <attributeName>Distance (m)</attributeName>
+          <attributeDefinition>Distance along transect</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="distance">http://purl.dataone.org/odo/ECSO_00001710</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="oWMXJ65TS8zOovZqXTIVPrx1DObZaF">
+          <attributeName>BET-7 Elevation (m asl)</attributeName>
+          <attributeDefinition>Elevation of land surface in meters above sea level</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>metersAboveSeaLevel</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="FfywMo8HkfBLVGAvQGK9fsdCUc39O8">
+          <attributeName>BET-7 Thaw Depth (m asl)</attributeName>
+          <attributeDefinition>Elevation of thaw depth in meters above sea level</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>metersAboveSeaLevel</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5iZbDlWNFDrgakVikngFzMxfEMZSNL">
+          <attributeName>BET-31 Elevation (m asl)</attributeName>
+          <attributeDefinition>Elevation of land surface in meters above sea level</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>metersAboveSeaLevel</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="vcKxOsN8xozBORoAG7OSZ1FuI9SIty">
+          <attributeName>BET-31 Thaw Depth (m asl)</attributeName>
+          <attributeDefinition>Elevation of thaw depth in meters above sea level</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>metersAboveSeaLevel</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-047b6f3d-6eb0-45a2-ac16-21bbeb3f2835" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Air_Ground_Temperature_Data.csv</entityName>
+      <entityDescription>Ground temperature array in a polygon center using iButtons placed within a 1.5-inch diameter Polyvinyl chloride (PVC) tube at depths of 15 centimeter (cm) and 100 cm</entityDescription>
+      <physical>
+        <objectName>Air_Ground_Temperature_Data.csv</objectName>
+        <size unit="bytes">10376</size>
+        <authentication method="MD5">1a03e978562f491f3c777075f29d8322</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:047b6f3d-6eb0-45a2-ac16-21bbeb3f2835</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="h960AkpM23GT0MzBXXvLck970rdTNX">
+          <attributeName>Date</attributeName>
+          <attributeDefinition>date of measurement</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date">http://purl.dataone.org/odo/ECSO_00002051</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="wocGKp7fKk67Jh5vhVfAnTl7If71QW">
+          <attributeName>Air Temperature (C)</attributeName>
+          <attributeDefinition>Mean Daily Air Temperature</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Air Temperature">http://purl.dataone.org/odo/ECSO_00001225</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TpxMMOF52flaXhniEPOIO9AN52UolV">
+          <attributeName>15 cm Depth Ground Temperature (C)</attributeName>
+          <attributeDefinition>Mean daily ground temperature</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="CTxCmSXOo0Sy4yHUi9pT4qbiP7gdLL">
+          <attributeName>100 cm Depth Ground Temperature (C)</attributeName>
+          <attributeDefinition>Mean daily ground temperature</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-9766d785-d727-41fe-a1c7-2be7ae8b101a" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Holocene_Ice_Wedge_Stable_Water_Isotopes.csv</entityName>
+      <entityDescription>Stable oxygen and hydrogen water isotope analyses were conducted on ice wedge samples, which were analyzed at the Alaska Stable Isotope Facility at the University of Alaska Fairbanks (UAF) using previously published methods (Wang et al., 2009).</entityDescription>
+      <physical>
+        <objectName>Holocene_Ice_Wedge_Stable_Water_Isotopes.csv</objectName>
+        <size unit="bytes">14525</size>
+        <authentication method="MD5">8e058b70fa49042646df0cb714ffd697</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6bf6c3a9-faa8-4d75-b224-9e502bfb560f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="vKiW8mC8utrTa4gTKvVPJ4VKkckK0H">
+          <attributeName>Sample Name</attributeName>
+          <attributeDefinition>Name of sample site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="I6bwp6skNJK2IOIFA8kszmbBra27JQ">
+          <attributeName>d18O</attributeName>
+          <attributeDefinition>δ¹⁸O (delta-O-18) is a measure of the ratio of stable oxygen isotopes</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="d18O">http://purl.dataone.org/odo/ECSO_00001677</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="hod5Kh3UC1H5706gA8t3smnNnhE9xm">
+          <attributeName>d2H</attributeName>
+          <attributeDefinition>δ²H (delta-²H), also known as deuterium excess (²H or D), is a measure of the ratio of stable hydrogen isotopes</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="deuterium excess">http://purl.dataone.org/odo/ECSO_00002401</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="iTGk7C6XAhE4QrsiQuukWTMrNcIQ9b">
+          <attributeName>Site</attributeName>
+          <attributeDefinition>Regional Site Identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study location name">http://purl.dataone.org/odo/ECSO_00002768</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="zSTigHI5CyzxFZvmtP0aZTlDpJA22m">
+          <attributeName>Period</attributeName>
+          <attributeDefinition>Geologic Time Period</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="A8MqyzvpMp2w8PNb7cp8or8gScB8Jx">
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>WGS84 Location</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="oyq424kWAxve8ntZDQGaPiOhCvXWE1">
+          <attributeName>Long</attributeName>
+          <attributeDefinition>WGS84 Location</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="OvRNgFWDrLCzd2GVtuf21KurZIrEGv">
+          <attributeName>Region</attributeName>
+          <attributeDefinition>Another Regional Identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="vMsrSmpTT86skoilEemz9HfX4Sn9tx">
+          <attributeName>dexcess</attributeName>
+          <attributeDefinition>d-excess is a secondary isotopic parameter that reflects kinetic fractionation processes during evaporation and condensation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="deuterium excess">http://purl.dataone.org/odo/ECSO_00002401</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <spatialVector id="urn-uuid-f2b0b31f-5539-48e4-a2d4-255b52778c9d" scope="document" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>YKD_Ice_Wedge_Network_Points.geojson</entityName>
+      <entityDescription>Ice wedge networks were mapped across the Yukon-Kuskokwim Delta (YKD) using a systematic approach that combined transect-based and targeted point sampling methods. Transects were spaced 35 kilometers (km) apart in a north-south direction, with ice wedge point locations identified along east-west transect lines. Mapping was conducted at a scale of 1:2,000, with a field of view extending 210 meters (m) on either side of the transect lines, covering a total mapped area of ~2,000 square kilometers (km2), or ~3 % of the YKD. Individual ice wedge networks were mapped as point vector features, representing individual ice wedge networks or clusters of networks where they were abundant. The mapping utilized very high-resolution satellite imagery available as basemaps in ArcGIS Pro 3.4.</entityDescription>
+      <physical>
+        <objectName>YKD_Ice_Wedge_Network_Points.geojson</objectName>
+        <size unit="bytes">144668</size>
+        <authentication method="MD5">a60728584062927581674de4bb2b02f3</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/geo+json</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:f2b0b31f-5539-48e4-a2d4-255b52778c9d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="hegf7wy847ore">
+          <attributeName>FID</attributeName>
+          <attributeDefinition>feature identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="CexG5VfvxCUQ062EpAxWTpthkXxRk8">
+          <attributeName>ID</attributeName>
+          <attributeDefinition>Unique feature ID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="blA8ZJED8PXUtzuw1i9yMeJp6R65RM">
+          <attributeName>Latitude</attributeName>
+          <attributeDefinition>WGS84 location</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="mS4J6teV44hhUdNqRxS9UMHO8w1zao">
+          <attributeName>Longitude</attributeName>
+          <attributeDefinition>WGS84 Location</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6CHeJRMqzXgbu0aQaaTLISsMSkwoFf">
+          <attributeName>geometry</attributeName>
+          <attributeDefinition>geometry of shapefile</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <geometry>Point</geometry>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+    </spatialVector>
+    <spatialVector id="urn-uuid-cb53f62e-050e-478d-aad2-2550e14186b1" scope="document" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Bethel_Trough_Networks_Polyline.geojson</entityName>
+      <entityDescription>Trough networks were manually mapped in a 60 square kilometer (km2) area, covering the greater Bethel area, using a 20 centimeter (cm) resolution color-infrared orthoimage from 2018 provided by Kodiak Mapping, LLC. The networks were manually mapped in ArcGIS Pro 3.4 at a scale of 1:1000 as polyline vector features. Trough networks were aggregated into individual clusters of interconnected lines and later classified as either ice wedge networks or sand wedge (troughs resulting from thermal contraction cracks that fill with sand) networks based on drilling during our fieldwork studies.</entityDescription>
+      <physical>
+        <objectName>Bethel_Trough_Networks_Polyline.geojson</objectName>
+        <size unit="bytes">817223</size>
+        <authentication method="MD5">88fbb3659be915f0a2ddcff65096d3f1</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/geo+json</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:cb53f62e-050e-478d-aad2-2550e14186b1</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="48271ba7-398b-4ac0-abd0-07fe509c6122">
+          <attributeName>FID</attributeName>
+          <attributeDefinition>Feature identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="nds16eZPgLD0fBOysIZgt621sp05l2">
+          <attributeName>Length</attributeName>
+          <attributeDefinition>Total length of connected polylines</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Length">http://purl.dataone.org/odo/ECSO_00001253</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="AOubnSgE3GmSuxO8WgUosroptQxVu5">
+          <attributeName>Trough_Net</attributeName>
+          <attributeDefinition>The type of trough network</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="H37F51dsHEW15fuCgJuhvSW6sdfyV1">
+          <attributeName>geometry</attributeName>
+          <attributeDefinition>geometry of shapefile</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <geometry>MultiLineString</geometry>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+    </spatialVector>
+    <spatialVector id="urn-uuid-c4e7895a-d109-408d-8243-e9feb43c2823" scope="document" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Shapefiles.zip</entityName>
+      <entityDescription>Ice wedge networks were mapped across the YKD using a systematic approach that combined transect-based and targeted point sampling methods. Transects were spaced 35 km apart in a north-south direction, with ice wedge point locations identified along east-west transect lines. Mapping was conducted at a scale of 1:2,000, with a field of view extending 210 m on either side of the transect lines, covering a total mapped area of ~2,000 km2, or ~3 % of the YKD. Individual ice wedge networks were mapped as point vector features, representing individual ice wedge networks or clusters of networks where they were abundant. The mapping utilized very high-resolution satellite imagery available as basemaps in ArcGIS Pro 3.4. Zip contains .shp, .shx, .dbf, .prj, .cpg, .sbn, and .sbx files</entityDescription>
+      <physical>
+        <objectName>Shapefiles.zip</objectName>
+        <size unit="bytes">65106491</size>
+        <authentication method="MD5">12ca6453a0cd85c1bc346ef592566a3f</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/vnd.shp+zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c4e7895a-d109-408d-8243-e9feb43c2823</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="d5JGITKJNRb3we7k21ZghrPNEpssyi">
+          <attributeName>Region</attributeName>
+          <attributeDefinition>The ice wedge zone region</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="245TWeuLg1auT3JJidT7UCZbTARrdm">
+          <attributeName>geometry</attributeName>
+          <attributeDefinition>geometry of shapefile</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <geometry>MultiPolygon</geometry>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+    </spatialVector>
+    <otherEntity id="urn-uuid-b9294647-d371-40e8-b38a-27eeb95e2d54" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0410.srd</entityName>
+      <entityDescription>trace number by wheel position</entityDescription>
+      <physical>
+        <objectName>DAT_0410.srd</objectName>
+        <size unit="bytes">13241</size>
+        <authentication method="SHA-256">a09e3bf105b84a6e550774c326e7c20ea5edbe279ca3183d7837a1159d11bed8</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b9294647-d371-40e8-b38a-27eeb95e2d54</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-5f27f20f-b428-4f3c-8454-c88f574b4c78" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0410.rd7</entityName>
+      <entityDescription>raw data (4 bytes/sample) in straight binary format</entityDescription>
+      <physical>
+        <objectName>DAT_0410.rd7</objectName>
+        <size unit="bytes">4176832</size>
+        <authentication method="SHA-256">16dbacc6b6cef5e30d77133dd7908cf8fcb683bef58fc15f7a4219ed7d7b29ca</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5f27f20f-b428-4f3c-8454-c88f574b4c78</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-2230f1dc-e02d-4ce2-a92e-4149b1c0d8dc" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0410.rd3</entityName>
+      <entityDescription>raw data (2 bytes/sample) in straight binary format</entityDescription>
+      <physical>
+        <objectName>DAT_0410.rd3</objectName>
+        <size unit="bytes">2088416</size>
+        <authentication method="SHA-256">876d68c838b10c1d67a5f0be7e637cf6ff595ee21b9bf96f2e1d5d167805c2f5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2230f1dc-e02d-4ce2-a92e-4149b1c0d8dc</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-35c863b9-73c9-4d78-9ebf-9124272f9bcd" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0410.rad</entityName>
+      <entityDescription>header file containing transect metadata</entityDescription>
+      <physical>
+        <objectName>DAT_0410.rad</objectName>
+        <size unit="bytes">775</size>
+        <authentication method="SHA-256">5715e279023eb2d6173a2b3643d9595d350a1aa177453f497722885dca337214</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:35c863b9-73c9-4d78-9ebf-9124272f9bcd</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-8687559b-c36c-438a-92c8-88da9a4b3b64" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0410.mrk</entityName>
+      <entityDescription>transect marks</entityDescription>
+      <physical>
+        <objectName>DAT_0410.mrk</objectName>
+        <size unit="bytes">20</size>
+        <authentication method="SHA-256">6376d30d91d0adb4b9966c57c25e6194b3c8d12d40b4d8e4dcf7b69436139333</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:8687559b-c36c-438a-92c8-88da9a4b3b64</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-33f28ef3-40e6-4751-a5b4-84b986f431bf" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>DAT_0410.cor</entityName>
+      <entityDescription>timestamped GPS coordinates for GPR traces</entityDescription>
+      <physical>
+        <objectName>DAT_0410.cor</objectName>
+        <size unit="bytes">38606</size>
+        <authentication method="SHA-256">a8bd8d29b2bf99c27b43ff53d90792a773c0331e338246f4f5a49c32a57592c7</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:33f28ef3-40e6-4751-a5b4-84b986f431bf</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-33b32711-c5ef-4a7b-98ef-3798a5f8cab8" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0408.srd</entityName>
+      <entityDescription>trace number by wheel position</entityDescription>
+      <physical>
+        <objectName>DAT_0408.srd</objectName>
+        <size unit="bytes">3607</size>
+        <authentication method="SHA-256">e263c3989fd38c849350d1f0b293a09c1fe01f76116927dfbef015f309e8b591</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:33b32711-c5ef-4a7b-98ef-3798a5f8cab8</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-d3623ab4-9546-463f-853d-e333caec8f8b" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0408.rd7</entityName>
+      <entityDescription>raw data (4 bytes/sample) in straight binary format</entityDescription>
+      <physical>
+        <objectName>DAT_0408.rd7</objectName>
+        <size unit="bytes">1172640</size>
+        <authentication method="SHA-256">27197668ff3a3ee3d1a4d97d0b3ea8be8aacc66115552f81c9e3c3324140f886</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:d3623ab4-9546-463f-853d-e333caec8f8b</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-ce97c444-04ea-43b2-a359-70f81d518acb" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0408.rd3</entityName>
+      <entityDescription>raw data (2 bytes/sample) in straight binary format</entityDescription>
+      <physical>
+        <objectName>DAT_0408.rd3</objectName>
+        <size unit="bytes">586320</size>
+        <authentication method="SHA-256">1d27c5e7cc9d9f193bd7dcccf2dd4deafdff2edfd3e5e1401185e229d0330663</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ce97c444-04ea-43b2-a359-70f81d518acb</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-8899d61f-30d4-4aef-b9a8-3473ba6b509f" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0408.rad</entityName>
+      <entityDescription>header file containing transect metadata</entityDescription>
+      <physical>
+        <objectName>DAT_0408.rad</objectName>
+        <size unit="bytes">775</size>
+        <authentication method="SHA-256">80068ad7586c2746d865f23e4dae15f53dadeda8cfc9e639c4852232b240e7a6</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:8899d61f-30d4-4aef-b9a8-3473ba6b509f</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-d02ff5c5-7519-48ba-be2c-56106d5b4f4b" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>GPR_data/DAT_0408.mrk</entityName>
+      <entityDescription>transect marks</entityDescription>
+      <physical>
+        <objectName>DAT_0408.mrk</objectName>
+        <size unit="bytes">20</size>
+        <authentication method="SHA-256">6376d30d91d0adb4b9966c57c25e6194b3c8d12d40b4d8e4dcf7b69436139333</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:d02ff5c5-7519-48ba-be2c-56106d5b4f4b</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-3da79275-5706-4796-9dc7-7e8d407d1459" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>DAT_0408.cor</entityName>
+      <entityDescription>timestamped GPS coordinates for GPR traces</entityDescription>
+      <physical>
+        <objectName>DAT_0408.cor</objectName>
+        <size unit="bytes">14315</size>
+        <authentication method="SHA-256">b0df231a126b800e259648e29c5e01dbe8713e336594fcf99eb98a6e201bde81</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3da79275-5706-4796-9dc7-7e8d407d1459</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-36aca3a7-6a14-47eb-9290-68829b7b772b" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Bethel_Borehole_Logs_2023_2024.pdf</entityName>
+      <entityDescription>Our permafrost studies in Bethel, Alaska, incorporated three primary field campaigns between 2023 and 2024. In May 2023, five boreholes were drilled using a 7.5-centimeter(cm)-diameter SIPRE corer in polygon centers and troughs, alongside 20 additional boreholes with a Kovacs auger across ice wedge troughs and rims to measure ice-wedge geometries. The June 2024 campaign involved one SIPRE-corer borehole in an ice wedge polygon center and 14 Kovacs boreholes in ice wedge troughs, while in September-October 2024, we drilled two SIPRE-corer and nine Kovacs-auger boreholes in polygon centers and ice wedge troughs, respectively. The boreholes reached depths of up to 5.5 meters (m) with the SIPRE corer and up to 7.5 m with the Kovacs auger, enabling sampling across various depths for ground-ice content, stable water isotopes of wedge ice, and radiocarbon dating. Boreholes were strategically placed across four profiles in two primary study areas, which allowed for measurement of ice-wedge dimensions, including widths and vertical extents, and coring of ice wedge polygon centers. Frozen cores were described and photographed in the field. Cryostratigraphic descriptions were based on classifications of massive ground ice and cryostructures (patterns formed by ice inclusions in the frozen soil) adapted from Russian and North American literature.</entityDescription>
+      <physical>
+        <objectName>Bethel_Borehole_Logs_2023_2024.pdf</objectName>
+        <size unit="bytes">209884</size>
+        <authentication method="MD5">7880cd14613cde64136a9f4f9026c717</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/pdf</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:36aca3a7-6a14-47eb-9290-68829b7b772b</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/pdf</entityType>
+    </otherEntity>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <metadata>
+          <unitList>
+            <unit id="calendarYearBeforePresent" abbreviation="cal yrs BP" unitType="time">
+              <description>calendar year before present</description>
+            </unit>
+            <unit id="metersAboveSeaLevel" abbreviation="m asl" unitType="length">
+              <description>meters above sea level</description>
+            </unit>
+          </unitList>
+        </metadata>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

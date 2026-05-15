@@ -1,0 +1,2184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="urn:uuid:858251c0-80d4-4534-83ca-d9c9c9f7ad1d" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="knb">
+  <dataset id="urn-uuid-9f003c5a-c1b7-4b68-97b3-82bd8c9b9716">
+    <title>Permafrost and Environmental Monitoring in 2023 and 2024 at the Teshekpuk Lake Observatory, Northern Alaska</title>
+    <creator id="5722325270550442">
+      <individualName>
+        <givenName>Melissa</givenName>
+        <surName>Ward Jones</surName>
+      </individualName>
+      <organizationName>Institute of Northern Engineering, University of Alaska Fairbanks</organizationName>
+      <electronicMailAddress>mkwardjones@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-3401-2515</userId>
+    </creator>
+    <creator id="9987423283818100">
+      <individualName>
+        <givenName>Benjamin</givenName>
+        <surName>Jones</surName>
+      </individualName>
+      <organizationName>Institute of Northern Engineering, University of Alaska Fairbanks</organizationName>
+      <electronicMailAddress>bmjones3@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1517-4711</userId>
+    </creator>
+    <pubDate>2025</pubDate>
+    <abstract>
+      <para>This dataset consists of monitoring data of environmental parameters at two sites representing different stages of ice-wedge evolution and set up as Circumpolar Active Layer Monitoring (CALM) grid sites at the Teshekpuk Lake Observatory. One site was established in an area with low-centered polygons (LCP; CALM site U60a) and the other in an area with high-centered polygons (HCP; CALM site U60). The LCP site represents ice-wedge formation and is in a drained lake basin, the HCP represents partial degradation and is located in a primary early Holocene surface.</para>
+      <para>Grids were 100 meter (m) by 100 m grids with data collected at every 10 m for a total of 120 measurement point locations. Measurements include thaw depths, ground temperatures at 12 centimeter (cm) depths, volumetric water content of the upper 12 cm of soil, water depth in areas with standing water, maximum vegetation height (within ~10 cm of the grid point), and snow depth. This data was collected at both sites in July 2023 and 2024 and is provided by four csv file for each measurement day. Two shapefiles are included to provide exact measurement locations within the grid.</para>
+      <para>Furthermore, Unmanned Aerial Vehicle (UAV) surveys were conducted in 2024 to measure micro-topography and Normalized Difference Vegetation Index (NDVI) near the timing of peak tundra greenness. These derived UAV products are included as tif files. These measurements were also extracted at each grid point location for analysis and those values are included in the csv files described previously.</para>
+      <para>Finally, we monitored active layer (15 cm depth) and permafrost (100 cm depth) temperatures for specific geomorphic features at each site for a year. We also monitored base of pond water temperatures for a year. Ground temperature monitoring for geomorphic features at the LCP site consisted of a polygon center, a rim and a trough; for the HCP site geomorphic features consisted of a polygon center and two troughs of varying dimensions (note one trough was located outside the grid area). Water monitoring consisted of two polygon centers at the LCP site and a thaw pond at the HCP site. This data is included as another csv file.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>permafrost</keyword>
+      <keyword>Teshekpuk Lake Observatory</keyword>
+      <keyword>ice-wedges polygons</keyword>
+      <keyword>ice-wedges</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication. To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Bounding area of the low-centered polygon grid site. Coordinates of exact measurement locations are provided in the corresponding CSV files.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.856027</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.853203</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.734414</northBoundingCoordinate>
+          <southBoundingCoordinate>70.733607</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Bounding area of the low-centered polygon grid site. Coordinates of exact measurement locations are provided in the corresponding CSV files.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8375276</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8347463</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7237242</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7228389</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground temperature sensor for high-centered polygon trough 2 site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.832453</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.832453</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.726092</northBoundingCoordinate>
+          <southBoundingCoordinate>70.726092</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground temperature sensor for high-centered polygon trough 1 site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8360352</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8360352</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7229222</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7229222</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground temperature sensor for a polygon center at the high-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8361724</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8361724</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7229221</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7229221</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of water temperature sensor in a thaw pond located with a trough at the high-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8360925</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8360925</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7231729</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7231729</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground and water temperature sensors for polygon center at the low-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8534434</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8534434</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.73336763</northBoundingCoordinate>
+          <southBoundingCoordinate>70.73336763</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground temperature sensor for a rim at the low-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8538504</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8538504</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7336640</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7336640</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location of ground temperature sensor for a trough at the low-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8539089</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8539089</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7336628</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7336628</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Location water temperature sensor for the second polygon center at the low-centered polygon site.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-153.8552865</westBoundingCoordinate>
+          <eastBoundingCoordinate>-153.8552865</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.7336161</northBoundingCoordinate>
+          <southBoundingCoordinate>70.7336161</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2023-07-12</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2024-07-21</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Cryology">https://purl.dataone.org/odo/ADCAD_00080</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="Data Sensitivity Category">http://purl.dataone.org/odo/SENSO_00000005</propertyURI>
+      <valueURI label="Non-sensitive data">http://purl.dataone.org/odo/SENSO_00000002</valueURI>
+    </annotation>
+    <contact id="2389942565234082">
+      <individualName>
+        <givenName>Melissa</givenName>
+        <surName>Ward Jones</surName>
+      </individualName>
+      <electronicMailAddress>mkwardjones@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-3401-2515</userId>
+    </contact>
+    <publisher id="7215617500219673">
+      <organizationName>NSF Arctic Data Center</organizationName>
+      <electronicMailAddress>support@arcticdata.io</electronicMailAddress>
+      <onlineUrl>http://arcticdata.io</onlineUrl>
+      <userId directory="unknown">Q77285095</userId>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Ethical Research Practices</title>
+            <para>This data was collected in a remote location and does not contain any community data that needs to be anonymized. All data was collected in a manner that minimized disturbance to any wildlife. The pilot of the UAV had a Remote Pilot Certificate (Part 107) from the Federal Aviation Administration (FAA).</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>For point measurements at each grid sites, the following measurements were taken: thaw depths, ground temperatures at 12 cm depth, volumetric water content (VWC) of the upper 12 cm of soil, water depth in areas with standing water, maximum vegetation height (within ~10 cm of the grid point), and snow depth. A 1 m thaw probe was used to measure thaw and water depths as well as maximum vegetation height. Snow depth measurements were collected with an avalanche probe (note some measurements are missing from the LCP site due to unfound site markers during the survey). Point ground temperatures were collected with an Omega HH370 RTD Thermometer with a 12 cm sensor rod. VWC was collected with a Campbell Scientific Hydrosense II probe with 12 cm sensor rods. Locations of grid point locations were recorded using a Leica differential GPS and the coordinates are provided in the corresponding CSV files.</para>
+          <para>Collection dates for each site are: 12 July, 2023 (HCP site), 13 July, 2923 (LCP site), 7 May, 2024 (snow depths only for both sites), 19 July (HCP), 2024 and 21 July, 2024 (LCP).</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>For UAV surveys, a DJI Mavic 3M Multispectral Drone operating in RTK mode with a DJI D-RTK2 base station was used. The base station was set up at a ground control point established using a post-processed Leica GS18 GNSS (Global Navigation Satellite System) base station. Orthomoasaics and a digital surface model used to created the derived products (micro-topography index [MTI] map and normalized difference vegetation index, NDVI, output) were stitched together and post-processed in Pix4D mapper (v. 4.9.0). The MTI map estimates local relative micro-topography and is was created by differencing the maximum elevation of the surrounding area (with focal statistics using 20 m circular window) from the original ground elevation. Units of inputted topographic datasets were in meters. MTI was determined using ArcGIS Pro v.2.7. Images for NDVI were calibrated using a MicaSense calibration panel prior to processing. NDVI is derived using the following equation suing bands in the near-infrared (NIR) and red reflectance bands: NSDVI = (NIR - Red)/(NIR + Red).</para>
+          <para>Collection date: all UAV surveys were collected on 23 July, 2024.</para>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Annual ground temperature monitoring was done in a range of geomorphic features at each grid site. At the low-centered polygon site, a polygon center, rim and trough were monitored. At the high-centered polygon site, a polygon center and two trough of different dimensions were monitored. Data was collected hourly using Onset Hobo two-channel external temperature loggers (U23-003 series) and calculated daily means are provided in the CSV file. Monitored depths are 15 cm to represent active layer conditions and 100 cm to represent permafrost conditions.</para>
+          <para>For annual water temperature monitoring, Onset HOBO Water Level Data Loggers (U20L-01 series and also measure water temperature) were installed in two polygon centers at the low-centered polygon site and in a thaw pond within a trough at the high-centered polygon site. Data was collected hourly and used to calculate daily means. Loggers were secured at the base of ponds using a metal rod at the high centered site and to PVC tubes at the low-centered site.</para>
+          <para>Collection period for all loggers: 18 July 2023 to 17 July 2024</para>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>RII Track-4: PermaSense: Investigating Permafrost Landscapes in Transition Using Multidimensional Remote Sensing, Data Fusion, and Machine Learning Techniques</title>
+      <title>Collaborative Research: Thaw Below Zero - How Warming Saline Permafrost Controls Key Arctic Landscape Processes</title>
+      <personnel>
+        <individualName>
+          <givenName>Yuri</givenName>
+          <surName>L Shur</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mikhail</givenName>
+          <surName>Z Kanevskiy</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Linda</givenName>
+          <surName>Nicholas-Figueroa</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Melissa</givenName>
+          <surName>K Ward Jones</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Benjamin</givenName>
+          <surName>M Jones</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1929170</awardNumber>
+        <title>RII Track-4: PermaSense: Investigating Permafrost Landscapes in Transition Using Multidimensional Remote Sensing, Data Fusion, and Machine Learning Techniques</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1929170</awardUrl>
+      </award>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>2336164</awardNumber>
+        <title>Collaborative Research: Thaw Below Zero - How Warming Saline Permafrost Controls Key Arctic Landscape Processes</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=2336164</awardUrl>
+      </award>
+      <award>
+        <funderName>National Aeronautics and Space Administration (NASA)</funderName>
+        <awardNumber>80NSSC21K1820</awardNumber>
+        <title>New (Early Career) Investigator Program Award</title>
+      </award>
+    </project>
+    <dataTable id="urn-uuid-2ac03dd7-ad15-41ba-b9f9-239e740c2672" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Annual_base_of_pond_water_Temperatures.csv</entityName>
+      <entityDescription>Mean daily pond water temperature (degrees Celsius) in two polygon centers at the low-centered polygon site and a thaw pond located in a trough at the high-centered polygon site. Loggers were placed at the base of ponds. Data was collected hourly and used to calculate daily means.</entityDescription>
+      <physical>
+        <objectName>Annual_base_of_pond_water_Temperatures.csv</objectName>
+        <size unit="bytes">11174</size>
+        <authentication method="MD5">1ceaeb55b390a7a57fd0ab4888a8c2ec</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2ac03dd7-ad15-41ba-b9f9-239e740c2672</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="6Jz786h96Lf94IUCTmvk1FiC0W8xfh">
+          <attributeName>Date (day-month)</attributeName>
+          <attributeDefinition>Date of measurement in DD-MMM.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>DD-MMM</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date">http://purl.dataone.org/odo/ECSO_00002051</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="e88d353a-ff07-453b-bd8d-7c5c0c845243">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year of measurement.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="1db2b7de-e13c-4890-91cd-df264467ba10">
+          <attributeName>LCP_Center_1_Water_BaseofPond_DegCelsius</attributeName>
+          <attributeDefinition>Mean daily pond water temperature (degrees Celsius) in a polygon center at the low-centered polygon site. Loggers were placed at the base of ponds. HOBO Water Level Data Loggers (U20L-01 series) also measure water temperature and were collected hourly to calculate daily means. Water level data is not available due to the air pressure sensor installed to process the correction failed. Note the location of this logger is the same as the LCP center ground temperature location.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Temperature">http://purl.dataone.org/odo/ECSO_00001227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5fc5db1a-903d-4715-a21b-60d2b0ffbaa9">
+          <attributeName>LCP_Center_2_Water_BaseofPond_DegCelsius</attributeName>
+          <attributeDefinition>Mean daily pond water temperature (degrees Celsius) in a polygon center at the low-centered polygon site. Loggers were placed at the base of ponds. HOBO Water Level Data Loggers (U20L-01 series) also measure water temperature and were collected hourly to calculate daily means. Water level data is not available due to the air pressure sensor installed to process the correction failed.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Temperature">http://purl.dataone.org/odo/ECSO_00001227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="23fea436-dee0-4b18-86b6-5d211b5345b9">
+          <attributeName>HCP_Thaw_pond_Water_BaseofPond_DegCelsius</attributeName>
+          <attributeDefinition>Mean daily pond water temperature (degrees Celsius) in a thaw pond within a degrading trough at the high-centered polygon site. Loggers were placed at the base of ponds. HOBO Water Level Data Loggers (U20L-01 series) also measure water temperature and were collected hourly to calculate daily means. Water level data is not available due to the air pressure sensor installed to process the correction failed.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Temperature">http://purl.dataone.org/odo/ECSO_00001227</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-55579097-3045-4fe0-9403-1cd50aa47b92" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Annual_Ground_Temperatures.csv</entityName>
+      <entityDescription>Ground temperature measurement at site representing a range of geomorphic features between both sites and include in the low-centered polygon site, polygon centers, rim and trough; at the high-centered polygon site measurements were taken in a polygon center and two trough of varying dimensions. Data was collected hourly and calculated daily means are provided here. One measurement depth represent active layer conditions (15 cm depth) and the other permafrost conditions (100 cm depth).</entityDescription>
+      <physical>
+        <objectName>Annual_Ground_Temperatures.csv</objectName>
+        <size unit="bytes">30969</size>
+        <authentication method="MD5">b7abcc1086132f46b60c12f444c16e30</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:55579097-3045-4fe0-9403-1cd50aa47b92</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="aDuGb0S7w5FxP50Mr4cVHbRHgIuwbZ">
+          <attributeName>Date (day-month)</attributeName>
+          <attributeDefinition>Month and day of measurement.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>DD-MMM</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date">http://purl.dataone.org/odo/ECSO_00002051</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6405c5c7-985f-44e9-910c-084a8a3c511e">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year measurement was made.</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="deb4f09c-8930-4b53-914e-f058e4bd1733">
+          <attributeName>LCP_Center_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) of a polygon center at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="fcd98830-297b-4d1a-b996-b13156872572">
+          <attributeName>LCP_Rim_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) in a rim at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="e7577704-00ed-4528-b87b-5ae5fccf9574">
+          <attributeName>LCP_Trough_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) in a trough at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5bab59d9-ecdc-44b9-805d-213691994ef7">
+          <attributeName>HCP_Center_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) of a polygon center at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="333a7a06-8b3c-448b-b70d-738e2da424da">
+          <attributeName>HCP_Trough_1_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) in one of two trough sites at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="f790c477-771e-405a-8dd2-962e74c22464">
+          <attributeName>HCP_Trough2_15cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 15 cm depth (representing the active layer) in one of two trough sites at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="23b3e9b7-9bc2-4262-9047-00897e6aa7d6">
+          <attributeName>LCP_Center_1_100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost)of a polygon center at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="7bc86e1b-3681-460a-a58b-c120ca7d02b4">
+          <attributeName>LCP_Rim_100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost) of a rim at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="db40e041-2cc3-4779-8ee4-3f58aa589053">
+          <attributeName>LCP_Trough_100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost) in a trough at the low-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="8947e790-9739-47a3-98b5-887d828f95a3">
+          <attributeName>HCP_Center_100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost) of a polygon center at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="9996b814-d574-40d7-9d8a-ad1a067007de">
+          <attributeName>HCP_Trough__100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost) in one of two troughs at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="e6a3e33e-f8d3-4857-94af-99890686e5b1">
+          <attributeName>HCP_Trough_2_100cm_DegCelsius</attributeName>
+          <attributeDefinition>Daily averages of ground temperature (degree Celsius) measured at 100 cm depth (representing permafrost) in one of two troughs at the high-centered polygon site. Measurements were collected hourly using an Onset Hobo two-channel external temperature logger (U23-003 series).</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-0efa4524-2a56-4300-b385-fe7fb1f446b3" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>HCP_Grid_Point_Measurements_12July2023.csv</entityName>
+      <entityDescription>CSV files containing all point location measurements collected within the low-centered polygon (LCP) monitoring grid. Data includes geographic location information for each collection point (latitude and longitude coordinates in decimal degrees as well as easting and northing coordinates in meters), three thaw depths measurements with the calculated average, point soil temperature at 12 cm depth, percent volumetric water content for the upper 12 cm of soil, water level in cm in areas with standing water and maximum vegetation height with ~10 cm of grid point. -9999 represents no data entries. All measurements were collected on 12 July 2023.</entityDescription>
+      <physical>
+        <objectName>HCP_Grid_Point_Measurements_12July2023.csv</objectName>
+        <size unit="bytes">10144</size>
+        <authentication method="MD5">d5f9f3547e5e114e17e73156f2571d34</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:0efa4524-2a56-4300-b385-fe7fb1f446b3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-8524f174-1513-4dbb-ae4f-16177967c1ec">
+          <attributeName>GridID</attributeName>
+          <attributeDefinition>Grid point ID.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-c1674e00-1236-423a-9fcd-30e7d29cf0c8">
+          <attributeName>Lat_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point latitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-5b3b53b9-2de3-4480-8732-90092bc1a834">
+          <attributeName>Long_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point longitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-dc21ae3a-d273-4446-9082-34467b5275c5">
+          <attributeName>Northing_m</attributeName>
+          <attributeDefinition>Grid point northing coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM northing coordinate">http://purl.dataone.org/odo/ECSO_00002625</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-56576e06-2795-4036-a47d-75e7008e13fc">
+          <attributeName>Easting_m</attributeName>
+          <attributeDefinition>Grid point easting coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM easting coordinate">http://purl.dataone.org/odo/ECSO_00002626</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-966463ac-c94b-4a2c-91d9-81a1bbe2f8df">
+          <attributeName>ThawDepth1_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 1 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-90e3260f-4822-4932-bcd7-c576b9ad9535">
+          <attributeName>ThawDepth2_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 2 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-f79a6394-3b69-46ab-9fd2-2578f0a98b3d">
+          <attributeName>ThawDepth3_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 3 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-3427648a-9a46-4457-b151-e023de8269f3">
+          <attributeName>Mean_ThawDepth_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Mean thaw depth calculation of the 3 measurements.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-975e157e-09e0-4e0a-86ed-d980886c9a33">
+          <attributeName>Soil_Temperature_degCelsius_12cm</attributeName>
+          <attributeDefinition>Soil point measurement at 12 cm depth using an Omega HH370 RTD Thermometer with a 12 cm sensor rod.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-55b9b68e-aa44-4aeb-afd0-3cfae8b5e903">
+          <attributeName>Volumetric_Water_Content_Upper12cm_Percent</attributeName>
+          <attributeDefinition>Percent volumetric water content for the upper 12 cm of soil. Measurement was done using a Campbell Scientific Hydrosense II probe with 12 cm sensor rods.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-c4f81825-a719-49ce-91bd-5baab4c85712">
+          <attributeName>WaterLevel_cm</attributeName>
+          <attributeDefinition>Water depth in areas with standing water. Measurement was taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-1c2d4eee-81da-48f0-9e5a-e87381f71c4a">
+          <attributeName>Maximum_Vegetation_ Height_cm</attributeName>
+          <attributeDefinition>Maximum vegetation height of vegetation with ~10 cm of grid point location. Measurement taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Plant Material Height">http://purl.dataone.org/odo/ECSO_00001222</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-d28b907d-d16f-4cc9-8cfd-fe90305fe1b3" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>HCP_Grid_Point_Measurements_19July2024.csv</entityName>
+      <entityDescription>CSV files containing all point location measurements collected within the high-centered polygon (HCP) monitoring grid. Data includes geographic location information for each collection point (latitude and longitude coordinates in decimal degrees as well as easting and northing coordinates in meters), three thaw depths measurements with the calculated average, point soil temperature at 12 cm depth, percent volumetric water content for the upper 12 cm of soil, water level in cm in areas with standing water and maximum vegetation height with ~10 cm of grid point.  All measurements were collected on 19 July 2024.</entityDescription>
+      <physical>
+        <objectName>HCP_Grid_Point_Measurements_19July2024.csv</objectName>
+        <size unit="bytes">11865</size>
+        <authentication method="MD5">202396fb2c01fb16dca5a65db8dbc514</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:d28b907d-d16f-4cc9-8cfd-fe90305fe1b3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-9a02f0cc-296f-4e0e-99a8-5a1f47ac0b7c">
+          <attributeName>GridID</attributeName>
+          <attributeDefinition>Grid point ID.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-b3c19394-e23a-4d6c-9e0a-36b0668e1db8">
+          <attributeName>Lat_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point latitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-80bb1968-fbba-4c3c-a3c0-fb1c23f47733">
+          <attributeName>Long_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point longitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-d717dee7-764f-4296-998b-acebcd309655">
+          <attributeName>Northing_m</attributeName>
+          <attributeDefinition>Grid point northing coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM northing coordinate">http://purl.dataone.org/odo/ECSO_00002625</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-64e62f5e-930b-4413-a1e7-c96d28d9f838">
+          <attributeName>Easting_m</attributeName>
+          <attributeDefinition>Grid point easting coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM easting coordinate">http://purl.dataone.org/odo/ECSO_00002626</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-46454387-f820-44d3-ae32-8b2616158896">
+          <attributeName>ThawDepth1_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 1 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-9254b461-0323-4947-afb6-3700390cc951">
+          <attributeName>ThawDepth2_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 2 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-3b10ff3c-57a4-4890-bea5-bbe35d1e8785">
+          <attributeName>ThawDepth3_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 3 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-8d44d306-14c7-4099-bfc5-6f6260e97453">
+          <attributeName>Mean_ThawDepth_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Mean thaw depth calculation of the 3 measurements.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-ca034c42-0a97-4dc3-a5c9-01bc9b55f143">
+          <attributeName>Soil_Temperature_degCelsius_12cm</attributeName>
+          <attributeDefinition>Soil point measurement at 12 cm depth using an Omega HH370 RTD Thermometer with a 12 cm sensor rod.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Soil Temperature">http://purl.dataone.org/odo/ECSO_00001230</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-fe4c6928-a2d3-48f5-9610-36f6472bea7f">
+          <attributeName>Volumetric_Water_Content_Upper12cm_Percent</attributeName>
+          <attributeDefinition>Percent volumetric water content for the upper 12 cm of soil. Measurement was done using a Campbell Scientific Hydrosense II probe with 12 cm sensor rods.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-bae85d24-93d0-466b-a6d3-79fa78478011">
+          <attributeName>WaterLevel_cm</attributeName>
+          <attributeDefinition>Water depth in areas with standing water. Measurement was taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-40ab0ae1-215a-4175-8593-b614298a13df">
+          <attributeName>Maximum_Vegetation_ Height_cm</attributeName>
+          <attributeDefinition>Maximum vegetation height of vegetation with ~10 cm of grid point location. Measurement taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Plant Material Height">http://purl.dataone.org/odo/ECSO_00001222</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-84485a74-8df4-40d6-810a-5e7dea78faca">
+          <attributeName>Snow_Depth_May_2024_cm</attributeName>
+          <attributeDefinition>Snow depth measured in May 2024 using an avalanche probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Snow Depth">http://purl.dataone.org/odo/ECSO_00001205</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-f2dfa358-eddd-4c2d-bf9d-e19e033eddfa">
+          <attributeName>NDVI_July2024</attributeName>
+          <attributeDefinition>NDVI values extracted at each grid point from geospatial tiff files (also included in database).</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Normalized Difference Vegetation Index">http://www.purl.dataone.org/odo/ECSO_00010076</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="1b8d6ec9-816e-47a6-8a31-47cd33bce682">
+          <attributeName>MTI_2024</attributeName>
+          <attributeDefinition>Micro-topography Index (MTI) values extracted at each grid point from geospatial tiff files (also included in database). MTI was determined by finding the difference between max elevation of the surrounding area (with focal statistics using 20 m circular window) and the original ground elevation. Units of the two elevation datasets was in meters.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-8be7df5b-d471-4c5b-8296-298ef933697a" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>LCP_Grid_Point_Measurements_13July2023.csv</entityName>
+      <entityDescription>CSV files containing all point location measurements collected within the Low-centered polygon (LCP) monitoring grid. Data includes geographic location information for each collection point (latitude and longitude coordinates in decimal degrees as well as easting and northing coordinates in meters), three thaw depths measurements with the calculated average, point soil temperature at 12 cm depth, percent volumetric water content for the upper 12 cm of soil, water level in cm in areas with standing water and maximum vegetation height with ~10 cm of grid point.  All measurements were collected on 13 July 2023.</entityDescription>
+      <physical>
+        <objectName>LCP_Grid_Point_Measurements_13July2023.csv</objectName>
+        <size unit="bytes">9913</size>
+        <authentication method="MD5">1e2a85912236b44f13e96ff8d608cb42</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:8be7df5b-d471-4c5b-8296-298ef933697a</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-212cb0f0-5a1e-4006-9a24-cf08e484d771">
+          <attributeName>GridID</attributeName>
+          <attributeDefinition>Grid point ID.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-1c13f423-b8bf-41e6-ae91-a1fe86d4ef9e">
+          <attributeName>Lat_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point latitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-28734d12-bed9-48bc-b9a3-0182c3c54c13">
+          <attributeName>Long_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point longitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-ac5263e8-656b-40bc-95da-94f5b94b5c46">
+          <attributeName>Northing_m</attributeName>
+          <attributeDefinition>Grid point northing coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM northing coordinate">http://purl.dataone.org/odo/ECSO_00002625</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-64818bf8-567b-414e-8395-4a2e6ba75c85">
+          <attributeName>Easting_m</attributeName>
+          <attributeDefinition>Grid point easting coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM easting coordinate">http://purl.dataone.org/odo/ECSO_00002626</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-85f3c436-eb71-496e-97ac-bc0ab493f83e">
+          <attributeName>ThawDepth1_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 1 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-31c3d41d-30ce-40a4-b9a6-e3f3544a6de3">
+          <attributeName>ThawDepth2_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 2 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-52c075b0-7102-46c4-9c26-2ffe14b01b61">
+          <attributeName>ThawDepth3_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 3 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-f0396b0f-213b-40d3-a153-4125442497e2">
+          <attributeName>Mean_ThawDepth_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Mean thaw depth calculation of the 3 measurements.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-65be353b-62f4-45da-9bdf-a4984476b321">
+          <attributeName>Soil_Temperature_degCelsius_12cm</attributeName>
+          <attributeDefinition>Soil point measurement at 12 cm depth using an Omega HH370 RTD Thermometer with a 12 cm sensor rod.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-6035bbd4-753c-441a-8264-df5704c0261f">
+          <attributeName>Volumetric_Water_Content_Upper12cm_Percent</attributeName>
+          <attributeDefinition>Percent volumetric water content for the upper 12 cm of soil. Measurement was done using a Campbell Scientific Hydrosense II probe with 12 cm sensor rods.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-eb6c9a74-1db1-43ce-b991-eb4533f8cddb">
+          <attributeName>WaterLevel_cm</attributeName>
+          <attributeDefinition>Water depth in areas with standing water. Measurement was taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-23fd5e29-29c1-41dc-b5a1-625238b1d370">
+          <attributeName>Maximum_Vegetation_ Height_cm</attributeName>
+          <attributeDefinition>Maximum vegetation height of vegetation with ~10 cm of grid point location. Measurement taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Plant Material Height">http://purl.dataone.org/odo/ECSO_00001222</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-eb58c742-2f0c-45df-b208-ef93db003919" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>LCP_Grid_Point_Measurements_21July2024.csv</entityName>
+      <entityDescription>CSV files containing all point location measurements collected within the low-centered polygon (LCP) monitoring grid. Data includes geographic location information for each collection point (latitude and longitude coordinates in decimal degrees as well as easting and northing coordinates in meters), three thaw depths measurements with the calculated average, point soil temperature at 12 cm depth, percent volumetric water content for the upper 12 cm of soil, water level in cm in areas with standing water and maximum vegetation height with ~10 cm of grid point.  All measurements were collected on 21 July 2024.</entityDescription>
+      <physical>
+        <objectName>LCP_Grid_Point_Measurements_21July2024.csv</objectName>
+        <size unit="bytes">11655</size>
+        <authentication method="MD5">db07d6e7a26672ef47ac083a61770041</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:eb58c742-2f0c-45df-b208-ef93db003919</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-bbdef90d-eed0-49ee-a8e7-796cc2b82d4c">
+          <attributeName>GridID</attributeName>
+          <attributeDefinition>Grid point ID.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-5c6a43ec-3b45-43b2-8266-6bce6f6cb147">
+          <attributeName>Lat_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point latitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-47666890-d885-4da4-a19e-288140c722ff">
+          <attributeName>Long_Decimal_Degrees</attributeName>
+          <attributeDefinition>Grid point longitude coordinate in decimal degrees.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-ff42de8e-5f7a-4159-8cde-6e0cfc341931">
+          <attributeName>Northing_m</attributeName>
+          <attributeDefinition>Grid point northing coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM northing coordinate">http://purl.dataone.org/odo/ECSO_00002625</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-342b6107-06e9-4259-97d1-6870cade2cf8">
+          <attributeName>Easting_m</attributeName>
+          <attributeDefinition>Grid point easting coordinate for UTM system in meters. Site is located in WGS 1984 UTM Zone 5N.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="UTM easting coordinate">http://purl.dataone.org/odo/ECSO_00002626</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-e9eb2528-65b5-4ec6-8c9f-aa204fea1476">
+          <attributeName>ThawDepth1_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 1 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-03e43f7d-3b45-4ad9-a2c2-7f43476c901a">
+          <attributeName>ThawDepth2_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 2 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-6778bcf0-1bf2-49c8-a40f-c9df7a299864">
+          <attributeName>ThawDepth3_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Measurement 3 of 3 to calculate mean thaw depth.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-bfec2f66-6b17-4b8e-8a4b-58a152c14cc2">
+          <attributeName>Mean_ThawDepth_cm</attributeName>
+          <attributeDefinition>Midseason thaw depth of upper seasonal thawed layer of soil overlying permafrost. Measurement was taken with a 1 m thaw probe. Mean thaw depth calculation of the 3 measurements.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-3bd45374-acdc-47b3-9bb9-498a6079c60f">
+          <attributeName>Soil_Temperature_degCelsius_12cm</attributeName>
+          <attributeDefinition>Soil point measurement at 12 cm depth using an Omega HH370 RTD Thermometer with a 12 cm sensor rod.</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Soil Temperature">http://purl.dataone.org/odo/ECSO_00001230</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-9763e56a-e0d7-4d9c-ba21-7fd0c084c04e">
+          <attributeName>Volumetric_Water_Content_Upper12cm_Percent</attributeName>
+          <attributeDefinition>Percent volumetric water content for the upper 12 cm of soil. Measurement was done using a Campbell Scientific Hydrosense II probe with 12 cm sensor rods.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-b189b84a-c7e3-457c-9bd3-9b9175e86790">
+          <attributeName>WaterLevel_cm</attributeName>
+          <attributeDefinition>Water depth in areas with standing water. Measurement was taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-9999</code>
+            <codeExplanation>Missing value code explanation</codeExplanation>
+          </missingValueCode>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-7ac8ba3a-a608-49d5-8975-18d8841fa1cd">
+          <attributeName>Maximum_Vegetation_ Height_cm</attributeName>
+          <attributeDefinition>Maximum vegetation height of vegetation with ~10 cm of grid point location. Measurement taken using a 1 m thaw probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Plant Material Height">http://purl.dataone.org/odo/ECSO_00001222</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-0131d667-87f7-4ea9-92af-3137e9281b16">
+          <attributeName>Snow_Depth_May_2024_cm</attributeName>
+          <attributeDefinition>Snow depth measured in May 2024 using an avalanche probe.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Snow Depth">http://purl.dataone.org/odo/ECSO_00001205</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-8802d8b1-ef86-4a5a-9414-e3ebd1821eb3">
+          <attributeName>NDVI_July2024</attributeName>
+          <attributeDefinition>NDVI values extracted at each grid point from geospatial tiff files (also included in database).</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Normalized Difference Vegetation Index">http://www.purl.dataone.org/odo/ECSO_00010076</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urn-uuid-e2f0d486-2fa5-4b69-a621-ee06898e6498">
+          <attributeName>MTI_2024</attributeName>
+          <attributeDefinition>Micro-topography Index (MTI) values extracted at each grid point from geospatial tiff files (also included in database). MTI was determined by finding the difference between max elevation of the surrounding area (with focal statistics using 20 m circular window) and the original ground elevation. Units of the two elevation datasets was in meters.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <spatialRaster id="urn-uuid-58bdbe53-6c28-4847-ae29-1c548d6b1363">
+      <entityName>MTI_NDVI_Tiff_files/LCP_NDVI_Grid_July2024.tif</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for LCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>LCP_NDVI_Grid_July2024.tif</objectName>
+        <size unit="bytes">97019258</size>
+        <authentication method="SHA-256">28d9bcf1ae88d56bcc7c4cabd4021af981a161ce3af59c9fd51a6f13aa0d6697</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:58bdbe53-6c28-4847-ae29-1c548d6b1363</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="2FwfAg4pGZoRZoHuUbTDVb3KIqDMbI">
+          <attributeName>NDVI</attributeName>
+          <attributeDefinition>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for both monitoring grid sites.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Normalized Difference Vegetation Index">http://www.purl.dataone.org/odo/ECSO_00010076</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>0.05</cellSizeXDirection>
+      <cellSizeYDirection>0.05</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>4622</rows>
+      <columns>4997</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster>
+    <spatialRaster id="urn-uuid-e0405a69-0589-4bf1-af51-7d1582a68a52">
+      <entityName>MTI_NDVI_Tiff_files/LCP_MTI_map_July2024.tif</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of LCP sites.</entityDescription>
+      <physical>
+        <objectName>LCP_MTI_map_July2024.tif</objectName>
+        <size unit="bytes">27538842</size>
+        <authentication method="SHA-256">a6c0d1c45e600dda6886d050c1d2550764ea31a3df000b5d261267c34050ef7a</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e0405a69-0589-4bf1-af51-7d1582a68a52</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-fe9d75d4-0a9b-46db-ba03-8c160e3f7886">
+          <attributeName>MTI</attributeName>
+          <attributeDefinition>MTI maps estimates local relative micro-topography and topographic positioning. These files were created by differencing the maximum elevation of the surrounding area (with focal statistics using a 20 m circular window) from the original ground elevation. Units of inputted topographic datasets were in meters</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>0.1</cellSizeXDirection>
+      <cellSizeYDirection>0.1</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>2475</rows>
+      <columns>2657</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster>
+    <spatialRaster id="urn-uuid-cb7dde8e-84f5-43e8-ba46-73a2c1dd1c64">
+      <entityName>MTI_NDVI_Tiff_files/HCP_NDVI_Grid_July2024.tif</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for HCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>HCP_NDVI_Grid_July2024.tif</objectName>
+        <size unit="bytes">115373818</size>
+        <authentication method="SHA-256">ac2567789041703cc9a26a66386c74f40e1e40160ac555b4165bf91a064cc1fb</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:cb7dde8e-84f5-43e8-ba46-73a2c1dd1c64</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="urn-uuid-3fe6d471-6c79-4fbf-b6b8-7bc8d3264f8b">
+          <attributeName>NDVI</attributeName>
+          <attributeDefinition>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for both monitoring grid sites.</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Normalized Difference Vegetation Index">http://www.purl.dataone.org/odo/ECSO_00010076</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>0.05</cellSizeXDirection>
+      <cellSizeYDirection>0.05</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>6947</rows>
+      <columns>4059</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster>
+    <spatialRaster id="urn-uuid-a239338f-c0e0-42a9-abad-b3ec11bbb6e6">
+      <entityName>MTI_NDVI_Tiff_files/HCP_MTI_map_July2024.tif</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of HCP sites.</entityDescription>
+      <physical>
+        <objectName>HCP_MTI_map_July2024.tif</objectName>
+        <size unit="bytes">34225962</size>
+        <authentication method="SHA-256">f0b3df6325895bbde335162bc3d7f693067702eb7e49ea3d16d40538ce888143</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:a239338f-c0e0-42a9-abad-b3ec11bbb6e6</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="EA1XExwHD2knGPSvf3H3fGSEVhdW5J">
+          <attributeName>MTI</attributeName>
+          <attributeDefinition>MTI maps estimates local relative micro-topography and topographic positioning. These files were created by differencing the maximum elevation of the surrounding area (with focal statistics using a 20 m circular window) from the original ground elevation. Units of inputted topographic datasets were in meters</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_WGS_1984</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>0.1</cellSizeXDirection>
+      <cellSizeYDirection>0.1</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>3640</rows>
+      <columns>2220</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster>
+    <otherEntity id="urn-uuid-4859a858-a28f-41d1-a8fd-c86e47164ff1" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/HCP_MTI_map_July2024.tfw</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of HCP sites.</entityDescription>
+      <physical>
+        <objectName>HCP_MTI_map_July2024.tfw</objectName>
+        <size unit="bytes">90</size>
+        <authentication method="SHA-256">be09464f62eb2eb54f2e929330ed1f0a0413dc58cb406dfcddfd5072291f2cdd</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:4859a858-a28f-41d1-a8fd-c86e47164ff1</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-43f3f287-3aed-4e4d-a66c-80d3657cde18" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/HCP_MTI_map_July2024.tif.ovr</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of HCP sites.</entityDescription>
+      <physical>
+        <objectName>HCP_MTI_map_July2024.tif.ovr</objectName>
+        <size unit="bytes">1109073</size>
+        <authentication method="SHA-256">a8927be7722b1081e05b48b12a18ed53430b930d3f513c4ea20f527fed3a45b7</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:43f3f287-3aed-4e4d-a66c-80d3657cde18</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-9e8eb60e-6769-4ecd-bcad-4169b7f31246" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/HCP_NDVI_Grid_July2024.tfw</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for HCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>HCP_NDVI_Grid_July2024.tfw</objectName>
+        <size unit="bytes">90</size>
+        <authentication method="SHA-256">28f4774ece81f26ed1b4338dff2b940163bfbc0e95ae597fd54640c24216ef58</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:9e8eb60e-6769-4ecd-bcad-4169b7f31246</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-6cb90117-3fd7-4b94-8136-8925f5c1eed4" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/HCP_NDVI_Grid_July2024.tif.ovr</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for HCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>HCP_NDVI_Grid_July2024.tif.ovr</objectName>
+        <size unit="bytes">4517434</size>
+        <authentication method="SHA-256">cb24af25799d5ac697ba63fe35471a72a806427c716813a7fc39c70d73ebb9e3</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6cb90117-3fd7-4b94-8136-8925f5c1eed4</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-4217798d-e3ca-4b82-a7ed-5f1794bd38db" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/LCP_MTI_map_July2024.tfw</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of LCP sites.</entityDescription>
+      <physical>
+        <objectName>LCP_MTI_map_July2024.tfw</objectName>
+        <size unit="bytes">90</size>
+        <authentication method="SHA-256">f4f0f9f024d76e1629080cf1eaa99f83c28bc864945c8bafb90945e3686cd3af</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:4217798d-e3ca-4b82-a7ed-5f1794bd38db</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-ed6cd20c-4a29-4418-916f-ff7539d5be87" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/LCP_MTI_map_July2024.tif.ovr</entityName>
+      <entityDescription>MTI maps estimates local relative micro-topography and topographic positioning of LCP sites.</entityDescription>
+      <physical>
+        <objectName>LCP_MTI_map_July2024.tif.ovr</objectName>
+        <size unit="bytes">1090978</size>
+        <authentication method="SHA-256">0ccee9386428a5dbd1033f46ee47ea5561e6fabf3067c592a3176593829bef11</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ed6cd20c-4a29-4418-916f-ff7539d5be87</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-2ba5512c-3a59-4a51-a16c-903d84b300a7" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/LCP_NDVI_Grid_July2024.tfw</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for LCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>LCP_NDVI_Grid_July2024.tfw</objectName>
+        <size unit="bytes">90</size>
+        <authentication method="SHA-256">4dd07dd296d79e3478646ce905016df5391979a5755cbb32e3d267b5914b481a</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/octet-stream</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2ba5512c-3a59-4a51-a16c-903d84b300a7</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-aefa5bad-f611-4206-9ec5-cb0188135a14" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>MTI_NDVI_Tiff_files/LCP_NDVI_Grid_July2024.tif.ovr</entityName>
+      <entityDescription>Normalized Difference Vegetation Index collected at near the timing of peak tundra greeness for LCP monitoring grid sites.</entityDescription>
+      <physical>
+        <objectName>LCP_NDVI_Grid_July2024.tif.ovr</objectName>
+        <size unit="bytes">4474769</size>
+        <authentication method="SHA-256">e683e577161b3820b8cee03bba03f6ff6597da791e4b8362a5b0e757fefe9399</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:aefa5bad-f611-4206-9ec5-cb0188135a14</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/octet-stream</entityType>
+    </otherEntity>
+  </dataset>
+</eml:eml>

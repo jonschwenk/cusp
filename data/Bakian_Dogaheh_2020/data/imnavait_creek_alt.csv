@@ -1,0 +1,77 @@
+site,sample_date,latitude,longitude,transect,measurement_traverse,measurement_order,measurement_purpose,alt,alt_fl
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,1,plot characterization,41,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,2,plot characterization,43,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,3,plot characterization,47,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,4,plot characterization,36,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,5,plot characterization,32,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,6,plot characterization,37,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,7,soil pit focus,30,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,8,soil pit focus,36,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,9,soil pit focus,39,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,10,soil pit focus,43,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,11,soil pit focus,60,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,12,soil pit focus,53,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,13,soil pit focus,36,Soil pit IMN-1
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,14,soil pit focus,75,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,15,soil pit focus,63,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,16,soil pit focus,47,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,17,soil pit focus,42,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,18,soil pit focus,35,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,19,soil pit focus,45,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,20,plot characterization,53,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,21,plot characterization,25,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,22,plot characterization,41,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,23,plot characterization,29,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,24,plot characterization,43,NA
+IMN,2018-08-24,68.604972,-149.30635,N-S,N to S,25,plot characterization,31,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,1,plot characterization,52,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,2,plot characterization,43,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,3,plot characterization,49,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,4,plot characterization,53,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,5,plot characterization,44,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,6,plot characterization,55,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,7,soil pit focus,44,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,8,soil pit focus,34,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,9,soil pit focus,54,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,10,soil pit focus,52,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,11,soil pit focus,51,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,12,soil pit focus,46,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,13,soil pit focus,36,Soil pit IMN-1
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,14,soil pit focus,47,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,15,soil pit focus,67,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,16,soil pit focus,58,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,17,soil pit focus,48,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,18,soil pit focus,37,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,19,soil pit focus,45,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,20,plot characterization,39,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,21,plot characterization,37,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,22,plot characterization,36,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,23,plot characterization,34,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,24,plot characterization,43,NA
+IMN,2018-08-24,68.604972,-149.30635,E-W,E to W,25,plot characterization,50,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,1,soil pit focus,50,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,2,soil pit focus,33,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,3,soil pit focus,53,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,4,soil pit focus,66,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,5,soil pit focus,52,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,6,soil pit focus,71,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,7,soil pit focus,36,Soil pit IMN-1
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,8,soil pit focus,34,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,9,soil pit focus,47,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,10,soil pit focus,41,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,11,soil pit focus,47,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,12,soil pit focus,63,NA
+IMN,2018-08-24,68.604972,-149.30635,NE-SW,NE to SW,13,soil pit focus,61,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,1,soil pit focus,38,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,2,soil pit focus,45,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,3,soil pit focus,42,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,4,soil pit focus,53,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,5,soil pit focus,50,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,6,soil pit focus,48,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,7,soil pit focus,36,Soil pit IMN-1
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,8,soil pit focus,32,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,9,soil pit focus,54,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,10,soil pit focus,63,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,11,soil pit focus,45,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,12,soil pit focus,39,NA
+IMN,2018-08-24,68.604972,-149.30635,NW-SE,NW to SE,13,soil pit focus,44,NA

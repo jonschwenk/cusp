@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="august_2022_survey_locations" id="august_2022_survey_locations">
+	<SimpleField name="PfDepth" type="int"></SimpleField>
+	<SimpleField name="PfTemp" type="float"></SimpleField>
+	<SimpleField name="Northing" type="float"></SimpleField>
+	<SimpleField name="Easting" type="float"></SimpleField>
+	<SimpleField name="PF" type="int"></SimpleField>
+</Schema>
+<Folder><name>august_2022_survey_locations</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">-9999</SimpleData>
+		<SimpleData name="Northing">7206491.341</SimpleData>
+		<SimpleData name="Easting">443233.72</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.20282763043,64.9775392906486</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">61</SimpleData>
+		<SimpleData name="PfTemp">-9999</SimpleData>
+		<SimpleData name="Northing">7206610.319</SimpleData>
+		<SimpleData name="Easting">443271.836</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.202068123404,64.9786131271635</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">87</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206721.355</SimpleData>
+		<SimpleData name="Easting">443282.711</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.20188246211,64.9796110686025</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">83</SimpleData>
+		<SimpleData name="PfTemp">2.7</SimpleData>
+		<SimpleData name="Northing">7206759.033</SimpleData>
+		<SimpleData name="Easting">443131.258</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.205106221102,64.9799232075599</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">85</SimpleData>
+		<SimpleData name="PfTemp">0</SimpleData>
+		<SimpleData name="Northing">7206638.57</SimpleData>
+		<SimpleData name="Easting">443157.909</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.204492988485,64.9788471101791</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">-9999</SimpleData>
+		<SimpleData name="Northing">7206476.676</SimpleData>
+		<SimpleData name="Easting">443096.851</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.205721060993,64.9773843448817</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">2.5</SimpleData>
+		<SimpleData name="Northing">7206546.709</SimpleData>
+		<SimpleData name="Easting">443061.327</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.20650188812,64.9780065194825</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.7</SimpleData>
+		<SimpleData name="Northing">7206554.939</SimpleData>
+		<SimpleData name="Easting">443057.512</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.206586031665,64.978079696269</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.6</SimpleData>
+		<SimpleData name="Northing">7206574.698</SimpleData>
+		<SimpleData name="Easting">443057.969</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.20658433919,64.9782570291394</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.6</SimpleData>
+		<SimpleData name="Northing">7206594.125</SimpleData>
+		<SimpleData name="Easting">443052.194</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.206714531964,64.9784303166473</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">-9999</SimpleData>
+		<SimpleData name="Northing">7206635.571</SimpleData>
+		<SimpleData name="Easting">443032.96</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.207138751974,64.9787988275835</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">5.4</SimpleData>
+		<SimpleData name="Northing">7206679.395</SimpleData>
+		<SimpleData name="Easting">443003.973</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.207770560519,64.9791869985704</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">110</SimpleData>
+		<SimpleData name="PfTemp">0</SimpleData>
+		<SimpleData name="Northing">7206655.225</SimpleData>
+		<SimpleData name="Easting">443004.145</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.207757134866,64.9789702032107</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">110</SimpleData>
+		<SimpleData name="PfTemp">-0.6</SimpleData>
+		<SimpleData name="Northing">7206602.141</SimpleData>
+		<SimpleData name="Easting">442944.389</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.209001532492,64.9784837499099</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">9</SimpleData>
+		<SimpleData name="Northing">7206588.839</SimpleData>
+		<SimpleData name="Easting">442843.788</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211127279526,64.9783471464346</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">100</SimpleData>
+		<SimpleData name="PfTemp">0</SimpleData>
+		<SimpleData name="Northing">7206758.19</SimpleData>
+		<SimpleData name="Easting">442797.657</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.21217330631,64.9798584310869</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">6.4</SimpleData>
+		<SimpleData name="Northing">7206768.92</SimpleData>
+		<SimpleData name="Easting">442953.997</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.208865552811,64.9799815426411</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">5</SimpleData>
+		<SimpleData name="Northing">7206931.547</SimpleData>
+		<SimpleData name="Easting">442960.172</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.208800610084,64.9814414992965</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">3.8</SimpleData>
+		<SimpleData name="Northing">7206972.069</SimpleData>
+		<SimpleData name="Easting">442839.194</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211380158171,64.9817842411698</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">2.7</SimpleData>
+		<SimpleData name="Northing">7206979.323</SimpleData>
+		<SimpleData name="Easting">442845.311</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211253503474,64.9818503668566</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">13.4</SimpleData>
+		<SimpleData name="Northing">7206981.877</SimpleData>
+		<SimpleData name="Easting">442855.059</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211048011126,64.9818749536311</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">3.5</SimpleData>
+		<SimpleData name="Northing">7206986.317</SimpleData>
+		<SimpleData name="Easting">442837.278</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211426536515,64.9819117279041</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">4.7</SimpleData>
+		<SimpleData name="Northing">7207013.525</SimpleData>
+		<SimpleData name="Easting">442844.903</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211276031673,64.9821571163645</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">4</SimpleData>
+		<SimpleData name="Northing">7207015.401</SimpleData>
+		<SimpleData name="Easting">442844.602</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211283170532,64.9821738938666</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">4.4</SimpleData>
+		<SimpleData name="Northing">7206923.452</SimpleData>
+		<SimpleData name="Easting">442798.772</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.212216817711,64.9813411566095</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">2.8</SimpleData>
+		<SimpleData name="Northing">7206931.549</SimpleData>
+		<SimpleData name="Easting">442639.377</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.215597116705,64.981386336793</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">4.8</SimpleData>
+		<SimpleData name="Northing">7207075.06</SimpleData>
+		<SimpleData name="Easting">442632.703</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.215796988076,64.9826725932323</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7207045.543</SimpleData>
+		<SimpleData name="Easting">442510.782</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.218368123753,64.9823867459432</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">100</SimpleData>
+		<SimpleData name="PfTemp">0.4</SimpleData>
+		<SimpleData name="Northing">7206940.284</SimpleData>
+		<SimpleData name="Easting">442452.704</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.219555609774,64.9814324443054</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">1.9</SimpleData>
+		<SimpleData name="Northing">7206522.185</SimpleData>
+		<SimpleData name="Easting">442337.251</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.221830445638,64.9776617714931</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">4.4</SimpleData>
+		<SimpleData name="Northing">7206614.732</SimpleData>
+		<SimpleData name="Easting">442461.225</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.219242060881,64.9785134616464</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">120</SimpleData>
+		<SimpleData name="PfTemp">1.5</SimpleData>
+		<SimpleData name="Northing">7206455.89</SimpleData>
+		<SimpleData name="Easting">442513.363</SimpleData>
+		<SimpleData name="PF">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.218072732186,64.9770975392304</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">70</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206307.712</SimpleData>
+		<SimpleData name="Easting">442489.173</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.218524650588,64.9757640833175</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206443.041</SimpleData>
+		<SimpleData name="Easting">442624.577</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.215711652,64.9770014769356</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206678.41</SimpleData>
+		<SimpleData name="Easting">442647.162</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.215329080621,64.979116820676</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">70</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206641.72</SimpleData>
+		<SimpleData name="Easting">442681.521</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.214586265883,64.9787936054572</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">75</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206644.467</SimpleData>
+		<SimpleData name="Easting">442689.742</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.214413227153,64.9788196650138</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206670.967</SimpleData>
+		<SimpleData name="Easting">442702.894</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.214145391641,64.9790596574386</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">70</SimpleData>
+		<SimpleData name="PfTemp">-0.3</SimpleData>
+		<SimpleData name="Northing">7206660.872</SimpleData>
+		<SimpleData name="Easting">442711.998</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.213948420843,64.9789706655209</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">70</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206654.962</SimpleData>
+		<SimpleData name="Easting">442723.761</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.21369682398,64.9789196741052</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206643.542</SimpleData>
+		<SimpleData name="Easting">442742.036</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.213305034937,64.9788203743222</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">100</SimpleData>
+		<SimpleData name="PfTemp">-0.1</SimpleData>
+		<SimpleData name="Northing">7206557.215</SimpleData>
+		<SimpleData name="Easting">442741.675</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.213277585948,64.9780458892852</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">90</SimpleData>
+		<SimpleData name="PfTemp">-0.1</SimpleData>
+		<SimpleData name="Northing">7206440.274</SimpleData>
+		<SimpleData name="Easting">442794.696</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.212106905527,64.9770059573933</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">80</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206281.46</SimpleData>
+		<SimpleData name="Easting">442804.081</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.211843618833,64.9755828804542</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">40</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206290.256</SimpleData>
+		<SimpleData name="Easting">442949.523</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.208766449436,64.9756867652604</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">30</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206128.114</SimpleData>
+		<SimpleData name="Easting">443037.712</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.206832874219,64.9742473306889</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">50</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206286.603</SimpleData>
+		<SimpleData name="Easting">443121.312</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.205126145535,64.9756834151316</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">40</SimpleData>
+		<SimpleData name="PfTemp">-0.4</SimpleData>
+		<SimpleData name="Northing">7206260.498</SimpleData>
+		<SimpleData name="Easting">443204.093</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.203362155213,64.9754633765334</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">30</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206140.017</SimpleData>
+		<SimpleData name="Easting">443192.024</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.203569215802,64.9743804993236</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#august_2022_survey_locations">
+		<SimpleData name="PfDepth">60</SimpleData>
+		<SimpleData name="PfTemp">-0.5</SimpleData>
+		<SimpleData name="Northing">7206352.898</SimpleData>
+		<SimpleData name="Easting">443232.91</SimpleData>
+		<SimpleData name="PF">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-166.202788994384,64.9762972018741</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

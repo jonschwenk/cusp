@@ -1,0 +1,6 @@
+,site_id,lat,lon,date,org_thick,thaw_depth,pf_depth,pf_observed,obs_limit,method,source,ID,transect_name,ecotype,temp_C,pf_depth_std,n_measurements,timeSinceFire,burn_unburn,measured_thaw_depth,measured_date,Sample_ID,Elevation,Soil_Moisture,Veg_Height,temp,transect_point,wildfire,Wildfire date/name,rocky/silty,obs_depth,site_name,sample_location,notes ,Canopy and Surface,Burn Year,Relief,Soil Type,year,month,day,comments,temperature,rock,comment,ice_content,transect_direction
+0,01GALB,68.48,-149.47,2001-07-21,22.0,55.0,55.0,1.0,100.0,aug_pit,Jorgenson_Kanevskiy_2025,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+1,05Sagwon,69.44,-148.62,2005-07-09,21.0,62.0,62.0,1.0,100.0,aug_pit,Jorgenson_Kanevskiy_2025,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+2,10ImnCrk,68.61,-149.31,2010-07-12,140.0,40.0,,0.0,210.0,aug_pit,Jorgenson_Kanevskiy_2025,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+3,98AK185001,70.16,-148.45,1998-07-01,18.0,54.0,54.0,1.0,100.0,aug_pit,Jorgenson_Kanevskiy_2025,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+4,98AK185001A,70.16,-148.45,1998-07-01,,65.0,65.0,1.0,75.0,aug_pit,Jorgenson_Kanevskiy_2025,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

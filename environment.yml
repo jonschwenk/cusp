@@ -1,0 +1,23 @@
+name: cusp
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - geopandas
+  - pip
+  - xarray
+  - utm
+  - earthengine-api
+  - geemap
+  - scipy
+  - haversine
+  - scikit-learn
+  - netCDF4
+  - unidecode
+  - mkdocs
+  - mkdocs-material
+# Excel support:
+  - openpyxl            # read/write .xlsx
+  - xlrd=1.2.*          # only if you need to read legacy .xls
+  - xlsxwriter          # optional, faster writer for .xlsx
+  

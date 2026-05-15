@@ -1,0 +1,3544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="urn:uuid:a40ce5eb-5c3e-4c68-ac87-a4f5dfa3cccf" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="knb">
+  <dataset id="urn-uuid-a40ce5eb-5c3e-4c68-ac87-a4f5dfa3cccf">
+    <title>Jago Alaska Topography, Vegetation, Soils, and Site-Environmental Data 2009-2018</title>
+    <creator id="5046825581443290">
+      <individualName>
+        <givenName>Mark</givenName>
+        <surName>Jorgenson</surName>
+      </individualName>
+      <organizationName>Alaska Ecoscience</organizationName>
+      <positionName>Landscape Ecologist</positionName>
+      <address>
+        <deliveryPoint>2332 Cordes Way,</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <postalCode>99709</postalCode>
+        <country>US</country>
+      </address>
+      <phone phonetype="voice">9073289773</phone>
+      <electronicMailAddress>ecoscience@alaska.net</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-9834-8851</userId>
+    </creator>
+    <creator id="9165625834226396">
+      <individualName>
+        <givenName>Mikhail</givenName>
+        <surName>Kanevskiy</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <electronicMailAddress>mkanevskiy@alaska.edu</electronicMailAddress>
+    </creator>
+    <pubDate>2022</pubDate>
+    <abstract>
+      <para>This data set contains topography, permafrost soils, vegetation, soil temperatures, and site environmental data collected near the Jago River, northwest Alaska for monitoring thermokarst. For field monitoring of topography, water depths, and thaw depths over time (8/14/2009, 8/31/2011, 7/27/2016, 8/1/2018), we sampled every meter along a 250-meter (m) transect oriented to cross replicate patches with differing degradation stages (Fig. SI2). For monitoring hydrology, soil, and vegetation over time, we used stratified, targeted sampling to establish three replicate permanent plots in each degradation stage (total 18), with the replicates broadly distributed along or near the transect. Plots for the undegraded stage, however, were not established until 2018. A subset of monitoring plots had dataloggers for sampling soil temperatures. In addition, soil and/or vegetation were sampled in 57 temporary plots established within representative patches away from the transect to increase sample sizes for each stage.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>alaska</keyword>
+      <keywordThesaurus>NASA Global Change Master Directory (GCMD)</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>arctic</keyword>
+      <keyword>topography</keyword>
+      <keyword>thermokarst</keyword>
+      <keyword>vegetation</keyword>
+      <keyword>permafrost</keyword>
+      <keyword>soils</keyword>
+      <keyword>soil temperature</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication. To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Jago River, northwest Alaska</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-143.62</westBoundingCoordinate>
+          <eastBoundingCoordinate>-143.60</eastBoundingCoordinate>
+          <northBoundingCoordinate>69.76</northBoundingCoordinate>
+          <southBoundingCoordinate>69.73</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2009</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2018</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <generalTaxonomicCoverage>The vegetation data includes plant taxa to species level when possible</generalTaxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Species</taxonRankName>
+          <taxonRankValue>Eriophorum vaginatum</taxonRankValue>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <annotation>
+      <propertyURI label="Data Sensitivity Category">http://purl.dataone.org/odo/SENSO_00000005</propertyURI>
+      <valueURI label="Non-sensitive data">http://purl.dataone.org/odo/SENSO_00000002</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Plant Science">https://purl.dataone.org/odo/ADCAD_00021</valueURI>
+    </annotation>
+    <annotation>
+      <propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI>
+      <valueURI label="Soil Science">https://purl.dataone.org/odo/ADCAD_00031</valueURI>
+    </annotation>
+    <contact id="3529437751511659">
+      <individualName>
+        <givenName>Mark</givenName>
+        <surName>Jorgenson</surName>
+      </individualName>
+      <organizationName>Alaska Ecoscience</organizationName>
+      <positionName>Landscape Ecologist</positionName>
+      <address>
+        <deliveryPoint>2332 Cordes Way,</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>AK</administrativeArea>
+        <postalCode>99709</postalCode>
+        <country>US</country>
+      </address>
+      <phone phonetype="voice">9073289773</phone>
+      <electronicMailAddress>ecoscience@alaska.net</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-9834-8851</userId>
+    </contact>
+    <publisher id="6132743023610037">
+      <organizationName>NSF Arctic Data Center</organizationName>
+      <electronicMailAddress>support@arcticdata.io</electronicMailAddress>
+      <onlineUrl>http://arcticdata.io</onlineUrl>
+      <userId directory="unknown">Q77285095</userId>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Ethical Research Practices</title>
+            <para>The research followed community standards for ethic research by having a valid scientific sampling design to test hypotheses of permafrost degradation and stabilization, which was reviewed from the National Science Foundation's (NSF) peer review panel before the grant was awarded. The study plan was approved by the U.S. Fish and Wildlife under their Special Research Permit review process. No animals or people were the subject of the research. The analyses and results were reviewed by all the co-authors. A paper presenting the results has been peer-reviewed and accepted by a scientific journal. Data are available to the public. The research has societal value because it addresses the impacts of climate change on tundra ecosystems, and is of value to the U.S. Fish and Wildlife Service for land management decisions for the Arctic National Wildlife Refuge.</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <para>Microtopography and thaw depths, soil, vegetation, soil thermal regimes</para>
+        </description>
+      </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>For field monitoring of topography, water depths, and thaw depths over time (8/14/2009, 8/31/2011, 7/27/2016, 8/1/2018), we sampled every meter along a 250-m transect oriented to cross replicate patches with differing degradation stages (Fig. SI2). For monitoring hydrology, soil, and vegetation over time, we used stratified, targeted sampling to establish three replicate permanent plots in each degradation stage (total 18), with the replicates broadly distributed along or near the transect. Plots for the undegraded stage, however, were not established until 2018. A subset of monitoring plots had dataloggers for sampling soil temperatures. In addition, soil and/or vegetation were sampled in 57 temporary plots established within representative patches away from the transect to increase sample sizes for each stage.</para>
+            <para>Stratification by degradation/stabilization stages included polygon centers without ice wedges (PC), undegraded (UD), degradation-initial (DI), degradation-advanced (DA), stabilization-initial (SI), stabilization-advanced (SA) stages that were identified by previous studies (Jorgenson et al., 2015a; Kanevskiy et al., 2017);</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>Microtopography, water, and thaw depths were measured every 1 m along the permanent 250-m transect that was established in 2009. Ground- and water-surface elevations were measured with an autolevel relative to the benchmark (T1-092 BM). Thaw depths below ground surface were measured with a metal probe.</para>
+          <para>Site environmental data included information on observers, location, plot type, topography, geomorphology, soils, hydrology, and vegetation using the ecological land classification approach of Jorgenson et al. (2009). Photographs of vegetation and soil cores were taken each site. Data were reviewed after fieldwork for consistency and completeness, and data summarizing soil and vegetation characteristics were added to the site-level data.</para>
+          <para>Soil stratigraphy was described from 95 profiles (22 permafrost cores in 2009, 23 active-layer pits in 2011, 50 permafrost cores in 2018) at 58 sites (14 monitoring sites were repeated in 2018) and samples were taken from 60 cores for physical analyses. In unfrozen active-layer soils, we extracted 30-centimeter (cm) diameter soil plugs with a shovel for subsampling with knives or small corers. For frozen soils, we used a SIPRE (Snow, Ice and Permafrost Research Establishment) corer (7.5 cm diameter) and cored to 1–5.2 m depths. Soil stratigraphy was described according to Natural Resources Conservation Service field sampling methods. Coarse-fragment (greater than 2 millimeter) percentage was visually estimated. Cryostructures were described according to French and Shur (2010). Peat types were differentiated by dominant plant macrofossils identifiable in the field with a hand lens. Soil samples were obtained every ~20 cm with additional samples taken from thin, distinctive horizons. For most samples, sample dimensions were measured for volumetric analyses. In the field, determinations were made for wet weights, and soil pH and electrical conductivity were measured in thawed liquids or a saturated paste with a portable meter calibrated daily. In the lab, samples were dried at 60 °Celsius (C) for ~8 days and weighed for calculating bulk density, gravimetric and volumetric moisture contents, and excess-ice contents.</para>
+          <para>Soil temperatures were measured near the surface (-3 cm depth) at 14 plots (2 or 3 within 5 stages) and in the upper permafrost (-50 or -65 cm) at 6 sites. Ten sites had complete records for 2009-2013, 6 sites had records extending to 2018, and 4 sites had complete records for only 1-2 years. Temperatures were recorded every 2 hours using a single- (Hobo U22) or two-channel (Hobo U23) datalogger.</para>
+          <para>Vegetation cover was sampled in 18 permanent monitoring plots during three periods and at 47 inventory plots only once. For monitoring, three replicate permanent plots were sampled within six degradation stages (PC, UD, DI, DA, SA, SA) over three time periods (2009, 2011, 2016) for a total of 48 plots, although UD plots were not established until 2018. Plots were established in uniform patches, varying from 0.5 × 5 m in undegraded troughs (UD), to 4 × 10 m in polygon centers (PC); see Fig. SI3 for examples. At each monitoring plot, percent cover of each species was determined by ocular estimate in 2009 and by point sampling during 20112018. For point sampling, we used a vertically oriented laser pointer to determine species occurrence at 100 points per plot and noted “hits” for the first occurrence of a species at each point. For points with no live plant, we recorded litter (dead plant parts) if present, or bare soil if litter was absent. Surface water was recorded when present above or below live plants. After point sampling, the plots were examined for additional species and a cover of 0.1% was assigned to species that were present but not recorded by the point-sampling. The total number of hits of each species was summed to determine percent cover. Vascular taxa were identified to species level, when possible, while non-vascular plants were identified to species only for dominant taxa. Voucher specimens were collected for problematic species; vascular taxa were identified by the authors, while bryophyte and lichen specimens were identified by specialists. During data management, we tabulated the percent cover by site and year, assigned final taxonomic determinations for each species, and aggregated problematic (inconsistent identification) and trace species into higher taxonomic or growth form levels.</para>
+        </samplingDescription>
+      </sampling>
+    </methods>
+    <project>
+      <title>Dynamics and Consequences of Increasing Ice-wedge Degradation</title>
+      <title>Collaborative Research: The Transition Zone of Upper Permafrost: The Frontline for Permafrost  Changes across Climate and Landscape Gradients</title>
+      <title>COLLABORATIVE RESEARCH: Patterns, Dynamics, and Vulnerability of Arctic Polygonal Ecosystems: From Ice-Wedge Polygon to Pan-Arctic Landscapes</title>
+      <personnel>
+        <individualName>
+          <givenName>Mikhail Z</givenName>
+          <surName>Kanevskiy</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mark T</givenName>
+          <surName>Jorgenson</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Yuri L</givenName>
+          <surName>Shur</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Anna</givenName>
+          <surName>Liljedahl</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1023623</awardNumber>
+        <title>Dynamics and Consequences of Increasing Ice-wedge Degradation</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1023623</awardUrl>
+      </award>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1820883</awardNumber>
+        <title>Collaborative Research: The Transition Zone of Upper Permafrost: The Frontline for Permafrost  Changes across Climate and Landscape Gradients</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1820883</awardUrl>
+      </award>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1722572</awardNumber>
+        <title>COLLABORATIVE RESEARCH: Patterns, Dynamics, and Vulnerability of Arctic Polygonal Ecosystems: From Ice-Wedge Polygon to Pan-Arctic Landscapes</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1722572</awardUrl>
+      </award>
+    </project>
+    <dataTable id="urn-uuid-0c3fd888-2f0d-49fb-95ee-d7780a45bb69" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Elev_Thaw_Data_2009_2018.csv</entityName>
+      <entityDescription>Microtopography data including ground and water surface elevations and thaw depths. Please refer to the attached code list file for any undefined codes.</entityDescription>
+      <physical>
+        <objectName>Jago_Elev_Thaw_Data_2009_2018.csv</objectName>
+        <size unit="bytes">70418</size>
+        <authentication method="MD5">da5bbc74ac69cae8afec950e33d96fac</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:0c3fd888-2f0d-49fb-95ee-d7780a45bb69</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="Jyk6hTTVtPeUwecwXzfNPnkWOuNCVi">
+          <attributeName>TransID</attributeName>
+          <attributeDefinition>TransectID, text</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Identity">http://purl.dataone.org/odo/ECSO_00001157</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Ii87ltdwftZDTQbLiv4TObBPxUWHU2">
+          <attributeName>Date</attributeName>
+          <attributeDefinition>Date</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date">http://purl.dataone.org/odo/ECSO_00002051</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5AotelDSGSSO7y3cPyGywT65eN5XJi">
+          <attributeName>Setup</attributeName>
+          <attributeDefinition>Tripod setup</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="LXlpsPWBJWp04Pc00zf3GeEkbkxkUT">
+          <attributeName>DegrStage</attributeName>
+          <attributeDefinition>Degradation Stage, see field coding sheet</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="Xun33hHaLbOb8vK9tQ88ZVfsdBzZP4">
+          <attributeName>Dist</attributeName>
+          <attributeDefinition>Distance (m)</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="distance">http://purl.dataone.org/odo/ECSO_00001710</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VB4xDl0S3wBEoeti39xLWqkHTr8N2R">
+          <attributeName>DistADj</attributeName>
+          <attributeDefinition>Adjusted distance, used to correct tape alingment problems</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="distance">http://purl.dataone.org/odo/ECSO_00001710</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="zr1mcUxSTXpaRCQJ9HKgJxiEIsZ7Oq">
+          <attributeName>Rodht</attributeName>
+          <attributeDefinition>Rod Height as read from autolevel</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Height">http://purl.dataone.org/odo/ECSO_00001252</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="f4D9yzZTRVa78PnDEnZuiXx2diBHod">
+          <attributeName>Watht</attributeName>
+          <attributeDefinition>Water Surface Height as read from autolevel</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Height">http://purl.dataone.org/odo/ECSO_00001175</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VWVQhw2g0bxlzbasI3s5aclXpdq6az">
+          <attributeName>WatDep</attributeName>
+          <attributeDefinition>Water depth as measured at station</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="f0ZppVTcqWaEzAXl1PQFmEIoGcQKZw">
+          <attributeName>BM Ht Rod</attributeName>
+          <attributeDefinition>Benchmark Rod Height</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Height">http://purl.dataone.org/odo/ECSO_00001252</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="CBoL8Iuk864MW6CbB1BaThDQdoyykq">
+          <attributeName>Surface Elev (m)</attributeName>
+          <attributeDefinition>Surface elevation calculated from benchmark and rod height</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="CfUNNUe3sAavoHRIH2XqT247AhZRsQ">
+          <attributeName>BM_Elev_OrthHt_Adj</attributeName>
+          <attributeDefinition>Benchmark orthometric elevation (NAD83), adjusted</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="zb1eaCv1OST5CW2MQW4EPT0kRT1Ofr">
+          <attributeName>BM_Elev_OrthHt_Orig</attributeName>
+          <attributeDefinition>Benchmark orthometric elevation (NAD83), original from DGPS</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="MPmtDiKaLH35ngFtw0og9uvJbdoODe">
+          <attributeName>BM_Elev_EllipHt</attributeName>
+          <attributeDefinition>Benchmark ellipsoid elevation (WGS84), adjusted</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="l5wrhFAr7RUPvgaHxlCQwgEtLpyWM6">
+          <attributeName>BM Ht Abv gnd</attributeName>
+          <attributeDefinition>Height of benchmark above ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Height">http://purl.dataone.org/odo/ECSO_00001252</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="bwAc1360uTT9ewz623AqKQzXc4ng5I">
+          <attributeName>WatElev</attributeName>
+          <attributeDefinition>Water surface elevation calculated from benchmark and rod height</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="q0Iq0zKSNhtU2pt6auWFcUANDt39Wn">
+          <attributeName>ThawDep(130-x)</attributeName>
+          <attributeDefinition>Thaw depth (130-x), when x=length of thaw probe above ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="9R86glDc0z4yT2gTPVkvvIN5DIigDe">
+          <attributeName>ThawDep(100-x)</attributeName>
+          <attributeDefinition>Thaw depth (100-x), when x=length of thaw probe above ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="59aD15JaOAM8TKPvdCnGrd325VRxbf">
+          <attributeName>ThawDep</attributeName>
+          <attributeDefinition>Thaw depth measured by metal rod</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="FziDs9th0RQvltp7oExJZTEfdhVILZ">
+          <attributeName>ThawElev</attributeName>
+          <attributeDefinition>Elevation of frost table</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="50N27maDV7tre624dtANKB1414swJI">
+          <attributeName>Snowdep-cm 2014-5-8</attributeName>
+          <attributeDefinition>Snow depth, cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Snow Depth">http://purl.dataone.org/odo/ECSO_00001205</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="m60PrRn5lhvqHl9BiOpkk0aaefC3Sb">
+          <attributeName>Snow Elevation 2012-5-8</attributeName>
+          <attributeDefinition>Snow depth, cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Snow Depth">http://purl.dataone.org/odo/ECSO_00001205</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="gvxer7MmH0LylmzXpykPOtaJu1iDWT">
+          <attributeName>PlotLoc</attributeName>
+          <attributeDefinition>Plot Loc, assigned an elevation offset for charts</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="MNzocerBaHJzObPPmTQTHQM6X4TQq1">
+          <attributeName>DataQual</attributeName>
+          <attributeDefinition>Data quality: good, fair, poor</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>good</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>fair</code>
+                    <definition>fair</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>poor</code>
+                    <definition>poor</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="data quality assessment measurement type">http://purl.dataone.org/odo/ECSO_00001719</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TzX37SiqaF4sdfPbNPazyH2n2V60wc">
+          <attributeName>TopoDepress</attributeName>
+          <attributeDefinition>Depth of thermkarst depression</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="B5EzpTHf6gVLoZeTOJ34Sm20dMIZ6m">
+          <attributeName>Plot Name</attributeName>
+          <attributeDefinition>Site ID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="cNkAVTFwgenid0lOiGLqwlps5Qdzcy">
+          <attributeName>Notes</attributeName>
+          <attributeDefinition>Notes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="xqqBRtmV8NNabiuO6VIGTKrJBCvWW8">
+          <attributeName>Chart Labels</attributeName>
+          <attributeDefinition>Chart Label</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-9615f95b-73ff-424f-80b5-a17454fef6ab" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Site_Environmental_Data_Archive_2022.csv</entityName>
+      <entityDescription>Site descriptions included information on observers, location, plot type, topography, geomorphology, soils, hydrology, and vegetation. Please refer to the attached code list file for any undefined codes.</entityDescription>
+      <physical>
+        <objectName>Jago_Site_Environmental_Data_Archive_2022.csv</objectName>
+        <size unit="bytes">53620</size>
+        <authentication method="MD5">ab28c2cb5224c0e04fd91bd77548cb0f</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:9615f95b-73ff-424f-80b5-a17454fef6ab</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="uh4DdTWBFc6dSUGriVx9PmJM5B3gyc">
+          <attributeName>SiteIDYear</attributeName>
+          <attributeDefinition>Concatenated field using Project Code and Plot ID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Project code and plot iD</definition>
+                  <pattern>SiteID - YYYY</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="IoekQBOMDSkg74nyfZp5Khz8Kc5BfX">
+          <attributeName>SiteID</attributeName>
+          <attributeDefinition>Site ID, often concatenated field using Project Code and Plot ID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>JG-____</code>
+                    <definition>ID for site</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="EtHPz1hiIwD5sEedfvvo8PBgp6CoQm">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year of Project</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="IPIRkATeWdewZmO9om3lwWaHZCTNy7">
+          <attributeName>Date</attributeName>
+          <attributeDefinition>Date of field work</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM-DD-YYYY hh:mm</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date and time of measurement">http://purl.dataone.org/odo/ECSO_00002043</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="WMqLNpSOJGCSC6zgQmMDLE1GdsKpcS">
+          <attributeName>Project</attributeName>
+          <attributeDefinition>Project short name</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>NSF Ice-wedge Degradation</code>
+                    <definition>project code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>NSF Polygon Ecosystems</code>
+                    <definition>project code</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Name">http://purl.dataone.org/odo/ECSO_00001193</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="SCvPW7TPCe59umWNXsrolKJRibMAad">
+          <attributeName>ObservEnv</attributeName>
+          <attributeDefinition>Observer for environmental information</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="name of person">http://purl.dataone.org/odo/ECSO_00002998</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="DhVX9QCilg2suwJgeGFNKIVe6ThZbh">
+          <attributeName>ObservSoil</attributeName>
+          <attributeDefinition>Soil observer last name or initials</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="name of person">http://purl.dataone.org/odo/ECSO_00002998</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5hSEUTv5ztxuUrf8B13O06EK04LTD9">
+          <attributeName>ObservVeg</attributeName>
+          <attributeDefinition>Vegetation species and structure observer initials</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="name of person">http://purl.dataone.org/odo/ECSO_00002998</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="1ea8LMRmxcAfNGHOQUBBtgdcrbKBfD">
+          <attributeName>LocEcoregion</attributeName>
+          <attributeDefinition>Ecoregion based on Nowacki et al. 2001</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Beaufort Coastal Plain</code>
+                    <definition>ecoregion</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study location name">http://purl.dataone.org/odo/ECSO_00002768</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="urIEnzEol7zzmv9twCmTB1OsDD5cCy">
+          <attributeName>LocLandmark</attributeName>
+          <attributeDefinition>Geographic landmark description</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Jago</code>
+                    <definition>geographic landmark</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="I2aTkh7bVTaPiTbta74nqwlyElOn4H">
+          <attributeName>LatWGS84</attributeName>
+          <attributeDefinition>usually WGS84, units decimal degrees, but may be different if specified in ElevMethod</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude degree component">http://purl.dataone.org/odo/ECSO_00002247</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5rpLoizino9GVkzsI6t4ecM9ToC5Kv">
+          <attributeName>LonWGS84</attributeName>
+          <attributeDefinition>usually WGS84, units decimal degrees, but may be different if specified in ElevMethod</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude degree component">http://purl.dataone.org/odo/ECSO_00002239</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="0ODC78PUlZZopGhbJcuClR82T6oiIJ">
+          <attributeName>ElevEllip_m</attributeName>
+          <attributeDefinition>Elevation (m), Ellipsoid Ht NAD83, typical of raw gps data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="elevation">http://purl.dataone.org/odo/ECSO_00001567</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="sz02luPN51g0vffP4X4rQZmuy00F0L">
+          <attributeName>PlotType</attributeName>
+          <attributeDefinition>Plot type:</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pOWx0d82B92mxao1HMuaOqQtemmgUd">
+          <attributeName>PlotSize</attributeName>
+          <attributeDefinition>Plot size, radius or Length X Width in meters</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Area Measurement Type">http://purl.dataone.org/odo/ECSO_00001117</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="rDwnArcJ4fabNoq8O6x201CSdahxBU">
+          <attributeName>PhysiogName</attributeName>
+          <attributeDefinition>Physiography, see reference codes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Lacustrine</code>
+                    <definition>lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Upland</code>
+                    <definition>higher plains</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Lowland</code>
+                    <definition>lower plains</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="geographic position measurement type">http://purl.dataone.org/odo/ECSO_00002114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="QdkHE40Zf8Bxzp4wRza8DoerLwlRfy">
+          <attributeName>TopoMacroName</attributeName>
+          <attributeDefinition>Macrotopography, see reference codes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Plateau</code>
+                    <definition>macrotopography code for plateau</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Upper Slope</code>
+                    <definition>macrotopography code for upper slope</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="4sz0qkqFTIPLvHgxaDP5GoS5pM768t">
+          <attributeName>TopoMicroName</attributeName>
+          <attributeDefinition>Microtopography, see reference codes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Mixed pits and polygons</code>
+                    <definition>Mixed pits and polygons</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="topographic position">http://purl.dataone.org/odo/ECSO_00002745</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="cfs36Nmfmwanuz8v2RoLLRwuDvrOeV">
+          <attributeName>Terrain Title</attributeName>
+          <attributeDefinition>Surface geomorphic unit, Final Revised Codes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Sandy Older Till</code>
+                    <definition>sandy older till</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Organic Fen</code>
+                    <definition>organic fen</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="surficial geomorphology code">http://purl.dataone.org/odo/ECSO_00002647</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="KhV3KDDWeNSN7CM1qc6g0v66UTVIL6">
+          <attributeName>TkarstName</attributeName>
+          <attributeDefinition>Thermokarst type, see reference table</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of thermokarst feature">http://purl.dataone.org/odo/ECSO_00002574</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Dlem05RW8eW2Mk7Qs8BrL1NZV2EHzP">
+          <attributeName>DrainageName</attributeName>
+          <attributeDefinition>Final Revised drainage codes or names</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="gtnDWOMCqknnsMpOGS7BsARGFWwolu">
+          <attributeName>NWI_name</attributeName>
+          <attributeDefinition>codes or names for National Wetlands inventory hydrology, see REF_NWIWaterRegimeCodes</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Permanently flooded</code>
+                    <definition>Permanently flooded</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Semipermanently flooded</code>
+                    <definition>Semipermanently flooded</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Saturated</code>
+                    <definition>Saturated</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Seasonally flooded</code>
+                    <definition>Seasonally flooded</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute id="FFNqPRVHmalCcpugkNAXgdpORKdXk5">
+          <attributeName>SoilMoistureName</attributeName>
+          <attributeDefinition>Final revised Soil Moisture codes or names</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Aquatic</code>
+                    <definition>Aquatic</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Moist</code>
+                    <definition>Moist</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Wet</code>
+                    <definition>Wet</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="soil moisture - categorical">http://purl.dataone.org/odo/ECSO_00002422</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="A4bZ7EQvusbpR9SR9a38ChBaNK24xA">
+          <attributeName>WaterDep_cm</attributeName>
+          <attributeDefinition>Water depth above (+) or below (-) the soil surface, cm, 999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water Depth">http://purl.dataone.org/odo/ECSO_00001203</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="L5E7zqbuGKmqnKITC0Z7FXUyshE96M">
+          <attributeName>DomText_Name</attributeName>
+          <attributeDefinition>Dominant overall texture in top 40 cm, see Soil Text Dom codes</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Organic-rich</code>
+                    <definition>Organic-rich</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Peat</code>
+                    <definition>Peat</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Loamy</code>
+                    <definition>Loamy</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="soil texture">http://purl.dataone.org/odo/ECSO_00002703</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="HWOaruyf1K9yvNl5k3JmT9zxHQ5i9s">
+          <attributeName>SiteChem_name</attributeName>
+          <attributeDefinition>A=Alkaline; B=Basic; N=Circuneutral; S=Saline; E=brackish (see Ref_SiteChemistry for definitions)</attributeDefinition>
+          <measurementScale>
+            <ordinal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>A</code>
+                    <definition>Alkaline</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>B</code>
+                    <definition>Basic</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>N</code>
+                    <definition>Circuneutral</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>Saline</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>E</code>
+                    <definition>Brackish</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </ordinal>
+          </measurementScale>
+        </attribute>
+        <attribute id="Wcy6NDvqWDurHGrbtK3LGhXPapLctO">
+          <attributeName>SitepH</attributeName>
+          <attributeDefinition>Water pH or soil slurry pH, water used preferentially when available, 999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Water pH">http://purl.dataone.org/odo/ECSO_00001159</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="ZwbAvf3oSCXyz5Cirt50STWfWtnqlk">
+          <attributeName>SiteEC_uScm</attributeName>
+          <attributeDefinition>Water EC (uS/cm) or soil slurry EC, water used preferentially when available, uS/cm, 999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>microSiemensPerCentimeter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="conductivity">http://purl.dataone.org/odo/ECSO_00001534</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="pTXyd6UHpIPDm8We9L0pgJWzgve6t1">
+          <attributeName>SoilOrgSurfThk_cm</attributeName>
+          <attributeDefinition>Thickness (cm) of surface organic layer, use 999 when no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="thickness">http://purl.dataone.org/odo/ECSO_00002227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="4iOHexEIUhGQWJbam3vVOZ2pezVuC9">
+          <attributeName>SoilOrgCum40_cm</attributeName>
+          <attributeDefinition>Cumulative thickness (cm) of surface and buried organic layer, use 999 when no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="thickness">http://purl.dataone.org/odo/ECSO_00002227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="h2mf7KX2tVgy8I7duEHhGABk47rn6o">
+          <attributeName>SoilOrgPostTK_cm</attributeName>
+          <attributeDefinition>Thickness (cm) of new peat formed after thermokarst, 999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="thickness">http://purl.dataone.org/odo/ECSO_00002227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="iWnEsrVPHwrxBh43EcBcGzBOEcDQJk">
+          <attributeName>SoilThawDep_cm</attributeName>
+          <attributeDefinition>Thaw depth (cm), use 999 for no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth of Thaw">http://www.purl.dataone.org/odo/ECSO_00010114</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="DlgouQSTfJMJgxfMBQur4iHviTPhIE">
+          <attributeName>SoilCryoturb</attributeName>
+          <attributeDefinition>Cryoturbation observed in soil profile: P-present or A-absent, U=Unknown</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>P</code>
+                    <definition>Present</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>A</code>
+                    <definition>Absent</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>Unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="fkfoC4pQrwPWEwtB9z5GvnqJ2xEX8y">
+          <attributeName>SoilPFrost</attributeName>
+          <attributeDefinition>Permafrost present (either proven or highly likely): P-present or A-absent, U=Unknown</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>P</code>
+                    <definition>present</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>A</code>
+                    <definition>absent</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of permafrost">http://purl.dataone.org/odo/ECSO_00003020</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="hu21TRzCWcgWroalINnes4M2EtkBTe">
+          <attributeName>SoilRockDep_cm</attributeName>
+          <attributeDefinition>Depth (cm) to rocks, when rocks are &gt;15% volume, use 999 for no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="4AUqq0c147MSllADvsGhqnJkmHAe32">
+          <attributeName>SoilIceWdgDep_cm</attributeName>
+          <attributeDefinition>Depth (cm) to top of wedge ice, 999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Q4W5LoKl7mqGGzd3cVFeT5SlRNKrBn">
+          <attributeName>SoilObsDep_cm</attributeName>
+          <attributeDefinition>Depth (cm) to maximum soil observation (cm), includes frost probe depth, 9999 if no data</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="hkPUZxz9FahK4psvTRD0fZw7nbksx4">
+          <attributeName>SoilStrat</attributeName>
+          <attributeDefinition>whether the soils were described: y/n</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>y</code>
+                    <definition>yes</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>n</code>
+                    <definition>no</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="OtVFBXI4ZmZvipVViJwhxQQzhLFFrf">
+          <attributeName>SoilSamples</attributeName>
+          <attributeDefinition>whether soil samples were collected: y/n</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>y</code>
+                    <definition>yes</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>n</code>
+                    <definition>no</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="fOgfbstxpQf4pRmkq2unzDn06QcBu5">
+          <attributeName>VegetationTitle</attributeName>
+          <attributeDefinition>Viereck Veg class 4 Final call, see reference table REF_Site_VegCode4, ND=not determined</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Aquatic Bryophyte</code>
+                    <definition>Aquatic Bryophyte</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Wet Sedge Meadow Tundra</code>
+                    <definition>Wet Sedge Meadow Tundra</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Fresh Water</code>
+                    <definition>Fresh Water</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Fresh Sedge Marsh</code>
+                    <definition>Fresh Sedge Marsh</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Tussock Tundra</code>
+                    <definition>Tussock Tundra</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Open Low Willow</code>
+                    <definition>Open Low Willow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Moist Sedge–Willow Tundra</code>
+                    <definition>Moist Sedge–Willow Tundra</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Open Low Shrub Birch-Willow</code>
+                    <definition>Open Low Shrub Birch-Willow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Open Low Mesic Shrub Birch-Ericaceous Shrub</code>
+                    <definition>Open Low Mesic Shrub Birch-Ericaceous Shrub</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Moist Sedge–Dryas Tundra</code>
+                    <definition>Moist Sedge–Dryas Tundra</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of vegetation">http://purl.dataone.org/odo/ECSO_00002207</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="qnivwumzbOSEOALwlGeOGcCpN3W7oS">
+          <attributeName>EcoStructName</attributeName>
+          <attributeDefinition>Code for Ecotype Vegetation Structure, see Site_EcoStructure reference table</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Aquatic Moss</code>
+                    <definition>Aquatic Moss</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sedge Marsh</code>
+                    <definition>Sedge Marsh</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Shallow Lake</code>
+                    <definition>Shallow Lake</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Tussock Meadow</code>
+                    <definition>Tussock Meadow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Low Scrub</code>
+                    <definition>Low Scrub</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sedge-Dwarf Shrub Meadow</code>
+                    <definition>Sedge-Dwarf Shrub Meadow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sedge Meadow</code>
+                    <definition>Sedge Meadow</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of vegetation zone">http://purl.dataone.org/odo/ECSO_00002731</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="D74mbuLFA7CM23msvoh4I1eeHpLpUX">
+          <attributeName>VegMethod</attributeName>
+          <attributeDefinition>Method used to estimate plant cover: O=occular estimate, OP=occular estimate photo, PS=point sampling on grid or line-single hit, PM=point sampling, multihit L-line intercept, I-incidental (for area list)</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="seqcDG1Nm2m3wbqpRwZRzIQ8urLUL2">
+          <attributeName>Disturbance_Name</attributeName>
+          <attributeDefinition>Disturbance class, natural or human induced, code or names, see REF_Site_DisturbClass</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Thermokarst</code>
+                    <definition>Thermokarst</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Absent/none (mature vegetation)</code>
+                    <definition>Absent/none (mature vegetation)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Fluvial Erosion/channel migration</code>
+                    <definition>Fluvial Erosion/channel migration</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of ecological disturbance">http://purl.dataone.org/odo/ECSO_00002589</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-3dd68c32-5b38-4b12-bb92-158c09ac2435" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Soils_data_archive_2022.csv</entityName>
+      <entityDescription>Soil stratigraphy and soil properties (moisture, density, organic carbon) for 57 sites at the Jago thermokarst monitoring site. Please refer to the attached code list file for any undefined codes.</entityDescription>
+      <physical>
+        <objectName>Jago_Soils_data_archive_2022.csv</objectName>
+        <size unit="bytes">95700</size>
+        <authentication method="MD5">41ea399a40ac0963979ce8e422a2cee3</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3dd68c32-5b38-4b12-bb92-158c09ac2435</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="4TWTfTm7lwS7Bzn885WuyQP3CBb8xq">
+          <attributeName>SiteLayerID</attributeName>
+          <attributeDefinition>Unique ID for site/plot and soil horizon using topdepth of layer, some Horizons may need to be split for sampleID linkage</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>SiteID - Year - LayerID</definition>
+                  <pattern>SiteID - YYYY - LayerID</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="nmdTFStlSG3kMkV6ia9l4Xbr18HPkQ">
+          <attributeName>SiteID</attributeName>
+          <attributeDefinition>Unique ID for site/plot and pedon</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site code</definition>
+                  <pattern>JG-____</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="IJy5CeQ8GHcxiXiUNAsaTq0MeFdLaQ">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year of Sampling</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="g6vcu5mo906DwQkRxBieqbhOky2zUR">
+          <attributeName>LocCode</attributeName>
+          <attributeDefinition>study area code or name</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>JG</code>
+                    <definition>Jago</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study location identifier">http://purl.dataone.org/odo/ECSO_00002767</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TkDvX4hfZD4XXPWgKED1wewG96AD0J">
+          <attributeName>GeomSurfFnl</attributeName>
+          <attributeDefinition>Geomorphic stratigraphic unit, see reference table, nd=not determined</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Gtos</code>
+                    <definition>Old Sandy Till Sheet</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Of</code>
+                    <definition>Fens</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="oFkLOA0MOJ7iow4zhPOnhPwlQ0PLLx">
+          <attributeName>TKarstStage</attributeName>
+          <attributeDefinition>Thermokarst or degradation stage, see reference table</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of thermokarst feature">http://purl.dataone.org/odo/ECSO_00002574</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="EJpwhu2wdn7IAQM4GpuRS9qwRLZEEZ">
+          <attributeName>DepthTop_cm</attributeName>
+          <attributeDefinition>Depth (cm) to top of horizon</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="MgnKdpGmBp0MxTIZ7qMoL0s0Hv7pLV">
+          <attributeName>DepthBot_cm</attributeName>
+          <attributeDefinition>Depth (cm) to bottom of horizon</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="EAJ39p8dTONWHwb1ApIJ3rVLB9qeZE">
+          <attributeName>DepthThick</attributeName>
+          <attributeDefinition>Thickness of layer (cm), Calculated field: Bottom Depth minus Top Depth</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="thickness">http://purl.dataone.org/odo/ECSO_00002227</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="8g92tdVRZio9DZEm4rE8spoi7d1oLS">
+          <attributeName>TreatAggr</attributeName>
+          <attributeDefinition>Aggregated treatment code for analysis</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="treatment measurement type">http://purl.dataone.org/odo/ECSO_00002426</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="yTJ4PCeRrgGTV4WXXy1GTlb7uH4n3d">
+          <attributeName>SoilDrainage</attributeName>
+          <attributeDefinition>Final Revised drainage codes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="20mOhw1QtCEU2vt3pPDDJa81EdL4W9">
+          <attributeName>TextNRCS</attributeName>
+          <attributeDefinition>Texture standardized to NRCS system, combined coarse and prim and secondary fine textures, see REF_Soil_Texture or NRCS field manual</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>pt</code>
+                    <definition>Oi, slightly decomposed</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>mp</code>
+                    <definition>Oe, mod. decomp </definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>sgrfsl</code>
+                    <definition>NRCS code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Wf</code>
+                    <definition>ice</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PM</code>
+                    <definition>plant, mosses live</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>sil</code>
+                    <definition>silt loam</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>sgrmkfsl</code>
+                    <definition>NRCS code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>diamk</code>
+                    <definition>NRCS code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>grls</code>
+                    <definition>gravel loamy sand</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>mksil</code>
+                    <definition>mucky silt</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="soil texture">http://purl.dataone.org/odo/ECSO_00002703</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="qgo14dbwCBeae5egId3OPDGoTT4oDW">
+          <attributeName>TextAgg1</attributeName>
+          <attributeDefinition>Texture, Aggregated for analysis</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>PT</code>
+                    <definition>slightly decomposed</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MP</code>
+                    <definition>moderately decomposed</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>L</code>
+                    <definition>Lichen</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>LO</code>
+                    <definition>texture code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>OL</code>
+                    <definition>Organ, Layered</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>I</code>
+                    <definition>slightly decomposed org.</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PM</code>
+                    <definition>plant, mosses live</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="soil texture">http://purl.dataone.org/odo/ECSO_00002703</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="AtJhEr33x4HZxrTORcUVcZTSytVf6a">
+          <attributeName>PeatAgg1</attributeName>
+          <attributeDefinition>Peat type aggregated 1-broadly for analysis</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>GW</code>
+                    <definition>Mixed G&amp;W</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Mf</code>
+                    <definition>feathermoss</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>Unknown</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>WM</code>
+                    <definition>Mixed W&amp;M</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>G</code>
+                    <definition>Gramin./Sedge</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Md</code>
+                    <definition>dicra/polytrichum</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>GMB</code>
+                    <definition>peat type code</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Mb</code>
+                    <definition>brown fen moss</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Gt</code>
+                    <definition>Tussocks</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>sedimentary</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of peat core microtopography">http://purl.dataone.org/odo/ECSO_00002622</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="gd8zfhRtcuR6fenQGsh55ZPbdlKkus">
+          <attributeName>TextIceAgg1</attributeName>
+          <attributeDefinition>Peat type aggregated 1-for analysis, see PeatType on field coding sheet</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>aggregated texture code</definition>
+                  <pattern>TextAgg1-IceStructAgg1</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of peat core microtopography">http://purl.dataone.org/odo/ECSO_00002622</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="oO58oZOFgIwG7l8x1aaLpBT6dQPLxB">
+          <attributeName>IceStructAgg1</attributeName>
+          <attributeDefinition>Ice structures Aggregation 1 (10-20 classes) for analyses, See Ref_Soil_Ice_Structure or field coding sheet</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>U</code>
+                    <definition>Unfrozen</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>LP</code>
+                    <definition>Lenticular Platy</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>OP</code>
+                    <definition>Organic-matrix Platy</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>M</code>
+                    <definition>Massive</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>P</code>
+                    <definition>Pore</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RB</code>
+                    <definition>Reticulate Blocky</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>VL</code>
+                    <definition>Vein Large</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>V</code>
+                    <definition>Vein</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>O</code>
+                    <definition>Organic-matrix</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>R</code>
+                    <definition>Reticulate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>OV</code>
+                    <definition>Organic-matrix vertical</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RV</code>
+                    <definition>Reticulate round</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AD</code>
+                    <definition>Ataxitic dirty</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RO</code>
+                    <definition>Reticulate organic-rich</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AO</code>
+                    <definition>Ataxitic Organic-rich</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>D</code>
+                    <definition>braided</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>DO</code>
+                    <definition>braided organic-rich</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>BV</code>
+                    <definition>Belts very fine</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>L</code>
+                    <definition>Lenticular</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AB</code>
+                    <definition>Ataxitic blocky</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ND</code>
+                    <definition>Nonvisible dirty</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AR</code>
+                    <definition>Ataxitic round</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of ice structure">http://purl.dataone.org/odo/ECSO_00003042</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="hhdRlc4vfquryNiyC5BOLWv5JTipTI">
+          <attributeName>FrostTypeAgg</attributeName>
+          <attributeDefinition>Permafrost type, Aggregated to primary types for analysis, See REF_Soil_Frost_Type or field code sheet</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>AL</code>
+                    <definition>permafrost type</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>AF</code>
+                    <definition>active layer-frozen</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TL</code>
+                    <definition>transient layer</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MW</code>
+                    <definition>Ice wedge</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PI</code>
+                    <definition>intermediate Layer, Quasi-syngenetic</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Mu</code>
+                    <definition>permafrost type</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Mc</code>
+                    <definition>thermokarst cave ice</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MG</code>
+                    <definition>buried glaciel ice</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>UE</code>
+                    <definition>unfr. exp.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of permafrost">http://purl.dataone.org/odo/ECSO_00003020</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="rkW0Lh7Z7M5KBEKfrzElHnOIp3OO6u">
+          <attributeName>FrozenStatus</attributeName>
+          <attributeDefinition>Frost status, F=frozen or U=unfrozen</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>f</code>
+                    <definition>frozen</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>u</code>
+                    <definition>unfrozen</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="4RMFbPThBOwlX51v2kVSluHcERwZ8d">
+          <attributeName>DensDry_gcm3</attributeName>
+          <attributeDefinition>Dry or Bulk Density, gm/cm3</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>gramPerCentimeterCubed</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="mass density">http://purl.dataone.org/odo/ECSO_00000678</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="guwSIG7Hmzvcg2MoObDp21zssMRWSv">
+          <attributeName>Moist_volpct</attributeName>
+          <attributeDefinition>Moisture (water) content, volumetric, %</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="bpfAbUClitLe1JwLBCZXcUSU3MHXHZ">
+          <attributeName>Moist_wtpct</attributeName>
+          <attributeDefinition>Moisture (water) content, volumetric, %</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="volumetric water content">http://purl.dataone.org/odo/ECSO_00001662</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="FR8uW3ypP2gJ0dFZGMpOpT4WA9yt4J">
+          <attributeName>OC_pct</attributeName>
+          <attributeDefinition>Organic Carbon, %wt, usually determined by LECO CN analyzer for acidic soils, or after acidic fumigation for alkaline soils, or by Total carbon minus Inorganic carbon</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Organic Carbon Concentration">http://purl.dataone.org/odo/ECSO_00000520</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="XLVA256MLX9sJLL70TLHLrxJMXMxtE">
+          <attributeName>TotalC_pct</attributeName>
+          <attributeDefinition>Total Carbon, % wt, usually determined with LECO CN analyzer</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="carbon concentration">http://purl.dataone.org/odo/ECSO_00002932</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="DO1eHatJz1EIl2Sl6cAsUwE7isq4TR">
+          <attributeName>pH</attributeName>
+          <attributeDefinition>field pH measurement in saturated paste, usually with Oakton PCSTestr 35 multi parameter field probe</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="pH">http://purl.dataone.org/odo/ECSO_00001645</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="1vmDI08C8sOSKA8DmHuByu7UvxE4nK">
+          <attributeName>EC_uScm</attributeName>
+          <attributeDefinition>field EC measurement in saturated paste, microS/cm, usually with Oakton PCSTestr 35 multi parameter field probe</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>microSiemensPerCentimeter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="conductivity">http://purl.dataone.org/odo/ECSO_00001534</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="ZK3tn4OZmOKOeTwDhzhN5U5mRdN1gx">
+          <attributeName>OCDens_lyr_gcc</attributeName>
+          <attributeDefinition>Organic Carbon Density (g/cc) for layer: Carbon density calculated from measured and substituted data, gm/cc</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>gramPerCentimeterCubed</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="organic carbon biomass density in soil">http://purl.dataone.org/odo/ECSO_00002913</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6gy8TWMkRy19uUER7ch77N6EgWbazp">
+          <attributeName>OCStore_lyr_kgm2</attributeName>
+          <attributeDefinition>OC-stock (kg/m2) calculated for layer, see calculation query</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilogramPerMeterSquared</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute id="scSZd6QacWnkSllX3LEh13lHD4sIxU">
+          <attributeName>TCDens_lyr_gcc</attributeName>
+          <attributeDefinition>Total Carbon Density (gm/cc) for layer: Carbon density calculated from measured and substituted data,</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>gramPerCentimeterCubed</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Carbon Biomass Density">http://purl.dataone.org/odo/ECSO_00001180</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="wnFUn8HCfx3RX45Z1ZEVx9WkWaB5Ty">
+          <attributeName>SampleType</attributeName>
+          <attributeDefinition>Sample type, Ave-class average (for gap filling), Vol-volumetric, Grav=gravimetric, RC-C14, O18, water, calib=meter calibration, ice, missing</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Ave</code>
+                    <definition>class average</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>vol</code>
+                    <definition>volumetric</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>grav</code>
+                    <definition>gravimetric</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Bulk</code>
+                    <definition>Bulk</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>O18</code>
+                    <definition>sample type</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>RC</code>
+                    <definition>sample type</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>C14</code>
+                    <definition>sample type</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="s55et3R9p4x9otasgx2FkAJ20TzPTr">
+          <attributeName>DataTypeLayer</attributeName>
+          <attributeDefinition>Type of sampling: m=Measured, s=Split-Dup (for layers that are split and duplicated across 100 and 200 cm boundaries), e=Extended es=Ext-short (&amp;lt;50 cm) to get to full meter increment, el=Ext-long (&amp;gt;50 cm) to get to full meter increment</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>meas</code>
+                    <definition>measured</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>ext</code>
+                    <definition>extended</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>split</code>
+                    <definition>split</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="0iQVPApF5zQSgGt9amU4o7oaJw1zhO">
+          <attributeName>DataTypePhys</attributeName>
+          <attributeDefinition>Type of physical sample data: Meas, Ave, Sub_AbvBlw, Sub_Nearby</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>ave</code>
+                    <definition>class average</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_AdvBlw</code>
+                    <definition>type of sample data</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>meas</code>
+                    <definition>measured</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_Nearby</code>
+                    <definition>type of sample</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6nwn3mgigsLZpotplAWw512Ed9R5rb">
+          <attributeName>DataTypeChem</attributeName>
+          <attributeDefinition>Type of chem sample data: Meas, Ave, Sub_AbvBlw, Sub_Nearby</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>ave</code>
+                    <definition>class average</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>meas</code>
+                    <definition>measured</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_AbvBlw</code>
+                    <definition>type of chem sample</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_Nearby</code>
+                    <definition>type of chem sample</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="tRrFWX4purcGTmcNyMTmtLG5BTIT8A">
+          <attributeName>DataQualPhys</attributeName>
+          <attributeDefinition>Data quality of physical samples: good, missing, outlier, or other notations</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>ave</code>
+                    <definition>average</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Good</code>
+                    <definition>Good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub</code>
+                    <definition>quality</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Outlier-BD</code>
+                    <definition>outlier</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Bad-Dimen</code>
+                    <definition>Bad</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_AbvBlw</code>
+                    <definition>quality</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_Nearby</code>
+                    <definition>quality</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="data quality assessment measurement type">http://purl.dataone.org/odo/ECSO_00001719</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="SXqTQqZ2DbpT2i2rkpB0LDpuseS5ZB">
+          <attributeName>DataQualChem</attributeName>
+          <attributeDefinition>Data quality of chemical samples: good, missing, outlier, or other notations</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Ave</code>
+                    <definition>class average</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Good</code>
+                    <definition>Good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub</code>
+                    <definition>quality</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Sub_Nearby</code>
+                    <definition>quality</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="data quality assessment measurement type">http://purl.dataone.org/odo/ECSO_00001719</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-b6510eda-a457-4126-a47a-fc3479a3bcdb" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Vegetation_Data_Archive_2022.csv</entityName>
+      <entityDescription>Vegetation data file for Jago thermokarst monitoring site with percent cover by species. Please refer to the attached code list file for any undefined codes.</entityDescription>
+      <physical>
+        <objectName>Jago_Vegetation_Data_Archive_2022.csv</objectName>
+        <size unit="bytes">127306</size>
+        <authentication method="MD5">7f2b6d0db0ab72adddf9b721ad092643</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b6510eda-a457-4126-a47a-fc3479a3bcdb</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="9EiLm5XDGGqrsnRtihrxLBFOgRu8Zn">
+          <attributeName>SiteYear</attributeName>
+          <attributeDefinition>SiteID with year</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>SiteID - YYYY</code>
+                    <definition>site ID with year</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="XfcSazy8JidO2g24mFTFt5cVkMp4dq">
+          <attributeName>SiteID</attributeName>
+          <attributeDefinition>SiteID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>JG-___</code>
+                    <definition>site code</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VB247VFOT2Ds7thga8NrnOaft9Q6R3">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5T2Te8WqMinTVSwmHtzzT07wKTeAgt">
+          <attributeName>Study Area</attributeName>
+          <attributeDefinition>Study area code</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>JG</code>
+                    <definition>study area</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study location identifier">http://purl.dataone.org/odo/ECSO_00002767</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Nnob3P2pPT2MKQMvuystrLZ9HGTAvN">
+          <attributeName>TKarstStage</attributeName>
+          <attributeDefinition>Thermokarst stage code</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="type of thermokarst feature">http://purl.dataone.org/odo/ECSO_00002574</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="tKv9W5Kx3iOM47H7iKSTrcIH8fMi2a">
+          <attributeName>TreatAggr</attributeName>
+          <attributeDefinition>Treatment code, Aggregated</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="treatment measurement type">http://purl.dataone.org/odo/ECSO_00002426</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="uy5VXtKTkaHh5cgnQSObJS42JmRUtT">
+          <attributeName>Plot Type</attributeName>
+          <attributeDefinition>Plot Type</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="plot identifier">http://purl.dataone.org/odo/ECSO_00002432</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="GkVMHshzmNZmZhHRkZ2utDxzVDSpMA">
+          <attributeName>MultiHit</attributeName>
+          <attributeDefinition>Multiple hit type of point sampling, S=single hit for each species per point, MS-multiple hits of each species</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>S</code>
+                    <definition>single hit for each species per point</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>MS</code>
+                    <definition>multiple hits of each species</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="gDTkiaMTIepByJ99UU9XbiC1ZJ6sFD">
+          <attributeName>Method</attributeName>
+          <attributeDefinition>Sampling method: O=occular estimate, PS=point sampling-single hit</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>O</code>
+                    <definition>occular estimate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>PS</code>
+                    <definition>point sampling single hit</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="E2RhopMKl54gxQENmCoAt1cKg0MaFH">
+          <attributeName>SpecCodeAgg</attributeName>
+          <attributeDefinition>Species code (first 3 of genus, first 3 for species), Aggregated for problem species</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="species code">http://purl.dataone.org/odo/ECSO_00002490</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="JfH5TtUd5gT1Kl2TlHKvSlEfW96Aso">
+          <attributeName>SpecNameCurr</attributeName>
+          <attributeDefinition>Current taxonomic name for species</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="taxonomic classification">http://purl.dataone.org/odo/ECSO_00002730</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="PcXxNNLbsPFbUZLtXpIVJRwKibZrsZ">
+          <attributeName>lifeform</attributeName>
+          <attributeDefinition>Lifeform</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="matzN0RDJC8ZDml171fS7O7sC2I6uO">
+          <attributeName>GrowthForm2</attributeName>
+          <attributeDefinition>Growth form, aggregated</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="plant growth form">http://purl.dataone.org/odo/ECSO_00002562</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TDz9NBaMu4hz7iEubWc2kPN5rDT4hF">
+          <attributeName>CovPct</attributeName>
+          <attributeDefinition>Percent cover for each species, 0.1 for trace species</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>percent</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Plant Cover Percentage">http://purl.dataone.org/odo/ECSO_00001197</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-1e59865b-5777-49c4-a157-8b5b9b8bbfd7" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Soil_temperatures_2009_2018.csv</entityName>
+      <entityDescription>Soil temperature data from soil surface (-5 cm) and permafrost (~ 75 cm) measured every two hours at 12 sites at Jago Alaska thermokarst monitoring site. Please refer to the attached code list file for any undefined codes.</entityDescription>
+      <physical>
+        <objectName>Jago_Soil_temperatures_2009_2018.csv</objectName>
+        <size unit="bytes">41519490</size>
+        <authentication method="MD5">4441a7c6f91a724ea508d2dcd89d7e90</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:1e59865b-5777-49c4-a157-8b5b9b8bbfd7</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="ewMTQsiBWLdP2IvB4uuDvBEZG5RUlQ">
+          <attributeName>Trtmnt</attributeName>
+          <attributeDefinition>Treatment code for analysis</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="treatment measurement type">http://purl.dataone.org/odo/ECSO_00002426</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TJnnSTI6gyeXe16ARSrH5iDTpqsiET">
+          <attributeName>SiteID</attributeName>
+          <attributeDefinition>Site ID</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>site code</definition>
+                  <pattern>JG-____</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="UDLhIoymz0AZDCJxouWL300QvplDi7">
+          <attributeName>Date-Time-Hr</attributeName>
+          <attributeDefinition>Date-Time-Hr</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY - hh:mm</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date and time of measurement">http://purl.dataone.org/odo/ECSO_00002043</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="DL41L18OyCDqJkSh5nkFzEAC86yyMT">
+          <attributeName>Date</attributeName>
+          <attributeDefinition>Date</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="date">http://purl.dataone.org/odo/ECSO_00002051</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VkuSMrFAX9ST1XJFns3x0KAie7DXAg">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VzAcnL4sTp32dO7sU3OJPor8Zc9Aip">
+          <attributeName>Year-Hydro</attributeName>
+          <attributeDefinition>Hydrologic Year</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="EtcTHnxGcVmaWRfehSNRov0ePDw4bq">
+          <attributeName>JulianDay</attributeName>
+          <attributeDefinition>Julian Day</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>DDD</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="fractional day of year">http://purl.dataone.org/odo/ECSO_00002061</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="TWQAe81BBqmJUSUCKLW7K1AAV35VJh">
+          <attributeName>Month</attributeName>
+          <attributeDefinition>Month, numerical</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="month of year">http://purl.dataone.org/odo/ECSO_00002047</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="KJnrRJPgihSqTwGgdwuAA08b6mXf41">
+          <attributeName>Site-Year-Day</attributeName>
+          <attributeDefinition>Site-Year-Day, concatonated</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site ID -Year - Day</definition>
+                  <pattern>SiteID-YYYY-DDD</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="site identifier">http://purl.dataone.org/odo/ECSO_00002997</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="tpRrJLVUQy6Qp1PqwvdKXahSZLHIMC">
+          <attributeName>Winter(S-M)</attributeName>
+          <attributeDefinition>Winter Season, year at beginning</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year and season">http://purl.dataone.org/odo/ECSO_00002169</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="anTxsNUo8o1G82SrqIsv8ifTMoupSB">
+          <attributeName>TempDep1</attributeName>
+          <attributeDefinition>Depth of Sensor 1, cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="u5D1a6zRqIOnWULcz7cZiig4hBTHZ9">
+          <attributeName>TempDep2</attributeName>
+          <attributeDefinition>Depth of Sensor 2, cm</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Depth">http://purl.dataone.org/odo/ECSO_00001250</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="3LvSr8vUoVx4hReSTUioTtfxtLF4BB">
+          <attributeName>SurfTemp_C_fld</attributeName>
+          <attributeDefinition>Surface temperature, deg C, as downloaded</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="surface temperature">http://purl.dataone.org/odo/ECSO_00001526</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Uo0PPyZORFIOzWZg2yozb3WohvXJql">
+          <attributeName>DeepTemp_C_fld</attributeName>
+          <attributeDefinition>Deep temperature, deg C, as downloaded</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Temperature Measurement Type">http://purl.dataone.org/odo/ECSO_00001104</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="ylcTN91BcsGmTxoEtGEpNhAJpld82P">
+          <attributeName>AirTemp_C-fld</attributeName>
+          <attributeDefinition>Air temperature, deg C, as downloaded</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Air Temperature">http://purl.dataone.org/odo/ECSO_00001225</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="P1Aho9XyFLImbDF9bvFsx8ASM3lmMr">
+          <attributeName>SurfTemp_C_fnl</attributeName>
+          <attributeDefinition>Surface temperature, deg C, final</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="surface temperature">http://purl.dataone.org/odo/ECSO_00001526</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="XvfVr706SVZNqJihqMNICcTOCCTTHR">
+          <attributeName>DeepTemp_C_fnl</attributeName>
+          <attributeDefinition>Deep temperature, deg C, final</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Temperature Measurement Type">http://purl.dataone.org/odo/ECSO_00001104</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="B8MZPy94Rbd62eNt7lS2i69Pa6F6RO">
+          <attributeName>AirTemp_C-fnl</attributeName>
+          <attributeDefinition>Air temperature, deg C, final</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Air Temperature">http://purl.dataone.org/odo/ECSO_00001225</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="X82cofcVTwrwIVNvA28IgEAxDbIZFe">
+          <attributeName>SurfCorrection</attributeName>
+          <attributeDefinition>Surface temperature correction, deg. C</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Temperature Measurement Type">http://purl.dataone.org/odo/ECSO_00001104</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="b0cC2I6h9uXi4VyWLPlNuUHVvotC8H">
+          <attributeName>DeepCorrection</attributeName>
+          <attributeDefinition>Deep temperature correction, deg. C</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Temperature Measurement Type">http://purl.dataone.org/odo/ECSO_00001104</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="dT00oUuz9u3A4nqa1rDkKKvhDU4EE8">
+          <attributeName>AirCorrection</attributeName>
+          <attributeDefinition>Air temperature correction, deg. C</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Temperature Measurement Type">http://purl.dataone.org/odo/ECSO_00001104</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6zU9bo50NT3G8bKSTMs5zhy5PmmJVC">
+          <attributeName>Surf-DD_Type</attributeName>
+          <attributeDefinition>freezing degree days or thawing degree days</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>FDD</code>
+                    <definition>freezing degree days</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TDD</code>
+                    <definition>thawing degree days</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Freezing Index">http://www.purl.dataone.org/odo/ECSO_00010121</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="R8P1ikVJLkiDG0GleITTO2tgAfCyfS">
+          <attributeName>Deep-DD_Type</attributeName>
+          <attributeDefinition>freezing degree days or thawing degree days</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>FDD</code>
+                    <definition>freezing degree days</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TDD</code>
+                    <definition>thawing degree days</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Freezing Index">http://www.purl.dataone.org/odo/ECSO_00010121</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="L38AAFF3faJEho5lLgdHPdpqeUHGVE">
+          <attributeName>Air-DD-Type</attributeName>
+          <attributeDefinition>Freezing degree days or thawing degree days</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>FDD</code>
+                    <definition>freezing degree days</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>TDD</code>
+                    <definition>thawing degree days</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Freezing Index">http://www.purl.dataone.org/odo/ECSO_00010121</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="PyzF6aeeuc2rmyS0AG2EnKv7qwCgIA">
+          <attributeName>QAQC</attributeName>
+          <attributeDefinition>data quality</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>G</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation>
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="data quality assessment measurement type">http://purl.dataone.org/odo/ECSO_00001719</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="uTsTdfPh3KW39cMFynNCT8aJDkCcDX">
+          <attributeName>Notes</attributeName>
+          <attributeDefinition>Notes</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  <pattern>*</pattern>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <otherEntity id="urn-uuid-193817e8-787b-45c0-bd70-ffad94f0b3ad">
+      <entityName>codes.docx</entityName>
+      <entityDescription>Code definitions for abbreviations throughout the data tables. Please note that some codes in these files may be aggregated.</entityDescription>
+      <physical>
+        <objectName>codes.docx</objectName>
+        <size unit="bytes">59888</size>
+        <authentication method="MD5">0dc6c91d8936ce0cdc05f9e78208b10d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/vnd.openxmlformats-officedocument.wordprocessingml.document</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:193817e8-787b-45c0-bd70-ffad94f0b3ad</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-9367ed5a-71b6-4d1d-a177-ee712a08750a">
+      <entityName>ELS_Arctic_Boreal_Site_Soil_Veg_Code_Sheet_2022.docx</entityName>
+      <entityDescription>Coding sheet for site environmental and soil stratigraphy data</entityDescription>
+      <entityType>application/vnd.openxmlformats-officedocument.wordprocessingml.document</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-04ba5671-cc33-424f-8fc2-e3b0e44c61e0" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Elev_Thaw_Data_2009_2018_Metadata.csv</entityName>
+      <entityDescription>Metadata for Microtopography data including ground and water surface elevations and thaw depths</entityDescription>
+      <physical>
+        <objectName>Jago_Elev_Thaw_Data_2009_2018_Metadata.csv</objectName>
+        <size unit="bytes">66919</size>
+        <authentication method="MD5">5b5a70bff668442841c5fa18431386d1</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:04ba5671-cc33-424f-8fc2-e3b0e44c61e0</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>text/csv</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-e731e9a1-806a-4029-a5fb-a73be862c74c" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Site_Environmental_Data_Archive_2022_Metadata.csv</entityName>
+      <entityDescription>Metadata for Site descriptions included information on observers, location, plot type, topography, geomorphology, soils, hydrology, and vegetation</entityDescription>
+      <physical>
+        <objectName>Jago_Site_Environmental_Data_Archive_2022_Metadata.csv</objectName>
+        <size unit="bytes">68973</size>
+        <authentication method="MD5">56c6e3a5efa92c71a05c574b36fb338c</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e731e9a1-806a-4029-a5fb-a73be862c74c</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>text/csv</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-d0d9cf21-89e4-4e29-9b8b-45efe860a507" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Soils_data_archive_2022_Metadata.csv</entityName>
+      <entityDescription>Metadata for Soil stratigraphy and soil properties (moisture, density, organic carbon) for 57 sites at the Jago thermokarst monitoring site</entityDescription>
+      <physical>
+        <objectName>Jago_Soils_data_archive_2022_Metadata.csv</objectName>
+        <size unit="bytes">3233</size>
+        <authentication method="MD5">403a3dd9dfbe76a3f8efe6b4a4ab45d1</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:d0d9cf21-89e4-4e29-9b8b-45efe860a507</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>text/csv</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-80d5dde8-1fd1-4e02-b10a-05dd2eebcde8" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Vegetation_Data_Archive_2022_Metadata.csv</entityName>
+      <entityDescription>Vegetation metadata for Jago thermokarst monitoring site with percent cover by species</entityDescription>
+      <physical>
+        <objectName>Jago_Vegetation_Data_Archive_2022_Metadata.csv</objectName>
+        <size unit="bytes">753</size>
+        <authentication method="MD5">d5281ca7b02d62b02f19e72167cd430f</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:80d5dde8-1fd1-4e02-b10a-05dd2eebcde8</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>text/csv</entityType>
+    </otherEntity>
+    <otherEntity id="urn-uuid-e936db8e-2a42-4c36-856e-b751ee2084c8" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>Jago_Soil_temperatures_2009_2018_metadata.csv</entityName>
+      <entityDescription>Metadata for Soil temperature data from soil surface (-5 cm) and permafrost (~ 75 cm) measured every two hours at 12 sites at Jago Alaska thermokarst monitoring site</entityDescription>
+      <physical>
+        <objectName>Jago_Soil_temperatures_2009_2018_metadata.csv</objectName>
+        <size unit="bytes">1286</size>
+        <authentication method="MD5">e0c755bc90a0794d74a45393a0e2bea9</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>
+</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e936db8e-2a42-4c36-856e-b751ee2084c8</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>text/csv</entityType>
+    </otherEntity>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <metadata>
+          <unitList>
+            <unit id="microSiemensPerCentimeter" abbreviation="uS/cm" name="microSiemensPerCentimeter" unitType="conductivity">
+              <description>microSiemens Per Centimeter</description>
+            </unit>
+          </unitList>
+        </metadata>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

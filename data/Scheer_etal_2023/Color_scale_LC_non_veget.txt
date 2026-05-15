@@ -1,0 +1,8 @@
+# QGIS Generated Color Map Export File
+INTERPOLATION:INTERPOLATED
+0,255,255,255,0,Vegetated classes
+1,9,17,85,255,Water
+2,160,160,141,255,Gravel-dirt
+3,67,60,53,255,Bedrock
+4,0,0,0,255,Built environment
+5,67,60,53,255,Rocky/bare vegetated areas

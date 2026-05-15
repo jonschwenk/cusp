@@ -1,0 +1,1459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="knb-lter-bnz.605.6" scope="system"
+  system="https://pasta.edirepository.org"
+  xmlns:ds="eml://ecoinformatics.org/dataset-2.2.0"
+  xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="eml://ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+   <access
+    authSystem="https://pasta.edirepository.org/authentication"
+    order="allowFirst" scope="document"
+      system="https://pasta.edirepository.org">
+      <allow>
+         <principal>uid=BNZ,o=EDI,dc=edirepository,dc=org</principal>
+         <permission>all</permission>
+      </allow>
+      <allow>
+         <principal>public</principal>
+         <permission>read</permission>
+      </allow>
+   </access>
+   <dataset>
+      <alternateIdentifier
+        system="https://doi.org">doi:10.6073/pasta/10324bd31b26ef97fe2cfe6a8537d941</alternateIdentifier><shortName>knb-lter-bnz.605.6</shortName>
+      <title>Bonanza Creek LTER: Active Layer Depth or Permafrost Presence for the Regional Site Network</title>
+      <creator>
+         <individualName>
+            <givenName>Roger</givenName>
+            <surName>Ruess</surName>
+         </individualName>
+         <positionName>Principal Investigator (retired)</positionName>
+         <address>
+            <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775-0180</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7153</phone>
+         <phone
+        phonetype="fax">(907) 474-6967</phone>
+         <electronicMailAddress>rwruess@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://people.iab.uaf.edu/roger_ruess</onlineUrl>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Teresa</givenName>
+            <givenName>Nettleton</givenName>
+            <surName>Hollingsworth</surName>
+         </individualName>
+         <positionName>LTER Co-Principal Investigator</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit, PNW Research Station, USDA Forest Service, P.O. Box 756780,University of Alaska Fairbanks</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-2424</phone>
+         <phone
+        phonetype="fax">(907) 474-6251</phone>
+         <electronicMailAddress>tnhollingsworth@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.becru.uaf.edu/personnel/Teresa.htm</onlineUrl>
+      </creator>
+      <creator>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </creator>
+      <metadataProvider>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <positionName>Data Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </metadataProvider>
+      <associatedParty>
+         <individualName>
+            <givenName>Mark</givenName>
+            <givenName>A</givenName>
+            <surName>Winterstein</surName>
+         </individualName>
+         <positionName>Research Technician</positionName>
+         <address>
+            <deliveryPoint>110 Arctic Health Research Building University of Alaska Fairbanks</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-5435</phone>
+         <!--No fax info on file for this person-->
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Jamie</givenName>
+            <surName>Hollingsworth</surName>
+         </individualName>
+         <positionName>Bonanza Creek LTER Site Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit University of Alaska Fairbanks School of Agriculture and Land Resources Management P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7470</phone>
+         <phone
+        phonetype="fax">(907) 474-6251</phone>
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Karl</givenName>
+            <surName>Olson</surName>
+         </individualName>
+         <positionName>Technician</positionName>
+         <address>
+            <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-5104</phone>
+         <!--No fax info on file for this person-->
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Vladimir</givenName>
+            <surName>Romanovsky</surName>
+         </individualName>
+         <positionName>Assoc Prof, Snow, Ice and Permafrost</positionName>
+         <address>
+            <deliveryPoint>Geophysical Institute University of Alaska Fairbanks PO Box 757320</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7459</phone>
+         <phone
+      phonetype="fax">(907) 474-7290</phone>
+         <role>Associated party</role>
+      </associatedParty>
+      <pubDate>2025-03-08</pubDate>
+      <abstract>
+         <para>Maximum active layer depth was measured during the fall at the majority of the sites in the Regional Site Network (RSN). Efforts were focused mainly on identifying which sites did and did not have frozen ground. To augment this dataset, older measurements were included for some mature sites at which the maximum active layer depths can be assumed to be fairly static.  Due to time constraints, sites which we were confident had no frozen ground were not probed.  </para>
+      </abstract>
+      <keywordSet>
+         <keyword>active layer</keyword>
+         <keyword>permafrost</keyword>
+         <keyword>thaw</keyword>
+         <keywordThesaurus>Soils</keywordThesaurus>
+      </keywordSet>
+      <intellectualRights>
+         <section>
+            <title>Data Use</title>
+            <para>This work has been produced as part of the Long Term Ecological Research Program and data users should adhere to the Data Use Agreement of the Long Term Ecological Research Network. The consumer of these data (“Data User” herein) has an ethical obligation to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or coauthorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available “as is.” The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</para>
+         </section>
+         <section>
+            <title>Citation</title>
+            <para>It is considered a matter of professional ethics to acknowledge the work of other scientists. Thus, the Data User should properly cite the Data Set in any publications or in the metadata of any derived data products that were produced using the Data Set. Citation should take the following general form: Creator(s), Year of Data Publication, Title of Dataset, Publisher, Dataset identifier, Dataset URL, Dataset DOI.  For Example:   Van Cleve, Keith; Chapin, F. Stuart; Ruess, Roger W. 2016. Bonanza Creek Experimental Forest: Hourly Temperature (sample, min, max) at 50 cm and 150 cm from 1988 to Present, Bonanza Creek LTER - University of Alaska Fairbanks. BNZ:1, http://www.lter.uaf.edu/data/data-detail/id/1. doi:10.6073/pasta/725db90d86686be13e6d6b2da5d61217.</para>
+         </section>
+         <section>
+            <title>Acknowledgement</title>
+            <para>The Data User should acknowledge any institutional support or specific funding awards referenced in the metadata accompanying this dataset in any publications where the Data Set contributed significantly to its content. Acknowledgements should identify the supporting party, the party that received the support, and any identifying information such as grant numbers. For example: Data are provided by the Bonanza Creek LTER, a partnership between the University of Alaska Fairbanks, and the U.S. Forest Service. Significant funding for collection of these data was provided by the National Science Foundation Long-Term Ecological Research program (NSF Grant numbers   DEB-2224776, DEB-1636476, DEB-1026415, DEB-0620579, DEB-0423442, DEB-0080609, DEB-9810217, DEB-9211769, DEB-8702629) and by the USDA Forest Service, Pacific Northwest Research Station (Agreement # RJVA-PNW-20-JV-11261932-018).</para>
+         </section>
+         <section>
+            <title>Notification</title>
+            <para>The Data User will notify the Data Set Contact when any derivative work or publication based on or derived from the Data Set is distributed.</para>
+         </section>
+         <section>
+            <title>Collaboration</title>
+            <para>The Data Set has been released in the spirit of open scientific collaboration. Data Users are thus strongly encouraged to consider consultation, collaboration and/or co-authorship with the Data Set Creator.</para>
+         </section>
+         <section>
+            <title>Disclaimer</title>
+            <para>While substantial efforts are made to ensure the accuracy of data and documentation contained in this Data Set, complete accuracy of data and metadata cannot be guaranteed. All data and metadata are made available in its present condition. The Data User holds all parties involved in the production or distribution of the Data Set harmless for damages resulting from its use or interpretation.</para>
+         </section>
+         <!--No additional acknowledgements found in database (datafile/intellectual_rights)-->
+      </intellectualRights>
+      <distribution
+          id="distributionReference">
+         <online>
+            <url
+      function="information">http://www.lter.uaf.edu/data/data-detail/id/605</url>
+         </online>
+      </distribution>
+      <distribution
+      id="10.6073/pasta/10324bd31b26ef97fe2cfe6a8537d941" scope="system"
+          system="https://pasta.edirepository.org"><online><url
+        function="information">https://doi.org/10.6073/pasta/10324bd31b26ef97fe2cfe6a8537d941</url></online></distribution><coverage>
+         <geographicCoverage
+        id="geoReference">
+            <geographicDescription>Dataset geographic description information is unavailable. {datafile/geoCoverage is empty}</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-150.4031</westBoundingCoordinate>
+               <eastBoundingCoordinate>-144.332</eastBoundingCoordinate>
+               <northBoundingCoordinate>66.2655</northBoundingCoordinate>
+               <southBoundingCoordinate>63.6958</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <temporalCoverage>
+            <rangeOfDates>
+               <beginDate>
+                  <calendarDate>2000-10-06</calendarDate>
+               </beginDate>
+               <endDate>
+                  <calendarDate>2024-09-30</calendarDate>
+               </endDate>
+            </rangeOfDates>
+         </temporalCoverage>
+      </coverage>
+      <maintenance>
+         <description>
+            <section>
+               <title>Status</title>
+               <para>Ongoing</para>
+            </section>
+         </description>
+      </maintenance>
+      <contact>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <positionName>Data Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </contact>
+      <publisher>
+         <organizationName>Environmental Data Initiative</organizationName>
+         <electronicMailAddress>info@edirepository.org</electronicMailAddress>
+         <onlineUrl>https://edirepository.org</onlineUrl>
+         <userId
+        directory="https://ror.org">0330j0z60</userId>
+      </publisher>
+      <pubPlace>Environmental Data Initiative</pubPlace>
+      <methods>
+         <methodStep>
+            <description>
+               <section>
+                  <title>Experimental Design</title>
+                  <para>The goal of this field campain was to define which sites in the regional site network do and do not have permafrost within 2.5m of the surface. Efforts were focused mainly on sites where this was not easily deduced. </para>
+               </section>
+               <section>
+                  <title>Methods</title>
+                  <para>Probing location differed based on measurement date. In 2015, at newly established RSN sites, active layer depth was measured 1.5m at a diagonal from the veg plot stake.  Direction was determined by the location of the 1m� veg plot, with probing taking place on the diagonal closest to the veg plot (actually measured over the plot). 20 measurements were taken, one at each veg stake. If it became clear after multiple measurements the site did not have frozen ground, all 20 measurements were not necessarily taken. The number in the ""probe"" field for sites measured in 2015 indicates the veg stake the measurement was taken at. Data were recorded in 2015 using an iPad and custom app, designed by BNZ staff.  Data Flag Value Codes: G=Good measurement (probe hit frozen ground), N=No barrier hit with probe, R=Rock barrier, XG=Site not visited but assumed to have permafrost, XN=Site not visited but assumed not to have permafrost.</para>
+               </section>
+            </description>
+         </methodStep>
+         <sampling>
+            <studyExtent>
+               <coverage>
+                  <geographicCoverage>
+                     <geographicDescription>BCEFM2 -- This is a lowland black spruce site. . Site alternate names: Apex Beta</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.32324</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.32324</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.69516</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.69516</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI1 -- In 1969 this site burned in the Big Denver fire. It is now a birch stand. . Site alternate names: BD-6</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.403119</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.403119</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.063454</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.063454</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI2 -- In 1969 this site burned in the Big Denver fire. It is now a birch stand with a thick black spruce understory.. Site alternate names: BD-10</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.368877</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.368877</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.070412</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.070412</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI3 -- In 1969 this site burned in the Big Denver fire. It is now a mixed stand comprised of aspen and black spruce.. Site alternate names: BD-9</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.349093</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.349093</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.073548</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.073548</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI4 -- In 1969 this site burned in the Big Denver fire. It is now an aspen stand. . Site alternate names: BD-11</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.325606</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.325606</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.078379</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.078379</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI5 -- In 2015 this site burned in the Baker fire. Prior to the fire, it was a mixed stand dominated by aspen with some black spruce. . Site alternate names: BD-7</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.282723</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.282723</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.095197</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.095197</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI6 -- In 2015 this site burned in the Baker fire. Prior to the fire it was an open black spruce stand. . Site alternate names: BD-5</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.269876</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.269876</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.10084</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.10084</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI7 -- In 1969 this site burned in the Big Denver fire. It is now a birch stand. . Site alternate names: BD-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.063616</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.063616</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.161836</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.161836</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDI8 -- In 1969 this site burned in the Big Denver fire. It is now a mixed stand with birch and black spruce. . Site alternate names: BD-1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.049912</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.049912</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.163552</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.163552</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BDM1 -- This is a mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.13574</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.13574</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15799</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15799</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY1 -- In 2004 this site burned in the Boundary fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.429158</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.429158</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.119979</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.119979</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY10 -- In 2004 this site burned in the Boundary fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.449411</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.449411</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.118669</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.118669</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY11 -- In 2004 this site burned in the Boundary fire. In its last inventory (2014), the site was dominated by sapling birch. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.471686</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.471686</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.148476</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.148476</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY12 -- In 2004 this site burned in the Boundary fire. In its last inventory (2014), the site was dominated by sapling birch. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.470284</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.470284</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.147741</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.147741</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY13 -- In 2004 this site burned in the Boundary fire. In its last inventory (2014), the site was dominated by sapling birch. . Site alternate names: BF99</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.460553</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.460553</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.143817</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.143817</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY4 -- In 2004 this site burned in the Boundary fire. In its last inventory (2014), the site was dominated by sapling birch. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.47274</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.47274</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.14981</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.14981</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY6 -- In 2004 this site burned in the Boundary fire. In its last inventory (2014), the site was dominated by sapling birch. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.477168</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.477168</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.130069</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.130069</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY7 -- In 2004 this site burned in the Boundary fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.47723</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.47723</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.153652</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.153652</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY8 -- In 2004 this site burned in the Boundary fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-146.667829</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-146.667829</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.349339</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.349339</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFY9 -- In 2004 this site burned in the Boundary fire. It is currently a black spruce stand. Many relic trees exist. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-146.675377</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-146.675377</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.353058</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.353058</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCM1 -- This is a mixed stand, composed mainly of black spruce with some white spruce.. Site alternate names: Dalton</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.312493</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.312493</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.240395</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.240395</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY1 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-149.77952</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-149.77952</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.910596</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.910596</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY10 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.236443</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.236443</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.207444</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.207444</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY12 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.333539</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.333539</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.265542</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.265542</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY13 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.184437</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.184437</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.15537</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.15537</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY14 -- In 2004 this site burned in the Dall City fire. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.1632</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.1632</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.120336</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.120336</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY15 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.155465</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.155465</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.109119</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.109119</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY16 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.168267</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.168267</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.073353</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.073353</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY17 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-149.752832</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-149.752832</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.896067</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.896067</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY2 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.257716</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.257716</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.215182</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.215182</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY3 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.167891</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.167891</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.072254</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.072254</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY4 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.151326</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.151326</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.105262</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.105262</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY5 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.156852</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.156852</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.109679</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.109679</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY6 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.170408</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.170408</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.140521</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.140521</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY7 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.179563</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.179563</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.151718</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.151718</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY8 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.203584</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.203584</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.163658</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.163658</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DCY9 -- In 2004 this site burned in the Dall City fire.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-150.20114</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-150.20114</eastBoundingCoordinate>
+                        <northBoundingCoordinate>66.168628</northBoundingCoordinate>
+                        <southBoundingCoordinate>66.168628</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DDM1 -- This is a mesic-subhygric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.723333</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.723333</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.84662</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.84662</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>DDM2 -- This is a xeric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.74101</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.74101</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.89178</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.89178</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>FP5A -- This is a subxeric-mesic, black spruce site on the Tanana River floodplain.. Site alternate names: 251, BCEFM1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.2490622</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.2490622</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.68147876</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.68147876</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>FP5C -- FP5C is located on an older terrace of the Tanana River on the south side of the river opposite Sam Charley Island. The climate station and neighboring research plots were burned in August of 2010 by the Willow Creek Wildfire.. Site alternate names: 253, BCEFY3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.1472629</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.1472629</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.71361404</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.71361404</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>FP5D -- This is a mesic, black spruce site on the Tanana River floodplain.. Site alternate names: 254, BCEFM3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.19274</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.19274</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.72541</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.72541</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI1 -- In 1947 this site burned in the Gerstle River fire. It is now an open black spruce stand with some birch. Permafrost is currently present at this site.. Site alternate names: GR-9</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.079202</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.079202</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.772116</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.772116</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI2 -- In 1947 this site burned in the Gerstle River fire. It is now dominated by aspen with an understory of black spruce. . Site alternate names: GR-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.055334</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.055334</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.787588</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.787588</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI3 -- In 1947 this site burned in the Gerstle River fire. It is now comprised mainly of black spruce with some aspen. . Site alternate names: GR-1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.041859</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.041859</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.791346</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.791346</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI4 -- In 1947 this site burned in the Gerstle River fire. It is now a mixed stand comprised of black spruce and birch.. Site alternate names: GR-6</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.054202</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.054202</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.793417</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.793417</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI5 -- In 1947 this site burned in the Gerstle River fire. Its overstory is now dominated by aspen and its understory by black spruce.. Site alternate names: GR-5</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.076628</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.076628</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.795019</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.795019</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI6 -- In 1947 this site burned in the Gerstle River fire. It is now a mixed stand of black spruce and aspen. . Site alternate names: GR-3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.055548</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.055548</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.800401</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.800401</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRI7 -- In 1947 this site burned in the Gerstle River fire. Its overstory is now dominated by aspen, and it has an open black spruce understory. . Site alternate names: GR-4</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.061443</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.061443</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.801791</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.801791</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRM1 -- This is a mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-144.3317838</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-144.3317838</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.69577185</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.69577185</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRM3 -- This is a mesic-subhygric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-144.95382471</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-144.95382471</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.81365346</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.81365346</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRM4 -- This is a subxeric-mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-144.95546709</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-144.95546709</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.81513074</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.81513074</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSI1 -- In 1966 this site burned in the Goldstream fire. It is now a black spruce stand. . Site alternate names: GS-3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.41375</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.41375</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.80004</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.80004</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSI2 -- In 1966 this site burned in the Goldstream fire. It is now an open black spruce stand. . Site alternate names: GS-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.42039</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.42039</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.80255</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.80255</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSI3 -- In 1966 this site burned in the Goldstream fire. It is now a black spruce stand. . Site alternate names: GS-1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.49298</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.49298</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.80951</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.80951</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSM1 -- This is a lowland black spruce site. . Site alternate names: TKN0131L</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.31676</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.31676</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.80258</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.80258</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSM2 -- This is a xeric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.31574</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.31574</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.80334</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.80334</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSM3 -- This is a subhygric, black spruce site. The organic layer at this here is over 3.5m deep. . Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.832248</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.832248</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.916152</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.916152</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSM4 -- This is a subxeric-mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.25307</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.25307</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.942214</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.942214</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GSM5 -- This is a subxeric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.65685</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.65685</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.9985625</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.9985625</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>HR1A -- This is a meteorological site near the crest of Helmer's Ridge, just west of the C4 basin, and at an elevation of approximately 610 meters. Site alternate names: Helmer's Ridge, Helmer's, Helmers, HELM, 400, HR1, CPCRWY1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.5435743</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.5435743</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.17091866</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.17091866</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>LGI1 -- In 1958 this site burned in the Livengood fire. It is now an open, mixed stand of black and white spruce. . Site alternate names: LG-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.86419</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.86419</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.42936</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.42936</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>LGI2 -- In 1958 this site burned in the Livengood fire. It is now a mixed stand composed mainly of black spruce, with some birch and white spruce. . Site alternate names: LG-3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.7609</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.7609</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.44649</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.44649</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDI1 -- In 1958 this site burned in the Murphy Dome fire. It is now a black spruce stand with a birch component. . Site alternate names: MD-5</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.381474</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.381474</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.879074</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.879074</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDI2 -- In 1958 this site burned in the Murphy Dome fire. It is now a mixed black spruce / birch stand. . Site alternate names: MD-7</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.389008</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.389008</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.879249</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.879249</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDI3 -- In 1958 this site burned in the Murphy Dome fire. It is now a birch stand with black spruce component. . Site alternate names: MD-6</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.382724</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.382724</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.880388</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.880388</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDI4 -- In 1958 this site burned in the Murphy Dome fire. It is now a dense, mixed stand composed mainly of black spruce with some birch and aspen. . Site alternate names: MD-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.355499</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.355499</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.882718</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.882718</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDI5 -- In 1958 this site burned in the Murphy Dome fire. It is now an open black spruce stand. . Site alternate names: MD-8</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.398187</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.398187</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.882947</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.882947</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>MDM1 -- This mature black spruce stand is located adjacent to the other Murphy Dome MD sites, in an area that did not burn in the 1958 Murphy Dome fire. . Site alternate names: MD-3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.37117</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.37117</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.871571</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.871571</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>NRM1 -- This is a lowland black spruce site. . Site alternate names: Nenana Ridge Bottom</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.82573</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.82573</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.60724</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.60724</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>NRM2 -- This is a mesic-subhygric, black spruce site. . Site alternate names: Nenana Ridge</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.55992</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.55992</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.68328</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.68328</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>SL1A -- In the summer of 2001 the Survey line fire burned a section of the Tanana flats just south of BCEF. This site was set up to match the rest of the floodplain successional sites except that instead of flooding the disturbance is fire. Before this site was burned it was and open black spruce forest with a feathermoss dominated ground cover.. Site alternate names: SL1B, BCEFY2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.2812152</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.2812152</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.65421365</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.65421365</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>SL1B -- In the summer of 2001 the Survey Line fire burned a section of the Tanana flats just south of BCEF. This site was set up to match the rest of the floodplain successional sites. Before the burn this site was an open black spruce forest with a predominantly cotton grass tussock ground cover.. Site alternate names: SL1A, BCEFY1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.2861185</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.2861185</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.64826898</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.64826898</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>TRM1 -- This is a subxeric-mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.13914</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.13914</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.25333</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.25333</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>TRM2 -- This is a subhygric, black spruce site. . Site alternate names: Tatalina River 1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.338</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.338</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.31219</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.31219</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>TRM3 -- This is a subhygric, black spruce site. . Site alternate names: Tatalina River 2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.33536</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.33536</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.31458</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.31458</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>TRM4 -- This is a mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.23179</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.23179</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.40996</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.40996</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>UP4A -- This is a subxeric-mesic, black spruce site.. Site alternate names: BCEFM4</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.2986802</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.2986802</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.76810641</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.76810641</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>UP4B -- This is a subxeric-mesic, black spruce site.. Site alternate names: BCEFM5</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.2735896</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.2735896</eastBoundingCoordinate>
+                        <northBoundingCoordinate>64.77160064</northBoundingCoordinate>
+                        <southBoundingCoordinate>64.77160064</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>UP4C -- This is a subhygric, black spruce site.. Site alternate names: CPCRWM1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.4913325</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.4913325</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15393372</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15393372</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>UP4D -- This is a subxeric, black spruce site.. Site alternate names: CPCRWM2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.5505574</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.5505574</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.16905378</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.16905378</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WCM1 -- This is a subhygric, black spruce site. . Site alternate names: Washington Creek 1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.97308</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.97308</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.12465</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.12465</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WCM2 -- This is a mesic-subhygric, black spruce site. . Site alternate names: Washington Creek 3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.97132</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.97132</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.13634</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.13634</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WCM3 -- This is a mesic-subhygric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.86305</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.86305</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15466</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15466</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WCM4 -- This is a subxeric, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.89408</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.89408</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.167267</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.167267</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI1 -- In 1971 this site burned in the Wickersham Dome fire. It is now a black spruce stand. . Site alternate names: WD-1</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.080849</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.080849</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.116602</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.116602</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI2 -- In 1971 this site burned in the Wickersham Dome fire. It is now a birch stand with some black spruce. . Site alternate names: WD-2</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.07587</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.07587</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.124643</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.124643</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI3 -- In 1971 this site burned in the Wickersham Dome fire. It is now a black spruce stand with some birch. . Site alternate names: WD-3</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.076713</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.076713</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.125453</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.125453</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI4 -- In 1971 this site burned in the Wickersham Dome fire. It is now a birch stand with some black spruce.. Site alternate names: WD-4</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.077367</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.077367</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.126346</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.126346</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI5 -- In 1971 this site burned in the Wickersham Dome fire. It is now a mixed aspen / black spruce stand with some birch. . Site alternate names: WD-6</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.018896</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.018896</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.145285</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.145285</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>WDI6 -- In 1971 this site burned in the Wickersham Dome fire. It is now an aspen stand. . Site alternate names: WD-8</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.026427</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.026427</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.148679</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.148679</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>YRM1 -- This is a subxeric-mesic, black spruce site.. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-148.92284</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-148.92284</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.56605</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.56605</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>GRM2 -- This mature black spruce stand is located adjacent to other intermediate Gerstle River GR sites, in an area that did not burn in the 1947 Gerstle fire.. Site alternate names: GR-10</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-145.063916</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-145.063916</eastBoundingCoordinate>
+                        <northBoundingCoordinate>63.787641</northBoundingCoordinate>
+                        <southBoundingCoordinate>63.787641</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <temporalCoverage>
+                     <rangeOfDates>
+                        <beginDate>
+                           <calendarDate>2000-10-06</calendarDate>
+                        </beginDate>
+                        <endDate>
+                           <calendarDate>2024-09-30</calendarDate>
+                        </endDate>
+                     </rangeOfDates>
+                  </temporalCoverage>
+               </coverage>
+            </studyExtent>
+            <samplingDescription>
+               <section>
+                  <title>Sampling Frequency</title>
+                  <para>Irregular</para>
+               </section>
+            </samplingDescription>
+         </sampling>
+      </methods>
+      <project>
+         <title>The Bonanza Creek LTER</title>
+         <personnel
+        id="VanCleveID">
+            <individualName>
+               <givenName>Keith</givenName>
+               <surName>Van Cleve</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="ChapinID">
+            <individualName>
+               <givenName>F.S.</givenName>
+               <givenName>Stuart</givenName>
+               <surName>Chapin</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Department of Biology and Wildlife; Institute of Arctic Biology: University of Alaska Fairbanks 193 Arctic Health P.O. Box 757000</deliveryPoint>
+               <city>Fairbanks</city>
+               <administrativeArea>AK</administrativeArea>
+               <postalCode>99775</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+          phonetype="voice">(907) 455-6408</phone>
+            <phone
+        phonetype="fax">(907) 474-6967</phone>
+            <electronicMailAddress>terry.chapin@alaska.edu</electronicMailAddress>
+            <onlineUrl>http://terrychapin.org/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="RuessID">
+            <individualName>
+               <givenName>Roger</givenName>
+               <givenName>W.</givenName>
+               <surName>Ruess</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+               <city>Fairbanks</city>
+               <administrativeArea>AK</administrativeArea>
+               <postalCode>99775-0180</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+          phonetype="voice">(907) 474-7153</phone>
+            <phone
+        phonetype="fax">(907) 474-6967</phone>
+            <electronicMailAddress>rwruess@alaska.edu</electronicMailAddress>
+            <onlineUrl>http://www.iab.uaf.edu/~roger_ruess/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="MackID">
+            <individualName>
+               <givenName>Michelle</givenName>
+               <givenName>Cailin</givenName>
+               <surName>Mack</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Northern Arizona University: Ecosystem Science and Society Center (ECOSS) PO Box 5620</deliveryPoint>
+               <city>Flagstaff</city>
+               <administrativeArea>AZ</administrativeArea>
+               <postalCode>86011</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+      phonetype="voice">(928) 523-9415</phone>
+            <electronicMailAddress>Michelle.Mack@nau.edu</electronicMailAddress>
+            <onlineUrl>https://macklab.nau.edu/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <funding>
+            <para>NSF Grant numbers  DEB-2224776, DEB-1636476, DEB-1026415, DEB-0620579, DEB-0423442, DEB-0080609, DEB-9810217, DEB-9211769, DEB-8702629</para>
+            <para>USDA Forest Service, Pacific Northwest Research Station (Agreement # RJVA-PNW-20-JV-11261932-018)</para>
+         </funding>
+      </project>
+      <dataTable
+      id="ca5b401170acdec2021cb143a90ea216" scope="document"
+              system="https://pasta.edirepository.org">
+         <entityName>605_RSN_ActiveLayerDepths_2024.csv</entityName>
+         <entityDescription>Active layer depth data.</entityDescription>
+         <physical>
+            <objectName>605_RSN_ActiveLayerDepths_2024.csv</objectName>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\n</recordDelimiter>
+                  <physicalLineDelimiter>\n</physicalLineDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url
+                    function="download">https://pasta.lternet.edu/package/data/eml/knb-lter-bnz/605/6/ca5b401170acdec2021cb143a90ea216</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>Date</attributeName>
+               <attributeLabel>Date</attributeLabel>
+               <attributeDefinition>The date the measurement was taken.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <dateTime>
+                     <formatString>YYYY-MM-DD</formatString>
+                  </dateTime>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Site</attributeName>
+               <attributeLabel>Site</attributeLabel>
+               <attributeDefinition>Name of site where sample was taken.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Name of site where sample was taken.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Stake</attributeName>
+               <attributeLabel>Stake</attributeLabel>
+               <attributeDefinition>Stake number where the measurements were taken.</attributeDefinition>
+               <storageType>integer</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Stake number where the measurements were taken.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <missingValueCode>
+                  <code>-9999</code>
+                  <codeExplanation>Missing Value</codeExplanation>
+               </missingValueCode>
+            </attribute>
+            <attribute>
+               <attributeName>Depth</attributeName>
+               <attributeLabel>Depth</attributeLabel>
+               <attributeDefinition>Active Layer Thicknes: The depth, in cm, from the duff/living plant interface (~3cm) to frozen soil.</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>centimeter</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <bounds>
+                           <minimum
+                    exclusive="false">0.000</minimum>
+                           <maximum
+      exclusive="false">500.000</maximum>
+                        </bounds>
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+               <missingValueCode>
+                  <code>-9999</code>
+                  <codeExplanation>Missing Value</codeExplanation>
+               </missingValueCode>
+            </attribute>
+            <attribute>
+               <attributeName>Flag</attributeName>
+               <attributeLabel>Flag</attributeLabel>
+               <attributeDefinition>This field, denotes any special circumstances particular to that data line.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>G</code>
+                              <definition>Good measurement (probe hit frozen ground)</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>N</code>
+                              <definition>No barrier hit with probe</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>R</code>
+                              <definition>Rock barrier</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>XG</code>
+                              <definition>Site not visited but assumed to have permafrost</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>XN</code>
+                              <definition>Site not visited but assumed not to have permafrost.</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>hit_type</attributeName>
+               <attributeLabel>hit_type</attributeLabel>
+               <attributeDefinition>Indicates if measurement was to rock or ice</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Indicates if measurement was to rock or ice</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>crew</attributeName>
+               <attributeLabel>crew</attributeLabel>
+               <attributeDefinition>Initials of field crew</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Initials of field crew</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>notes</attributeName>
+               <attributeLabel>notes</attributeLabel>
+               <attributeDefinition>notes</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>notes</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+         </attributeList>
+      </dataTable>
+      <otherEntity
+      id="600c5a93bb23f47756241b19c1cfa615" scope="document"
+              system="https://pasta.edirepository.org">
+         <entityName>BNZ_RegionalSiteNetworkSites.zip</entityName>
+         <entityDescription>Site location file for sites in the Regional Site Network. Zip file contains .kmz file.</entityDescription>
+         <physical>
+            <objectName>BNZ_RegionalSiteNetworkSites.zip</objectName>
+            <dataFormat>
+               <externallyDefinedFormat>
+                  <formatName>zip file</formatName>
+               </externallyDefinedFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url
+          function="download">https://pasta.lternet.edu/package/data/eml/knb-lter-bnz/605/6/600c5a93bb23f47756241b19c1cfa615</url>
+               </online>
+            </distribution>
+         </physical>
+         <entityType>zip file</entityType>
+      </otherEntity>
+   </dataset>
+   <additionalMetadata>
+      <metadata>
+         <unitList>
+            <unit
+          id="YYYY-MM-DD"/>
+            <unit id="flag"/>
+         </unitList>
+      </metadata>
+   </additionalMetadata>
+</eml:eml>

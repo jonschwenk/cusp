@@ -1,0 +1,494 @@
+FID,transect,distance,trans_distance,easting,northing,ecotype,permafrost,frost_top,frost_top_depth_flag,frost_bottom,frost_bottom_depth_flag,frost_thickness,frost_thickness_flag,water_depth,photos,notes
+0,1,0,1_0,473008.9332,6790781.807,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos0781,NA
+1,1,5,1_5,473013.9228,6790782.129,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,first empnig
+2,1,10,1_10,473018.9125,6790782.45,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+3,1,15,1_15,473023.9021,6790782.772,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+4,1,20,1_20,473028.8918,6790783.094,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+5,1,25,1_25,473033.8814,6790783.416,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0779-0780,NA
+6,1,30,1_30,473038.871,6790783.737,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,buried log
+7,1,31,1_31,473039.869,6790783.802,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+8,1,32,1_32,473040.8669,6790783.866,Lowland Moist Graminoid Shrub Meadow,1,72,,81,,-9999,,0,NA,NA
+9,1,33,1_33,473041.8648,6790783.93,Lowland Moist Graminoid Shrub Meadow,1,45,,50,GT,-9999,,0,NA,solid
+10,1,34,1_34,473042.8627,6790783.995,Rackline,1,42,,-9999,,-9999,,0,Belos 0778,2005 rackline
+11,1,35,1_35,473043.8607,6790784.059,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+12,1,36,1_36,473044.8586,6790784.124,Lowland Moist Graminoid Shrub Meadow,1,32,,-9999,,-9999,,0,NA,NA
+13,1,37,1_37,473045.8565,6790784.188,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+14,1,38,1_38,473046.8544,6790784.252,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+15,1,39,1_39,473047.8524,6790784.317,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+16,1,40,1_40,473048.8503,6790784.381,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+17,1,41,1_41,473049.8482,6790784.445,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+18,1,42,1_42,473050.8462,6790784.51,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+19,1,43,1_43,473051.8441,6790784.574,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+20,1,44,1_44,473052.842,6790784.638,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+21,1,45,1_45,473053.8399,6790784.703,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+22,1,46,1_46,473054.8379,6790784.767,Lowland Moist Graminoid Shrub Meadow,1,30,,-9999,,-9999,,0,NA,NA
+23,1,47,1_47,473055.8358,6790784.831,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+24,1,48,1_48,473056.8337,6790784.896,Lowland Moist Graminoid Shrub Meadow,1,28,,-9999,,-9999,,0,NA,NA
+25,1,49,1_49,473057.8316,6790784.96,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+26,1,50,1_50,473058.8296,6790785.024,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,Belos 0776-0777,NA
+27,1,51,1_51,473059.8275,6790785.089,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+28,1,52,1_52,473060.8254,6790785.153,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+29,1,53,1_53,473061.8234,6790785.217,Lowland Moist Graminoid Shrub Meadow,1,51,,-9999,,-9999,,0,NA,NA
+30,1,54,1_54,473062.8213,6790785.282,Lowland Moist Graminoid Shrub Meadow,1,95,,95,GT,-9999,,0,NA,NA
+31,1,55,1_55,473063.8192,6790785.346,Thermokarst Pit,1,106,,-9999,,-9999,,0,NA,edge of isolated pit
+32,1,56,1_56,473064.8171,6790785.41,Thermokarst Pit,1,92,,125,GT,-9999,,10,NA,pit
+33,1,57,1_57,473065.8151,6790785.475,Thermokarst Pit,1,111,,-9999,,-9999,,12,NA,pit
+34,1,58,1_58,473066.813,6790785.539,Thermokarst Pit,1,102,,-9999,,-9999,,7,Belos 0775,pit
+35,1,59,1_59,473067.8109,6790785.604,Thermokarst Pit,1,90,,-9999,,-9999,,12,NA,pit
+36,1,60,1_60,473068.8089,6790785.668,Thermokarst Pit,1,88,,-9999,,-9999,,0,NA,edge of pit
+37,1,61,1_61,473069.8068,6790785.732,Lowland Moist Graminoid Shrub Meadow,1,62,,-9999,,-9999,,0,NA,NA
+38,1,62,1_62,473070.8047,6790785.797,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+39,1,63,1_63,473071.8026,6790785.861,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+40,1,64,1_64,473072.8006,6790785.925,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+41,1,65,1_65,473073.7985,6790785.99,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+42,1,66,1_66,473074.7964,6790786.054,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+43,1,67,1_67,473075.7943,6790786.118,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+44,1,68,1_68,473076.7923,6790786.183,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,Belos 0774,NA
+45,2,1,2_1,473249.2222,6791280.554,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0782,NA
+46,2,2,2_2,473250.2152,6791280.673,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+47,2,3,2_3,473251.2081,6791280.791,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+48,2,4,2_4,473252.2011,6791280.909,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+49,2,5,2_5,473253.1941,6791281.027,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+50,2,6,2_6,473254.1871,6791281.146,Thermokarst Pit/Moat,0,125,GT,-9999,,-9999,,0,NA,moat
+51,2,7,2_7,473255.1801,6791281.264,Thermokarst Pit/Moat,0,125,GT,-9999,,-9999,,0,NA,NA
+52,2,8,2_8,473256.173,6791281.382,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+53,2,9,2_9,473257.166,6791281.5,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+54,2,10,2_10,473258.159,6791281.619,Thermokarst Pit/Moat,0,125,GT,-9999,,-9999,,0,NA,moat
+55,2,11,2_11,473259.152,6791281.737,Thermokarst Pit/Moat,0,125,GT,-9999,,-9999,,0,NA,moat
+56,2,12,2_12,473260.145,6791281.855,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+57,2,13,2_13,473261.1379,6791281.974,Lowland Moist Graminoid Shrub Meadow,1,34,,77,,-9999,,0,NA,NA
+58,2,14,2_14,473262.1309,6791282.092,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+59,2,15,2_15,473263.1239,6791282.21,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+60,2,16,2_16,473264.1169,6791282.328,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+61,2,17,2_17,473265.1099,6791282.447,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,2005 rackline
+62,2,18,2_18,473266.1029,6791282.565,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,wrack strewn throughout to 33m
+63,2,19,2_19,473267.0958,6791282.683,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+64,2,20,2_20,473268.0888,6791282.802,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+65,2,21,2_21,473269.0818,6791282.92,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+66,2,22,2_22,473270.0748,6791283.038,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+67,2,23,2_23,473271.0678,6791283.156,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+68,2,24,2_24,473272.0607,6791283.275,Lowland Moist Graminoid Shrub Meadow,1,28,,-9999,,-9999,,0,NA,NA
+69,2,25,2_25,473273.0537,6791283.393,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,Belos 0785-0786,NA
+70,2,26,2_26,473274.0467,6791283.511,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+71,2,27,2_27,473275.0397,6791283.629,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+72,2,28,2_28,473276.0327,6791283.748,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+73,2,29,2_29,473277.0256,6791283.866,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+74,2,30,2_30,473278.0186,6791283.984,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+75,2,31,2_31,473279.0116,6791284.103,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+76,2,32,2_32,473280.0046,6791284.221,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+77,2,33,2_33,473280.9976,6791284.339,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,end 2005 wrack line
+78,2,34,2_34,473281.9905,6791284.457,Lowland Moist Graminoid Shrub Meadow,1,30,,-9999,,-9999,,0,NA,NA
+79,2,35,2_35,473282.9835,6791284.576,Lowland Moist Graminoid Shrub Meadow,1,31,,-9999,,-9999,,0,NA,NA
+80,2,36,2_36,473283.9765,6791284.694,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+81,2,37,2_37,473284.9695,6791284.812,Lowland Moist Graminoid Shrub Meadow,1,43,,-9999,,-9999,,0,NA,NA
+82,2,38,2_38,473285.9625,6791284.931,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+83,2,39,2_39,473286.9554,6791285.049,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+84,2,40,2_40,473287.9484,6791285.167,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+85,2,41,2_41,473288.9414,6791285.285,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+86,2,42,2_42,473289.9344,6791285.404,Lowland Moist Graminoid Shrub Meadow,1,66,,-9999,,-9999,,0,NA,NA
+87,2,43,2_43,473290.9274,6791285.522,Thermoerosional gully,1,93,,125,GT,-9999,,0,Belos 0787,recent subsidence
+88,2,44,2_44,473291.9203,6791285.64,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,recent subsidence
+89,2,45,2_45,473292.9133,6791285.758,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+90,2,46,2_46,473293.9063,6791285.877,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+91,2,47,2_47,473294.8993,6791285.995,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+92,2,48,2_48,473295.8923,6791286.113,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+93,2,49,2_49,473296.8852,6791286.232,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+94,2,50,2_50,473297.8782,6791286.35,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+95,2,55,2_55,473302.8431,6791286.941,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+96,2,60,2_60,473307.808,6791287.533,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+97,2,65,2_65,473312.7729,6791288.124,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+98,2,66,2_66,473313.7659,6791288.242,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+99,2,67,2_67,473314.7589,6791288.361,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,thermoerosional gully
+100,2,68,2_68,473315.7519,6791288.479,RackLine? Thermoerosional gully,0,125,GT,-9999,,-9999,,0,Belos 0784,2005 wrack edge of gully
+101,2,69,2_69,473316.7449,6791288.597,Lowland Moist Graminoid Shrub Meadow,1,48,,125,GT,-9999,,0,NA,verified with horizontal probe
+102,2,70,2_70,473317.7378,6791288.715,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+103,2,71,2_71,473318.7308,6791288.834,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+104,2,72,2_72,473319.7238,6791288.952,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+105,2,73,2_73,473320.7168,6791289.07,Lowland Moist Graminoid Shrub Meadow,1,43,,-9999,,-9999,,0,NA,NA
+106,2,74,2_74,473321.7098,6791289.189,Lowland Moist Graminoid Shrub Meadow,1,48,,-9999,,-9999,,0,NA,NA
+107,2,75,2_75,473322.7027,6791289.307,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,Belos 0873,NA
+108,3,0,3_0,473321.0302,6790862.877,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,Belos 0793,NA
+109,3,2,3_2,473321.5434,6790864.81,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+110,3,4,3_4,473322.0566,6790866.743,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+111,3,6,3_6,473322.5698,6790868.676,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+112,3,8,3_8,473323.083,6790870.609,Lowland Moist Graminoid Shrub Meadow,1,29,,-9999,,-9999,,0,NA,NA
+113,3,10,3_10,473323.5962,6790872.542,Lowland Moist Graminoid Shrub Meadow,1,28,,-9999,,-9999,,0,NA,NA
+114,3,12,3_12,473324.1094,6790874.475,Lowland Moist Graminoid Shrub Meadow,1,31,,-9999,,-9999,,0,NA,NA
+115,3,14,3_14,473324.6226,6790876.408,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+116,3,15,3_15,473324.8792,6790877.375,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+117,3,16,3_16,473325.1358,6790878.341,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+118,3,18,3_18,473325.649,6790880.274,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+119,3,19,3_19,473325.9056,6790881.241,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0794-0795,lake edge
+120,3,20,3_20,473326.1622,6790882.207,Water,0,-999,,-9999,,-9999,,-9999,NA,lake
+121,3,36,3_36,473330.2678,6790897.672,Water,0,-999,,-9999,,-9999,,-9999,NA,lake
+122,3,37,3_37,473330.5244,6790898.638,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,lake edge
+123,3,38,3_38,473330.781,6790899.605,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0802-0803,NA
+124,3,40,3_40,473331.2942,6790901.538,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+125,3,42,3_42,473331.8074,6790903.471,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+126,3,43,3_43,473332.064,6790904.437,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+127,3,44,3_44,473332.3206,6790905.404,Lowland Moist Graminoid Shrub Meadow,1,28,,90,,-9999,,0,NA,local mound
+128,3,45,3_45,473332.5772,6790906.37,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+129,3,46,3_46,473332.8338,6790907.337,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+130,3,48,3_48,473333.347,6790909.27,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+131,3,49,3_49,473333.6036,6790910.236,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+132,3,57,3_57,473335.6564,6790917.969,Water,0,-999,,-9999,,-9999,,-9999,Belos 0796,lake edge
+133,3,58,3_58,473335.913,6790918.935,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+134,3,60,3_60,473336.4262,6790920.868,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+135,3,62,3_62,473336.9394,6790922.801,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+136,3,64,3_64,473337.4526,6790924.734,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+137,3,65,3_65,473337.7092,6790925.701,Lowland Moist Graminoid Shrub Meadow,1,48,,82,,-9999,,0,NA,NA
+138,3,66,3_66,473337.9658,6790926.667,Lowland Moist Graminoid Shrub Meadow,1,51,,-9999,,-9999,,0,NA,NA
+139,3,68,3_68,473338.479,6790928.6,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+140,3,70,3_70,473338.9922,6790930.533,Lowland Moist Graminoid Shrub Meadow,1,47,,-9999,,-9999,,0,NA,NA
+141,3,72,3_72,473339.5054,6790932.466,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+142,3,74,3_74,473340.0186,6790934.399,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,Belos 0799-0800,NA
+143,3,76,3_76,473340.5318,6790936.332,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+144,3,78,3_78,473341.045,6790938.265,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+145,3,80,3_80,473341.5582,6790940.198,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+146,3,82,3_82,473342.0714,6790942.131,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+147,3,84,3_84,473342.5846,6790944.064,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,bristle-thighed curlew landed near plot
+148,3,86,3_86,473343.0978,6790945.998,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+149,3,88,3_88,473343.611,6790947.931,Lowland Moist Graminoid Shrub Meadow,1,57,,-9999,,-9999,,0,NA,NA
+150,3,90,3_90,473344.1242,6790949.864,Lowland Moist Graminoid Shrub Meadow,1,57,,-9999,,-9999,,0,NA,NA
+151,3,92,3_92,473344.6374,6790951.797,Lowland Moist Graminoid Shrub Meadow,1,46,,-9999,,-9999,,0,NA,NA
+152,3,93,3_93,473344.894,6790952.763,Lowland Moist Graminoid Shrub Meadow,1,74,,-9999,,-9999,,0,NA,NA
+153,3,94,3_94,473345.1506,6790953.73,Lowland Moist Graminoid Shrub Meadow,1,109,,125,GT,-9999,,0,NA,NA
+154,3,95,3_95,473345.4072,6790954.696,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0798,NA
+155,3,97,3_97,473345.9204,6790956.629,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+156,3,100,3_100,473346.6902,6790959.529,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0797,NA
+157,4,0,4_0,473083.7552,6788376.063,Water,0,125,GT,-9999,,-9999,,-9999,Belos 0815-0816,lake
+158,4,1,4_1,473082.8799,6788376.547,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+159,4,2,4_2,473082.0046,6788377.03,Lowland Moist Graminoid Shrub Meadow,1,62,,73,,-9999,,0,NA,NA
+160,4,3,4_3,473081.1293,6788377.514,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+161,4,4,4_4,473080.254,6788377.997,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+162,4,6,4_6,473078.5034,6788378.965,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+163,4,8,4_8,473076.7528,6788379.932,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,moose print
+164,4,10,4_10,473075.0022,6788380.899,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+165,4,12,4_12,473073.2516,6788381.866,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+166,4,14,4_14,473071.501,6788382.833,Lowland Moist Graminoid Shrub Meadow,1,32,,-9999,,-9999,,0,NA,NA
+167,4,16,4_16,473069.7504,6788383.8,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+168,4,18,4_18,473067.9998,6788384.768,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+169,4,20,4_20,473066.2492,6788385.735,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+170,4,22,4_22,473064.4986,6788386.702,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+171,4,24,4_24,473062.748,6788387.669,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,Belos 0813-0814,NA
+172,4,26,4_26,473060.9974,6788388.636,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,Belos 0812,NA
+173,4,28,4_28,473059.2468,6788389.603,Lowland Moist Graminoid Shrub Meadow,1,47,,-9999,,-9999,,0,NA,NA
+174,4,30,4_30,473057.4963,6788390.571,Lowland Moist Graminoid Shrub Meadow,1,43,,-9999,,-9999,,0,NA,NA
+175,4,32,4_32,473055.7457,6788391.538,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+176,4,34,4_34,473053.9951,6788392.505,Lowland Moist Graminoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+177,4,36,4_36,473052.2445,6788393.472,Lowland Moist Graminoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+178,4,38,4_38,473050.4939,6788394.439,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+179,4,40,4_40,473048.7433,6788395.406,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,Belos 0811,NA
+180,4,42,4_42,473046.9927,6788396.374,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+181,4,44,4_44,473045.2421,6788397.341,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+182,4,46,4_46,473043.4915,6788398.308,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+183,4,48,4_48,473041.7409,6788399.275,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+184,4,50,4_50,473039.9903,6788400.242,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,Belos 0818,NA
+185,5,0,5_0,472875.4452,6788725.936,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0842,NA
+186,5,2,5_2,472877.3359,6788726.588,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+187,5,4,5_4,472879.2266,6788727.24,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+188,5,6,5_6,472881.1173,6788727.892,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+189,5,8,5_8,472883.008,6788728.544,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+190,5,9,5_9,472883.9534,6788728.87,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+191,5,10,5_9.6,472884.5206,6788729.066,RackLine,1,47,,-9999,,-9999,,0,Belos 0841,wrack litter (2005?)
+192,5,10,5_10,472884.8988,6788729.196,RackLine,1,26,,-9999,,-9999,,0,NA,NA
+193,5,11,5_11,472885.8441,6788729.522,RackLine,1,36,,-9999,,-9999,,0,NA,NA
+194,5,12,5_12,472886.7895,6788729.848,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+195,5,14,5_14,472888.6802,6788730.501,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+196,5,16,5_16,472890.5709,6788731.153,Lowland Moist Graminoid Shrub Meadow,1,46,,-9999,,-9999,,0,NA,talik here too
+197,5,18,5_18,472892.4616,6788731.805,RackLine,1,52,,-9999,,-9999,,0,NA,"edge of dense driftwood, pfrost @ 86, seasonal frost @ 52, lower edge of seasonal frost @ 60"
+198,5,19,5_19,472893.407,6788732.131,RackLine,1,38,,-9999,,-9999,,0,NA,NA
+199,5,20,5_20,472894.3523,6788732.457,RackLine,1,33,,-9999,,-9999,,0,Belos 0840,NA
+200,5,21,5_21,472895.2977,6788732.783,RackLine,1,35,,-9999,,-9999,,0,NA,NA
+201,5,22,5_22,472896.243,6788733.109,RackLine,1,32,,-9999,,-9999,,0,NA,NA
+202,5,23,5_23,472897.1884,6788733.435,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+203,5,24,5_24,472898.1337,6788733.761,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+204,5,25,5_25,472899.0791,6788734.087,Lowland Moist Graminoid Shrub Meadow,1,30,,-9999,,-9999,,0,Belos 0838-0839,NA
+205,5,26,5_26,472900.0245,6788734.413,Lowland Moist Graminoid Shrub Meadow,1,32,,-9999,,-9999,,0,NA,NA
+206,5,28,5_28,472901.9152,6788735.065,Lowland Moist Graminoid Shrub Meadow,1,29,,-9999,,-9999,,0,NA,NA
+207,5,30,5_30,472903.8059,6788735.717,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+208,5,32,5_32,472905.6966,6788736.369,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+209,5,34,5_34,472907.5873,6788737.021,Lowland Moist Graminoid Shrub Meadow,1,43,,-9999,,-9999,,0,NA,NA
+210,5,36,5_36,472909.478,6788737.673,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+211,5,38,5_38,472911.3687,6788738.326,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+212,5,40,5_40,472913.2594,6788738.978,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+213,5,42,5_42,472915.1501,6788739.63,Lowland Moist Graminoid Shrub Meadow,1,31,,-9999,,-9999,,0,NA,NA
+214,5,44,5_44,472917.0409,6788740.282,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+215,5,46,5_46,472918.9316,6788740.934,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+216,5,48,5_48,472920.8223,6788741.586,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+217,5,50,5_50,472922.713,6788742.238,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,Belos 0838,NA
+218,6,0,6_0,473019.9162,6789304.453,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0887,NA
+219,6,2,6_2,473021.8491,6789303.939,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+220,6,4,6_4,473023.7821,6789303.426,Lowland Moist Graminoid Shrub Meadow?,1,47,,57,,10,,0,NA,NA
+221,6,5,6_5,473024.7485,6789303.169,Lowland Moist Graminoid Shrub Meadow?,1,48,,74,,26,,0,NA,NA
+222,6,6,6_6,473025.715,6789302.912,Lowland Moist Graminoid Shrub Meadow?,1,43,,59,,16,,0,NA,NA
+223,6,7,6_7,473026.6815,6789302.656,Lowland Moist Graminoid Shrub Meadow?,1,39,,60,GT,21,GT,0,NA,NA
+224,6,8,6_8,473027.648,6789302.399,Lowland Moist Graminoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+225,6,10,6_10,473029.5809,6789301.885,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+226,6,12,6_12,473031.5138,6789301.372,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+227,6,13,6_13,473032.4803,6789301.115,Rackline,1,37,,-9999,,-9999,,0,Belos 0886,NA
+228,6,14,6_14,473033.4468,6789300.858,Rackline,1,38,,-9999,,-9999,,0,NA,NA
+229,6,15,6_15,473034.4132,6789300.601,Rackline,1,34,,-9999,,-9999,,0,NA,NA
+230,6,16,6_16,473035.3797,6789300.344,Lowland Moist Graminoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+231,6,17,6_17,473036.3462,6789300.088,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+232,6,18,6_18,473037.3126,6789299.831,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+233,6,19,6_19,473038.2791,6789299.574,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+234,6,20,6_20,473039.2456,6789299.317,Lowland Moist Graminoid Shrub Meadow,1,52,,-9999,,-9999,,0,NA,NA
+235,6,21,6_21,473040.212,6789299.061,Lowland Moist Graminoid Shrub Meadow,1,64,,-9999,,-9999,,0,Belos 0885,local depression
+236,6,22,6_22,473041.1785,6789298.804,Lowland Moist Graminoid Shrub Meadow,1,57,,-9999,,-9999,,0,NA,local pit
+237,6,23,6_23,473042.145,6789298.547,Lowland Moist Graminoid Shrub Meadow,1,49,,-9999,,-9999,,0,NA,NA
+238,6,24,6_24,473043.1115,6789298.29,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+239,6,25,6_25,473044.0779,6789298.033,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,"Belos 0884, 0888-0889",NA
+240,6,26,6_26,473045.0444,6789297.777,Lowland Moist Graminoid Shrub Meadow,1,47,,-9999,,-9999,,0,NA,NA
+241,6,27,6_27,473046.0109,6789297.52,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,connected gully
+242,6,28,6_28,473046.9773,6789297.263,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+243,6,30,6_30,473048.9103,6789296.749,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+244,6,32,6_32,473050.8432,6789296.236,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+245,6,34,6_34,473052.7761,6789295.722,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+246,6,36,6_36,473054.7091,6789295.209,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,Belos 0883,NA
+247,6,37,6_37,473055.6755,6789294.952,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+248,6,38,6_38,473056.642,6789294.695,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,margin of local mound
+249,6,39,6_39,473057.6085,6789294.438,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,margin of local mound
+250,6,40,6_40,473058.575,6789294.182,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0882,margin of local mound
+251,6,41,6_41,473059.5414,6789293.925,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,margin of local mound
+252,6,42,6_42,473060.5079,6789293.668,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,NA,small mound w/ permafrost adjacent to point at 42m
+253,6,43,6_43,473061.4744,6789293.411,Lowland Moist Graminoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+254,6,44,6_44,473062.4408,6789293.155,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,driftwood
+255,6,45,6_45,473063.4073,6789292.898,Lowland Moist Graminoid Shrub Meadow,1,46,,-9999,,-9999,,0,NA,NA
+256,6,46,6_46,473064.3738,6789292.641,Lowland Moist Graminoid Shrub Meadow,1,50,,-9999,,-9999,,0,NA,NA
+257,6,47,6_47,473065.3402,6789292.384,Lowland Moist Graminoid Shrub Meadow,1,64,,106,GT,42,GT,0,Belos 0881,edge of mound
+258,6,48,6_48,473066.3067,6789292.127,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,Belos 0891,connected thermoerosional gully
+259,6,50,6_50,473068.2396,6789291.614,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+260,6,51,6_51,473069.2061,6789291.357,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+261,6,52,6_52,473070.1726,6789291.1,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0879,edge of mound
+262,6,53,6_53,473071.1391,6789290.843,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+263,6,54,6_54,473072.1055,6789290.587,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,NA,NA
+264,6,55,6_55,473073.072,6789290.33,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+265,6,56,6_56,473074.0385,6789290.073,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+266,6,57,6_57,473075.0049,6789289.816,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+267,6,58,6_58,473075.9714,6789289.56,Lowland Moist Graminoid Shrub Meadow,0,125,GT,-9999,,-9999,,0,Belos 0878,edge of mound
+268,6,59,6_59,473076.9379,6789289.303,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,connected gully
+269,6,60,6_60,473077.9043,6789289.046,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+270,6,61,6_61,473078.8708,6789288.789,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+271,6,62,6_62,473079.8373,6789288.532,Lowland Moist Graminoid Shrub Meadow,1,57,,90,,33,,0,NA,NA
+272,6,63,6_63,473080.8037,6789288.276,Lowland Moist Graminoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+273,6,64,6_64,473081.7702,6789288.019,Lowland Moist Graminoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+274,6,65,6_65,473082.7367,6789287.762,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+275,6,66,6_66,473083.7031,6789287.505,Lowland Moist Graminoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+276,6,67,6_67,473084.6696,6789287.248,Lowland Moist Graminoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+277,6,68,6_68,473085.6361,6789286.992,Lowland Moist Graminoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+278,6,69,6_69,473086.6026,6789286.735,Lowland Moist Graminoid Shrub Meadow,1,33,,-9999,,-9999,,0,Belos 0877,on wrack
+279,6,70,6_70,473087.569,6789286.478,Lowland Moist Graminoid Shrub Meadow,1,52,,-9999,,-9999,,0,NA,NA
+280,6,71,6_71,473088.5355,6789286.221,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,depression
+281,6,72,6_72,473089.502,6789285.965,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+282,6,73,6_73,473090.4684,6789285.708,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+283,6,74,6_74,473091.4349,6789285.451,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+284,6,75,6_75,473092.4014,6789285.194,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,Belos 0892-0893,NA
+285,6,76,6_76,473093.3678,6789284.937,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+286,6,77,6_77,473094.3343,6789284.681,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+287,6,78,6_78,473095.3008,6789284.424,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+288,6,79,6_79,473096.2672,6789284.167,Lowland Moist Graminoid Shrub Meadow?,0,125,GT,-9999,,-9999,,0,NA,NA
+289,6,80,6_80,473097.2337,6789283.91,Lowland Moist Graminoid Shrub Meadow,1,79,,80,GT,1,GT,0,Belos 0875,plateau edge w/ driftwood
+290,6,81,6_81,473098.2002,6789283.654,Lowland Moist Graminoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+291,6,82,6_82,473099.1667,6789283.397,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+292,6,84,6_84,473101.0996,6789282.883,Lowland Moist Graminoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+293,6,86,6_86,473103.0325,6789282.37,Lowland Moist Graminoid Shrub Meadow,1,35,,-9999,,-9999,,0,NA,NA
+294,6,88,6_88,473104.9655,6789281.856,Lowland Moist Graminoid Shrub Meadow,1,37,,-9999,,-9999,,0,Belos 0874,NA
+295,7,0,7_0,471554.815,6789667.324,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0709,edge of pond
+296,7,1,7_1,471553.8532,6789667.05,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+297,7,2,7_2,471552.8913,6789666.777,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+298,7,3,7_3,471551.9295,6789666.503,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+299,7,4,7_4,471550.9677,6789666.229,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+300,7,5,7_5,471550.0059,6789665.956,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+301,7,6,7_6,471549.044,6789665.682,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+302,7,7,7_7,471548.0822,6789665.408,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+303,7,8,7_8,471547.1204,6789665.135,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+304,7,9,7_9,471546.1586,6789664.861,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+305,7,10,7_10,471545.1967,6789664.587,Lowland Wet Sedge Meadow,0,122,,-9999,,-9999,,0,NA,NA
+306,7,11,7_11,471544.2349,6789664.314,Lowland Wet Sedge Meadow,1,111,,-9999,,-9999,,0,NA,NA
+307,7,12,7_12,471543.2731,6789664.04,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+308,7,13,7_13,471542.3113,6789663.766,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+309,7,14,7_14,471541.3494,6789663.493,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+310,7,15,7_15,471540.3876,6789663.219,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+311,7,16,7_16,471539.4258,6789662.945,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+312,7,17,7_17,471538.4639,6789662.672,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+313,7,18,7_18,471537.5021,6789662.398,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+314,7,19,7_19,471536.5403,6789662.124,Lowland Wet Sedge Meadow,1,72,,130,,-9999,,0,Belos 0708,"patially thawed to 130, first betnan, old driftwood"
+315,7,20,7_20,471535.5785,6789661.851,Lowland Wet Sedge Meadow,1,54,,-9999,,-9999,,0,NA,NA
+316,7,21,7_21,471534.6166,6789661.577,Lowland Wet Sedge Meadow,1,46,,-9999,,-9999,,0,NA,NA
+317,7,22,7_22,471533.6548,6789661.304,Lowland Wet Sedge Meadow,1,61,,-9999,,-9999,,0,NA,NA
+318,7,23,7_23,471532.693,6789661.03,Lowland Moist Grmainoid Shrub Meadow,1,63,,-9999,,-9999,,0,NA,NA
+319,7,24,7_24,471531.7312,6789660.756,Lowland Moist Grmainoid Shrub Meadow,1,50,,-9999,,-9999,,0,NA,first lichen
+320,7,25,7_25,471530.7693,6789660.483,Lowland Moist Grmainoid Shrub Meadow,1,46,,-9999,,-9999,,0,Belos 0706-0707,NA
+321,7,26,7_26,471529.8075,6789660.209,Lowland Moist Grmainoid Shrub Meadow,1,51,,-9999,,-9999,,0,NA,NA
+322,7,27,7_27,471528.8457,6789659.935,Lowland Moist Grmainoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+323,7,28,7_28,471527.8838,6789659.662,Lowland Moist Grmainoid Shrub Meadow,1,34,,-9999,,-9999,,0,NA,NA
+324,7,29,7_29,471526.922,6789659.388,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+325,7,30,7_30,471525.9602,6789659.114,Lowland Moist Grmainoid Shrub Meadow,1,43,,-9999,,-9999,,0,NA,NA
+326,7,31,7_31,471524.9984,6789658.841,Lowland Moist Grmainoid Shrub Meadow,1,46,,-9999,,-9999,,0,NA,NA
+327,7,32,7_32,471524.0365,6789658.567,Lowland Moist Grmainoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+328,7,33,7_33,471523.0747,6789658.293,Lowland Moist Grmainoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+329,7,34,7_34,471522.1129,6789658.02,Lowland Moist Grmainoid Shrub Meadow,1,41,,-9999,,-9999,,0,NA,NA
+330,7,35,7_35,471521.1511,6789657.746,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+331,7,36,7_36,471520.1892,6789657.472,Lowland Moist Grmainoid Shrub Meadow,1,30,,-9999,,-9999,,0,NA,NA
+332,7,37,7_37,471519.2274,6789657.199,Lowland Moist Grmainoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+333,7,38,7_38,471518.2656,6789656.925,Lowland Moist Grmainoid Shrub Meadow,1,37,,-9999,,-9999,,0,NA,NA
+334,7,39,7_39,471517.3038,6789656.651,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+335,7,40,7_40,471516.3419,6789656.378,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+336,7,41,7_41,471515.3801,6789656.104,Lowland Moist Grmainoid Shrub Meadow,1,44,,-9999,,-9999,,0,NA,NA
+337,7,42,7_42,471514.4183,6789655.83,Lowland Moist Grmainoid Shrub Meadow,1,38,,-9999,,-9999,,0,NA,NA
+338,7,43,7_43,471513.4564,6789655.557,Lowland Moist Grmainoid Shrub Meadow,1,42,,-9999,,-9999,,0,NA,NA
+339,7,44,7_44,471512.4946,6789655.283,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+340,7,45,7_45,471511.5328,6789655.009,Lowland Moist Grmainoid Shrub Meadow,1,48,,-9999,,-9999,,0,NA,NA
+341,7,46,7_46,471510.571,6789654.736,Lowland Moist Grmainoid Shrub Meadow,1,45,,-9999,,-9999,,0,NA,NA
+342,7,47,7_47,471509.6091,6789654.462,Lowland Moist Grmainoid Shrub Meadow,1,36,,-9999,,-9999,,0,NA,NA
+343,7,48,7_48,471508.6473,6789654.188,Lowland Moist Grmainoid Shrub Meadow,1,40,,-9999,,-9999,,0,NA,NA
+344,7,49,7_49,471507.6855,6789653.915,Lowland Moist Grmainoid Shrub Meadow,1,39,,-9999,,-9999,,0,NA,NA
+345,7,50,7_50,471506.7237,6789653.641,Lowland Moist Grmainoid Shrub Meadow,1,43,,-9999,,-9999,,0,Belos 0705,NA
+346,8,0,8_0,474029.5753,6789592.385,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0742,NA
+347,8,3,8_3,474027.687,6789590.054,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+348,8,5,8_5,474026.4281,6789588.5,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+349,8,7,8_7,474025.1692,6789586.946,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+350,8,10,8_10,474023.2808,6789584.615,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+351,8,15,8_15,474020.1336,6789580.729,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+352,8,20,8_20,474016.9863,6789576.844,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+353,8,25,8_25,474013.8391,6789572.959,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0743-0744,NA
+354,8,30,8_30,474010.6918,6789569.074,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+355,8,35,8_35,474007.5446,6789565.189,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+356,8,40,8_40,474004.3973,6789561.303,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+357,8,45,8_45,474001.2501,6789557.418,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+358,8,50,8_50,473998.1028,6789553.533,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+359,8,55,8_55,473994.9556,6789549.648,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0747,old driftwood at 58
+360,8,60,8_60,473991.8083,6789545.763,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+361,8,65,8_65,473988.6611,6789541.877,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0745-0746,NA
+362,8,67,8_67,473987.4022,6789540.323,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+363,8,68,8_68,473986.7728,6789539.546,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+364,8,69,8_69,473986.1433,6789538.769,Lowland Wet Sedge Meadow?,1,85,,88,,-9999,,0,NA,NA
+365,8,70,8_70,473985.5139,6789537.992,Lowland Wet Sedge Meadow?,1,81,,91,,-9999,,0,NA,NA
+366,8,71,8_71,473984.8844,6789537.215,Lowland Wet Sedge Meadow?,1,80,,91,,-9999,,0,NA,driftwood
+367,8,72,8_72,473984.255,6789536.438,Lowland Wet Sedge Meadow?,1,71,,92,,-9999,,0,NA,NA
+368,8,73,8_73,473983.6255,6789535.661,Lowland Wet Sedge Meadow?,1,59,,95,,-9999,,0,NA,NA
+369,8,74,8_74,473982.9961,6789534.884,Lowland Moist Graminoid Sedge Meadow,1,51,,93,,-9999,,0,NA,NA
+370,8,75,8_75,473982.3666,6789534.107,Lowland Moist Graminoid Sedge Meadow,1,70,,95,,-9999,,0,NA,NA
+371,8,76,8_76,473981.7372,6789533.33,Lowland Moist Graminoid Sedge Meadow,1,51,,90,,-9999,,0,NA,NA
+372,8,77,8_77,473981.1077,6789532.553,Lowland Moist Graminoid Sedge Meadow,1,50,,65,GT,-9999,,0,Belos 0748-0749,local depression
+373,8,78,8_78,473980.4783,6789531.776,Lowland Moist Graminoid Sedge Meadow,1,41,,-9999,,-9999,,0,NA,first lichen
+374,8,79,8_79,473979.8488,6789530.999,Lowland Moist Graminoid Sedge Meadow,1,39,,-9999,,-9999,,0,NA,NA
+375,8,80,8_80,473979.2194,6789530.222,Lowland Moist Graminoid Sedge Meadow,1,37,,-9999,,-9999,,0,NA,NA
+376,8,81,8_81,473978.5899,6789529.445,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+377,8,82,8_82,473977.9605,6789528.668,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+378,8,83,8_83,473977.331,6789527.891,Lowland Moist Graminoid Sedge Meadow,1,41,,-9999,,-9999,,0,NA,NA
+379,8,84,8_84,473976.7016,6789527.114,Lowland Moist Graminoid Sedge Meadow,1,65,,90,GT,-9999,,0,NA,NA
+380,8,85,8_85,473976.0721,6789526.336,Lowland Moist Graminoid Sedge Meadow,1,79,,-9999,,-9999,,0,NA,NA
+381,8,86,8_86,473975.4427,6789525.559,Lowland Moist Graminoid Sedge Meadow,1,78,,-9999,,-9999,,0,NA,NA
+382,8,87,8_87,473974.8132,6789524.782,Lowland Moist Graminoid Sedge Meadow,1,99,,-9999,,-9999,,0,NA,NA
+383,8,88,8_88,473974.1838,6789524.005,Lowland Moist Graminoid Sedge Meadow,1,111,,125,GT,-9999,,0,NA,NA
+384,8,89,8_89,473973.5543,6789523.228,Lowland Moist Graminoid Sedge Meadow,1,97,,125,GT,-9999,,0,NA,NA
+385,8,90,8_90,473972.9249,6789522.451,Lowland Moist Graminoid Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+386,8,91,8_91,473972.2954,6789521.674,Lowland Moist Graminoid Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+387,8,92,8_92,473971.666,6789520.897,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,connected gully depression 92-101
+388,8,93,8_93,473971.0365,6789520.12,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+389,8,94,8_94,473970.4071,6789519.343,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+390,8,95,8_95,473969.7776,6789518.566,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+391,8,96,8_96,473969.1482,6789517.789,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+392,8,97,8_97,473968.5187,6789517.012,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+393,8,98,8_98,473967.8893,6789516.235,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+394,8,99,8_99,473967.2598,6789515.458,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+395,8,100,8_100,473966.6304,6789514.681,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+396,8,101,8_101,473966.0009,6789513.904,Thermoerosional gully,0,125,GT,-9999,,-9999,,0,NA,NA
+397,8,102,8_102,473965.3715,6789513.127,Lowland Moist Graminoid Sedge Meadow,1,69,,125,GT,-9999,,0,NA,NA
+398,8,103,8_103,473964.742,6789512.35,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+399,8,104,8_104,473964.1126,6789511.573,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+400,8,105,8_105,473963.4831,6789510.796,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+401,8,106,8_106,473962.8537,6789510.019,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,old buried log 104-108
+402,8,107,8_107,473962.2242,6789509.242,Lowland Moist Graminoid Sedge Meadow,1,31,,-9999,,-9999,,0,NA,NA
+403,8,108,8_108,473961.5948,6789508.465,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,NA
+404,8,109,8_109,473960.9653,6789507.687,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+405,8,110,8_110,473960.3359,6789506.91,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,NA
+406,8,111,8_111,473959.7064,6789506.133,Lowland Moist Graminoid Sedge Meadow,1,37,,-9999,,-9999,,0,NA,NA
+407,8,112,8_112,473959.077,6789505.356,Lowland Moist Graminoid Sedge Meadow,1,34,,-9999,,-9999,,0,NA,NA
+408,8,113,8_113,473958.4475,6789504.579,Lowland Moist Graminoid Sedge Meadow,1,31,,-9999,,-9999,,0,NA,NA
+409,8,114,8_114,473957.8181,6789503.802,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+410,8,115,8_115,473957.1886,6789503.025,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,NA
+411,8,116,8_116,473956.5592,6789502.248,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,NA
+412,8,117,8_117,473955.9297,6789501.471,Lowland Moist Graminoid Sedge Meadow,1,37,,-9999,,-9999,,0,NA,NA
+413,8,118,8_118,473955.3003,6789500.694,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+414,8,119,8_119,473954.6708,6789499.917,Lowland Moist Graminoid Sedge Meadow,1,42,,-9999,,-9999,,0,NA,NA
+415,8,120,8_120,473954.0414,6789499.14,Lowland Moist Graminoid Sedge Meadow,1,51,,-9999,,-9999,,0,NA,local depression with erisch
+416,8,121,8_121,473953.4119,6789498.363,Lowland Moist Graminoid Sedge Meadow,1,57,,-9999,,-9999,,0,NA,NA
+417,8,122,8_122,473952.7825,6789497.586,Lowland Moist Graminoid Sedge Meadow,1,57,,-9999,,-9999,,0,Belos 0752,NA
+418,8,123,8_123,473952.153,6789496.809,Lowland Moist Graminoid Sedge Meadow,1,57,,-9999,,-9999,,0,NA,hard frost
+419,8,124,8_124,473951.5236,6789496.032,Lowland Moist Graminoid Sedge Meadow,1,52,,-9999,,-9999,,0,NA,end depression
+420,8,125,8_125,473950.8941,6789495.255,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+421,8,126,8_126,473950.2647,6789494.478,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+422,8,127,8_127,473949.6352,6789493.701,Lowland Moist Graminoid Sedge Meadow,1,31,,-9999,,-9999,,0,NA,NA
+423,8,128,8_128,473949.0058,6789492.924,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+424,8,129,8_129,473948.3763,6789492.147,Lowland Moist Graminoid Sedge Meadow,1,34,,-9999,,-9999,,0,NA,NA
+425,8,130,8_130,473947.7469,6789491.37,Lowland Moist Graminoid Sedge Meadow,1,46,,-9999,,-9999,,0,Belos 0753,NA
+426,9,0,9_0,473859.8583,6789394.832,Lowland Moist Graminoid Sedge Meadow,1,34,,-9999,,-9999,,0,Belos 0754,NA
+427,9,1,9_1,473859.3427,6789393.975,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+428,9,2,9_2,473858.8271,6789393.118,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+429,9,3,9_3,473858.3116,6789392.261,Lowland Moist Graminoid Sedge Meadow,1,58,,-9999,,-9999,,0,NA,NA
+430,9,4,9_4,473857.796,6789391.405,Thermokarst Pit,1,68,,88,GT,-9999,,11,NA,NA
+431,9,5,9_5,473857.2804,6789390.548,Thermokarst Pit,1,78,,-9999,,-9999,,14,NA,see ELS plot T-T01-V02
+432,9,6,9_6,473856.7648,6789389.691,Thermokarst Pit,1,71,,-9999,,-9999,,28,NA,NA
+433,9,7,9_7,473856.2492,6789388.834,Thermokarst Pit,1,78,,-9999,,-9999,,20,NA,NA
+434,9,8,9_8,473855.7337,6789387.977,Thermokarst Pit,1,100,,-9999,,-9999,,21,NA,NA
+435,9,9,9_9,473855.2181,6789387.12,Thermokarst Pit,1,72,,-9999,,-9999,,22,NA,NA
+436,9,10,9_10,473854.7025,6789386.264,Thermokarst Pit,1,79,,-9999,,-9999,,7,NA,NA
+437,9,11,9_11,473854.1869,6789385.407,Thermokarst Pit,1,72,,-9999,,-9999,,0,NA,edge of isolated pit
+438,9,12,9_12,473853.6713,6789384.55,Lowland Moist Graminoid Sedge Meadow,1,42,,-9999,,-9999,,0,NA,NA
+439,9,13,9_13,473853.1557,6789383.693,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,NA
+440,9,14,9_14,473852.6402,6789382.836,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,NA
+441,9,15,9_15,473852.1246,6789381.979,Lowland Moist Graminoid Sedge Meadow,1,29,,-9999,,-9999,,0,NA,NA
+442,9,16,9_16,473851.609,6789381.123,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,NA
+443,9,17,9_17,473851.0934,6789380.266,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+444,9,18,9_18,473850.5778,6789379.409,Lowland Moist Graminoid Sedge Meadow,1,43,,-9999,,-9999,,0,NA,NA
+445,9,19,9_19,473850.0623,6789378.552,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,NA
+446,9,20,9_20,473849.5467,6789377.695,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+447,9,21,9_21,473849.0311,6789376.838,Lowland Moist Graminoid Sedge Meadow,1,22,,-9999,,-9999,,0,NA,NA
+448,9,22,9_22,473848.5155,6789375.982,Lowland Moist Graminoid Sedge Meadow,1,37,,-9999,,-9999,,0,NA,NA
+449,9,23,9_23,473847.9999,6789375.125,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+450,9,24,9_24,473847.4844,6789374.268,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,NA
+451,9,25,9_25,473846.9688,6789373.411,Lowland Moist Graminoid Sedge Meadow,1,31,,-9999,,-9999,,0,Belos 0764-0765,NA
+452,9,26,9_26,473846.4532,6789372.554,Lowland Moist Graminoid Sedge Meadow,1,35,,-9999,,-9999,,0,NA,NA
+453,9,27,9_27,473845.9376,6789371.697,Lowland Moist Graminoid Sedge Meadow,1,34,,-9999,,-9999,,0,NA,NA
+454,9,28,9_28,473845.422,6789370.84,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,NA,see also ELS plot T-T01-V01
+455,9,29,9_29,473844.9065,6789369.984,Lowland Moist Graminoid Sedge Meadow,1,45,,-9999,,-9999,,0,NA,NA
+456,9,30,9_30,473844.3909,6789369.127,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+457,9,31,9_31,473843.8753,6789368.27,Lowland Moist Graminoid Sedge Meadow,1,43,,-9999,,-9999,,0,NA,NA
+458,9,32,9_32,473843.3597,6789367.413,Lowland Moist Graminoid Sedge Meadow,1,47,,-9999,,-9999,,0,NA,NA
+459,9,33,9_33,473842.8441,6789366.556,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+460,9,34,9_34,473842.3285,6789365.699,Lowland Moist Graminoid Sedge Meadow,1,39,,-9999,,-9999,,0,NA,NA
+461,9,35,9_35,473841.813,6789364.843,Lowland Moist Graminoid Sedge Meadow,1,45,,-9999,,-9999,,0,NA,NA
+462,9,36,9_36,473841.2974,6789363.986,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+463,9,37,9_37,473840.7818,6789363.129,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+464,9,38,9_38,473840.2662,6789362.272,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+465,9,39,9_39,473839.7506,6789361.415,Lowland Moist Graminoid Sedge Meadow,1,35,,-9999,,-9999,,0,NA,NA
+466,9,40,9_40,473839.2351,6789360.558,Lowland Moist Graminoid Sedge Meadow,1,40,,-9999,,-9999,,0,NA,NA
+467,9,41,9_41,473838.7195,6789359.702,Lowland Moist Graminoid Sedge Meadow,1,41,,-9999,,-9999,,0,NA,NA
+468,9,42,9_42,473838.2039,6789358.845,Lowland Moist Graminoid Sedge Meadow,1,37,,-9999,,-9999,,0,NA,NA
+469,9,43,9_43,473837.6883,6789357.988,Lowland Moist Graminoid Sedge Meadow,1,33,,-9999,,-9999,,0,NA,NA
+470,9,44,9_44,473837.1727,6789357.131,Lowland Moist Graminoid Sedge Meadow,1,31,,-9999,,-9999,,0,NA,NA
+471,9,45,9_45,473836.6572,6789356.274,Lowland Moist Graminoid Sedge Meadow,1,44,,-9999,,-9999,,0,NA,NA
+472,9,46,9_46,473836.1416,6789355.417,Lowland Moist Graminoid Sedge Meadow,1,52,,-9999,,-9999,,0,NA,NA
+473,9,47,9_47,473835.626,6789354.56,Lowland Moist Graminoid Sedge Meadow,1,49,,-9999,,-9999,,0,NA,NA
+474,9,48,9_48,473835.1104,6789353.704,Lowland Moist Graminoid Sedge Meadow,1,32,,-9999,,-9999,,0,NA,NA
+475,9,49,9_49,473834.5948,6789352.847,Lowland Moist Graminoid Sedge Meadow,1,42,,-9999,,-9999,,0,NA,NA
+476,9,50,9_50,473834.0792,6789351.99,Lowland Moist Graminoid Sedge Meadow,1,36,,-9999,,-9999,,0,Belos 0762-0763,NA
+477,9,51,9_51,473833.5637,6789351.133,Lowland Moist Graminoid Sedge Meadow,1,38,,-9999,,-9999,,0,NA,NA
+478,9,52,9_52,473833.0481,6789350.276,Lowland Moist Graminoid Sedge Meadow,1,35,,-9999,,-9999,,0,NA,NA
+479,9,53,9_53,473832.5325,6789349.419,Lowland Moist Graminoid Sedge Meadow,1,55,,-9999,,-9999,,0,NA,"Edge plateau, connected gully depression"
+480,9,54,9_54,473832.0169,6789348.563,Rackline,1,87,,92,GT,-9999,,0,Belos 0761,Driftwood
+481,9,55,9_55,473831.5013,6789347.706,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+482,9,56,9_56,473830.9858,6789346.849,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+483,9,57,9_57,473830.4702,6789345.992,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+484,9,58,9_58,473829.9546,6789345.135,Lowland Moist Graminoid Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+485,9,59,9_59,473829.439,6789344.278,Lowland Wet Sedge Meadow,1,90,,97,,-9999,,0,NA,NA
+486,9,60,9_60,473828.9234,6789343.422,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+487,9,61,9_61,473828.4079,6789342.565,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+488,9,62,9_62,473827.8923,6789341.708,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+489,9,63,9_63,473827.3767,6789340.851,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+490,9,64,9_64,473826.8611,6789339.994,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+491,9,65,9_65,473826.3455,6789339.137,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,NA,NA
+492,9,66,9_66,473825.83,6789338.281,Lowland Wet Sedge Meadow,0,125,GT,-9999,,-9999,,0,Belos 0760,NA

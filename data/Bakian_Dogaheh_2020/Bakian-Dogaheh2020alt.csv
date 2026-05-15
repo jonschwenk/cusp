@@ -1,0 +1,504 @@
+site,sample_date,latitude,longitude,transect,measurement_traverse,measurement_order,measurement_purpose,alt,alt_fl
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,1,plot characterization,75,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,2,plot characterization,62,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,3,plot characterization,62,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,4,plot characterization,74,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,5,plot characterization,68,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,6,plot characterization,64,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,7,plot characterization,63,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,8,plot characterization,65,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,9,plot characterization,62,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,10,plot characterization,64,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,11,plot characterization,57,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,12,plot characterization,50,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,13,soil pit focus,64,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,14,soil pit focus,55,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,15,soil pit focus,70,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,16,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,17,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,18,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,19,soil pit focus,55,Soil pit FB-1
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,20,soil pit focus,50,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,21,soil pit focus,53,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,22,soil pit focus,49,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,23,soil pit focus,55,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,24,soil pit focus,73,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,25,soil pit focus,62,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,26,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,27,plot characterization,71,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,28,plot characterization,65,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,29,plot characterization,70,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,30,plot characterization,85,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,31,plot characterization,97,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,32,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,33,plot characterization,89,water
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,34,plot characterization,91,water
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,35,plot characterization,-9999,water
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,36,plot characterization,-9999,water
+FB,8/26/18,69.812372,-148.766486,N-S,N to S,37,plot characterization,-9999,water
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,1,plot characterization,72,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,2,plot characterization,73,water
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,3,plot characterization,65,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,4,plot characterization,71,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,5,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,6,plot characterization,70,water
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,7,plot characterization,58,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,8,plot characterization,53,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,9,plot characterization,66,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,10,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,11,plot characterization,50,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,12,plot characterization,69,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,13,soil pit focus,78,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,14,soil pit focus,42,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,15,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,16,soil pit focus,65,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,17,soil pit focus,66,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,18,soil pit focus,53,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,19,soil pit focus,55,Soil pit FB-1
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,20,soil pit focus,58,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,21,soil pit focus,53,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,22,soil pit focus,68,water
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,23,soil pit focus,51,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,24,soil pit focus,61,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,25,soil pit focus,64,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,26,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,27,plot characterization,49,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,28,plot characterization,65,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,29,plot characterization,47,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,30,plot characterization,70,water
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,31,plot characterization,64,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,32,plot characterization,42,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,33,plot characterization,59,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,34,plot characterization,45,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,35,plot characterization,54,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,36,plot characterization,51,NA
+FB,8/26/18,69.812372,-148.766486,E-W,E to W,37,plot characterization,84,water
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,1,soil pit focus,55,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,2,soil pit focus,53,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,3,soil pit focus,57,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,4,soil pit focus,61,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,5,soil pit focus,44,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,6,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,7,soil pit focus,55,Soil pit FB-1
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,8,soil pit focus,59,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,9,soil pit focus,62,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,10,soil pit focus,52,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,11,soil pit focus,64,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,12,soil pit focus,57,NA
+FB,8/26/18,69.812372,-148.766486,NE-SW,NE to SW,13,soil pit focus,56,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,1,soil pit focus,49,water
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,2,soil pit focus,61,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,3,soil pit focus,71,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,4,soil pit focus,64,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,5,soil pit focus,58,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,6,soil pit focus,50,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,7,soil pit focus,55,Soil pit FB-1
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,8,soil pit focus,64,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,9,soil pit focus,65,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,10,soil pit focus,63,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,11,soil pit focus,66,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,12,soil pit focus,68,NA
+FB,8/26/18,69.812372,-148.766486,NW-SE,NW to SE,13,soil pit focus,69,NA
+ICC,43335,69.041894,-148.827031,N-S ,N to S,1,plot characterization,56,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,2,plot characterization,43,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,3,plot characterization,47,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,4,plot characterization,47,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,5,plot characterization,46,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,6,plot characterization,55,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,7,plot characterization,43,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,8,plot characterization,58,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,9,plot characterization,61,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,10,plot characterization,52,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,11,plot characterization,49,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,12,plot characterization,36,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,13,plot characterization,59,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,14,plot characterization,49,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,15,plot characterization,46,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,16,plot characterization,46,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,17,plot characterization,51,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,18,plot characterization,57,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,19,plot characterization,52,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,20,plot characterization,42,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,21,plot characterization,44,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,22,plot characterization,50,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,23,plot characterization,50,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,24,plot characterization,46,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,25,soil pit focus,57,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,26,soil pit focus,61,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,27,soil pit focus,52,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,28,soil pit focus,41,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,29,soil pit focus,45,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,30,soil pit focus,45,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,31,soil pit focus,38,Soil pit ICC-1
+ICC,43335,69.041894,-148.827031,N-S,N to S,32,soil pit focus,38,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,33,soil pit focus,42,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,34,soil pit focus,33,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,35,soil pit focus,56,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,36,soil pit focus,54,NA
+ICC,43335,69.041894,-148.827031,N-S,N to S,37,soil pit focus,36,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,1,soil pit focus,47,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,2,soil pit focus,48,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,3,soil pit focus,44,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,4,soil pit focus,40,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,5,soil pit focus,52,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,6,soil pit focus,41,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,7,soil pit focus,38,Soil pit ICC-1
+ICC,43335,69.041894,-148.827031,E-W,E to W,8,soil pit focus,36,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,9,soil pit focus,50,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,10,soil pit focus,42,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,11,soil pit focus,52,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,12,soil pit focus,44,NA
+ICC,43335,69.041894,-148.827031,E-W,E to W,13,soil pit focus,43,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,1,soil pit focus,36,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,2,soil pit focus,37,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,3,soil pit focus,47,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,4,soil pit focus,55,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,5,soil pit focus,53,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,6,soil pit focus,45,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,7,soil pit focus,38,Soil pit ICC-1
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,8,soil pit focus,38,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,9,soil pit focus,31,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,10,soil pit focus,56,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,11,soil pit focus,43,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,12,soil pit focus,42,NA
+ICC,43335,69.041894,-148.827031,NE-SW,NE to SW,13,soil pit focus,53,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,1,soil pit focus,59,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,2,soil pit focus,47,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,3,soil pit focus,64,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,4,soil pit focus,53,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,5,soil pit focus,44,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,6,soil pit focus,55,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,7,soil pit focus,38,Soil pit ICC-1
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,8,soil pit focus,38,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,9,soil pit focus,39,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,10,soil pit focus,41,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,11,soil pit focus,53,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,12,soil pit focus,50,NA
+ICC,43335,69.041894,-148.827031,NW-SE,NW to SE,13,soil pit focus,45,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,1,soil pit focus,39,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,2,soil pit focus,36,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,3,soil pit focus,48,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,4,soil pit focus,44,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,5,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,6,soil pit focus,55,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,7,soil pit focus,32,Soil pit ICC-2
+ICC,43335,69.041928,-148.825383,E-W,E to W,8,soil pit focus,52,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,9,soil pit focus,42,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,10,soil pit focus,59,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,11,soil pit focus,44,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,12,soil pit focus,53,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,13,soil pit focus,46,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,14,plot characterization,57,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,15,plot characterization,50,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,16,plot characterization,40,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,17,plot characterization,45,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,18,plot characterization,39,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,19,plot characterization,52,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,20,plot characterization,36,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,21,plot characterization,54,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,22,plot characterization,55,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,23,plot characterization,48,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,24,plot characterization,45,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,25,plot characterization,38,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,26,plot characterization,40,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,27,plot characterization,52,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,28,plot characterization,43,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,29,plot characterization,40,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,30,plot characterization,60,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,31,plot characterization,54,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,32,plot characterization,53,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,33,plot characterization,41,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,34,plot characterization,48,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,35,plot characterization,47,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,36,plot characterization,53,NA
+ICC,43335,69.041928,-148.825383,E-W,E to W,37,plot characterization,38,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,1,soil pit focus,39,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,2,soil pit focus,53,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,3,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,4,soil pit focus,57,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,5,soil pit focus,61,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,6,soil pit focus,55,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,7,soil pit focus,32,Soil pit ICC-2
+ICC,43335,69.041928,-148.825383,N-S,N to S,8,soil pit focus,57,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,9,soil pit focus,43,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,10,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,11,soil pit focus,53,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,12,soil pit focus,45,NA
+ICC,43335,69.041928,-148.825383,N-S,N to S,13,soil pit focus,55,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,1,soil pit focus,35,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,2,soil pit focus,50,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,3,soil pit focus,42,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,4,soil pit focus,44,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,5,soil pit focus,43,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,6,soil pit focus,48,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,7,soil pit focus,32,Soil pit ICC-2
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,8,soil pit focus,44,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,9,soil pit focus,45,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,10,soil pit focus,38,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,11,soil pit focus,43,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,12,soil pit focus,59,NA
+ICC,43335,69.041928,-148.825383,NE-SW,NE to SW,13,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,1,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,2,soil pit focus,63,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,3,soil pit focus,50,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,4,soil pit focus,43,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,5,soil pit focus,42,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,6,soil pit focus,50,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,7,soil pit focus,32,Soil pit ICC-2
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,8,soil pit focus,58,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,9,soil pit focus,53,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,10,soil pit focus,45,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,11,soil pit focus,45,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,12,soil pit focus,49,NA
+ICC,43335,69.041928,-148.825383,NW-SE,NW to SE,13,soil pit focus,53,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,1,plot characterization,41,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,2,plot characterization,43,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,3,plot characterization,47,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,4,plot characterization,36,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,5,plot characterization,32,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,6,plot characterization,37,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,7,soil pit focus,30,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,8,soil pit focus,36,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,9,soil pit focus,39,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,10,soil pit focus,43,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,11,soil pit focus,60,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,12,soil pit focus,53,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,13,soil pit focus,36,Soil pit IMN-1
+IMN,43336,68.604972,-149.30635,N-S,N to S,14,soil pit focus,75,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,15,soil pit focus,63,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,16,soil pit focus,47,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,17,soil pit focus,42,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,18,soil pit focus,35,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,19,soil pit focus,45,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,20,plot characterization,53,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,21,plot characterization,25,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,22,plot characterization,41,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,23,plot characterization,29,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,24,plot characterization,43,NA
+IMN,43336,68.604972,-149.30635,N-S,N to S,25,plot characterization,31,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,1,plot characterization,52,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,2,plot characterization,43,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,3,plot characterization,49,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,4,plot characterization,53,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,5,plot characterization,44,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,6,plot characterization,55,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,7,soil pit focus,44,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,8,soil pit focus,34,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,9,soil pit focus,54,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,10,soil pit focus,52,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,11,soil pit focus,51,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,12,soil pit focus,46,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,13,soil pit focus,36,Soil pit IMN-1
+IMN,43336,68.604972,-149.30635,E-W,E to W,14,soil pit focus,47,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,15,soil pit focus,67,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,16,soil pit focus,58,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,17,soil pit focus,48,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,18,soil pit focus,37,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,19,soil pit focus,45,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,20,plot characterization,39,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,21,plot characterization,37,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,22,plot characterization,36,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,23,plot characterization,34,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,24,plot characterization,43,NA
+IMN,43336,68.604972,-149.30635,E-W,E to W,25,plot characterization,50,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,1,soil pit focus,50,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,2,soil pit focus,33,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,3,soil pit focus,53,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,4,soil pit focus,66,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,5,soil pit focus,52,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,6,soil pit focus,71,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,7,soil pit focus,36,Soil pit IMN-1
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,8,soil pit focus,34,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,9,soil pit focus,47,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,10,soil pit focus,41,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,11,soil pit focus,47,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,12,soil pit focus,63,NA
+IMN,43336,68.604972,-149.30635,NE-SW,NE to SW,13,soil pit focus,61,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,1,soil pit focus,38,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,2,soil pit focus,45,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,3,soil pit focus,42,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,4,soil pit focus,53,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,5,soil pit focus,50,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,6,soil pit focus,48,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,7,soil pit focus,36,Soil pit IMN-1
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,8,soil pit focus,32,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,9,soil pit focus,54,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,10,soil pit focus,63,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,11,soil pit focus,45,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,12,soil pit focus,39,NA
+IMN,43336,68.604972,-149.30635,NW-SE,NW to SE,13,soil pit focus,44,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,1,soil pit focus,81,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,2,soil pit focus,62,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,3,soil pit focus,56,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,4,soil pit focus,67,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,5,soil pit focus,69,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,6,soil pit focus,51,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,7,soil pit focus,44,Soil pit SGW-1
+SGW,43334,69.479578,-148.56442,N-S,N to S,8,soil pit focus,59,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,9,soil pit focus,43,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,10,soil pit focus,38,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,11,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,12,soil pit focus,85,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,13,soil pit focus,54,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,14,plot characterization,55,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,15,plot characterization,53,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,16,plot characterization,81,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,17,plot characterization,59,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,18,plot characterization,61,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,19,plot characterization,71,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,20,plot characterization,-9999,water
+SGW,43334,69.479578,-148.56442,N-S,N to S,21,plot characterization,-9999,water
+SGW,43334,69.479578,-148.56442,N-S,N to S,22,plot characterization,-9999,water
+SGW,43334,69.479578,-148.56442,N-S,N to S,23,plot characterization,-9999,water
+SGW,43334,69.479578,-148.56442,N-S,N to S,24,plot characterization,-9999,water
+SGW,43334,69.479578,-148.56442,N-S,N to S,25,plot characterization,76,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,26,plot characterization,90,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,27,plot characterization,85,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,28,plot characterization,62,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,29,plot characterization,68,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,30,plot characterization,65,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,31,plot characterization,60,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,32,plot characterization,76,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,33,plot characterization,75,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,34,plot characterization,79,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,35,plot characterization,83,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,36,plot characterization,75,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,37,plot characterization,60,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,38,plot characterization,66,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,39,plot characterization,42,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,40,plot characterization,80,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,41,plot characterization,58,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,42,plot characterization,60,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,43,plot characterization,70,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,44,plot characterization,55,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,45,plot characterization,80,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,46,plot characterization,63,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,47,plot characterization,70,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,48,plot characterization,61,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,49,plot characterization,61,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,50,plot characterization,63,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,51,plot characterization,95,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,52,plot characterization,77,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,53,plot characterization,79,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,54,plot characterization,91,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,55,plot characterization,94,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,56,plot characterization,106,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,57,plot characterization,71,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,58,plot characterization,65,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,59,plot characterization,68,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,60,plot characterization,65,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,61,plot characterization,78,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,62,plot characterization,60,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,63,plot characterization,65,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,64,plot characterization,68,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,65,plot characterization,71,NA
+SGW,43334,69.479578,-148.56442,N-S,N to S,66,plot characterization,73,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,67,soil pit focus,72,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,68,soil pit focus,68,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,69,soil pit focus,68,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,70,soil pit focus,63,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,71,soil pit focus,59,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,72,soil pit focus,67,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,73,soil pit focus,42,Soil pit SGW-2
+SGW,43334,69.479578,-148.56443,N-S,N to S,74,soil pit focus,57,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,75,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,76,soil pit focus,52,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,77,soil pit focus,60,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,78,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,79,soil pit focus,51,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,80,plot characterization,45,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,81,plot characterization,52,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,82,plot characterization,70,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,83,plot characterization,60,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,84,plot characterization,83,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,85,plot characterization,64,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,86,plot characterization,83,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,87,plot characterization,68,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,88,plot characterization,64,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,89,plot characterization,46,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,90,plot characterization,70,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,91,plot characterization,102,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,92,plot characterization,64,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,93,plot characterization,68,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,94,plot characterization,72,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,95,plot characterization,91,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,96,plot characterization,57,NA
+SGW,43334,69.479578,-148.56443,N-S,N to S,97,plot characterization,55,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,1,soil pit focus,65,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,2,soil pit focus,62,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,3,soil pit focus,79,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,4,soil pit focus,78,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,5,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,6,soil pit focus,62,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,7,soil pit focus,44,Soil pit SGW-1
+SGW,43334,69.479578,-148.56442,E-W,E to W,8,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,9,soil pit focus,71,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,10,soil pit focus,54,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,11,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,12,soil pit focus,58,NA
+SGW,43334,69.479578,-148.56442,E-W,E to W,13,soil pit focus,56,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,1,soil pit focus,67,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,2,soil pit focus,66,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,3,soil pit focus,76,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,4,soil pit focus,79,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,5,soil pit focus,58,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,6,soil pit focus,50,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,7,soil pit focus,44,Soil pit SGW-1
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,8,soil pit focus,43,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,9,soil pit focus,82,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,10,soil pit focus,48,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,11,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,12,soil pit focus,56,NA
+SGW,43334,69.479578,-148.56442,NE-SW,NE to SW,13,soil pit focus,46,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,1,soil pit focus,74,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,2,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,3,soil pit focus,63,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,4,soil pit focus,38,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,5,soil pit focus,38,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,6,soil pit focus,44,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,7,soil pit focus,44,Soil pit SGW-1
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,8,soil pit focus,43,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,9,soil pit focus,53,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,10,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,11,soil pit focus,76,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,12,soil pit focus,88,NA
+SGW,43334,69.479578,-148.56442,NW-SE,NW to SE,13,soil pit focus,72,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,1,soil pit focus,65,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,2,soil pit focus,52,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,3,soil pit focus,69,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,4,soil pit focus,79,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,5,soil pit focus,46,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,6,soil pit focus,58,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,7,soil pit focus,42,Soil pit SGW-2
+SGW,43334,69.479578,-148.56443,E-W,E to W,8,soil pit focus,92,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,9,soil pit focus,47,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,10,soil pit focus,39,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,11,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,12,soil pit focus,70,NA
+SGW,43334,69.479578,-148.56443,E-W,E to W,13,soil pit focus,57,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,1,soil pit focus,65,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,2,soil pit focus,73,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,3,soil pit focus,82,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,4,soil pit focus,54,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,5,soil pit focus,64,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,6,soil pit focus,72,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,7,soil pit focus,42,Soil pit SGW-2
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,8,soil pit focus,54,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,9,soil pit focus,45,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,10,soil pit focus,42,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,11,soil pit focus,34,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,12,soil pit focus,46,NA
+SGW,43334,69.479578,-148.56443,NW-SE,NW to SE,13,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,1,soil pit focus,69,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,2,soil pit focus,73,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,3,soil pit focus,66,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,4,soil pit focus,46,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,5,soil pit focus,45,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,6,soil pit focus,50,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,7,soil pit focus,42,Soil pit SGW-2
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,8,soil pit focus,77,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,9,soil pit focus,80,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,10,soil pit focus,72,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,11,soil pit focus,55,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,12,soil pit focus,48,NA
+SGW,43334,69.479578,-148.56443,NE-SW,NE to SW,13,soil pit focus,61,NA

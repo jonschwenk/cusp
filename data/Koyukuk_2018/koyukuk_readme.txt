@@ -1,0 +1,5 @@
+Jon Schwenk re-compiled these data using the ESS-DIVE published dataset along with additional field notes. In particular:
+
+1) some observations (~50) had active layer thicknesses reported but were not uploaded to the dataset. I manually copied these from field notes.
+2) for "site_id"==polysample, I used the permafrost_combined.gpkg and not_permafrost.gpkg. For not_permafrost.gpkg, I removed all the water-only polygons before sampling. Then randomly sampled the polygons for both types at 100 m minimum spacing between points (and 100 m global spacing).
+3) some of the observations did not report a depth to permafrost (e.g. bank coring, soil coring; i.e. not frost-probed). In general, we didn't go past 100 cm (not strictly true for some Sipre cores) but obs_depth was just set to NaN for these data.

@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>M. Andy Kass</origin>
+        <origin>Burke J Minsley</origin>
+        <origin>Neal J Pastick</origin>
+        <origin>Bruce K Wylie</origin>
+        <origin>Dana R.N. Brown</origin>
+        <pubdate>20180221</pubdate>
+        <title>Permafrost Soil Measurements; Alaska, 2015</title>
+        <geoform>Excel spreadsheet</geoform>
+        <pubinfo>
+          <pubplace>Denver, CO</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <othercit>Additional information about Originator: Kass, M.A., https://orcid.org/0000-0001-6119-2593; Minsley, B.J., https://orcid.org/0000-0003-1689-1306; Pastick, N.J., https://orcid.org/0000-0002-8169-3018; Wylie, B.K., https://orcid.org/0000-0002-7374-1083; Brown, D.R.N., https://orcid.org/0000-0002-1195-7161; Chase, B.F.W., https://orcid.org/0000-0002-5722-4895</othercit>
+        <onlink>http://dx.doi.org/10.5066/F7F18WTJ</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This release contains Active Layer Thickness (ALT) and Organic Layer Thickness (OLT) measurements measured along transects in Alaska, 2015.  Site condition information in terms of wildfire burns is also included.</abstract>
+      <purpose>Data were collected to quantify the belowground impacts of fire on permafrost in boreal landscapes.</purpose>
+      <supplinf>Soil data collection methods followed: Jorgensen, T. et al. (2008). Reorganization of vegetation, hydrology and soil carbon after permafrost degradation across heterogeneous boreal landscapes. Environmental Research Letters 8(3), http://iopscience.iop.org/article/10.1088/1748-9326/8/3/035017</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20150822</begdate>
+          <enddate>20150905</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-150.5555728</westbc>
+        <eastbc>-148.1070854</eastbc>
+        <northbc>68.64284578</northbc>
+        <southbc>64.39629951</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Permafrost</themekey>
+        <themekey>Fire</themekey>
+        <themekey>Disturbance</themekey>
+        <themekey>Soils</themekey>
+        <themekey>Borehole nuclear magnetic resonance</themekey>
+        <themekey>Resistivity profiling</themekey>
+        <themekey>Active layer</themekey>
+        <themekey>Organic layer</themekey>
+        <themekey>Active layer thickness</themekey>
+        <themekey>Organic layer thickness</themekey>
+        <themekey>Geology, Geophysics, and Geochemistry Science Center</themekey>
+        <themekey>GGGSC</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>soil moisture</themekey>
+        <themekey>permafrost</themekey>
+        <themekey>fires</themekey>
+        <themekey>fire damage</themekey>
+        <themekey>resistivity</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115</themekt>
+        <themekey>geoscientificInformation</themekey>
+        <themekey>environment</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5834753ae4b0070c0abfb374</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System</placekt>
+        <placekey>Alaska</placekey>
+        <placekey>City of Fairbanks</placekey>
+        <placekey>Coldfoot</placekey>
+        <placekey>Toolik Lake</placekey>
+        <placekey>Chatanika</placekey>
+      </place>
+    </keywords>
+    <accconst>None. Please see 'Distribution Info' for details.</accconst>
+    <useconst>There is no guarantee concerning the accuracy of the data. Any user who modifies the data is obligated to describe the types of modifications they perform. Data have been checked to ensure the accuracy. If any errors are detected, please notify the originating office. The U.S. Geological Survey strongly recommends that careful attention be paid to the metadata file associated with these data. Acknowledgment of the U.S. Geological Survey would be appreciated in products derived from these data. User specifically agrees not to misrepresent the data, nor to imply that changes made were approved or endorsed by the U.S. Geological Survey. Please refer to http://www.usgs.gov/privacy.html for the USGS disclaimer.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Burke Minsley</cntper>
+          <cntorg>USGS - Geology, Geophysics, and Geochemistry Science Center</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>MS 964 - Denver Federal Center</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>303 236 5718</cntvoice>
+        <cntemail>bminsley@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>At each site we described and measured the thickness of the active-, organic-, and mineral-soil layers to depths of about 30 - 40 cm with observations being spaced every 1 - 30 m along the transect depending on site heterogeneity.  Thaw depth measurements were made with a stainless steel permafrost probe with extensions up to 250 cm.  Organic layer thickness measurements were made from soil plugs. Soils data were manually recorded in the field, and later transcribed digitally and stored.</procdesc>
+        <procdate>20151130</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spref>
+    <horizsys>
+      <planar>
+        <gridsys>
+          <gridsysn>Universal Transverse Mercator</gridsysn>
+          <utm>
+            <utmzone>6</utmzone>
+            <transmer>
+              <sfctrmer>0.9996</sfctrmer>
+              <longcm>-147.0</longcm>
+              <latprjo>0.0</latprjo>
+              <feast>500000.0</feast>
+              <fnorth>0.0</fnorth>
+            </transmer>
+          </utm>
+        </gridsys>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.6096</absres>
+            <ordres>0.6096</ordres>
+          </coordrep>
+          <plandu>Meter</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D_WGS_1984</horizdn>
+        <ellips>WGS_1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>AK2015-soilsDataCombined</enttypl>
+        <enttypd>Soils data</enttypd>
+        <enttypds>U.S. Geological Survey</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>Site</attrlabl>
+        <attrdef>Site ID</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Site Name</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lon_WGS84dd</attrlabl>
+        <attrdef>Longitude, WGS84 Decimal Degrees.  Null values represented by -9999.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-150.5555728</rdommin>
+            <rdommax>-148.1070854</rdommax>
+            <attrunit>decimal degree</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lat_WGS84dd</attrlabl>
+        <attrdef>Latitude, WGS84 Decimal Degrees.  Null values represented by -9999.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>64.39629951</rdommin>
+            <rdommax>68.64284578</rdommax>
+            <attrunit>decimal degree</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Meter</attrlabl>
+        <attrdef>Meter mark along transect</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>250.5</rdommax>
+            <attrunit>meter</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GPS</attrlabl>
+        <attrdef>Flag indicating where GPS measurements read. 1 indicates a point using GPS data. 0 indicates interpolated positions.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Flag</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ActiveLayerThickness(cm)</attrlabl>
+        <attrdef>Measured active layer thickness or thaw depth in cm.  Null values represented by -9999.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Active Layer Thickness. Measurements greater than the reported value indicated by '&gt;' symbol</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SurfOrg(cm)</attrlabl>
+        <attrdef>Measured organic layer thickness.  Null values represented by -9999.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Organic Layer Thickness. Measurements greater than the reported value indicated by '&gt;' symbol</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DepthtoRejection(cm)</attrlabl>
+        <attrdef>Depth where rocks encountered--could not probe further.  Null values represented by -9999.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>131</rdommax>
+            <attrunit>cm</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteCondition</attrlabl>
+        <attrdef>Comment on local site conditions with respect to burnes vs unburned</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Comment on local site conditions with respect to burned vs unburned</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Comment</attrlabl>
+        <attrdef>Other site comments as necessary.  NA indicates no comment.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Other site comments as necessary.  NA indicates no comment.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20200929</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Burke Minsley</cntper>
+          <cntorg>USGS - Geology, Geophysics, and Geochemistry Science Center</cntorg>
+        </cntperp>
+        <cntpos>Research Geophysicist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>MS 964 - Denver Federal Center</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>303 236 5718</cntvoice>
+        <cntemail>bminsley@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

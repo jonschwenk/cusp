@@ -1,0 +1,12 @@
+site_id,wildfire,date,Wildfire date/name,rocky/silty,pf_observed,thaw_depth,obs_limit,lon,lat,source,obs_depth,pf_depth,method
+W. Fork Dall burned,1,9/2/16,2004 Dall City Fire,Rocky,0,,245,-150.34954133730875,66.26753372897757,Ebel_2018,,,unknown
+W. Fork Dall burned deep,1,9/2/16,2004 Dall City Fire,Rocky,0,,245,-150.34954133730875,66.26753372897757,Ebel_2018,,,unknown
+W. Fork Dall unburned,0,9/2/16,,Rocky,1,55.0,55,-150.3497262539233,66.26725857494453,Ebel_2018,,,unknown
+Isom,0,9/3/16,,Silty,1,51.0,51,-149.43709036743098,65.80078758766031,Ebel_2018,,,unknown
+Erickson burned upslope deciduous ,1,9/4/16,2003 Erickson Creek  Fire,Silty,1,209.0,209,-148.92595430692955,65.57256265181026,Ebel_2018,,,unknown
+Erickson burned,1,9/4/16,2003 Erickson Creek  Fire,Silty,1,105.0,105,-148.9265797225549,65.57163922747392,Ebel_2018,,,unknown
+West Twin unburned,0,8/31/16,,Rocky,1,100.0,100,-146.9144777339049,65.3440422970096,Ebel_2018,,,unknown
+West Twin burned,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,-146.91181434493217,65.34390617870787,Ebel_2018,,,unknown
+West Twin burned seep,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,-146.9129987266897,65.34304551693504,Ebel_2018,,,unknown
+West Twin burned seep deep,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,-146.9129987266897,65.34304551693504,Ebel_2018,,,unknown
+Globe 1 toeslope,0,8/30/16,,Rocky,1,63.0,63,-148.1245133252542,65.23086632752842,Ebel_2018,,,unknown

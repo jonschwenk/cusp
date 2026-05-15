@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" xmlns:ds="eml://ecoinformatics.org/dataset-2.1.1" packageId="doi:10.18739/A2H708100" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 eml.xsd" system="knb">
+  <dataset>
+    <title>Elevation and permafrost active layer observations near two creeks in the foothills of the Brooks Range, Alaska, May 2017</title>
+    <creator id="1962843644341919">
+      <individualName>
+        <givenName>Ronald</givenName>
+        <surName>Daanen</surName>
+      </individualName>
+      <organizationName>DGGS</organizationName>
+      <address>
+        <deliveryPoint>3354 College Road</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">907-451-5965</phone>
+      <electronicMailAddress>ronald.daanen@alaska.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7511-1491</userId>
+    </creator>
+    <pubDate>2017-11-17</pubDate>
+    <abstract>
+      <para>This elevation and active layer dataset was developed in conjunction with 4 other datasets linking eco-hydrological processes in two creeks in the northern foothills of the Brooks Range. This dataset describes the elevations in 6 transects perpendicular to the creek. The transects are split in two distinct regions; an area where the creek is gaining water and an area where the creek is losing water to groundwater. Each region was characterized by three transects.</para>
+      <para>To measure elevation transects we used a Leica Differential Global Position System (DGPS) with an accuracy of approximately 5 centimeters. An elevation point was measured every 10 meters along a line across the creek. At each point the active layer was probed and noted if the probe hit a rock. The active layer probe is a simple metal rod that is pushed into the ground. The distinction between rock and frozen soil is made based on the sound and vibration of the probe.</para>
+    </abstract>
+    <intellectualRights>
+      <para>This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication.
+To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.</para>
+    </intellectualRights>
+    <distribution>
+      <offline>
+        <mediumName>digital </mediumName>
+      </offline>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Northern foothills of the Brooks Range</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-149.6361</westBoundingCoordinate>
+          <eastBoundingCoordinate>-148.6942</eastBoundingCoordinate>
+          <northBoundingCoordinate>69.2406</northBoundingCoordinate>
+          <southBoundingCoordinate>68.6706</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2016-08-20</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2016-08-27</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact id="6104661785153070">
+      <individualName>
+        <givenName>Ronald</givenName>
+        <surName>Daanen</surName>
+      </individualName>
+      <organizationName>DGGS</organizationName>
+      <address>
+        <deliveryPoint>3354 College Road</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">907-451-5965</phone>
+      <electronicMailAddress>ronald.daanen@alaska.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-7511-1491</userId>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>A differential Global Positioning system was used to find the elevations of points in transects for this study. The repeatability of the system is approximately 5 cm. Points were measured in transects perpendicular to the stream. After measuring the elevation of a point the thaw depth was measure by pushing a thaw depth rod into the ground and measuring the depth of penetration. In some cases rocks were encountered before frozen ground was reached this was noted in the spreadsheet and no thaw depth was measured. In areas where the frozen ground was deeper the 125 cm the depth was noted as greater than 125cm.</para>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Riparian shrub expansion: Linkages to permafrost, hydrology and soil microbes</title>
+      <personnel>
+        <individualName>
+          <givenName>Ina</givenName>
+          <surName>Timling</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Anna</givenName>
+          <surName>Liljedahl</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <funding>
+        <para>NSF 1630360</para>
+      </funding>
+    </project>
+    <dataTable id="urn-uuid-ae59e52b-040b-4cb3-a0ac-2c9d2073405a">
+      <entityName>OksLoseDis.csv</entityName>
+      <entityDescription>elevation and permafrost active layer measurements from Ok stream, losing section</entityDescription>
+      <physical>
+        <objectName>OksLoseDis.csv</objectName>
+        <size unit="bytes">11204</size>
+        <authentication method="MD5">4d4c90deb387ce8f5fa076404d590446</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ae59e52b-040b-4cb3-a0ac-2c9d2073405a</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="csv_att_list">
+        <attribute>
+          <attributeName>OBJECTID</attributeName>
+          <attributeDefinition>object identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Point_Id</attributeName>
+          <attributeDefinition>Point identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>Latitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lon</attributeName>
+          <attributeDefinition>Longitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time of measurement</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>HH:MM</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Thaw depth [cm]</attributeName>
+          <attributeDefinition>Depth of thaw</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Rock_depth [cm]</attributeName>
+          <attributeDefinition>Depth of rock layer</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>NEAR_DIST [m]</attributeName>
+          <attributeDefinition>the distance to the stream, one side is positive the other side is negative</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Permafrost_Table [m amsl]</attributeName>
+          <attributeDefinition>Depth of permafrost table</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Surface_Elev [m amsl]</attributeName>
+          <attributeDefinition>Surface elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Differential elev [m]</attributeName>
+          <attributeDefinition>Differential elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Slope [m/m]</attributeName>
+          <attributeDefinition>Measured slope</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-938d2d6d-2c20-4d65-a997-8348b21aa64c">
+      <entityName>OksGainDis.csv</entityName>
+      <entityDescription>elevation and permafrost active layer measurements from Ok stream, gaining section</entityDescription>
+      <physical>
+        <objectName>OksGainDis.csv</objectName>
+        <size unit="bytes">12496</size>
+        <authentication method="MD5">ffc37665c9ecbc5b72a9861ab178a008</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:938d2d6d-2c20-4d65-a997-8348b21aa64c</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="GyWNKz5IrQQaOXJACIM6Qy0sWvlLAE">
+        <attribute>
+          <attributeName>OBJECTID</attributeName>
+          <attributeDefinition>object identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Point_Id</attributeName>
+          <attributeDefinition>Point identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>Latitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lon</attributeName>
+          <attributeDefinition>Longitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time of measurement</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>HH:MM</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Thaw depth [cm]</attributeName>
+          <attributeDefinition>Depth of thaw</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Rock_depth [cm]</attributeName>
+          <attributeDefinition>Depth of rock layer</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>NEAR_DIST [m]</attributeName>
+          <attributeDefinition>the distance to the stream, one side is positive the other side is negative</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Permafrost_Table [m amsl]</attributeName>
+          <attributeDefinition>Depth of permafrost table</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Surface_Elev [m amsl]</attributeName>
+          <attributeDefinition>Surface elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Differential elev [m]</attributeName>
+          <attributeDefinition>Differential elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Slope [m/m]</attributeName>
+          <attributeDefinition>Measured slope</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-94c0f384-8c5d-47d4-9516-65bcc9c6577f">
+      <entityName>NiceGainDis.csv</entityName>
+      <entityDescription>elevation and permafrost active layer measurements from Nice stream, gaining section</entityDescription>
+      <physical>
+        <objectName>NiceGainDis.csv</objectName>
+        <size unit="bytes">13508</size>
+        <authentication method="MD5">4c738b56943a559a08230297ace7c09d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:94c0f384-8c5d-47d4-9516-65bcc9c6577f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="vEBu8RaBJGLk0HLebrAVTTOVaxhBnt">
+        <attribute>
+          <attributeName>OBJECTID</attributeName>
+          <attributeDefinition>object identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Point_Id</attributeName>
+          <attributeDefinition>Point identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>Latitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lon</attributeName>
+          <attributeDefinition>Longitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time of measurement</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>HH:MM</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Thaw depth [cm]</attributeName>
+          <attributeDefinition>Depth of thaw</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Rock_depth [cm]</attributeName>
+          <attributeDefinition>Depth of rock layer</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>NEAR_DIST [m]</attributeName>
+          <attributeDefinition>the distance to the stream, one side is positive the other side is negative</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Permafrost_Table [m amsl]</attributeName>
+          <attributeDefinition>Depth of permafrost table</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Surface_Elev [m amsl]</attributeName>
+          <attributeDefinition>Surface elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Differential elev [m]</attributeName>
+          <attributeDefinition>Differential elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Slope [m/m]</attributeName>
+          <attributeDefinition>Measured slope</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-6fa3846f-9808-4815-8bba-e26260e4f16d">
+      <entityName>Nice_Lose_Dis.csv</entityName>
+      <entityDescription>elevation and permafrost active layer measurements from Nice stream, losing section</entityDescription>
+      <physical>
+        <objectName>Nice_Lose_Dis.csv</objectName>
+        <size unit="bytes">7612</size>
+        <authentication method="MD5">94b14a176a5fa8a0404f3092ab20e274</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6fa3846f-9808-4815-8bba-e26260e4f16d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="DepvNs9uuUFZrDoTnN4Rgf9qtNqMxD">
+        <attribute>
+          <attributeName>OBJECTID</attributeName>
+          <attributeDefinition>object identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Point_Id</attributeName>
+          <attributeDefinition>Point identifier</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>any text</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>Latitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lon</attributeName>
+          <attributeDefinition>Longitude of measurement</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Time</attributeName>
+          <attributeDefinition>Time of measurement</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>HH:MM</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Thaw depth [cm]</attributeName>
+          <attributeDefinition>Depth of thaw</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Rock_depth [cm]</attributeName>
+          <attributeDefinition>Depth of rock layer</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>NEAR_DIST [m]</attributeName>
+          <attributeDefinition>the distance to the stream, one side is positive the other side is negative</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Permafrost_Table [m amsl]</attributeName>
+          <attributeDefinition>Depth of permafrost table</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Surface_Elev [m amsl]</attributeName>
+          <attributeDefinition>Surface elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Differential elev [m]</attributeName>
+          <attributeDefinition>Differential elevation</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Slope [m/m]</attributeName>
+          <attributeDefinition>Measured slope</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>

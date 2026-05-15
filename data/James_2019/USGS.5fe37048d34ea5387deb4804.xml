@@ -1,0 +1,521 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Stephanie R. James</origin>
+        <origin>Burke J. Minsley</origin>
+        <origin>Mark P. Waldrop</origin>
+        <origin>Jack W. McFarland</origin>
+        <origin>Kristen L. Manies</origin>
+        <origin>Neal J. Pastick</origin>
+        <pubdate>20210526</pubdate>
+        <title>APEX Thaw Depth Data from 2018-2019</title>
+        <geoform>tabular digital data</geoform>
+        <pubinfo>
+          <pubplace>Denver, CO</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <othercit>Additional information on Originators: Stephanie R. James, https://orcid.org/0000-0001-5715-253X; Burke J. Minsley, https://orcid.org/0000-0003-1689-1306; Mark P. Waldrop, https://orcid.org/0000-0003-1829-7140; Jack W. McFarland, https://orcid.org/0000-0001-9672-8597; Kristen L. Manies, https://orcid.org/0000-0003-4941-9657; Neal J. Pastick, https://orcid.org/0000-0002-4321-6739. 
+
+Suggested Citation: James, S.R., Minsley, B.J., Waldrop, M.P., McFarland, J.W., Manies, K.L., and Pastick, N.J., 2021, Permafrost characterization at the Alaska Peatland Experiment (APEX): Geophysical and related field data collected from 2018-2020: U.S. Geological Survey data release, https://doi.org/10.5066/P90M04ST.</othercit>
+        <onlink>https://doi.org/10.5066/P90M04ST</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Stephanie R. James</origin>
+            <origin>Burke J. Minsley</origin>
+            <origin>Jack W. McFarland</origin>
+            <origin>Eugenie S. Euskirchen</origin>
+            <origin>Colin W. Edgar</origin>
+            <origin>Mark P. Waldrop</origin>
+            <pubdate>Unknown</pubdate>
+            <title>The biophysical role of water and ice within permafrost nearing collapse: insights from novel geophysical observations</title>
+            <geoform>journal manuscript in review</geoform>
+            <pubinfo>
+              <pubplace>Wiley</pubplace>
+              <publish>JGR Earth Surface</publish>
+            </pubinfo>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Geophysical measurements and related field data were collected by the U.S. Geological Survey (USGS) at the Alaska Peatland Experiment (APEX) site in Interior Alaska from 2018 to 2020 to characterize subsurface thermal and hydrologic conditions along a permafrost thaw gradient. The APEX site is managed by the Bonanza Creek LTER (Long Term Ecological Research). Nine instrument sites were established in April 2018 comprising a buried seismic station for continuous passive recording of the seismic wavefield, and seven of the nine sites were given a borehole for repeat nuclear magnetic resonance (NMR) logging. Between June 2018 and September 2019, measurements of active-layer thaw depth were regularly recorded at each of the nine instrument sites for comparison to the geophysical data. A nominal four measurements were collected in random azimuthal directions within 1 meter (m) distance of the buried seismometer at each instrument site. At sites containing an NMR borehole, an additional four to six measurements were taken within 1 m distance of the borehole location. During collection of electrical resistivity tomography (ERT) data in late August 2018, additional thaw depth measurements were collected at regular electrode intervals along each ERT survey line. Measurements were made with a 250 centimeter (cm) stainless-steel frost probe inserted to the depth of refusal.</abstract>
+      <purpose>These data were collected to characterize and monitor below ground changes in physical and thermal properties to better understand how ice and unfrozen water content influence permafrost thaw and soil carbon losses.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>20180614</begdate>
+          <enddate>20190908</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-148.32389</westbc>
+        <eastbc>-148.320895</eastbc>
+        <northbc>64.696619</northbc>
+        <southbc>64.695576</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>permafrost</themekey>
+        <themekey>hydrologic processes</themekey>
+        <themekey>field monitoring stations</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>geoscientificInformation</themekey>
+        <themekey>environment</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>U.S. Geological Survey</themekey>
+        <themekey>USGS</themekey>
+        <themekey>Geology, Geophysics, and Geochemistry Science Center</themekey>
+        <themekey>GGGSC</themekey>
+        <themekey>Land Change Science Program</themekey>
+        <themekey>Permafrost</themekey>
+        <themekey>Hydrologic processes</themekey>
+        <themekey>Disturbance</themekey>
+        <themekey>Active layer thickness</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:5fe37048d34ea5387deb4804</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System (GNIS)</placekt>
+        <placekey>Alaska</placekey>
+        <placekey>Fairbanks North Star</placekey>
+        <placekey>Bonanza Creek</placekey>
+      </place>
+    </keywords>
+    <accconst>None. Please see 'Distribution Info' for details.</accconst>
+    <useconst>Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.  Although these data have been processed successfully on a computer system at the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. The USGS or the U.S. Government shall not be held liable for improper or incorrect use of the data described and/or contained herein.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Stephanie R James</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntpos>Geophysicist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Mail Stop 973, W 6th Ave and Kipling St</address>
+          <city>Lakewood</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>303-236-1405</cntvoice>
+        <cntemail>sjames@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>USGS Land Carbon Program; USGS Land Change Science Program</datacred>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>No formal positional accuracy tests were conducted</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <procstep>
+        <procdesc>Thaw depth data were collected at each instrument site during summer or early fall field visits in 2018 and 2019 (June 2018, July 2018, August 2018, October 2018, June 2019, and September 2019). Measurements were made using a 250 cm stainless-steel frost probe inserted to the point of refusal. At each instrument site, four to six measurements were taken within 1 m distance of the buried seismometer location. At sites containing an NMR borehole, an additional four to six measurements were taken within 1 m distance of the borehole location. Thaw depth data were either digitally recorded in the field or hand-written and later digitally transcribed.</procdesc>
+        <procdate>20180614</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>In August 2018, during the electrical resistivity tomography (ERT) data collection, thaw depth measurements were made at regular electrode intervals along each ERT survey line with a 250 cm-long stainless-steel permafrost probe. Thaw depth data were digitally recorded in the field. Thaw depths exceeding 250 cm were given the special value 999.</procdesc>
+        <procdate>20180820</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Spatial locations were determined using a hand-held global positioning system (GPS) device (EOS Arrow 100). Coordinates were recorded in decimal degrees (WGS84) with sub-meter precision.</procdesc>
+        <procdate>20180820</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>All thaw depth data were combined into the ESRI shapefile, "APEX_2018_2019_ThawDepth_Data_SiteLocations.zip".  Locations (in Latitude, Longitude, as well as projected to UTM zone 6 (WGS84) Easting and Northing coordinates) reflect the adjacent geophysical instrument or data location, e.g. the buried seismometer, NMR borehole, or ERT electrode coordinates. For example, thaw depths at site APEX1 and adjacency "NMR borehole" were given coordinates corresponding to the APEX1 NMR borehole location, and reflect thaw depth measurements made in random azimuthal directions within 1 m distance of that location.</procdesc>
+        <procdate>20210228</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Point</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Point</sdtstype>
+        <ptvctcnt>258</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>1.0E-6</latres>
+        <longres>1.0E-6</longres>
+        <geogunit>Decimal degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>World Geodetic System of 1984 (WGS 84)</horizdn>
+        <ellips>WGS_1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+    <vertdef>
+      <altsys>
+        <altdatum>WGS84 Ellipsoid</altdatum>
+        <altres>0.001</altres>
+        <altunits>meter</altunits>
+        <altenc>Explicit elevation coordinate included with horizontal coordinates</altenc>
+      </altsys>
+    </vertdef>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>APEX_2018_2020_ThawDepth_Data_SiteLocations.shp Attribute Table</enttypl>
+        <enttypd>Table containing attribute information associated with the data set.</enttypd>
+        <enttypds>U.S. Geological Survey</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>257</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>Date of thaw depth data collection</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Date in format YYYYMMDD</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteID</attrlabl>
+        <attrdef>Instrument site or survey line name</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>alphanumeric names for measurement sites and survey lines</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Adjacency</attrlabl>
+        <attrdef>Adjacent geophysical instrument or data point, within 1 m distance, for spatial reference of thaw depth measurement</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Seismometer</edomv>
+            <edomvd>thaw depths measured within 1 m of the buried seismometer location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NMR borehole</edomv>
+            <edomvd>thaw depths measured within 1 m of the NMR borehole location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ERT electrode</edomv>
+            <edomvd>thaw depths measured at this ERT electrode location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ThawDep_cm</attrlabl>
+        <attrdef>Active layer thaw depths measured with a 250 m frost probe inserted to the depth of refusal.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>999</edomv>
+            <edomvd>thaw depth greater than 2.5 m (i.e., no detect when measured with 2.5 m frost probe)</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>15</rdommin>
+            <rdommax>157</rdommax>
+            <attrunit>Centimeters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lat_WGS84</attrlabl>
+        <attrdef>Latitude, WGS84</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>64.695576</rdommin>
+            <rdommax>64.696611</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lon_WGS84</attrlabl>
+        <attrdef>Longitude, WGS84</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-148.323889</rdommin>
+            <rdommax>-148.320929</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>X_UTMz6</attrlabl>
+        <attrdef>Easting, WGS84 UTM Zone 6N</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>436866.16815</rdommin>
+            <rdommax>437005.66454</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Y_UTMz6</attrlabl>
+        <attrdef>Northing, WGS84 UTM Zone 6N</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7175185.96404</rdommin>
+            <rdommax>7175302.65637</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Altitude_m</attrlabl>
+        <attrdef>Ground surface elevation, WGS84 Ellipsoid</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>130.63</rdommin>
+            <rdommax>134.27</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <detailed>
+      <enttyp>
+        <enttypl>APEX_2018_2019_ThawDepth_Data.csv</enttypl>
+        <enttypd>Comma Seperated Variable (CSV) file containing Thaw Depth Data.</enttypd>
+        <enttypds>U.S. Geological Survey</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>FID</attrlabl>
+        <attrdef>Internal feature number</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Date</attrlabl>
+        <attrdef>Date of thaw depth data collection</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>Date in format YYYYMMDD</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiteID</attrlabl>
+        <attrdef>Instrument site or survey line name</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <udom>alphanumeric names for measurement sites and survey lines</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Adjacency</attrlabl>
+        <attrdef>Adjacent geophysical instrument or data point, within 1 m distance, for spatial reference of thaw depth measurement</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Seismometer</edomv>
+            <edomvd>thaw depths measured within 1 m of the buried seismometer location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NMR borehole</edomv>
+            <edomvd>thaw depths measured within 1 m of the NMR borehole location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ERT electrode</edomv>
+            <edomvd>thaw depths measured at this ERT electrode location</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ThawDep_cm</attrlabl>
+        <attrdef>Active layer thaw depths measured with a 250 m frost probe inserted to the depth of refusal.</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>999</edomv>
+            <edomvd>thaw depth greater than 2.5 m (i.e., no detect when measured with 2.5 m frost probe)</edomvd>
+            <edomvds>U.S. Geological Survey</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <rdom>
+            <rdommin>15</rdommin>
+            <rdommax>157</rdommax>
+            <attrunit>Centimeters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lat_WGS84</attrlabl>
+        <attrdef>Latitude, WGS84</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>64.695576</rdommin>
+            <rdommax>64.696611</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Lon_WGS84</attrlabl>
+        <attrdef>Longitude, WGS84</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-148.323889</rdommin>
+            <rdommax>-148.320929</rdommax>
+            <attrunit>Decimal degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>X_UTMz6</attrlabl>
+        <attrdef>Easting, WGS84 UTM Zone 6N</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>436866.16815</rdommin>
+            <rdommax>437005.66454</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Y_UTMz6</attrlabl>
+        <attrdef>Northing, WGS84 UTM Zone 6N</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>7175185.96404</rdommin>
+            <rdommax>7175302.65637</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Altitude_m</attrlabl>
+        <attrdef>Ground surface elevation, WGS84 Ellipsoid</attrdef>
+        <attrdefs>U.S. Geological Survey</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>130.63</rdommin>
+            <rdommax>134.27</rdommax>
+            <attrunit>Meters</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>Denver Federal Center, Building 810, Mail Stop 302</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty.</distliab>
+    <techpreq>ESRI shapefile: User must have geospatial software capable of reading a shapefile in order to open and use ESRI shapefile (SHP).</techpreq>
+  </distinfo>
+  <metainfo>
+    <metd>20210526</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Stephanie R James</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntpos>Geophysicist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Mail Stop 973, W 6th Ave Kipling St</address>
+          <city>Lakewood</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>303-236-1405</cntvoice>
+        <cntemail>sjames@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>

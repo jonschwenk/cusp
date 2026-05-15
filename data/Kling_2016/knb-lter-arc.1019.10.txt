@@ -1,0 +1,188 @@
+Dataset title:  Tussock watershed thaw depth survey summary for 1990 to present, Arctic Long-Term Ecological Research (LTER), Toolik Research Station, Alaska.
+
+Dataset ID:  doi:10.6073/pasta/5ec809b760dd8cbc9e979941e29f70cc
+Dataset Creator
+
+	Name:		George Kling
+	
+	Address:
+			University of Michigan,Department of Ecology and Evolutionary Biology,830 North University
+			Ann Arbor, MI 48109-1048  US
+	
+	Email:		gwk@umich.edu
+
+
+Metadata Provider
+
+	Organization:	Arctic Long Term Ecolocial Research
+	URL:		http://arc.lternet.edu
+
+
+Dataset Abstract
+
+
+
+Dataset Keywords
+
+	disturbance
+	thaw depth
+	permafrost
+	disturbance
+	watersheds
+	moist tussock tundra
+	arctic tundra
+
+
+Intellectual Rights
+
+
+
+Distribution
+
+	Online distribution:  https://arc-lter.ecosystems.mbl.edu/1990presenttwthawkling
+
+
+Geographic Coverage
+
+
+	Bounding Coordinates
+
+		Geographic description:	TW lower:    Tussock Watershed stream where it enters Toolik Lake
+		West bounding coordinate:	-149.613
+		East bounding coordinate:	-149.613
+		North bounding coordinate:	68.6279
+		South bounding coordinate:	68.6279
+	
+
+
+
+Temporal Coverage
+
+	Start Date:  1990-07-02
+	End Date:  2018-08-11
+
+Maintenance
+
+	
+          Entered metadata into new metadata form.
+Version 3: LTERNET Data Access server proxy changed from das.lternet.edu to metacat.lternet.edu.
+Version 4: Added LTERNET Data Access server proxy for Excel files.
+1/26/2010 - JMK Added 2007-2009 data
+Version 5: Update LTERNET Data Access server proxy link for Excel and comma delimited data files. Changed from knb to das in url. Feb 210 JimL
+Version 6:  Corrected the Methods since it was the Imnavait Creek method.  Changed the Title…  to present, Updated the form to the new version. Jim L 22Aug11
+Version 9: Checked keywords against the LTER network preferred list and replaced non-preferred terms. Jim L 15Jan14
+Version 10: Updated data from 1990 to 2018; updated Metadata.  J. Dobkowski, G. Kling.  21-May-2019
+        
+
+
+Dataset Contact
+
+
+
+Methods
+
+
+
+	Method Step 
+
+		Description 
+
+
+
+Data Table
+
+	Entity Name:  1990_present_TW_thaw_Kling_csv
+	Entity Description:  Tussock Watershed Thaw Depth Survey Summary for 1990 to present, Arctic LTER, Toolik Research Station, Alaska
+	Object Name:  1990_present_TW_thaw_Kling.csv
+
+
+
+Data Format
+
+	Number of Header Lines:  4
+	Attribute Orientation:  column
+	Field Delimiter:  ,
+	Number of Records:  58
+
+
+
+Attributes
+
+	Attribute Name:  ﻿Date
+	Attribute Label:  ﻿Date
+	Attribute Definition:  Date of measurement
+	Storage Type:  date
+	Measurement Scale: 
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  Mean_thaw_cm
+	Attribute Label:  Mean_thaw_cm
+	Attribute Definition:  Average thaw depth for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  centimeter
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  Standard_Devation_cm
+	Attribute Label:  Standard_Devation_cm
+	Attribute Definition:  Standard deviation of thaw depth for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  centimeter
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  Standard_Error_cm
+	Attribute Label:  Standard_Error_cm
+	Attribute Definition:  Standard Error of thaw depth for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  centimeter
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  N
+	Attribute Label:  N
+	Attribute Definition:  Number of measurements of thaw depth for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  number
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  Minimum_cm
+	Attribute Label:  Minimum_cm
+	Attribute Definition:  Minimum individual thaw depth recorded for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  centimeter
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  Maximum_cm
+	Attribute Label:  Maximum_cm
+	Attribute Definition:  Maximum individual thaw depth recorded for sample date
+	Storage Type:  
+	Measurement Scale: 
+		Units:  centimeter
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+
+	Attribute Name:  CV_%
+	Attribute Label:  CV_%
+	Attribute Definition:  Coefficient of variation calculated for all thaw measurements on one date
+	Storage Type:  
+	Measurement Scale: 
+		Units:		percent
+		Number Type:  real
+	Missing Value Code: .  (Missing or Not Measured)
+
+

@@ -1,0 +1,16 @@
+Site Name,Latitude (°N),Longitude (°E),Vegetation,Soil Type
+XDT,35.72,94.13,Alpine meadow,Aridisols
+TGL,33.07,91.94,Alpine meadow,Gelisols
+LDH,31.82,91.74,Alpine wet meadow,Entisols
+ZNH,35.49,91.96,Alpine desert,Entisols
+AYK,37.54,88.8,Alpine desert,Inceptisols
+TSH,35.36,79.55,Alpine desert,Gelisols
+Ch01,34.73,92.89,Alpine meadow,Aridisols
+Ch04 (LDH),31.82,91.74,Alpine wet meadow,Entisols
+Ch06,35.62,94.06,Alpine steppe,Inceptisols
+QT01,35.14,93.04,Alpine meadow,Gelisols
+QT03,34.82,92.92,Alpine meadow,Gelisols
+QT05,33.96,92.34,Alpine meadow,Gelisols
+QT08,35.22,93.08,Alpine dessert,Aridisols
+QT09 (XDT),35.72,94.13,Alpine meadow,Aridisols
+QT04 (TGL),33.07,91.94,Alpine meadow,Gelisols

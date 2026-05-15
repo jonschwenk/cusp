@@ -1,0 +1,12 @@
+site_id,wildfire,date,Wildfire date/name,rocky/silty,pf_observed,thaw_depth,obs_limit,Easting (m),Northing (m),epsg
+W. Fork Dall burned,1,9/2/16,2004 Dall City Fire,Rocky,0,,245,619005,7352251,32605
+W. Fork Dall burned deep,1,9/2/16,2004 Dall City Fire,Rocky,0,,245,619005,7352251,32605
+W. Fork Dall unburned,0,9/2/16,NA,Rocky,1,55,55,618998,7352220,32605
+Isom,0,9/3/16,NA,Silty,1,51,51,388549,7299868,32606
+Erickson burned upslope deciduous ,1,9/4/16,2003 Erickson Creek  Fire,Silty,1,209,209,411138,7273628,32606
+Erickson burned,1,9/4/16,2003 Erickson Creek  Fire,Silty,1,105,105,411106,7273526,32606
+West Twin unburned,0,8/31/16,NA,Rocky,1,100,100,503981,7246801,32606
+West Twin burned,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,504105,7246786,32606
+West Twin burned seep,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,504050,7246690,32606
+West Twin burned seep deep,1,8/31/16,2004 Boundary Fire,Rocky,0,,123,504050,7246690,32606
+Globe 1 toeslope,0,8/30/16,NA,Rocky,1,63,63,447432,7234653,32606

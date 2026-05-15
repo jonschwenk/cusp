@@ -1,0 +1,23 @@
+Table 1. Sampling locations and characteristics,,,,,,,,,,,
+"The number of samples, N, is N=4 per site for 6-cm cores and N=1 per site for 13-cm cores.",,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,Depth range (cm),,UTM,
+Site name,Abbreviation,Wildfire condition,Date sampled (2016),Wildfire date/name,Rocky/Silty Catchment-Scale Classification,Organic layer thickness (cm),Active layer thickness (cm),6-cm cores,13-cm cores,Easting (m),Northing (m)
+W. Fork Dall burned,WFD B,Burned,2 Sep.,2004 Dall City Fire,Rocky,5,>245,35_41,,619005,7352251
+W. Fork Dall burned deep,WFD BD,Burned,2 Sep.,2004 Dall City Fire,Rocky,5,>245,65_71,70_83,619005,7352251
+W. Fork Dall unburned,WFD UB,Unburned,2 Sep.,NA,Rocky,20--25,55,20_26,,618998,7352220
+Isom,Isom,Unburned,3 Sep.,NA,Silty,12--13,51,24_30,24_37,388549,7299868
+Erickson burned upslope deciduous ,E BUD,Burned,4 Sep.,2003 Erickson Creek  Fire,Silty,5--8,209,20_26,25_38,411138,7273628
+Erickson burned,E B,Burned,4 Sep.,2003 Erickson Creek  Fire,Silty,5--14,105,20_26,,411106,7273526
+West Twin unburned,WT UB,Unburned,31 Aug.,NA,Rocky,20--23,90--100,20_26,35,503981,7246801
+West Twin burned,WT B,Burned,31 Aug.,2004 Boundary Fire,Rocky,9--21,>123,12_22A,20-33,504105,7246786
+West Twin burned seep,WT BS,Burned,31 Aug.,2004 Boundary Fire,Rocky,5,>123,10_16,15,504050,7246690
+West Twin burned seep deep,WT BSD,Burned,31 Aug.,2004 Boundary Fire,Rocky,5,>123,35_41,,504050,7246690
+Globe 1 burned,G1 B,Burned,30 Aug.,2015 Aggie Creek Fire,Rocky,5--7,Rock refusal,5.5_11.5,,447395,7234653
+Globe 1 toeslope,G1 TS,Unburned,30 Aug.,NA,Rocky,20--30,63,20_26,30,447432,7234653
+Globe 1 unburned,G1 UB,Unburned,30 Aug.,NA,Rocky,15--20,Not sampled,20_26,,447584,7234617
+,,,,,,,,,,,
+"UTM, WGS 84 Zone 6 N, except W. Fork Dall sites which are Zone 5N",,,,,,,,,,,
+conversions using:,,,,,,,,,,,
+http://www.rcn.montana.edu/resources/converter.aspx,,,,,,,,,,,
+A sampled just below variable depth interface between organic layer and mineral soil,,,,,,,,,,,

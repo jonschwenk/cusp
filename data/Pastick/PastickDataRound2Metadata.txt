@@ -1,0 +1,9 @@
+WesternAKSitePHoriz (n=15,152): 
+This is an NRCS soil pedon dataset and you’ll need to query a couple of columns to get the data you need for your modelling. 
+Layers of dry or ice rich permafrost are designated by the horizon (hzname) suffix of ff and f, respectively (e.g., Cf, Cgjjf, Oaf). 
+You’ll need to use that and the horizon top depth (hzdept) to identify those pedons with frozen soil presence/absence in the desired depth range. 
+In total there are 305 sites that contain permafrost in the first meter of the ground surface. 
+
+
+YFlats_NRCS (n=889): This dataset is an NRCS soil pedon dataset that has been cleaned not unlike the other datasets I've provided.
+

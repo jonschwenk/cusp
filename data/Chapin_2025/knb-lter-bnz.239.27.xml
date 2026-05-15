@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="knb-lter-bnz.239.27" scope="system"
+  system="https://pasta.edirepository.org"
+  xmlns:ds="eml://ecoinformatics.org/dataset-2.2.0"
+  xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0"
+  xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="eml://ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+   <access
+    authSystem="https://pasta.edirepository.org/authentication"
+    order="allowFirst" scope="document"
+      system="https://pasta.edirepository.org">
+      <allow>
+         <principal>uid=BNZ,o=EDI,dc=edirepository,dc=org</principal>
+         <permission>all</permission>
+      </allow>
+      <allow>
+         <principal>public</principal>
+         <permission>read</permission>
+      </allow>
+   </access>
+   <dataset>
+      <alternateIdentifier
+        system="https://doi.org">doi:10.6073/pasta/39a508640acba64933f5ad5613b744d0</alternateIdentifier><shortName>knb-lter-bnz.239.27</shortName>
+      <title>Bonanza Creek LTER: Annual Active Layer Depths from 2004 to Present in the Boundary Fire Fireline near Fairbanks, Alaska</title>
+      <creator>
+         <individualName>
+            <givenName>F</givenName>
+            <givenName>Stuart</givenName>
+            <surName>Chapin</surName>
+         </individualName>
+         <positionName>Principal Investigator (retired)</positionName>
+         <address>
+            <deliveryPoint>Institute of Arctic Biology: University of Alaska Fairbanks</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 455-6408</phone>
+         <phone
+        phonetype="fax">(907) 474-6967</phone>
+         <electronicMailAddress>terry.chapin@alaska.edu</electronicMailAddress>
+         <onlineUrl>https://sites.google.com/alaska.edu/f-stuart-chapin-iii-terry/</onlineUrl>
+      </creator>
+      <creator>
+         <individualName>
+            <givenName>Roger</givenName>
+            <surName>Ruess</surName>
+         </individualName>
+         <positionName>Principal Investigator (retired)</positionName>
+         <address>
+            <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775-0180</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7153</phone>
+         <phone
+        phonetype="fax">(907) 474-6967</phone>
+         <electronicMailAddress>rwruess@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://people.iab.uaf.edu/roger_ruess</onlineUrl>
+      </creator>
+      <creator>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </creator>
+      <metadataProvider>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <positionName>Data Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </metadataProvider>
+      <associatedParty>
+         <individualName>
+            <givenName>Mark</givenName>
+            <givenName>A</givenName>
+            <surName>Winterstein</surName>
+         </individualName>
+         <positionName>Research Technician</positionName>
+         <address>
+            <deliveryPoint>110 Arctic Health Research Building University of Alaska Fairbanks</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-5435</phone>
+         <!--No fax info on file for this person-->
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Jamie</givenName>
+            <surName>Hollingsworth</surName>
+         </individualName>
+         <positionName>Bonanza Creek LTER Site Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit University of Alaska Fairbanks School of Agriculture and Land Resources Management P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7470</phone>
+         <phone
+        phonetype="fax">(907) 474-6251</phone>
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Vladimir</givenName>
+            <surName>Romanovsky</surName>
+         </individualName>
+         <positionName>Assoc Prof, Snow, Ice and Permafrost</positionName>
+         <address>
+            <deliveryPoint>Geophysical Institute University of Alaska Fairbanks PO Box 757320</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+        phonetype="voice">(907) 474-7459</phone>
+         <phone
+        phonetype="fax">(907) 474-7290</phone>
+         <role>Associated party</role>
+      </associatedParty>
+      <associatedParty>
+         <individualName>
+            <givenName>Karl</givenName>
+            <surName>Olson</surName>
+         </individualName>
+         <positionName>Technician</positionName>
+         <address>
+            <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>United States</country>
+         </address>
+         <phone
+      phonetype="voice">(907) 474-5104</phone>
+         <!--No fax info on file for this person-->
+         <role>Associated party</role>
+      </associatedParty>
+      <pubDate>2025-03-08</pubDate>
+      <abstract>
+         <para>In 2004 the Boundary Fire burned an area within the Caribou Poker Creeks Research Watershed providing an opportunity to study various fire effects.  When wildfire burns through a northern black spruce forest there is usually a subsequent increase in depth of thaw, due to the reduction in the depth of the organic layer. The construction of firelines with heavy machinery involves the complete removal of the organic layer and results in an even greater increase in active layer. This study was designed as a long-term comparison between depth of thaw on firelines, burned and unburned black spruce forest underlain by ice rich permafrost.  This study will allow us to compare thaw depths from recent firelines to those studied at the Wickersham and Bonanza Creek fireline study sites.  Within the fireline bulldozers were used to knock down and in some cases remove, the trees and organic layer.  Within the safety zone an area approximately 30 m x 30 m was cleared to mineral soil.  After the fire was out an excavator was used to return the organic material to the fireline and safety zones.  </para>
+      </abstract>
+      <keywordSet>
+         <keyword>permafrost</keyword>
+         <keyword>succession</keyword>
+         <keyword>thaw depth</keyword>
+         <keyword>active layer</keyword>
+         <keywordThesaurus>Succession</keywordThesaurus>
+      </keywordSet>
+      <intellectualRights>
+         <section>
+            <title>Data Use</title>
+            <para>This work has been produced as part of the Long Term Ecological Research Program and data users should adhere to the Data Use Agreement of the Long Term Ecological Research Network. The consumer of these data (“Data User” herein) has an ethical obligation to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or coauthorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available “as is.” The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</para>
+         </section>
+         <section>
+            <title>Citation</title>
+            <para>It is considered a matter of professional ethics to acknowledge the work of other scientists. Thus, the Data User should properly cite the Data Set in any publications or in the metadata of any derived data products that were produced using the Data Set. Citation should take the following general form: Creator(s), Year of Data Publication, Title of Dataset, Publisher, Dataset identifier, Dataset URL, Dataset DOI.  For Example:   Van Cleve, Keith; Chapin, F. Stuart; Ruess, Roger W. 2016. Bonanza Creek Experimental Forest: Hourly Temperature (sample, min, max) at 50 cm and 150 cm from 1988 to Present, Bonanza Creek LTER - University of Alaska Fairbanks. BNZ:1, http://www.lter.uaf.edu/data/data-detail/id/1. doi:10.6073/pasta/725db90d86686be13e6d6b2da5d61217.</para>
+         </section>
+         <section>
+            <title>Acknowledgement</title>
+            <para>The Data User should acknowledge any institutional support or specific funding awards referenced in the metadata accompanying this dataset in any publications where the Data Set contributed significantly to its content. Acknowledgements should identify the supporting party, the party that received the support, and any identifying information such as grant numbers. For example: Data are provided by the Bonanza Creek LTER, a partnership between the University of Alaska Fairbanks, and the U.S. Forest Service. Significant funding for collection of these data was provided by the National Science Foundation Long-Term Ecological Research program (NSF Grant numbers   DEB-2224776, DEB-1636476, DEB-1026415, DEB-0620579, DEB-0423442, DEB-0080609, DEB-9810217, DEB-9211769, DEB-8702629) and by the USDA Forest Service, Pacific Northwest Research Station (Agreement # RJVA-PNW-20-JV-11261932-018).</para>
+         </section>
+         <section>
+            <title>Notification</title>
+            <para>The Data User will notify the Data Set Contact when any derivative work or publication based on or derived from the Data Set is distributed.</para>
+         </section>
+         <section>
+            <title>Collaboration</title>
+            <para>The Data Set has been released in the spirit of open scientific collaboration. Data Users are thus strongly encouraged to consider consultation, collaboration and/or co-authorship with the Data Set Creator.</para>
+         </section>
+         <section>
+            <title>Disclaimer</title>
+            <para>While substantial efforts are made to ensure the accuracy of data and documentation contained in this Data Set, complete accuracy of data and metadata cannot be guaranteed. All data and metadata are made available in its present condition. The Data User holds all parties involved in the production or distribution of the Data Set harmless for damages resulting from its use or interpretation.</para>
+         </section>
+         <!--No additional acknowledgements found in database (datafile/intellectual_rights)-->
+      </intellectualRights>
+      <distribution
+          id="distributionReference">
+         <online>
+            <url
+      function="information">http://www.lter.uaf.edu/data/data-detail/id/239</url>
+         </online>
+      </distribution>
+      <distribution
+      id="10.6073/pasta/39a508640acba64933f5ad5613b744d0" scope="system"
+          system="https://pasta.edirepository.org"><online><url
+        function="information">https://doi.org/10.6073/pasta/39a508640acba64933f5ad5613b744d0</url></online></distribution><coverage>
+         <geographicCoverage
+        id="geoReference">
+            <geographicDescription>Dataset geographic description information is unavailable. {datafile/geoCoverage is empty}</geographicDescription>
+            <boundingCoordinates>
+               <westBoundingCoordinate>-147.49046</westBoundingCoordinate>
+               <eastBoundingCoordinate>-147.47664</eastBoundingCoordinate>
+               <northBoundingCoordinate>65.15478</northBoundingCoordinate>
+               <southBoundingCoordinate>65.15142</southBoundingCoordinate>
+            </boundingCoordinates>
+         </geographicCoverage>
+         <temporalCoverage>
+            <rangeOfDates>
+               <beginDate>
+                  <calendarDate>2004-09-10</calendarDate>
+               </beginDate>
+               <endDate>
+                  <calendarDate>2024-09-30</calendarDate>
+               </endDate>
+            </rangeOfDates>
+         </temporalCoverage>
+      </coverage>
+      <maintenance>
+         <description>
+            <section>
+               <title>Status</title>
+               <para>Ongoing</para>
+            </section>
+         </description>
+      </maintenance>
+      <contact>
+         <organizationName>Bonanza Creek LTER</organizationName>
+         <positionName>Data Manager</positionName>
+         <address>
+            <deliveryPoint>Boreal Ecology Cooperative Research Unit</deliveryPoint>
+            <deliveryPoint>University of Alaska Fairbanks</deliveryPoint>
+            <deliveryPoint>P.O. Box 756780</deliveryPoint>
+            <city>Fairbanks</city>
+            <administrativeArea>AK</administrativeArea>
+            <postalCode>99775</postalCode>
+            <country>USA</country>
+         </address>
+         <phone
+        phonetype="voice">907-474-6364</phone>
+         <phone
+        phonetype="fax">907-474-6251</phone>
+         <electronicMailAddress>uaf-bnz-im-team@alaska.edu</electronicMailAddress>
+         <onlineUrl>http://www.lter.uaf.edu</onlineUrl>
+      </contact>
+      <publisher>
+         <organizationName>Environmental Data Initiative</organizationName>
+         <electronicMailAddress>info@edirepository.org</electronicMailAddress>
+         <onlineUrl>https://edirepository.org</onlineUrl>
+         <userId
+        directory="https://ror.org">0330j0z60</userId>
+      </publisher>
+      <pubPlace>Environmental Data Initiative</pubPlace>
+      <methods>
+         <methodStep>
+            <description>
+               <section>
+                  <title>Experimental Design</title>
+                  <para>Five 10 meter probe lines were established using fiberglass poles within this area.  At each site 10 poles were set at 1 meter intervals.  These sites include an unburned control (BFCONTROL), an unburned fireline (BFFIRELINEUNBURNED), an unburned safety zone (BFSAFETYZONE), a burned fireline (BFFIRELINEBURNED), and a burned are (BFBURN).  
+</para>
+               </section>
+               <section>
+                  <title>Methods</title>
+                  <para>Thaw depth is measured in cm using a graduated frost probe. Measurements are done in mid to late September as close as possible to maximum thaw depth.
+</para>
+               </section>
+            </description>
+         </methodStep>
+         <sampling>
+            <studyExtent>
+               <coverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFBURN -- Burned region at Boundary fire of 2004 plots within the cpcrw boundaries. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.47664</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.47664</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15142</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15142</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFCONTROL -- Boundary fire of 2004 control area within the cpcrw boundaries. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.49046</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.49046</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15472</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15472</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFFIRELINEBURNED -- Burned Fire Line at Boundary fire of 2004 plots within the cpcrw boundaries. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.48022</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.48022</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15288</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15288</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFFIRELINEUNBURNED -- Unburned Fire Line at Boundary fire of 2004 plots within the cpcrw boundaries. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.48973</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.48973</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15478</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15478</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <geographicCoverage>
+                     <geographicDescription>BFSAFETYZONE -- Safety Region at Boundary fire of 2004 plots within the cpcrw boundaries. Site alternate names:</geographicDescription>
+                     <boundingCoordinates>
+                        <westBoundingCoordinate>-147.48017</westBoundingCoordinate>
+                        <eastBoundingCoordinate>-147.48017</eastBoundingCoordinate>
+                        <northBoundingCoordinate>65.15254</northBoundingCoordinate>
+                        <southBoundingCoordinate>65.15254</southBoundingCoordinate>
+                     </boundingCoordinates>
+                  </geographicCoverage>
+                  <temporalCoverage>
+                     <rangeOfDates>
+                        <beginDate>
+                           <calendarDate>2004-09-10</calendarDate>
+                        </beginDate>
+                        <endDate>
+                           <calendarDate>2024-09-30</calendarDate>
+                        </endDate>
+                     </rangeOfDates>
+                  </temporalCoverage>
+               </coverage>
+            </studyExtent>
+            <samplingDescription>
+               <section>
+                  <title>Sampling Frequency</title>
+                  <para>Annually in the fall, as close to the date of maximum thaw as possible
+</para>
+               </section>
+            </samplingDescription>
+         </sampling>
+      </methods>
+      <project>
+         <title>The Bonanza Creek LTER</title>
+         <personnel
+        id="VanCleveID">
+            <individualName>
+               <givenName>Keith</givenName>
+               <surName>Van Cleve</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="ChapinID">
+            <individualName>
+               <givenName>F.S.</givenName>
+               <givenName>Stuart</givenName>
+               <surName>Chapin</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Department of Biology and Wildlife; Institute of Arctic Biology: University of Alaska Fairbanks 193 Arctic Health P.O. Box 757000</deliveryPoint>
+               <city>Fairbanks</city>
+               <administrativeArea>AK</administrativeArea>
+               <postalCode>99775</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+          phonetype="voice">(907) 455-6408</phone>
+            <phone
+        phonetype="fax">(907) 474-6967</phone>
+            <electronicMailAddress>terry.chapin@alaska.edu</electronicMailAddress>
+            <onlineUrl>http://terrychapin.org/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="RuessID">
+            <individualName>
+               <givenName>Roger</givenName>
+               <givenName>W.</givenName>
+               <surName>Ruess</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Institute of Arctic Biology University of Alaska Fairbanks P.O. Box 757000</deliveryPoint>
+               <city>Fairbanks</city>
+               <administrativeArea>AK</administrativeArea>
+               <postalCode>99775-0180</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+          phonetype="voice">(907) 474-7153</phone>
+            <phone
+        phonetype="fax">(907) 474-6967</phone>
+            <electronicMailAddress>rwruess@alaska.edu</electronicMailAddress>
+            <onlineUrl>http://www.iab.uaf.edu/~roger_ruess/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <personnel
+          id="MackID">
+            <individualName>
+               <givenName>Michelle</givenName>
+               <givenName>Cailin</givenName>
+               <surName>Mack</surName>
+            </individualName>
+            <organizationName>Bonanza Creek LTER</organizationName>
+            <positionName>Lead Principal Investigator</positionName>
+            <address>
+               <deliveryPoint>Northern Arizona University: Ecosystem Science and Society Center (ECOSS) PO Box 5620</deliveryPoint>
+               <city>Flagstaff</city>
+               <administrativeArea>AZ</administrativeArea>
+               <postalCode>86011</postalCode>
+               <country>United States</country>
+            </address>
+            <phone
+      phonetype="voice">(928) 523-9415</phone>
+            <electronicMailAddress>Michelle.Mack@nau.edu</electronicMailAddress>
+            <onlineUrl>https://macklab.nau.edu/</onlineUrl>
+            <role>Principal Investigator</role>
+         </personnel>
+         <funding>
+            <para>NSF Grant numbers  DEB-2224776, DEB-1636476, DEB-1026415, DEB-0620579, DEB-0423442, DEB-0080609, DEB-9810217, DEB-9211769, DEB-8702629</para>
+            <para>USDA Forest Service, Pacific Northwest Research Station (Agreement # RJVA-PNW-20-JV-11261932-018)</para>
+         </funding>
+      </project>
+      <dataTable
+      id="0023cc85ea40dbae2d96ec3c64145274" scope="document"
+              system="https://pasta.edirepository.org">
+         <entityName>239_boundaryfire_active_layer_2024.csv</entityName>
+         <entityDescription>Thaw depth measured annually.</entityDescription>
+         <physical>
+            <objectName>239_boundaryfire_active_layer_2024.csv</objectName>
+            <dataFormat>
+               <textFormat>
+                  <numHeaderLines>1</numHeaderLines>
+                  <recordDelimiter>\n</recordDelimiter>
+                  <physicalLineDelimiter>\n</physicalLineDelimiter>
+                  <attributeOrientation>column</attributeOrientation>
+                  <simpleDelimited>
+                     <fieldDelimiter>,</fieldDelimiter>
+                     <quoteCharacter>"</quoteCharacter>
+                  </simpleDelimited>
+               </textFormat>
+            </dataFormat>
+            <distribution>
+               <online>
+                  <url
+          function="download">https://pasta.lternet.edu/package/data/eml/knb-lter-bnz/239/27/0023cc85ea40dbae2d96ec3c64145274</url>
+               </online>
+            </distribution>
+         </physical>
+         <attributeList>
+            <attribute>
+               <attributeName>Date</attributeName>
+               <attributeLabel>Date</attributeLabel>
+               <attributeDefinition>The date the measurement was taken.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <dateTime>
+                     <formatString>YYYY-MM-DD</formatString>
+                  </dateTime>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Site</attributeName>
+               <attributeLabel>Site</attributeLabel>
+               <attributeDefinition>Name of site where sample was taken.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Name of site where sample was taken.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Stake</attributeName>
+               <attributeLabel>Stake</attributeLabel>
+               <attributeDefinition>Stake number where the measurements were taken.</attributeDefinition>
+               <storageType>integer</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Stake number where the measurements were taken.</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Depth</attributeName>
+               <attributeLabel>Depth</attributeLabel>
+               <attributeDefinition>Active Layer Thicknes: The depth, in cm, from the duff/living plant interface (~3cm) to frozen soil.</attributeDefinition>
+               <storageType>float</storageType>
+               <measurementScale>
+                  <ratio>
+                     <unit>
+                        <standardUnit>centimeter</standardUnit>
+                     </unit>
+                     <numericDomain>
+                        <numberType>real</numberType>
+                        <!--No minimum value recorded in database (datafilevaribles/minvalid)-->
+                     </numericDomain>
+                  </ratio>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>Flag</attributeName>
+               <attributeLabel>Flag</attributeLabel>
+               <attributeDefinition>This field, denotes any special circumstances particular to that data line.</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <enumeratedDomain>
+                           <codeDefinition>
+                              <code>G</code>
+                              <definition>Good measurment</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>N</code>
+                              <definition>No Permafrost Present</definition>
+                           </codeDefinition>
+                           <codeDefinition>
+                              <code>M</code>
+                              <definition>Missing Value</definition>
+                           </codeDefinition>
+                        </enumeratedDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>hit_type</attributeName>
+               <attributeLabel>hit_type</attributeLabel>
+               <attributeDefinition>Indicates if measurement was to rock or ice</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Indicates if measurement was to rock or ice</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>crew</attributeName>
+               <attributeLabel>crew</attributeLabel>
+               <attributeDefinition>Initials of field crew</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>Initials of field crew</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+            <attribute>
+               <attributeName>notes</attributeName>
+               <attributeLabel>notes</attributeLabel>
+               <attributeDefinition>notes</attributeDefinition>
+               <storageType>string</storageType>
+               <measurementScale>
+                  <nominal>
+                     <nonNumericDomain>
+                        <textDomain>
+                           <definition>notes</definition>
+                        </textDomain>
+                     </nonNumericDomain>
+                  </nominal>
+               </measurementScale>
+               <!--No missing value/character in database (datafilevarible/errorcode)-->
+            </attribute>
+         </attributeList>
+      </dataTable>
+   </dataset>
+   <additionalMetadata>
+      <metadata>
+         <unitList>
+            <unit
+          id="YYYY-MM-DD"/>
+            <unit id="flag"/>
+         </unitList>
+      </metadata>
+   </additionalMetadata>
+</eml:eml>

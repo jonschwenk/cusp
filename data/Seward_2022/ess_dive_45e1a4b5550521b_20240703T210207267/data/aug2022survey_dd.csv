@@ -1,0 +1,6 @@
+Column_or_Row_Name,Unit,Definition,Column_or_Row_Name,Data_Type
+Easting,Meters,Location coordinate in WGS UTM Zone 3N EPSG:32603,Easting,Float
+Northing,Meters,Location coordinate in WGS UTM Zone 3N EPSG:32603,Northing,Float
+PfDepth,Centimeters,Depth of active layer in from frost probing. 120 cm indicates no permafrost detected,pfDepth,Float
+PfTemp,Celsius,Temperature at top of permafrost layer ,pfTemp,Float
+PF,N/A,"Presence of permafrost in binary. 1 indicated presence, 0 indicated absence.",PF,Float

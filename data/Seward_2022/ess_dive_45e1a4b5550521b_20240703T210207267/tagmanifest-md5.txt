@@ -1,0 +1,12 @@
+0b0274c792051ce5c3fc55b3bf527c87 bag-info.txt
+b339c20cd16369f13c3b9cde6e2f8eb3 metadata/oai-ore.xml
+971b123e653729fb89ee7d5280abf164 metadata/sysmeta/sysmeta-ess-dive-bb71c09369c80df-20240702T163101640.xml
+637943eba992a97a2e729504f2c31ab6 metadata/sysmeta/sysmeta-ess-dive-769dfbadf28c109-20240702T163101643.xml
+9d60abf2845a774b37a6abff7ee6f135 metadata/sysmeta/sysmeta-ess-dive-45e1a4b5550521b-20240703T210207267.xml
+eaa2c609ff6371712f623f5531945b44 bagit.txt
+57451263d8576fdd861db584e6ec093a metadata/sysmeta/sysmeta-ess-dive-1490661244c9dc1-20240702T163101637.xml
+b251e3147c6aaf50960b22ce8e489a1d manifest-md5.txt
+3381ee27b6c9836e8b9b9a26f763e37a metadata/sysmeta/sysmeta-ess-dive-fb2af036ad1c82e-20240703T210207291.xml
+96d369b676d73be7f0fc88a9b6bfc72b metadata/sysmeta/sysmeta-ess-dive-4b4edd05710a28f-20240702T163101645.xml
+84ed7828ff90e6011b9df2fb3b5f2d0e metadata/science-metadata.xml
+514c7958392543ab6a617d1249a9ad87 metadata/sysmeta/sysmeta-ess-dive-abb51e4fff34f81-20240702T163101631.xml

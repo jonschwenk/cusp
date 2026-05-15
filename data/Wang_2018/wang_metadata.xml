@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="doi:10.18739/A2KG55" system="https://arcticdata.io" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 eml.xsd">
+  <dataset>
+    <alternateIdentifier>PF AK</alternateIdentifier>
+    <title>A synthesis dataset of near-surface permafrost conditions for Alaska, 1997-2016</title>
+    <creator id="wang">
+      <individualName>
+        <givenName>Kang</givenName>
+        <surName>Wang</surName>
+      </individualName>
+      <organizationName>University of Colorado Boulder</organizationName>
+      <positionName>Postdoctoral Scholar</positionName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+      <electronicMailAddress>Kang.Wang@colorado.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-3416-572X</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Irina</givenName>
+        <surName>Overeem</surName>
+      </individualName>
+      <organizationName>University of Colorado, Boulder</organizationName>
+      <positionName>Research Scientist III</positionName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+      <electronicMailAddress>irina.overeem@colorado.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Elchin</givenName>
+        <surName>Jafarov</surName>
+      </individualName>
+      <organizationName>Los Alamos National Laboratory</organizationName>
+      <positionName>Research Associate</positionName>
+      <address>
+        <city>Las Alamos</city>
+        <administrativeArea>New Mexico</administrativeArea>
+        <postalCode>87545</postalCode>
+      </address>
+      <electronicMailAddress>elchin@lanl.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-8310-3261</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Gary</givenName>
+        <surName>Clow</surName>
+      </individualName>
+      <organizationName>University of Colorado, Boulder</organizationName>
+      <positionName>Research Geophysicist</positionName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+      <electronicMailAddress>gclow@colorado.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2262-3853</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Vladimir</givenName>
+        <surName>Romanovsky</surName>
+      </individualName>
+      <organizationName>University of Alaska, Fairbanks</organizationName>
+      <positionName>Professor of Geophysics</positionName>
+      <address>
+        <deliveryPoint>903 Koyukuk Drive</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775-7320</postalCode>
+      </address>
+      <electronicMailAddress>veromanovsky@alaska.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-9515-2087</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Kevin</givenName>
+        <surName>Schaefer</surName>
+      </individualName>
+      <organizationName>University of Colorado, Boulder</organizationName>
+      <positionName>Research Scientist III</positionName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+      <electronicMailAddress>kevin.schaefer@nsidc.org</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5444-9917</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Frank</givenName>
+        <surName>Urban</surName>
+      </individualName>
+      <organizationName>University of Colorado, Boulder</organizationName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>William</givenName>
+        <surName>Cable</surName>
+      </individualName>
+      <organizationName>Alfred Wegener Institute Helmholtz Center for Polar and Marine Research</organizationName>
+      <positionName>Engineer</positionName>
+      <address>
+        <deliveryPoint>Am Handelshafen 12, 27570</deliveryPoint>
+        <city>Bremerhaven</city>
+        <administrativeArea>Germany</administrativeArea>
+      </address>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Mark</givenName>
+        <surName>Piper</surName>
+      </individualName>
+      <organizationName>University of Colorado, Boulder</organizationName>
+      <positionName>Software Engineer</positionName>
+      <address>
+        <city>Boulder</city>
+        <administrativeArea>Colorado</administrativeArea>
+        <postalCode>80303</postalCode>
+      </address>
+      <electronicMailAddress>mark.piper@colorado.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-6418-277X</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Christopher</givenName>
+        <surName>Schwalm</surName>
+      </individualName>
+      <organizationName>Woods Hole Research Center</organizationName>
+      <positionName>Associate Scientist</positionName>
+      <address>
+        <deliveryPoint>149 Woods Hole Rd</deliveryPoint>
+        <city>Falmouth</city>
+        <administrativeArea>MA</administrativeArea>
+        <postalCode>02540</postalCode>
+      </address>
+      <electronicMailAddress>cschwalm@whrc.org</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-5035-5681</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Tingjun</givenName>
+        <surName>Zhang</surName>
+      </individualName>
+      <organizationName>Lanzhou University</organizationName>
+      <positionName>Dean of the School of Earth and Environmental Sciences</positionName>
+      <address>
+        <deliveryPoint>222 Tianshui S Rd, Chengguan Qu</deliveryPoint>
+        <city>Lanzhou Shi, Gansu Sheng,</city>
+        <administrativeArea>China</administrativeArea>
+      </address>
+      <electronicMailAddress>tjzhang@lzu.edu.ch</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-3560-6187</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Alexander</givenName>
+        <surName>Kholodov</surName>
+      </individualName>
+      <organizationName>University of Alaska, Fairbanks</organizationName>
+      <positionName>Research Associate</positionName>
+      <address>
+        <deliveryPoint>903 Koyukuk Drive</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99775-7320</postalCode>
+      </address>
+      <electronicMailAddress>alkholodov@alaska.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Pamela</givenName>
+        <surName>Sousanes</surName>
+      </individualName>
+      <organizationName>National Park Service Arctic &amp; Central Alaska Inventory and Monitoring Networks</organizationName>
+      <positionName>Physical scientist</positionName>
+      <address>
+        <deliveryPoint>4175 Geist Rd</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709-3420</postalCode>
+      </address>
+      <electronicMailAddress>Pam_Sousanes@nps.gov</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Michael</givenName>
+        <surName>Loso</surName>
+      </individualName>
+      <organizationName>National Park Service Arctic &amp; Central Alaska Inventory and Monitoring Networks</organizationName>
+      <positionName>Geologist</positionName>
+      <address>
+        <deliveryPoint>4175 Geist Rd</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709-3420</postalCode>
+      </address>
+      <electronicMailAddress>michael_loso@nps.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8414-2310</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>David</givenName>
+        <surName>Swanson</surName>
+      </individualName>
+      <organizationName>National Park Service Arctic &amp; Central Alaska Inventory and Monitoring Networks</organizationName>
+      <positionName>Research Geophysicist</positionName>
+      <address>
+        <deliveryPoint>4175 Geist Rd</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709-3420</postalCode>
+      </address>
+      <electronicMailAddress>David_K_Swanson@nps.gov</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-8732-5355</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Kenneth</givenName>
+        <surName>Hill</surName>
+      </individualName>
+      <organizationName>National Park Service Arctic &amp; Central Alaska Inventory and Monitoring Networks</organizationName>
+      <address>
+        <deliveryPoint>4175 Geist Rd</deliveryPoint>
+        <city>Fairbanks</city>
+        <administrativeArea>Alaska</administrativeArea>
+        <postalCode>99709-3420</postalCode>
+      </address>
+      <electronicMailAddress>Kenneth_Hill@nps.gov</electronicMailAddress>
+    </creator>
+    <metadataProvider>
+      <references>wang</references>
+    </metadataProvider>
+    <pubDate>2018-04-04</pubDate>
+    <abstract>
+      <para>We compiled a near-surface permafrost temperature dataset from 72 monitoring stations in Alaska using data collected by the U. S. Geological Survey, the National Park Service, and the University of Alaska-Fairbanks permafrost monitoring networks. The array of monitoring stations spans a large range of latitudes from 60.9°N to 71.3°N and elevations from near sea level to 1327 m. The major vegetation types are tundra and boreal forest. The resulting dataset consists of monthly air and ground temperatures, volumetric water content, and snow depth during 1997 - 2016. Due to the remoteness and harsh conditions, many stations have missing data. Overall, this dataset consists of 41,667 monthly values. </para>
+    </abstract>
+    <additionalInfo>
+      <para>NOTE: This version is under peer-review, and will be updated to a formal version.</para>
+      <para>Description of each column in the raw data file (PF_AK_v0.1_raw.csv):</para>
+      <para>Column 1 (Name): Site's name.</para>
+      <para>Column 2 (Variable): variable names, Tair: air temperature, Snod: snow depth, Tsur: Ground surface temperature, Ts25cm: Ground temperature at 25 cm, Ts50cm: Ground temperature at 50 cm, Ts75cm: Ground temperature  at 75cm, Ts100cm: Ground temperature at 100cm, VWC_top: volumetric water content in upper layer (&lt;25cm).</para>
+      <para>Column 3 (Code): The first two digits indicate data sources, 99: U.S. Geological Survey data, 88: University of Alaska data, 77: National Park Services data. Next three digits indicate station identities.</para>
+      <para>Column 4 (Lat): Latitude, unit: degrees north.</para>
+      <para>Column 5 (Lon): Longitude, unit: degrees east.</para>
+      <para>Column 6 (Year): year.</para>
+      <para>Column 7-18 (Jan-Dec): 12 months, from January through December.</para>
+      <para>Missing or bad values are flagged by -999.99.</para>
+    </additionalInfo>
+    <intellectualRights>
+      <para>
+This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication.
+To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.
+</para>
+    </intellectualRights>
+    <distribution>
+      <offline>
+        <mediumName>digital </mediumName>
+      </offline>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>The array of monitoring stations spans a large range of latitudes from 60.9°N to 71.3°N and elevations from near sea level to 1327 m across Alaska, USA. The major vegetation types are tundra and boreal forest.</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-165.0000</westBoundingCoordinate>
+          <eastBoundingCoordinate>-141.0000</eastBoundingCoordinate>
+          <northBoundingCoordinate>71.5000</northBoundingCoordinate>
+          <southBoundingCoordinate>60.0000</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>1997-09-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2016-08-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <contact>
+      <references>wang</references>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Synthesis</title>
+            <para>We compile a first integrated near-subsurface permafrost dataset for Alaska from the three most reliable sources monitoring permafrost conditions over several decades: the Geophysical Institute Permafrost Laboratory at the University of Alaska Fairbanks (GI-UAF), National Park Services in Alaska (NPSA), and the USGS. The developed permafrost dataset for Alaska (PF-AK, version 0.1) includes measured air and ground temperatures, snow depth and soil volumetric water content for 72 permafrost monitoring stations in Alaska. </para>
+            <para>The resulting dataset consists of monthly air and ground temperatures, volumetric water content, and snow depth during 1997 - 2016.
+The ground-measurement depths vary station by station within the GI-UAF and NPSA networks, typically ranging from the ground surface (i.e., 0 m) to 1 m below the ground surface. </para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <section>
+            <title>Air temperature</title>
+            <para>These networks utilize radiation-shielded thermistors (Campbell Scientific CSI 107 temperature probes) to monitor air temperature. In the GI-UAF and NPSA network, the air temperature sensors were installed at 1.5 or 2 m above the ground surface, whereas the USGS network monitors air temperature at 3.0 m above the ground surface in order to minimize damage by wildlife. Despite the installation of air temperature sensors at different heights, the measurements of air temperature are considered comparable on a monthly scale assuming efficient mixing of the near-surface atmosphere. </para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <section>
+            <title>Ground temperature</title>
+            <para>To monitor near-surface ground temperature, the networks use a probe with several thermistors embedded into a single rod, typically 1 to 1.5 m long. The MRC probe is designed to record temperatures ranging from -30 to 75 °C. An ice-bath calibration is a required procedure before installation of these probes. The ice-bath calibration includes placing the sensors into an insulated container filled with a mixture of ice shavings and distilled water, measuring the temperature, and recording the offset from 0°C. This measured offset is then used to correct the temperature measurements. The average accuracy for the MRC probe is 	± 0.01 °C. For the USGS network, the MRC sensors are installed inside a tight-fitting fluid-filled 125-cm-long plastic tube to measure ground temperatures at 5, 10, 15, 20, 25, 30, 45, 70, 95, and 120-cm depth. The ground-measurement depths vary station by station within the GI-UAF and NPSA networks, typically ranging from the ground surface (i.e., 0 m) to 1 m below the ground surface. It is important to note that most of the installed probes heave with time, and heaving depths are adjusted accordingly by subtracting the heaving values yearly. The released data account for the heave and have corrected ground temperatures.</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <section>
+            <title>Soil water content</title>
+            <para>Both the USGS and the GI-UAF networks measure liquid soil moisture using a Hydra Probe sensor developed by Stevens Water Monitoring Systems Inc. The Stevens Hydra Probe has a reported accuracy of 	± 0.03 m³/m³. Each Volumetric Water Content (VWC) sensor was calibrated in accordance with the soil texture in a laboratory while uncertainties associated with the sensor’s sensitivity were still existing under specific conditions, e.g. for peat.</para>
+          </section>
+        </description>
+      </methodStep>
+      <methodStep>
+        <description>
+          <section>
+            <title>Snow Depth</title>
+            <para>Snow depth is measured once per hour with an SR50 ultrasonic distance sensor (Campbell Sci. Inc.) at all of the stations. This downward-looking sensor is mounted on a cross-arm 2.5 m above the ground surface for the USGS and NPSA networks, and 1.5 m above the ground surface for the GI-UAF network respectively. The factory evaluated accuracy is 	± 0.01 m or 0.4% of the distance to the ground surface. However, vegetation at the ground surface causes some uncertainty in shallow SR50 snow-depth measurements.</para>
+          </section>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Towards a Tiered Permafrost Modeling Cyberinfrastructure</title>
+      <personnel>
+        <individualName>
+          <givenName>KANG</givenName>
+          <surName>WANG</surName>
+        </individualName>
+        <role>originator</role>
+      </personnel>
+      <funding>
+        <para>NSF 1503559</para>
+        <para>      NASA NNX16AB19G</para>
+      </funding>
+    </project>
+    <dataTable>
+      <entityName>PF_AK_v0.1.csv</entityName>
+      <entityDescription>This dataset consists of monthly air and ground temperatures, volumetric water content, and snow depth during 1997 - 2016. Due to the remoteness and harsh conditions, many stations have missing data. Overall, this dataset consists of 41,667 monthly values.</entityDescription>
+      <physical scope="document">
+        <objectName>PF_AK_v0.1.csv</objectName>
+        <size unit="bytes">976381</size>
+        <authentication method="SHA1">d5bc2c26b2a92849652fd76d3e5e18e8648970b7</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution scope="document">
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:35bc4a8c-0e34-4e73-8c62-856d92478786</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute id="PiUkVXO83g">
+          <attributeName>Name</attributeName>
+          <attributeDefinition>Site name</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Sites name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation id="3jw70b354R">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="study location name">http://purl.dataone.org/odo/ECSO_00002768</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="4vjlZC650g">
+          <attributeName>Code</attributeName>
+          <attributeDefinition>The first two digits indicate data sources, 99: U.S. Geological Survey data, 88: University of Alaska data, 77: National Park Services data. Next three digits indicate station identities.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>The first two digits indicate data sources, 99: U.S. Geological Survey data, 88: University of Alaska data, 77: National Park Services data. Next three digits indicate station identities.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation id="4CUGDk3PKF">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="data source">http://purl.dataone.org/odo/ECSO_00002744</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="huHueCtgYa">
+          <attributeName>Lat</attributeName>
+          <attributeDefinition>Latitude of site</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation id="3ygDEmWCbQ">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="latitude coordinate">http://purl.dataone.org/odo/ECSO_00002130</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="eKd2y5pO2Q">
+          <attributeName>Lon</attributeName>
+          <attributeDefinition>Longitude of site</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <annotation id="90ENa7nVgT">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="longitude coordinate">http://purl.dataone.org/odo/ECSO_00002132</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="6kZDIDvMSy">
+          <attributeName>Year</attributeName>
+          <attributeDefinition>Year when measurement was taken</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <annotation id="TyY6f6wRyz">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="year of measurement">http://purl.dataone.org/odo/ECSO_00002050</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="br9IEy9aVq">
+          <attributeName>Month</attributeName>
+          <attributeDefinition>Month when measurement was taken; 12 months, from January through December</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Month when measurement was taken; 12 months, from January through December</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <annotation id="1NYjkr4oPi">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="month of year">http://purl.dataone.org/odo/ECSO_00002047</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="bIjZZWYCXR">
+          <attributeName>Snod</attributeName>
+          <attributeDefinition>snow depth</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="GbKE1d05oy">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Snow Depth">http://purl.dataone.org/odo/ECSO_00001205</valueURI>
+          </annotation>
+          <annotation id="caNKabK3AS">
+            <propertyURI label="has unit">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#hasUnit</propertyURI>
+            <valueURI label="Meter">http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Meter</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="Pp5T8Um1dv">
+          <attributeName>Tair</attributeName>
+          <attributeDefinition>air temperature</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="Y59mb6iSZU">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Air Temperature">http://purl.dataone.org/odo/ECSO_00001225</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="MoLOPrFB7r">
+          <attributeName>Ts100cm</attributeName>
+          <attributeDefinition>Ground temperature at 100cm</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="DJe9fSzqNA">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="FacG8TLkB5">
+          <attributeName>Ts25cm</attributeName>
+          <attributeDefinition>Ground temperature at 25 cm</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="0wcl52R7iY">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="G4o14QAfhC">
+          <attributeName>Ts50cm</attributeName>
+          <attributeDefinition>Ground temperature at 50 cm</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="SfUo7u6CHc">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="5cpuRK2uvY">
+          <attributeName>Ts75cm</attributeName>
+          <attributeDefinition>Ground temperature at 75cm</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="KRBi9LlYcv">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="Ground Temperature">http://purl.dataone.org/odo/ECSO_00001229</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="VJQmVC1EWS">
+          <attributeName>Tsur</attributeName>
+          <attributeDefinition>Ground surface temperature</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="eqsLKTkGUb">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="ground surface temperature">http://purl.dataone.org/odo/ECSO_00001527</valueURI>
+          </annotation>
+        </attribute>
+        <attribute id="tAsPr3Zhsy">
+          <attributeName>VWC_top</attributeName>
+          <attributeDefinition>volumetric water content in upper layer (&lt;25cm)</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>-999.99</code>
+            <codeExplanation>Missing or bad value</codeExplanation>
+          </missingValueCode>
+          <annotation id="veRb26A037">
+            <propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI>
+            <valueURI label="liquid water content">http://purl.dataone.org/odo/ECSO_00002233</valueURI>
+          </annotation>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <otherEntity id="arctic-data.14740.1" scope="document">
+      <entityName>PF_AK_v0.1_raw.csv</entityName>
+      <physical scope="document">
+        <objectName>PF_AK_v0.1_raw.csv</objectName>
+        <size unit="bytes">821955</size>
+        <authentication method="MD5">8437cd4d549d908ba8b1f2a3ffa9e715</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution scope="document">
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/arctic-data.14740.1</url>
+          </online>
+        </distribution>
+      </physical>
+      <entityType>Other</entityType>
+    </otherEntity>
+  </dataset>
+</eml:eml>

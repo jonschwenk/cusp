@@ -1,0 +1,151 @@
+name: New CUSP Dataset Candidate
+description: Suggest a permafrost, active-layer, thaw-depth, or related observation dataset for CUSP.
+title: "[Dataset candidate]: "
+labels:
+  - "type: dataset-candidate"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All fields are optional, but it's helpful if you can complete as many as possible.
+
+        Use this form to alert the CUSP maintainers to a dataset, paper, repository, or field campaign that might contain uningested near-surface permafrost observations. Links are enough to get the conversation started.
+
+  - type: input
+    id: source_title
+    attributes:
+      label: Dataset or paper title
+      description: Name of the dataset, paper, field campaign, repository record, or other source.
+      placeholder: "Example: Active layer thickness observations from ..."
+
+  - type: input
+    id: short_name
+    attributes:
+      label: Suggested short name
+      description: Optional CUSP-style source key or short name.
+      placeholder: "Example: Smith_2026"
+
+  - type: input
+    id: doi
+    attributes:
+      label: DOI or persistent identifier
+      description: DOI, DataCite ID, NSIDC ID, Arctic Data Center DOI, report number, or other persistent identifier.
+      placeholder: "Example: 10.xxxx/xxxxx"
+
+  - type: input
+    id: data_link
+    attributes:
+      label: Data link
+      description: Link to the dataset landing page, download page, supplementary data, or repository record.
+      placeholder: "https://..."
+
+  - type: input
+    id: paper_link
+    attributes:
+      label: Paper or report link
+      description: Link to the associated paper, preprint, report, or project page.
+      placeholder: "https://..."
+
+  - type: textarea
+    id: why_promising
+    attributes:
+      label: Why this may be useful for CUSP
+      description: Briefly describe what looks useful or why this source should be investigated.
+      placeholder: "This appears to include thaw-depth measurements at geolocated sites..."
+
+  - type: dropdown
+    id: observation_types
+    attributes:
+      label: Relevant observation types
+      description: Select any that seem to apply.
+      multiple: true
+      options:
+        - Permafrost presence / absence
+        - Active layer thickness
+        - Thaw depth / frost table depth
+        - Depth to permafrost
+        - Ground temperature profile or time series
+        - Soil pit / core / auger observations
+        - Electrical resistivity tomography
+        - Ground penetrating radar
+        - InSAR / remotely sensed ALT
+        - Soil or pedon data with permafrost-relevant fields
+        - Gridded or modeled product
+        - Unsure / other
+
+  - type: input
+    id: observation_count
+    attributes:
+      label: Approximate number of observations
+      description: If known, provide the number of points, sites, profiles, transects, grids, or records.
+      placeholder: "Example: 250 sites; unknown; 7 grids; 10,000 rows"
+
+  - type: textarea
+    id: geography
+    attributes:
+      label: Geographic context
+      description: Region, country, study area, coordinates, sites, or spatial extent if known.
+      placeholder: "Example: North Slope, Alaska; Mackenzie Delta; Svalbard..."
+
+  - type: textarea
+    id: temporal_coverage
+    attributes:
+      label: Temporal coverage
+      description: Observation dates, years, seasons, campaign period, or whether timing is unknown.
+      placeholder: "Example: August 2024; 1995-1996; annual 2001-2015; unknown"
+
+  - type: textarea
+    id: methods
+    attributes:
+      label: Sampling or inference methods
+      description: Thaw probe, auger/core, soil pit, thaw tube, temperature sensor, ERT, GPR, InSAR, modeled product, etc.
+      placeholder: "Example: mechanical probing and soil pits..."
+
+  - type: dropdown
+    id: coordinates_available
+    attributes:
+      label: Are coordinates available?
+      options:
+        - Unknown
+        - Yes, point-level coordinates
+        - Yes, site-level coordinates
+        - Approximate map or figure only
+        - No obvious coordinates
+
+  - type: dropdown
+    id: dates_available
+    attributes:
+      label: Are observation dates or years available?
+      options:
+        - Unknown
+        - Full dates available
+        - Year only
+        - Date range only
+        - No obvious temporal metadata
+
+  - type: textarea
+    id: license
+    attributes:
+      label: License, access, or redistribution notes
+      description: Any license, terms of use, access restrictions, author-contact requirement, or uncertainty.
+      placeholder: "Example: CC-BY 4.0; public download; contact author; not sure"
+
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Possible overlap with existing CUSP sources
+      description: Note any suspected overlap or duplication with CUSP, CALM, ABoVE, NGEE Arctic, or other known sources.
+      placeholder: "Example: May overlap with CALM Barrow records; unsure."
+
+  - type: textarea
+    id: citation
+    attributes:
+      label: Citation or BibTeX
+      description: Paste a citation, BibTeX entry, or recommended citation if available.
+      render: bibtex
+
+  - type: textarea
+    id: extra_context
+    attributes:
+      label: Extra notes
+      description: Anything else maintainers should know.
