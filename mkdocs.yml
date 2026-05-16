@@ -1,5 +1,6 @@
 site_name: CUSP
 site_description: CommUnity near-Surface Permafrost dataset documentation
+site_url: https://jonschwenk.github.io/cusp/
 repo_url: https://github.com/jonschwenk/cusp
 docs_dir: docs
 

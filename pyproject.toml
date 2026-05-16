@@ -56,7 +56,7 @@ source-processing = [
 
 [project.urls]
 Homepage = "https://github.com/jonschwenk/cusp"
-Documentation = "https://github.com/jonschwenk/cusp/tree/main/docs"
+Documentation = "https://jonschwenk.github.io/cusp/"
 Issues = "https://github.com/jonschwenk/cusp/issues"
 
 [tool.setuptools]
