@@ -6,6 +6,4 @@ In addition to the CUSP datasets themselves, this repo also contains command-lin
 
 If you're interested in using CUSP, we highly recommend that you spend some time reading the [documentation](https://jonschwenk.github.io/cusp/).
 
-## License
-
 See the [license file](LICENSE.txt).
