@@ -740,7 +740,7 @@ Interpretation:
 ## Excluded Or Incomplete Source Directories
 
 - `Beer_etal_2013`: processed CSV and script are present, but `cusp/combine_data.py` currently skips it because it is an interpolated map product with no dates
-- `Chen_2015`: processed CSV and script are present, but `cusp/combine_data.py` currently skips it because it is already represented in another dataset
+- `Chen_2015`: removed from `data/` after duplicate review; retained in the master bibliography as a bibliographic-only source for synthesis traceability
 - `Pawley_2018`: processed CSV and script are present, but the source does not provide full per-observation dates and the current Source-to-Year lookup still leaves many rows without a resolved year, so inclusion is deferred pending a clearer date policy or better year crosswalk
 - `Yi_etal_2020_ABoVE`: processing script is present but no processed CSV is checked in; `cusp/combine_data.py` notes that it needs online processing because it is too large to load directly
 - `Wilcox_2015`: currently skipped in `cusp/combine_data.py`; source files are present, but there is no checked-in processed CSV and the skip note says there are no lat/lon data for observations

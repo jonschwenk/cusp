@@ -21,20 +21,21 @@ This is a working project document. Entries here should be revised as sources ar
 
 ### `Chen_2015`
 
-- Current status: excluded from the canonical observation-level combine step; considered resolved as a duplicate/absorbed source
+- Current status: removed from `data/` after duplicate review; retained as a bibliographic-only source for synthesis traceability
 - Repo evidence:
-  - `cusp/combine_data.py` explicitly skips `Chen_2015`
-  - `data/Chen_2015/process_chen_2015.py` states: `THIS DATASET IS INCLUDED IN THE SCHAEFER DATA, DO NOT INCLUDE`
+  - the removed processing script stated: `THIS DATASET IS INCLUDED IN THE SCHAEFER DATA, DO NOT INCLUDE`
+  - `data/cusp_sources.bib` and `data/cusp_sources_bibtex.csv` retain the `Chen_2015` reference with a note that it should not be ingested separately
+  - `Jafarov_2016` and `Moore_et_al_2025` now carry DOI metadata for the included synthesis/related ABoVE sources
 - Reason:
   - this appears to be an intentional de-duplication decision rather than a reproducibility failure
-  - the source seems to be represented elsewhere, likely through `Schaefer` data referenced by the processing script comment
+  - retaining the citation but removing the duplicate source directory avoids both duplicate observations and lost source provenance
 - Confidence: high that it is intentionally duplicated; medium on the exact parent-source mapping
 - Release implication:
-  - this should remain out of the canonical release as a duplicate/absorbed source
+  - this should remain out of the canonical observation release as a separate source
+  - the reference should remain in the master bibliography for traceability when CUSP ingests a synthesis that may include its observations
 - Next action:
-  - verify exactly which included source subsumes `Chen_2015`
-  - document that relationship in release docs or the exception register
-  - keep on the deferred deletion list, but do not delete yet
+  - no source-directory action remains
+  - revisit only if CUSP adds a formal many-to-one source-provenance table for synthesis datasets
 
 ### `Beer_etal_2013`
 
@@ -128,7 +129,6 @@ This is a working project document. Entries here should be revised as sources ar
 
 These are not to be deleted now. Keep them skipped during ongoing development and revisit deletion near the end of release cleanup after documentation decisions are settled.
 
-- `Chen_2015`
 - `Beer_etal_2013`
 
 ## Additional Non-Blocking Cleanup Items
@@ -139,7 +139,7 @@ These are not currently exclusion reasons, but they should be cleaned up before 
 
 ## Recommended Immediate Decisions
 
-1. Confirm that `Chen_2015` remains excluded as a duplicate/absorbed source and document which included source replaces it.
+1. Keep `Chen_2015` as a bibliographic-only duplicate/absorbed source unless CUSP adds formal sub-source provenance for synthesis datasets.
 2. Treat `Yi_etal_2020_ABoVE` as a formal reproducibility exception unless and until the external-data workflow and the oversized flattening workflow are redesigned and documented.
 3. Revisit `Pawley_2018` specifically, because the script suggests it may have year-level dates despite the current skip comment.
 4. Leave `Beer_etal_2013` and `Wilcox_2015` excluded for v1 unless the release scope changes.
