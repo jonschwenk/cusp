@@ -19,8 +19,8 @@ class ExportTests(unittest.TestCase):
     def test_export_release_bundle_writes_flat_bundle(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp = Path(tmpdir)
-            canonical_path = tmp / "combined.csv"
-            features_path = tmp / "combined_features.csv"
+            canonical_path = tmp / "cusp_observations.csv"
+            features_path = tmp / "cusp_observations_features.csv"
             bib_path = tmp / "sources.bib"
             export_root = tmp / "exports"
 
@@ -78,7 +78,7 @@ class ExportTests(unittest.TestCase):
     def test_export_rejects_non_observation_feature_table(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp = Path(tmpdir)
-            canonical_path = tmp / "combined.csv"
+            canonical_path = tmp / "cusp_observations.csv"
             features_path = tmp / "agg_features.csv"
             bib_path = tmp / "sources.bib"
 

@@ -19,7 +19,7 @@ from cusp.data_utils import _ROOT_DIR
 
 DATA_DIR = _ROOT_DIR / "data"
 EXPORTS_DIR = _ROOT_DIR / "exports"
-DEFAULT_CANONICAL_INPUT = DATA_DIR / "combined.csv"
+DEFAULT_CANONICAL_INPUT = DATA_DIR / "cusp_observations.csv"
 DEFAULT_MASTER_BIB_INPUT = DATA_DIR / "cusp_sources.bib"
 DEFAULT_CHANGES = "- Initial public CUSP release.\n"
 REQUIRED_CANONICAL_COLUMNS = {

@@ -21,9 +21,9 @@ This file is intended to track changes to:
   - `python -m cusp.features`
 - deterministic `cusp_obs_id` and `cusp_30m_id`
 - canonical observation build outputs:
-  - `combined.csv`
-  - `combined_allfields.csv`
-  - `combined_md.csv`
+  - `cusp_observations.csv`
+  - `cusp_observations_allfields.csv`
+  - `cusp_observations_metadata.csv`
   - `all_sites.gpkg`
   - `source_reference_crosswalk.csv`
 - supported `30m` aggregation workflow outputs:

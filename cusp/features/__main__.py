@@ -10,7 +10,11 @@ from .sampler import sample_features_from_path
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Sample supported GEE features for a CUSP table.")
-    parser.add_argument("--input", required=True, help="Path to combined.csv, aggregated_30m.csv, or another point-like CUSP table.")
+    parser.add_argument(
+        "--input",
+        required=True,
+        help="Path to cusp_observations.csv, aggregated_30m.csv, or another point-like CUSP table.",
+    )
     parser.add_argument("--output", help="Output CSV for sampled features. Defaults next to the input.")
     parser.add_argument("--manifest", help="Optional JSON manifest path. Defaults next to the output.")
     parser.add_argument("--id-column", help="Override the canonical join column.")

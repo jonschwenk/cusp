@@ -22,8 +22,8 @@ import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_RUN_DIR = REPO_ROOT / "runs" / "release_gate"
-DEFAULT_CANONICAL = REPO_ROOT / "data" / "combined.csv"
-DEFAULT_FEATURES = REPO_ROOT / "data" / "combined_features.csv"
+DEFAULT_CANONICAL = REPO_ROOT / "data" / "cusp_observations.csv"
+DEFAULT_FEATURES = REPO_ROOT / "data" / "cusp_observations_features.csv"
 DEFAULT_MASTER_BIB = REPO_ROOT / "data" / "cusp_sources.bib"
 
 
@@ -334,16 +334,16 @@ def main(argv: list[str] | None = None) -> int:
         else:
             runner.run_python("Strict documentation build", "-m", "mkdocs", "build", "--strict")
 
-        combined_qc_dir = run_dir / "qc_combined"
+        observations_qc_dir = run_dir / "qc_observations"
         runner.run_python(
             "Full observation-level QA/QC",
             "-m",
             "cusp.qc",
-            "validate-combined",
+            "validate-observations",
             "--input",
             args.canonical_input,
             "--out",
-            combined_qc_dir,
+            observations_qc_dir,
         )
 
         export_root = run_dir / "exports"

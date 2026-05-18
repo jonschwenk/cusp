@@ -6,7 +6,7 @@ environment.
 ```bash
 conda activate cusp
 python -m cusp.build
-python -m cusp.qc validate-combined
+python -m cusp.qc validate-observations
 ```
 
 That rebuilds and validates the canonical observation table in `data/`.

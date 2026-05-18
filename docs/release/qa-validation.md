@@ -5,7 +5,7 @@ observation-level release bundle and the latest audited state of that layer.
 
 ## QA Workflow
 
-Hard-gate tests live in [tests/test_qc_combined.py](https://github.com/jonschwenk/cusp/blob/main/tests/test_qc_combined.py).
+Hard-gate tests live in [tests/test_qc_observations.py](https://github.com/jonschwenk/cusp/blob/main/tests/test_qc_observations.py).
 They validate the working observation table before it is exported as
 `cusp_vX.Y.csv`:
 
@@ -17,7 +17,7 @@ They validate the working observation table before it is exported as
 - no negative depth values
 - no `obs_limit == 0`
 
-Diagnostic audits are available through `python -m cusp.qc audit-combined`
+Diagnostic audits are available through `python -m cusp.qc audit-observations`
 and the shared helpers in [cusp/qc](https://github.com/jonschwenk/cusp/blob/main/cusp/qc).
 The audit is intentionally behind-the-scenes: it writes review outputs under
 `outputs/qc_audit/` and does not mutate data.
@@ -26,8 +26,8 @@ The audit is intentionally behind-the-scenes: it writes review outputs under
 
 Latest run:
 
-- `python -m unittest tests.test_qc_combined tests.test_build tests.test_aggregate tests.test_process_script_metadata`
-- `python -m cusp.qc audit-combined --input <working-observation-table> --out outputs/qc_audit`
+- `python -m unittest tests.test_qc_observations tests.test_build tests.test_aggregate tests.test_process_script_metadata`
+- `python -m cusp.qc audit-observations --input <working-observation-table> --out outputs/qc_audit`
 
 Observed outcome:
 

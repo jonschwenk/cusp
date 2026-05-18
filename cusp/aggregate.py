@@ -16,7 +16,7 @@ import pandas as pd
 from cusp.build import DATA_DIR, display_path, sha256_file
 
 
-DEFAULT_CANONICAL_INPUT = DATA_DIR / "combined.csv"
+DEFAULT_CANONICAL_INPUT = DATA_DIR / "cusp_observations.csv"
 DEFAULT_AGGREGATED_OUTPUT = DATA_DIR / "aggregated_30m.csv"
 DEFAULT_MEMBERSHIP_OUTPUT = DATA_DIR / "aggregated_30m_membership.csv"
 DEFAULT_FLAGS_OUTPUT = DATA_DIR / "aggregated_30m_qc_flags.csv"

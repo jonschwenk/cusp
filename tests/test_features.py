@@ -20,11 +20,11 @@ from cusp.features import (
 
 
 class FeatureTests(unittest.TestCase):
-    def test_detect_id_column_for_combined_and_aggregated_tables(self) -> None:
-        combined = pd.DataFrame({"cusp_obs_id": ["obs_1"], "lat": [65.0], "lon": [-147.0]})
+    def test_detect_id_column_for_observation_and_aggregated_tables(self) -> None:
+        observations = pd.DataFrame({"cusp_obs_id": ["obs_1"], "lat": [65.0], "lon": [-147.0]})
         aggregated = pd.DataFrame({"cusp_30m_id": ["agg_1"], "lat": [65.0], "lon": [-147.0]})
 
-        self.assertEqual(detect_id_column(combined), "cusp_obs_id")
+        self.assertEqual(detect_id_column(observations), "cusp_obs_id")
         self.assertEqual(detect_id_column(aggregated), "cusp_30m_id")
 
     def test_normalize_sampling_frame_derives_year_from_date(self) -> None:
@@ -201,9 +201,9 @@ class FeatureTests(unittest.TestCase):
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 tmp = Path(tmpdir)
-                input_path = tmp / "combined.csv"
-                output_path = tmp / "combined_features.csv"
-                manifest_path = tmp / "combined_features_manifest.json"
+                input_path = tmp / "cusp_observations.csv"
+                output_path = tmp / "cusp_observations_features.csv"
+                manifest_path = tmp / "cusp_observations_features_manifest.json"
                 raw.to_csv(input_path, index=False)
                 raw.assign(feat_a=[1.0, 2.0]).loc[:, ["cusp_obs_id", "date", "lat", "lon", "feat_a"]].to_csv(
                     output_path,

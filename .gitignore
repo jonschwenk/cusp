@@ -15,13 +15,13 @@ site/
 client_secret*.json
 
 # Rebuild/generated data artifacts
-data/combined.csv
-data/combined_allfields.csv
-data/combined_deleted_rows.csv
-data/combined_features.csv
-data/combined_features_manifest.json
-data/combined_md.csv
-data/combined_qc_flags.csv
+data/cusp_observations.csv
+data/cusp_observations_allfields.csv
+data/cusp_observations_deleted_rows.csv
+data/cusp_observations_features.csv
+data/cusp_observations_features_manifest.json
+data/cusp_observations_metadata.csv
+data/cusp_observations_qc_flags.csv
 data/all_sites.gpkg
 data/observation_release_manifest.json
 data/source_reference_crosswalk.csv

@@ -7,7 +7,7 @@ import pandas as pd
 from .reporting import DEPTH_COLS
 
 
-def load_combined_csv(path: Path) -> pd.DataFrame:
+def load_observations_csv(path: Path) -> pd.DataFrame:
     """Load the canonical observation bundle in a QA-friendly form."""
 
     df = pd.read_csv(path, low_memory=False)
@@ -23,3 +23,9 @@ def load_combined_csv(path: Path) -> pd.DataFrame:
             df[column] = pd.to_numeric(df[column], errors="coerce")
 
     return df
+
+
+def load_combined_csv(path: Path) -> pd.DataFrame:
+    """Compatibility alias for the old observation artifact name."""
+
+    return load_observations_csv(path)

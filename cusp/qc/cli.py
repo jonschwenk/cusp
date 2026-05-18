@@ -33,11 +33,12 @@ from .checks import (
     check_thaw_depth_gt_pf_depth,
     check_zero_obs_limit,
 )
-from .io import load_combined_csv
+from .io import load_observations_csv
 from .reporting import ensure_out_dir, write_csv, write_json
 
 
-EXPECTED_COMBINED_COLUMNS = ["row_index"] + CANONICAL_COLUMNS
+EXPECTED_OBSERVATION_COLUMNS = ["row_index"] + CANONICAL_COLUMNS
+EXPECTED_COMBINED_COLUMNS = EXPECTED_OBSERVATION_COLUMNS
 EXPECTED_AGGREGATED_COLUMNS = ["row_index"] + AGGREGATED_COLUMNS
 
 
@@ -87,25 +88,25 @@ def _write_if_nonempty(df_out: pd.DataFrame, path: Path) -> None:
     write_csv(df_out, path)
 
 
-def run_combined_validation(
+def run_observations_validation(
     input_path: str | Path,
     *,
     out_dir: str | Path | None = None,
     too_old_year: int = DEFAULT_TOO_OLD_YEAR,
     future_year_buffer: int = DEFAULT_FUTURE_YEAR_BUFFER,
 ) -> ValidationRunResult:
-    """Run the supported hard-gate validation on combined.csv."""
+    """Run the supported hard-gate validation on cusp_observations.csv."""
 
     input_path = Path(input_path)
-    df = load_combined_csv(input_path)
+    df = load_observations_csv(input_path)
 
     counts: dict[str, int] = {}
     outputs: list[tuple[str, pd.DataFrame]] = []
 
-    schema_ok = df.columns.tolist() == EXPECTED_COMBINED_COLUMNS
+    schema_ok = df.columns.tolist() == EXPECTED_OBSERVATION_COLUMNS
     counts["schema_mismatch"] = 0 if schema_ok else 1
     if not schema_ok:
-        outputs.append(("schema_mismatch.csv", _schema_details(EXPECTED_COMBINED_COLUMNS, df.columns.tolist())))
+        outputs.append(("schema_mismatch.csv", _schema_details(EXPECTED_OBSERVATION_COLUMNS, df.columns.tolist())))
 
     id_res = check_cusp_obs_id(df)
     counts["invalid_cusp_obs_id"] = id_res.count()
@@ -133,7 +134,7 @@ def run_combined_validation(
 
     ok = all(value == 0 for value in counts.values())
     summary = {
-        "validation_scope": "combined",
+        "validation_scope": "cusp_observations",
         "input_path": str(input_path),
         "ok": ok,
         "counts": counts,
@@ -149,6 +150,23 @@ def run_combined_validation(
         write_json(summary, out_dir / "validation_summary.json")
 
     return ValidationRunResult(ok=ok, summary=summary)
+
+
+def run_combined_validation(
+    input_path: str | Path,
+    *,
+    out_dir: str | Path | None = None,
+    too_old_year: int = DEFAULT_TOO_OLD_YEAR,
+    future_year_buffer: int = DEFAULT_FUTURE_YEAR_BUFFER,
+) -> ValidationRunResult:
+    """Compatibility alias for the old observation artifact name."""
+
+    return run_observations_validation(
+        input_path,
+        out_dir=out_dir,
+        too_old_year=too_old_year,
+        future_year_buffer=future_year_buffer,
+    )
 
 
 def run_aggregated_validation(
@@ -209,14 +227,14 @@ def run_aggregated_validation(
     return ValidationRunResult(ok=ok, summary=summary)
 
 
-def run_combined_audit(
+def run_observations_audit(
     input_path: str | Path,
     *,
     out_dir: str | Path,
     too_old_year: int = DEFAULT_TOO_OLD_YEAR,
     clean: bool = True,
 ) -> dict[str, Any]:
-    """Run the diagnostic combined.csv audit and write outputs."""
+    """Run the diagnostic cusp_observations.csv audit and write outputs."""
 
     input_path = Path(input_path)
     out_dir = Path(out_dir)
@@ -224,7 +242,7 @@ def run_combined_audit(
         shutil.rmtree(out_dir)
     ensure_out_dir(out_dir)
 
-    df = load_combined_csv(input_path)
+    df = load_observations_csv(input_path)
 
     id_res = check_cusp_obs_id(df)
     _write_if_nonempty(id_res.details, out_dir / "invalid_cusp_obs_id.csv")
@@ -320,28 +338,64 @@ def run_combined_audit(
     return payload
 
 
+def run_combined_audit(
+    input_path: str | Path,
+    *,
+    out_dir: str | Path,
+    too_old_year: int = DEFAULT_TOO_OLD_YEAR,
+    clean: bool = True,
+) -> dict[str, Any]:
+    """Compatibility alias for the old observation artifact name."""
+
+    return run_observations_audit(input_path, out_dir=out_dir, too_old_year=too_old_year, clean=clean)
+
+
 def build_parser() -> argparse.ArgumentParser:
     """Build the supported CUSP QC CLI parser."""
 
     parser = argparse.ArgumentParser(description="Validate or audit release-facing CUSP artifacts.")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    combined = subparsers.add_parser("validate-combined", help="Run hard-gate validation on combined.csv.")
-    combined.add_argument("--input", type=Path, default=Path("data/combined.csv"))
-    combined.add_argument("--out", type=Path, help="Optional output directory for failure reports.")
-    combined.add_argument("--too-old-year", type=int, default=DEFAULT_TOO_OLD_YEAR)
-    combined.add_argument("--future-year-buffer", type=int, default=DEFAULT_FUTURE_YEAR_BUFFER)
+    observations = subparsers.add_parser(
+        "validate-observations",
+        help="Run hard-gate validation on cusp_observations.csv.",
+    )
+    observations.add_argument("--input", type=Path, default=Path("data/cusp_observations.csv"))
+    observations.add_argument("--out", type=Path, help="Optional output directory for failure reports.")
+    observations.add_argument("--too-old-year", type=int, default=DEFAULT_TOO_OLD_YEAR)
+    observations.add_argument("--future-year-buffer", type=int, default=DEFAULT_FUTURE_YEAR_BUFFER)
+
+    legacy_combined = subparsers.add_parser(
+        "validate-combined",
+        help="Deprecated alias for validate-observations.",
+    )
+    legacy_combined.add_argument("--input", type=Path, default=Path("data/cusp_observations.csv"))
+    legacy_combined.add_argument("--out", type=Path, help="Optional output directory for failure reports.")
+    legacy_combined.add_argument("--too-old-year", type=int, default=DEFAULT_TOO_OLD_YEAR)
+    legacy_combined.add_argument("--future-year-buffer", type=int, default=DEFAULT_FUTURE_YEAR_BUFFER)
 
     aggregated = subparsers.add_parser("validate-aggregated", help="Run hard-gate validation on aggregated_30m artifacts.")
     aggregated.add_argument("--input", type=Path, default=Path("data/aggregated_30m.csv"))
     aggregated.add_argument("--membership", type=Path, default=Path("data/aggregated_30m_membership.csv"))
     aggregated.add_argument("--out", type=Path, help="Optional output directory for failure reports.")
 
-    audit = subparsers.add_parser("audit-combined", help="Run the diagnostic combined.csv audit.")
-    audit.add_argument("--input", type=Path, default=Path("data/combined.csv"))
+    audit = subparsers.add_parser(
+        "audit-observations",
+        help="Run the diagnostic cusp_observations.csv audit.",
+    )
+    audit.add_argument("--input", type=Path, default=Path("data/cusp_observations.csv"))
     audit.add_argument("--out", type=Path, default=Path("outputs/qc_audit"))
     audit.add_argument("--too-old-year", type=int, default=DEFAULT_TOO_OLD_YEAR)
     audit.add_argument("--no-clean", action="store_true", help="Do not clear the output directory before writing.")
+
+    legacy_audit = subparsers.add_parser(
+        "audit-combined",
+        help="Deprecated alias for audit-observations.",
+    )
+    legacy_audit.add_argument("--input", type=Path, default=Path("data/cusp_observations.csv"))
+    legacy_audit.add_argument("--out", type=Path, default=Path("outputs/qc_audit"))
+    legacy_audit.add_argument("--too-old-year", type=int, default=DEFAULT_TOO_OLD_YEAR)
+    legacy_audit.add_argument("--no-clean", action="store_true", help="Do not clear the output directory before writing.")
 
     return parser
 
@@ -352,8 +406,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
 
-    if args.command == "validate-combined":
-        result = run_combined_validation(
+    if args.command in {"validate-observations", "validate-combined"}:
+        result = run_observations_validation(
             args.input,
             out_dir=args.out,
             too_old_year=args.too_old_year,
@@ -371,8 +425,8 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result.summary, indent=2))
         return 0 if result.ok else 1
 
-    if args.command == "audit-combined":
-        payload = run_combined_audit(
+    if args.command in {"audit-observations", "audit-combined"}:
+        payload = run_observations_audit(
             args.input,
             out_dir=args.out,
             too_old_year=args.too_old_year,

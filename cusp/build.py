@@ -62,11 +62,11 @@ METHOD_NORMALIZATION_MAP = {
     "aug_pit": "pit_aug",
 }
 
-DEFAULT_CANONICAL_OUTPUT = DATA_DIR / "combined.csv"
-DEFAULT_ALLFIELDS_OUTPUT = DATA_DIR / "combined_allfields.csv"
-DEFAULT_METADATA_OUTPUT = DATA_DIR / "combined_md.csv"
-DEFAULT_DELETED_OUTPUT = DATA_DIR / "combined_deleted_rows.csv"
-DEFAULT_FLAGS_OUTPUT = DATA_DIR / "combined_qc_flags.csv"
+DEFAULT_CANONICAL_OUTPUT = DATA_DIR / "cusp_observations.csv"
+DEFAULT_ALLFIELDS_OUTPUT = DATA_DIR / "cusp_observations_allfields.csv"
+DEFAULT_METADATA_OUTPUT = DATA_DIR / "cusp_observations_metadata.csv"
+DEFAULT_DELETED_OUTPUT = DATA_DIR / "cusp_observations_deleted_rows.csv"
+DEFAULT_FLAGS_OUTPUT = DATA_DIR / "cusp_observations_qc_flags.csv"
 DEFAULT_GPKG_OUTPUT = DATA_DIR / "all_sites.gpkg"
 DEFAULT_GPKG_LAYER = "all_sites"
 DEFAULT_SOURCE_REFERENCE_OUTPUT = DATA_DIR / "source_reference_crosswalk.csv"
@@ -76,13 +76,31 @@ DEFAULT_MANIFEST_OUTPUT = DATA_DIR / "observation_release_manifest.json"
 
 @dataclass(frozen=True)
 class BuildOutputs:
-    combined: pd.DataFrame
-    combined_allfields: pd.DataFrame
-    combined_md: pd.DataFrame
+    observations: pd.DataFrame
+    observations_allfields: pd.DataFrame
+    observations_metadata: pd.DataFrame
     deleted_rows: pd.DataFrame
     qc_flags: pd.DataFrame
     all_sites_gdf: gpd.GeoDataFrame
     source_reference_crosswalk: pd.DataFrame
+
+    @property
+    def combined(self) -> pd.DataFrame:
+        """Compatibility alias for the canonical observation table."""
+
+        return self.observations
+
+    @property
+    def combined_allfields(self) -> pd.DataFrame:
+        """Compatibility alias for the all-fields observation table."""
+
+        return self.observations_allfields
+
+    @property
+    def combined_md(self) -> pd.DataFrame:
+        """Compatibility alias for the observation source metadata table."""
+
+        return self.observations_metadata
 
 
 def display_path(path: Path) -> str:
@@ -267,16 +285,16 @@ def combine_sources(
     """Combine all included processed sources into a single all-fields table."""
 
     selected_sources = sources or list_included_sources(data_dir)
-    combined_frames: list[pd.DataFrame] = []
+    observation_frames: list[pd.DataFrame] = []
 
     for source in selected_sources:
-        combined_frames.append(load_processed_source(source, data_dir=data_dir))
+        observation_frames.append(load_processed_source(source, data_dir=data_dir))
 
-    combined = pd.concat(combined_frames, ignore_index=True) if combined_frames else pd.DataFrame()
-    sort_cols = [column for column in ["source", "site_id", "date", "lat", "lon", "method"] if column in combined.columns]
+    observations = pd.concat(observation_frames, ignore_index=True) if observation_frames else pd.DataFrame()
+    sort_cols = [column for column in ["source", "site_id", "date", "lat", "lon", "method"] if column in observations.columns]
     if sort_cols:
-        combined = combined.sort_values(sort_cols, kind="mergesort", na_position="last").reset_index(drop=True)
-    return combined
+        observations = observations.sort_values(sort_cols, kind="mergesort", na_position="last").reset_index(drop=True)
+    return observations
 
 
 def normalize_method(value: object) -> object:
@@ -307,7 +325,7 @@ def normalize_method(value: object) -> object:
 
 
 def normalize_methods(df: pd.DataFrame) -> pd.DataFrame:
-    """Normalize the combined method column in-place-friendly form."""
+    """Normalize the observation method column in-place-friendly form."""
 
     df = df.copy()
     if "method" not in df.columns:
@@ -368,7 +386,7 @@ def apply_hard_deletions(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def build_qc_flags(df: pd.DataFrame) -> pd.DataFrame:
-    """Collect non-deletion QC flags for the cleaned combined table."""
+    """Collect non-deletion QC flags for the cleaned observation table."""
 
     flag_frames = [
         _make_action_frame(df, df["method"].isna(), "flagged", "missing_method"),
@@ -411,17 +429,17 @@ def build_all_sites_gdf(df: pd.DataFrame) -> gpd.GeoDataFrame:
 
 
 def build_source_reference_crosswalk(
-    combined_md: pd.DataFrame,
+    observations_metadata: pd.DataFrame,
     bibtex_df: pd.DataFrame,
 ) -> pd.DataFrame:
     """Build a one-row-per-source crosswalk between included sources and citation metadata."""
 
-    combined_sources = combined_md[["source"]].drop_duplicates().copy()
+    observation_sources = observations_metadata[["source"]].drop_duplicates().copy()
     bib_subset = bibtex_df.copy()
-    bib_subset = bib_subset[bib_subset["source"].isin(combined_sources["source"])].copy()
+    bib_subset = bib_subset[bib_subset["source"].isin(observation_sources["source"])].copy()
     bib_subset = bib_subset.sort_values("source", kind="mergesort").drop_duplicates(subset=["source"], keep="first")
 
-    crosswalk = combined_sources.merge(bib_subset, on="source", how="left", validate="one_to_one")
+    crosswalk = observation_sources.merge(bib_subset, on="source", how="left", validate="one_to_one")
     citation_columns = [column for column in bib_subset.columns if column != "source"]
     crosswalk = crosswalk[["source"] + citation_columns]
     return crosswalk.sort_values("source", kind="mergesort").reset_index(drop=True)
@@ -440,14 +458,14 @@ def build_release_manifest(
     """Build a JSON-serializable release manifest for the observation artifacts."""
 
     generation_time = datetime.now(timezone.utc).isoformat()
-    combined = outputs.combined
+    observations = outputs.observations
 
     artifact_specs = [
-        ("combined.csv", canonical_path, outputs.combined),
-        ("combined_allfields.csv", allfields_path, outputs.combined_allfields),
-        ("combined_md.csv", metadata_path, outputs.combined_md),
-        ("combined_deleted_rows.csv", deleted_path, outputs.deleted_rows),
-        ("combined_qc_flags.csv", flags_path, outputs.qc_flags),
+        ("cusp_observations.csv", canonical_path, outputs.observations),
+        ("cusp_observations_allfields.csv", allfields_path, outputs.observations_allfields),
+        ("cusp_observations_metadata.csv", metadata_path, outputs.observations_metadata),
+        ("cusp_observations_deleted_rows.csv", deleted_path, outputs.deleted_rows),
+        ("cusp_observations_qc_flags.csv", flags_path, outputs.qc_flags),
         ("all_sites.gpkg", gpkg_path, outputs.all_sites_gdf),
         ("source_reference_crosswalk.csv", source_reference_path, outputs.source_reference_crosswalk),
     ]
@@ -467,17 +485,17 @@ def build_release_manifest(
         "build_scope": "observation_release",
         "artifacts": artifacts,
         "summary": {
-            "combined_rows": int(len(combined)),
-            "combined_sources": int(combined["source"].nunique()),
-            "date_min": str(combined["date"].min()),
-            "date_max": str(combined["date"].max()),
+            "observation_rows": int(len(observations)),
+            "observation_sources": int(observations["source"].nunique()),
+            "date_min": str(observations["date"].min()),
+            "date_max": str(observations["date"].max()),
         },
     }
     return manifest
 
 
 def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
-    """Convert the raw all-fields combine output into release-facing tables."""
+    """Convert the raw all-fields observation output into release-facing tables."""
 
     working = raw_allfields.copy()
     working = normalize_methods(working)
@@ -492,11 +510,11 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     canonical = working.loc[:, CANONICAL_COLUMNS].copy()
 
     allfields_columns = stable_allfields_column_order(working)
-    combined_allfields = working.loc[:, allfields_columns].copy()
-    combined_md = build_release_metadata(combined_allfields)
+    observations_allfields = working.loc[:, allfields_columns].copy()
+    observations_metadata = build_release_metadata(observations_allfields)
     all_sites_gdf = build_all_sites_gdf(canonical)
     bibtex_df = pd.read_csv(DEFAULT_BIBTEX_OUTPUT, low_memory=False)
-    source_reference_crosswalk = build_source_reference_crosswalk(combined_md, bibtex_df)
+    source_reference_crosswalk = build_source_reference_crosswalk(observations_metadata, bibtex_df)
 
     if not deleted_rows.empty:
         deleted_rows = deleted_rows.loc[
@@ -510,9 +528,9 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
         ]
 
     return BuildOutputs(
-        combined=canonical,
-        combined_allfields=combined_allfields,
-        combined_md=combined_md,
+        observations=canonical,
+        observations_allfields=observations_allfields,
+        observations_metadata=observations_metadata,
         deleted_rows=deleted_rows,
         qc_flags=qc_flags,
         all_sites_gdf=all_sites_gdf,
@@ -546,9 +564,9 @@ def write_build_outputs(
     ]:
         path.parent.mkdir(parents=True, exist_ok=True)
 
-    outputs.combined.to_csv(canonical_path, index=False)
-    outputs.combined_allfields.to_csv(allfields_path, index=False)
-    outputs.combined_md.to_csv(metadata_path, index=False)
+    outputs.observations.to_csv(canonical_path, index=False)
+    outputs.observations_allfields.to_csv(allfields_path, index=False)
+    outputs.observations_metadata.to_csv(metadata_path, index=False)
     outputs.deleted_rows.to_csv(deleted_path, index=False)
     outputs.qc_flags.to_csv(flags_path, index=False)
     outputs.all_sites_gdf.to_file(gpkg_path, layer=gpkg_layer, driver="GPKG")

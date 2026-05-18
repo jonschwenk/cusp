@@ -22,7 +22,7 @@ from .aggregate import (
     check_pf_observed_fraction,
     load_aggregated_csv,
 )
-from .io import load_combined_csv
+from .io import load_combined_csv, load_observations_csv
 from .reporting import (
     CORE_ID_COLS,
     DEPTH_COLS,
@@ -55,6 +55,7 @@ __all__ = [
     "ensure_out_dir",
     "load_aggregated_csv",
     "load_combined_csv",
+    "load_observations_csv",
     "safe_cols",
     "write_csv",
     "write_json",

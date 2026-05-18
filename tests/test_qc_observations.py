@@ -14,13 +14,13 @@ from cusp.qc import (
     check_pf_observed_values,
     check_zero_obs_limit,
     ensure_out_dir,
-    load_combined_csv,
+    load_observations_csv,
     write_csv,
 )
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = REPO_ROOT / "data" / "combined.csv"
+DATA_PATH = REPO_ROOT / "data" / "cusp_observations.csv"
 OUT_DIR = REPO_ROOT / "outputs" / "qc_tests"
 EXPECTED_COLUMNS = ["row_index"] + CANONICAL_COLUMNS
 
@@ -36,22 +36,22 @@ def _write_report_on_failure(df: pd.DataFrame, name: str) -> Path:
     return path
 
 
-class CombinedQATests(unittest.TestCase):
+class ObservationQATests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         if not DATA_PATH.exists():
             raise FileNotFoundError(f"Missing dataset CSV: {DATA_PATH}")
-        cls.combined_df = load_combined_csv(DATA_PATH)
+        cls.observations_df = load_observations_csv(DATA_PATH)
 
     def test_canonical_columns(self) -> None:
         self.assertEqual(
-            self.combined_df.columns.tolist(),
+            self.observations_df.columns.tolist(),
             EXPECTED_COLUMNS,
-            "combined.csv should contain only the canonical release columns.",
+            "cusp_observations.csv should contain only the canonical release columns.",
         )
 
     def test_cusp_obs_id_present_and_unique(self) -> None:
-        result = check_cusp_obs_id(self.combined_df)
+        result = check_cusp_obs_id(self.observations_df)
         _write_report_on_failure(result.details, "invalid_cusp_obs_id.csv")
         self.assertEqual(
             result.count(),
@@ -61,7 +61,7 @@ class CombinedQATests(unittest.TestCase):
         )
 
     def test_pf_observed_values(self) -> None:
-        result = check_pf_observed_values(self.combined_df)
+        result = check_pf_observed_values(self.observations_df)
         _write_report_on_failure(result.details, "invalid_pf_observed.csv")
         self.assertEqual(
             result.count(),
@@ -71,7 +71,7 @@ class CombinedQATests(unittest.TestCase):
         )
 
     def test_coordinates_missing_or_invalid(self) -> None:
-        result = check_coordinates(self.combined_df)
+        result = check_coordinates(self.observations_df)
         _write_report_on_failure(result.details, "invalid_coordinates.csv")
         self.assertEqual(
             result.count(),
@@ -81,7 +81,7 @@ class CombinedQATests(unittest.TestCase):
         )
 
     def test_dates_parseable_and_in_range(self) -> None:
-        result = check_dates(self.combined_df)
+        result = check_dates(self.observations_df)
         _write_report_on_failure(result.details, "bad_dates.csv")
         self.assertEqual(
             result.count(),
@@ -91,7 +91,7 @@ class CombinedQATests(unittest.TestCase):
         )
 
     def test_depths_non_negative(self) -> None:
-        result = check_negative_depths(self.combined_df)
+        result = check_negative_depths(self.observations_df)
         _write_report_on_failure(result.details, "bad_depths.csv")
         self.assertEqual(
             result.count(),
@@ -101,7 +101,7 @@ class CombinedQATests(unittest.TestCase):
         )
 
     def test_obs_limit_not_zero(self) -> None:
-        result = check_zero_obs_limit(self.combined_df)
+        result = check_zero_obs_limit(self.observations_df)
         _write_report_on_failure(result.details, "zero_obs_limit.csv")
         self.assertEqual(
             result.count(),

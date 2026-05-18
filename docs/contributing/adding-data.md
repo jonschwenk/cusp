@@ -123,7 +123,7 @@ python data/Example_2026/process_example_2026.py
 
 ```bash
 python -m cusp.build
-python -m cusp.qc validate-combined
+python -m cusp.qc validate-observations
 python -m cusp.aggregate
 python -m cusp.qc validate-aggregated
 ```

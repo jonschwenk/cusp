@@ -85,17 +85,17 @@ class BuildTests(unittest.TestCase):
 
         outputs = build_release_tables(raw)
 
-        self.assertEqual(outputs.combined.columns.tolist(), CANONICAL_COLUMNS)
-        self.assertEqual(len(outputs.combined), 2)
-        self.assertTrue(outputs.combined.iloc[0]["cusp_obs_id"].startswith("obs_"))
-        self.assertEqual(outputs.combined.iloc[0]["method"], "tp")
-        self.assertIn("cusp_obs_id", outputs.combined_allfields.columns)
-        self.assertIn("extra_col", outputs.combined_allfields.columns)
+        self.assertEqual(outputs.observations.columns.tolist(), CANONICAL_COLUMNS)
+        self.assertEqual(len(outputs.observations), 2)
+        self.assertTrue(outputs.observations.iloc[0]["cusp_obs_id"].startswith("obs_"))
+        self.assertEqual(outputs.observations.iloc[0]["method"], "tp")
+        self.assertIn("cusp_obs_id", outputs.observations_allfields.columns)
+        self.assertIn("extra_col", outputs.observations_allfields.columns)
         self.assertEqual(outputs.deleted_rows["build_reason"].tolist(), ["zero_zero_coordinates", "duplicate_required_fields"])
         self.assertEqual(outputs.qc_flags["build_reason"].tolist(), [])
 
     def test_build_source_reference_crosswalk_filters_to_included_sources(self) -> None:
-        combined_md = pd.DataFrame({"source": ["A", "B"]})
+        observations_metadata = pd.DataFrame({"source": ["A", "B"]})
         bib = pd.DataFrame(
             {
                 "source": ["A", "B", "C"],
@@ -104,7 +104,7 @@ class BuildTests(unittest.TestCase):
             }
         )
 
-        crosswalk = build_source_reference_crosswalk(combined_md, bib)
+        crosswalk = build_source_reference_crosswalk(observations_metadata, bib)
 
         self.assertEqual(crosswalk["source"].tolist(), ["A", "B"])
         self.assertEqual(crosswalk["title"].tolist(), ["Title A", "Title B"])
@@ -130,11 +130,11 @@ class BuildTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmpdir:
             tmp = Path(tmpdir)
-            canonical = tmp / "combined.csv"
-            allfields = tmp / "combined_allfields.csv"
-            metadata = tmp / "combined_md.csv"
-            deleted = tmp / "combined_deleted_rows.csv"
-            flags = tmp / "combined_qc_flags.csv"
+            canonical = tmp / "cusp_observations.csv"
+            allfields = tmp / "cusp_observations_allfields.csv"
+            metadata = tmp / "cusp_observations_metadata.csv"
+            deleted = tmp / "cusp_observations_deleted_rows.csv"
+            flags = tmp / "cusp_observations_qc_flags.csv"
             gpkg = tmp / "all_sites.gpkg"
             crosswalk = tmp / "source_reference_crosswalk.csv"
             manifest = tmp / "observation_release_manifest.json"
@@ -153,9 +153,9 @@ class BuildTests(unittest.TestCase):
 
             manifest_data = json.loads(manifest.read_text(encoding="utf-8"))
             self.assertEqual(manifest_data["build_scope"], "observation_release")
-            self.assertEqual(manifest_data["summary"]["combined_rows"], 1)
-            self.assertEqual(manifest_data["summary"]["combined_sources"], 1)
-            self.assertIn("combined.csv", manifest_data["artifacts"])
+            self.assertEqual(manifest_data["summary"]["observation_rows"], 1)
+            self.assertEqual(manifest_data["summary"]["observation_sources"], 1)
+            self.assertIn("cusp_observations.csv", manifest_data["artifacts"])
             self.assertEqual(manifest_data["artifacts"]["all_sites.gpkg"]["rows"], 1)
             self.assertEqual(manifest_data["artifacts"]["source_reference_crosswalk.csv"]["rows"], 1)
 
