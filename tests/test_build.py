@@ -135,7 +135,6 @@ class BuildTests(unittest.TestCase):
             metadata = tmp / "cusp_observations_metadata.csv"
             deleted = tmp / "cusp_observations_deleted_rows.csv"
             flags = tmp / "cusp_observations_qc_flags.csv"
-            gpkg = tmp / "all_sites.gpkg"
             crosswalk = tmp / "source_reference_crosswalk.csv"
             manifest = tmp / "observation_release_manifest.json"
 
@@ -146,7 +145,6 @@ class BuildTests(unittest.TestCase):
                 metadata_path=metadata,
                 deleted_path=deleted,
                 flags_path=flags,
-                gpkg_path=gpkg,
                 source_reference_path=crosswalk,
                 manifest_path=manifest,
             )
@@ -156,7 +154,6 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(manifest_data["summary"]["observation_rows"], 1)
             self.assertEqual(manifest_data["summary"]["observation_sources"], 1)
             self.assertIn("cusp_observations.csv", manifest_data["artifacts"])
-            self.assertEqual(manifest_data["artifacts"]["all_sites.gpkg"]["rows"], 1)
             self.assertEqual(manifest_data["artifacts"]["source_reference_crosswalk.csv"]["rows"], 1)
 
 

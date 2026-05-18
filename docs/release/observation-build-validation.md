@@ -8,7 +8,6 @@ artifacts:
 - the working observation table exported later as `cusp_vX.Y.csv`
 - the internal all-fields review table
 - the internal source-summary table
-- the internal geospatial review export
 - the internal source-reference crosswalk
 
 The goal of this pass was to validate that the current observation-build path
@@ -35,10 +34,6 @@ aggregation work begins.
 - internal source-summary table
   - rows: `50`
   - unique sources: `50`
-- internal geospatial review export
-  - rows: `239,473`
-  - CRS: `EPSG:4326`
-  - columns: observation-level core fields plus `geometry`
 - internal source-reference crosswalk
   - rows: `50`
   - one row per included source
@@ -73,8 +68,6 @@ aggregation work begins.
 - source coverage matches the current included-source set
 - the working observation table and internal source-summary table rebuild deterministically in the audited
   environment
-- the geospatial review export rebuilds from the canonical observation-level table and
-  matches the working observation table row-for-row
 - the source-reference crosswalk rebuilds cleanly and has one unique row per
   included `source`
 - the observation release manifest is now generated automatically by
@@ -217,8 +210,6 @@ Its current behavior is:
 - normalize `method` into the controlled release vocabulary where possible
 - write a canonical working observation table that contains only the required core columns
 - write an all-fields table as the wide/provenance-preserving version
-- write `all_sites.gpkg` as the geospatial export of the canonical observation
-  table
 - write a source-reference crosswalk as the one-row-per-source citation
   mapping artifact
 - write an observation release manifest as the observation-level artifact

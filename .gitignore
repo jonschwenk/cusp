@@ -22,7 +22,6 @@ data/cusp_observations_features.csv
 data/cusp_observations_features_manifest.json
 data/cusp_observations_metadata.csv
 data/cusp_observations_qc_flags.csv
-data/all_sites.gpkg
 data/observation_release_manifest.json
 data/source_reference_crosswalk.csv
 data/aggregated_30m.csv

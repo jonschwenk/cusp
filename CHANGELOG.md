@@ -24,7 +24,6 @@ This file is intended to track changes to:
   - `cusp_observations.csv`
   - `cusp_observations_allfields.csv`
   - `cusp_observations_metadata.csv`
-  - `all_sites.gpkg`
   - `source_reference_crosswalk.csv`
 - supported `30m` aggregation workflow outputs:
   - `aggregated_30m.csv`
