@@ -4,13 +4,13 @@ source_key = "Talucci_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jrowland"
-last_substantive_update = "2026-04-10"
+last_substantive_update = "2026-05-18"
 source_dataset = '''
 Talucci, Anna; Loranty, Michael; Holloway, Jean; Rogers, Brendan; Alexander,
 Heather; Baillargeon, Natalie; Baltzer, Jennifer; Berner, Logan; and others.
-2024. FireALT dataset: estimated active layer thickness for paired burned
-unburned sites measured from 2001-2023. Arctic Data Center.
-doi:10.18739/A2W950Q33
+2024. FireALT: active layer thickness estimates for paired burned and unburned
+sites in northern high latitudes. Arctic Data Center.
+doi:10.18739/A2RN3092P
 '''
 processing_assumptions = [
   "Where both msrType = thaw and msrType = active exist for the same grouped site, only the active records are retained.",
@@ -28,6 +28,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "The main processed thaw_depth field is based on estimated rather than measured depth for multi-observation groups.",
+  "Unburned control rows have no numeric time-since-fire value, so timeSinceFire is blank after ingestion.",
   "method is exported as unknown because the source combines modeled and measured information without one clean field that maps to the CUSP method vocabulary.",
 ]
 external_dependencies = []
@@ -49,7 +50,7 @@ source = "Talucci_2024"
 
 
 # Load and clean the dataset
-df = pd.read_csv(_ROOT_DIR / "data" / source /"FireALTdataset.csv")
+df = pd.read_csv(_ROOT_DIR / "data" / source / "FireAltEstimatedRawData.csv")
 df.replace(to_replace=[-9999, "u"], value=np.nan, inplace=True)
 
 # Convert types
@@ -87,7 +88,7 @@ agg_fields = {
     'year': 'first',
     'count': 'first'
 }
-df_avg = df_filtered.groupby(group_cols).agg(agg_fields).reset_index()
+df_avg = df_filtered.groupby(group_cols, dropna=False).agg(agg_fields).reset_index()
 df_avg.columns = ['lat', 'lon', 'burn_unburn', 'timeSinceFire', 'estDepth', 'pf_depth_std', 'estDoy', 'orgDepth', 'site_id', 'year', 'record_count']
 
 # Convert estDoy to date
