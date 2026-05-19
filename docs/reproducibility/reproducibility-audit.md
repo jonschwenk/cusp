@@ -25,12 +25,11 @@ For this audit, "documentation artifact present" is only a proxy for manual-step
 - Current included release sources: `50`
 - Included release sources with a checked-in `processed_*.csv`: `50 / 50`
 - Included release sources with a checked-in processing script: `50 / 50`
-- Included release sources with an obvious local reproducibility-documentation artifact: `15 / 50`
-- Included release sources that likely still need explicit manual-step documentation: `35 / 50`
-- Processed-but-not-included sources: `3`
+- Included release sources with an obvious local reproducibility-documentation artifact: `16 / 50`
+- Included release sources that likely still need explicit manual-step documentation: `34 / 50`
+- Processed-but-not-included sources: `2`
   - `Beer_etal_2013`
-  - `Chen_2015`
-  - `Pawley_2018`
+  - `Sadeghi_etal_2023`
 - Script-but-no-processed-output source: `1`
   - `Yi_etal_2020_ABoVE`
 - Known skipped source with no current processed output in repo:
@@ -669,7 +668,7 @@ Interpretation:
 - the main Phase 3 residuals are now:
   - per-source manual-step documentation
   - remaining source-specific byte-level nondeterminism
-  - deferred source-policy questions such as the unresolved date handling in `Pawley_2018`
+  - deferred source-policy questions such as the direct-observation status of `Sadeghi_etal_2023`
 - the observation-build path is now strong enough to treat as byte-deterministic for repeated rebuilds in the audited environment
 
 ## Included Release Sources With Script And Obvious Local Documentation Artifact
@@ -689,6 +688,7 @@ Interpretation:
 - `Wang_2018`: script present; metadata artifact present
 - `Petrone_etal_2016`: script present; metadata artifact present
 - `Jorgenson_Kanevskiy_2025`: script present; metadata artifact present
+- `Pawley_2018`: script present; metadata artifact present
 
 ## Included Release Sources With Script But No Obvious Manual-Step Documentation Artifact Yet
 
@@ -715,7 +715,6 @@ Interpretation:
 - `Patton_2021`: script present; add explicit rebuild/manual-step note
 - `Peirce_2020`: script present; add explicit rebuild/manual-step note
 - `Ruess_2025`: script present; add explicit rebuild/manual-step note
-- `Sadeghi_etal_2023`: script present; add explicit rebuild/manual-step note
 - `Scheer_etal_2023`: script present; add explicit rebuild/manual-step note
 - `Selawik`: script present; add explicit rebuild/manual-step note
 - `Seward`: script present; add explicit rebuild/manual-step note
@@ -741,17 +740,17 @@ Interpretation:
 
 - `Beer_etal_2013`: processed CSV and script are present, but `cusp/combine_data.py` currently skips it because it is an interpolated map product with no dates
 - `Chen_2015`: removed from `data/` after duplicate review; retained in the master bibliography as a bibliographic-only source for synthesis traceability
-- `Pawley_2018`: processed CSV and script are present, but the source does not provide full per-observation dates and the current Source-to-Year lookup still leaves many rows without a resolved year, so inclusion is deferred pending a clearer date policy or better year crosswalk
+- `Sadeghi_etal_2023`: processed CSV and script are present, but the source is currently excluded while its direct-observation status is reviewed
 - `Yi_etal_2020_ABoVE`: processing script is present but no processed CSV is checked in; `cusp/combine_data.py` notes that it needs online processing because it is too large to load directly
 - `Wilcox_2015`: currently skipped in `cusp/combine_data.py`; source files are present, but there is no checked-in processed CSV and the skip note says there are no lat/lon data for observations
 
 ## Recommended Next Steps For Phase 3
 
-1. Add a short per-source rebuild note for the 35 included sources that currently have no obvious manual-step documentation artifact.
+1. Add a short per-source rebuild note for the 34 included sources that currently have no obvious manual-step documentation artifact.
 2. Decide whether those per-source notes live in each source directory, in a central manifest, or both.
 3. Add short per-source rebuild notes or header-standard metadata for the included sources that still lack obvious manual-step documentation artifacts.
 4. Decide which source-level outputs need byte-for-byte determinism versus semantic-stability guarantees only.
-5. Revisit deferred sources like `Pawley_2018` once the required date/year policy decisions are made.
+5. Revisit deferred sources like `Sadeghi_etal_2023` once the source-scope decision is made.
 6. Create or refine scripted checks that distinguish:
    - clean rebuild
    - semantic rebuild with accepted byte drift

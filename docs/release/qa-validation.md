@@ -27,13 +27,14 @@ The audit is intentionally behind-the-scenes: it writes review outputs under
 
 Latest run:
 
-- `python -m unittest tests.test_qc_observations tests.test_build tests.test_aggregate tests.test_process_script_metadata`
-- `python -m cusp.qc audit-observations --input <working-observation-table> --out outputs/qc_audit`
+- `python -m cusp.qc validate-observations`
+- `python -m cusp.qc audit-observations`
+- `python -m unittest discover -s tests`
 
 Observed outcome:
 
 - all hard-gate tests passed
-- current canonical observation table size: `239,704` rows
+- current canonical observation table size: `249,012` rows
 - current canonical observation table columns: `11`
 - no hard-gate failures were written to `outputs/qc_tests/`
 
@@ -59,8 +60,8 @@ From `outputs/qc_audit/qc_summary.json`:
 
 Current `pf_observed` counts in the canonical observation table:
 
-- `1`: `230,430`
-- `0`: `9,274`
+- `1`: `230,539`
+- `0`: `18,473`
 
 ## Explicit non-blockers
 

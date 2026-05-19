@@ -24,18 +24,18 @@ aggregation work begins.
 ## Current Rebuild Snapshot
 
 - working observation table
-  - rows: `239,704`
+  - rows: `249,012`
   - columns: `11`
-  - unique sources: `49`
-  - date range: `1962-08-15` to `2024-10-03`
+  - unique sources: `50`
+  - date range: `1961-09-01` to `2024-10-03`
 - internal all-fields review table
-  - rows: `239,704`
+  - rows: `249,012`
   - preserves source-specific/wide fields for provenance and review
 - internal source-summary table
-  - rows: `49`
-  - unique sources: `49`
+  - rows: `50`
+  - unique sources: `50`
 - internal source-reference crosswalk
-  - rows: `49`
+  - rows: `50`
   - one row per included source
   - filtered from `cusp_sources_bibtex.csv` to the current included-source set
 - internal observation release manifest
@@ -88,11 +88,12 @@ These are documentation/citation cleanup items rather than observation-build
 failures, but they should be resolved before treating the crosswalk as
 release-ready.
 
-### 2. A small number of records still have missing coordinates
+### 2. A small number of records are still deleted for missing coordinates
 
-Current missing-coordinate records are concentrated in a few sources:
+The canonical observation table has no missing coordinates after hard deletion.
+Current missing-coordinate deletion-log records are concentrated in a few
+sources:
 
-- `Natali_2023`: `2832`
 - `Minsley_2015`: `15`
 - `Zhao_2021`: `12`
 - `Hollingsworth_2005`: `6`
@@ -111,14 +112,15 @@ either:
 
 Missing `site_id` values are concentrated in:
 
-- `Peirce_2020`: `999`
-- `Brown_etal_2000_calm`: `170`
+- `Pawley_2018`: `9308`
 - `Bonaventure_Whati`: `145`
-- `Koyukuk_2018`: `58`
+- `Koyukuk_2018`: `56`
 - `Douglas_Koyukuk_2022`: `45`
+- `Brown_etal_2000_calm`: `38`
 
-`Peirce_2020` is the main case to clean up because all `999` rows have valid
-coordinates and dates, so stable `site_id` values can likely be assigned.
+`Pawley_2018` is expected to have missing `site_id` values because the source
+does not provide row-level site identifiers, and the processing script does not
+assign synthetic IDs.
 
 ## Findings That Look Diagnostic Rather Than Blocking
 

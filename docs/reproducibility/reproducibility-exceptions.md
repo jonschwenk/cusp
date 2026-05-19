@@ -55,26 +55,6 @@ This is a working project document. Entries here should be revised as sources ar
   - keep excluded for v1 unless the project decides to support undated historical map products in a separate release track
   - keep on the deferred deletion list, but do not delete yet
 
-### `Pawley_2018`
-
-- Current status: currently excluded, but expected to be revisited for inclusion
-- Repo evidence:
-  - `cusp/combine_data.py` explicitly skips `Pawley_2018`
-  - the combine comment says it does not have dates
-  - `data/Pawley_2018/process_pawley_2018.py` merges source values to a `Year` field from `unique_source_values.csv` and sets `date` from that year
-- Reason:
-  - the current repo rationale says it lacks dates, but the processing script suggests there may at least be year-level temporal information
-  - this looks more like a policy/schema question than a hard technical impossibility
-- Confidence: medium
-  - there is a real mismatch between the combine skip comment and the current processing script behavior
-- Release implication:
-  - this source should be revisited as an inclusion candidate rather than treated as a settled exclusion
-  - it may be eligible if the script/date handling is cleaned up and year-level dates are encoded consistently
-- Next action:
-  - inspect `processed_pawley_2018.csv` and confirm how `date` is encoded
-  - fix the processing script if the current exclusion is due to script behavior rather than source limitations
-  - decide whether year-derived dates satisfy the public schema and scientific intent
-
 ### `Sadeghi_etal_2023`
 
 - Current status: excluded from the canonical observation-level build pending source review
@@ -135,7 +115,6 @@ This is a working project document. Entries here should be revised as sources ar
 
 ### Revisit For Possible Inclusion
 
-- `Pawley_2018`
 - `Sadeghi_etal_2023`
 
 ### Investigate Or Clean Up Later
@@ -159,5 +138,4 @@ These are not currently exclusion reasons, but they should be cleaned up before 
 
 1. Keep `Chen_2015` as a bibliographic-only duplicate/absorbed source unless CUSP adds formal sub-source provenance for synthesis datasets.
 2. Treat `Yi_etal_2020_ABoVE` as a formal reproducibility exception unless and until the external-data workflow and the oversized flattening workflow are redesigned and documented.
-3. Revisit `Pawley_2018` specifically, because the script suggests it may have year-level dates despite the current skip comment.
-4. Leave `Beer_etal_2013`, `Sadeghi_etal_2023`, and `Wilcox_2015` excluded for v1 unless the release scope changes.
+3. Leave `Beer_etal_2013`, `Sadeghi_etal_2023`, and `Wilcox_2015` excluded for v1 unless the release scope changes.

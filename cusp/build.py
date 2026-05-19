@@ -21,7 +21,6 @@ DEFAULT_SKIPPED_SOURCES = [
     "Wilcox_2015",
     "Yi_etal_2020_ABoVE",
     "Beer_etal_2013",
-    "Pawley_2018",
     "Sadeghi_etal_2023",
 ]
 REQUIRED_SOURCE_COLUMNS = [
