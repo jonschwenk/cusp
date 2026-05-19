@@ -55,6 +55,23 @@ This is a working project document. Entries here should be revised as sources ar
   - keep excluded for v1 unless the project decides to support undated historical map products in a separate release track
   - keep on the deferred deletion list, but do not delete yet
 
+### `Brown_etal_2000_calm`
+
+- Current status: excluded from the canonical observation-level build after CALM supersession review
+- Repo evidence:
+  - `data/Brown_etal_2000_calm/process_brown_etal_2000_calm.py` processes a manually reformatted CALM summary workbook
+  - the parser depends on fixed row ranges in `CALM_Summary_table.xlsx`
+  - comparison against the newer `CALM` GTN-P/PANGAEA export shows this source is CALM-derived and has source-level date/value alignment problems
+- Reason:
+  - the newer `CALM` source is the canonical CALM/GTN-P annual ALT export
+  - keeping both would retain duplicate CALM-derived observations, while the Brown workbook path is less reproducible and less faithful to the source metadata
+- Confidence: high that this should not remain as a separate canonical observation source once `CALM` is included
+- Release implication:
+  - this source should stay excluded from the canonical observation-level release
+  - retain the source directory for now until the final deletion pass, because the project may still want the historical paper citation for provenance
+- Next action:
+  - after `CALM` is promoted into the release build, delete or archive the Brown processed source and keep any needed citation/provenance note outside the canonical source list
+
 ### `Sadeghi_etal_2023`
 
 - Current status: excluded from the canonical observation-level build pending source review
@@ -127,6 +144,7 @@ This is a working project document. Entries here should be revised as sources ar
 These are not to be deleted now. Keep them skipped during ongoing development and revisit deletion near the end of release cleanup after documentation decisions are settled.
 
 - `Beer_etal_2013`
+- `Brown_etal_2000_calm`
 
 ## Additional Non-Blocking Cleanup Items
 
@@ -138,4 +156,4 @@ These are not currently exclusion reasons, but they should be cleaned up before 
 
 1. Keep `Chen_2015` as a bibliographic-only duplicate/absorbed source unless CUSP adds formal sub-source provenance for synthesis datasets.
 2. Treat `Yi_etal_2020_ABoVE` as a formal reproducibility exception unless and until the external-data workflow and the oversized flattening workflow are redesigned and documented.
-3. Leave `Beer_etal_2013`, `Sadeghi_etal_2023`, and `Wilcox_2015` excluded for v1 unless the release scope changes.
+3. Leave `Beer_etal_2013`, `Brown_etal_2000_calm`, `Sadeghi_etal_2023`, and `Wilcox_2015` excluded for v1 unless the release scope changes.
