@@ -221,6 +221,38 @@ def check_pf_observed_values(df: pd.DataFrame) -> CheckResult:
     return CheckResult(mask=bad, details=details, stats=stats)
 
 
+def check_method_values(df: pd.DataFrame, allowed_methods: set[str]) -> CheckResult:
+    """Flag missing or unsupported observation method values."""
+
+    base_cols = CORE_ID_COLS
+    if "method" not in df.columns:
+        missing = pd.Series(True, index=df.index, dtype=bool)
+        return CheckResult(
+            mask=missing,
+            details=_build_details(df, missing, base_cols, {"flag_missing_method": missing}),
+            stats={"n_missing_method": int(missing.sum()), "n_unsupported_method": 0},
+        )
+
+    method = df["method"].astype("string").str.strip()
+    missing = method.isna() | (method == "")
+    unsupported = ~missing & ~method.isin(sorted(allowed_methods))
+    mask = missing | unsupported
+    details = _build_details(
+        df,
+        mask,
+        base_cols,
+        {
+            "flag_missing_method": missing,
+            "flag_unsupported_method": unsupported,
+        },
+    )
+    stats = {
+        "n_missing_method": int(missing.sum()),
+        "n_unsupported_method": int(unsupported.sum()),
+    }
+    return CheckResult(mask=mask, details=details, stats=stats)
+
+
 def check_thaw_depth_gt_pf_depth(df: pd.DataFrame) -> CheckResult:
     """Diagnostic: thaw depth deeper than pf_depth."""
 

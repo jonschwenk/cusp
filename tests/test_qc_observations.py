@@ -5,11 +5,12 @@ from pathlib import Path
 
 import pandas as pd
 
-from cusp.build import CANONICAL_COLUMNS
+from cusp.build import ALLOWED_METHODS, CANONICAL_COLUMNS
 from cusp.qc import (
     check_coordinates,
     check_cusp_obs_id,
     check_dates,
+    check_method_values,
     check_negative_depths,
     check_pf_observed_values,
     check_zero_obs_limit,
@@ -68,6 +69,16 @@ class ObservationQATests(unittest.TestCase):
             0,
             f"Found {result.count()} rows where pf_observed is not 0/1. "
             f"See {OUT_DIR / 'invalid_pf_observed.csv'}.",
+        )
+
+    def test_method_values(self) -> None:
+        result = check_method_values(self.observations_df, ALLOWED_METHODS)
+        _write_report_on_failure(result.details, "invalid_method.csv")
+        self.assertEqual(
+            result.count(),
+            0,
+            f"Found {result.count()} rows with missing or unsupported method values. "
+            f"See {OUT_DIR / 'invalid_method.csv'}.",
         )
 
     def test_coordinates_missing_or_invalid(self) -> None:

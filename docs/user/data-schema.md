@@ -50,7 +50,6 @@ The method column uses short codes:
 | --- | --- |
 | `aug` | auger observation |
 | `gp` | ground probing or frost probing where the source uses that terminology |
-| `insar` | InSAR-derived or InSAR-assisted observation |
 | `pit` | soil pit or excavation |
 | `pit_aug` | combined pit and auger information |
 | `temp` | temperature profile or temperature-based interpretation |
@@ -62,6 +61,10 @@ The method column uses short codes:
 
 The main released CUSP table should only contain single-observation method
 values, not `mixed`.
+
+Remote-sensing and modeled products that infer active layer or permafrost
+conditions from surface displacement, gridded products, or other indirect
+products are outside the canonical observation-table method vocabulary.
 
 ## Aggregation outputs
 

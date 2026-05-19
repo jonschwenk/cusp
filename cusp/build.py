@@ -22,6 +22,7 @@ DEFAULT_SKIPPED_SOURCES = [
     "Yi_etal_2020_ABoVE",
     "Beer_etal_2013",
     "Pawley_2018",
+    "Sadeghi_etal_2023",
 ]
 REQUIRED_SOURCE_COLUMNS = [
     "lon",
@@ -52,7 +53,7 @@ CANONICAL_COLUMNS = [
 ]
 OBS_ID_COMPONENT_COLUMNS = [column for column in CANONICAL_COLUMNS if column != "cusp_obs_id"]
 INTERNAL_BUILD_COLUMNS = {"_build_row_number", "build_action", "build_reason"}
-ALLOWED_METHODS = {"gp", "tp", "pit", "aug", "pit_aug", "tp_pit", "tt", "temp", "insar", "unknown"}
+ALLOWED_METHODS = {"gp", "tp", "pit", "aug", "pit_aug", "tp_pit", "tt", "temp", "unknown"}
 METHOD_NORMALIZATION_MAP = {
     "Frost Probe Transect or Grid": "tp",
     "Frost Probe Transect or Grid & Borehole": "tp_pit",

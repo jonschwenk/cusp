@@ -36,7 +36,7 @@ The current aggregation path:
 ## Current Rebuild Snapshot
 
 - `aggregated_30m.csv`
-  - rows: `18,223`
+  - rows: `18,412`
   - columns:
     - `cusp_30m_id`
     - `year`
@@ -51,13 +51,13 @@ The current aggregation path:
     - `aggregated_sources`
     - `n_grouped`
 - `aggregated_30m_membership.csv`
-  - rows: `239,473`
-  - unique aggregated groups: `18,223`
-  - unique member observations: `239,473`
+  - rows: `239,704`
+  - unique aggregated groups: `18,412`
+  - unique member observations: `239,704`
 - `aggregated_30m_excluded_rows.csv`
   - rows: `0`
 - `aggregated_30m_qc_flags.csv`
-  - rows: `1,332`
+  - rows: `1,346`
 - `aggregated_30m.gpkg`
   - CRS: `EPSG:4326`
 
@@ -81,9 +81,9 @@ The current aggregation path:
 ## Current QC Flag Counts
 
 - `mixed_pf_observed`: `612`
-- `mixed_method`: `326`
-- `multi_date_window`: `301`
-- `mixed_source`: `93`
+- `mixed_method`: `329`
+- `multi_date_window`: `309`
+- `mixed_source`: `96`
 
 These are audit outputs, not automatic blockers.
 

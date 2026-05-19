@@ -24,18 +24,18 @@ aggregation work begins.
 ## Current Rebuild Snapshot
 
 - working observation table
-  - rows: `239,473`
+  - rows: `239,704`
   - columns: `11`
-  - unique sources: `50`
+  - unique sources: `49`
   - date range: `1962-08-15` to `2024-10-03`
 - internal all-fields review table
-  - rows: `239,473`
+  - rows: `239,704`
   - preserves source-specific/wide fields for provenance and review
 - internal source-summary table
-  - rows: `50`
-  - unique sources: `50`
+  - rows: `49`
+  - unique sources: `49`
 - internal source-reference crosswalk
-  - rows: `50`
+  - rows: `49`
   - one row per included source
   - filtered from `cusp_sources_bibtex.csv` to the current included-source set
 - internal observation release manifest
@@ -116,7 +116,6 @@ Missing `site_id` values are concentrated in:
 - `Bonaventure_Whati`: `145`
 - `Koyukuk_2018`: `58`
 - `Douglas_Koyukuk_2022`: `45`
-- `Sadeghi_etal_2023`: `31`
 
 `Peirce_2020` is the main case to clean up because all `999` rows have valid
 coordinates and dates, so stable `site_id` values can likely be assigned.
@@ -176,6 +175,7 @@ After pushing a substantial amount of QA/QC back into the individual
 cleaner:
 
 - no remaining `missing_method` flags
+- no remaining unsupported method values in the canonical observation table
 - no remaining `zero_obs_limit` flags
 - no remaining `(0,0)` coordinate rows in the built observation table
 - `missing_site_id` is no longer emitted as a build-level QC flag

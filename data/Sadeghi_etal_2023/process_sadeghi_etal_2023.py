@@ -3,7 +3,7 @@
 """
 metadata_schema_version = 1
 source_key = "Sadeghi_etal_2023"
-release_clearance = "approved"
+release_clearance = "deferred"
 permission_basis = "public_repository_terms"
 original_author = "ksolander"
 last_substantive_update = "2026-04-11"
@@ -15,7 +15,7 @@ https://doi.org/10.5281/zenodo.10023340
 processing_assumptions = [
   "The script reads a single alt.dat file of InSAR-derived thaw-depth estimates and converts thaw_depth from meters to centimeters.",
   "pf_observed is fixed to 1 for all retained rows.",
-  "pf_depth is left missing and method is set to insar.",
+  "pf_depth is left missing and the processed output currently uses an unsupported source-specific method label pending source review.",
   "site_id and obs_limit remain missing because the source grid file does not provide them directly.",
 ]
 temporal_handling = [
@@ -28,6 +28,7 @@ manual_steps = []
 known_limitations = [
   "The processed output collapses a multi-year InSAR product to one representative date.",
   "The script treats modeled InSAR-derived thaw-depth estimates as permafrost-present observations rather than direct field observations.",
+  "This source is excluded from the default observation build unless a direct-observation subset is identified.",
 ]
 external_dependencies = []
 notes = ""

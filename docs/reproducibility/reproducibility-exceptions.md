@@ -75,6 +75,23 @@ This is a working project document. Entries here should be revised as sources ar
   - fix the processing script if the current exclusion is due to script behavior rather than source limitations
   - decide whether year-derived dates satisfy the public schema and scientific intent
 
+### `Sadeghi_etal_2023`
+
+- Current status: excluded from the canonical observation-level build pending source review
+- Repo evidence:
+  - `data/Sadeghi_etal_2023/process_sadeghi_etal_2023.py` describes the source as an InSAR-derived thaw-depth estimate product
+  - the script assigns a representative date to a multi-year analysis window
+  - the processed source currently emits only an unsupported source-specific method label
+- Reason:
+  - the canonical observation release is limited to direct observation workflows
+  - surface-displacement-derived thaw-depth products may be useful related data, but they are outside the current method vocabulary
+- Confidence: high that the current processed output is not a direct field-observation table; source-level review may still clarify whether any directly observed validation data are present elsewhere in the source package
+- Release implication:
+  - this source should remain out of the canonical observation release unless a direct-observation subset is identified and processed separately
+- Next action:
+  - inspect the source package and notebook to determine whether any direct permafrost observations exist apart from the derived product
+  - if not, retain the source only as a related-data candidate outside the canonical observation table
+
 ### `Yi_etal_2020_ABoVE`
 
 - Current status: excluded, deferred, and not currently reproducible from the checked-in repo alone
@@ -119,6 +136,7 @@ This is a working project document. Entries here should be revised as sources ar
 ### Revisit For Possible Inclusion
 
 - `Pawley_2018`
+- `Sadeghi_etal_2023`
 
 ### Investigate Or Clean Up Later
 
@@ -142,4 +160,4 @@ These are not currently exclusion reasons, but they should be cleaned up before 
 1. Keep `Chen_2015` as a bibliographic-only duplicate/absorbed source unless CUSP adds formal sub-source provenance for synthesis datasets.
 2. Treat `Yi_etal_2020_ABoVE` as a formal reproducibility exception unless and until the external-data workflow and the oversized flattening workflow are redesigned and documented.
 3. Revisit `Pawley_2018` specifically, because the script suggests it may have year-level dates despite the current skip comment.
-4. Leave `Beer_etal_2013` and `Wilcox_2015` excluded for v1 unless the release scope changes.
+4. Leave `Beer_etal_2013`, `Sadeghi_etal_2023`, and `Wilcox_2015` excluded for v1 unless the release scope changes.

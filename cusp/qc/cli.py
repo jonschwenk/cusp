@@ -12,7 +12,7 @@ from typing import Any
 import pandas as pd
 
 from cusp.aggregate import AGGREGATED_COLUMNS
-from cusp.build import CANONICAL_COLUMNS
+from cusp.build import ALLOWED_METHODS, CANONICAL_COLUMNS
 
 from .aggregate import (
     check_cusp_30m_id,
@@ -27,6 +27,7 @@ from .checks import (
     check_coordinates,
     check_cusp_obs_id,
     check_dates,
+    check_method_values,
     check_negative_depths,
     check_pf_observed_values,
     check_suspect_swapped_latlon,
@@ -115,6 +116,10 @@ def run_observations_validation(
     pf_res = check_pf_observed_values(df)
     counts["invalid_pf_observed"] = pf_res.count()
     outputs.append(("invalid_pf_observed.csv", pf_res.details))
+
+    method_res = check_method_values(df, ALLOWED_METHODS)
+    counts["invalid_method"] = method_res.count()
+    outputs.append(("invalid_method.csv", method_res.details))
 
     coord_res = check_coordinates(df)
     counts["invalid_coordinates"] = coord_res.count()
