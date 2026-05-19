@@ -286,19 +286,17 @@ Batch audited:
 
 - `Daanen_2017`
 - `Wang_2018`
-- `Brown_etal_2000_calm`
 - `Ebel_2018`
 - `Holloway_2019`
 
 Headline result:
 
-- `5 / 5` sources in this batch are now execution-verified as semantic rebuilds in `cusp2`
-- `4 / 5` succeeded on the first confirmation rerun:
+- `4 / 4` sources in this batch are now execution-verified as semantic rebuilds in `cusp2`
+- `3 / 4` succeeded on the first confirmation rerun:
   - `Daanen_2017`
   - `Wang_2018`
-  - `Brown_etal_2000_calm`
   - `Ebel_2018`
-- `1 / 5` needed a small pandas/dtype cleanup before succeeding:
+- `1 / 4` needed a small pandas/dtype cleanup before succeeding:
   - `Holloway_2019`
 - `Holloway_2019` is the first source in the recent audit batches to rebuild byte-for-byte identically after patching
 
@@ -310,9 +308,6 @@ Per-source notes:
 - `Wang_2018`
   - rebuild succeeded and matched semantically
   - the rebuilt CSV was not byte-identical, but no substantive differences were detected
-- `Brown_etal_2000_calm`
-  - rebuild succeeded and matched semantically
-  - the invalid-escape warning paths were cleaned up later the same day
 - `Ebel_2018`
   - rebuild succeeded and matched semantically
   - the geometry-assignment warning path was cleaned up later the same day
@@ -639,7 +634,6 @@ Date run: `2026-04-10`
 Scope:
 
 - warning-heavy source workflows:
-  - `Brown_etal_2000_calm`
   - `Cable_2017`
   - `Ebel_2018`
   - `Jorgenson_Kanevskiy_2025`
@@ -651,7 +645,7 @@ Scope:
 Results:
 
 - the warning-heavy scripts above were patched and rerun in `cusp2`
-- all six now rerun without the tracked Python/pandas/GeoPandas warnings
+- all five now rerun without the tracked Python/pandas/GeoPandas warnings
 - `James_2020` remains the notable residual warning path, but it is environment-level:
   - `ERROR 1: PROJ: proj_create_from_database: Open of .../share/proj failed`
 - `cusp/combine_data.py` was updated to:
@@ -694,7 +688,6 @@ Interpretation:
 
 - `Bakian_Dogaheh_2020`: script present; add explicit rebuild/manual-step note
 - `Bonaventure_Whati`: script present; add explicit rebuild/manual-step note
-- `Brown_etal_2000_calm`: script present; add explicit rebuild/manual-step note
 - `Chapin_2025`: script present; add explicit rebuild/manual-step note
 - `Ebel_2018`: script present; add explicit rebuild/manual-step note
 - `Hollingsworth_2005`: script present; add explicit rebuild/manual-step note

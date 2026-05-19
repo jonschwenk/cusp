@@ -4,7 +4,7 @@ source_key = "Wang_2018"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "Joel Rowland"
-last_substantive_update = "2025-06-16"
+last_substantive_update = "2026-05-19"
 source_dataset = '''
 Kang Wang, Irina Overeem, Elchin Jafarov, Gary Clow, Vladimir Romanovsky,
 Kevin Schaefer, Frank Urban, William Cable, Mark Piper, Christopher Schwalm,
@@ -28,6 +28,7 @@ manual_steps = []
 known_limitations = [
   "Depth resolution is limited to the available 25 cm sensor spacing.",
   "Years with incomplete deeper temperature coverage can be skipped entirely.",
+  "Some Wang_2018 station-years spatially overlap with CALM/GTN-P annual ALT records, but the Wang publication and metadata describe PF-AK as a synthesis from GI-UAF, USGS, and NPS monitoring networks rather than as a CALM-derived table. CUSP therefore treats Wang_2018 as an independent source pending explicit station-year deduplication review.",
 ]
 external_dependencies = []
 notes = ""

@@ -24,18 +24,18 @@ aggregation work begins.
 ## Current Rebuild Snapshot
 
 - working observation table
-  - rows: `249,012`
+  - rows: `246,180`
   - columns: `11`
-  - unique sources: `50`
+  - unique sources: `49`
   - date range: `1961-09-01` to `2024-10-03`
 - internal all-fields review table
-  - rows: `249,012`
+  - rows: `246,180`
   - preserves source-specific/wide fields for provenance and review
 - internal source-summary table
-  - rows: `50`
-  - unique sources: `50`
+  - rows: `49`
+  - unique sources: `49`
 - internal source-reference crosswalk
-  - rows: `50`
+  - rows: `49`
   - one row per included source
   - filtered from `cusp_sources_bibtex.csv` to the current included-source set
 - internal observation release manifest
@@ -116,7 +116,6 @@ Missing `site_id` values are concentrated in:
 - `Bonaventure_Whati`: `145`
 - `Koyukuk_2018`: `56`
 - `Douglas_Koyukuk_2022`: `45`
-- `Brown_etal_2000_calm`: `38`
 
 `Pawley_2018` is expected to have missing `site_id` values because the source
 does not provide row-level site identifiers, and the processing script does not
@@ -134,12 +133,12 @@ Using the key:
 - `lat`
 - `lon`
 
-there are `14,999` rows participating in duplicate-key groups. These are
+there are `1,851` rows participating in duplicate-key groups. These are
 dominated by:
 
-- `Brown_etal_2000_calm`
-- `Natali_2023`
 - `Jafarov_2016`
+- `James_2019`
+- `Walker_2022`
 - `Bakian_Dogaheh_2020`
 
 Inspection suggests these are often repeated observations at the same site/date
@@ -148,12 +147,11 @@ accidental duplicated rows introduced by the combine step. This should remain a
 diagnostic QA check, but it is not currently being treated as a release blocker
 by itself.
 
-### Swapped-coordinate heuristic is almost entirely a `Brown_etal_2000_calm` issue
+### Swapped-coordinate heuristic no longer has current findings
 
-The simple swapped-lat/lon heuristic flags `442` rows, all from
-`Brown_etal_2000_calm`. Given the global historical scope of that source, these
-are more likely to be heuristic false positives than actual swapped coordinates.
-This should remain an audit output, not an automatic blocker.
+The simple swapped-lat/lon heuristic currently has no findings in the
+Brown-free working observation table. This should remain an audit output, not
+an automatic blocker.
 
 ### The source summary and source-reference crosswalk serve different roles
 
@@ -186,8 +184,7 @@ cleaner:
 
 Current remaining hard deletions are dominated by:
 
-- source-level duplicate groups in `Brown_etal_2000_calm`, `Jafarov_2016`, and
-  `Bakian_Dogaheh_2020`
+- source-level duplicate groups in `Jafarov_2016` and `Bakian_Dogaheh_2020`
 - missing-coordinate rows in `Minsley_2015`, `Zhao_2021`,
   `Hollingsworth_2005`, and `Ruess_2025`
 

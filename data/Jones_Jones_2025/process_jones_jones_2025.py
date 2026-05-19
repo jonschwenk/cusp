@@ -6,7 +6,7 @@ source_key = "Jones_Jones_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jrowland"
-last_substantive_update = "2025-07-25"
+last_substantive_update = "2026-05-19"
 source_dataset = '''
 Melissa Ward Jones and Benjamin Jones. (2025). Permafrost and Environmental
 Monitoring in 2023 and 2024 at the Teshekpuk Lake Observatory, Northern Alaska.
@@ -27,6 +27,8 @@ manual_steps = []
 known_limitations = [
   "The permafrost classification uses a simple 100 cm threshold rather than an explicit observation-limit field from the source.",
   "method is fixed to tp for all rows.",
+  "The source metadata describes the HCP grid as CALM site U60 and the LCP grid as CALM site U60a, so this source overlaps conceptually and spatially with CALM/GTN-P. The current CUSP duplicate detector only removes exact canonical duplicates and will not catch this source-level/grid-level overlap.",
+  "Before CALM and Jones_Jones_2025 are both included in the release, CUSP should use a less strict deduplication review or a source-specific filter; U60 versus U60a may not be sufficient by itself to decide which rows to retain.",
 ]
 external_dependencies = []
 notes = ""
