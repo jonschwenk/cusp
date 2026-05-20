@@ -12,7 +12,6 @@ Maintainer pages are useful when you need to:
 - prepare or check a release
 - understand versioned export rules
 - inspect QA gates and validation records
-- review source-level reproducibility audits
 - decide whether a source or workflow is ready for public release
 
 ## Maintainer Pages
@@ -23,4 +22,3 @@ Maintainer pages are useful when you need to:
 - [QA validation](../release/qa-validation.md)
 - [Observation build validation](../release/observation-build-validation.md)
 - [Aggregation validation](../release/aggregation-validation.md)
-- [Reproducibility audit](../reproducibility/reproducibility-audit.md)

@@ -43,6 +43,4 @@ project instead of skipping the smoke test.
 
 Some original source inputs are too large or too awkward to store directly in
 GitHub. Those cases are documented in
-[External data sources](external-data-sources.md). Known source-level
-limitations are tracked in
-[Reproducibility exceptions](reproducibility-exceptions.md).
+[External data sources](external-data-sources.md).
