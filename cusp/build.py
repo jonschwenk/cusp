@@ -18,7 +18,6 @@ from cusp.data_utils import _ROOT_DIR
 
 DATA_DIR = _ROOT_DIR / "data"
 DEFAULT_SKIPPED_SOURCES = [
-    "CALM",
     "Wilcox_2015",
     "Yi_etal_2020_ABoVE",
     "Beer_etal_2013",
