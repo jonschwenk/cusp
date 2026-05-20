@@ -6,7 +6,7 @@ source_key = "Moore_et_al_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jrowland"
-last_substantive_update = "2025-08-26"
+last_substantive_update = "2026-05-20"
 source_dataset = '''
 Moore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair,
 K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton,
@@ -45,6 +45,7 @@ manual_steps = [
 known_limitations = [
   "The source file does not provide explicit probe lengths or direct permafrost presence/absence labels, so pf_observed and pf_depth are inferred.",
   "obs_limit remains unreported because the input file does not provide a usable observation-limit field.",
+  "CALM overlap review found spatial/site-year overlap with CALM but no exact coordinate/date/depth duplicate rows; source documentation indicates ABoVE/SMALT field observations, so Moore_et_al_2025 is treated as independent for now.",
 ]
 external_dependencies = [
   "Gitignored raw input ABoVE_Soil_ThawDepth_Moisture_Validation_V2.csv hosted outside the repo; see EXTERNAL_DATA_SOURCES.md.",
