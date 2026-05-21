@@ -1,0 +1,71 @@
+PERMOS DATABASE RELEASE 2024: 
+PERMAFROST FIELD DATA OBTAINED IN THE FRAMEWORK OF THE SWISS PERMAFROST MONITORING NETWORK
+
+DOI for scientific data (Identifier): 
+10.13093/permos-2024-01
+
+Title: 
+Swiss Permafrost Monitoring Network Database (PERMOS Database release 2024)
+
+Creator: 
+Swiss Permafrost Monitoring Network (PERMOS)
+
+Publisher: 
+Swiss Permafrost Monitoring Network (PERMOS)
+
+Publication Year: 
+2024
+
+Release date: 
+2024-05-30
+
+URL: 
+http://dx.doi.org/10.13093/permos-2024-01
+
+Citation: 
+PERMOS 2024: PERMOS Database. Swiss Permafrost Monitoring Network, Davos and Fribourg, Switzerland. DOI:10.13093/permos-2024-01.
+
+Description: 
+(1) Ground temperature time series in daily, monthly and annual resolution measured in permafrost boreholes, 
+(2) Near ground surface temperature time series in daily, monthly and annual resolution measured at the PERMOS sites,
+(3) Electrical resistivity tomography (ERT) time series in annual resolution measured at fixed profiles at the PERMOS sites,
+(4) Terrestrial geodetic survey (TGS)time series in annual resolution measured on actively moving rock glaciers,
+(5) related meta data. 
+All data are obtained by the PERMOS Partner Institutions in the scope of the Swiss Permafrost Monitoring Network PERMOS and curated by the PERMOS Office.
+
+Keywords: 
+mountain permafrost, borehole temperature, ground surface temperature, active layer thickness, electrical resistivity, rock glacier velocity, longterm monitoring
+
+Contributors: 
+PERMOS Partner Institutions: ETH Zurich, Universities of Fribourg, Innsbruck, Lausanne, and Zurich, WSL Institute for Snow and Avalanche Research SLF Davos, University of Applied Sciences and Arts of Southern Switzerland. 
+All work done by the PIs, former PIs, field assistance and processing assistance is highly acknowledged. 
+PERMOS is financially supported by the Swiss Federal Institute for the Environment (FOEN), the Federal Office of Meteorology and Climatology (MeteoSwiss) in the framework of GCOS Switzerland, and the Swiss Academy of Sciences (SCNAT).
+
+Related publications: 
+PERMOS 2024. Swiss Permafrost Bulletin 2023. Noetzli, J., and Pellet, C.(eds.). No 5, 25pp, doi:10.13093/permos-bull-2024.  
+
+Language: 
+English
+
+Data format: 
+ASCII text, zipped
+
+Data size: 
+38.6 MB
+
+Spatial coverage: 
+Swiss Alps, Lat (45.9,46.8), Lon (6.8,10.0)
+
+Temporal coverage: 
+1987 to 2023-09-30
+
+Temporal resolution: 
+daily-annual
+
+Instruments: 
+thermistor chains, miniature temperature loggers, electrical resistivity tomography, dGPS, total station
+
+Rights: Open access under requirement of correct citation according to the PERMOS Data Policy (https://www.permos.ch/fileadmin/Files/PERMOS_docs/PERMOS_DataPolicy_2023.pdf).
+
+Disclaimer:
+The data can be subject to errors and inaccuracies (such as e.g., gaps, measurement instabilities, thermistor drift, physical disturbances, changes in measurement setup), which were only partly filtered out. We strongly advice to perform quality checks when using the data and to contact PERMOS (office @ permos.ch) as well as the principal investigator and/or the responsible institution.
