@@ -5,7 +5,7 @@ metadata_schema_version = 1
 source_key = "Jones_Jones_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
+original_author = "jschwenk + Codex"
 last_substantive_update = "2026-05-20"
 source_dataset = '''
 Melissa Ward Jones and Benjamin Jones. (2025). Permafrost and Environmental

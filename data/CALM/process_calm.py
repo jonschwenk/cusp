@@ -5,7 +5,7 @@ metadata_schema_version = 1
 source_key = "CALM"
 release_clearance = "needs_review"
 permission_basis = "CC-BY-4.0"
-original_author = "Codex"
+original_author = "jschwenk + Codex"
 last_substantive_update = "2026-05-19"
 source_dataset = '''
 Streletskiy, Dmitry A; CALM; GTN-P; Wieczorek, Mareike; Heim,

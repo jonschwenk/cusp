@@ -5,7 +5,7 @@ metadata_schema_version = 1
 source_key = "Moore_et_al_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
+original_author = "jschwenk + Codex"
 last_substantive_update = "2026-05-20"
 source_dataset = '''
 Moore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair,

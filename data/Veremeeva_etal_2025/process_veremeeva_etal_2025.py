@@ -5,7 +5,7 @@ metadata_schema_version = 1
 source_key = "Veremeeva_etal_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jschwenk"
+original_author = "jschwenk + Codex"
 last_substantive_update = "2026-05-21"
 
 source_dataset = '''

@@ -3,7 +3,7 @@ metadata_schema_version = 1
 source_key = "Wang_2018"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Joel Rowland"
+original_author = "jschwenk + Codex"
 last_substantive_update = "2026-05-19"
 source_dataset = '''
 Kang Wang, Irina Overeem, Elchin Jafarov, Gary Clow, Vladimir Romanovsky,
