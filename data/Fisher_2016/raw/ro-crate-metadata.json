@@ -1,0 +1,214 @@
+{
+"@context": "https://w3id.org/ro/crate/1.2/context",
+"@graph": [
+{
+"@type": "CreativeWork",
+"@id": "ro-crate-metadata.json",
+"conformsTo": { "@id": "https://w3id.org/ro/crate/1.2" },
+"about": { "@id": "https://catalogue.ceh.ac.uk/id/36f4e380-d01d-44a7-8321-7a677e6996b2" }
+},
+{
+"@type":"Dataset",
+"name":"Extensive vegetation and soil surveys from multiple sites in boreal forests of subarctic Canada, 2013-2014",
+"@id": "https://catalogue.ceh.ac.uk/id/36f4e380-d01d-44a7-8321-7a677e6996b2",
+"identifier": {"@id": "https://doi.org/10.5285/36f4e380-d01d-44a7-8321-7a677e6996b2"},
+"creditText":"Williams, M., Estop-Aragones, C., Fisher, J.P., Murton, J.B., Phoenix, G.K., Hartley, I.P. (2020). Extensive vegetation and soil surveys from multiple sites in boreal forests of subarctic Canada, 2013-2014. NERC Environmental Information Data Centre. (Dataset). https://doi.org/10.5285/36f4e380-d01d-44a7-8321-7a677e6996b2",
+"hasPart": [
+{"@id":
+"data/Extensive_Vegetation_and_Soil_Data.csv"
+} ,
+{"@id":
+"supporting-documents/Extensive_Data_Supporting_Documentation.rtf"
+} ],
+"description":"The dataset contains a stratified survey of ecological and soil states at sites where fine scale patterns of covariation between vegetation and edaphic characteristics were recorded. Key data collection included leaf area index, moss and organic matter thickness, surface and deeper soil moisture. Data were collected at sites in the Yukon (2013) and Northwest Territories (2014), Canada.",
+"isAccessibleForFree": true,
+"datePublished":"2020-05-19",
+"keywords": [
+"boreal forest"
+,
+"Canada"
+,
+"leaf area index"
+,
+{"@type": "DefinedTerm","@id": "http://onto.nerc.ac.uk/CEHMD/topic/7","name": "Environmental survey" }
+,
+{"@type": "DefinedTerm","@id": "http://www.eionet.europa.eu/gemet/concept/11227","name": "organic matter","inDefinedTermSet": "https://www.eionet.europa.eu/gemet/" }
+,
+{"@type": "DefinedTerm","@id": "http://www.eionet.europa.eu/gemet/concept/7843","name": "soil","inDefinedTermSet": "https://www.eionet.europa.eu/gemet/" }
+,
+{"@type": "DefinedTerm","@id": "http://www.eionet.europa.eu/gemet/concept/7874","name": "soil moisture","inDefinedTermSet": "https://www.eionet.europa.eu/gemet/" }
+],
+"creator": [
+{"@id": "https://orcid.org/0000-0001-6117-5208"},
+{"@id": "#creator1"},
+{"@id": "#creator2"},
+{"@id": "#creator3"},
+{"@id": "#creator4"},
+{"@id": "#creator5"}
+],
+"temporalCoverage":[
+"2013-01-01/2014-12-31" ],
+"spatialCoverage": [ {"@id": "#bbox0"}],
+"license": {"@id": "#oglLicence"},
+"distribution": [ {"@id": "#distribution0"}],
+"publisher":{"@id":"https://ror.org/04xw4m193"},
+"provider" : {"@id":"https://ror.org/04xw4m193"},
+"includedInDataCatalog":{ "@id": "#eidc-dataCatalogue"}
+},
+{
+"@id": "#eidc-dataCatalogue",
+"@type":"DataCatalog",
+"name":"Environmental Information Data Centre",
+"alternateName":"EIDC",
+"url":"https://catalogue.ceh.ac.uk/eidc/documents"
+},
+{
+"@id": "https://ror.org/04xw4m193",
+"@type":"Organization",
+"name":"NERC EDS Environmental Information Data Centre",
+"email": "info@eidc.ac.uk"
+}
+,{
+"@id": "#oglLicence",
+"@type": "CreativeWork",
+"name": "Open Government Licence v3",
+"alternateName":"OGL-UK-3.0",
+"license": "https://spdx.org/licenses/OGL-UK-3.0.html"
+}
+,{
+"@id": "https://doi.org/10.5285/36f4e380-d01d-44a7-8321-7a677e6996b2",
+"@type":"PropertyValue",
+"propertyID": "https://registry.identifiers.org/registry/doi",
+"value": "10.5285/36f4e380-d01d-44a7-8321-7a677e6996b2",
+"url": "https://doi.org/10.5285/36f4e380-d01d-44a7-8321-7a677e6996b2"
+}
+, {
+"@id": "#bbox0",
+"@type":"Place",
+"geo": {
+"@id": "#geoshape0"
+}
+},
+{
+"@id": "#geoshape0",
+"@type": "GeoShape",
+"box":"-140.8 59.221, -117.137 69.78"
+}
+,
+{
+"@id": "https://orcid.org/0000-0001-6117-5208",
+"@type": "Person",
+"name": "Williams, M."
+, "familyName": "Williams"
+, "givenName": "Mathew"
+,"email": "mat.williams@ed.ac.uk"
+,"affiliation":{
+"@id": "https://ror.org/01nrxwf90"
+}
+},
+{
+"@id": "#creator1",
+"@type": "Person",
+"name": "Estop-Aragones, C."
+, "familyName": "Estop-Aragones"
+, "givenName": "C."
+,"email": "cristian.estop@uni-muenster.de"
+,"affiliation":{
+"@id": "https://ror.org/03yghzc09"
+}
+},
+{
+"@id": "#creator2",
+"@type": "Person",
+"name": "Fisher, J.P."
+, "familyName": "Fisher"
+, "givenName": "J.P."
+,"email": "j.p.fisher85@gmail.com"
+,"affiliation":{
+"@id": "https://ror.org/05krs5044"
+}
+},
+{
+"@id": "#creator3",
+"@type": "Person",
+"name": "Murton, J.B."
+, "familyName": "Murton"
+, "givenName": "J.B."
+,"email": "j.b.murton@sussex.ac.uk"
+,"affiliation":{
+"@id": "https://ror.org/00ayhx656"
+}
+},
+{
+"@id": "#creator4",
+"@type": "Person",
+"name": "Phoenix, G.K."
+, "familyName": "Phoenix"
+, "givenName": "G.K."
+,"email": "g.phoenix@sheffield.ac.uk"
+,"affiliation":{
+"@id": "https://ror.org/05krs5044"
+}
+},
+{
+"@id": "#creator5",
+"@type": "Person",
+"name": "Hartley, I.P."
+, "familyName": "Hartley"
+, "givenName": "I.P."
+,"email": "I.Hartley@exeter.ac.uk"
+,"affiliation":{
+"@id": "https://ror.org/03yghzc09"
+}
+}
+, {
+"@id":
+"data/Extensive_Vegetation_and_Soil_Data.csv"
+,"name": "Extensive_Vegetation_and_Soil_Data.csv","@type": "File"
+,"encodingFormat": "text/csv"
+,"sha256": "105f253ede4ec56a4ebcc19c33c9eb539fa63891c374961189112256ae7aa370"
+,"lastModified": "2020-05-19T07:34:09"
+,"bytes": 14282
+,"contentUrl": "data/Extensive_Vegetation_and_Soil_Data.csv"
+}
+, {
+"@id":
+"supporting-documents/Extensive_Data_Supporting_Documentation.rtf"
+,"name": "Extensive_Data_Supporting_Documentation.rtf","@type": "File"
+,"sha256": "2cf82318b82c770e756c6afeb146ab1d6c272a1d5d2afd865265b8e83f8a9963"
+,"lastModified": "2020-05-19T07:34:14"
+,"bytes": 133395
+,"contentUrl": "supporting-documents/Extensive_Data_Supporting_Documentation.rtf"
+}
+, {
+"@id": "#distribution0",
+"@type":"DataDownload",
+"contentUrl":"https://data-package.ceh.ac.uk/data/36f4e380-d01d-44a7-8321-7a677e6996b2"
+,"encodingFormat":"application/zip"
+}
+, {
+"@id": "https://ror.org/01nrxwf90",
+"@type": "Organization",
+"name": "University of Edinburgh",
+"identifier": "https://ror.org/01nrxwf90"
+},
+{
+"@id": "https://ror.org/03yghzc09",
+"@type": "Organization",
+"name": "University of Exeter",
+"identifier": "https://ror.org/03yghzc09"
+},
+{
+"@id": "https://ror.org/05krs5044",
+"@type": "Organization",
+"name": "University of Sheffield",
+"identifier": "https://ror.org/05krs5044"
+},
+{
+"@id": "https://ror.org/00ayhx656",
+"@type": "Organization",
+"name": "University of Sussex",
+"identifier": "https://ror.org/00ayhx656"
+}
+]
+}
