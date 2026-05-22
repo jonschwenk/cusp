@@ -3,7 +3,7 @@ metadata_schema_version = 1
 source_key = "Pastick"
 release_clearance = "approved"
 permission_basis = "emailed_approval"
-last_substantive_update = "2026-04-10"
+last_substantive_update = "2026-05-22"
 source_dataset = '''
 Pastick, Neal. Unpublished Alaska pedon and near-surface permafrost data
 compiled from multiple sources, including NRCS-derived products represented in
@@ -13,6 +13,7 @@ processing_assumptions = [
   "YFlats_NRCS pfrost depth is treated as both pf_depth and thaw_depth when pf_observed = 1.",
   "WesternAKSitePhoriz permafrost presence is inferred from horizon names containing frozen-soil suffixes, with the shallowest frozen horizon top used as pf_depth.",
   "WesternAKSitePhoriz obs_limit is taken as the deepest horizon bottom for each pedon, and organic thickness is derived from O-horizon bottoms when present.",
+  "WesternAKSitePhoriz/numeric-ID pit rows that overlap with NCSS_Lab_Data_Mart are removed in favor of NCSS: same pf_observed status and within 1 m, regardless of Pastick's update-like date fields or small depth/profile-bottom differences.",
   "The remaining site shapefiles are harmonized through column-name standardization, records with unrecognized pf_observed encodings are dropped, and source-native site identifiers are preserved where available.",
   "method is assigned explicitly for YFlats_NRCS and WesternAKSitePhoriz, and set to unknown for the remaining shapefiles when no reliable method field is available.",
 ]
@@ -27,14 +28,25 @@ manual_steps = []
 known_limitations = [
   "This source is a compiled unpublished dataset with heterogeneous schemas and uneven metadata across component files.",
   "Small coordinate precision differences can appear across rebuilds because several component shapefiles are reprojected before export.",
+  "Some NCSS-overlapping WesternAKSitePhoriz rows have different depth/profile-bottom values between Pastick and NCSS; CUSP keeps NCSS as the preferred source system for these pedons.",
 ]
-external_dependencies = []
+external_dependencies = [
+  "data/NCSS_Lab_Data_Mart/processed_ncss_lab_data_mart.csv is required for source-specific NCSS overlap filtering.",
+]
 notes = "Current source key is retained for repo continuity but should eventually be renamed to NRCS_Alaska."
 """
 import geopandas as gpd
 import pandas as pd
 import numpy as np
 import os
+import math
+import sys
+from pathlib import Path
+
+repo_root = Path(__file__).resolve().parents[2]
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+
 from cusp.data_utils import _ROOT_DIR
 from cusp import data_utils
 
@@ -71,6 +83,62 @@ def normalize_pf_observed(values):
             normalized.append(np.nan)
 
     return pd.Series(normalized, index=values.index)
+
+
+def distance_m(lat1, lon1, lat2, lon2):
+    """Return haversine distance in meters between two WGS84 points."""
+
+    radius = 6371008.8
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    return radius * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+
+def remove_ncss_overlaps(df, threshold_m=1.0):
+    """Remove Pastick numeric-ID pit rows represented by NCSS_Lab_Data_Mart."""
+
+    ncss_path = _ROOT_DIR / "data" / "NCSS_Lab_Data_Mart" / "processed_ncss_lab_data_mart.csv"
+    if not ncss_path.exists():
+        raise FileNotFoundError(
+            f"{ncss_path} is required for Pastick NCSS-overlap filtering."
+        )
+
+    ncss = pd.read_csv(
+        ncss_path,
+        usecols=["lat", "lon", "pf_observed"],
+        low_memory=False,
+    ).dropna(subset=["lat", "lon", "pf_observed"])
+    ncss["pf_observed"] = pd.to_numeric(ncss["pf_observed"], errors="coerce").astype("Int64")
+    ncss = ncss.dropna(subset=["pf_observed"])
+
+    candidate_mask = (
+        df["method"].eq("pit")
+        & df["site_id"].astype(str).str.fullmatch(r"\d+")
+        & df["lat"].notna()
+        & df["lon"].notna()
+        & df["pf_observed"].notna()
+    )
+    remove_index = set()
+    candidates = df.loc[candidate_mask, ["lat", "lon", "pf_observed"]]
+
+    for index, row in candidates.iterrows():
+        nearby = ncss[
+            ncss["pf_observed"].eq(int(row["pf_observed"]))
+            & ncss["lat"].between(row["lat"] - 0.001, row["lat"] + 0.001)
+            & ncss["lon"].between(row["lon"] - 0.001, row["lon"] + 0.001)
+        ]
+        if nearby.empty:
+            continue
+        for _, ncss_row in nearby.iterrows():
+            if distance_m(row["lat"], row["lon"], ncss_row["lat"], ncss_row["lon"]) <= threshold_m:
+                remove_index.add(index)
+                break
+
+    if remove_index:
+        print(f"Removed {len(remove_index)} Pastick rows already represented by NCSS_Lab_Data_Mart.")
+    return df.drop(index=list(remove_index)).copy()
 
 # YFlats_NRCS
 
@@ -236,6 +304,7 @@ final = pd.concat(all_dfs)
 final.loc[final['pf_observed'] == 0, 'pf_depth'] = np.nan
 final.loc[final['obs_limit'] == 0, 'obs_limit'] = np.nan
 final = final[~((final['lat'] == 0) & (final['lon'] == 0))].copy()
+final = remove_ncss_overlaps(final)
 outfile = "processed_" + source + ".csv"
 final.to_csv(_ROOT_DIR / "data" / source / outfile, index=False)
 

@@ -37,3 +37,8 @@ data/aggregated_30m_qc_flags.csv
 data/site_readwrite_info.csv
 data/Summary_CUSPsources.docx
 data/_write_probe.csv
+
+# Local NCSS Lab Data Mart exploration artifacts
+data/NCSS_Lab_Data_Mart/ncss_labdatagpkg.zip
+data/NCSS_Lab_Data_Mart/ncss_labdata.gpkg
+data/NCSS_Lab_Data_Mart/dry_run/
