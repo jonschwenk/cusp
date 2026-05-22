@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:systemMetadata xmlns:ns2="http://ns.dataone.org/service/types/v1" xmlns:ns3="http://ns.dataone.org/service/types/v2.0">
+    <serialVersion>1</serialVersion>
+    <identifier>doi:10.18739/A22J6848J</identifier>
+    <formatId>eml://ecoinformatics.org/eml-2.1.1</formatId>
+    <size>44683</size>
+    <checksum algorithm="SHA-1">8393049eb87ca1cfd0fec29fa96d5e6b27aa3dff</checksum>
+    <submitter>http://orcid.org/0000-0003-1070-9585</submitter>
+    <rightsHolder>http://orcid.org/0000-0003-1070-9585</rightsHolder>
+    <accessPolicy>
+        <allow>
+            <subject>public</subject>
+            <permission>read</permission>
+        </allow>
+        <allow>
+            <subject>http://orcid.org/0000-0001-8851-7386</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+        <allow>
+            <subject>CN=arctic-data-admins,DC=dataone,DC=org</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+        <allow>
+            <subject>http://orcid.org/0000-0002-3010-2994</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+    </accessPolicy>
+    <replicationPolicy replicationAllowed="false" numberReplicas="0">
+        <blockedMemberNode>urn:node:KNB</blockedMemberNode>
+        <blockedMemberNode>urn:node:mnUCSB1</blockedMemberNode>
+    </replicationPolicy>
+    <obsoletes>urn:uuid:1eb9243d-0df3-45e2-97cc-bc4c0dabc5fc</obsoletes>
+    <archived>false</archived>
+    <dateUploaded>2020-04-27T18:51:15.982+00:00</dateUploaded>
+    <dateSysMetadataModified>2020-04-27T18:51:22.004+00:00</dateSysMetadataModified>
+    <originMemberNode>urn:node:ARCTIC</originMemberNode>
+    <authoritativeMemberNode>urn:node:ARCTIC</authoritativeMemberNode>
+    <fileName>Thaw_depth_and_organic_layer_depth_from_Alaska.xml</fileName>
+</ns3:systemMetadata>

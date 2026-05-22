@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema" packageId="doi:10.18739/A22J6848J" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 eml.xsd" system="https://arcticdata.io">
+  <dataset>
+    <alternateIdentifier>ViPER15_TD_OLD</alternateIdentifier>
+    <title>Thaw depth and organic layer depth from Alaska borehole sites, 2015, 2017, 2018 (ViPER Project)</title>
+    <creator id="2879896659669503">
+      <individualName>
+        <givenName>Susan</givenName>
+        <surName>Natali</surName>
+      </individualName>
+      <organizationName>Woods Hole Research Center</organizationName>
+      <positionName>Associate Scientist</positionName>
+      <address>
+        <deliveryPoint>149 Woods Hole Road</deliveryPoint>
+        <city>Falmouth</city>
+        <administrativeArea>Massachusetts</administrativeArea>
+        <postalCode>02540</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">5084441560</phone>
+      <electronicMailAddress>snatali@whrc.org</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-3010-2994</userId>
+    </creator>
+    <creator id="3849408350198295">
+      <individualName>
+        <givenName>Alexander</givenName>
+        <surName>Kholodov</surName>
+      </individualName>
+    </creator>
+    <creator id="7593161448801724">
+      <individualName>
+        <givenName>Michael</givenName>
+        <surName>Loranty</surName>
+      </individualName>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8851-7386</userId>
+    </creator>
+    <metadataProvider id="3385508055040323">
+      <individualName>
+        <givenName>Susan</givenName>
+        <surName>Natali</surName>
+      </individualName>
+      <organizationName>Woods Hole Research Center</organizationName>
+      <positionName>Associate Scientist</positionName>
+      <address>
+        <deliveryPoint>149 Woods Hole Road</deliveryPoint>
+        <city>Falmouth</city>
+        <administrativeArea>Massachusetts</administrativeArea>
+        <postalCode>02540</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">5084441560</phone>
+      <electronicMailAddress>snatali@whrc.org</electronicMailAddress>
+    </metadataProvider>
+    <associatedParty id="4538393320832406">
+      <individualName>
+        <givenName>Mike</givenName>
+        <surName>Loranty</surName>
+      </individualName>
+      <organizationName>Colgate University</organizationName>
+      <role>coPrincipalInvestigator</role>
+    </associatedParty>
+    <associatedParty id="9374148139606612">
+      <individualName>
+        <givenName>Alexander</givenName>
+        <surName>Kholodov</surName>
+      </individualName>
+      <organizationName>University of Alaska Fairbanks</organizationName>
+      <role>coPrincipalInvestigator</role>
+    </associatedParty>
+    <pubDate>2016-12-20</pubDate>
+    <abstract>
+      <para>Realistic representations of heat exchange in permafrost ecosystems are necessary for accurate predictive understanding of the permafrost carbon feedback under future climate scenarios.The objective of this project is to examine the impacts of vegetation and ecosystem properties on active layer and permafrost thermal dynamics in order to better understand the vulnerability of permafrost to climate change.  Datasets associated with this project include soil, vegetation, and ground temperature data from permafrost borehole sites in Alaska and NE Siberia.  This dataset includes thaw depth and organic layer depth from borehole sites in Alaska measured in July-August 2015, September 2017, and August-September 2018.</para>
+    </abstract>
+    <keywordSet>
+      <keyword>thaw depth</keyword>
+      <keyword>organic layer depth</keyword>
+      <keyword>permafrost</keyword>
+      <keyword>borehole</keyword>
+      <keyword>Alaska</keyword>
+      <keywordThesaurus>None</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This work is licensed under the Creative Commons Attribution 4.0 International License.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.</para>
+    </intellectualRights>
+    <distribution>
+      <offline>
+        <mediumName>digital </mediumName>
+      </offline>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Eastern Alaska</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-150.61896</westBoundingCoordinate>
+          <eastBoundingCoordinate>-145.47012</eastBoundingCoordinate>
+          <northBoundingCoordinate>70.37434</northBoundingCoordinate>
+          <southBoundingCoordinate>62.16672</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <geographicCoverage>
+        <geographicDescription>Seward Peninsula, Alaska</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-165.29646</westBoundingCoordinate>
+          <eastBoundingCoordinate>-164.82681</eastBoundingCoordinate>
+          <northBoundingCoordinate>65.22961</northBoundingCoordinate>
+          <southBoundingCoordinate>64.50789</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <singleDateTime>
+          <calendarDate>2015-07-03</calendarDate>
+        </singleDateTime>
+      </temporalCoverage>
+    </coverage>
+    <contact id="2477342086449322">
+      <individualName>
+        <givenName>Susan</givenName>
+        <surName>Natali</surName>
+      </individualName>
+      <organizationName>Woods Hole Research Center</organizationName>
+      <positionName>Associate Scientist</positionName>
+      <address>
+        <deliveryPoint>149 Woods Hole Road</deliveryPoint>
+        <city>Falmouth</city>
+        <administrativeArea>Massachusetts</administrativeArea>
+        <postalCode>02540</postalCode>
+        <country>United States</country>
+      </address>
+      <phone phonetype="voice">5084441560</phone>
+      <electronicMailAddress>snatali@whrc.org</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <section>
+            <title>Measure of thaw depth using metal thaw probe and organic layer depth by visual observation</title>
+            <para>Thaw depth was measured using a metal thaw probe, which was inserted into the soil until there was resistance from frozen ground.  Thaw depth is reported as the distance from the moss surface to top of frozen ground.
+
+Organic layer depth was measured by cutting into the soil with serrated knife and measuring the distance from the bottom of green moss layer to the organic-mineral boundary, as determined by visual observation.</para>
+          </section>
+        </description>
+      </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>Data were collected from Alaska permafrost borehole sites in July and August of 2015, September 2017, and August and September 2018.</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>At each site, in 2015 we established three 20 meter long transects that were spaced 20 m apart and located adjacent to the permafrost boreholes. In 2017 and 2018 we sampled along a 50 meter or 100 meter transect at most sites, unless otherwise indicated.  Thaw depth was measured at 1 m intervals along the transect. Organic layer depths were measured at approximately 5 meter intervals.</para>
+        </samplingDescription>
+      </sampling>
+    </methods>
+    <project>
+      <title>Collaborative Research:  Vegetation And Ecosystem Impacts On Permafrost Vulnerability</title>
+      <personnel>
+        <individualName>
+          <givenName>Susan M</givenName>
+          <surName>Natali</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Michael</givenName>
+          <surName>Loranty</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Alexander</givenName>
+          <surName>Kholodov</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <funding>
+        <para>NSF 1417700</para>
+        <para>NSF 1417745</para>
+        <para>NSF 1417908</para>
+      </funding>
+    </project>
+    <dataTable id="urn-uuid-059c6521-4fc8-4a67-aecb-ccf93aec9dd1">
+      <entityName>ViPER_TD_2015.csv</entityName>
+      <entityDescription>Thaw depth transect data</entityDescription>
+      <physical>
+        <objectName>ViPER_TD_2015.csv</objectName>
+        <size unit="bytes">20843</size>
+        <authentication method="SHA1">dddb6dc3d88264f6b9d725462427011f088cfce3</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:059c6521-4fc8-4a67-aecb-ccf93aec9dd1</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TD</attributeName>
+          <attributeLabel>Thaw depth</attributeLabel>
+          <attributeDefinition>Thaw depth is reported as the distance from the moss surface to top of frozen ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeLabel>Notes</attributeLabel>
+          <attributeDefinition>Some values have the note "trough" associated with them</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>no notes taken</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-2c1be479-e402-4a53-b7bf-d0bb31385b3f">
+      <entityName>ViPER_Coordinates_2015.csv</entityName>
+      <entityDescription>Location of Study</entityDescription>
+      <physical>
+        <objectName>ViPER_Coordinates_2015.csv</objectName>
+        <size unit="bytes">9070</size>
+        <authentication method="SHA1">0a69f8aed237ff1705c5cc4b6f2281095e646a0a</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2c1be479-e402-4a53-b7bf-d0bb31385b3f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeLabel>Latitude</attributeLabel>
+          <attributeDefinition>Latitudinal Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Long</attributeName>
+          <attributeLabel>Longitude</attributeLabel>
+          <attributeDefinition>Longitude Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-2274099c-27ef-481b-ab45-d97d990daed5">
+      <entityName>ViPER_TD_OLD_sample_dates_2015_2017_2018.csv</entityName>
+      <entityDescription>sample dates</entityDescription>
+      <physical>
+        <objectName>ViPER_TD_OLD_sample_dates_2015_2017_2018.csv</objectName>
+        <size unit="bytes">881</size>
+        <authentication method="MD5">fcb23599bbaab839e04a6c94546182fc</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2274099c-27ef-481b-ab45-d97d990daed5</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site.Number</attributeName>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Site.name</attributeName>
+          <attributeDefinition>Site name</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>X2015.date</attributeName>
+          <attributeDefinition>2015 date</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>X2017.date</attributeName>
+          <attributeDefinition>2015 date</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>site was not sampled this year</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>X2018.date</attributeName>
+          <attributeDefinition>2015 date</attributeDefinition>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+            </dateTime>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>site was not sampled this year</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-c291b19d-6919-438a-8dc9-44e514f4aa73">
+      <entityName>ViPER_OLD_2017_2018.csv</entityName>
+      <entityDescription>Organic layer depth at the Alaska permafrost borehole sites. This file updates and correct a previous version.
+Organic layer depth was measured at Sites 2, 4 and 21 in 2017, and at Sites 5-8, 20 and 24 in 2018.
+Organic layer depths were measured in multiples years because the ground was not thawed deeply enough to measure in 2015.  We did not repeat sampling at any of the sites; these data for all years are considered a single data file, rather than a time series.</entityDescription>
+      <physical>
+        <objectName>ViPER_OLD_2017_2018.csv</objectName>
+        <size unit="bytes">2456</size>
+        <authentication method="MD5">6e7b961c05677e22ce9887f84b5fb6f4</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c291b19d-6919-438a-8dc9-44e514f4aa73</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>OLD</attributeName>
+          <attributeDefinition>Thaw depth is reported as the distance from the moss surface to top of frozen ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>OLD was deeper than 2018 thaw depth; see 2018 thaw depth file for minimum organic layer depth</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeDefinition>When thaw depth was greater than the length of the probe, the value recorded is the maximum probe length, which is recorded in the Notes column.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>When NA is noted in the OLD column, this signifies that the organic layer depth was greater than the depth to frozen soil. See the associated thaw depth files for 2017 and 2018 to determine minimum organic layer depths.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-5ccd3638-8a04-4af8-b8b4-a9ea2fac7dee">
+      <entityName>ViPER_TD_2018.csv</entityName>
+      <entityDescription>Thaw depth measured in 2018 at the Alaska permafrost borehole sites.</entityDescription>
+      <physical>
+        <objectName>ViPER_TD_2018.csv</objectName>
+        <size unit="bytes">22787</size>
+        <authentication method="MD5">a7728671b9416b4844b615752f15e6ec</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5ccd3638-8a04-4af8-b8b4-a9ea2fac7dee</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TD</attributeName>
+          <attributeLabel>Thaw depth</attributeLabel>
+          <attributeDefinition>Thaw depth is reported as the distance from the moss surface to top of frozen ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>measurement was not collected at that point, likely because of an obstruction such as a rock.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeLabel>Notes</attributeLabel>
+          <attributeDefinition>Some values have the note "trough" associated with them. When thaw depth was greater than the length of the probe, the value recorded is the maximum probe length, which is recorded in the Notes column.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>no notes taken</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-a5833ed0-eafb-4f8f-9eab-9acf12f1b3fa">
+      <entityName>ViPER_Coordinates_2018.csv</entityName>
+      <entityDescription>Sampling coordinates for thaw depth and organic layer depth measured in 2018 at the Alaska permafrost borehole sites.</entityDescription>
+      <physical>
+        <objectName>ViPER_Coordinates_2018.csv</objectName>
+        <size unit="bytes">1717</size>
+        <authentication method="MD5">13f5cdedba61848688e2c2c161ec9253</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:a5833ed0-eafb-4f8f-9eab-9acf12f1b3fa</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>Transect coordinates were not recorded in 2018 at sites 20, 22, 23, and 24. The transect was located within 50m of the permafrost borehole, and an approximate coordinate is included on the coordinate file.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeLabel>Latitude</attributeLabel>
+          <attributeDefinition>Latitudinal Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Long</attributeName>
+          <attributeLabel>Longitude</attributeLabel>
+          <attributeDefinition>Longitude Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-9179c57c-d848-4e03-84d8-f1ecb26d50c2">
+      <entityName>ViPER_TD_2017.csv</entityName>
+      <entityDescription>Thaw depth measured in 2017 at the Alaska permafrost borehole sites.</entityDescription>
+      <physical>
+        <objectName>ViPER_TD_2017.csv</objectName>
+        <size unit="bytes">18321</size>
+        <authentication method="MD5">8d0c8cba97a6ae39d504c4cf5c430c93</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:9179c57c-d848-4e03-84d8-f1ecb26d50c2</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TD</attributeName>
+          <attributeLabel>Thaw depth</attributeLabel>
+          <attributeDefinition>Thaw depth is reported as the distance from the moss surface to top of frozen ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>measurement was not collected at that point, likely because of an obstruction such as a rock.</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeLabel>Notes</attributeLabel>
+          <attributeDefinition>Some values have the note "trough" associated with them. 
+When thaw depth was greater than the length of the probe, the value recorded is the maximum probe length.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>""</code>
+            <codeExplanation>no notes taken</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-797c3594-3d48-4e6a-993d-1312f2b9605d">
+      <entityName>ViPER_OLD_2015_updated.csv</entityName>
+      <entityDescription>This file was updated on 1/3/2019 to remove some previously reported organic layer depth (OLD) values that reflected thaw depths rather than OLD. Values were listed as NA when there was no thawed mineral layer present at the time sampled in 2015. All sites were resampled in 2017 and 2018 to fill in the OLD dataset.
+Organic layer depths were measured in multiples years because the ground was not thawed deeply enough to measure in 2015.  We did not repeat sampling at any of the sites; these data for all years are considered a single data file, rather than a time series.</entityDescription>
+      <physical>
+        <objectName>ViPER_OLD_2015_updated.csv</objectName>
+        <size unit="bytes">3671</size>
+        <authentication method="MD5">e0406e8ac1950356a700085d89e33085</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:797c3594-3d48-4e6a-993d-1312f2b9605d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>OLD</attributeName>
+          <attributeDefinition>Thaw depth is reported as the distance from the moss surface to top of frozen ground</attributeDefinition>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>"NA"</code>
+            <codeExplanation>NA represents locations not sampled in that year because the ground wasn't thawed deeply enough to measure organic layer depth (i.e., we did not reach mineral soil in the thawed ground). </codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="urn-uuid-528657a3-9873-44e9-91bf-7fde60a93552">
+      <entityName>ViPER_Coordinates_2017.csv</entityName>
+      <entityDescription>Sampling coordinates for thaw depth and organic layer depth measured in 2017 at the Alaska permafrost borehole sites.</entityDescription>
+      <physical>
+        <objectName>ViPER_Coordinates_2017.csv</objectName>
+        <size unit="bytes">1687</size>
+        <authentication method="MD5">c0a838fa0a299b7dd227880d17a1cb94</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:528657a3-9873-44e9-91bf-7fde60a93552</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>Site</attributeName>
+          <attributeLabel>Site</attributeLabel>
+          <attributeDefinition>Site number, values are one through twenty four</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Site number, values are one through twenty four</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Transect</attributeName>
+          <attributeLabel>Transect</attributeLabel>
+          <attributeDefinition>Three twenty meter long transects were conducted per site</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Three twenty meter long transects were conducted per site</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Location</attributeName>
+          <attributeLabel>Location</attributeLabel>
+          <attributeDefinition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</attributeDefinition>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Thaw depth samples were taken along 20m transects. Values represent the beginning and ending of the transects.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Lat</attributeName>
+          <attributeLabel>Latitude</attributeLabel>
+          <attributeDefinition>Latitudinal Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Long</attributeName>
+          <attributeLabel>Longitude</attributeLabel>
+          <attributeDefinition>Longitude Coordinate</attributeDefinition>
+          <measurementScale>
+            <interval>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </interval>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:systemMetadata xmlns:ns2="http://ns.dataone.org/service/types/v1" xmlns:ns3="http://ns.dataone.org/service/types/v2.0">
+    <serialVersion>0</serialVersion>
+    <identifier>urn:uuid:9179c57c-d848-4e03-84d8-f1ecb26d50c2</identifier>
+    <formatId>text/csv</formatId>
+    <size>18321</size>
+    <checksum algorithm="MD5">8d0c8cba97a6ae39d504c4cf5c430c93</checksum>
+    <submitter>http://orcid.org/0000-0002-3010-2994</submitter>
+    <rightsHolder>http://orcid.org/0000-0002-3010-2994</rightsHolder>
+    <accessPolicy>
+        <allow>
+            <subject>CN=arctic-data-admins,DC=dataone,DC=org</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+        <allow>
+            <subject>public</subject>
+            <permission>read</permission>
+        </allow>
+    </accessPolicy>
+    <replicationPolicy replicationAllowed="false" numberReplicas="0"/>
+    <archived>false</archived>
+    <dateUploaded>2020-02-04T17:54:13.213+00:00</dateUploaded>
+    <dateSysMetadataModified>2020-04-27T18:51:14.170+00:00</dateSysMetadataModified>
+    <originMemberNode>urn:node:ARCTIC</originMemberNode>
+    <authoritativeMemberNode>urn:node:ARCTIC</authoritativeMemberNode>
+    <fileName>ViPER_TD_2017.csv</fileName>
+</ns3:systemMetadata>

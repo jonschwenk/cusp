@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:systemMetadata xmlns:ns2="http://ns.dataone.org/service/types/v1" xmlns:ns3="http://ns.dataone.org/service/types/v2.0">
+    <serialVersion>0</serialVersion>
+    <identifier>urn:uuid:a5833ed0-eafb-4f8f-9eab-9acf12f1b3fa</identifier>
+    <formatId>text/csv</formatId>
+    <size>1717</size>
+    <checksum algorithm="MD5">13f5cdedba61848688e2c2c161ec9253</checksum>
+    <submitter>http://orcid.org/0000-0002-3010-2994</submitter>
+    <rightsHolder>http://orcid.org/0000-0002-3010-2994</rightsHolder>
+    <accessPolicy>
+        <allow>
+            <subject>CN=arctic-data-admins,DC=dataone,DC=org</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+        <allow>
+            <subject>public</subject>
+            <permission>read</permission>
+        </allow>
+    </accessPolicy>
+    <replicationPolicy replicationAllowed="false" numberReplicas="0"/>
+    <archived>false</archived>
+    <dateUploaded>2020-02-04T18:12:01.756+00:00</dateUploaded>
+    <dateSysMetadataModified>2020-04-27T18:51:14.788+00:00</dateSysMetadataModified>
+    <originMemberNode>urn:node:ARCTIC</originMemberNode>
+    <authoritativeMemberNode>urn:node:ARCTIC</authoritativeMemberNode>
+    <fileName>ViPER_Coordinates_2018.csv</fileName>
+</ns3:systemMetadata>

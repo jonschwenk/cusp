@@ -1,0 +1,16 @@
+fd2be58b3439e109525975d702644f05 metadata/sysmeta/sysmeta-urn_uuid_2c1be479-e402-4a53-b7bf-d0bb31385b3f.xml
+37fcbd734ac0beae8bc52213f21f59f0 metadata/sysmeta/sysmeta-urn_uuid_9179c57c-d848-4e03-84d8-f1ecb26d50c2.xml
+dedc01406e84b03a6e08630459ceba30 metadata/sysmeta/sysmeta-urn_uuid_a5833ed0-eafb-4f8f-9eab-9acf12f1b3fa.xml
+0f8fee91d8e426da65acdaa039e81265 metadata/sysmeta/sysmeta-urn_uuid_059c6521-4fc8-4a67-aecb-ccf93aec9dd1.xml
+ee67558915cab22ce9e9227fcacb79da metadata/sysmeta/sysmeta-urn_uuid_528657a3-9873-44e9-91bf-7fde60a93552.xml
+a6545ae558e7284390291e5fbff6020d metadata/sysmeta/sysmeta-doi_10.18739_A22J6848J.xml
+be24554e18bec1fd72ff3d6bd6fc921a metadata/sysmeta/sysmeta-urn_uuid_797c3594-3d48-4e6a-993d-1312f2b9605d.xml
+1a4d26087a2b7fc429490a8cb32a8cd6 metadata/sysmeta/sysmeta-resource_map_doi_10.18739_A22J6848J.xml
+645095ce1c8bc7faa32d4b019e706a6d metadata/science-metadata.xml
+eaa2c609ff6371712f623f5531945b44 bagit.txt
+44b50210658501b780ece259c9a4ce73 manifest-md5.txt
+4b152ff54310f01280cfb1e6680f2078 metadata/sysmeta/sysmeta-urn_uuid_5ccd3638-8a04-4af8-b8b4-a9ea2fac7dee.xml
+c95c633198a7332ec1fcb528b94cd692 metadata/oai-ore.xml
+9f2bfcedff144ca6d2bca42f2b4fba56 bag-info.txt
+a979cdec6acd9cd62bb0a5d00331142d metadata/sysmeta/sysmeta-urn_uuid_2274099c-27ef-481b-ab45-d97d990daed5.xml
+72fc56d685904c0019becfa954c298d0 metadata/sysmeta/sysmeta-urn_uuid_c291b19d-6919-438a-8dc9-44e514f4aa73.xml

@@ -4,7 +4,7 @@ source_key = "Talucci_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jrowland"
-last_substantive_update = "2026-05-18"
+last_substantive_update = "2026-05-21"
 source_dataset = '''
 Talucci, Anna; Loranty, Michael; Holloway, Jean; Rogers, Brendan; Alexander,
 Heather; Baillargeon, Natalie; Baltzer, Jennifer; Berner, Logan; and others.
@@ -13,6 +13,7 @@ sites in northern high latitudes. Arctic Data Center.
 doi:10.18739/A2RN3092P
 '''
 processing_assumptions = [
+  "Natali Bonanza Creek rows already represented by the direct ViPER_2018 source are removed before FireALT aggregation: BCB 2015 and BCU 2015, 2017, and 2018.",
   "Where both msrType = thaw and msrType = active exist for the same grouped site, only the active records are retained.",
   "Repeated measurements at the same lat/lon, burn status, and time-since-fire grouping are summarized using mean estimated thaw depth rather than mean measured thaw depth.",
   "pf_observed is fixed to 1 and pf_depth is set equal to the estimated thaw depth used for aggregation.",
@@ -30,6 +31,7 @@ known_limitations = [
   "The main processed thaw_depth field is based on estimated rather than measured depth for multi-observation groups.",
   "Unburned control rows have no numeric time-since-fire value, so timeSinceFire is blank after ingestion.",
   "method is exported as unknown because the source combines modeled and measured information without one clean field that maps to the CUSP method vocabulary.",
+  "CUSP prefers the direct ViPER_2018 thaw-probe observations over FireALT's synthesized Natali Bonanza Creek rows where the two overlap.",
 ]
 external_dependencies = []
 notes = ""
@@ -41,6 +43,13 @@ notes = ""
 import pandas as pd
 import numpy as np
 import os
+import sys
+from pathlib import Path
+
+repo_root = Path(__file__).resolve().parents[2]
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+
 # Define path to import data_utils
 from cusp.data_utils import _ROOT_DIR
 from cusp import data_utils
@@ -60,6 +69,16 @@ df['estDoy'] = pd.to_numeric(df['estDoy'], errors='coerce')
 df['year'] = pd.to_numeric(df['year'], errors='coerce')
 df['msrDepth'] = pd.to_numeric(df['msrDepth'], errors='coerce')
 df['msrDoy'] = pd.to_numeric(df['msrDoy'], errors='coerce')
+
+# Remove FireALT rows that are now represented by the direct ViPER_2018 ingest.
+natali_bonanza_viper_overlap = (
+    (df["submitNm"].astype(str).str.lower().eq("natali") | df["lastNm"].astype(str).str.lower().eq("natali"))
+    & (
+        (df["siteId"].eq("BCB") & df["year"].eq(2015))
+        | (df["siteId"].eq("BCU") & df["year"].isin([2015, 2017, 2018]))
+    )
+)
+df = df.loc[~natali_bonanza_viper_overlap].copy()
 
 # Identify and keep only 'active' if both 'thaw' and 'active' exist
 def filter_thaw_if_active(group):

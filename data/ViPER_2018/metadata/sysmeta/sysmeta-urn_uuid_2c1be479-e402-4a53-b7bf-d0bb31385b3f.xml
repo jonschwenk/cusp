@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:systemMetadata xmlns:ns2="http://ns.dataone.org/service/types/v1" xmlns:ns3="http://ns.dataone.org/service/types/v2.0">
+    <serialVersion>2</serialVersion>
+    <identifier>urn:uuid:2c1be479-e402-4a53-b7bf-d0bb31385b3f</identifier>
+    <formatId>text/csv</formatId>
+    <size>9070</size>
+    <checksum algorithm="MD5">35c08356e928c0530ae16f1ec4618b7d</checksum>
+    <submitter>http://orcid.org/0000-0001-7553-6692</submitter>
+    <rightsHolder>http://orcid.org/0000-0002-3010-2994</rightsHolder>
+    <accessPolicy>
+        <allow>
+            <subject>public</subject>
+            <permission>read</permission>
+        </allow>
+        <allow>
+            <subject>http://orcid.org/0000-0001-8851-7386</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+        <allow>
+            <subject>CN=arctic-data-admins,DC=dataone,DC=org</subject>
+            <permission>read</permission>
+            <permission>write</permission>
+            <permission>changePermission</permission>
+        </allow>
+    </accessPolicy>
+    <replicationPolicy replicationAllowed="false" numberReplicas="3"/>
+    <archived>false</archived>
+    <dateUploaded>2016-12-23T22:13:16.682+00:00</dateUploaded>
+    <dateSysMetadataModified>2020-04-20T18:44:45.013+00:00</dateSysMetadataModified>
+    <originMemberNode>urn:node:ARCTIC</originMemberNode>
+    <authoritativeMemberNode>urn:node:ARCTIC</authoritativeMemberNode>
+    <replica>
+        <replicaMemberNode>urn:node:ARCTIC</replicaMemberNode>
+        <replicationStatus>completed</replicationStatus>
+        <replicaVerified>2019-09-06T07:37:00.933+00:00</replicaVerified>
+    </replica>
+    <fileName>ViPER_Coordinates_2015.csv</fileName>
+</ns3:systemMetadata>
