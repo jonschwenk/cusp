@@ -6,7 +6,7 @@ source_key = "Pawley_2018"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "Annalise Khandelwal"
-last_substantive_update = "2026-05-19"
+last_substantive_update = "2026-05-22"
 source_dataset = '''
 Pawley, S.M.; Utting, D.J. 2018. Permafrost site location training data for
 northern Alberta (tabular data, tab-delimited format). Alberta Energy
@@ -15,6 +15,8 @@ http://ags.aer.ca/document/DIG/DIG_2018_0006.zip
 '''
 processing_assumptions = [
   "The source training table is joined to a Source-to-Year lookup table to construct a representative date field.",
+  "The gridded probability/classification model outputs are not used.",
+  "Rows whose Source indicates remote-sensing/manual interpretation rather than direct source observations are excluded before date handling: Mapped wetland types in sample tiles, Stratified random points in sample tiles, and Offgrid points.",
   "Rows with no resolved Year after the Source-to-Year join are dropped because the observation year is not known.",
   "Resolved year-only dates are encoded as September 1 of that year, following the project convention for Northern Hemisphere thaw-season observations without a reported month or day.",
   "Coordinates are transformed from Alberta 10TM NAD83 coordinates into WGS84 using a custom PROJ pipeline.",
@@ -34,6 +36,7 @@ manual_steps = []
 known_limitations = [
   "The source table does not provide full per-observation dates; retained rows use a representative September 1 date derived from source-level year metadata.",
   "The exact per-row observation tool is not reported, so method is unknown even though the source-level methods are direct field observations.",
+  "Some source-level direct field records, including AGS Field Data and Geological Survey of Canada Unpublished Field Data, are excluded because no defensible observation year is available in the current source-to-year lookup.",
 ]
 external_dependencies = []
 notes = ""
@@ -57,6 +60,14 @@ df = pd.read_csv(
     engine="python",
 )
 dates = pd.read_csv(source_dir / "unique_source_values.csv")
+
+NON_OBSERVATION_SOURCES = {
+    "Mapped wetland types in sample tiles",
+    "Stratified random points in sample tiles",
+    "Offgrid points",
+}
+
+df = df.loc[~df["Source"].isin(NON_OBSERVATION_SOURCES)].copy()
 
 # Build the Alberta 10TM NAD83 -> WGS84 transformer.
 PIPE = (
