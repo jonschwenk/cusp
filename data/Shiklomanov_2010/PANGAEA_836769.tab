@@ -1,0 +1,31 @@
+/* DATA DESCRIPTION:
+Citation:	Shiklomanov, Nikolay I; Streletskiy, Dmitry A; Nelson, Frederick E; Hollister, Robert D; Romanovsky, Vladimir E; Tweedie, Craig E; Bockheim, James G; Brown, Jerry (2010): (Table 1) Active-layer thickness as measured by the Biocomplexity Experiment (BE) for the flooded, drained and control sections in Barrow, Alaska [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.836769, 
+	Supplement to: Shiklomanov, NI et al. (2010): Decadal variations of active-layer thickness in moisture-controlled landscapes, Barrow, Alaska. Journal of Geophysical Research, 115, G00I04, https://doi.org/10.1029/2009JG001248
+Abstract:	A continuous time series of annual soil thaw records, extending from 1994 to 2009, is available for comparison with the records of thaw obtained from the Biocomplexity Experiment (BE) for the period 2006-2009. Discontinuous records of thaw at Barrow from wet tundra sites date back to the 1960s. Comparisons between the longer records with the BE observations reveal strong similarities. Records of permafrost temperature, reflecting changes in the annual surface energy exchange, are available from the 1950s for comparison with results from measurement programs begun in 2002. The long-term systematic geocryological investigations at Barrow indicate an increase in permafrost temperature, especially during the last several years. The increase in near-surface permafrost temperature is most pronounced in winter. Marked trends are not apparent in the active-layer record, although subsidence measurements on the North Slope indicate that penetration into the ice-rich layer at the top of permafrost has occurred over the past decade. Active-layer thickness values from the 1960s are generally higher than those from the 1990s, and are very similar to those of the 2000s. Analysis of spatial active-layer observations at representative locations demonstrates significant variations in active-layer thickness between different landscape types, reflecting the influence of vegetation, substrate, microtopography, and, especially, soil moisture. Landscape-specific differences exist in the response of active-layer thickness to climatic forcing. These differences are attributable to the existence of localized controls related to combinations of surface and subsurface characteristics. The geocryological records at Barrow illustrate the importance and effectiveness of sustained, well organized monitoring efforts to document long-term trends.
+Project(s):	International Polar Year (2007-2008) (IPY) (URI: https://www.ipy.org/)
+Coverage:	LATITUDE: 71.300000 * LONGITUDE: -156.600000
+	DATE/TIME START: 2006-01-01T00:00:00 * DATE/TIME END: 2009-01-01T00:00:00
+Event(s):	Barrow_Utqiagvik * LATITUDE: 71.300000 * LONGITUDE: -156.600000 * LOCATION: Barrow, Alaska, USA * METHOD/DEVICE: Multiple investigations (MULT)
+Comment:	Biocomplexity Experiment subprojects: BE-HED = Hydrology and experimental design and BE-CCF = Chamber-based CO2 fluxes; CALM/ITEX = Circumpolar Active Layer Monitoring and International Tundra Experiment
+	Data extracted in the frame of a joint ICSTI/PANGAEA IPY effort, see http://doi.pangaea.de/10.1594/PANGAEA.150150
+Parameter(s):	DATE/TIME (Date/Time) * GEOCODE
+	Area/locality (Area) * PI: Shiklomanov, Nikolay I (https://orcid.org/0000-0002-8609-0240)
+	Active layer depth [cm] (ALD) * PI: Shiklomanov, Nikolay I (https://orcid.org/0000-0002-8609-0240) * COMMENT: layer thickness BE-HED
+	Active layer depth [cm] (ALD) * PI: Shiklomanov, Nikolay I (https://orcid.org/0000-0002-8609-0240) * COMMENT: layer thickness BE-CCF
+	Active layer depth [cm] (ALD) * PI: Shiklomanov, Nikolay I (https://orcid.org/0000-0002-8609-0240) * COMMENT: layer thickness CALM/ITEX
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	37 data points
+*/
+Date/Time	Area	ALD [cm] (layer thickness BE-HED)	ALD [cm] (layer thickness BE-CCF)	ALD [cm] (layer thickness CALM/ITEX)
+2006	Control	30		
+2006	Drained	28		34
+2006	Flooded	27		
+2007	Control	26	26	
+2007	Drained	28	32	36
+2007	Flooded	29	31	
+2008	Control	26	30	
+2008	Drained	25	29	36
+2008	Flooded	28	34	
+2009	Control	27	36	
+2009	Drained	24	33	38
+2009	Flooded	30	41	
