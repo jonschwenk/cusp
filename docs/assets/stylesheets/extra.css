@@ -63,8 +63,7 @@
 }
 
 .md-typeset .cusp-wide-table {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: visible;
 }
 
 .md-typeset .cusp-wide-table table {

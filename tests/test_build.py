@@ -228,6 +228,7 @@ class BuildTests(unittest.TestCase):
             deleted = tmp / "cusp_observations_deleted_rows.csv"
             flags = tmp / "cusp_observations_qc_flags.csv"
             crosswalk = tmp / "source_reference_crosswalk.csv"
+            source_metadata = tmp / "source_metadata.csv"
             source_quality = tmp / "source_quality_metadata.csv"
             manifest = tmp / "observation_release_manifest.json"
 
@@ -239,6 +240,7 @@ class BuildTests(unittest.TestCase):
                 deleted_path=deleted,
                 flags_path=flags,
                 source_reference_path=crosswalk,
+                source_metadata_path=source_metadata,
                 source_quality_metadata_path=source_quality,
                 manifest_path=manifest,
             )
@@ -249,6 +251,7 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(manifest_data["summary"]["observation_sources"], 1)
             self.assertIn("cusp_observations.csv", manifest_data["artifacts"])
             self.assertEqual(manifest_data["artifacts"]["source_reference_crosswalk.csv"]["rows"], 1)
+            self.assertIn("source_metadata.csv", manifest_data["artifacts"])
             self.assertIn("source_quality_metadata.csv", manifest_data["artifacts"])
 
 

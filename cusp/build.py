@@ -14,7 +14,7 @@ import pandas as pd
 from pandas.api.types import is_integer_dtype
 
 from cusp.data_utils import _ROOT_DIR
-from cusp.source_quality_metadata import build_source_quality_metadata
+from cusp.source_quality_metadata import build_source_metadata, build_source_quality_metadata
 
 
 DATA_DIR = _ROOT_DIR / "data"
@@ -68,6 +68,7 @@ DEFAULT_METADATA_OUTPUT = DATA_DIR / "cusp_observations_metadata.csv"
 DEFAULT_DELETED_OUTPUT = DATA_DIR / "cusp_observations_deleted_rows.csv"
 DEFAULT_FLAGS_OUTPUT = DATA_DIR / "cusp_observations_qc_flags.csv"
 DEFAULT_SOURCE_REFERENCE_OUTPUT = DATA_DIR / "source_reference_crosswalk.csv"
+DEFAULT_SOURCE_METADATA_OUTPUT = DATA_DIR / "source_metadata.csv"
 DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT = DATA_DIR / "source_quality_metadata.csv"
 DEFAULT_BIBTEX_OUTPUT = DATA_DIR / "cusp_sources_bibtex.csv"
 DEFAULT_QUALITY_FLAG_DEFINITIONS = DATA_DIR / "quality_flag_definitions.csv"
@@ -83,6 +84,7 @@ class BuildOutputs:
     deleted_rows: pd.DataFrame
     qc_flags: pd.DataFrame
     source_reference_crosswalk: pd.DataFrame
+    source_metadata: pd.DataFrame
     source_quality_metadata: pd.DataFrame
 
     @property
@@ -648,6 +650,7 @@ def build_release_manifest(
     deleted_path: Path,
     flags_path: Path,
     source_reference_path: Path,
+    source_metadata_path: Path,
     source_quality_metadata_path: Path,
 ) -> dict[str, object]:
     """Build a JSON-serializable release manifest for the observation artifacts."""
@@ -662,6 +665,7 @@ def build_release_manifest(
         ("cusp_observations_deleted_rows.csv", deleted_path, outputs.deleted_rows),
         ("cusp_observations_qc_flags.csv", flags_path, outputs.qc_flags),
         ("source_reference_crosswalk.csv", source_reference_path, outputs.source_reference_crosswalk),
+        ("source_metadata.csv", source_metadata_path, outputs.source_metadata),
         ("source_quality_metadata.csv", source_quality_metadata_path, outputs.source_quality_metadata),
     ]
 
@@ -716,6 +720,11 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     bibtex_df = pd.read_csv(DEFAULT_BIBTEX_OUTPUT, low_memory=False)
     source_reference_crosswalk = build_source_reference_crosswalk(observations_metadata, bibtex_df)
     source_quality_metadata = build_source_quality_metadata()
+    source_metadata = build_source_metadata(
+        observations_metadata,
+        source_quality_metadata,
+        source_reference_crosswalk,
+    )
 
     if not deleted_rows.empty:
         deleted_rows = deleted_rows.loc[
@@ -735,6 +744,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
         deleted_rows=deleted_rows,
         qc_flags=qc_flags,
         source_reference_crosswalk=source_reference_crosswalk,
+        source_metadata=source_metadata,
         source_quality_metadata=source_quality_metadata,
     )
 
@@ -747,6 +757,7 @@ def write_build_outputs(
     deleted_path: Path = DEFAULT_DELETED_OUTPUT,
     flags_path: Path = DEFAULT_FLAGS_OUTPUT,
     source_reference_path: Path = DEFAULT_SOURCE_REFERENCE_OUTPUT,
+    source_metadata_path: Path = DEFAULT_SOURCE_METADATA_OUTPUT,
     source_quality_metadata_path: Path = DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT,
     manifest_path: Path = DEFAULT_MANIFEST_OUTPUT,
 ) -> None:
@@ -759,6 +770,7 @@ def write_build_outputs(
         deleted_path,
         flags_path,
         source_reference_path,
+        source_metadata_path,
         source_quality_metadata_path,
         manifest_path,
     ]:
@@ -770,6 +782,7 @@ def write_build_outputs(
     outputs.deleted_rows.to_csv(deleted_path, index=False)
     outputs.qc_flags.to_csv(flags_path, index=False)
     outputs.source_reference_crosswalk.to_csv(source_reference_path, index=False)
+    outputs.source_metadata.to_csv(source_metadata_path, index=False)
     outputs.source_quality_metadata.to_csv(source_quality_metadata_path, index=False)
     manifest = build_release_manifest(
         outputs,
@@ -779,6 +792,7 @@ def write_build_outputs(
         deleted_path=deleted_path,
         flags_path=flags_path,
         source_reference_path=source_reference_path,
+        source_metadata_path=source_metadata_path,
         source_quality_metadata_path=source_quality_metadata_path,
     )
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
@@ -801,6 +815,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--deleted-output", type=Path, default=DEFAULT_DELETED_OUTPUT)
     parser.add_argument("--flags-output", type=Path, default=DEFAULT_FLAGS_OUTPUT)
     parser.add_argument("--source-reference-output", type=Path, default=DEFAULT_SOURCE_REFERENCE_OUTPUT)
+    parser.add_argument("--source-metadata-output", type=Path, default=DEFAULT_SOURCE_METADATA_OUTPUT)
     parser.add_argument("--source-quality-metadata-output", type=Path, default=DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT)
     parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUTPUT)
     return parser.parse_args()
@@ -822,6 +837,7 @@ def main() -> None:
         deleted_path=args.deleted_output,
         flags_path=args.flags_output,
         source_reference_path=args.source_reference_output,
+        source_metadata_path=args.source_metadata_output,
         source_quality_metadata_path=args.source_quality_metadata_output,
         manifest_path=args.manifest_output,
     )

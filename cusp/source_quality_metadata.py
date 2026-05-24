@@ -95,3 +95,48 @@ def write_source_quality_metadata(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     metadata.to_csv(output_path, index=False)
     return metadata
+
+
+def build_source_metadata(
+    observations_metadata: pd.DataFrame,
+    source_quality_metadata: pd.DataFrame,
+    source_reference_crosswalk: pd.DataFrame | None = None,
+) -> pd.DataFrame:
+    """Build the combined source-level metadata table for users."""
+
+    metadata = observations_metadata.merge(
+        source_quality_metadata,
+        on="source",
+        how="left",
+        validate="one_to_one",
+    )
+
+    for column in [
+        "source_quality_flags",
+        "source_quality_flag_names",
+        "source_quality_flag_categories",
+    ]:
+        if column not in metadata.columns:
+            metadata[column] = ""
+        metadata[column] = metadata[column].fillna("")
+
+    flag_names = metadata["source_quality_flag_names"].astype("string")
+    metadata["has_duplication_caveat"] = flag_names.str.split(";").map(
+        lambda values: "possible_duplicate_or_overlap" in values if isinstance(values, list) else False
+    )
+
+    if source_reference_crosswalk is not None and not source_reference_crosswalk.empty:
+        citation_columns = [
+            column
+            for column in ["title", "author", "year", "doi", "url"]
+            if column in source_reference_crosswalk.columns
+        ]
+        if citation_columns:
+            metadata = metadata.merge(
+                source_reference_crosswalk[["source"] + citation_columns],
+                on="source",
+                how="left",
+                validate="one_to_one",
+            )
+
+    return metadata.sort_values("source", kind="mergesort").reset_index(drop=True)
