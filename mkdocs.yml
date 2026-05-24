@@ -47,6 +47,8 @@ nav:
       - Command Examples: user/cli-examples.md
       - Aggregation: user/aggregation-guide.md
       - Feature Sampling: user/feature-sampling.md
+      - Quality Flags: user/quality-flags.md
+      - Source Metadata: user/source-metadata.md
   - Contributing:
       - contributing/index.md
       - Suggest a Dataset: contributing/suggest-dataset.md

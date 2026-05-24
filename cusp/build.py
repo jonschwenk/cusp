@@ -14,6 +14,7 @@ import pandas as pd
 from pandas.api.types import is_integer_dtype
 
 from cusp.data_utils import _ROOT_DIR
+from cusp.source_quality_metadata import build_source_quality_metadata
 
 
 DATA_DIR = _ROOT_DIR / "data"
@@ -30,6 +31,8 @@ REQUIRED_SOURCE_COLUMNS = [
     "obs_limit",
 ]
 OPTIONAL_RELEASE_COLUMNS = ["method"]
+QUALITY_FLAGS_COLUMN = "quality_flags"
+QUALITY_FLAG_PREFIX = "quality_flag_"
 
 
 CANONICAL_COLUMNS = [
@@ -44,8 +47,11 @@ CANONICAL_COLUMNS = [
     "pf_depth",
     "obs_limit",
     "method",
+    "quality_flags",
 ]
-OBS_ID_COMPONENT_COLUMNS = [column for column in CANONICAL_COLUMNS if column != "cusp_obs_id"]
+OBS_ID_COMPONENT_COLUMNS = [
+    column for column in CANONICAL_COLUMNS if column not in {"cusp_obs_id", "quality_flags"}
+]
 INTERNAL_BUILD_COLUMNS = {"_build_row_number", "build_action", "build_reason"}
 ALLOWED_METHODS = {"gp", "tp", "pit", "aug", "pit_aug", "tp_pit", "tt", "temp", "unknown"}
 METHOD_NORMALIZATION_MAP = {
@@ -62,7 +68,10 @@ DEFAULT_METADATA_OUTPUT = DATA_DIR / "cusp_observations_metadata.csv"
 DEFAULT_DELETED_OUTPUT = DATA_DIR / "cusp_observations_deleted_rows.csv"
 DEFAULT_FLAGS_OUTPUT = DATA_DIR / "cusp_observations_qc_flags.csv"
 DEFAULT_SOURCE_REFERENCE_OUTPUT = DATA_DIR / "source_reference_crosswalk.csv"
+DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT = DATA_DIR / "source_quality_metadata.csv"
 DEFAULT_BIBTEX_OUTPUT = DATA_DIR / "cusp_sources_bibtex.csv"
+DEFAULT_QUALITY_FLAG_DEFINITIONS = DATA_DIR / "quality_flag_definitions.csv"
+DEFAULT_SOURCE_QUALITY_FLAGS = DATA_DIR / "source_quality_flags.csv"
 DEFAULT_MANIFEST_OUTPUT = DATA_DIR / "observation_release_manifest.json"
 
 
@@ -74,6 +83,7 @@ class BuildOutputs:
     deleted_rows: pd.DataFrame
     qc_flags: pd.DataFrame
     source_reference_crosswalk: pd.DataFrame
+    source_quality_metadata: pd.DataFrame
 
     @property
     def combined(self) -> pd.DataFrame:
@@ -158,6 +168,209 @@ def ensure_release_columns(df: pd.DataFrame) -> pd.DataFrame:
         if column not in df.columns:
             df[column] = pd.NA
     return df
+
+
+def quality_flag_columns(df: pd.DataFrame) -> list[str]:
+    """Return boolean indicator columns that encode observation quality flags."""
+
+    return sorted(column for column in df.columns if column.startswith(QUALITY_FLAG_PREFIX))
+
+
+def load_quality_flag_definitions(path: Path = DEFAULT_QUALITY_FLAG_DEFINITIONS) -> pd.DataFrame:
+    """Load and validate the canonical quality-flag vocabulary."""
+
+    definitions = pd.read_csv(path)
+    required = ["flag", "flag_code", "flag_category", "flag_description"]
+    missing = [column for column in required if column not in definitions.columns]
+    if missing:
+        raise RuntimeError(f"Quality flag definitions are missing required columns: {missing}")
+    if definitions["flag"].duplicated().any():
+        duplicates = definitions.loc[definitions["flag"].duplicated(), "flag"].tolist()
+        raise RuntimeError(f"Duplicate quality flag definitions found: {duplicates}")
+    if definitions["flag_code"].duplicated().any():
+        duplicates = definitions.loc[definitions["flag_code"].duplicated(), "flag_code"].tolist()
+        raise RuntimeError(f"Duplicate quality flag codes found: {duplicates}")
+    return definitions.loc[:, required].copy()
+
+
+def load_source_quality_flags(path: Path = DEFAULT_SOURCE_QUALITY_FLAGS) -> pd.DataFrame:
+    """Load source-wide quality flags applied to every retained row from a source."""
+
+    if not path.exists():
+        return pd.DataFrame(columns=["source", "flag"])
+    source_flags = pd.read_csv(path)
+    required = ["source", "flag"]
+    missing = [column for column in required if column not in source_flags.columns]
+    if missing:
+        raise RuntimeError(f"Source quality flag table is missing required columns: {missing}")
+    return source_flags.loc[:, required].dropna().drop_duplicates().copy()
+
+
+def split_quality_flag_string(value: object) -> list[str]:
+    """Split a compact processor-side flag string into flag tokens."""
+
+    if pd.isna(value):
+        return []
+    text = str(value).strip()
+    if not text:
+        return []
+    return [part.strip() for part in text.replace(",", ";").replace("|", ";").split(";") if part.strip()]
+
+
+def validate_quality_flags(
+    df: pd.DataFrame,
+    definitions: pd.DataFrame,
+    source_flags: pd.DataFrame | None = None,
+) -> None:
+    """Ensure all processor-provided quality flags are part of the vocabulary."""
+
+    known_flags = set(definitions["flag"])
+    indicator_flags = {column.removeprefix(QUALITY_FLAG_PREFIX) for column in quality_flag_columns(df)}
+    string_flags: set[str] = set()
+    if QUALITY_FLAGS_COLUMN in df.columns:
+        for value in df[QUALITY_FLAGS_COLUMN]:
+            string_flags.update(split_quality_flag_string(value))
+    mapped_flags = set(source_flags["flag"]) if source_flags is not None and not source_flags.empty else set()
+    unknown = sorted((indicator_flags | string_flags | mapped_flags) - known_flags)
+    if unknown:
+        raise RuntimeError(f"Unknown quality flags found in processed source tables: {unknown}")
+
+
+def truthy_series(series: pd.Series) -> pd.Series:
+    """Return a robust boolean mask for source/provenance flags."""
+
+    if series.dtype == bool:
+        return series.fillna(False)
+    text = series.astype("string").str.strip().str.lower()
+    return text.isin(["1", "true", "t", "yes", "y"])
+
+
+def add_inferred_quality_flags(df: pd.DataFrame) -> pd.DataFrame:
+    """Add obvious row-level quality flags from canonical/provenance columns."""
+
+    flagged = df.copy()
+
+    def add(flag: str, mask: pd.Series) -> None:
+        if mask.any():
+            column = f"{QUALITY_FLAG_PREFIX}{flag}"
+            if column not in flagged.columns:
+                flagged[column] = False
+            flagged.loc[mask.fillna(False), column] = True
+
+    lower_bound_absence = (
+        flagged["pf_observed"].eq(0)
+        & flagged["obs_limit"].notna()
+        & flagged["thaw_depth"].isna()
+        & flagged["pf_depth"].isna()
+    )
+    add("lower_bound_absence", lower_bound_absence)
+
+    add("method_approximate_or_unknown", flagged["method"].eq("unknown"))
+    add("temperature_inferred", flagged["method"].eq("temp"))
+    add("geophysics_inferred", flagged["method"].eq("gp"))
+
+    if "calm_ald_bound_type" in flagged.columns:
+        add("upper_bound_presence", flagged["calm_ald_bound_type"].eq("upper"))
+    if "permos_bound_type" in flagged.columns:
+        add("upper_bound_presence", flagged["permos_bound_type"].eq("upper"))
+
+    if "candidate_type" in flagged.columns:
+        add(
+            "obs_limit_profile_bottom",
+            flagged["source"].eq("NCSS_Lab_Data_Mart") & flagged["candidate_type"].eq("absence"),
+        )
+
+    if "viper_coordinate_source" in flagged.columns:
+        add(
+            "coord_lookup_or_interpolated",
+            flagged["viper_coordinate_source"].eq("interpolated_transect"),
+        )
+        add(
+            "coord_site_level",
+            flagged["viper_coordinate_source"].isin(["source_site_point", "single_transect_point"]),
+        )
+        add("source_unit_or_code_recoded", flagged["source"].eq("ViPER_2018"))
+
+    if "permos_coordinate_source" in flagged.columns:
+        add("coord_site_level", flagged["permos_coordinate_source"].eq("site"))
+    if "permos_date_source" in flagged.columns:
+        add("date_assigned", flagged["permos_date_source"].eq("year_only_september_1"))
+    if "permos_guess" in flagged.columns:
+        add("model_or_estimate", truthy_series(flagged["permos_guess"]))
+
+    if "veremeeva_qf_date" in flagged.columns:
+        add("date_source_approximate", pd.to_numeric(flagged["veremeeva_qf_date"], errors="coerce").eq(1))
+    if "veremeeva_qf_coord" in flagged.columns:
+        coord_qf = pd.to_numeric(flagged["veremeeva_qf_coord"], errors="coerce")
+        add("figure_extracted", coord_qf.eq(1))
+        add("coord_source_flagged", coord_qf.isin([1, 2]))
+    if "veremeeva_qf_td" in flagged.columns:
+        td_qf = pd.to_numeric(flagged["veremeeva_qf_td"], errors="coerce")
+        add("figure_extracted", td_qf.eq(1))
+
+    if "source_comment" in flagged.columns:
+        comment = flagged["source_comment"].astype("string").str.lower()
+        add(
+            "refusal_or_obstruction_note",
+            comment.str.contains("rock|gravel|road|water|bottomed|refusal", regex=True, na=False),
+        )
+    if "viper_notes" in flagged.columns:
+        notes = flagged["viper_notes"].astype("string").str.lower()
+        add(
+            "refusal_or_obstruction_note",
+            notes.str.contains("rock|gravel|road|water|obstruct|probe length|bottom", regex=True, na=False),
+        )
+    if "rock" in flagged.columns:
+        add("refusal_or_obstruction_note", flagged["rock"].notna() & flagged["rock"].astype("string").str.strip().ne(""))
+
+    return flagged
+
+
+def collect_quality_flags_for_rows(
+    df: pd.DataFrame,
+    source_flags: pd.DataFrame | None = None,
+) -> pd.Series:
+    """Return one set of quality flag names for each observation row."""
+
+    indicator_columns = quality_flag_columns(df)
+    source_flag_map: dict[str, set[str]] = {}
+    if source_flags is not None and not source_flags.empty:
+        source_flag_map = (
+            source_flags.groupby("source")["flag"]
+            .apply(lambda values: set(values.astype(str)))
+            .to_dict()
+        )
+
+    row_flag_sets: list[set[str]] = []
+    for _, row in df.iterrows():
+        row_flags: set[str] = set(source_flag_map.get(row["source"], set()))
+        for column in indicator_columns:
+            value = row[column]
+            if pd.notna(value) and bool(value):
+                row_flags.add(column.removeprefix(QUALITY_FLAG_PREFIX))
+        if QUALITY_FLAGS_COLUMN in df.columns:
+            row_flags.update(split_quality_flag_string(row.get(QUALITY_FLAGS_COLUMN)))
+        row_flag_sets.append(row_flags)
+
+    return pd.Series(row_flag_sets, index=df.index, dtype=object)
+
+
+def build_quality_flags_column(
+    row_flag_sets: pd.Series,
+    definitions: pd.DataFrame,
+) -> pd.Series:
+    """Render row-level quality flag sets as semicolon-delimited mnemonic codes."""
+
+    code_by_flag = definitions.set_index("flag")["flag_code"].to_dict()
+    order_by_flag = {flag: index for index, flag in enumerate(definitions["flag"].tolist())}
+
+    def render(flags: set[str]) -> str:
+        if not flags:
+            return ""
+        ordered_flags = sorted(flags, key=lambda flag: order_by_flag[flag])
+        return ";".join(code_by_flag[flag] for flag in ordered_flags)
+
+    return row_flag_sets.map(render)
 
 
 def coerce_numeric_columns(df: pd.DataFrame) -> pd.DataFrame:
@@ -332,6 +545,8 @@ def stable_allfields_column_order(df: pd.DataFrame) -> list[str]:
         column
         for column in df.columns
         if column not in CANONICAL_COLUMNS and column not in INTERNAL_BUILD_COLUMNS
+        and column != QUALITY_FLAGS_COLUMN
+        and not column.startswith(QUALITY_FLAG_PREFIX)
     )
     return [column for column in CANONICAL_COLUMNS if column in df.columns] + extras
 
@@ -433,6 +648,7 @@ def build_release_manifest(
     deleted_path: Path,
     flags_path: Path,
     source_reference_path: Path,
+    source_quality_metadata_path: Path,
 ) -> dict[str, object]:
     """Build a JSON-serializable release manifest for the observation artifacts."""
 
@@ -446,6 +662,7 @@ def build_release_manifest(
         ("cusp_observations_deleted_rows.csv", deleted_path, outputs.deleted_rows),
         ("cusp_observations_qc_flags.csv", flags_path, outputs.qc_flags),
         ("source_reference_crosswalk.csv", source_reference_path, outputs.source_reference_crosswalk),
+        ("source_quality_metadata.csv", source_quality_metadata_path, outputs.source_quality_metadata),
     ]
 
     artifacts: dict[str, dict[str, object]] = {}
@@ -477,6 +694,10 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
 
     working = raw_allfields.copy()
     working = normalize_methods(working)
+    quality_definitions = load_quality_flag_definitions()
+    source_quality_flags = load_source_quality_flags()
+    validate_quality_flags(working, quality_definitions, source_quality_flags)
+    working = add_inferred_quality_flags(working)
     working["_build_row_number"] = range(len(working))
 
     working, deleted_rows = apply_hard_deletions(working)
@@ -484,6 +705,8 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     sort_cols = [column for column in OBS_ID_COMPONENT_COLUMNS if column in working.columns]
     working = working.sort_values(sort_cols, kind="mergesort", na_position="last").reset_index(drop=True)
     working["cusp_obs_id"] = build_cusp_obs_id(working)
+    row_quality_flags = collect_quality_flags_for_rows(working, source_quality_flags)
+    working["quality_flags"] = build_quality_flags_column(row_quality_flags, quality_definitions)
     qc_flags = build_qc_flags(working)
     canonical = working.loc[:, CANONICAL_COLUMNS].copy()
 
@@ -492,6 +715,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     observations_metadata = build_release_metadata(observations_allfields)
     bibtex_df = pd.read_csv(DEFAULT_BIBTEX_OUTPUT, low_memory=False)
     source_reference_crosswalk = build_source_reference_crosswalk(observations_metadata, bibtex_df)
+    source_quality_metadata = build_source_quality_metadata()
 
     if not deleted_rows.empty:
         deleted_rows = deleted_rows.loc[
@@ -511,6 +735,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
         deleted_rows=deleted_rows,
         qc_flags=qc_flags,
         source_reference_crosswalk=source_reference_crosswalk,
+        source_quality_metadata=source_quality_metadata,
     )
 
 
@@ -522,6 +747,7 @@ def write_build_outputs(
     deleted_path: Path = DEFAULT_DELETED_OUTPUT,
     flags_path: Path = DEFAULT_FLAGS_OUTPUT,
     source_reference_path: Path = DEFAULT_SOURCE_REFERENCE_OUTPUT,
+    source_quality_metadata_path: Path = DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT,
     manifest_path: Path = DEFAULT_MANIFEST_OUTPUT,
 ) -> None:
     """Write the release-facing build outputs to disk."""
@@ -533,6 +759,7 @@ def write_build_outputs(
         deleted_path,
         flags_path,
         source_reference_path,
+        source_quality_metadata_path,
         manifest_path,
     ]:
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -543,6 +770,7 @@ def write_build_outputs(
     outputs.deleted_rows.to_csv(deleted_path, index=False)
     outputs.qc_flags.to_csv(flags_path, index=False)
     outputs.source_reference_crosswalk.to_csv(source_reference_path, index=False)
+    outputs.source_quality_metadata.to_csv(source_quality_metadata_path, index=False)
     manifest = build_release_manifest(
         outputs,
         canonical_path=canonical_path,
@@ -551,6 +779,7 @@ def write_build_outputs(
         deleted_path=deleted_path,
         flags_path=flags_path,
         source_reference_path=source_reference_path,
+        source_quality_metadata_path=source_quality_metadata_path,
     )
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
@@ -572,6 +801,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--deleted-output", type=Path, default=DEFAULT_DELETED_OUTPUT)
     parser.add_argument("--flags-output", type=Path, default=DEFAULT_FLAGS_OUTPUT)
     parser.add_argument("--source-reference-output", type=Path, default=DEFAULT_SOURCE_REFERENCE_OUTPUT)
+    parser.add_argument("--source-quality-metadata-output", type=Path, default=DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT)
     parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUTPUT)
     return parser.parse_args()
 
@@ -592,6 +822,7 @@ def main() -> None:
         deleted_path=args.deleted_output,
         flags_path=args.flags_output,
         source_reference_path=args.source_reference_output,
+        source_quality_metadata_path=args.source_quality_metadata_output,
         manifest_path=args.manifest_output,
     )
 

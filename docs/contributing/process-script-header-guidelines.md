@@ -10,6 +10,11 @@ rows.
 CSV summaries such as `PROCESS_SCRIPT_METADATA.csv` are generated from these
 docstrings and should not be manually edited.
 
+If a source emits row-level quality flags, document the reason in the relevant
+`processing_assumptions`, `temporal_handling`, `spatial_handling`, or
+`known_limitations` entry. The canonical flag vocabulary is
+`data/quality_flag_definitions.csv`.
+
 ## Required Format
 
 The module docstring must be valid TOML. The parser reads it without executing

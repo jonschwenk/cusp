@@ -14,6 +14,25 @@ from pandas.api.types import is_integer_dtype
 from pathlib import Path
 import cusp
 _ROOT_DIR = Path(next(iter(cusp.__path__))).parent 
+QUALITY_FLAG_PREFIX = "quality_flag_"
+
+
+def add_quality_flag(df, flag, mask=None):
+    """Mark rows with a CUSP observation-quality flag indicator column.
+
+    Processors can call this repeatedly; the build step validates flag names
+    against data/quality_flag_definitions.csv and emits compact mnemonic
+    codes in the release `quality_flags` column.
+    """
+
+    column = f"{QUALITY_FLAG_PREFIX}{flag}"
+    if column not in df.columns:
+        df[column] = False
+    if mask is None:
+        df[column] = True
+    else:
+        df.loc[mask, column] = True
+    return df
 
 def process_pf_observations(working_df, alt_name, pf_limit,
                        obs_limit_val=None, obs_limit_mask=None, date=None):

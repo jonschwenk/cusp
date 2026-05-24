@@ -27,6 +27,17 @@ differences. Important variation may remain in:
 The `method` and `source` columns are meant to help users keep those differences
 visible during analysis.
 
+## Quality Flags
+
+The main release table includes `quality_flags`, a semicolon-delimited list of
+compact caveat codes. A blank value means no current quality flag applies. For
+example, `LB;DA` means the row has both a lower-bound absence flag and an
+assigned-date flag.
+
+The code definitions live in `data/quality_flag_definitions.csv`. Use that file
+when you need to exclude specific caveats such as coordinate source flags,
+geophysics-inferred observations, or lower-bound absence observations.
+
 ## Interpretation During Processing
 
 Each source has its own processing script. Those scripts convert source files

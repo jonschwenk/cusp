@@ -41,6 +41,7 @@ REQUIRED_INPUT_COLUMNS = [
     "pf_depth",
     "obs_limit",
     "method",
+    "quality_flags",
 ]
 
 AGGREGATED_COLUMNS = [
@@ -54,6 +55,7 @@ AGGREGATED_COLUMNS = [
     "pf_depth",
     "obs_limit",
     "method",
+    "quality_flags",
     "aggregated_sources",
     "n_grouped",
 ]
@@ -166,7 +168,6 @@ def build_qc_flag_rows(group: pd.DataFrame, cusp_30m_id: str, pf_mean: float) ->
     methods = sorted(stable_scalar_string(value) for value in group["method"].dropna().unique())
     sources = sorted(stable_scalar_string(value) for value in group["source"].dropna().unique())
     pf_unique = sorted(stable_scalar_string(value) for value in group["pf_observed"].dropna().unique())
-
     if len(pf_unique) > 1:
         flags.append(
             {
@@ -191,7 +192,6 @@ def build_qc_flag_rows(group: pd.DataFrame, cusp_30m_id: str, pf_mean: float) ->
                 "detail": ",".join(sources),
             }
         )
-
     unique_dates = sorted(group["date"].dropna().astype(str).unique())
     if len(unique_dates) > 1:
         flags.append(
@@ -220,6 +220,14 @@ def aggregate_groups(retained: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
         pf_mean = float(group["pf_observed"].astype(float).mean())
         method_values = sorted(stable_scalar_string(value) for value in group["method"].dropna().unique())
         method = method_values[0] if len(method_values) == 1 else "mixed"
+        quality_flags = sorted(
+            {
+                flag
+                for value in group["quality_flags"].dropna().astype(str)
+                for flag in value.split(";")
+                if flag
+            }
+        )
         aggregated_sources = ",".join(sorted(stable_scalar_string(value) for value in group["source"].dropna().unique()))
 
         aggregated_rows.append(
@@ -234,6 +242,7 @@ def aggregate_groups(retained: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame
                 "pf_depth": median_or_nan(group["pf_depth"]),
                 "obs_limit": max_or_nan(group["obs_limit"]),
                 "method": method,
+                "quality_flags": ";".join(quality_flags),
                 "aggregated_sources": aggregated_sources,
                 "n_grouped": int(len(group)),
             }

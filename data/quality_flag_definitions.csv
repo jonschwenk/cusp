@@ -1,0 +1,20 @@
+flag,flag_code,flag_category,flag_description
+lower_bound_absence,LB,censoring,Permafrost was not reached within the reported probe profile or observation limit.
+upper_bound_presence,UB,censoring,Permafrost was confirmed but exact thaw or permafrost depth is only bounded.
+obs_limit_assumed,OA,censoring,Observation limit was assigned from protocol source interpretation or processor convention rather than a row-specific measured limit.
+obs_limit_profile_bottom,PB,censoring,Permafrost absence is interpreted to the bottom of an observed soil or profile record.
+date_assigned,DA,temporal,Date was assigned from year campaign midpoint or representative thaw-season convention.
+date_source_approximate,DS,temporal,Source flags the observation date as approximate range-based or otherwise imprecise.
+coord_site_level,CS,spatial,Site or event coordinate is repeated for observations that are more spatially granular than the coordinate.
+coord_lookup_or_interpolated,CI,spatial,Coordinates were assigned from lookup tables or interpolated along transects.
+coord_source_flagged,CF,spatial,Source flags coordinate uncertainty likely coordinate problems or georeferenced coordinates.
+summary_statistic,SS,aggregation,Canonical observation value is a mean annual site summary or other source or processor summary statistic.
+temperature_inferred,TI,method,Permafrost state or depth was inferred from temperature profile logic.
+geophysics_inferred,GI,method,Depth was inferred from GPR ERT or other geophysical interpretation rather than direct probing or coring.
+model_or_estimate,ME,derivation,Source or CUSP processor uses modeled estimated extrapolated or reconstructed depth.
+figure_extracted,FE,derivation,Value or coordinate was extracted georeferenced or digitized from a figure.
+pf_state_assumed,PA,interpretation,Permafrost presence state was assigned from study context threshold logic or source convention rather than explicit row-level presence or absence.
+method_approximate_or_unknown,MU,method,Observation method is unknown or mapped approximately into the CUSP method vocabulary.
+source_unit_or_code_recoded,RC,source_cleanup,Units sentinels coordinate signs or source codes were recoded to make the row usable.
+possible_duplicate_or_overlap,DO,duplication,Known potential overlap with another source remains or source-specific deduplication affected interpretation.
+refusal_or_obstruction_note,RO,field_condition,Field notes indicate rock gravel obstruction bottoming out road water or similar ambiguity.

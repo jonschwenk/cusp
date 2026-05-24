@@ -12,6 +12,8 @@ from cusp.build import (
     build_release_tables,
     build_source_reference_crosswalk,
     normalize_method,
+    validate_quality_flags,
+    load_quality_flag_definitions,
     write_build_outputs,
 )
 
@@ -89,10 +91,100 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(len(outputs.observations), 2)
         self.assertTrue(outputs.observations.iloc[0]["cusp_obs_id"].startswith("obs_"))
         self.assertEqual(outputs.observations.iloc[0]["method"], "tp")
+        self.assertEqual(outputs.observations["quality_flags"].tolist(), ["", ""])
         self.assertIn("cusp_obs_id", outputs.observations_allfields.columns)
         self.assertIn("extra_col", outputs.observations_allfields.columns)
         self.assertEqual(outputs.deleted_rows["build_reason"].tolist(), ["zero_zero_coordinates", "duplicate_required_fields"])
         self.assertEqual(outputs.qc_flags["build_reason"].tolist(), [])
+
+    def test_quality_flags_are_compact_codes(self) -> None:
+        raw = pd.DataFrame(
+            [
+                {
+                    "source": "Example_A",
+                    "site_id": "A1",
+                    "lat": 65.0,
+                    "lon": -147.0,
+                    "date": "2020-08-01",
+                    "pf_observed": 0,
+                    "thaw_depth": None,
+                    "pf_depth": None,
+                    "obs_limit": 120.0,
+                    "method": "tp",
+                    "quality_flag_lower_bound_absence": True,
+                    "quality_flag_date_assigned": True,
+                },
+                {
+                    "source": "Example_A",
+                    "site_id": "A2",
+                    "lat": 65.1,
+                    "lon": -147.1,
+                    "date": "2020-08-02",
+                    "pf_observed": 1,
+                    "thaw_depth": 50.0,
+                    "pf_depth": 50.0,
+                    "obs_limit": None,
+                    "method": "tp",
+                    "quality_flag_lower_bound_absence": False,
+                    "quality_flag_date_assigned": False,
+                },
+            ]
+        )
+
+        outputs = build_release_tables(raw)
+
+        flagged = outputs.observations.loc[outputs.observations["site_id"] == "A1"].iloc[0]
+        direct = outputs.observations.loc[outputs.observations["site_id"] == "A2"].iloc[0]
+        self.assertEqual(flagged["quality_flags"], "LB;DA")
+        self.assertEqual(direct["quality_flags"], "")
+
+    def test_build_infers_generic_quality_flags(self) -> None:
+        raw = pd.DataFrame(
+            [
+                {
+                    "source": "Example_A",
+                    "site_id": "A1",
+                    "lat": 65.0,
+                    "lon": -147.0,
+                    "date": "2020-08-01",
+                    "pf_observed": 0,
+                    "thaw_depth": None,
+                    "pf_depth": None,
+                    "obs_limit": 120.0,
+                    "method": "unknown",
+                },
+                {
+                    "source": "Example_A",
+                    "site_id": "A2",
+                    "lat": 65.1,
+                    "lon": -147.1,
+                    "date": "2020-08-02",
+                    "pf_observed": 1,
+                    "thaw_depth": 50.0,
+                    "pf_depth": 50.0,
+                    "obs_limit": None,
+                    "method": "temp",
+                },
+            ]
+        )
+
+        outputs = build_release_tables(raw)
+
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A1", "quality_flags"],
+            "LB;MU",
+        )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A2", "quality_flags"],
+            "TI",
+        )
+
+    def test_unknown_quality_flags_are_rejected(self) -> None:
+        raw = pd.DataFrame({"quality_flag_not_real": [True]})
+        definitions = load_quality_flag_definitions()
+
+        with self.assertRaisesRegex(RuntimeError, "Unknown quality flags"):
+            validate_quality_flags(raw, definitions)
 
     def test_build_source_reference_crosswalk_filters_to_included_sources(self) -> None:
         observations_metadata = pd.DataFrame({"source": ["A", "B"]})
@@ -136,6 +228,7 @@ class BuildTests(unittest.TestCase):
             deleted = tmp / "cusp_observations_deleted_rows.csv"
             flags = tmp / "cusp_observations_qc_flags.csv"
             crosswalk = tmp / "source_reference_crosswalk.csv"
+            source_quality = tmp / "source_quality_metadata.csv"
             manifest = tmp / "observation_release_manifest.json"
 
             write_build_outputs(
@@ -146,6 +239,7 @@ class BuildTests(unittest.TestCase):
                 deleted_path=deleted,
                 flags_path=flags,
                 source_reference_path=crosswalk,
+                source_quality_metadata_path=source_quality,
                 manifest_path=manifest,
             )
 
@@ -155,6 +249,7 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(manifest_data["summary"]["observation_sources"], 1)
             self.assertIn("cusp_observations.csv", manifest_data["artifacts"])
             self.assertEqual(manifest_data["artifacts"]["source_reference_crosswalk.csv"]["rows"], 1)
+            self.assertIn("source_quality_metadata.csv", manifest_data["artifacts"])
 
 
 if __name__ == "__main__":

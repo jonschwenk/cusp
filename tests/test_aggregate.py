@@ -29,6 +29,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 20.0,
                     "obs_limit": 120.0,
                     "method": "tp",
+                    "quality_flags": "LB",
                 },
                 {
                     "cusp_obs_id": "obs_b",
@@ -42,6 +43,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 60.0,
                     "obs_limit": 120.0,
                     "method": "tp",
+                    "quality_flags": "",
                 },
                 {
                     "cusp_obs_id": "obs_c",
@@ -55,6 +57,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 80.0,
                     "obs_limit": 150.0,
                     "method": "pit",
+                    "quality_flags": "GI",
                 },
             ]
         )
@@ -69,11 +72,15 @@ class AggregateTests(unittest.TestCase):
         self.assertEqual(row["n_grouped"], 2)
         self.assertEqual(row["pf_observed"], 1.0)
         self.assertEqual(row["method"], "mixed")
+        self.assertEqual(row["quality_flags"], "GI")
         self.assertEqual(row["aggregated_sources"], "A,B")
 
         self.assertCountEqual(outputs.membership["cusp_obs_id"].tolist(), ["obs_a", "obs_b", "obs_c"])
         self.assertEqual(len(outputs.excluded_rows), 0)
-        self.assertCountEqual(outputs.qc_flags["flag"].tolist(), ["mixed_method", "mixed_source", "multi_date_window"])
+        self.assertCountEqual(
+            outputs.qc_flags["flag"].tolist(),
+            ["mixed_method", "mixed_source", "multi_date_window"],
+        )
 
     def test_aggregation_pf_observed_is_fraction_when_mixed(self) -> None:
         canonical = pd.DataFrame(
@@ -90,6 +97,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 20.0,
                     "obs_limit": 120.0,
                     "method": "tp",
+                    "quality_flags": "LB",
                 },
                 {
                     "cusp_obs_id": "obs_2",
@@ -103,6 +111,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 50.0,
                     "obs_limit": 120.0,
                     "method": "tp",
+                    "quality_flags": "",
                 },
             ]
         )
@@ -129,6 +138,7 @@ class AggregateTests(unittest.TestCase):
                     "pf_depth": 40.0,
                     "obs_limit": 120.0,
                     "method": "tp",
+                    "quality_flags": "",
                 }
             ]
         )

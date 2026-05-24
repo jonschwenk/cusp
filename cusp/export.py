@@ -34,6 +34,7 @@ REQUIRED_CANONICAL_COLUMNS = {
     "pf_depth",
     "obs_limit",
     "method",
+    "quality_flags",
 }
 
 

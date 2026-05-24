@@ -22,6 +22,7 @@ The aggregation workflow:
 - preserves provenance through a membership table
 - sets aggregated `pf_observed` to the mean of member `0/1` values
 - sets aggregated `method` to `mixed` when multiple methods are present
+- carries forward the union of member `quality_flags`
 
 Important default settings:
 

@@ -40,3 +40,6 @@ sampled for the same observations with Google Earth Engine. It is keyed to
 Use `cusp_sources_vX.Y.bib` when preparing citations for a release. If you use
 only a subset of sources, the citation helper can write a smaller BibTeX file
 for the rows you used.
+
+For source-level caveats and citation crosswalks generated inside the working
+repository, see [Source metadata](../user/source-metadata.md).

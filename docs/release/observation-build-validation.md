@@ -222,6 +222,8 @@ Its current behavior is:
 - write a QC flag log to record non-deletion issues such as:
   - missing `method`
   - `obs_limit = 0`
+- validate observation quality flags against `data/quality_flag_definitions.csv`
+- derive the canonical `quality_flags` column as semicolon-delimited flag codes
 
 The current build assumption is that missing `site_id` is acceptable in the
 canonical observation table, but missing coordinates and missing `pf_observed`

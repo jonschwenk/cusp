@@ -37,6 +37,7 @@ class ExportTests(unittest.TestCase):
                     "pf_depth": [30.0, 40.0],
                     "obs_limit": [None, None],
                     "method": ["tp", "pit"],
+                    "quality_flags": ["", "LB"],
                 }
             )
             canonical.to_csv(canonical_path, index=False)
@@ -95,6 +96,7 @@ class ExportTests(unittest.TestCase):
                     "pf_depth": [30.0],
                     "obs_limit": [None],
                     "method": ["tp"],
+                    "quality_flags": [""],
                 }
             )
             canonical.to_csv(canonical_path, index=False)

@@ -30,6 +30,7 @@ The schema-defining release file is:
 | `pf_depth` | Depth to permafrost below ground surface | centimeters | yes |
 | `obs_limit` | Observation limit below ground surface | centimeters | yes |
 | `method` | Observation tool code | controlled vocabulary | no |
+| `quality_flags` | Semicolon-delimited quality flag codes | string | yes |
 
 ### Notes
 
@@ -41,6 +42,26 @@ The schema-defining release file is:
   source workflow.
 - `thaw_depth`, `pf_depth`, and `obs_limit` are all recorded in centimeters
   below ground surface.
+- `quality_flags` is blank when no current quality flag applies.
+
+### Quality flags
+
+The `quality_flags` column contains semicolon-delimited mnemonic codes such as
+`LB`, `DA`, or `TI;SS`. Code definitions are maintained in:
+
+- `data/quality_flag_definitions.csv`
+
+Each definition includes the full flag name, compact code, category, and
+description. The flags describe caveats, not a trustworthy-to-untrustworthy
+ranking. See [Quality flags](quality-flags.md) for the full vocabulary and
+[Source metadata](source-metadata.md) for source-level quality summaries.
+
+| Example code | Meaning |
+|---|---|
+| `LB` | Lower-bound absence: permafrost was not reached within the observation limit. |
+| `DA` | Date was assigned from year, campaign, midpoint, or representative thaw-season convention. |
+| `TI` | Permafrost state or depth was inferred from temperature profile logic. |
+| `GI` | Depth was inferred from geophysical interpretation. |
 
 ### Controlled vocabulary for `method`
 
@@ -85,6 +106,7 @@ temporal summaries of CUSP observations. The default output name is:
 | `thaw_depth`, `pf_depth` | Median grouped depth values | centimeters |
 | `obs_limit` | Maximum grouped observation limit | centimeters |
 | `method` | Grouped method label | controlled vocabulary; may be `mixed` |
+| `quality_flags` | Union of grouped quality flag codes | string |
 | `aggregated_sources` | Semicolon-delimited contributing source keys | string |
 | `n_grouped` | Number of grouped observation rows | integer |
 

@@ -7,6 +7,8 @@ environmental features on your own computer.
 - [Rebuild and processing commands](cli-examples.md)
 - [Aggregation](aggregation-guide.md)
 - [Feature sampling](feature-sampling.md)
+- [Quality flags](quality-flags.md)
+- [Source metadata](source-metadata.md)
 
 For the core data contract, start with the
 [data schema](data-schema.md). For release files and citation guidance, see

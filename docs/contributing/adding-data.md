@@ -85,6 +85,11 @@ tool is truly unknown, set:
 
 - `method = "unknown"`
 
+Processors may also add observation-quality flags using boolean columns named
+`quality_flag_<flag>`, where `<flag>` is listed in
+`data/quality_flag_definitions.csv`. The build validates these names and writes
+semicolon-delimited flag codes into the main-table `quality_flags` column.
+
 Important expectations:
 
 - `lat`, `lon` should be decimal degrees in `EPSG:4326`
@@ -104,6 +109,9 @@ as clearly as possible, including:
 - method mapping to the CUSP vocabulary
 - obvious within-source duplicates
 - obvious invalid rows that only the source contributor can interpret correctly
+- row-level quality flags for approximate dates, bounded observations,
+  interpolated coordinates, summary statistics, source quality flags, or other
+  caveats defined in `data/quality_flag_definitions.csv`
 
 ## Step 5: Validate The Metadata
 
