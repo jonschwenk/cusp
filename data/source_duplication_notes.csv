@@ -1,0 +1,4 @@
+source,duplication_notes
+Jones_Jones_2025,"Known overlap with CALM sites, especially U60/U60a-style site mappings. CUSP keeps CALM as source of truth where exact source-specific duplicates can be filtered, but Jones_Jones_2025 may retain non-exact overlap."
+Talucci_2024,"Known conceptual overlap with ViPER/FireALT-style Alaska active-layer observations. CUSP keeps direct standalone sources where available and treats remaining Talucci_2024 rows as a synthesis with possible residual overlap."
+Wang_2018,"Known uncertainty around overlap with CALM, but the publication indicates some records may be independent. CUSP currently retains Wang_2018 as an independent source with possible overlap flagged."

@@ -720,11 +720,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     bibtex_df = pd.read_csv(DEFAULT_BIBTEX_OUTPUT, low_memory=False)
     source_reference_crosswalk = build_source_reference_crosswalk(observations_metadata, bibtex_df)
     source_quality_metadata = build_source_quality_metadata()
-    source_metadata = build_source_metadata(
-        observations_metadata,
-        source_quality_metadata,
-        source_reference_crosswalk,
-    )
+    source_metadata = build_source_metadata(observations_allfields, source_quality_metadata, source_reference_crosswalk)
 
     if not deleted_rows.empty:
         deleted_rows = deleted_rows.loc[

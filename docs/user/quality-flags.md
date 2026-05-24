@@ -12,8 +12,6 @@ trustworthy-to-untrustworthy ranking.
 
 The canonical vocabulary lives in `data/quality_flag_definitions.csv`.
 
-<div class="cusp-wide-table" markdown="1">
-
 | Code | Flag | Category | Definition |
 |---|---|---|---|
 | `LB` | `lower_bound_absence` | censoring | Permafrost was not reached within the reported probe profile or observation limit. |
@@ -35,8 +33,6 @@ The canonical vocabulary lives in `data/quality_flag_definitions.csv`.
 | `RC` | `source_unit_or_code_recoded` | source_cleanup | Units sentinels coordinate signs or source codes were recoded to make the row usable. |
 | `DO` | `possible_duplicate_or_overlap` | duplication | Known potential overlap with another source remains or source-specific deduplication affected interpretation. |
 | `RO` | `refusal_or_obstruction_note` | field_condition | Field notes indicate rock gravel obstruction bottoming out road water or similar ambiguity. |
-
-</div>
 
 Source-level quality summaries are described separately in
 [Source metadata](source-metadata.md).
