@@ -3,7 +3,8 @@ metadata_schema_version = 1
 source_key = "Pastick"
 release_clearance = "approved"
 permission_basis = "emailed_approval"
-last_substantive_update = "2026-05-22"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Pastick, Neal. Unpublished Alaska pedon and near-surface permafrost data
 compiled from multiple sources, including NRCS-derived products represented in
@@ -14,6 +15,10 @@ processing_assumptions = [
   "WesternAKSitePhoriz permafrost presence is inferred from horizon names containing frozen-soil suffixes, with the shallowest frozen horizon top used as pf_depth.",
   "WesternAKSitePhoriz obs_limit is taken as the deepest horizon bottom for each pedon, and organic thickness is derived from O-horizon bottoms when present.",
   "WesternAKSitePhoriz/numeric-ID pit rows that overlap with NCSS_Lab_Data_Mart are removed in favor of NCSS: same pf_observed status and within 1 m, regardless of Pastick's update-like date fields or small depth/profile-bottom differences.",
+  "For Innoko probe rows, numeric Depth is permafrost depth for presence and the reported observation limit for absence; source >2m codes are conservatively recoded to a 200 cm absence limit.",
+  "Innoko water/mud/see-note rows without a positive observation depth are excluded because they do not support a usable permafrost-absence limit.",
+  "Five additional absence rows with zero-depth WesternAKSitePhoriz/Gates records are excluded because no defensible observation limit can be recovered.",
+  "Innoko Pnt_type = Estimated coordinates are retained and flagged as interpolated source coordinates.",
   "The remaining site shapefiles are harmonized through column-name standardization, records with unrecognized pf_observed encodings are dropped, and source-native site identifiers are preserved where available.",
   "method is assigned explicitly for YFlats_NRCS and WesternAKSitePhoriz, and set to unknown for the remaining shapefiles when no reliable method field is available.",
 ]
@@ -29,6 +34,7 @@ known_limitations = [
   "This source is a compiled unpublished dataset with heterogeneous schemas and uneven metadata across component files.",
   "Small coordinate precision differences can appear across rebuilds because several component shapefiles are reprojected before export.",
   "Some NCSS-overlapping WesternAKSitePhoriz rows have different depth/profile-bottom values between Pastick and NCSS; CUSP keeps NCSS as the preferred source system for these pedons.",
+  "Innoko coordinate interpolation and source code recoding are retained in row-level provenance/quality fields.",
 ]
 external_dependencies = [
   "data/NCSS_Lab_Data_Mart/processed_ncss_lab_data_mart.csv is required for source-specific NCSS overlap filtering.",
@@ -278,6 +284,36 @@ for site in sites:
     gdf = gdf[~pd.isna(gdf['pf_observed'])].copy()
     gdf['pf_observed'] = gdf['pf_observed'].astype(int)
 
+    is_innoko = site == 'Innoko_Projected_Albers'
+    if is_innoko:
+        source_depth = pd.to_numeric(gdf['pf_depth'], errors='coerce')
+        source_bottom = gdf['Bottom'].astype('string').str.strip()
+        point_type = gdf['Pnt_type'].astype('string').str.strip()
+        presence = gdf['pf_observed'].eq(1)
+        absence = gdf['pf_observed'].eq(0)
+        over_two_m = absence & source_bottom.eq('>2m')
+
+        gdf['pastick_bottom'] = source_bottom
+        gdf['pastick_point_type'] = point_type
+        gdf['pastick_source_method'] = gdf['Method']
+        gdf['pastick_point'] = gdf['Point']
+        gdf['pf_depth'] = source_depth.where(presence)
+        gdf['thaw_depth'] = gdf['pf_depth']
+        gdf['obs_limit'] = source_depth.where(absence)
+        gdf.loc[over_two_m, 'obs_limit'] = 200.0
+        gdf['method'] = 'tp'
+        gdf['quality_flag_coord_lookup_or_interpolated'] = point_type.eq('Estimated')
+        gdf['quality_flag_source_unit_or_code_recoded'] = over_two_m
+
+        unusable_absence = absence & (
+            gdf['obs_limit'].isna() | gdf['obs_limit'].le(0)
+        )
+        print(
+            f"Removed {int(unusable_absence.sum())} Innoko absence rows without "
+            "a usable observation limit."
+        )
+        gdf = gdf.loc[~unusable_absence].copy()
+
     toremove = ['Unique_ID', 'DATUM', 'UTMZONE', 'UTMEAST', 'UTMNORTH', 'LatDD', 'LongDD', 'geometry',
                 'Method', 'LatDD84', 'LongDD84', 'Day', 'Zone', 'Lat', 'Lon', 'Easting', 'Northing',
                 'Bottom', 'Pnt_type', 'Point','OBJECTID', 'Datum', 'UTM_Zone', 'UTM_Northi', 'UTM_Eastin',
@@ -286,12 +322,12 @@ for site in sites:
         if tr in gdf.columns:
             gdf.drop(tr, axis=1, inplace=True)
 
-    if 'obs_limit' not in gdf.columns:
-        gdf['obs_limit'] = np.nan
-    gdf.loc[gdf['obs_limit'] == 0, 'obs_limit'] = np.nan
-        
-    gdf['thaw_depth'] = np.nan
-    gdf['method'] = 'unknown'
+    if not is_innoko:
+        if 'obs_limit' not in gdf.columns:
+            gdf['obs_limit'] = np.nan
+        gdf.loc[gdf['obs_limit'] == 0, 'obs_limit'] = np.nan
+        gdf['thaw_depth'] = np.nan
+        gdf['method'] = 'unknown'
     # if 'obs_depth' not in gdf.columns:
     #     gdf['obs_depth'] = np.nan
 
@@ -305,6 +341,13 @@ final.loc[final['pf_observed'] == 0, 'pf_depth'] = np.nan
 final.loc[final['obs_limit'] == 0, 'obs_limit'] = np.nan
 final = final[~((final['lat'] == 0) & (final['lon'] == 0))].copy()
 final = remove_ncss_overlaps(final)
+unusable_absence = final['pf_observed'].eq(0) & final['obs_limit'].isna()
+if unusable_absence.any():
+    print(
+        f"Removed {int(unusable_absence.sum())} additional Pastick absence rows "
+        "without a usable observation limit."
+    )
+    final = final.loc[~unusable_absence].copy()
 outfile = "processed_" + source + ".csv"
 final.to_csv(_ROOT_DIR / "data" / source / outfile, index=False)
 

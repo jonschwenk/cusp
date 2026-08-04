@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "Peirce_2020"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Lawrence Vulis"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Peirce, Jana; Walker, Donald A. (Skip); Watson-Cook, Emily; Kanevskiy,
 Mikhail; Bergstedt, Helena. 2022. Observations in ice-rich permafrost systems,
@@ -13,9 +13,10 @@ doi:10.18739/A2542J96D
 '''
 processing_assumptions = [
   "Thaw depth values reported with a leading > are treated as observation-limit non-permafrost observations.",
-  "Permafrost presence is inferred with data_utils.process_pf_observations using a 120 cm threshold.",
+  "Ordinary numeric thaw depth is treated as permafrost presence at the reported depth.",
+  "Only explicit >x values are treated as lower-bound absence, with obs_limit set to x.",
   "Point observations are merged to generated 1 m transect points built from separate transect start/end coordinates.",
-  "obs_limit is fixed to 120 cm in the final output and method is set to tp.",
+  "method is set to tp; obs_limit is populated only for explicit lower-bound rows.",
 ]
 temporal_handling = [
   "Per-record sample dates are parsed directly from the measurement CSV.",
@@ -64,9 +65,10 @@ pf_data.rename(columns={'Sample date': 'date',
 
 pf_data = data_utils.process_pf_observations(pf_data.copy(),
                         alt_name='Thaw depth (cm)', 
-                        pf_limit=120,
                         obs_limit_val=pf_data['obs_lim_tempcol'].copy(),
                         obs_limit_mask=obs_limit_mask)
+pf_data = pf_data.dropna(subset=['pf_observed']).copy()
+pf_data['pf_observed'] = pf_data['pf_observed'].astype(int)
 
 # Generate line strings for each transect so they can be interpolated afterwards
 # Transect locations: create linestring from each transect. then will create a transect every 1-m spacing
@@ -108,7 +110,7 @@ full_gdf['lat'] = [g.coords.xy[1][0] for g in full_gdf.geometry.values]
 df = pd.DataFrame(full_gdf.drop(columns='geometry'))
 df['source'] = source
 df['site_id'] = df['transect_name'].astype(str).radd(source + "_")
-df['obs_limit'] = 120
+df['pf_observed'] = df['pf_observed'].astype(int)
 df['method'] = 'tp'
 data_utils.check_columns(df)
 

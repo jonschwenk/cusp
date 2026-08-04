@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Jorgenson_Kanevskiy_2022_Gosling"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
-last_substantive_update = "2025-07-25"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Mark Jorgenson and Mikhail Kanevskiy. (2022). Gosling Lake, Alaska,
 Topography, Vegetation, Soils, Soil temperatures, and Site-Environmental Data,
@@ -15,6 +15,9 @@ Topography, Vegetation, Soils, Soil temperatures, and Site-Environmental Data,
 processing_assumptions = [
   "SoilPFrost codes p and y are treated as permafrost present, a and n as absent, and u as unresolved.",
   "pf_depth is set equal to thaw_depth only when pf_observed is definitively present.",
+  "For permafrost-absent rows, SoilThawDep_cm is the source's recorded maximum probing depth in totally unfrozen soil; CUSP moves that value to obs_limit and clears thaw_depth.",
+  "SoilObsDep_cm is retained as a provenance field but is not used as the permafrost observation limit because it records the separately described soil-profile depth and is shallower than the frost-probe reach for all absence rows.",
+  "method is tp because the metadata explicitly describes thaw-depth and maximum-unfrozen-depth measurements with a metal probe.",
   "Rows with missing thaw_depth are dropped from the processed output.",
 ]
 temporal_handling = [
@@ -25,7 +28,6 @@ spatial_handling = [
 ]
 manual_steps = []
 known_limitations = [
-  "method is exported as unknown because the source archive does not map cleanly onto the controlled method vocabulary.",
   "Rows with unresolved SoilPFrost codes are dropped rather than exported with missing pf_observed.",
 ]
 external_dependencies = []
@@ -69,8 +71,9 @@ for _, row in df.iterrows():
         'thaw_depth': thaw_depth,
         'pf_observed': pf_observed,
         'pf_depth': pf_depth,
-        'method': 'unknown',
+        'method': 'tp',
         'obs_limit': row['SoilObsDep_cm'],
+        'gosling_soil_profile_obs_depth_cm': row['SoilObsDep_cm'],
         'org_thick': row['SoilOrgSurfThk_cm'],
         'source' : source
     })
@@ -81,7 +84,13 @@ out_df = out_df.dropna(subset=["thaw_depth"])
 out_df = out_df.dropna(subset=["pf_observed"]).copy()
 out_df['pf_observed'] = out_df['pf_observed'].astype("Int64")
 out_df['pf_depth'] = pd.to_numeric(out_df['pf_depth'], errors='coerce')
-out_df.loc[out_df['obs_limit'] == 0, 'obs_limit'] = np.nan
+absence = out_df['pf_observed'].eq(0)
+out_df.loc[absence, 'obs_limit'] = out_df.loc[absence, 'thaw_depth']
+out_df.loc[absence, 'thaw_depth'] = np.nan
+out_df.loc[~absence, 'obs_limit'] = np.nan
+
+if int(absence.sum()) != 6 or out_df.loc[absence, 'obs_limit'].isna().any():
+    raise ValueError("Unexpected Gosling absence count or missing maximum probing depth.")
 
 # Save to CSV
 data_utils.check_columns(out_df)

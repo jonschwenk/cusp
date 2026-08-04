@@ -262,10 +262,15 @@ def add_inferred_quality_flags(df: pd.DataFrame) -> pd.DataFrame:
     lower_bound_absence = (
         flagged["pf_observed"].eq(0)
         & flagged["obs_limit"].notna()
+    )
+    add("lower_bound_absence", lower_bound_absence)
+
+    upper_bound_presence = (
+        flagged["pf_observed"].eq(1)
         & flagged["thaw_depth"].isna()
         & flagged["pf_depth"].isna()
     )
-    add("lower_bound_absence", lower_bound_absence)
+    add("upper_bound_presence", upper_bound_presence)
 
     add("method_approximate_or_unknown", flagged["method"].eq("unknown"))
     add("temperature_inferred", flagged["method"].eq("temp"))
@@ -414,6 +419,15 @@ def validate_data_df(df: pd.DataFrame, source: str) -> None:
 
     if not is_integer_dtype(df["pf_observed"]):
         raise RuntimeError(f"{source} csv pf_observed column is not integer type.")
+
+    invalid_absence_limit = df["pf_observed"].eq(0) & (
+        df["obs_limit"].isna() | df["obs_limit"].le(0)
+    )
+    if invalid_absence_limit.any():
+        raise RuntimeError(
+            f"{source} has {int(invalid_absence_limit.sum())} permafrost-absence "
+            "rows without a positive obs_limit."
+        )
 
     lon = df["lon"].dropna()
     lat = df["lat"].dropna()

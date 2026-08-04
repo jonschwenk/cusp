@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "Hanston_etal_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Joel Rowland"
-last_substantive_update = "2024-01-01"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Hanston et al. 2024 thaw-depth measurements from Kougarok and Teller compiled
 for CUSP release in the Hanston_etal_2024 source directory.
@@ -24,7 +24,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "The pf_observed threshold is a conservative inference based on summer timing rather than a direct permafrost measurement.",
-  "obs_limit is fixed to 130 cm for all rows.",
+  "obs_limit is fixed to 130 cm for absence rows; their capped reported depth is preserved only as provenance.",
 ]
 external_dependencies = []
 notes = ""
@@ -68,7 +68,10 @@ tl['pf_observed'] = (tl['thaw_depth'] < 119).astype(int) #deepest recorded depth
 #since the measurments were made in July before full ALT development setting a conservative measure for PF/noPF
 
 df = pd.concat([kg, tl])
-df['obs_limit'] = 130
+df['hanston_reported_depth_cm'] = df['thaw_depth']
+absence = df['pf_observed'].eq(0)
+df['obs_limit'] = np.where(absence, 130.0, np.nan)
+df.loc[absence, 'thaw_depth'] = np.nan
 df['method'] = 'tp'
 #df.drop(['ID', 'Method', 'Year', 'Horizontal_distance_m',
 #       'Depth_to_permafrost_cm', 'Depth_cm', 'Horizontal_to_permafrost_cm', 'Relative_age', 'Geomorphic_unit', 'Count'], axis=1, inplace=True)

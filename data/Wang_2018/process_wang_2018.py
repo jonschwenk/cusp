@@ -140,6 +140,10 @@ for (site, year), group in df.groupby(['Name', 'Year']):
 
 # Convert to DataFrame and save if needed
 output_df = pd.DataFrame(output_records)
+output_df['wang_deepest_thawed_sensor_cm'] = output_df['thaw_depth']
+absence = output_df['pf_observed'].eq(0)
+output_df.loc[absence, 'thaw_depth'] = np.nan
+output_df.loc[~absence, 'obs_limit'] = np.nan
 
 data_utils.check_columns(output_df)
 

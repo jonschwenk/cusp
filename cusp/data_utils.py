@@ -1,10 +1,13 @@
 """ Utilities to work with export/import new datasources
 """
 
+from __future__ import annotations
+
 import geopandas as gpd
 import pandas as pd
 import numpy as np
 import shapely
+from pyproj import Transformer
 from shapely.geometry import LineString, MultiLineString
 import os
 import re
@@ -15,6 +18,7 @@ from pathlib import Path
 import cusp
 _ROOT_DIR = Path(next(iter(cusp.__path__))).parent 
 QUALITY_FLAG_PREFIX = "quality_flag_"
+DEFAULT_GPR_AGGREGATION_SPACING_M = 5.0
 
 
 def add_quality_flag(df, flag, mask=None):
@@ -34,20 +38,180 @@ def add_quality_flag(df, flag, mask=None):
         df.loc[mask, column] = True
     return df
 
-def process_pf_observations(working_df, alt_name, pf_limit,
-                       obs_limit_val=None, obs_limit_mask=None, date=None):
-    """ Process a dataframe's ALT/obs limit columns into having correctly named geocolumns
+
+def aggregate_gpr_points(
+    df: pd.DataFrame,
+    group_columns: List[str] | None = None,
+    value_columns: List[str] | None = None,
+    spacing_m: float = DEFAULT_GPR_AGGREGATION_SPACING_M,
+    native_count_column: str | None = None,
+) -> pd.DataFrame:
+    """Aggregate dense GPR picks into occupied metric grid cells.
+
+    CUSP's default dense-GPR representation is one mean observation per
+    occupied 5 m by 5 m cell within a survey unit. ``group_columns`` must
+    distinguish surveys that may overlap in space, especially different
+    sites, dates, or thaw years. Geographic coordinates are projected to a
+    local UTM CRS separately for each survey unit before cells are assigned.
+
+    Numeric observation fields in ``value_columns`` and coordinates are
+    averaged within each cell. Other fields must be constant within a cell;
+    quality-flag indicator columns are combined with logical OR. The output
+    records the number of native measurements represented by each row and
+    marks cells containing more than one measurement as summary statistics.
+
+    Args:
+        df: Point observations containing ``lat`` and ``lon``.
+        group_columns: Columns defining an independent survey. Defaults to
+            ``["site_id", "date"]``.
+        value_columns: Numeric measurement columns to average. Defaults to
+            ``["thaw_depth"]``.
+        spacing_m: Grid-cell width in meters. The CUSP default is 5 m.
+        native_count_column: Optional input column containing counts from an
+            earlier exact-coordinate aggregation. Counts are summed rather
+            than treated as one measurement per input row.
+
+    Returns:
+        A dataframe with one row per occupied cell and the additional columns
+        ``gpr_native_count`` and ``gpr_aggregation_spacing_m``.
+    """
+
+    if not np.isfinite(spacing_m) or spacing_m <= 0:
+        raise ValueError("GPR aggregation spacing must be a positive finite number.")
+
+    group_columns = group_columns or ["site_id", "date"]
+    value_columns = value_columns or ["thaw_depth"]
+    required = ["lat", "lon", *group_columns, *value_columns]
+    missing = [column for column in required if column not in df.columns]
+    if missing:
+        raise ValueError(f"GPR aggregation input is missing required columns: {missing}")
+    if native_count_column is not None and native_count_column not in df.columns:
+        raise ValueError(f"GPR native-count column is missing: {native_count_column}")
+    if df.empty:
+        out = df.copy()
+        out["gpr_native_count"] = pd.Series(dtype="Int64")
+        out["gpr_aggregation_spacing_m"] = pd.Series(dtype=float)
+        out[f"{QUALITY_FLAG_PREFIX}summary_statistic"] = pd.Series(dtype=bool)
+        return out
+
+    working = df.copy().reset_index(drop=True)
+    working["lat"] = pd.to_numeric(working["lat"], errors="coerce")
+    working["lon"] = pd.to_numeric(working["lon"], errors="coerce")
+    bad_coordinates = (
+        working[["lat", "lon"]].isna().any(axis=1)
+        | ~working["lat"].between(-90, 90)
+        | ~working["lon"].between(-180, 180)
+    )
+    if bad_coordinates.any():
+        raise ValueError(
+            f"GPR aggregation requires valid coordinates; found {int(bad_coordinates.sum())} invalid rows."
+        )
+
+    working["_gpr_x"] = np.nan
+    working["_gpr_y"] = np.nan
+    transformer_cache: dict[int, Transformer] = {}
+    grouped = working.groupby(group_columns, dropna=False, sort=False)
+    for _, row_indices in grouped.groups.items():
+        indices = np.asarray(list(row_indices), dtype=int)
+        median_lon = float(working.loc[indices, "lon"].median())
+        median_lat = float(working.loc[indices, "lat"].median())
+        zone = int(np.clip(np.floor((median_lon + 180.0) / 6.0) + 1, 1, 60))
+        epsg = (32600 if median_lat >= 0 else 32700) + zone
+        if epsg not in transformer_cache:
+            transformer_cache[epsg] = Transformer.from_crs("EPSG:4326", f"EPSG:{epsg}", always_xy=True)
+        x, y = transformer_cache[epsg].transform(
+            working.loc[indices, "lon"].tolist(),
+            working.loc[indices, "lat"].tolist(),
+        )
+        working.loc[indices, "_gpr_x"] = x
+        working.loc[indices, "_gpr_y"] = y
+
+    working["_gpr_cell_x"] = np.floor(working["_gpr_x"] / spacing_m).astype("int64")
+    working["_gpr_cell_y"] = np.floor(working["_gpr_y"] / spacing_m).astype("int64")
+    working["_gpr_input_order"] = np.arange(len(working))
+    if native_count_column is None:
+        working["_gpr_native_count_input"] = 1
+    else:
+        counts = pd.to_numeric(working[native_count_column], errors="coerce")
+        if counts.isna().any() or (counts < 1).any():
+            raise ValueError("GPR native counts must be positive numeric values.")
+        working["_gpr_native_count_input"] = counts
+
+    cell_columns = [*group_columns, "_gpr_cell_x", "_gpr_cell_y"]
+    helper_columns = {
+        "_gpr_x",
+        "_gpr_y",
+        "_gpr_cell_x",
+        "_gpr_cell_y",
+        "_gpr_input_order",
+        "_gpr_native_count_input",
+    }
+    excluded = set(group_columns) | set(value_columns) | {"lat", "lon"} | helper_columns
+    if native_count_column is not None:
+        excluded.add(native_count_column)
+    retained_columns = [column for column in working.columns if column not in excluded]
+    flag_columns = [column for column in retained_columns if column.startswith(QUALITY_FLAG_PREFIX)]
+    constant_columns = [column for column in retained_columns if column not in flag_columns]
+
+    cell_groups = working.groupby(cell_columns, dropna=False, sort=False)
+    for column in constant_columns:
+        varying = cell_groups[column].nunique(dropna=True).gt(1)
+        if varying.any():
+            raise ValueError(
+                f"GPR aggregation field '{column}' varies within {int(varying.sum())} occupied cells; "
+                "add it to group_columns or aggregate it explicitly."
+            )
+
+    aggregations: dict[str, str] = {
+        "lat": "mean",
+        "lon": "mean",
+        "_gpr_input_order": "min",
+        "_gpr_native_count_input": "sum",
+    }
+    aggregations.update({column: "mean" for column in value_columns})
+    aggregations.update({column: "first" for column in constant_columns})
+    aggregations.update({column: "max" for column in flag_columns})
+    out = cell_groups.agg(aggregations).reset_index()
+    out = out.sort_values("_gpr_input_order", kind="mergesort").reset_index(drop=True)
+    out["gpr_native_count"] = out.pop("_gpr_native_count_input").round().astype("Int64")
+    out["gpr_aggregation_spacing_m"] = float(spacing_m)
+
+    summary_flag = f"{QUALITY_FLAG_PREFIX}summary_statistic"
+    if summary_flag not in out.columns:
+        out[summary_flag] = False
+    out[summary_flag] = out[summary_flag].fillna(False).astype(bool) | out["gpr_native_count"].gt(1)
+
+    drop_columns = ["_gpr_cell_x", "_gpr_cell_y", "_gpr_input_order"]
+    out = out.drop(columns=drop_columns)
+    original_columns = [column for column in df.columns if column != native_count_column]
+    output_columns = [
+        *original_columns,
+        "gpr_native_count",
+        "gpr_aggregation_spacing_m",
+        summary_flag,
+    ]
+    return out.loc[:, list(dict.fromkeys(output_columns))]
+
+def process_pf_observations(
+    working_df,
+    alt_name,
+    obs_limit_val=None,
+    obs_limit_mask=None,
+    date=None,
+):
+    """Normalize exact and lower-bound thaw-depth observations.
 
     Args:
         working_df (pd.DataFrame): Contains permafrost observations, possibly coordinates/location, date, and obs_limit information
         alt_name (string): Column name of Active Layer Thickness in cm.
-        pf_limit (numeric): Depth to which PF is determined. E.g. 100 cm, 130 cm, etc.
-        obs_limit_val (numeric or array-like, optional): Observation depth limit. Defaults to None.
-        obs_limit_mask (pd.Series or np.array, optional): Observation depth mask, done externally. Defaults to None.
+        obs_limit_val (numeric or array-like, optional): Positive observation
+            depth for explicitly censored/no-hit rows. Defaults to None.
+        obs_limit_mask (pd.Series or np.array, optional): Boolean mask for
+            explicitly censored/no-hit rows. Defaults to None.
         date (str or np.array, optional): Date of obs if not already in working_df. Defaults to None.
 
     Raises:
-        ValueError: Error raised if passing only one of bs_limit_val or obs_limit_mask.
+        ValueError: Error raised if passing only one of obs_limit_val or obs_limit_mask.
         ValueError: Error raised if no date information is provided
 
     Returns:
@@ -65,15 +229,26 @@ def process_pf_observations(working_df, alt_name, pf_limit,
         raise ValueError("Missing date column or observation date")
     
     working_df.rename(columns={alt_name: "thaw_depth"}, inplace=True)
-    working_df['pf_depth'] = working_df['thaw_depth'].copy()
-    
+    working_df["thaw_depth"] = pd.to_numeric(
+        working_df["thaw_depth"], errors="coerce"
+    )
+    working_df["pf_depth"] = working_df["thaw_depth"].copy()
+    working_df["obs_limit"] = np.nan
+
+    censored = pd.Series(False, index=working_df.index)
     if obs_limit_mask is not None:
-        working_df.loc[obs_limit_mask, 'pf_depth'] = np.nan
-        working_df['obs_limit'] = obs_limit_val
-    if obs_limit_val is None:
-        working_df['obs_limit'] = np.nan
-    
-    working_df['pf_observed'] = (working_df['pf_depth'].copy() < pf_limit)*1
+        censored = pd.Series(obs_limit_mask, index=working_df.index).fillna(False).astype(bool)
+        if np.isscalar(obs_limit_val):
+            working_df.loc[censored, "obs_limit"] = obs_limit_val
+        else:
+            limits = pd.Series(obs_limit_val, index=working_df.index)
+            working_df.loc[censored, "obs_limit"] = limits.loc[censored]
+        working_df.loc[censored, ["thaw_depth", "pf_depth"]] = np.nan
+
+    pf_observed = pd.Series(pd.NA, index=working_df.index, dtype="Int64")
+    pf_observed.loc[working_df["pf_depth"].notna()] = 1
+    pf_observed.loc[censored] = 0
+    working_df["pf_observed"] = pf_observed
     
     return working_df
 

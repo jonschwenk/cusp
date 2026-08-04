@@ -12,6 +12,7 @@ from cusp.build import (
     build_release_tables,
     build_source_reference_crosswalk,
     normalize_method,
+    validate_data_df,
     validate_quality_flags,
     load_quality_flag_definitions,
     write_build_outputs,
@@ -165,6 +166,18 @@ class BuildTests(unittest.TestCase):
                     "obs_limit": None,
                     "method": "temp",
                 },
+                {
+                    "source": "Example_A",
+                    "site_id": "A3",
+                    "lat": 65.2,
+                    "lon": -147.2,
+                    "date": "2020-08-03",
+                    "pf_observed": 1,
+                    "thaw_depth": None,
+                    "pf_depth": None,
+                    "obs_limit": None,
+                    "method": "tp",
+                },
             ]
         )
 
@@ -178,6 +191,29 @@ class BuildTests(unittest.TestCase):
             outputs.observations.set_index("site_id").loc["A2", "quality_flags"],
             "TI",
         )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A3", "quality_flags"],
+            "UB",
+        )
+
+    def test_validate_data_rejects_absence_without_positive_limit(self) -> None:
+        raw = pd.DataFrame(
+            {
+                "source": ["Example_A"],
+                "site_id": ["A1"],
+                "lat": [65.0],
+                "lon": [-147.0],
+                "date": ["2020-08-01"],
+                "pf_observed": pd.Series([0], dtype="Int64"),
+                "thaw_depth": [None],
+                "pf_depth": [None],
+                "obs_limit": [None],
+                "method": ["tp"],
+            }
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "positive obs_limit"):
+            validate_data_df(raw, "Example_A")
 
     def test_unknown_quality_flags_are_rejected(self) -> None:
         raw = pd.DataFrame({"quality_flag_not_real": [True]})

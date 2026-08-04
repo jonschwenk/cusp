@@ -6,7 +6,7 @@ source_key = "Pawley_2018"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-22"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Pawley, S.M.; Utting, D.J. 2018. Permafrost site location training data for
 northern Alberta (tabular data, tab-delimited format). Alberta Energy
@@ -20,7 +20,8 @@ processing_assumptions = [
   "Rows with no resolved Year after the Source-to-Year join are dropped because the observation year is not known.",
   "Resolved year-only dates are encoded as September 1 of that year, following the project convention for Northern Hemisphere thaw-season observations without a reported month or day.",
   "Coordinates are transformed from Alberta 10TM NAD83 coordinates into WGS84 using a custom PROJ pipeline.",
-  "Perm is mapped to pf_observed and Perm_cm to pf_depth, while thaw_depth and obs_limit are left missing.",
+  "Perm is mapped to pf_observed and Perm_cm to pf_depth, while thaw_depth is left missing.",
+  "The source does not report row-specific observation limits. CUSP assigns a conservative 110 cm source-wide obs_limit from the maximum reported permafrost depth, rather than the 150 cm maximum associated with only some of the source's field methods.",
   "The source reports permafrost presence/absence was established with soil probes, augers, hand-dug soil pits, or shallow coring equipment, but the exact method is not recoverable per row; method is therefore set to unknown.",
   "The source does not provide site IDs, so site_id is left missing rather than assigning synthetic identifiers.",
   "Original Source, Dataset_Source, and Alberta 10TM coordinate fields are retained as all-fields provenance columns.",
@@ -36,6 +37,7 @@ manual_steps = []
 known_limitations = [
   "The source table does not provide full per-observation dates; retained rows use a representative September 1 date derived from source-level year metadata.",
   "The exact per-row observation tool is not reported, so method is unknown even though the source-level methods are direct field observations.",
+  "The 110 cm obs_limit is inferred at source level, not measured independently for every row.",
   "Some source-level direct field records, including AGS Field Data and Geological Survey of Canada Unpublished Field Data, are excluded because no defensible observation year is available in the current source-to-year lookup.",
 ]
 external_dependencies = []
@@ -127,10 +129,14 @@ df["pf_observed"] = pd.to_numeric(df["pf_observed"], errors="raise").astype(int)
 df["pf_depth"] = pd.to_numeric(df["pf_depth"], errors="coerce")
 df["method"] = "unknown"
 df["source_method_summary"] = "soil_probes_augers_hand_dug_pits_or_shallow_coring"
-df["obs_limit"] = np.nan
+df["obs_limit"] = 110.0
 df["thaw_depth"] = np.nan
 df["source"] = source
 df["site_id"] = pd.NA
+df["quality_flag_obs_limit_assumed"] = True
+df["quality_flag_upper_bound_presence"] = (
+    df["pf_observed"].eq(1) & df["pf_depth"].isna()
+)
 
 
 # SAVE CLEANED CSV

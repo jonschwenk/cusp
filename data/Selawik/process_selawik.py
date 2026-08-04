@@ -3,14 +3,15 @@ metadata_schema_version = 1
 source_key = "Selawik"
 release_clearance = "approved"
 permission_basis = "self_generated"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Rowland, Joel. 2022. Selawik National Wildlife Refuge observations, unpublished.
 '''
 processing_assumptions = [
-  "The source pf field is mapped directly to pf_observed and depth is interpreted as thaw_depth.",
+  "The source pf field is mapped directly to pf_observed; depth is exact thaw_depth for presence and source-reported supporting depth for absence.",
   "pf_depth is set equal to thaw_depth where pf_observed = 1.",
-  "obs_limit is fixed at 120 cm and method is set to tp.",
+  "obs_limit is fixed at 120 cm for absence rows and method is set to tp.",
   "Rows with missing pf_observed are dropped before export.",
 ]
 temporal_handling = [
@@ -47,9 +48,11 @@ df.rename(columns={"pf": "pf_observed",
 # df["thaw_depth"] = pd.to_numeric(df["thaw_depth"])
 #df['thaw_depth'] = df['thaw_depth'].astype('Int64')
 # create pf_depth column. This column is np.nan if pf wasn't observed (already determined)
-df['pf_depth'] = df['thaw_depth'].copy()
-df.loc[df['pf_observed']==0, ['pf_depth']] = np.nan
-df['obs_limit'] = 120
+df['selawik_reported_depth_cm'] = df['thaw_depth']
+absence = df['pf_observed'].eq(0)
+df['pf_depth'] = df['thaw_depth'].where(~absence)
+df['obs_limit'] = np.where(absence, 120.0, np.nan)
+df.loc[absence, 'thaw_depth'] = np.nan
 # df.loc[df['site'].str.contains("romanovsky"), 'obs_limit'] = 100
 df.drop(columns=['X', 'Y'], inplace=True)
 
