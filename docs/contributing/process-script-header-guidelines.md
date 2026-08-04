@@ -15,6 +15,10 @@ If a source emits row-level quality flags, document the reason in the relevant
 `known_limitations` entry. The canonical flag vocabulary is
 `data/quality_flag_definitions.csv`.
 
+Known or investigated cross-source overlap belongs in both affected process
+headers. Identify the compared source, match fields and counts, retained source,
+date treatment, and any possible overlap that remains.
+
 ## Required Format
 
 The module docstring must be valid TOML. The parser reads it without executing

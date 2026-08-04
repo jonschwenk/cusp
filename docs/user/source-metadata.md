@@ -27,9 +27,11 @@ selected citation metadata.
 | `duplication_notes` | Short source-level note about known or possible overlap with other CUSP sources |
 | citation fields | Selected BibTeX-derived citation metadata, when available |
 
-The duplication fields are summary helpers. Details about overlap decisions
-remain in source processing headers, GitHub dataset issues, and row-level
-quality flags where applicable.
+The duplication fields are summary helpers. Notes include both resolved
+duplication, such as copies removed from a synthesis in favor of an original
+source, and unresolved possible overlap. Details about match fields, counts,
+dates, and source precedence remain in source processing headers, GitHub
+dataset issues, and row-level quality flags where applicable.
 
 ## Source Quality Metadata
 

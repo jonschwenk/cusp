@@ -2,242 +2,99 @@
 
 ## Scope
 
-This document records a manual QA pass on the rebuilt observation-level
-artifacts:
+This page records the latest validated state of the observation-level CUSP
+build. The current snapshot was generated on 2026-08-04 after standardizing
+dense GPR sampling, resolving the Moore/Jafarov overlap, and enforcing explicit
+observation limits for permafrost-absence rows.
 
-- the working observation table exported later as `cusp_vX.Y.csv`
-- the internal all-fields review table
-- the internal source-summary table
-- the internal source-reference crosswalk
+Commands used:
 
-The goal of this pass was to validate that the current observation-build path
-produces a structurally sound observation-level release candidate before any
-aggregation work begins.
+```bash
+python -m cusp.generate_process_script_metadata --check --strict
+python -m cusp.build
+python -m cusp.qc validate-observations --out outputs/qc_tests
+python -m cusp.qc audit-observations --out outputs/qc_audit
+python -m pytest -q
+```
 
-## Environment
+The final build and tests were run under Python 3.12.
 
-- combine rebuild executed in `cusp2`
-- validation queries executed in `cusp2`
-- source-processing layer treated as the current accepted input set, with
-  deferred sources still excluded from the release set
+## Current Snapshot
 
-## Current Rebuild Snapshot
+- canonical observations: `77,916` rows and `13` columns
+- included sources: `57`
+- date range: `1952-06-01` through `2024-10-11`
+- permafrost observed: `60,872`
+- permafrost not detected to the observation limit: `17,044`
+- all-fields observations: `77,916` rows
+- source metadata and source-reference crosswalk: `57` rows each
+- hard-deleted input rows: `54`
+- build-level QC flag rows: `0`
 
-- working observation table
-  - rows: `246,180`
-  - columns: `11`
-  - unique sources: `49`
-  - date range: `1961-09-01` to `2024-10-03`
-- internal all-fields review table
-  - rows: `246,180`
-  - preserves source-specific/wide fields for provenance and review
-- internal source-summary table
-  - rows: `49`
-  - unique sources: `49`
-- internal source-reference crosswalk
-  - rows: `49`
-  - one row per included source
-  - filtered from `cusp_sources_bibtex.csv` to the current included-source set
-- internal observation release manifest
-  - generated from the build path
-  - includes row counts, source counts, date range, file sizes, hashes, and
-    generation timestamp for the observation-level artifacts
+The 54 hard deletions comprise 39 rows without coordinates and 15 exact
+duplicates across the required observation fields. The deletion log preserves
+their source rows and reasons.
 
-## Checks That Passed
+## Validation Results
 
-- required observation-level columns are present in the working observation
-  table
-- the working observation table now contains only the canonical
-  observation-level fields:
-  - `cusp_obs_id`
-  - `source`
-  - `site_id`
-  - `lat`
-  - `lon`
-  - `date`
-  - `pf_observed`
-  - `thaw_depth`
-  - `pf_depth`
-  - `obs_limit`
-  - `method`
-- `cusp_obs_id` is now present, non-null, and unique across the canonical
-  observation table
-- `pf_observed` contains only `0` and `1` when non-null
-- dates are parseable across the full table
-- longitude and latitude ranges are within global bounds
-- source coverage matches the current included-source set
-- the working observation table and internal source-summary table rebuild deterministically in the audited
-  environment
-- the source-reference crosswalk rebuilds cleanly and has one unique row per
-  included `source`
-- the observation release manifest is now generated automatically by
-  `build.py`
+All hard gates passed:
 
-## Findings That Need Cleanup Before Release
+- exact canonical schema
+- present and unique `cusp_obs_id`
+- binary `pf_observed`
+- supported direct-observation methods
+- present, globally valid coordinates
+- parseable, in-range dates
+- nonnegative depth fields
+- no zero observation limits
 
-### 1. A small number of citation metadata fields still need cleanup in the
-source-reference crosswalk
+Additional build invariants also passed:
 
-The crosswalk itself is structurally correct, but two sources still need
-citation metadata attention:
+- every `pf_observed = 0` row has a positive `obs_limit`
+- every absence row has blank canonical `pf_depth` and `thaw_depth`
+- every absence row carries the lower-bound flag `LB`
+- every presence row without an exact depth carries the upper-bound flag `UB`
+- all 57 processing-script metadata headers are valid structured TOML
+- normalized coordinate/date/state/depth/method matching found no remaining
+  exact cross-source duplicate groups
 
-- `Bonaventure_Whati`: missing `title`
-- `Pastick`: currently missing `author`, `year`, and `title`
+## Dense GPR Review
 
-These are documentation/citation cleanup items rather than observation-build
-failures, but they should be resolved before treating the crosswalk as
-release-ready.
+CUSP now represents native dense GPR picks at one mean observation per occupied
+5 m by 5 m projected cell within each source/site/date survey.
 
-### 2. A small number of records are still deleted for missing coordinates
+| Source | Native GPR picks | CUSP GPR rows | Spacing |
+|---|---:|---:|---:|
+| `Jafarov_2016` | 57,294 | 4,752 | 5 m |
+| `Moore_et_al_2025` | 135,297 | 8,178 | 5 m |
+| `Patton_2021` | 11,607 | 163 | 5 m |
+| `Petrone_etal_2016` | 1,357 | 590 | 5 m |
+| **Total** | **205,555** | **13,683** | **5 m** |
 
-The canonical observation table has no missing coordinates after hard deletion.
-Current missing-coordinate deletion-log records are concentrated in a few
-sources:
+Jafarov is retained as the original source for the 2013 Barrow campaign. Before
+Moore aggregation, the Moore processor removes 57,294 copied Jafarov GPR picks
+and 1,297 copied probe observations. It does not use Moore's conflicting 2014
+or 2018 dates to identify those copies. Patton and Petrone were checked against
+the retained GPR sources and found to have distinct footprints.
 
-- `Minsley_2015`: `15`
-- `Zhao_2021`: `12`
-- `Hollingsworth_2005`: `6`
-- `Ruess_2025`: `6`
+Different survey dates and thaw years remain separate even where coordinates
+overlap. Spatial overlap by itself is not treated as duplication.
 
-These do not look like widespread combine failures; they appear to be
-source-specific metadata gaps. They should be reviewed source by source and
-either:
+## Nonblocking Diagnostics
 
-- filled from source materials,
-- explicitly accepted as coordinate-missing records, or
-- excluded from the public observation-level release if coordinates are deemed
-  required.
+The audit reports no rows where `thaw_depth > pf_depth`. This remains a
+diagnostic because source definitions can make the two fields non-equivalent.
 
-### 3. A small number of records still have missing `site_id`
+There are 9,409 rows without `site_id`: 9,308 from `Pawley_2018`, 56 from
+`Koyukuk_2018`, and 45 from `Douglas_Koyukuk_2022`. Coordinates are present,
+and missing source identifiers remain warning-level rather than a hard gate.
 
-Missing `site_id` values are concentrated in:
+The source-reference crosswalk is complete except for bibliographic metadata
+for `Pastick`. Bonnaventure now links to the 2026 paper and notes that CUSP's
+point file was shared directly rather than distributed with the publication.
 
-- `Pawley_2018`: `9308`
-- `Bonaventure_Whati`: `145`
-- `Koyukuk_2018`: `56`
-- `Douglas_Koyukuk_2022`: `45`
+## Verdict
 
-`Pawley_2018` is expected to have missing `site_id` values because the source
-does not provide row-level site identifiers, and the processing script does not
-assign synthetic IDs.
-
-## Findings That Look Diagnostic Rather Than Blocking
-
-### Duplicate-key groups are common in a few sources
-
-Using the key:
-
-- `source`
-- `site_id`
-- `date`
-- `lat`
-- `lon`
-
-there are `1,851` rows participating in duplicate-key groups. These are
-dominated by:
-
-- `Jafarov_2016`
-- `James_2019`
-- `Walker_2022`
-- `Bakian_Dogaheh_2020`
-
-Inspection suggests these are often repeated observations at the same site/date
-or multiple values recorded under the same site/date identifier, not obviously
-accidental duplicated rows introduced by the combine step. This should remain a
-diagnostic QA check, but it is not currently being treated as a release blocker
-by itself.
-
-### Swapped-coordinate heuristic no longer has current findings
-
-The simple swapped-lat/lon heuristic currently has no findings in the
-Brown-free working observation table. This should remain an audit output, not
-an automatic blocker.
-
-### The source summary and source-reference crosswalk serve different roles
-
-The source-summary artifact is a compact per-source QA summary. The
-source-reference crosswalk is the citation-facing one-row-per-source artifact
-filtered to the included release set.
-
-## Recommended Next Fixes
-
-1. Decide whether missing coordinates are acceptable in the public
-   observation-level release.
-2. Add stable `site_id` values where feasible, especially for sources where
-   the source clearly provides one or a synthetic transect/site identifier is
-   appropriate, but treat remaining missing-`site_id` cases as warning-level
-   issues rather than release blockers.
-
-## Status After Upstream QA Push
-
-After pushing a substantial amount of QA/QC back into the individual
-`process_<source>.py` scripts, the current observation-level build state is much
-cleaner:
-
-- no remaining `missing_method` flags
-- no remaining unsupported method values in the canonical observation table
-- no remaining `zero_obs_limit` flags
-- no remaining `(0,0)` coordinate rows in the built observation table
-- `missing_site_id` is no longer emitted as a build-level QC flag
-- missing `site_id` remains accepted as a non-blocking source-level limitation
-  where the original source does not provide one
-
-Current remaining hard deletions are dominated by:
-
-- source-level duplicate groups in `Jafarov_2016` and `Bakian_Dogaheh_2020`
-- missing-coordinate rows in `Minsley_2015`, `Zhao_2021`,
-  `Hollingsworth_2005`, and `Ruess_2025`
-
-The duplicate-heavy sources are currently deferred for later source-level
-review rather than treated as public release blockers.
-
-## Interim Validation Verdict
-
-The rebuilt observation-level bundle is structurally sound and suitable to use
-as the basis for continued release cleanup. The remaining issues are no longer
-combine-step failures. They are a short list of source-level cleanup items and
-citation-metadata gaps that should be resolved before treating the full
-observation-level release bundle as final.
-
-## Current Observation Build Behavior
-
-The observation build path is now implemented in `cusp/build.py`.
-`cusp/combine_data.py` is now only a compatibility wrapper around that logic.
-Its current behavior is:
-
-- rebuild raw all-fields observations from the processed source tables
-- normalize `method` into the controlled release vocabulary where possible
-- write a canonical working observation table that contains only the required core columns
-- write an all-fields table as the wide/provenance-preserving version
-- write a source-reference crosswalk as the one-row-per-source citation
-  mapping artifact
-- write an observation release manifest as the observation-level artifact
-  inventory and checksum manifest
-- delete rows with:
-  - missing coordinates
-  - missing `pf_observed`
-  - `(0,0)` coordinates
-  - exact duplicates across the canonical required fields
-- write a deletion log to record hard deletions and reasons
-- write a QC flag log to record non-deletion issues such as:
-  - missing `method`
-  - `obs_limit = 0`
-- validate observation quality flags against `data/quality_flag_definitions.csv`
-- derive the canonical `quality_flags` column as semicolon-delimited flag codes
-
-The current build assumption is that missing `site_id` is acceptable in the
-canonical observation table, but missing coordinates and missing `pf_observed`
-are not.
-
-## QA/QC Boundary
-
-The intended long-term boundary is:
-
-- `process_<source>.py` handles source-specific interpretation, source-level QA,
-  sentinel handling, units, date assumptions, and within-source deduplication
-- `build.py` handles cross-source consistency, canonical output shaping, global
-  duplicate detection, and explicit release deletion/flag logs
-
-This means contributor pull requests should ideally arrive with source-level
-judgment already encoded in the processing script, rather than relying on the
-final observation build step for source-specific interpretation.
+The canonical observation table is structurally sound and suitable as the
+current modeler-facing working dataset. Release packaging, version assignment,
+and the remaining `Pastick` citation cleanup are separate release tasks.

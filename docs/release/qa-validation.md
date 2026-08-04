@@ -1,46 +1,46 @@
 # Formal QA Validation
 
-This document records the current QA layer for the canonical
-observation-level release bundle and the latest audited state of that layer.
+This page records the current QA layer and the latest validated result for the
+canonical CUSP observation table.
 
 ## QA Workflow
 
-Hard-gate tests live in [tests/test_qc_observations.py](https://github.com/jonschwenk/cusp/blob/main/tests/test_qc_observations.py).
-They validate the working observation table before it is exported as
-`cusp_vX.Y.csv`:
+Hard-gate checks run with:
 
-- exact canonical observation columns only
+```bash
+python -m cusp.qc validate-observations --out outputs/qc_tests
+```
+
+They require:
+
+- the exact canonical observation schema
 - present and unique `cusp_obs_id`
-- valid binary `pf_observed`
+- binary `pf_observed`
 - supported direct-observation `method` values
-- no missing or out-of-range coordinates
+- present and valid coordinates
 - parseable and in-range dates
-- no negative depth values
-- no `obs_limit == 0`
+- nonnegative depth values
+- no zero observation limits
 
-Diagnostic audits are available through `python -m cusp.qc audit-observations`
-and the shared helpers in [cusp/qc](https://github.com/jonschwenk/cusp/blob/main/cusp/qc).
-The audit is intentionally behind-the-scenes: it writes review outputs under
-`outputs/qc_audit/` and does not mutate data.
+The diagnostic audit runs with:
 
-## Current result
+```bash
+python -m cusp.qc audit-observations --out outputs/qc_audit
+```
 
-Latest run:
+It writes review files without changing the observations.
 
-- `python -m cusp.qc validate-observations`
-- `python -m cusp.qc audit-observations`
-- `python -m unittest discover -s tests`
+## Latest Result
 
-Observed outcome:
+Validated on 2026-08-04 under Python 3.12:
 
-- all hard-gate tests passed
-- current canonical observation table size: `249,012` rows
-- current canonical observation table columns: `11`
-- no hard-gate failures were written to `outputs/qc_tests/`
+- hard-gate status: passed
+- canonical table: `77,916` rows and `13` columns
+- complete test suite: `50 passed`
+- processing metadata: `57` structured headers, `0` validation errors
+- build-level QC flag log: `0` rows
 
-## Current audit summary
-
-From `outputs/qc_audit/qc_summary.json`:
+## Audit Summary
 
 - `n_missing_cusp_obs_id = 0`
 - `n_duplicate_cusp_obs_id = 0`
@@ -54,31 +54,25 @@ From `outputs/qc_audit/qc_summary.json`:
 - `n_negative_obs_limit = 0`
 - `n_zero_obs_limit = 0`
 - `n_invalid_pf_observed = 0`
-- unsupported method rows: `0`
-- `n_thaw_gt_pf_diagnostic = 53`
+- `n_thaw_gt_pf_diagnostic = 0`
 - `n_suspect_swapped_latlon = 0`
 
-Current `pf_observed` counts in the canonical observation table:
+Current `pf_observed` counts:
 
-- `1`: `230,539`
-- `0`: `18,473`
+- presence: `60,872`
+- absence to a positive observation limit: `17,044`
 
-## Explicit non-blockers
+## Build-Enforced Semantics
 
-The following are intentionally *not* part of the hard-gate observation QA:
+The observation build also rejects any absence without a positive
+`obs_limit`. It clears canonical depth fields on absence rows, adds `LB` to
+bounded absences, and adds `UB` to presence rows whose exact depth is unknown.
 
-- missing `site_id`
-- duplicate-heavy source semantics that remain source-level review topics
-- below-Arctic-circle checks
+These rules supplement the general QA checks because they encode CUSP's
+observation semantics rather than generic numeric validity.
 
-Those may still be reviewed manually or through source-specific triage, but
-they do not currently block the canonical release build.
+## Nonblocking Checks
 
-## Still deferred
-
-These QA topics are still open for future refinement rather than implemented as
-formal blockers today:
-
-- ocean / impossible-location screening
-- stronger intended-domain checks
-- source-specific duplicate semantics beyond current build-level exact-duplicate handling
+Missing `site_id`, source-specific overlap notes, and the
+`thaw_depth > pf_depth` check remain diagnostic. They are exposed for review
+but do not automatically invalidate otherwise usable observations.
