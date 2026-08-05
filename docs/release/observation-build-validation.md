@@ -4,8 +4,9 @@
 
 This page records the latest validated state of the observation-level CUSP
 build. The current snapshot was generated on 2026-08-04 after standardizing
-dense GPR sampling, resolving the Moore/Jafarov overlap, and enforcing explicit
-observation limits for permafrost-absence rows.
+dense GPR sampling, resolving the Moore/Jafarov overlap, enforcing explicit
+observation limits for instrument-based permafrost-absence rows, and restoring
+the flagged visual Koyukuk classifications.
 
 Commands used:
 
@@ -21,12 +22,14 @@ The final build and tests were run under Python 3.12.
 
 ## Current Snapshot
 
-- canonical observations: `77,916` rows and `13` columns
+- canonical observations: `78,230` rows and `13` columns
 - included sources: `57`
 - date range: `1952-06-01` through `2024-10-11`
-- permafrost observed: `60,872`
-- permafrost not detected to the observation limit: `17,044`
-- all-fields observations: `77,916` rows
+- permafrost observed: `60,986`, including `114` visually interpreted rows
+- permafrost not detected to a positive observation limit: `17,044`
+- visually interpreted permafrost absence without a point-specific observation
+  limit: `200`
+- all-fields observations: `78,230` rows
 - source metadata and source-reference crosswalk: `57` rows each
 - hard-deleted input rows: `54`
 - build-level QC flag rows: `0`
@@ -42,7 +45,7 @@ All hard gates passed:
 - exact canonical schema
 - present and unique `cusp_obs_id`
 - binary `pf_observed`
-- supported direct-observation methods
+- supported observation method codes
 - present, globally valid coordinates
 - parseable, in-range dates
 - nonnegative depth fields
@@ -50,9 +53,11 @@ All hard gates passed:
 
 Additional build invariants also passed:
 
-- every `pf_observed = 0` row has a positive `obs_limit`
+- every instrument-based `pf_observed = 0` row has a positive `obs_limit`
+- the only absence rows without `obs_limit` are 200 Koyukuk visual polygon
+  classifications, all explicitly marked `VI`
 - every absence row has blank canonical `pf_depth` and `thaw_depth`
-- every absence row carries the lower-bound flag `LB`
+- every depth-bounded absence row carries the lower-bound flag `LB`
 - every presence row without an exact depth carries the upper-bound flag `UB`
 - all 57 processing-script metadata headers are valid structured TOML
 - normalized coordinate/date/state/depth/method matching found no remaining
@@ -92,6 +97,11 @@ and missing source identifiers remain warning-level rather than a hard gate.
 The source-reference crosswalk is complete except for bibliographic metadata
 for `Pastick`. Bonnaventure now links to the 2026 paper and notes that CUSP's
 point file was shared directly rather than distributed with the publication.
+
+Koyukuk contains 56 retained direct field observations and 314 retained points
+sampled from visually interpreted permafrost/non-permafrost polygons. The
+visual rows carry `VI`, have no point-specific depth or observation limit, and
+can be removed as a group for instrument-only or depth-bounded analyses.
 
 ## Verdict
 

@@ -26,6 +26,7 @@ The canonical vocabulary lives in `data/quality_flag_definitions.csv`.
 | `SS` | `summary_statistic` | aggregation | Canonical observation value is a mean annual site summary or other source or processor summary statistic. |
 | `TI` | `temperature_inferred` | method | Permafrost state or depth was inferred from temperature profile logic. |
 | `GI` | `geophysics_inferred` | method | Depth was inferred from GPR ERT or other geophysical interpretation rather than direct probing or coring. |
+| `VI` | `visual_interpretation` | method | Permafrost presence or absence was assigned from visual field or mapped-feature interpretation rather than a subsurface instrument measurement; coordinates may be representative samples from mapped areas. |
 | `ME` | `model_or_estimate` | derivation | Source or CUSP processor uses modeled estimated extrapolated or reconstructed depth. |
 | `FE` | `figure_extracted` | derivation | Value or coordinate was extracted georeferenced or digitized from a figure. |
 | `PA` | `pf_state_assumed` | interpretation | Permafrost presence state was assigned from study context threshold logic or source convention rather than explicit row-level presence or absence. |

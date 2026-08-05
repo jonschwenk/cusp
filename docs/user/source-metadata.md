@@ -2,14 +2,14 @@
 
 CUSP keeps source-level metadata separate from the observation table. These
 tables help users understand which source datasets are represented in CUSP and
-which source-wide caveats apply before row-level filtering.
+which quality caveats occur before row-level filtering.
 
 ## Dataset Table
 
 The generated `data/source_metadata.csv` table is the main source-level
 dataset catalog. It has one row per included CUSP source and combines
-observation counts, methods, source-wide quality flags, duplication notes, and
-selected citation metadata.
+observation counts, methods, quality flags found on retained rows or applied
+source-wide, duplication notes, and selected citation metadata.
 
 | Column | Meaning |
 |---|---|
@@ -20,12 +20,15 @@ selected citation metadata.
 | `n_alt_observations` | Number of rows with a thaw-depth / active-layer-thickness value |
 | `n_pf_depth_observations` | Number of rows with a permafrost-depth value |
 | `methods` | Semicolon-delimited CUSP method codes used by the source |
-| `source_quality_flags` | Semicolon-delimited source-wide quality flag codes |
-| `source_quality_flag_names` | Semicolon-delimited full source-wide quality flag names |
-| `source_quality_flag_categories` | Semicolon-delimited source-wide quality flag categories |
+| `source_quality_flags` | Union of semicolon-delimited flags found on retained rows or applied source-wide |
+| `source_quality_flag_names` | Full names for the flags represented in the source |
+| `source_quality_flag_categories` | Categories represented by those flags |
 | `has_duplication_caveat` | `true` when the source has a known possible duplicate or overlap caveat |
 | `duplication_notes` | Short source-level note about known or possible overlap with other CUSP sources |
 | citation fields | Selected BibTeX-derived citation metadata, when available |
+
+These flag columns are inventories, not claims that every row has every listed
+flag. Use observation-level `quality_flags` for filtering individual rows.
 
 The duplication fields are summary helpers. Notes include both resolved
 duplication, such as copies removed from a synthesis in favor of an original

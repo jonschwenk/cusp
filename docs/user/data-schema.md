@@ -36,10 +36,13 @@ The schema-defining release file is:
 
 - `site_id` is warning-only if missing. Some sources do not provide a site ID.
 - `pf_observed = 1` means permafrost was observed in the source workflow.
-- `pf_observed = 0` means permafrost was not observed down to the positive
-  depth recorded in `obs_limit`; it is a depth-bounded absence.
-- Every absence row must have `obs_limit > 0` and blank canonical `pf_depth`
-  and `thaw_depth` values.
+- `pf_observed = 0` normally means permafrost was not observed down to the
+  positive depth recorded in `obs_limit`; it is a depth-bounded absence.
+- Instrument-based absence rows must have `obs_limit > 0`. The only supported
+  exception is an explicitly flagged visual presence/absence classification
+  (`VI`), for which `obs_limit` may be blank because no point-specific search
+  depth exists.
+- Every absence row has blank canonical `pf_depth` and `thaw_depth` values.
 - A numeric detected `pf_depth` or `thaw_depth` is represented as
   `pf_observed = 1`, regardless of its depth.
 - Numeric nulls mean not reported, not measured, or not inferable from the
@@ -69,6 +72,7 @@ ranking. See [Quality flags](quality-flags.md) for the full vocabulary and
 | `DA` | Date was assigned from year, campaign, midpoint, or representative thaw-season convention. |
 | `TI` | Permafrost state or depth was inferred from temperature profile logic. |
 | `GI` | Depth was inferred from geophysical interpretation. |
+| `VI` | Presence or absence was visually interpreted rather than measured with a subsurface instrument. |
 
 ### Controlled vocabulary for `method`
 

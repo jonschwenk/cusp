@@ -16,7 +16,7 @@ They require:
 - the exact canonical observation schema
 - present and unique `cusp_obs_id`
 - binary `pf_observed`
-- supported direct-observation `method` values
+- supported `method` values
 - present and valid coordinates
 - parseable and in-range dates
 - nonnegative depth values
@@ -35,8 +35,8 @@ It writes review files without changing the observations.
 Validated on 2026-08-04 under Python 3.12:
 
 - hard-gate status: passed
-- canonical table: `77,916` rows and `13` columns
-- complete test suite: `50 passed`
+- canonical table: `78,230` rows and `13` columns
+- complete test suite: `56 passed`
 - processing metadata: `57` structured headers, `0` validation errors
 - build-level QC flag log: `0` rows
 
@@ -59,14 +59,17 @@ Validated on 2026-08-04 under Python 3.12:
 
 Current `pf_observed` counts:
 
-- presence: `60,872`
-- absence to a positive observation limit: `17,044`
+- presence: `60,986`
+- absence: `17,244`, comprising `17,044` depth-bounded records and `200`
+  flagged visual Koyukuk classifications without a point-specific limit
 
 ## Build-Enforced Semantics
 
-The observation build also rejects any absence without a positive
-`obs_limit`. It clears canonical depth fields on absence rows, adds `LB` to
-bounded absences, and adds `UB` to presence rows whose exact depth is unknown.
+The observation build rejects any instrument-based absence without a positive
+`obs_limit`. It permits a blank limit only for a row explicitly marked as a
+visual interpretation (`VI`), and still rejects zero or negative limits. It
+clears canonical depth fields on absence rows, adds `LB` to bounded absences,
+and adds `UB` to presence rows whose exact depth is unknown.
 
 These rules supplement the general QA checks because they encode CUSP's
 observation semantics rather than generic numeric validity.

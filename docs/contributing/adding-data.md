@@ -101,8 +101,11 @@ Important expectations:
 - `site_id` may be null if the source truly does not provide one
 - a numeric detected thaw depth or permafrost depth should be represented as
   `pf_observed = 1`, regardless of the depth value
-- `pf_observed = 0` should only represent an explicit no-detection result and
-  must have a positive `obs_limit`
+- `pf_observed = 0` should normally represent an explicit no-detection result
+  and must have a positive `obs_limit`
+- a visual presence/absence classification may leave `obs_limit` blank only
+  when `quality_flag_visual_interpretation = True`; document why no
+  point-specific observation limit exists
 - absence rows should leave canonical `pf_depth` and `thaw_depth` blank; retain
   supporting source values in clearly named provenance columns
 

@@ -420,13 +420,26 @@ def validate_data_df(df: pd.DataFrame, source: str) -> None:
     if not is_integer_dtype(df["pf_observed"]):
         raise RuntimeError(f"{source} csv pf_observed column is not integer type.")
 
-    invalid_absence_limit = df["pf_observed"].eq(0) & (
-        df["obs_limit"].isna() | df["obs_limit"].le(0)
+    visual_flag_column = f"{QUALITY_FLAG_PREFIX}visual_interpretation"
+    visual_interpretation = (
+        truthy_series(df[visual_flag_column])
+        if visual_flag_column in df.columns
+        else pd.Series(False, index=df.index)
+    )
+    missing_absence_limit = df["pf_observed"].eq(0) & df["obs_limit"].isna()
+    nonpositive_absence_limit = (
+        df["pf_observed"].eq(0)
+        & df["obs_limit"].notna()
+        & df["obs_limit"].le(0)
+    )
+    invalid_absence_limit = (
+        (missing_absence_limit & ~visual_interpretation)
+        | nonpositive_absence_limit
     )
     if invalid_absence_limit.any():
         raise RuntimeError(
             f"{source} has {int(invalid_absence_limit.sum())} permafrost-absence "
-            "rows without a positive obs_limit."
+            "rows without a positive obs_limit or an explicit visual-interpretation flag."
         )
 
     lon = df["lon"].dropna()

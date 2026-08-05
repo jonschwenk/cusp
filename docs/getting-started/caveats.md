@@ -65,17 +65,24 @@ check the source-processing script and the original source documentation.
 observation context. It does not always mean that permafrost is absent at all
 depths, nearby locations, or later dates.
 
-Every CUSP absence row has a positive `obs_limit`. Its meaning is therefore
-"permafrost was not detected to this depth," not "permafrost is absent at all
-depths." Canonical `pf_depth` and `thaw_depth` values are blank on absence rows.
-Source values used to establish a limit are retained in the all-fields table
-when available.
+Instrument-based CUSP absence rows have a positive `obs_limit`. Their meaning
+is therefore "permafrost was not detected to this depth," not "permafrost is
+absent at all depths." Canonical `pf_depth` and `thaw_depth` values are blank on
+absence rows. Source values used to establish a limit are retained in the
+all-fields table when available.
+
+The supported exception is an explicitly flagged visual presence/absence
+classification. These rows carry `VI` and may have a blank `obs_limit` because
+no point-specific subsurface search depth exists. Treat them as qualitative
+classifications, and filter out `VI` when an analysis requires instrument-based
+or depth-bounded observations.
 
 A reported numeric thaw depth or depth to permafrost is treated as a detection,
 regardless of how deep it is. An absence is created only from an explicit
 no-detection statement, bound, sentinel, or source binary state with a usable
-observation limit. `LB` identifies lower-bound absences; flags such as `OA` and
-`PB` distinguish assumed limits from profile-bottom limits.
+observation limit, except for the explicit `VI` case above. `LB` identifies
+lower-bound absences; flags such as `OA` and `PB` distinguish assumed limits
+from profile-bottom limits.
 
 ## Dates And Seasonality
 
