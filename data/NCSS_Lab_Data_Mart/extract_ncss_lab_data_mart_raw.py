@@ -11,6 +11,7 @@ processor.
 from __future__ import annotations
 
 import csv
+import re
 import sqlite3
 from pathlib import Path
 
@@ -19,6 +20,7 @@ SOURCE_DIR = Path(__file__).resolve().parent
 GPKG_PATH = SOURCE_DIR / "ncss_labdata.gpkg"
 RAW_OUTPUT = SOURCE_DIR / "raw_ncss_permafrost_domain_pedons.csv"
 ABSENCE_LATITUDE_THRESHOLD = 55.0
+HORIZON_MASTER_SYMBOLS = frozenset("OAEBCRLMW")
 
 
 RAW_COLUMNS = [
@@ -61,6 +63,59 @@ RAW_COLUMNS = [
 ]
 
 
+def is_frozen_horizon_designation(value: object) -> int:
+    """Return 1 when an NCSS horizon has a valid ``f`` or ``ff`` suffix.
+
+    NCSS ``hzn_desgn`` values may contain lithologic prefixes, vertical
+    subdivisions, transitional horizons, and slash-separated components.
+    The parser intentionally rejects prose and parenthetical texture labels.
+    Uppercase ``F`` is accepted in otherwise valid legacy-style symbols, but
+    ``hzn_desgn_old`` is not classified because that field also contains
+    free-form labels such as ``DUFF`` and ``CLAY FILMS``.
+    """
+
+    if value is None:
+        return 0
+
+    for raw_component in str(value).strip().split("/"):
+        component = (
+            raw_component.strip()
+            .replace("\N{RIGHT SINGLE QUOTATION MARK}", "'")
+            .replace("\N{PRIME}", "'")
+        )
+        if not component or re.search(r"\s|[()&]", component):
+            continue
+
+        component = component.lstrip("^")
+        component = re.sub(r"^\d+", "", component)
+
+        # Lowercase w is used for ice-wedge components in some NCSS records.
+        if re.fullmatch(r"w[fF]{1,2}\d*", component):
+            return 1
+        if component.startswith("w"):
+            component = component[1:]
+
+        master_end = 0
+        while (
+            master_end < len(component)
+            and component[master_end] in HORIZON_MASTER_SYMBOLS
+        ):
+            master_end += 1
+        if master_end == 0:
+            continue
+
+        suffix = component[master_end:].replace("'", "")
+        suffix = re.sub(r"\d", "", suffix)
+        if (
+            suffix
+            and re.fullmatch(r"[a-zF]+", suffix)
+            and ("f" in suffix or "F" in suffix)
+        ):
+            return 1
+
+    return 0
+
+
 def main() -> None:
     if not GPKG_PATH.exists():
         raise FileNotFoundError(
@@ -101,20 +156,15 @@ def main() -> None:
         c.SSL_taxsubgrp,
         MIN(CASE
           WHEN l.hzn_top IS NOT NULL
-           AND (
-             lower(coalesce(l.hzn_desgn, '')) LIKE '%f%'
-             OR lower(coalesce(l.hzn_desgn_old, '')) LIKE '%f%'
-           )
+           AND is_frozen_horizon(l.hzn_desgn) = 1
           THEN l.hzn_top END) AS pf_depth_cm,
         MAX(l.hzn_bot) AS obs_limit_cm,
         GROUP_CONCAT(CASE
-          WHEN lower(coalesce(l.hzn_desgn, '')) LIKE '%f%'
-            OR lower(coalesce(l.hzn_desgn_old, '')) LIKE '%f%'
-          THEN coalesce(l.hzn_desgn, l.hzn_desgn_old) END, '|') AS frozen_horizons,
+          WHEN is_frozen_horizon(l.hzn_desgn) = 1
+          THEN l.hzn_desgn END, '|') AS frozen_horizons,
         GROUP_CONCAT(coalesce(l.hzn_desgn, l.hzn_desgn_old), '|') AS all_horizons,
         COUNT(CASE
-          WHEN lower(coalesce(l.hzn_desgn, '')) LIKE '%f%'
-            OR lower(coalesce(l.hzn_desgn_old, '')) LIKE '%f%'
+          WHEN is_frozen_horizon(l.hzn_desgn) = 1
           THEN 1 END) AS n_frozen_layers,
         COUNT(*) AS n_layers
       FROM lab_combine_nasis_ncss AS c
@@ -145,6 +195,12 @@ def main() -> None:
     """
 
     con = sqlite3.connect(GPKG_PATH)
+    con.create_function(
+        "is_frozen_horizon",
+        1,
+        is_frozen_horizon_designation,
+        deterministic=True,
+    )
     con.row_factory = sqlite3.Row
     rows = [dict(row) for row in con.execute(query, (ABSENCE_LATITUDE_THRESHOLD, ABSENCE_LATITUDE_THRESHOLD))]
     con.close()

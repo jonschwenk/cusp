@@ -6,7 +6,7 @@ source_key = "NCSS_Lab_Data_Mart"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-21"
+last_substantive_update = "2026-08-05"
 
 source_dataset = '''
 USDA Natural Resources Conservation Service, National Cooperative Soil Survey
@@ -18,9 +18,10 @@ https://ncsslabdatamart.sc.egov.usda.gov/ on 2026-05-21.
 processing_assumptions = [
   "The versioned raw input is a compact pedon-level subset generated from the local NCSS Lab Data Mart GeoPackage by extract_ncss_lab_data_mart_raw.py.",
   "The full NCSS GeoPackage and ZIP archive are intentionally not versioned because they are too large for the repository.",
-  "Rows with any f-bearing horizon designation in hzn_desgn or hzn_desgn_old are treated as permafrost/frozen-ground presence observations.",
-  "For presence rows, pf_depth is the shallowest top depth among f-bearing horizons.",
-  "Rows with no f-bearing horizon designation are treated as absence observations to profile bottom, with obs_limit equal to the deepest horizon bottom.",
+  "Rows with a syntactically valid f or ff suffix in the normalized NCSS hzn_desgn field are treated as permafrost-presence observations, following USDA usage of those suffixes for permanently frozen soil or ice.",
+  "The legacy hzn_desgn_old field is not used to classify frozen horizons because it contains free-form descriptions such as DUFF, CLAY FILMS, and fragment notes that are not horizon suffixes.",
+  "For presence rows, pf_depth is the shallowest top depth among horizons with a valid f or ff suffix.",
+  "Rows with no valid frozen-horizon suffix are treated as absence observations to profile bottom, with obs_limit equal to the deepest horizon bottom.",
   "Absence rows are only retained in the raw extract when abs(latitude) >= 55 degrees to avoid low-latitude absence records that are not useful for CUSP.",
   "Explicit presence rows are retained globally regardless of latitude.",
   "NCSS horizon designation notation is treated as authoritative for frozen-layer status; otherwise the source cannot be used consistently.",
@@ -46,6 +47,7 @@ manual_steps = [
 
 known_limitations = [
   "The compact raw extract is derived from the NCSS GeoPackage and should be regenerated if the NCSS Lab Data Mart release changes.",
+  "Valid f/ff presence records are retained globally without a latitude or climate filter; uncommon low-latitude records therefore rely on the source horizon designation and carry the CUSP assumed-state quality flag.",
   "Absence observations mean permafrost/frozen material was not indicated within the described profile, not that permafrost is absent below the profile bottom.",
   "Some NCSS rows overlap with existing Pastick records; Pastick often carries update-like dates, so coordinate/depth/profile-bottom matching is more informative than exact date matching for that source.",
   "The method field does not distinguish soil pits from auger/core descriptions because the compact NCSS tables do not provide a reliable per-row CUSP method mapping.",
