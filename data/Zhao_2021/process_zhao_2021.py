@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Zhao_2021"
 release_clearance = "approved"
 permission_basis = "published_literature"
-original_author = "jrowland"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Zhao, L.; Zou, D.; Hu, G.; Wu, T.; Du, E.; Liu, G.; Xiao, Y.; Li, R.; Pang,
 Q.; Qiao, Y.; Wu, X.; Sun, Z.; Xing, Z.; Sheng, Y.; Zhao, Y.; Shi, J.; Xie,
@@ -17,7 +17,7 @@ Science Data 13: 4207-4218. https://doi.org/10.5194/essd-13-4207-2021
 processing_assumptions = [
   "For each site-year, the script searches all temperature-depth observations and keeps the deepest depth that is above 0 C, subject to the deeper-sensor decision rules in process_sheet().",
   "pf_observed is set to 1 only when a deeper sensor exists with temperature below 0 C; years with deeper readings that are all above 0 C or entirely missing are treated as indeterminate and skipped.",
-  "obs_limit is set to the maximum depth column available for each site's worksheet.",
+  "For absence rows, obs_limit is set to the maximum sensor depth and the deepest thawed sensor is retained only as provenance; presence rows keep exact inferred thaw/pf depth.",
   "method is set to temp for all processed rows, and pf_depth is set equal to thaw_depth where pf_observed = 1.",
 ]
 temporal_handling = [
@@ -185,6 +185,10 @@ combined['method'] = 'temp'
 combined["pf_depth"] = np.nan
 combined["pf_depth"] = np.where(combined["pf_observed"] == 1,
                                 combined["thaw_depth"], np.nan)
+combined['zhao_deepest_thawed_sensor_cm'] = combined['thaw_depth']
+absence = combined['pf_observed'].eq(0)
+combined.loc[absence, 'thaw_depth'] = np.nan
+combined.loc[~absence, 'obs_limit'] = np.nan
 
 # ------------------------------------------------------------------
 # 5. save

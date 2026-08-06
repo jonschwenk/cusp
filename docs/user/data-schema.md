@@ -3,7 +3,7 @@
 This document describes the stable public columns in the main CUSP release
 table.
 
-The versioned release file is named like `cusp_v1.0.csv`,
+The versioned release file is named like `cusp_v1.1.csv`,
 `cusp_v1.1.csv`, or `cusp_v2.0.csv`.
 
 For naming and export layout, see
@@ -36,13 +36,23 @@ The schema-defining release file is:
 
 - `site_id` is warning-only if missing. Some sources do not provide a site ID.
 - `pf_observed = 1` means permafrost was observed in the source workflow.
-- `pf_observed = 0` means permafrost was not observed within the source
-  observation context.
+- `pf_observed = 0` normally means permafrost was not observed down to the
+  positive depth recorded in `obs_limit`; it is a depth-bounded absence.
+- Instrument-based absence rows must have `obs_limit > 0`. The only supported
+  exception is an explicitly flagged visual presence/absence classification
+  (`VI`), for which `obs_limit` may be blank because no point-specific search
+  depth exists.
+- Every absence row has blank canonical `pf_depth` and `thaw_depth` values.
+- A numeric detected `pf_depth` or `thaw_depth` is represented as
+  `pf_observed = 1`, regardless of its depth.
 - Numeric nulls mean not reported, not measured, or not inferable from the
   source workflow.
 - `thaw_depth`, `pf_depth`, and `obs_limit` are all recorded in centimeters
   below ground surface.
 - `quality_flags` is blank when no current quality flag applies.
+- Dense GPR sources normally contain one row per occupied 5 m projected grid
+  cell within a source/site/date survey. Native counts and spacing are retained
+  in the all-fields table rather than the stable public schema.
 
 ### Quality flags
 
@@ -62,6 +72,7 @@ ranking. See [Quality flags](quality-flags.md) for the full vocabulary and
 | `DA` | Date was assigned from year, campaign, midpoint, or representative thaw-season convention. |
 | `TI` | Permafrost state or depth was inferred from temperature profile logic. |
 | `GI` | Depth was inferred from geophysical interpretation. |
+| `VI` | Presence or absence was visually interpreted rather than measured with a subsurface instrument. |
 
 ### Controlled vocabulary for `method`
 

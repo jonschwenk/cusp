@@ -3,10 +3,10 @@
 """
 metadata_schema_version = 1
 source_key = "CALM"
-release_clearance = "needs_review"
-permission_basis = "CC-BY-4.0"
+release_clearance = "approved"
+permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-19"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Streletskiy, Dmitry A; CALM; GTN-P; Wieczorek, Mareike; Heim,
 Birgit; Bartsch, Annett (2025): GTN-P CALM: 35 years of Active Layer
@@ -34,10 +34,9 @@ manual_steps = []
 known_limitations = [
   "This PANGAEA file is an annual site-level time-series export, not the individual CALM grid-node raw measurements.",
   "A small number of event metadata records lack a recoverable method detail and are assigned method = unknown.",
-  "The processed output is marked needs_review and is not included in the default release build until duplicate/subsumption review is complete.",
 ]
 external_dependencies = []
-notes = ""
+notes = "The PANGAEA dataset is published under CC BY 4.0."
 """
 
 from __future__ import annotations

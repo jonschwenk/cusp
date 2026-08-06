@@ -18,7 +18,7 @@ The main code is in:
 
 The sampler can read:
 
-- the main CUSP release table, such as `cusp_v1.0.csv`
+- the main CUSP release table, such as `cusp_v1.1.csv`
 - an aggregated CUSP table
 - any point-like table with:
     - a canonical ID (`cusp_obs_id` or `cusp_30m_id`)

@@ -65,10 +65,24 @@ check the source-processing script and the original source documentation.
 observation context. It does not always mean that permafrost is absent at all
 depths, nearby locations, or later dates.
 
-The `obs_limit` column is especially important for absence-like observations.
-It records the depth limit of the observation when available. A shallow
-observation with no permafrost encountered should be interpreted differently
-from a deeper observation with the same `pf_observed` value.
+Instrument-based CUSP absence rows have a positive `obs_limit`. Their meaning
+is therefore "permafrost was not detected to this depth," not "permafrost is
+absent at all depths." Canonical `pf_depth` and `thaw_depth` values are blank on
+absence rows. Source values used to establish a limit are retained in the
+all-fields table when available.
+
+The supported exception is an explicitly flagged visual presence/absence
+classification. These rows carry `VI` and may have a blank `obs_limit` because
+no point-specific subsurface search depth exists. Treat them as qualitative
+classifications, and filter out `VI` when an analysis requires instrument-based
+or depth-bounded observations.
+
+A reported numeric thaw depth or depth to permafrost is treated as a detection,
+regardless of how deep it is. An absence is created only from an explicit
+no-detection statement, bound, sentinel, or source binary state with a usable
+observation limit, except for the explicit `VI` case above. `LB` identifies
+lower-bound absences; flags such as `OA` and `PB` distinguish assumed limits
+from profile-bottom limits.
 
 ## Dates And Seasonality
 
@@ -90,8 +104,22 @@ water layers.
 
 Some CUSP sources contain many observations in a very small area. Those records
 are valuable, but they can overweight a local field site in analyses that assume
-independent or evenly distributed observations. The
-[aggregation guide](../user/aggregation-guide.md) describes one way to create
+independent or evenly distributed observations.
+
+For dense GPR data, CUSP defaults to one mean row per occupied 5 m by 5 m
+projected grid cell within each source, site, and observation date. Different
+dates and thaw years remain separate even where their spatial footprints
+overlap. A source may use a documented exception when its survey design
+requires one. Processed and all-fields tables retain the native-point count and
+aggregation spacing, so a 5 m row should not be interpreted as a single native
+instrument pick.
+
+Cross-source deduplication is source-specific. When a synthesis republishes an
+identifiable original dataset, CUSP retains the original source and filters the
+copies in the synthesis processor. Spatial overlap alone is not grounds for
+removal, particularly when observations represent different thaw years.
+
+The [aggregation guide](../user/aggregation-guide.md) describes one way to create
 spatial and temporal summaries when that is more appropriate for your use case.
 
 ## Feature Sampling

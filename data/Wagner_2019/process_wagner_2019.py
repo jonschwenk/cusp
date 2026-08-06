@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "Wagner_2019"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Lawrence Vulis"
-last_substantive_update = "2023-06-20"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Wagner, Anna; Barker, Amanda (2018). Data for: Distribution of Polycyclic
 Aromatic Hydrocarbons (PAHs) from Legacy Spills at an Alaskan Arctic Site
@@ -14,7 +14,7 @@ doi:10.17632/2dn4rdmsxn.1
 processing_assumptions = [
   "The location and permafrost-depth tables are joined after reformatting station names to a common pattern.",
   "UTM Zone 4 coordinates are converted from EPSG:32604 to WGS84.",
-  "A 150 cm pf_depth threshold is used to classify pf_observed in order to accommodate the documented 20 cm uncertainty in permafrost depth.",
+  "Any row with a reported permafrost depth is treated as permafrost presence, regardless of depth; rows lacking permafrost depth are absence to the reported final profile depth.",
 ]
 temporal_handling = [
   "A single field-campaign date of 2015-09-01 is assigned to all processed rows.",
@@ -26,6 +26,7 @@ manual_steps = []
 known_limitations = [
   "thaw_depth is not reported and remains empty in the processed output.",
   "The processed dates are campaign-level approximations rather than per-observation timestamps.",
+  "The source reports approximately 20 cm uncertainty in permafrost depth; CUSP preserves the numeric value without threshold reclassification.",
 ]
 external_dependencies = []
 notes = ""
@@ -84,9 +85,12 @@ combined_gdf.rename(columns={"MaxDepthPermafrost": "pf_depth",
 combined_gdf['date'] = "2015-09-01"
 combined_gdf['pf_depth'] = round(combined_gdf['pf_depth'], 2)*100
 combined_gdf['obs_limit'] = round(combined_gdf['obs_limit'], 2)*100
-combined_gdf['pf_observed'] = (combined_gdf['pf_depth'] < 150)*1
+combined_gdf['pf_observed'] = combined_gdf['pf_depth'].notna().astype(int)
 combined_gdf['thaw_depth'] = np.nan
 combined_gdf['method'] = 'aug'
+combined_gdf['quality_flag_date_assigned'] = True
+combined_gdf['quality_flag_obs_limit_profile_bottom'] = combined_gdf['pf_observed'].eq(0)
+combined_gdf['quality_flag_source_value_approximate'] = combined_gdf['pf_observed'].eq(1)
 
 data_utils.check_columns(combined_gdf)
 

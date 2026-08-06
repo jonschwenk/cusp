@@ -4,8 +4,8 @@ metadata_schema_version = 1
 source_key = "Petrone_etal_2016"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Petrone, Johannes; Sohlenius, Gustav; Johansson, Emma; Lindborg, Tobias;
 Näslund, Jens-Ove; Strömgren, Mårten; Brydsten, Lars. 2016. Using
@@ -17,6 +17,7 @@ Western Greenland. PANGAEA. Supplement to Earth System Science Data 8(2),
 processing_assumptions = [
   "All processed observations are treated as permafrost-present records, so pf_observed is fixed to 1.",
   "The GPR workbook is assumed to already contain thaw-depth values converted from return times using the class-specific values described in Petrone et al. 2016.",
+  "Dense GPR picks are aggregated to one mean observation per occupied 5 m by 5 m UTM cell within transect and survey date; probe observations are not spatially aggregated.",
   "GPR transects are labeled GPRT* and thaw-probe transects are labeled PT* based on sheet names.",
 ]
 temporal_handling = [
@@ -25,11 +26,13 @@ temporal_handling = [
 ]
 spatial_handling = [
   "Coordinates are read directly from the source workbooks without reprojection.",
+  "GPR aggregation uses a local UTM projection selected independently for each transect/date survey unit.",
 ]
 manual_steps = []
 known_limitations = [
   "The processed output does not include non-permafrost observations, so absence conditions are not represented directly.",
   "obs_limit is left missing because the workbooks do not provide a consistent usable observation-limit field.",
+  "A 2026-08-04 cross-source footprint and coordinate/depth/date audit found no overlap with the retained Jafarov_2016, Moore_et_al_2025, or Patton_2021 GPR observations, so no cross-source rows are removed here.",
 ]
 external_dependencies = []
 notes = ""
@@ -76,7 +79,8 @@ def build_csv(gpr_xlsx, probe_xlsx, out_csv):
     gpr_xls = pd.ExcelFile(gpr_xlsx)
     probe_xls = pd.ExcelFile(probe_xlsx)
 
-    rows = []
+    gpr_rows = []
+    probe_rows = []
 
     # GPR
     gpr_date = pd.to_datetime("2011-08-18")
@@ -102,7 +106,7 @@ def build_csv(gpr_xlsx, probe_xlsx, out_csv):
             "obs_limit": np.nan,
             "method": "gp"
         })
-        rows.append(out)
+        gpr_rows.append(out)
 
     # Probe
     for sheet in probe_xls.sheet_names:
@@ -127,9 +131,19 @@ def build_csv(gpr_xlsx, probe_xlsx, out_csv):
             "obs_limit": np.nan,
             "method": "tp"
         })
-        rows.append(out)
+        probe_rows.append(out)
 
-    combined = pd.concat(rows, ignore_index=True) if rows else pd.DataFrame(columns=["site_id","date","lat","lon","thaw_depth","pf_observed","pf_depth","obs_limit","method"])
+    if gpr_rows:
+        gpr_native = pd.concat(gpr_rows, ignore_index=True)
+        gpr = data_utils.aggregate_gpr_points(
+            gpr_native,
+            value_columns=["thaw_depth", "pf_depth"],
+            spacing_m=5.0,
+        )
+    else:
+        gpr = pd.DataFrame()
+    probes = pd.concat(probe_rows, ignore_index=True) if probe_rows else pd.DataFrame()
+    combined = pd.concat([gpr, probes], ignore_index=True, sort=False)
     combined = combined.dropna(subset=["lat","lon","thaw_depth"]).reset_index(drop=True)
     combined['source'] = source
     

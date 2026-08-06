@@ -68,7 +68,7 @@ Common options:
 
 ```bash
 python -m cusp.aggregate \
-  --input exports/latest/cusp_v1.0.csv \
+  --input exports/latest/cusp_v1.1.csv \
   --output runs/examples/aggregated_100m_example.csv \
   --membership-output runs/examples/aggregated_100m_example_membership.csv \
   --flags-output runs/examples/aggregated_100m_example_qc_flags.csv \

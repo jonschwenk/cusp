@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "Minsley_2015"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Lawrence Vulis"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Pastick, N.J.; Kass, M.A.; Wylie, B.K.; James, S.R.; Rey, D.M.; Minsley, B.J.;
 Ebel, B.A. 2018. Alaska permafrost characterization: Geophysical and related
@@ -15,7 +15,8 @@ processing_assumptions = [
   "This script processes the point-soil observations only; the ERT portion of the release is intentionally not included.",
   "Active-layer-thickness values reported with a leading > are treated as observation-limit non-permafrost observations.",
   "Rejected probes with DepthtoRejection < 100 cm have their active-layer thickness cleared before permafrost presence is derived.",
-  "Near-surface permafrost is inferred with data_utils.process_pf_observations using a 132 cm threshold and a fixed observation-limit value of 132 cm.",
+  "Ordinary numeric active-layer thickness is treated as permafrost presence at the reported depth, regardless of depth.",
+  "Only explicit >x values are treated as lower-bound absence, with obs_limit set to the row's reported x value; nonpositive >0 records are excluded.",
   "method is set to tp for all retained rows because this script only exports the point-soil thaw-probe observations from the release.",
 ]
 temporal_handling = [
@@ -27,7 +28,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "Observation timing is approximate because all rows share one campaign-average date.",
-  "The 132 cm permafrost threshold is a CUSP processing assumption rather than an explicit field in the source workbook.",
+  "Rows with probe rejection shallower than 100 cm do not establish permafrost state and are excluded.",
 ]
 external_dependencies = []
 notes = ""
@@ -66,20 +67,23 @@ full_data['ActiveLayerThickness(cm)'] = pd.to_numeric(full_data['ActiveLayerThic
 full_data.loc[org_obs_limit_mask, 'SurfOrg(cm)'] = full_data.loc[org_obs_limit_mask, 'SurfOrg(cm)'].astype(str).str.replace(">", "")
 full_data['SurfOrg(cm)'] = pd.to_numeric(full_data['SurfOrg(cm)'])
 
-#  remove data which had a rejected probe, not clear what to say with it. No PF detected or PF detected?
+# Rejected probes do not establish permafrost presence or absence.
 rejected = np.logical_and(~np.isnan(full_data['DepthtoRejection(cm)']), (full_data['DepthtoRejection(cm)'] < 100))
-full_data.loc[rejected, 'ActiveLayerThickness(cm)'] = np.nan
-
-# new day of year is given by (234 + 248)/2 = 241 = Aug 29, 2015
-full_data['date'] = '2015-08-29'
-#  subset data to only be those which have ALT or surforganic thickness measurements
-has_probe_mask = np.logical_or(
-    np.logical_or(~np.isnan(full_data['ActiveLayerThickness(cm)']),
-                  ~np.isnan(full_data['SurfOrg(cm)'])),
-    ~np.isnan(full_data['DepthtoRejection(cm)'])
+valid_lower_bound = (
+    obs_limit_mask
+    & ~rejected
+    & full_data['ActiveLayerThickness(cm)'].gt(0)
+)
+direct_depth = (
+    ~obs_limit_mask
+    & ~rejected
+    & full_data['ActiveLayerThickness(cm)'].notna()
 )
 
-subset_data = full_data.loc[has_probe_mask]
+# New day of year is given by (234 + 248)/2 = 241 = Aug 29, 2015.
+full_data['date'] = '2015-08-29'
+subset_data = full_data.loc[valid_lower_bound | direct_depth].copy()
+subset_obs_limit_mask = valid_lower_bound.loc[subset_data.index]
 
 subset_data.rename(columns={'SurfOrg(cm)' : 'org_thick', 'Site':'site_id'},
                    inplace=True)
@@ -87,9 +91,8 @@ subset_data.rename(columns={'SurfOrg(cm)' : 'org_thick', 'Site':'site_id'},
 # rename, create thresholded columns
 subset_data = data_utils.process_pf_observations(subset_data.copy(),
                         alt_name='ActiveLayerThickness(cm)', 
-                        pf_limit=132,
-                        obs_limit_val=132,
-                        obs_limit_mask=obs_limit_mask)
+                        obs_limit_val=subset_data['ActiveLayerThickness(cm)'],
+                        obs_limit_mask=subset_obs_limit_mask)
                             
 
 # anywhere where the probes are at limit should NOT be permafrost.
@@ -101,7 +104,7 @@ subset_gdf = data_utils.csvify_working(subset_data.copy(),
                                        lon_name="Lon_WGS84dd",
                                        col_tokeep=["thaw_depth", "pf_observed", 'pf_depth', "date", 'org_thick', 'obs_limit', 'site_id']) 
 
-subset_gdf.loc[subset_gdf['pf_observed'] == 0, 'pf_depth'] = np.nan
+subset_gdf['pf_observed'] = subset_gdf['pf_observed'].astype(int)
 subset_gdf['method'] = 'tp'
 data_utils.check_columns(subset_gdf)
 

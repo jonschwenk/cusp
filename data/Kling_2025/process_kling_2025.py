@@ -4,16 +4,17 @@ metadata_schema_version = 1
 source_key = "Kling_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Kling, G. 2025. Imnavait Watershed Thaw Depth Survey Summary for 2003 to 2024,
 Arctic LTER, Toolik Research Station, Alaska, ver. 13. Environmental Data
 Initiative. https://doi.org/10.6073/pasta/6ed482c5c7dd3fd5871b2e463734ce75
 '''
 processing_assumptions = [
-  "thaw_depth is taken from the annual mean thaw-depth column in the source CSV.",
-  "pf_depth is assigned as the annual maximum thaw_depth for all rows within the same year.",
-  "pf_observed is set to 1 when the annual maximum thaw_depth is less than 130 cm and 0 otherwise.",
+  "Each source row is a date-specific mean of many thaw-probe measurements and is retained as one summary observation.",
+  "thaw_depth and pf_depth are both set to the reported date-specific mean thaw depth; the associated count, spread, minimum, and maximum are preserved as provenance.",
+  "Every retained mean represents probe contact with frozen ground, so pf_observed is set to 1 without an arbitrary depth threshold.",
   "site_id is fixed to LTER_Imnavait and method is fixed to tp.",
   "lat/lon are inferred from the center of a bounding box extracted from the metadata text file rather than point coordinates in the source CSV.",
 ]
@@ -26,7 +27,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "The output uses one site-level coordinate for all records instead of per-observation positions.",
-  "The 130 cm permafrost threshold is a CUSP processing assumption.",
+  "The output represents source summary means rather than the individual probe measurements.",
 ]
 external_dependencies = []
 notes = ""
@@ -43,6 +44,7 @@ from typing import Tuple, Optional
 
 import numpy as np
 import pandas as pd
+from cusp import data_utils
 
 # Prefer repository _ROOT_DIR; fallback to script dir if not importable
 try:
@@ -128,23 +130,35 @@ def build_output(df: pd.DataFrame, meta_path: Path) -> pd.DataFrame:
     meta_text = meta_path.read_text(errors="ignore")
     lat, lon = extract_lat_lon(meta_text)
 
-    annual_max = df.groupby("year", as_index=True)["mean_thaw_cm"].max().rename("pf_depth")
-    merged = df.merge(annual_max, left_on="year", right_index=True, how="left")
-    merged["pf_observed"] = (merged["pf_depth"] < 130).astype("Int64")
+    retained = df.dropna(subset=["date", "mean_thaw_cm"]).copy()
+    retained["pf_observed"] = pd.Series(1, index=retained.index, dtype="Int64")
+    retained["n"] = retained["n"].astype("Int64")
 
     out = pd.DataFrame({
         "site_id": "LTER_Imnavait",
-        "date": pd.to_datetime(merged["date"]).dt.date.astype(str),
+        "date": retained["date"].dt.strftime("%Y-%m-%d"),
         "lat": lat,
         "lon": lon,
-        "thaw_depth": merged["mean_thaw_cm"],
-        "pf_observed": merged["pf_observed"],
-        "pf_depth": merged["pf_depth"],
-        "obs_limit": pd.Series([np.nan] * len(merged)),
+        "thaw_depth": retained["mean_thaw_cm"],
+        "pf_observed": retained["pf_observed"],
+        "pf_depth": retained["mean_thaw_cm"],
+        "obs_limit": pd.Series(np.nan, index=retained.index),
         "method": "tp",
         "source": SOURCE,
+        "kling_source_sd_cm": retained["sd_cm"],
+        "kling_source_se_cm": retained["se_cm"],
+        "kling_source_n": retained["n"],
+        "kling_source_min_cm": retained["min_cm"],
+        "kling_source_max_cm": retained["max_cm"],
+        "kling_source_cv_percent": retained["cv_percent"],
     })
-    cols = ["site_id", "date", "lat", "lon", "thaw_depth", "pf_observed", "pf_depth", "obs_limit", "method", "source"]
+    cols = [
+        "site_id", "date", "lat", "lon", "thaw_depth", "pf_observed",
+        "pf_depth", "obs_limit", "method", "source",
+        "kling_source_sd_cm", "kling_source_se_cm", "kling_source_n",
+        "kling_source_min_cm", "kling_source_max_cm",
+        "kling_source_cv_percent",
+    ]
     return out[cols]
 
 
@@ -154,6 +168,7 @@ def main():
 
     df = load_csv(csv_path)
     out = build_output(df, meta_path)
+    data_utils.check_columns(out)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path, index=False)

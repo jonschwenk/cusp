@@ -25,7 +25,7 @@ Feature sampling requires Google Earth Engine authentication and a project your
 account can use:
 
 ```bash
-python -m cusp.features --input exports/latest/cusp_v1.0.csv --gee-project <your-earth-engine-project>
+python -m cusp.features --input exports/latest/cusp_v1.1.csv --gee-project <your-earth-engine-project>
 ```
 
 ## Release Gate
@@ -33,11 +33,12 @@ python -m cusp.features --input exports/latest/cusp_v1.0.csv --gee-project <your
 The release gate runs the main checks in one place:
 
 ```bash
-python -m cusp.release_gate --version 1.0 --skip-gee-smoke
+python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke
 ```
 
-For a final manual release check, run the same gate with a live Earth Engine
-project instead of skipping the smoke test.
+The official data bundle does not include an environmental feature table, so
+the release gate skips both feature export and the live Earth Engine smoke
+test. Feature sampling remains available as an optional derived workflow.
 
 ## Reproducibility Notes
 

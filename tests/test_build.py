@@ -12,10 +12,12 @@ from cusp.build import (
     build_release_tables,
     build_source_reference_crosswalk,
     normalize_method,
+    validate_data_df,
     validate_quality_flags,
     load_quality_flag_definitions,
     write_build_outputs,
 )
+from cusp.source_quality_metadata import build_source_metadata
 
 
 class BuildTests(unittest.TestCase):
@@ -165,6 +167,44 @@ class BuildTests(unittest.TestCase):
                     "obs_limit": None,
                     "method": "temp",
                 },
+                {
+                    "source": "Example_A",
+                    "site_id": "A3",
+                    "lat": 65.2,
+                    "lon": -147.2,
+                    "date": "2020-08-03",
+                    "pf_observed": 1,
+                    "thaw_depth": None,
+                    "pf_depth": None,
+                    "obs_limit": None,
+                    "method": "tp",
+                },
+                {
+                    "source": "Example_A",
+                    "site_id": "A4",
+                    "lat": 65.3,
+                    "lon": -147.3,
+                    "date": "2020-08-04",
+                    "pf_observed": 1,
+                    "thaw_depth": 40.0,
+                    "pf_depth": 40.0,
+                    "obs_limit": None,
+                    "method": "tp",
+                    "rock": "N",
+                },
+                {
+                    "source": "Example_A",
+                    "site_id": "A5",
+                    "lat": 65.4,
+                    "lon": -147.4,
+                    "date": "2020-08-05",
+                    "pf_observed": 1,
+                    "thaw_depth": 40.0,
+                    "pf_depth": 40.0,
+                    "obs_limit": None,
+                    "method": "tp",
+                    "rock": "Y",
+                },
             ]
         )
 
@@ -178,6 +218,76 @@ class BuildTests(unittest.TestCase):
             outputs.observations.set_index("site_id").loc["A2", "quality_flags"],
             "TI",
         )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A3", "quality_flags"],
+            "UB",
+        )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A4", "quality_flags"],
+            "",
+        )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A5", "quality_flags"],
+            "RO",
+        )
+
+    def test_validate_data_rejects_absence_without_positive_limit(self) -> None:
+        raw = pd.DataFrame(
+            {
+                "source": ["Example_A"],
+                "site_id": ["A1"],
+                "lat": [65.0],
+                "lon": [-147.0],
+                "date": ["2020-08-01"],
+                "pf_observed": pd.Series([0], dtype="Int64"),
+                "thaw_depth": [None],
+                "pf_depth": [None],
+                "obs_limit": [None],
+                "method": ["tp"],
+            }
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "positive obs_limit"):
+            validate_data_df(raw, "Example_A")
+
+    def test_validate_data_allows_flagged_visual_absence_without_limit(self) -> None:
+        raw = pd.DataFrame(
+            {
+                "source": ["Example_A"],
+                "site_id": ["A1"],
+                "lat": [65.0],
+                "lon": [-147.0],
+                "date": ["2020-08-01"],
+                "pf_observed": pd.Series([0], dtype="Int64"),
+                "thaw_depth": [None],
+                "pf_depth": [None],
+                "obs_limit": [None],
+                "method": ["unknown"],
+                "quality_flag_visual_interpretation": [True],
+            }
+        )
+
+        validate_data_df(raw, "Example_A")
+
+    def test_validate_data_rejects_flagged_visual_absence_with_zero_limit(self) -> None:
+        raw = pd.DataFrame(
+            {
+                "source": ["Example_A"],
+                "site_id": ["A1"],
+                "lat": [65.0],
+                "lon": [-147.0],
+                "date": ["2020-08-01"],
+                "pf_observed": pd.Series([0], dtype="Int64"),
+                "thaw_depth": [None],
+                "pf_depth": [None],
+                "obs_limit": [0.0],
+                "method": ["unknown"],
+                "quality_flag_visual_interpretation": [True],
+            }
+        )
+
+        with self.assertRaisesRegex(RuntimeError, "positive obs_limit"):
+            validate_data_df(raw, "Example_A")
 
     def test_unknown_quality_flags_are_rejected(self) -> None:
         raw = pd.DataFrame({"quality_flag_not_real": [True]})
@@ -200,6 +310,39 @@ class BuildTests(unittest.TestCase):
 
         self.assertEqual(crosswalk["source"].tolist(), ["A", "B"])
         self.assertEqual(crosswalk["title"].tolist(), ["Title A", "Title B"])
+
+    def test_source_metadata_combines_declared_and_observed_quality_flags(self) -> None:
+        observations = pd.DataFrame(
+            {
+                "source": ["Example_A", "Example_A"],
+                "pf_observed": [1, 0],
+                "thaw_depth": [40.0, None],
+                "pf_depth": [40.0, None],
+                "method": ["tp", "tp"],
+                "quality_flags": ["DA", "LB;MU"],
+            }
+        )
+        declared = pd.DataFrame(
+            {
+                "source": ["Example_A"],
+                "source_quality_flags": ["DO"],
+                "source_quality_flag_names": ["possible_duplicate_or_overlap"],
+                "source_quality_flag_categories": ["duplication"],
+            }
+        )
+
+        metadata = build_source_metadata(observations, declared)
+        row = metadata.iloc[0]
+
+        self.assertEqual(row["source_quality_flags"], "LB;DA;MU;DO")
+        self.assertEqual(
+            row["source_quality_flag_names"],
+            "lower_bound_absence;date_assigned;method_approximate_or_unknown;possible_duplicate_or_overlap",
+        )
+        self.assertEqual(
+            row["source_quality_flag_categories"],
+            "censoring;duplication;method;temporal",
+        )
 
     def test_write_build_outputs_generates_manifest(self) -> None:
         raw = pd.DataFrame(
@@ -230,6 +373,7 @@ class BuildTests(unittest.TestCase):
             crosswalk = tmp / "source_reference_crosswalk.csv"
             source_metadata = tmp / "source_metadata.csv"
             source_quality = tmp / "source_quality_metadata.csv"
+            bibtex = tmp / "cusp_sources_bibtex.csv"
             manifest = tmp / "observation_release_manifest.json"
 
             write_build_outputs(
@@ -242,6 +386,7 @@ class BuildTests(unittest.TestCase):
                 source_reference_path=crosswalk,
                 source_metadata_path=source_metadata,
                 source_quality_metadata_path=source_quality,
+                bibtex_path=bibtex,
                 manifest_path=manifest,
             )
 

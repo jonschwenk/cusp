@@ -6,7 +6,7 @@ source_key = "Barrow_CALM_U1"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-22"
+last_substantive_update = "2026-08-06"
 
 source_dataset = '''
 Brown, J. and Nelson, F. 1998. Active layer and permafrost properties,
@@ -28,6 +28,7 @@ processing_assumptions = [
 temporal_handling = [
   "Date columns are parsed from YYMMDD tokens in the source files.",
   "The 1962 files report 620800, which is interpreted as August 1962 with no known day; CUSP records this as 1962-08-01 and flags the date precision as month.",
+  "Only those month-precision rows receive the assigned-date and approximate-source-date flags.",
 ]
 
 spatial_handling = [
@@ -170,6 +171,9 @@ df["pf_observed"] = 1
 df["thaw_depth"] = df["barrow_thaw_depth_mean_cm"]
 df["pf_depth"] = df["barrow_thaw_depth_mean_cm"]
 df["obs_limit"] = np.nan
+month_precision = df["barrow_date_precision"].eq("month")
+df["quality_flag_date_assigned"] = month_precision
+df["quality_flag_date_source_approximate"] = month_precision
 
 df["barrow_n_cases"] = df["barrow_n_cases"].astype("Int64")
 
@@ -184,6 +188,8 @@ output_columns = [
     "thaw_depth",
     "obs_limit",
     "method",
+    "quality_flag_date_assigned",
+    "quality_flag_date_source_approximate",
     "barrow_raw_file",
     "barrow_plot_id",
     "barrow_date_token",

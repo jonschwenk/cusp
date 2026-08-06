@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Myers-Smith_2005"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Myers-Smith, Isla. 2005. Active Layer Depth Data for the BBC collapse scar
 for 2003 and 2004, Bonanza Creek LTER - University of Alaska Fairbanks.
@@ -15,9 +15,9 @@ doi:10.6073/pasta/28920b92a1ca20a1a7e90fff842f3e45
 '''
 processing_assumptions = [
   "Measurement coordinates are assigned by merging collapse-scar transect distances with a separate coordinate table for east and west offsets.",
-  "Rows containing > in the active-layer-depth field or missing depth are treated as invalid/non-permafrost observations for the site-year grouping logic.",
-  "pf_depth is assigned as the maximum numeric thaw depth observed at each location-year where pf_observed = 1.",
-  "obs_limit is set to 120 cm for 2003 and 205.5 cm for 2004.",
+  "Each dated row is interpreted independently rather than assigning one annual state to every observation at a location.",
+  "Ordinary numeric thaw depths are permafrost detections and are copied to pf_depth.",
+  "Explicit >120 and >205.5 values are lower-bound absence observations with the reported value used as obs_limit; missing-depth rows are excluded.",
   "method is fixed to tp.",
 ]
 temporal_handling = [
@@ -30,7 +30,7 @@ manual_steps = [
   "Transect point coordinates were derived outside this script and stored in Transect_Points_Coordinates.csv.",
 ]
 known_limitations = [
-  "Coordinate placement depends on the manual boardwalk-based reconstruction described in the script header.",
+  "Coordinate placement depends on the manual boardwalk-based reconstruction described in the script header and is flagged as interpolated.",
 ]
 external_dependencies = []
 notes = ""
@@ -64,29 +64,26 @@ data_df['date'] = pd.to_datetime(data_df['Year'].astype(str) + data_df['DOY'].as
 data_df['site_key'] = data_df['Side of Transect'] + "_" + data_df['Distance (m)'].astype(str)
 data_df['site_id'] = 'bbc_' + data_df['Side of Transect'] + '_' + data_df['Distance (m)'].astype(str)
 
-# Preserve thaw depth string and numeric forms
-data_df['thaw_depth'] = data_df['Mean Active Layer Depth (cm)'].astype(str).replace('nan', np.nan)
-data_df['thaw_depth_num'] = pd.to_numeric(data_df['Mean Active Layer Depth (cm)'], errors='coerce')
-
-# Mark invalid and determine pf_observed
-data_df['invalid'] = data_df['thaw_depth'].str.contains('>') | data_df['thaw_depth'].isna()
-data_df['invalid_group'] = data_df.groupby(['Year', 'site_key'])['invalid'].transform('max')
-data_df['pf_observed'] = np.where(data_df['invalid_group'], 0, 1)
-
-# Determine max pf_depth per location/year
-max_depths = (
-    data_df[data_df['pf_observed'] == 1]
-    .groupby(['Year', 'site_key'])['thaw_depth_num']
-    .max()
-    .reset_index()
-    .rename(columns={'thaw_depth_num': 'max_pf_depth'})
+# Interpret every dated measurement directly.
+data_df['myers_smith_thaw_depth_raw'] = data_df['Mean Active Layer Depth (cm)'].astype('string').str.strip()
+lower_bound = data_df['myers_smith_thaw_depth_raw'].str.startswith('>', na=False)
+depth = pd.to_numeric(
+    data_df['myers_smith_thaw_depth_raw'].str.replace('>', '', regex=False),
+    errors='coerce',
 )
-data_df = data_df.merge(max_depths, on=['Year', 'site_key'], how='left')
-data_df['pf_depth'] = np.where(data_df['pf_observed'] == 1, data_df['max_pf_depth'], np.nan)
+valid = depth.notna() & depth.gt(0)
+data_df = data_df.loc[valid].copy()
+lower_bound = lower_bound.loc[data_df.index]
+depth = depth.loc[data_df.index]
+if int(lower_bound.sum()) != 120:
+    raise ValueError(f"Expected 120 Myers-Smith lower-bound rows; found {int(lower_bound.sum())}.")
 
-# Add static fields
-data_df['obs_limit'] = np.where(data_df['Year'] == 2003, 120, 205.5)
+data_df['pf_observed'] = np.where(lower_bound, 0, 1)
+data_df['thaw_depth'] = depth.mask(lower_bound)
+data_df['pf_depth'] = data_df['thaw_depth']
+data_df['obs_limit'] = depth.where(lower_bound)
 data_df['method'] = 'tp'
+data_df['quality_flag_coord_lookup_or_interpolated'] = True
 
 # Merge coordinates by Distance and Side
 merged_df = pd.merge(
@@ -100,7 +97,7 @@ merged_df = pd.merge(
 merged_df['source'] = source
 
 # Final export
-final_output = merged_df[['site_id', 'date', 'lat', 'lon', 'thaw_depth', 'pf_observed', 'pf_depth', 'obs_limit', 'method', 'source']]
+final_output = merged_df[['site_id', 'date', 'lat', 'lon', 'thaw_depth', 'pf_observed', 'pf_depth', 'obs_limit', 'method', 'source', 'myers_smith_thaw_depth_raw', 'quality_flag_coord_lookup_or_interpolated']]
 
 
 

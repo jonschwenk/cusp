@@ -4,7 +4,8 @@ metadata_schema_version = 1
 source_key = "Kling_2016"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Kling, G. 2016. Tussock Watershed Thaw Depth Survey Summary for 1990 to
 present, Arctic LTER, Toolik Research Station, Alaska, ver. 9.
@@ -12,9 +13,9 @@ Environmental Data Initiative.
 https://doi.org/10.6073/pasta/fc25feb51864f13223b8573cffb7ed87
 '''
 processing_assumptions = [
-  "thaw_depth is taken from the annual thaw-depth summary column in the source CSV.",
-  "pf_depth is assigned as the annual maximum thaw_depth for all rows within the same year.",
-  "pf_observed is set to 1 when the annual maximum thaw_depth is less than 130 cm and 0 otherwise.",
+  "Each source row is a date-specific mean of many thaw-probe measurements and is retained as one summary observation.",
+  "thaw_depth and pf_depth are both set to the reported date-specific mean thaw depth; the associated count, spread, minimum, and maximum are preserved as provenance.",
+  "Every retained mean represents probe contact with frozen ground, so pf_observed is set to 1 without an arbitrary depth threshold.",
   "site_id is fixed to LTER_TussockWS and method defaults to tp unless the metadata text says otherwise.",
   "lat/lon are inferred from the center of the metadata bounding box rather than from observation-specific coordinates.",
 ]
@@ -27,7 +28,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "All records share one site-level coordinate instead of observation-specific positions.",
-  "The 130 cm permafrost threshold is a CUSP processing assumption.",
+  "The output represents source summary means rather than the individual probe measurements.",
 ]
 external_dependencies = []
 notes = ""
@@ -53,8 +54,6 @@ TXT_NAME = "knb-lter-arc.1019.10.txt"
 SITE_ID = "LTER_TussockWS"
 DEFAULT_METHOD = "tp"  # thaw probe
 DEFAULT_OBS_LIMIT = np.nan
-PF_OBSERVED_THRESHOLD_CM = 130.0
-
 def parse_bbox_and_probe(txt_path: Path):
     """
     Parse latitude/longitude (bounding coordinates) and, if present,
@@ -145,26 +144,29 @@ def main(workdir: Path):
     if df.shape[1] < 2:
         raise ValueError("CSV does not have the expected columns (at least 2).")
 
-    date_col = df.columns[0]
-    thaw_col = df.columns[1]
-
-    # Parse to schema
-    df["date"] = pd.to_datetime(df[date_col], errors="coerce").dt.date
-    df["thaw_depth"] = pd.to_numeric(df[thaw_col], errors="coerce")
-
-    # Year for grouping
-    years = pd.to_datetime(df["date"], errors="coerce").dt.year
-    df["_year"] = years
-
-    # Yearly maximum thaw depth
-    yearly_max = df.groupby("_year")["thaw_depth"].transform("max")
-
-    # Updated fields:
-    # pf_depth: single (max) value per year for all rows of that year
-    df["pf_depth"] = yearly_max
-
-    # pf_observed: 1 if yearly max < 130 cm else 0
-    df["pf_observed"] = (yearly_max < PF_OBSERVED_THRESHOLD_CM).astype(int)
+    df = df.rename(columns={
+        df.columns[0]: "date",
+        df.columns[1]: "thaw_depth",
+        df.columns[2]: "kling_source_sd_cm",
+        df.columns[3]: "kling_source_se_cm",
+        df.columns[4]: "kling_source_n",
+        df.columns[5]: "kling_source_min_cm",
+        df.columns[6]: "kling_source_max_cm",
+        df.columns[7]: "kling_source_cv_percent",
+    })
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    numeric_columns = [
+        "thaw_depth", "kling_source_sd_cm", "kling_source_se_cm",
+        "kling_source_n", "kling_source_min_cm", "kling_source_max_cm",
+        "kling_source_cv_percent",
+    ]
+    for column in numeric_columns:
+        df[column] = pd.to_numeric(df[column], errors="coerce")
+    df = df.dropna(subset=["date", "thaw_depth"]).copy()
+    df["date"] = df["date"].dt.strftime("%Y-%m-%d")
+    df["kling_source_n"] = df["kling_source_n"].astype("Int64")
+    df["pf_depth"] = df["thaw_depth"]
+    df["pf_observed"] = pd.Series(1, index=df.index, dtype="Int64")
 
     # Static fields
     df["site_id"] = SITE_ID
@@ -175,12 +177,18 @@ def main(workdir: Path):
     df["source"] = source
 
     # Final ordering
-    out_cols = ["site_id", "date", "lat", "lon", "thaw_depth", "pf_observed", "pf_depth", "obs_limit", "method", "source"]
+    out_cols = [
+        "site_id", "date", "lat", "lon", "thaw_depth", "pf_observed",
+        "pf_depth", "obs_limit", "method", "source",
+        "kling_source_sd_cm", "kling_source_se_cm", "kling_source_n",
+        "kling_source_min_cm", "kling_source_max_cm",
+        "kling_source_cv_percent",
+    ]
     out_df = df[out_cols].sort_values("date").reset_index(drop=True)
 
     data_utils.check_columns(out_df)
 
-    out_df.to_csv(os.path.join(os.getcwd(), _ROOT_DIR / "data" / source /r"processed_{}.csv".format(source)), index=False)
+    out_df.to_csv(_ROOT_DIR / "data" / source / "processed_kling_2016.csv", index=False)
 
 if __name__ == "__main__":
     here = Path(__file__).resolve().parent

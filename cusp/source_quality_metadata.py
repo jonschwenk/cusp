@@ -117,9 +117,28 @@ def build_source_metadata(
 ) -> pd.DataFrame:
     """Build the user-facing one-row-per-source catalog."""
 
+    definitions = _load_quality_flag_definitions(DEFAULT_QUALITY_FLAG_DEFINITIONS)
+    definition_order = {
+        code: position for position, code in enumerate(definitions["flag_code"].astype(str))
+    }
+    definitions_by_code = definitions.set_index("flag_code")
+
+    def split_codes(values: pd.Series | list[object]) -> set[str]:
+        codes: set[str] = set()
+        for value in values:
+            if pd.isna(value):
+                continue
+            codes.update(code.strip() for code in str(value).split(";") if code.strip())
+        return codes
+
     records: list[dict[str, object]] = []
     for source, source_df in observations.groupby("source", dropna=False, sort=True):
         methods = sorted(value for value in source_df["method"].dropna().astype(str).unique() if value)
+        observed_flag_codes = (
+            split_codes(source_df["quality_flags"])
+            if "quality_flags" in source_df.columns
+            else set()
+        )
         records.append(
             {
                 "source": source,
@@ -129,6 +148,9 @@ def build_source_metadata(
                 "n_alt_observations": int(source_df["thaw_depth"].notna().sum()),
                 "n_pf_depth_observations": int(source_df["pf_depth"].notna().sum()),
                 "methods": ";".join(methods),
+                "_observed_quality_flag_codes": ";".join(
+                    sorted(observed_flag_codes, key=lambda code: definition_order.get(code, len(definition_order)))
+                ),
             }
         )
 
@@ -143,6 +165,7 @@ def build_source_metadata(
                 "n_alt_observations",
                 "n_pf_depth_observations",
                 "methods",
+                "_observed_quality_flag_codes",
             ]
         )
 
@@ -161,6 +184,33 @@ def build_source_metadata(
         if column not in metadata.columns:
             metadata[column] = ""
         metadata[column] = metadata[column].fillna("")
+
+    combined_flag_summaries: list[tuple[str, str, str]] = []
+    for _, row in metadata.iterrows():
+        codes = split_codes(
+            [row["source_quality_flags"], row["_observed_quality_flag_codes"]]
+        )
+        unknown_codes = sorted(codes.difference(definitions_by_code.index.astype(str)))
+        if unknown_codes:
+            raise RuntimeError(
+                f"Source metadata contains undefined quality flag codes: {unknown_codes}"
+            )
+        ordered_codes = sorted(codes, key=definition_order.__getitem__)
+        names = [str(definitions_by_code.loc[code, "flag"]) for code in ordered_codes]
+        categories = sorted(
+            {str(definitions_by_code.loc[code, "flag_category"]) for code in ordered_codes}
+        )
+        combined_flag_summaries.append(
+            (";".join(ordered_codes), ";".join(names), ";".join(categories))
+        )
+
+    if combined_flag_summaries:
+        metadata[[
+            "source_quality_flags",
+            "source_quality_flag_names",
+            "source_quality_flag_categories",
+        ]] = pd.DataFrame(combined_flag_summaries, index=metadata.index)
+    metadata = metadata.drop(columns="_observed_quality_flag_codes")
 
     flag_names = metadata["source_quality_flag_names"].astype("string")
     metadata["has_duplication_caveat"] = flag_names.str.split(";").map(

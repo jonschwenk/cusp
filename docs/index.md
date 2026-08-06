@@ -74,6 +74,8 @@ to cite.
 | File | What it is for |
 | --- | --- |
 | `cusp_vX.Y.csv` | Main CUSP table with one row per accepted observation |
-| `cusp_features_vX.Y.csv` | Environmental features sampled with Google Earth Engine and joined by `cusp_obs_id`, when included |
 | `cusp_sources_vX.Y.bib` | BibTeX entries for included source datasets and publications |
 | `RELEASE_INFO.md` | Release metadata, hashes, and build context |
+
+Environmental feature sampling is available as an optional derived workflow,
+but feature tables are not part of the canonical data release.

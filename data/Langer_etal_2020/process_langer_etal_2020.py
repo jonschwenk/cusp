@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Langer_etal_2020"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "ksolander"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 Langer, Moritz; Kaiser, Soraya; Oehme, Alexander; Schneider von Deimling,
 Thomas; Jacobi, Stephan. 2020. Active layer thickness (ALT) on the North Slope
@@ -17,7 +17,7 @@ processing_assumptions = [
   "Only rows with numeric active-layer depth are retained from the source table.",
   "Rows with comment = rocks are dropped before permafrost presence is derived.",
   "pf_observed is set to 0 only for comment = end of probe and 1 otherwise.",
-  "obs_limit is assigned by year using a fixed mapping of 145 cm for 2018 and 200 cm for 2019.",
+  "For comment = end of probe, obs_limit is assigned by year using 145 cm for 2018 and 200 cm for 2019, and the capped value is cleared from canonical thaw_depth.",
   "pf_depth is set equal to thaw_depth where pf_observed = 1.",
   "method is set to tp for all retained rows because the source reports active-layer depth probe measurements.",
 ]
@@ -62,7 +62,7 @@ df = dat
 df[['Event', 'Area', 'ID', 'Latitude', 'Longitude','Date/Time','ALD [cm]','Comment']]
 
 df['ALD [cm]'] = pd.to_numeric(df['ALD [cm]'], errors='coerce')  # convert invalid to NaN
-df = df.dropna(subset=['ALD [cm]'])
+df = df.dropna(subset=['ALD [cm]']).copy()
 
 # Extract data from dataframe
 
@@ -81,8 +81,12 @@ df['year'] = df['date'].dt.year
 df['source'] = source
 df['method'] = 'tp'
 
-df['obs_limit'] = df['year'].map({2018: 145, 2019: 200})
+df['langer_reported_ald_cm'] = df['thaw_depth']
+absence = df['pf_observed'].eq(0)
+df['obs_limit'] = df['year'].map({2018: 145, 2019: 200}).where(absence)
 df['pf_depth'] = np.where(df['pf_observed'] == 1, df['thaw_depth'], np.nan)
+df.loc[absence, 'thaw_depth'] = np.nan
+df['quality_flag_obs_limit_assumed'] = absence
 
 df = df.drop(columns = ['year', 'comment', 'Event', 'Area'])
 

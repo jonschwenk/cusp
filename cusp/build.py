@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 from pandas.api.types import is_integer_dtype
 
+from cusp.citations import DEFAULT_MASTER_BIB_PATH, parse_bibtex_table
 from cusp.data_utils import _ROOT_DIR
 from cusp.source_quality_metadata import build_source_metadata, build_source_quality_metadata
 
@@ -86,6 +87,7 @@ class BuildOutputs:
     source_reference_crosswalk: pd.DataFrame
     source_metadata: pd.DataFrame
     source_quality_metadata: pd.DataFrame
+    bibtex: pd.DataFrame
 
     @property
     def combined(self) -> pd.DataFrame:
@@ -262,10 +264,15 @@ def add_inferred_quality_flags(df: pd.DataFrame) -> pd.DataFrame:
     lower_bound_absence = (
         flagged["pf_observed"].eq(0)
         & flagged["obs_limit"].notna()
+    )
+    add("lower_bound_absence", lower_bound_absence)
+
+    upper_bound_presence = (
+        flagged["pf_observed"].eq(1)
         & flagged["thaw_depth"].isna()
         & flagged["pf_depth"].isna()
     )
-    add("lower_bound_absence", lower_bound_absence)
+    add("upper_bound_presence", upper_bound_presence)
 
     add("method_approximate_or_unknown", flagged["method"].eq("unknown"))
     add("temperature_inferred", flagged["method"].eq("temp"))
@@ -323,7 +330,7 @@ def add_inferred_quality_flags(df: pd.DataFrame) -> pd.DataFrame:
             notes.str.contains("rock|gravel|road|water|obstruct|probe length|bottom", regex=True, na=False),
         )
     if "rock" in flagged.columns:
-        add("refusal_or_obstruction_note", flagged["rock"].notna() & flagged["rock"].astype("string").str.strip().ne(""))
+        add("refusal_or_obstruction_note", truthy_series(flagged["rock"]))
 
     return flagged
 
@@ -414,6 +421,28 @@ def validate_data_df(df: pd.DataFrame, source: str) -> None:
 
     if not is_integer_dtype(df["pf_observed"]):
         raise RuntimeError(f"{source} csv pf_observed column is not integer type.")
+
+    visual_flag_column = f"{QUALITY_FLAG_PREFIX}visual_interpretation"
+    visual_interpretation = (
+        truthy_series(df[visual_flag_column])
+        if visual_flag_column in df.columns
+        else pd.Series(False, index=df.index)
+    )
+    missing_absence_limit = df["pf_observed"].eq(0) & df["obs_limit"].isna()
+    nonpositive_absence_limit = (
+        df["pf_observed"].eq(0)
+        & df["obs_limit"].notna()
+        & df["obs_limit"].le(0)
+    )
+    invalid_absence_limit = (
+        (missing_absence_limit & ~visual_interpretation)
+        | nonpositive_absence_limit
+    )
+    if invalid_absence_limit.any():
+        raise RuntimeError(
+            f"{source} has {int(invalid_absence_limit.sum())} permafrost-absence "
+            "rows without a positive obs_limit or an explicit visual-interpretation flag."
+        )
 
     lon = df["lon"].dropna()
     lat = df["lat"].dropna()
@@ -652,6 +681,7 @@ def build_release_manifest(
     source_reference_path: Path,
     source_metadata_path: Path,
     source_quality_metadata_path: Path,
+    bibtex_path: Path,
 ) -> dict[str, object]:
     """Build a JSON-serializable release manifest for the observation artifacts."""
 
@@ -667,6 +697,7 @@ def build_release_manifest(
         ("source_reference_crosswalk.csv", source_reference_path, outputs.source_reference_crosswalk),
         ("source_metadata.csv", source_metadata_path, outputs.source_metadata),
         ("source_quality_metadata.csv", source_quality_metadata_path, outputs.source_quality_metadata),
+        ("cusp_sources_bibtex.csv", bibtex_path, outputs.bibtex),
     ]
 
     artifacts: dict[str, dict[str, object]] = {}
@@ -717,7 +748,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     allfields_columns = stable_allfields_column_order(working)
     observations_allfields = working.loc[:, allfields_columns].copy()
     observations_metadata = build_release_metadata(observations_allfields)
-    bibtex_df = pd.read_csv(DEFAULT_BIBTEX_OUTPUT, low_memory=False)
+    bibtex_df = parse_bibtex_table(DEFAULT_MASTER_BIB_PATH)
     source_reference_crosswalk = build_source_reference_crosswalk(observations_metadata, bibtex_df)
     source_quality_metadata = build_source_quality_metadata()
     source_metadata = build_source_metadata(observations_allfields, source_quality_metadata, source_reference_crosswalk)
@@ -742,6 +773,7 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
         source_reference_crosswalk=source_reference_crosswalk,
         source_metadata=source_metadata,
         source_quality_metadata=source_quality_metadata,
+        bibtex=bibtex_df,
     )
 
 
@@ -755,6 +787,7 @@ def write_build_outputs(
     source_reference_path: Path = DEFAULT_SOURCE_REFERENCE_OUTPUT,
     source_metadata_path: Path = DEFAULT_SOURCE_METADATA_OUTPUT,
     source_quality_metadata_path: Path = DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT,
+    bibtex_path: Path = DEFAULT_BIBTEX_OUTPUT,
     manifest_path: Path = DEFAULT_MANIFEST_OUTPUT,
 ) -> None:
     """Write the release-facing build outputs to disk."""
@@ -768,6 +801,7 @@ def write_build_outputs(
         source_reference_path,
         source_metadata_path,
         source_quality_metadata_path,
+        bibtex_path,
         manifest_path,
     ]:
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -780,6 +814,7 @@ def write_build_outputs(
     outputs.source_reference_crosswalk.to_csv(source_reference_path, index=False)
     outputs.source_metadata.to_csv(source_metadata_path, index=False)
     outputs.source_quality_metadata.to_csv(source_quality_metadata_path, index=False)
+    outputs.bibtex.to_csv(bibtex_path, index=False)
     manifest = build_release_manifest(
         outputs,
         canonical_path=canonical_path,
@@ -790,6 +825,7 @@ def write_build_outputs(
         source_reference_path=source_reference_path,
         source_metadata_path=source_metadata_path,
         source_quality_metadata_path=source_quality_metadata_path,
+        bibtex_path=bibtex_path,
     )
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
@@ -813,6 +849,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-reference-output", type=Path, default=DEFAULT_SOURCE_REFERENCE_OUTPUT)
     parser.add_argument("--source-metadata-output", type=Path, default=DEFAULT_SOURCE_METADATA_OUTPUT)
     parser.add_argument("--source-quality-metadata-output", type=Path, default=DEFAULT_SOURCE_QUALITY_METADATA_OUTPUT)
+    parser.add_argument("--bibtex-output", type=Path, default=DEFAULT_BIBTEX_OUTPUT)
     parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUTPUT)
     return parser.parse_args()
 
@@ -835,6 +872,7 @@ def main() -> None:
         source_reference_path=args.source_reference_output,
         source_metadata_path=args.source_metadata_output,
         source_quality_metadata_path=args.source_quality_metadata_output,
+        bibtex_path=args.bibtex_output,
         manifest_path=args.manifest_output,
     )
 

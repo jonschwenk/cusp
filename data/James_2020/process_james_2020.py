@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "James_2020"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "Lawrence Vulis"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-04"
 source_dataset = '''
 James, S.R.; Minsley, B.J.; Pastick, N.J.; Sullivan, T.D. 2020. Alaska
 permafrost characterization: Geophysical and related field data collected from
@@ -13,7 +13,8 @@ https://doi.org/10.5066/P9I6VUQV
 '''
 processing_assumptions = [
   "ThawDepth sentinel values of 999 and 888 are treated as observation-limit codes and remapped to 200 cm and 120 cm, respectively, before permafrost presence is inferred.",
-  "Near-surface permafrost is inferred with data_utils.process_pf_observations using a 132 cm threshold and the sentinel-derived observation-limit array.",
+  "Ordinary numeric thaw depths are treated as permafrost detections at the reported depth, without applying an arbitrary near-surface threshold.",
+  "Only source sentinel rows are treated as absence; they retain their interpreted 120 or 200 cm observation limits and have canonical thaw/pf depth cleared.",
   "Dates are cleaned from YYYYMMDD strings after stripping any trailing comma-delimited suffixes.",
   "The final output preserves the processed thaw depth, pf_observed, pf_depth, obs_limit, and source coordinates from the shapefile.",
   "method is set to tp for all retained rows because the source release represents thaw-depth probe observations.",
@@ -26,7 +27,7 @@ spatial_handling = [
 ]
 manual_steps = []
 known_limitations = [
-  "The meaning of the 999 and 888 thaw-depth sentinels should still be confirmed against the original field protocol; CUSP currently interprets them as 200 cm and 120 cm observation limits to stay consistent with centimeter-based thaw depths.",
+  "The meaning of the 999 and 888 thaw-depth sentinels should still be confirmed against the original field protocol; CUSP interprets them as 200 cm and 120 cm observation limits and flags that interpretation.",
   "A non-fatal PROJ/GDAL environment warning has appeared during some rebuilds, even though the shapefile still reads successfully.",
 ]
 external_dependencies = []
@@ -58,7 +59,7 @@ obs_lim_array.loc[obs_limit_mask_1_2m] = 120.0
 
 # Subset the values with data
 has_probe_mask = ~np.isnan(gdf['ThawDepth'])
-subset_data = gdf.loc[has_probe_mask]
+subset_data = gdf.loc[has_probe_mask].copy()
 
 subset_data.rename(columns={'SampleDate' : 'date',
                             'Lon_WGS84' : 'lon',
@@ -71,7 +72,6 @@ subset_obs_lim_array = obs_lim_array.loc[subset_data.index]
 # identify pf_observed
 subset_data = data_utils.process_pf_observations(subset_data.copy(), 
                         alt_name='ThawDepth', 
-                        pf_limit=132,
                         obs_limit_val=subset_obs_lim_array,
                         obs_limit_mask=subset_obs_limit_mask)
 
@@ -87,6 +87,10 @@ subset_data.drop(["Elevation", "ERT_x_dist", "DataType", "X_UTMz6", "Y_UTMz6", "
 df = pd.DataFrame(subset_data.drop('geometry',axis=1))
 df['source'] = source
 df['method'] = 'tp'
+df = df.dropna(subset=['pf_observed']).copy()
+df['pf_observed'] = df['pf_observed'].astype(int)
+df['quality_flag_obs_limit_assumed'] = df['pf_observed'].eq(0)
+df['quality_flag_source_unit_or_code_recoded'] = df['pf_observed'].eq(0)
 
 data_utils.check_columns(df)
 

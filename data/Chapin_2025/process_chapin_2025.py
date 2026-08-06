@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Chapin_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
-last_substantive_update = "2026-04-11"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-05"
 source_dataset = '''
 Chapin, F.S.; Ruess, R.; Bonanza Creek LTER. 2025. Bonanza Creek LTER:
 Annual Active Layer Depths from 2002 to Present in the Survey Line Fire near
@@ -23,21 +23,23 @@ processing_assumptions = [
   "thaw_depth is averaged by site and calendar year.",
   "pf_observed is set to 0 only when all flags in a site-year group are N; otherwise it is set to 1.",
   "pf_depth is set equal to the annual mean thaw_depth where pf_observed = 1.",
-  "Site coordinates are assigned from a hardcoded lookup table in the script.",
+  "Site coordinates are assigned from the bundled EML metadata through a hardcoded lookup table in the script.",
 ]
 temporal_handling = [
   "The first measurement date within each site-year group is retained as the representative output date.",
 ]
 spatial_handling = [
-  "Coordinates are not read from the source tables; they are assigned from the script's site_coords lookup.",
+  "Coordinates are not read from the source tables; they are assigned from the script's site_coords lookup using the per-site bounding coordinates in the bundled EML metadata.",
+  "The SL1B longitude is -148.2861185 from knb-lter-bnz.240.26.xml; an earlier processor typo duplicated its latitude into the longitude field.",
 ]
 manual_steps = []
 known_limitations = [
   "Annual averaging removes within-year variation in thaw depth.",
   "The hardcoded coordinate lookup should be checked whenever site lists or identifiers change.",
+  "Ruess_2025 republishes the same 360 stake measurements for SL1A in 2015-2022 and SL1B in 2015-2024. CUSP retains this dedicated Chapin source and removes all 18 shared site-years from Ruess_2025.",
 ]
 external_dependencies = []
-notes = ""
+notes = "The 18 Chapin/Ruess overlap groups have identical dates, stake identifiers, and source depths. Sixteen annual summaries are numerically identical; SL1A 2021 and 2022 differ only because the processors interpret non-Ice rows differently, so the dedicated Chapin product remains authoritative."
 """
 
 import pandas as pd
@@ -95,7 +97,7 @@ summary['pf_depth'] = np.where(summary['pf_observed'] == 1, summary['thaw_depth'
 # Add site coordinates
 site_coords = {
     'SL1A': (64.65421365, -148.2812152),
-    'SL1B': (64.64826898, 64.64826898),
+    'SL1B': (64.64826898, -148.2861185),
     'BFBURN': (65.15142, -147.47664),
     'BFCONTROL': (65.15472, -147.49046),
     'BFFIRELINEBURNED': (65.15288, -147.48022),

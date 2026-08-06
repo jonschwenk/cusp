@@ -3,8 +3,8 @@ metadata_schema_version = 1
 source_key = "Patton_2021"
 release_clearance = "approved"
 permission_basis = "published_literature"
-original_author = "Lawrence Vulis"
-last_substantive_update = "2026-04-10"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Patton, A. I.; Rathburn, S. L.; Capps, D. M.; McGrath, D.; Brown, R. A. 2021.
 Ongoing landslide deformation in thawing permafrost. Geophysical Research
@@ -12,94 +12,96 @@ Letters 48, e2021GL092959. https://doi.org/10.1029/2021GL092959
 '''
 processing_assumptions = [
   "Three GPR transects are processed separately and then concatenated into one output table.",
-  "alt_m is converted from meters to centimeters before permafrost presence is inferred.",
-  "data_utils.process_pf_observations is used with a 130 cm threshold and fixed per-transect survey dates of 2018-08-14, 2018-08-15, and 2018-08-16.",
-  "transect_point is assigned from the generated point index after interpolation along each transect line.",
-  "method is set to gp and pf_depth is left missing in the final output.",
+  "alt_m is converted from meters to centimeters.",
+  "Native dense GPR picks are aggregated to one mean observation per occupied 5 m by 5 m UTM cell within transect and survey date.",
+  "Every retained numeric GPR active-layer depth is treated as a permafrost detection at the reported interpreted depth; no arbitrary 130 cm threshold is applied.",
+  "method is set to gp and pf_depth is copied from thaw_depth.",
 ]
 temporal_handling = [
   "Each transect is assigned a fixed survey date hardcoded in the script.",
 ]
 spatial_handling = [
-  "Transect coordinates are interpreted in EPSG:6334, transformed through UTM zone 5N, and exported in WGS84.",
+  "Transect coordinates are interpreted in EPSG:6334 and transformed to WGS84.",
+  "GPR aggregation uses a local UTM projection selected independently for each transect/date survey unit.",
 ]
 manual_steps = []
 known_limitations = [
   "The script assumes NAD83(2011) and WGS84 are close enough for this application, which the original author flagged as an unresolved source of roughly meter-scale horizontal error.",
-  "The script notes that transects are not yet resampled to a coarser regular spacing beyond the generated point series.",
+  "Permafrost depths are geophysical interpretations rather than mechanical probe contacts.",
+  "A 2026-08-04 cross-source footprint and coordinate/depth/date audit found no overlap with the retained Jafarov_2016, Moore_et_al_2025, or Petrone_etal_2016 GPR observations, so no cross-source rows are removed here.",
 ]
 external_dependencies = []
 notes = ""
 """
 
-# %% load libraries
-import pandas as pd
+from __future__ import annotations
+
 import geopandas as gpd
 import numpy as np
-import os
-# Define path to import data_utils
-from cusp.data_utils import _ROOT_DIR
+import pandas as pd
+
 from cusp import data_utils
+from cusp.data_utils import _ROOT_DIR
 
-source = 'Patton_2021'
-sp_line01 = pd.read_csv(_ROOT_DIR / "data" / source /"GPR" / "SP_LINE0202_picks.csv".format(source), delimiter='\t')
-sp_line02 = pd.read_csv(_ROOT_DIR / "data" / source /"GPR" / "SP_LINE0302_picks.csv".format(source))
-pt_line03 = pd.read_csv(_ROOT_DIR / "data" / source /"GPR" / "PT_LINE0403_picks.csv".format(source), delimiter='\t')
 
-#  try with new function (which will have to be ported elsewhere.)
-sp_line01['alt_m'] = sp_line01['alt_m'] * 100 # convert m to cm
-sp_line02['alt_m'] = sp_line02['alt_m'] * 100 
-pt_line03['alt_m'] = pt_line03['alt_m'] * 100
+SOURCE = "Patton_2021"
+SOURCE_DIR = _ROOT_DIR / "data" / SOURCE
 
-sp_line01_df = data_utils.process_pf_observations(working_df=sp_line01.copy(), alt_name='alt_m', 
-                                                  pf_limit=130, date='2018-08-14')
+TRANSECTS = [
+    ("GPR/SP_LINE0202_picks.csv", "\t", "sp_line01", "2018-08-14"),
+    ("GPR/SP_LINE0302_picks.csv", ",", "sp_line02", "2018-08-15"),
+    ("GPR/PT_LINE0403_picks.csv", "\t", "pt_line03", "2018-08-16"),
+]
 
-sp_line02_df = data_utils.process_pf_observations(working_df=sp_line02.copy(), alt_name='alt_m', 
-                                                  pf_limit=130,  date='2018-08-15')
 
-pt_line03_df = data_utils.process_pf_observations(working_df=pt_line03.copy(), alt_name='alt_m', 
-                                                  pf_limit=130, date='2018-08-16')
+def load_transect(relative_path: str, delimiter: str, site_id: str, date: str) -> pd.DataFrame:
+    """Load one native GPR pick table and convert its coordinates to WGS84."""
 
-# TO DO: RESAMPLE TRANSECTS TO BE EVERY 2 or 3 m...
-sp_line01_gdf = data_utils.geoify_working(sp_line01_df, crs="EPSG:6334", lat_name="northing_m", lon_name="easting_m").to_crs("EPSG:32605")
-sp_line02_gdf = data_utils.geoify_working(sp_line02_df, crs="EPSG:6334", lat_name="northing_m", lon_name="easting_m").to_crs("EPSG:32605")
-pt_line03_gdf = data_utils.geoify_working(pt_line03_df, crs="EPSG:6334", lat_name="northing_m", lon_name="easting_m").to_crs("EPSG:32605") 
+    raw = pd.read_csv(SOURCE_DIR / relative_path, delimiter=delimiter)
+    for column in ["easting_m", "northing_m", "alt_m"]:
+        raw[column] = pd.to_numeric(raw[column], errors="coerce")
+    raw = raw.dropna(subset=["easting_m", "northing_m", "alt_m"]).copy()
 
-sp_line01_gdf = sp_line01_gdf.to_crs(epsg=4326)
-sp_line02_gdf = sp_line02_gdf.to_crs(epsg=4326)
-pt_line03_gdf = pt_line03_gdf.to_crs(epsg=4326)
+    points = gpd.GeoDataFrame(
+        raw,
+        geometry=gpd.points_from_xy(raw["easting_m"], raw["northing_m"]),
+        crs="EPSG:6334",
+    ).to_crs("EPSG:4326")
+    return pd.DataFrame(
+        {
+            "site_id": site_id,
+            "date": date,
+            "lat": points.geometry.y,
+            "lon": points.geometry.x,
+            "thaw_depth": points["alt_m"] * 100.0,
+            "method": "gp",
+            "source": SOURCE,
+        }
+    )
 
-# add transect name/point, will definitely need to revisit this later to do it "better"
-sp_line01_gdf['transect_name'] = 'sp_line01'
-sp_line01_gdf['transect_point'] = sp_line01_gdf.index.values.copy()
-sp_line01_gdf['site_id'] = 'sp_line01'
-sp_line01_gdf.to_crs(epsg=4326)
 
-sp_line02_gdf['transect_name'] = 'sp_line02'
-sp_line02_gdf['transect_point'] = sp_line02_gdf.index.values.copy()
-sp_line02_gdf['site_id'] = 'sp_line02'
-sp_line02_gdf.to_crs(epsg=4326)
+def build_observations() -> pd.DataFrame:
+    native = pd.concat(
+        [load_transect(*specification) for specification in TRANSECTS],
+        ignore_index=True,
+    )
+    out = data_utils.aggregate_gpr_points(native, spacing_m=5.0)
+    out["pf_observed"] = pd.Series(1, index=out.index, dtype="Int64")
+    out["pf_depth"] = out["thaw_depth"]
+    out["obs_limit"] = np.nan
+    return out
 
-pt_line03_gdf['transect_name'] = 'pt_line03'
-pt_line03_gdf['transect_point'] = pt_line03_gdf.index.values.copy()
-pt_line03_gdf['site_id'] = 'pt_line03'
-pt_line03_gdf.to_crs(epsg=4326)
 
-# other stuff
-for df in [sp_line01_gdf, sp_line02_gdf, pt_line03_gdf]:
+def main() -> None:
+    out = build_observations()
+    data_utils.check_columns(out)
+    output_path = SOURCE_DIR / f"processed_{SOURCE.lower()}.csv"
+    out.to_csv(output_path, index=False)
+    print(
+        f"Wrote {len(out):,} aggregated GPR rows to {output_path} "
+        f"from {int(out['gpr_native_count'].sum()):,} native picks."
+    )
 
-    df['lon'] = [g.coords.xy[0][0] for g in df.geometry.values] 
-    df['lat'] = [g.coords.xy[1][0] for g in df.geometry.values] 
-    df['source'] = source
 
-# merge
-df_out = pd.concat([pd.DataFrame(sp_line01_gdf.drop(columns='geometry')), 
-                   pd.DataFrame(sp_line02_gdf.drop(columns='geometry')), 
-                   pd.DataFrame(pt_line03_gdf.drop(columns='geometry'))])
-
-df_out['method'] = 'gp'
-df_out['pf_depth'] = np.nan
-
-data_utils.check_columns(df_out)
-
-df_out.to_csv(_ROOT_DIR / "data" / source / f"processed_{source.lower()}.csv", index=False)
+if __name__ == "__main__":
+    main()

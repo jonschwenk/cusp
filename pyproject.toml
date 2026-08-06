@@ -30,6 +30,7 @@ dependencies = [
     "geopandas",
     "numpy",
     "pandas",
+    "pyproj",
     "scipy",
     "shapely",
 ]

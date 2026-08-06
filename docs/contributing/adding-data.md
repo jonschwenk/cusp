@@ -45,8 +45,10 @@ Add the metadata as a docstring at the top of the process script. Use the
 template and field definitions in
 [Process script header guidelines](process-script-header-guidelines.md).
 
-If a source needs manual preprocessing, external downloads, or a date
-assumption, record that in the docstring.
+If a source needs manual preprocessing, external downloads, a date assumption,
+or source-specific deduplication, record that in the docstring. Duplication
+notes should identify the compared source, the match fields and counts, which
+source was retained, and whether any non-exact overlap remains.
 
 ## Step 3: Produce The Processed CSV
 
@@ -97,6 +99,15 @@ Important expectations:
 - `pf_observed` should be integer `0` or `1`
 - `pf_depth`, `thaw_depth`, and `obs_limit` should be in centimeters
 - `site_id` may be null if the source truly does not provide one
+- a numeric detected thaw depth or permafrost depth should be represented as
+  `pf_observed = 1`, regardless of the depth value
+- `pf_observed = 0` should normally represent an explicit no-detection result
+  and must have a positive `obs_limit`
+- a visual presence/absence classification may leave `obs_limit` blank only
+  when `quality_flag_visual_interpretation = True`; document why no
+  point-specific observation limit exists
+- absence rows should leave canonical `pf_depth` and `thaw_depth` blank; retain
+  supporting source values in clearly named provenance columns
 
 ## Step 4: Resolve Source Interpretation
 
@@ -108,10 +119,23 @@ as clearly as possible, including:
 - approximate or campaign-level dates
 - method mapping to the CUSP vocabulary
 - obvious within-source duplicates
+- known cross-source overlap and the exact rule used to resolve it
 - obvious invalid rows that only the source contributor can interpret correctly
 - row-level quality flags for approximate dates, bounded observations,
   interpolated coordinates, summary statistics, source quality flags, or other
   caveats defined in `data/quality_flag_definitions.csv`
+
+Dense GPR picks should normally be aggregated with
+`data_utils.aggregate_gpr_points()` at the CUSP default of 5 m. The grouping
+columns must identify independent surveys, including observation date or thaw
+year, so repeated measurements of the same footprint remain distinct. Any
+different spacing must be justified in the process-script header.
+
+Do not remove records solely because two surveys overlap in space. When a
+synthesis contains identifiable copies of an original source, keep the
+original-source rows and implement the filter inside the synthesis processor.
+Record the compared sources, match fields, expected match counts, date handling,
+and remaining uncertainty in both process-script headers.
 
 ## Step 5: Validate The Metadata
 

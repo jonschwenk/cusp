@@ -19,6 +19,7 @@ AGGREGATED_COLUMNS = [
     "pf_depth",
     "obs_limit",
     "method",
+    "quality_flags",
     "aggregated_sources",
     "n_grouped",
 ]

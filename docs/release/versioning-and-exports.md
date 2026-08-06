@@ -1,4 +1,4 @@
-# CUSP Versioning and Exports Plan
+# CUSP Versioning and Exports
 
 ## Goal
 
@@ -9,17 +9,16 @@ Make every official CUSP data release:
 - easy to find as the current `latest`
 - easy to recover later as an archived historical snapshot
 
-## Current Release Model
+## Release Model
 
-CUSP now separates:
+CUSP dataset versions are independent of the Python package version. A data
+release records the accepted observations and their source bibliography; it
+does not imply a software release.
 
-- the canonical released dataset
-- optional released observation-level feature tables
-- non-release workflows such as aggregation
-
-That means users should cite and share versioned release files such as
-`cusp_v1.0.csv`, while the repository can still keep separate working files for
-building and checking the release.
+The canonical bundle contains the observation-level dataset, the bibliography
+for included sources, and a release record with checksums. Aggregation and
+environmental feature sampling remain supported derived workflows, but their
+outputs are not canonical release artifacts.
 
 ## Version Format
 
@@ -55,8 +54,6 @@ Examples:
 - a new source is added to the canonical release
 - an existing source is removed or deferred from the official release
 - source-processing fixes change rows in `cusp_vX.Y.csv`
-- the official observation-level feature table is regenerated with materially
-  changed content
 - release citation coverage changes because the included source set changed
 
 ## Official Export Layout
@@ -66,25 +63,21 @@ Use a real export tree inside the repo workspace:
 ```text
 exports/
   latest/
-    cusp_v1.0.csv
-    cusp_features_v1.0.csv
-    cusp_sources_v1.0.bib
+    cusp_v1.1.csv
+    cusp_sources_v1.1.bib
     RELEASE_INFO.md
   archived/
     v1.0/
-      cusp_v1.0.csv
-      cusp_features_v1.0.csv
-      cusp_sources_v1.0.bib
-      RELEASE_INFO.md
-    v1.1/
       ...
+    v1.1/
+      cusp_v1.1.csv
+      cusp_sources_v1.1.bib
+      RELEASE_INFO.md
 ```
 
 Notes:
 
 - the export bundle is intentionally flat
-- `cusp_features_vX.Y.csv` is included only when an observation-level feature
-  table keyed to `cusp_obs_id` is provided
 - aggregation outputs are not part of the official versioned export bundle
 
 ## Official Exported Files
@@ -92,7 +85,6 @@ Notes:
 The core exported filenames are:
 
 - `cusp_vX.Y.csv`
-- `cusp_features_vX.Y.csv`
 - `cusp_sources_vX.Y.bib`
 - `RELEASE_INFO.md`
 
@@ -108,18 +100,16 @@ This is the canonical public CUSP dataset:
 In repository rebuilds, this file is exported from the working observation
 table produced by `python -m cusp.build`.
 
-### `cusp_features_vX.Y.csv`
+### Historical v1.0 Feature File
 
-This is an optional official release artifact when present.
+The original v1.0 repository bundle included `cusp_features_v1.0.csv`, an
+observation-level Google Earth Engine feature table. The retroactive v1.0
+GitHub Release preserves that file as part of the historical snapshot.
 
-Rules:
-
-- it must be keyed to `cusp_obs_id`
-- it must align exactly to the canonical observation release
-- aggregation-keyed feature tables are not valid official release artifacts
-
-Internally, this should be produced by sampling features against the main CUSP
-observation table, not against a spatial summary.
+It is not part of the canonical release contract. Beginning with v1.1, CUSP
+releases omit feature tables. Users can generate one from a chosen observation
+release with `python -m cusp.features`; the result is a derived product keyed
+by `cusp_obs_id`.
 
 ### `cusp_sources_vX.Y.bib`
 
@@ -166,16 +156,17 @@ This works with tables that contain either:
 - `source`
 - `aggregated_sources`
 
-## Aggregation Status
+## Derived Workflows
 
-The aggregation workflow remains important, but it is currently a
-reproducible example workflow rather than an official versioned release
-artifact.
+Aggregation and feature sampling remain reproducible workflows rather than
+official versioned release artifacts.
 
 That means:
 
 - `python -m cusp.aggregate` remains available
 - `aggregated_30m.csv` remains useful and documented
+- `python -m cusp.features` can produce observation- or aggregation-keyed
+  environmental tables
 - aggregation outputs do not need to be rebuilt and archived for every CUSP
   dataset version unless the team later promotes them back into the official
   release bundle
@@ -183,30 +174,21 @@ That means:
 ## Recommended Release Workflow
 
 1. Rebuild the canonical dataset with `python -m cusp.build`.
-2. If needed, generate an observation-level feature table keyed to
-   `cusp_obs_id`.
-3. Decide the next dataset version, for example `v1.0` or `v1.1`.
+2. Validate processing metadata and the canonical observation table.
+3. Decide the next dataset version.
 4. Run the scripted release gate, including strict docs validation, with
-   `python -m cusp.release_gate --version 1.0 --gee-project <your-earth-engine-project>`.
-   For CI or environments without Earth Engine credentials, use
-   `--skip-gee-smoke` and treat the live GEE smoke as a manual release check.
-5. Package the official bundle with `python -m cusp.export`.
-6. Review `RELEASE_INFO.md`.
-7. Publish the archived bundle and refresh `exports/latest/`.
+   `python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke`.
+5. Package the official bundle with `python -m cusp.export` and no
+   `--features-input` argument.
+6. Review `RELEASE_INFO.md`, file hashes, and row/source counts.
+7. Commit the archived bundle, refresh `exports/latest/`, tag the data version,
+   and publish the matching GitHub Release.
 
 The release gate writes test exports and aggregation outputs under
 `runs/release_gate/`. Those files validate the workflow but are not official
 release artifacts.
 
-## Practical Recommendation Right Now
+## Current Release Sequence
 
-For the first public release, the official bundle uses:
-
-- `cusp_v1.0.csv`
-- `cusp_features_v1.0.csv`
-- `cusp_sources_v1.0.bib`
-- `RELEASE_INFO.md`
-
-The feature table is included because the full `base_v1` observation-level
-feature export has been sampled against the canonical dataset and aligns to
-`cusp_obs_id`.
+The existing v1.0 archive is published retroactively as the historical initial
+release. The corrected and expanded observation build is published as v1.1.
