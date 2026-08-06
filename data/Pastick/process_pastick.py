@@ -4,7 +4,7 @@ source_key = "Pastick"
 release_clearance = "approved"
 permission_basis = "emailed_approval"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Pastick, Neal. Unpublished Alaska pedon and near-surface permafrost data
 compiled from multiple sources, including NRCS-derived products represented in
@@ -14,10 +14,12 @@ processing_assumptions = [
   "YFlats_NRCS pfrost depth is treated as both pf_depth and thaw_depth when pf_observed = 1.",
   "WesternAKSitePhoriz permafrost presence is inferred from horizon names containing frozen-soil suffixes, with the shallowest frozen horizon top used as pf_depth.",
   "WesternAKSitePhoriz obs_limit is taken as the deepest horizon bottom for each pedon, and organic thickness is derived from O-horizon bottoms when present.",
+  "WesternAKSitePhoriz absence rows are flagged because absence is interpreted only to the bottom of the recorded soil profile.",
   "WesternAKSitePhoriz/numeric-ID pit rows that overlap with NCSS_Lab_Data_Mart are removed in favor of NCSS: same pf_observed status and within 1 m, regardless of Pastick's update-like date fields or small depth/profile-bottom differences.",
   "For Innoko probe rows, numeric Depth is permafrost depth for presence and the reported observation limit for absence; source >2m codes are conservatively recoded to a 200 cm absence limit.",
   "Innoko water/mud/see-note rows without a positive observation depth are excluded because they do not support a usable permafrost-absence limit.",
   "Five additional absence rows with zero-depth WesternAKSitePhoriz/Gates records are excluded because no defensible observation limit can be recovered.",
+  "If a permafrost-present record reports an observation limit shallower than its permafrost depth, the contradictory canonical limit is cleared, the source value is preserved in pastick_source_obs_limit_cm, and the row is flagged as recoded.",
   "Innoko Pnt_type = Estimated coordinates are retained and flagged as interpolated source coordinates.",
   "The remaining site shapefiles are harmonized through column-name standardization, records with unrecognized pf_observed encodings are dropped, and source-native site identifiers are preserved where available.",
   "method is assigned explicitly for YFlats_NRCS and WesternAKSitePhoriz, and set to unknown for the remaining shapefiles when no reliable method field is available.",
@@ -243,6 +245,7 @@ ndf = pd.DataFrame({'pf_depth':np.array(pfDepth),
 
 # Merge the dataframes
 df = pd.concat([df, ndf], ignore_index=True)
+df['quality_flag_obs_limit_profile_bottom'] = df['pf_observed'].eq(0)
 #df=df.reset_index()
 df['source'] = source
 df['thaw_depth'] = np.nan
@@ -339,6 +342,23 @@ for site in sites:
 final = pd.concat(all_dfs)
 final.loc[final['pf_observed'] == 0, 'pf_depth'] = np.nan
 final.loc[final['obs_limit'] == 0, 'obs_limit'] = np.nan
+final['pastick_source_obs_limit_cm'] = final['obs_limit']
+numeric_obs_limit = pd.to_numeric(final['obs_limit'], errors='coerce')
+numeric_pf_depth = pd.to_numeric(final['pf_depth'], errors='coerce')
+contradictory_presence_limit = (
+    final['pf_observed'].eq(1)
+    & numeric_obs_limit.notna()
+    & numeric_pf_depth.notna()
+    & numeric_obs_limit.lt(numeric_pf_depth)
+)
+existing_recode_flag = final.get(
+    'quality_flag_source_unit_or_code_recoded',
+    pd.Series(False, index=final.index),
+).fillna(False).astype(bool)
+final['quality_flag_source_unit_or_code_recoded'] = (
+    existing_recode_flag | contradictory_presence_limit
+)
+final.loc[contradictory_presence_limit, 'obs_limit'] = np.nan
 final = final[~((final['lat'] == 0) & (final['lon'] == 0))].copy()
 final = remove_ncss_overlaps(final)
 unusable_absence = final['pf_observed'].eq(0) & final['obs_limit'].isna()

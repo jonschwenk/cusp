@@ -4,7 +4,7 @@ source_key = "Wagner_2019"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Wagner, Anna; Barker, Amanda (2018). Data for: Distribution of Polycyclic
 Aromatic Hydrocarbons (PAHs) from Legacy Spills at an Alaskan Arctic Site
@@ -90,6 +90,7 @@ combined_gdf['thaw_depth'] = np.nan
 combined_gdf['method'] = 'aug'
 combined_gdf['quality_flag_date_assigned'] = True
 combined_gdf['quality_flag_obs_limit_profile_bottom'] = combined_gdf['pf_observed'].eq(0)
+combined_gdf['quality_flag_source_value_approximate'] = combined_gdf['pf_observed'].eq(1)
 
 data_utils.check_columns(combined_gdf)
 

@@ -6,7 +6,7 @@ source_key = "Jorgenson_Kanevskiy_2022_Gosling"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Mark Jorgenson and Mikhail Kanevskiy. (2022). Gosling Lake, Alaska,
 Topography, Vegetation, Soils, Soil temperatures, and Site-Environmental Data,
@@ -29,6 +29,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "Rows with unresolved SoilPFrost codes are dropped rather than exported with missing pf_observed.",
+  "This dedicated release is primary for 15 matching site-years also compiled in Jorgenson_Kanevskiy_2025; the copies are removed in the 2025 inventory processor.",
 ]
 external_dependencies = []
 notes = ""

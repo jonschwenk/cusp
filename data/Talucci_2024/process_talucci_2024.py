@@ -4,7 +4,7 @@ source_key = "Talucci_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-21"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Talucci, Anna; Loranty, Michael; Holloway, Jean; Rogers, Brendan; Alexander,
 Heather; Baillargeon, Natalie; Baltzer, Jennifer; Berner, Logan; and others.
@@ -14,6 +14,7 @@ doi:10.18739/A2RN3092P
 '''
 processing_assumptions = [
   "Natali Bonanza Creek rows already represented by the direct ViPER_2018 source are removed before FireALT aggregation: BCB 2015 and BCU 2015, 2017, and 2018.",
+  "Additional Natali-attributed site-years represented by the direct Natali_2023 source are removed before aggregation; FireALT-only Natali contributions such as NCU_NEW, YKD, and sites a-g are retained.",
   "Where both msrType = thaw and msrType = active exist for the same grouped site, only the active records are retained.",
   "Repeated measurements at the same lat/lon, burn status, and time-since-fire grouping are summarized using mean estimated thaw depth rather than mean measured thaw depth.",
   "pf_observed is fixed to 1 and pf_depth is set equal to the estimated thaw depth used for aggregation.",
@@ -32,6 +33,7 @@ known_limitations = [
   "Unburned control rows have no numeric time-since-fire value, so timeSinceFire is blank after ingestion.",
   "method is exported as unknown because the source combines modeled and measured information without one clean field that maps to the CUSP method vocabulary.",
   "CUSP prefers the direct ViPER_2018 thaw-probe observations over FireALT's synthesized Natali Bonanza Creek rows where the two overlap.",
+  "The ViPER and Natali filters are guarded at 3,936 and 1,552 raw rows, respectively, so source revisions cannot silently change deduplication.",
 ]
 external_dependencies = []
 notes = ""
@@ -55,6 +57,8 @@ from cusp.data_utils import _ROOT_DIR
 from cusp import data_utils
 from datetime import datetime, timedelta
 source = "Talucci_2024"
+EXPECTED_VIPER_COPIES = 3_936
+EXPECTED_NATALI_COPIES = 1_552
 
 
 
@@ -78,7 +82,47 @@ natali_bonanza_viper_overlap = (
         | (df["siteId"].eq("BCU") & df["year"].isin([2015, 2017, 2018]))
     )
 )
-df = df.loc[~natali_bonanza_viper_overlap].copy()
+viper_overlap_count = int(natali_bonanza_viper_overlap.sum())
+if viper_overlap_count != EXPECTED_VIPER_COPIES:
+    raise ValueError(
+        f"Expected {EXPECTED_VIPER_COPIES:,} FireALT/ViPER copies; "
+        f"found {viper_overlap_count:,}."
+    )
+
+natali_direct_site_years = {
+    ("ANKB", 2018),
+    ("ANKU", 2018),
+    ("HCB", 2017),
+    ("HCB", 2018),
+    ("HCU", 2016),
+    ("HCU", 2017),
+    ("HCU", 2018),
+    ("NCB_NEW", 2018),
+    ("NCB_OLD", 2017),
+    ("NCU_OLD", 2016),
+    ("NCU_OLD", 2017),
+    ("YKDB", 2017),
+    ("YKDU", 2017),
+}
+site_year = pd.MultiIndex.from_arrays(
+    [df["siteId"].astype("string"), df["year"].astype("Int64")]
+)
+is_natali_contributor = (
+    df["submitNm"].astype(str).str.lower().eq("natali")
+    | df["lastNm"].astype(str).str.lower().eq("natali")
+)
+natali_direct_overlap = (
+    is_natali_contributor
+    & site_year.isin(pd.MultiIndex.from_tuples(sorted(natali_direct_site_years)))
+)
+natali_overlap_count = int(natali_direct_overlap.sum())
+if natali_overlap_count != EXPECTED_NATALI_COPIES:
+    raise ValueError(
+        f"Expected {EXPECTED_NATALI_COPIES:,} FireALT/Natali copies; "
+        f"found {natali_overlap_count:,}."
+    )
+
+df = df.loc[~(natali_bonanza_viper_overlap | natali_direct_overlap)].copy()
 
 # Identify and keep only 'active' if both 'thaw' and 'active' exist
 def filter_thaw_if_active(group):

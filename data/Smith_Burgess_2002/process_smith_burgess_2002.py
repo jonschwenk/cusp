@@ -6,7 +6,7 @@ source_key = "Smith_Burgess_2002"
 release_clearance = "approved"
 permission_basis = "published_literature"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Smith, S. L.; Burgess, M. M. 2002. A digital database of permafrost thickness
 in Canada. Geological Survey of Canada, Open File 4173. Natural Resources
@@ -15,7 +15,7 @@ Canada. https://doi.org/10.4095/213043
 processing_assumptions = [
   "Only the active-layer-thickness field from the broader permafrost-thickness database is used for CUSP processing.",
   "The largest integer found in each active-layer-thickness cell is taken as the usable thaw depth.",
-  "Rows lacking a numeric active-layer thickness are dropped unless explicitly marked no pf; exact observations already represented in Smith_Burgess_2000 are then removed in favor of that earlier source.",
+  "Rows lacking a numeric active-layer thickness are dropped unless explicitly marked no pf. Exact observation matches and additional coordinate/site-identifier matches represented in Smith_Burgess_2000 are removed in favor of that CUSP-relevant ground-temperature product.",
   "A midpoint year is extracted from PERIOD and exported as July 1 of that year.",
   "West longitudes stored as positive degrees W are converted to negative WGS84 longitude.",
   "pf_depth is set equal to thaw_depth for all retained rows, and method is exported as unknown because the source workbook aggregates multiple monitoring contexts.",
@@ -30,7 +30,8 @@ manual_steps = []
 known_limitations = [
   "The processed output uses only the active-layer-thickness information from a broader permafrost database product.",
   "Temporal precision is limited to an inferred midpoint year.",
-  "Exact coordinate/year/state/depth duplicates are removed against Smith_Burgess_2000, which is treated as the earlier source.",
+  "Thirty-five exact observation matches and 11 additional coordinate/site-identifier matches are removed against Smith_Burgess_2000; differing active-layer values at those 11 sites are treated as alternate compiled representations rather than independent observations.",
+  "Bounded, approximate, or ranged active-layer text is converted to one representative numeric value and carries source_value_approximate.",
 ]
 external_dependencies = [
   "data/Smith_Burgess_2000/processed_smith_burgess_2000.csv is required for source-specific overlap filtering.",
@@ -88,10 +89,12 @@ def clean_thickness(series: pd.Series) -> pd.DataFrame:
 
     # flag: 0 if the *original* text contains 'no', else 1
     flag = (~txt.str.contains(r"\bno\b", na=True)).astype(int)
+    approximate = numeric.notna() & ~txt.str.fullmatch(r"\d+(?:\.\d+)?", na=False)
 
     return pd.DataFrame({
         "thickness_cm_int": numeric,
-        "is_no_flag": flag
+        "is_no_flag": flag,
+        "source_value_approximate": approximate,
     })
 # ------- extract a date from the period column
 def extract_mid_year(val):
@@ -181,6 +184,9 @@ combined_df['pf_depth'] = combined_df['thaw_depth']
 combined_df['quality_flag_date_assigned'] = True
 combined_df['quality_flag_date_source_approximate'] = True
 combined_df['quality_flag_source_unit_or_code_recoded'] = True
+combined_df['quality_flag_source_value_approximate'] = combined_df[
+    'source_value_approximate'
+]
 
 #drop site without a measurement date
 combined_df['date'] = combined_df['date'].replace('', pd.NA)
@@ -231,6 +237,44 @@ print(
     "by Smith_Burgess_2000."
 )
 combined_df = combined_df.loc[~matches.to_numpy()].copy()
+
+def normalize_identifier(series):
+    return (
+        series.astype('string').str.upper()
+        .str.replace(r'[^A-Z0-9]', '', regex=True)
+        .str.replace(r'SITE$', '', regex=True)
+        .replace('', pd.NA)
+    )
+
+keyed_remaining = add_overlap_keys(combined_df)
+keyed_remaining['_identifier_key'] = normalize_identifier(
+    keyed_remaining['source_site_identifier']
+)
+earlier_identity = add_overlap_keys(earlier)
+earlier_identity['_identifier_key'] = normalize_identifier(
+    earlier_identity['source_site_identifier']
+)
+identity_columns = ['_lat_key', '_lon_key', '_identifier_key']
+earlier_identity_keys = (
+    earlier_identity.dropna(subset=['_identifier_key'])[identity_columns]
+    .drop_duplicates()
+)
+identity_matches = keyed_remaining[identity_columns].merge(
+    earlier_identity_keys.assign(_smith_2000_identity_overlap=True),
+    on=identity_columns,
+    how='left',
+)['_smith_2000_identity_overlap'].fillna(False).astype(bool)
+identity_match_count = int(identity_matches.sum())
+if identity_match_count != 11:
+    raise ValueError(
+        "Expected 11 additional Smith/Burgess site-identity overlaps; "
+        f"found {identity_match_count}. Source contents may have changed."
+    )
+print(
+    f"Removed {identity_match_count} additional Smith_Burgess_2002 rows "
+    "matching Smith_Burgess_2000 site identifiers and coordinates."
+)
+combined_df = combined_df.loc[~identity_matches.to_numpy()].copy()
 
 # SAVE CLEANED CSV
 # -----------------------------------------------------

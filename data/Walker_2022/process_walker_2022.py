@@ -6,7 +6,7 @@ source_key = "Walker_2022"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Walker, D. A., M. Kanevskiy, A. L. Breen, A. Kade, R. P. Daanen, B. M. Jones,
 D. J. Nicolsky, H. Bergstedt, E. Watson-Cook, and J. L. Peirce. 2022.
@@ -27,6 +27,7 @@ spatial_handling = [
 ]
 manual_steps = []
 known_limitations = [
+  "Walker_2022 is the primary CUSP source for the 2020 Airport, Colleen, and Joregenson transects also published by Peirce_2020 because Walker provides native per-point coordinates; those shared rows are removed from Peirce_2020.",
   "Greater-than measurements are censored at their reported probing limit and do not provide exact active-layer thickness.",
 ]
 external_dependencies = []

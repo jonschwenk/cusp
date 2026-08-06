@@ -4,7 +4,7 @@ source_key = "Peirce_2020"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Peirce, Jana; Walker, Donald A. (Skip); Watson-Cook, Emily; Kanevskiy,
 Mikhail; Bergstedt, Helena. 2022. Observations in ice-rich permafrost systems,
@@ -12,6 +12,7 @@ Prudhoe Bay Alaska, August 2020. Arctic Data Center.
 doi:10.18739/A2542J96D
 '''
 processing_assumptions = [
+  "Airport T3-T5, Colleen T1-T2, and Joregenson JS are removed because Walker_2022 publishes the same 2020 transects with native point coordinates; only the four NIRPO transects unique to this release are retained.",
   "Thaw depth values reported with a leading > are treated as observation-limit non-permafrost observations.",
   "Ordinary numeric thaw depth is treated as permafrost presence at the reported depth.",
   "Only explicit >x values are treated as lower-bound absence, with obs_limit set to x.",
@@ -28,6 +29,7 @@ manual_steps = []
 known_limitations = [
   "The current implementation assumes the generated 1 m transect points and the Distanc from start (m) field line up exactly.",
   "site_id is a generated transect identifier because the source is organized around transects rather than named sites.",
+  "The shared-transect filter is guarded at 776 raw rows so source revisions cannot silently change the deduplication result.",
 ]
 external_dependencies = []
 notes = ""
@@ -44,6 +46,20 @@ from shapely.geometry import Point, LineString
 source = 'Peirce_2020'
 pf_data = pd.read_csv(_ROOT_DIR / "data" / source /"NNA_IRPS_PBO_2020_Water_Thaw_Depth.copy.csv".format(source))
 transect_data = pd.read_csv(_ROOT_DIR / "data" / source /"NNA_IRPS_PBO_2020_Transect_Locations.csv".format(source))
+
+# Walker_2022 carries native point coordinates for the six shared 2020
+# transects. Peirce remains the source for the four unique NIRPO transects.
+shared_with_walker = ~pf_data['Study site'].astype('string').str.strip().eq('NIRPO')
+shared_count = int(shared_with_walker.sum())
+if shared_count != 776:
+    raise ValueError(
+        "Expected 776 Peirce rows shared with Walker_2022; "
+        f"found {shared_count}. Review the source before changing the filter."
+    )
+pf_data = pf_data.loc[~shared_with_walker].copy()
+transect_data = transect_data.loc[
+    transect_data['Transect ID'].isin(pf_data['Transect'].dropna().unique())
+].copy()
 
 pf_data[pf_data == -9999] = np.nan
 pf_data[pf_data == '-9999'] = np.nan
@@ -112,6 +128,7 @@ df['source'] = source
 df['site_id'] = df['transect_name'].astype(str).radd(source + "_")
 df['pf_observed'] = df['pf_observed'].astype(int)
 df['method'] = 'tp'
+df['quality_flag_coord_lookup_or_interpolated'] = True
 data_utils.check_columns(df)
 
 df.to_csv(_ROOT_DIR / "data" / source / f"processed_{source.lower()}.csv", index=False)

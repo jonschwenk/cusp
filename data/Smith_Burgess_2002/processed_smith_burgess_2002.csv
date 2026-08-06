@@ -1,243 +1,232 @@
-site_location,source_site_identifier,lat,lon,thaw_depth,pf_observed,date,source_active_layer_text,source_period,site_id,obs_limit,method,source,pf_depth,quality_flag_date_assigned,quality_flag_date_source_approximate,quality_flag_source_unit_or_code_recoded
-Northwest Territories,3,60.766666666666666,-115.88333333333334,91.0,1,1962-07-01,76 to 91,09/1962,Northwest Territories | 3,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Northwest Territories,5,60.71666666666667,-115.9,91.0,1,1962-07-01,76 to 91,09/1962,Northwest Territories | 5,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Northwest Territories,9,60.65,-116.01666666666667,51.0,1,1962-07-01,51,09/1962,Northwest Territories | 9,,unknown,Smith_Burgess_2002,51.0,True,True,True
-Northwest Territories,18,60.56666666666667,-116.1,168.0,1,1962-07-01,53 to 168,09/1962,Northwest Territories | 18,,unknown,Smith_Burgess_2002,168.0,True,True,True
-Northwest Territories,23,60.5,-116.28333333333333,61.0,1,1962-07-01,61,09/1962,Northwest Territories | 23,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Northwest Territories,26,60.46666666666667,-116.3,76.0,1,1962-07-01,61 to 76,09/1962,Northwest Territories | 26,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Northwest Territories,31,60.4,-116.36666666666666,91.0,1,1962-07-01,91,09/1962,Northwest Territories | 31,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Northwest Territories,32,60.35,-116.4,69.0,1,1962-07-01,69,09/1962,Northwest Territories | 32,,unknown,Smith_Burgess_2002,69.0,True,True,True
-Northwest Territories,34,60.28333333333333,-116.55,145.0,1,1962-07-01,145,09/1962,Northwest Territories | 34,,unknown,Smith_Burgess_2002,145.0,True,True,True
-Northwest Territories,33,60.28333333333333,-116.55,61.0,1,1962-07-01,61,09/1962,Northwest Territories | 33,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Northwest Territories,35,60.266666666666666,-116.56666666666666,76.0,1,1962-07-01,46 to 76,09/1962,Northwest Territories | 35,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Northwest Territories,39,60.06666666666667,-116.81666666666666,61.0,1,1962-07-01,61,09/1962,Northwest Territories | 39,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Redknife Hills A,85-13 A,60.57,-120.29,100.0,1,1985-07-01,>100,08/85-08/86,Redknife Hills A | 85-13 A,,unknown,Smith_Burgess_2002,100.0,True,True,True
-Redknife Hills B,85-13 B,60.57,-120.29,100.0,1,1985-07-01,<100,08/85-08/86,Redknife Hills B | 85-13 B,,unknown,Smith_Burgess_2002,100.0,True,True,True
-Mackenzie Hwy S,85-10B,61.35,-120.87,97.0,1,1985-07-01,97,03/85-03/86,Mackenzie Hwy S | 85-10B,,unknown,Smith_Burgess_2002,97.0,True,True,True
-Moraine South,85-11,61.28,-120.8,100.0,1,1985-07-01,100,03/85-03/86,Moraine South | 85-11,,unknown,Smith_Burgess_2002,100.0,True,True,True
-Jean Marie Ck.,85-12B,61.19,-120.7,75.0,1,1984-07-01,75,09/84-09/85,Jean Marie Ck. | 85-12B,,unknown,Smith_Burgess_2002,75.0,True,True,True
-Manners Ck.,85-8B,61.6,-121.09,50.0,1,1985-07-01,<50,03/85-03/86,Manners Ck. | 85-8B,,unknown,Smith_Burgess_2002,50.0,True,True,True
-Great Bear R. ,84-3A,64.91,-125.58,25.0,1,1984-07-01,25,06/84-06/85,Great Bear R. | 84-3A,,unknown,Smith_Burgess_2002,25.0,True,True,True
-Great Bear R.,84-3B,64.91,-125.57,60.0,1,1984-07-01,60,09/84-09/85,Great Bear R. | 84-3B,,unknown,Smith_Burgess_2002,60.0,True,True,True
-Norman Wells Pump Stn,84-1,65.29,-126.88,100.0,1,1984-07-01,<100,06/84-06/85,Norman Wells Pump Stn | 84-1,,unknown,Smith_Burgess_2002,100.0,True,True,True
-Canyon Ck North,84-2A,65.29,-126.88,190.0,1,1984-07-01,190,06/84-06/85,Canyon Ck North | 84-2A,,unknown,Smith_Burgess_2002,190.0,True,True,True
-Canyon Ck North,84-2B,65.27,-126.52,140.0,1,1984-07-01,140,09/84-09/85,Canyon Ck North | 84-2B,,unknown,Smith_Burgess_2002,140.0,True,True,True
-Canyon Ck South,84-2C,65.22,-126.51,135.0,1,1984-07-01,135,09/84-09/85,Canyon Ck South | 84-2C,,unknown,Smith_Burgess_2002,135.0,True,True,True
-Fort Good Hope,FGH #1,65.73666666666666,-128.69,150.0,1,1972-07-01,150,12/71-06/74,Fort Good Hope | FGH #1,,unknown,Smith_Burgess_2002,150.0,True,True,True
-Fort Good Hope,FGH #3,65.78166666666667,-128.865,140.0,1,1972-07-01,140,12/71-06/74,Fort Good Hope | FGH #3,,unknown,Smith_Burgess_2002,140.0,True,True,True
-Fort Good Hope,FGH #2,65.795,-129.42333333333335,90.0,1,1972-07-01,90,12/71-01/73,Fort Good Hope | FGH #2,,unknown,Smith_Burgess_2002,90.0,True,True,True
-Fort Good Hope,FGH #4,66.12166666666667,-129.605,140.0,1,1972-07-01,140,12/71-06/74,Fort Good Hope | FGH #4,,unknown,Smith_Burgess_2002,140.0,True,True,True
-Fort McPherson (NWT),MP #1,67.43333333333334,-135.41666666666666,150.0,1,1965-07-01,150,08/1965 & 06/1966,Fort McPherson (NWT) | MP #1,,unknown,Smith_Burgess_2002,150.0,True,True,True
-Baker Lake,Thelon River,64.3,-96.0,75.0,1,1975-07-01,75,1974 - 1976,Baker Lake | Thelon River,,unknown,Smith_Burgess_2002,75.0,True,True,True
-Devon Island:TrueloveLowlands,Upland Plateau (G),75.65,-84.38333333333334,30.0,1,1972-07-01,<30,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Upland Plateau (G),,unknown,Smith_Burgess_2002,30.0,True,True,True
-Devon Island:TrueloveLowlands,Granite Gneiss (F),75.66666666666667,-84.45,223.0,1,1972-07-01,223,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Granite Gneiss (F),,unknown,Smith_Burgess_2002,223.0,True,True,True
-Devon Island:TrueloveLowlands,Tundra-Meadow (C),75.66666666666667,-84.46666666666667,70.0,1,1972-07-01,70,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Tundra-Meadow (C),,unknown,Smith_Burgess_2002,70.0,True,True,True
-Devon Island:TrueloveLowlands,Limestone-Inland (E),75.66666666666667,-84.6,140.0,1,1972-07-01,140,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Limestone-Inland (E),,unknown,Smith_Burgess_2002,140.0,True,True,True
-Devon Island:TrueloveLowlands,Limestone-Coast (D),75.68333333333334,-84.65,122.0,1,1972-07-01,122,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Limestone-Coast (D),,unknown,Smith_Burgess_2002,122.0,True,True,True
-Rea Point,-,75.36,-105.75,53.0,1,1986-07-01,25-53,1985-1987,Rea Point,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Alert,-,82.5,-62.43333333333333,8.0,1,1979-07-01,<0.8,08/1979 to 08/1980,Alert,,unknown,Smith_Burgess_2002,8.0,True,True,True
-Yukon Territory,83,60.166666666666664,-129.9,53.0,1,1964-07-01,53,09/1964,Yukon Territory | 83,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Yukon Territory,94,60.083333333333336,-132.65,46.0,1,1964-07-01,46,09/1964,Yukon Territory | 94,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Yukon Territory,93,60.083333333333336,-132.65,46.0,1,1964-07-01,46,09/1964,Yukon Territory | 93,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Yukon Territory,95,60.13333333333333,-132.9,69.0,1,1964-07-01,69,09/1964,Yukon Territory | 95,,unknown,Smith_Burgess_2002,69.0,True,True,True
-Yukon Territory,97,60.13333333333333,-132.9,71.0,1,1964-07-01,71,09/1964,Yukon Territory | 97,,unknown,Smith_Burgess_2002,71.0,True,True,True
-Yukon Territory,96,60.13333333333333,-132.9,69.0,1,1964-07-01,69,09/1964,Yukon Territory | 96,,unknown,Smith_Burgess_2002,69.0,True,True,True
-Yukon Territory,99,60.266666666666666,-133.08333333333334,61.0,1,1964-07-01,61,09/1964,Yukon Territory | 99,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Yukon Territory,101,60.3,-133.23333333333332,56.0,1,1964-07-01,56,09/1964,Yukon Territory | 101,,unknown,Smith_Burgess_2002,56.0,True,True,True
-Yukon Territory,100,60.3,-133.23333333333332,48.0,1,1964-07-01,48,09/1964,Yukon Territory | 100,,unknown,Smith_Burgess_2002,48.0,True,True,True
-Yukon Territory,103,60.43333333333333,-133.95,48.0,1,1964-07-01,48,09/1964,Yukon Territory | 103,,unknown,Smith_Burgess_2002,48.0,True,True,True
-Yukon Territory,108,60.516666666666666,-134.5,56.0,1,1964-07-01,56,09/1964,Yukon Territory | 108,,unknown,Smith_Burgess_2002,56.0,True,True,True
-Kathleen Canyon Dam Site,-,60.75,-137.41666666666666,50.0,1,1961-07-01,30 to 50,09/1961,Kathleen Canyon Dam Site,,unknown,Smith_Burgess_2002,50.0,True,True,True
-Alsek River,-,60.583333333333336,-137.25,36.0,1,1961-07-01,30 to 36,09/1961,Alsek River,,unknown,Smith_Burgess_2002,36.0,True,True,True
-Yukon Territory,128,61.13333333333333,-135.66666666666666,30.0,1,1964-07-01,30,09/1964,Yukon Territory | 128,,unknown,Smith_Burgess_2002,30.0,True,True,True
-Yukon Territory,131,61.38333333333333,-135.91666666666666,61.0,1,1964-07-01,61,09/1964,Yukon Territory | 131,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Yukon Territory,116,61.7,-139.95,61.0,1,1964-07-01,61,09/1964,Yukon Territory | 116,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Yukon Territory,117,61.733333333333334,-140.01666666666668,76.0,1,1964-07-01,76,09/1964,Yukon Territory | 117,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Yukon Territory,118,61.833333333333336,-140.16666666666666,61.0,1,1964-07-01,61,09/1964,Yukon Territory | 118,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Yukon Territory,119,61.95,-140.33333333333334,61.0,1,1964-07-01,61,09/1964,Yukon Territory | 119,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Yukon Territory,138,62.833333333333336,-136.7,46.0,1,1964-07-01,46,09/1964,Yukon Territory | 138,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Yukon Territory,134,62.166666666666664,-136.4,46.0,1,1964-07-01,46,09/1964,Yukon Territory | 134,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Yukon Territory,140,63.38333333333333,-136.5,46.0,1,1964-07-01,46,09/1964,Yukon Territory | 140,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Yukon Territory,141,63.43333333333333,-137.26666666666668,53.0,1,1964-07-01,53,09/1964,Yukon Territory | 141,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Yukon Territory,141,63.43333333333333,-137.26666666666668,79.0,1,1964-07-01,79,09/1964,Yukon Territory | 141,,unknown,Smith_Burgess_2002,79.0,True,True,True
-Yukon Territory,143,63.733333333333334,-138.01666666666668,107.0,1,1964-07-01,107,09/1964,Yukon Territory | 143,,unknown,Smith_Burgess_2002,107.0,True,True,True
-British Columbia,5,56.7,-122.0,53.0,1,1964-07-01,53,09/1964,British Columbia | 5,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,11,57.06666666666667,-122.83333333333333,76.0,1,1964-07-01,76,09/1964,British Columbia | 11,,unknown,Smith_Burgess_2002,76.0,True,True,True
-British Columbia,13,57.21666666666667,-122.85,61.0,1,1964-07-01,61,09/1964,British Columbia | 13,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,29,57.833333333333336,-122.96666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 29,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,30,57.833333333333336,-122.96666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 30,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,29,57.833333333333336,-122.96666666666667,61.0,1,1964-07-01,61,09/1964,British Columbia | 29,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,31,57.95,-122.98333333333333,53.0,1,1964-07-01,53,09/1964,British Columbia | 31,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,25,57.71666666666667,-123.0,61.0,1,1964-07-01,61,09/1964,British Columbia | 25,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,26,57.71666666666667,-123.0,38.0,1,1964-07-01,38,09/1964,British Columbia | 26,,unknown,Smith_Burgess_2002,38.0,True,True,True
-British Columbia,28,57.71666666666667,-123.0,41.0,1,1964-07-01,41,09/1964,British Columbia | 28,,unknown,Smith_Burgess_2002,41.0,True,True,True
-British Columbia,18,57.38333333333333,-123.0,61.0,1,1964-07-01,61,09/1964,British Columbia | 18,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,16,57.3,-123.0,61.0,1,1964-07-01,61,09/1964,British Columbia | 16,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,20,57.483333333333334,-123.01666666666667,107.0,1,1964-07-01,107,09/1964,British Columbia | 20,,unknown,Smith_Burgess_2002,107.0,True,True,True
-British Columbia,20,57.483333333333334,-123.01666666666667,46.0,1,1964-07-01,46,09/1964,British Columbia | 20,,unknown,Smith_Burgess_2002,46.0,True,True,True
-British Columbia,22,57.63333333333333,-123.01666666666667,41.0,1,1964-07-01,41,09/1964,British Columbia | 22,,unknown,Smith_Burgess_2002,41.0,True,True,True
-British Columbia,23,57.63333333333333,-123.01666666666667,46.0,1,1964-07-01,46,09/1964,British Columbia | 23,,unknown,Smith_Burgess_2002,46.0,True,True,True
-British Columbia,44,58.516666666666666,-122.76666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 44,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,46,58.56666666666667,-122.76666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 46,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,48,58.65,-122.81666666666666,61.0,1,1964-07-01,61,09/1964,British Columbia | 48,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,42,58.38333333333333,-122.85,43.0,1,1964-07-01,43,09/1964,British Columbia | 42,,unknown,Smith_Burgess_2002,43.0,True,True,True
-British Columbia,35,58.166666666666664,-122.85,56.0,1,1964-07-01,56,09/1964,British Columbia | 35,,unknown,Smith_Burgess_2002,56.0,True,True,True
-British Columbia,36,58.21666666666667,-122.88333333333334,114.0,1,1964-07-01,114,09/1964,British Columbia | 36,,unknown,Smith_Burgess_2002,114.0,True,True,True
-British Columbia,41,58.333333333333336,-122.91666666666667,56.0,1,1964-07-01,56,09/1964,British Columbia | 41,,unknown,Smith_Burgess_2002,56.0,True,True,True
-British Columbia,38,58.25,-122.91666666666667,61.0,1,1964-07-01,61,09/1964,British Columbia | 38,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,41,58.333333333333336,-122.91666666666667,61.0,1,1964-07-01,61,09/1964,British Columbia | 41,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,33,58.016666666666666,-122.98333333333333,69.0,1,1964-07-01,69,09/1964,British Columbia | 33,,unknown,Smith_Burgess_2002,69.0,True,True,True
-British Columbia,32,58.016666666666666,-122.98333333333333,69.0,1,1964-07-01,69,09/1964,British Columbia | 32,,unknown,Smith_Burgess_2002,69.0,True,True,True
-British Columbia,39,58.266666666666666,-123.0,46.0,1,1964-07-01,46,09/1964,British Columbia | 39,,unknown,Smith_Burgess_2002,46.0,True,True,True
-British Columbia,54,58.8,-123.5,46.0,1,1964-07-01,46,09/1964,British Columbia | 54,,unknown,Smith_Burgess_2002,46.0,True,True,True
-British Columbia,52,58.8,-123.5,58.0,1,1964-07-01,58,09/1964,British Columbia | 52,,unknown,Smith_Burgess_2002,58.0,True,True,True
-British Columbia,50,58.8,-123.5,69.0,1,1964-07-01,69,09/1964,British Columbia | 50,,unknown,Smith_Burgess_2002,69.0,True,True,True
-British Columbia,56,58.56666666666667,-124.15,61.0,1,1964-07-01,61,09/1964,British Columbia | 56,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,58,58.55,-124.7,53.0,1,1964-07-01,53,09/1964,British Columbia | 58,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,60,58.61666666666667,-124.95,64.0,1,1964-07-01,64,09/1964,British Columbia | 60,,unknown,Smith_Burgess_2002,64.0,True,True,True
-British Columbia,62,58.61666666666667,-124.95,61.0,1,1964-07-01,61,09/1964,British Columbia | 62,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,61,58.61666666666667,-124.95,61.0,1,1964-07-01,61,09/1964,British Columbia | 61,,unknown,Smith_Burgess_2002,61.0,True,True,True
-British Columbia,122,58.38333333333333,-130.0,53.0,1,1964-07-01,53,09/1964,British Columbia | 122,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,73,59.61666666666667,-127.26666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 73,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,71,59.61666666666667,-127.26666666666667,53.0,1,1964-07-01,53,09/1964,British Columbia | 71,,unknown,Smith_Burgess_2002,53.0,True,True,True
-British Columbia,75,60.0,-127.63333333333334,46.0,1,1964-07-01,46,09/1964,British Columbia | 75,,unknown,Smith_Burgess_2002,46.0,True,True,True
-British Columbia,78,60.0,-128.0,53.0,1,1964-07-01,53,09/1964,British Columbia | 78,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Beaverlodge,-,55.21666666666667,-119.43333333333334,60.0,1,1961-07-01,50-60,09/1961,Beaverlodge,,unknown,Smith_Burgess_2002,60.0,True,True,True
-Alberta,87,57.8,-117.66666666666667,84.0,1,1962-07-01,84,09/1962,Alberta | 87,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Alberta,86,57.8,-117.66666666666667,91.0,1,1962-07-01,91,09/1962,Alberta | 86,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Alberta,88,57.78333333333333,-117.68333333333334,84.0,1,1962-07-01,84,09/1962,Alberta | 88,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Alberta,85,58.016666666666666,-117.16666666666667,76.0,1,1962-07-01,76,09/1962,Alberta | 85,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Alberta,83,58.8,-117.38333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 83,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,41,59.983333333333334,-116.98333333333333,61.0,1,1962-07-01,61,09/1962,Alberta | 41,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,44,59.95,-117.01666666666667,76.0,1,1962-07-01,76,09/1962,Alberta | 44,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Alberta,49,59.93333333333333,-117.03333333333333,66.0,1,1962-07-01,66,09/1962,Alberta | 49,,unknown,Smith_Burgess_2002,66.0,True,True,True
-Alberta,55,59.86666666666667,-117.05,243.0,1,1962-07-01,243,09/1962,Alberta | 55,,unknown,Smith_Burgess_2002,243.0,True,True,True
-Alberta,54,59.88333333333333,-117.05,61.0,1,1962-07-01,61,09/1962,Alberta | 54,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,53,59.9,-117.05,61.0,1,1962-07-01,61,09/1962,Alberta | 53,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,56,59.81666666666667,-117.06666666666666,76.0,1,1962-07-01,76,09/1962,Alberta | 56,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Alberta,58,59.8,-117.06666666666666,61.0,1,1962-07-01,61,09/1962,Alberta | 58,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,57,59.81666666666667,-117.06666666666666,61.0,1,1962-07-01,61,09/1962,Alberta | 57,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,62,59.68333333333333,-117.15,130.0,1,1962-07-01,61-130,09/1962,Alberta | 62,,unknown,Smith_Burgess_2002,130.0,True,True,True
-Alberta,63,59.63333333333333,-117.18333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 63,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,64,59.61666666666667,-117.18333333333334,76.0,1,1962-07-01,76,09/1962,Alberta | 64,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Alberta,68,59.516666666666666,-117.18333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 68,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,65,59.583333333333336,-117.18333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 65,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,66,59.56666666666667,-117.2,366.0,1,1962-07-01,366,09/1962,Alberta | 66,,unknown,Smith_Burgess_2002,366.0,True,True,True
-Alberta,69,59.43333333333333,-117.21666666666667,51.0,1,1962-07-01,51,09/1962,Alberta | 69,,unknown,Smith_Burgess_2002,51.0,True,True,True
-Alberta,72,59.36666666666667,-117.3,61.0,1,1962-07-01,61,09/1962,Alberta | 72,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,73,59.28333333333333,-117.35,61.0,1,1962-07-01,61,09/1962,Alberta | 73,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,74,59.2,-117.51666666666667,61.0,1,1962-07-01,61,09/1962,Alberta | 74,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,77,59.13333333333333,-117.61666666666666,183.0,1,1962-07-01,183,09/1962,Alberta | 77,,unknown,Smith_Burgess_2002,183.0,True,True,True
-Alberta,80,59.0,-117.63333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 80,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Alberta,76,59.166666666666664,-117.63333333333334,61.0,1,1962-07-01,61,09/1962,Alberta | 76,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,34,53.9,-105.95,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 34,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,34,53.9,-105.95,46.0,1,1963-07-01,46,09/1963,Saskatchewan | 34,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Saskatchewan,116,54.61666666666667,-101.91666666666667,61.0,1,1963-07-01,53-61,09/1963,Saskatchewan | 116,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,119,54.65,-102.0,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 119,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,115,54.666666666666664,-102.03333333333333,53.0,1,1963-07-01,53,09/1963,Saskatchewan | 115,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Saskatchewan,114,54.68333333333333,-102.16666666666667,84.0,1,1963-07-01,84,09/1963,Saskatchewan | 114,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Saskatchewan,111,54.7,-102.3,53.0,1,1963-07-01,53,09/1963,Saskatchewan | 111,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Saskatchewan,109,54.71666666666667,-102.33333333333333,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 109,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,108,54.8,-102.46666666666667,53.0,1,1963-07-01,53,09/1963,Saskatchewan | 108,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Saskatchewan,106,54.733333333333334,-102.58333333333333,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 106,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,117,54.833333333333336,-102.58333333333333,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 117,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,118,54.85,-102.58333333333333,69.0,1,1963-07-01,69,09/1963,Saskatchewan | 118,,unknown,Smith_Burgess_2002,69.0,True,True,True
-Saskatchewan,105,54.71666666666667,-102.76666666666667,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 105,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,100,54.55,-103.5,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 100,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,98,54.483333333333334,-103.55,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 98,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,97,54.483333333333334,-103.55,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 97,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,90,54.55,-104.05,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 90,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,84,54.36666666666667,-104.53333333333333,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 84,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,78,54.2,-104.7,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 78,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,94,54.483333333333334,-104.83333333333333,53.0,1,1963-07-01,53,09/1963,Saskatchewan | 94,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Saskatchewan,96,54.483333333333334,-104.83333333333333,69.0,1,1963-07-01,69,09/1963,Saskatchewan | 96,,unknown,Smith_Burgess_2002,69.0,True,True,True
-Saskatchewan,48,54.96666666666667,-105.33333333333333,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 48,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,39,54.333333333333336,-105.5,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 39,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,70,55.483333333333334,-105.0,46.0,1,1963-07-01,46,09/1963,Saskatchewan | 70,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Saskatchewan,55,55.483333333333334,-105.0,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 55,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,64,55.483333333333334,-105.0,46.0,1,1963-07-01,46,09/1963,Saskatchewan | 64,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Saskatchewan,76,55.483333333333334,-105.0,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 76,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,63,55.483333333333334,-105.0,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 63,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,58,55.483333333333334,-105.0,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 58,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,57,55.483333333333334,-105.0,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 57,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Saskatchewan,56,55.483333333333334,-105.0,91.0,1,1963-07-01,91,09/1963,Saskatchewan | 56,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Saskatchewan,69,55.483333333333334,-105.0,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 69,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,60,55.483333333333334,-105.0,66.0,1,1963-07-01,66,09/1963,Saskatchewan | 60,,unknown,Smith_Burgess_2002,66.0,True,True,True
-Saskatchewan,59,55.483333333333334,-105.0,46.0,1,1963-07-01,46,09/1963,Saskatchewan | 59,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Saskatchewan,61,55.483333333333334,-105.0,76.0,1,1963-07-01,76,09/1963,Saskatchewan | 61,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Saskatchewan,24,56.5,-109.55,61.0,1,1963-07-01,61,09/1963,Saskatchewan | 24,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,37,53.88333333333333,-95.0,61.0,1,1965-07-01,61,09/1965,Manitoba | 37,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,38,53.9,-95.63333333333334,46.0,1,1965-07-01,46,09/1965,Manitoba | 38,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Manitoba,39,53.916666666666664,-96.51666666666667,48.0,1,1965-07-01,48,09/1965,Manitoba | 39,,unknown,Smith_Burgess_2002,48.0,True,True,True
-Manitoba,40,53.85,-97.36666666666666,53.0,1,1965-07-01,53,09/1965,Manitoba | 40,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,36,54.55,-94.31666666666666,51.0,1,1965-07-01,51,09/1965,Manitoba | 36,,unknown,Smith_Burgess_2002,51.0,True,True,True
-Manitoba,41,54.15,-97.88333333333334,43.0,1,1965-07-01,43,09/1965,Manitoba | 41,,unknown,Smith_Burgess_2002,43.0,True,True,True
-Manitoba,194,54.61666666666667,-99.66666666666667,76.0,1,1963-07-01,76,09/1963,Manitoba | 194,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Manitoba,197,54.61666666666667,-99.66666666666667,61.0,1,1963-07-01,61,09/1963,Manitoba | 197,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,192,54.583333333333336,-99.83333333333333,46.0,1,1963-07-01,46,09/1963,Manitoba | 192,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Manitoba,187,54.88333333333333,-99.88333333333334,61.0,1,1963-07-01,61,09/1963,Manitoba | 187,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,186,54.88333333333333,-99.88333333333334,84.0,1,1963-07-01,84,09/1963,Manitoba | 186,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Manitoba,185,54.81666666666667,-99.98333333333333,53.0,1,1963-07-01,53,09/1963,Manitoba | 185,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,190,54.55,-99.98333333333333,61.0,1,1963-07-01,61,09/1963,Manitoba | 190,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,178,54.63333333333333,-100.0,53.0,1,1963-07-01,53,09/1963,Manitoba | 178,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,153,54.5,-100.0,61.0,1,1963-07-01,61,09/1963,Manitoba | 153,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,183,54.8,-100.0,61.0,1,1963-07-01,61,09/1963,Manitoba | 183,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,183,54.7,-100.0,76.0,1,1963-07-01,46-76,09/1963,Manitoba | 183,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Manitoba,176,54.666666666666664,-100.1,53.0,1,1963-07-01,53,09/1963,Manitoba | 176,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,175,54.65,-100.13333333333334,53.0,1,1963-07-01,53,09/1963,Manitoba | 175,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,174,54.63333333333333,-100.15,61.0,1,1963-07-01,61,09/1963,Manitoba | 174,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,172,54.61666666666667,-100.18333333333334,61.0,1,1963-07-01,61,09/1963,Manitoba | 172,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,171,54.583333333333336,-100.3,61.0,1,1963-07-01,61,09/1963,Manitoba | 171,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,169,54.56666666666667,-100.4,61.0,1,1963-07-01,61,09/1963,Manitoba | 169,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,167,54.53333333333333,-100.46666666666667,61.0,1,1963-07-01,61,09/1963,Manitoba | 167,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,165,54.55,-100.58333333333333,53.0,1,1963-07-01,53,09/1963,Manitoba | 165,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,163,54.53333333333333,-100.68333333333334,61.0,1,1963-07-01,61,09/1963,Manitoba | 163,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,161,54.516666666666666,-100.75,53.0,1,1963-07-01,53,09/1963,Manitoba | 161,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Manitoba,-,54.78333333333333,-101.01666666666667,61.0,1,1963-07-01,61,09/1963,Manitoba,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,152,54.46666666666667,-101.3,61.0,1,1963-07-01,61,09/1963,Manitoba | 152,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,125,54.333333333333336,-101.33333333333333,61.0,1,1963-07-01,61,09/1963,Manitoba | 125,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,-,54.166666666666664,-101.38333333333334,61.0,1,1963-07-01,61,09/1963,Manitoba,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,34,55.333333333333336,-91.66666666666667,61.0,1,1965-07-01,48-61,09/1965,Manitoba | 34,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,35,55.0,-92.71666666666667,61.0,1,1965-07-01,53-61,09/1965,Manitoba | 35,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Manitoba,26,55.55,-99.96666666666667,91.0,1,1963-07-01,91,09/1963,Manitoba | 26,,unknown,Smith_Burgess_2002,91.0,True,True,True
-"Churchill, Man.",2,58.75,-94.0,94.0,1,1975-07-01,94,1974 - 1976,"Churchill, Man. | 2",,unknown,Smith_Burgess_2002,94.0,True,True,True
-"Churchill, Man.",1,58.75,-94.0,777.0,1,1975-07-01,777,1974 - 1976,"Churchill, Man. | 1",,unknown,Smith_Burgess_2002,777.0,True,True,True
-"Churchill, Man.",3,58.75,-94.0,52.0,1,1975-07-01,52,1974 - 1976,"Churchill, Man. | 3",,unknown,Smith_Burgess_2002,52.0,True,True,True
-Northern Ontario,5,51.78333333333333,-81.08333333333333,64.0,1,1965-07-01,33-64,09/1965,Northern Ontario | 5,,unknown,Smith_Burgess_2002,64.0,True,True,True
-Northern Ontario,9,53.416666666666664,-83.33333333333333,81.0,1,1965-07-01,81,09/1965,Northern Ontario | 9,,unknown,Smith_Burgess_2002,81.0,True,True,True
-Northern Ontario,22,53.416666666666664,-84.66666666666667,84.0,1,1965-07-01,69-84,09/1965,Northern Ontario | 22,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Northern Ontario,11,53.916666666666664,-85.91666666666667,43.0,1,1965-07-01,43,09/1965,Northern Ontario | 11,,unknown,Smith_Burgess_2002,43.0,True,True,True
-Northern Ontario,30,53.38333333333333,-89.88333333333334,61.0,1,1965-07-01,61,09/1965,Northern Ontario | 30,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Northern Ontario,31,53.53333333333333,-89.88333333333334,56.0,1,1965-07-01,51-56,09/1965,Northern Ontario | 31,,unknown,Smith_Burgess_2002,56.0,True,True,True
-Northern Ontario,21,54.0,-84.95,46.0,1,1965-07-01,46,09/1965,Northern Ontario | 21,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Northern Ontario,33,54.63333333333333,-91.0,53.0,1,1965-07-01,53,09/1965,Northern Ontario | 33,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Northern Ontario,13,55.13333333333333,-85.25,91.0,1,1965-07-01,30-91,09/1965,Northern Ontario | 13,,unknown,Smith_Burgess_2002,91.0,True,True,True
-Northern Ontario,14,55.13333333333333,-85.75,53.0,1,1965-07-01,53,09/1965,Northern Ontario | 14,,unknown,Smith_Burgess_2002,53.0,True,True,True
-Northern Ontario,15,55.2,-86.71666666666667,84.0,1,1965-07-01,46-84,09/1965,Northern Ontario | 15,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Northern Ontario,20,55.916666666666664,-87.83333333333333,61.0,1,1965-07-01,61,09/1965,Northern Ontario | 20,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Northern Ontario,19,55.583333333333336,-88.33333333333333,46.0,1,1965-07-01,46,09/1965,Northern Ontario | 19,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Northern Ontario,32,55.833333333333336,-91.0,76.0,1,1965-07-01,66-76,09/1965,Northern Ontario | 32,,unknown,Smith_Burgess_2002,76.0,True,True,True
-Mont Jacques-Cartier (PQ),-,48.93333333333333,-65.91666666666667,600.0,1,1978-07-01,>600,1977 - 1979,Mont Jacques-Cartier (PQ),,unknown,Smith_Burgess_2002,600.0,True,True,True
-Labrador,90,51.916666666666664,-56.46666666666667,48.0,1,1967-07-01,48,09/1967 & 1968,Labrador | 90,,unknown,Smith_Burgess_2002,48.0,True,True,True
-Quebec,55,51.3,-63.45,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 55,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,38,52.5,-70.76666666666667,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 38,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,85,53.4,-56.85,46.0,1,1967-07-01,46,09/1967 & 1968,Labrador | 85,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,80,53.93333333333333,-59.916666666666664,36.0,1,1967-07-01,36,09/1967 & 1968,Labrador | 80,,unknown,Smith_Burgess_2002,36.0,True,True,True
-Labrador,43,53.666666666666664,-67.0,46.0,1,1967-07-01,46,09/1967 & 1968,Labrador | 43,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,35,53.35,-70.96666666666667,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 35,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,78,54.0,-59.0,61.0,1,1967-07-01,61,09/1967 & 1968,Labrador | 78,,unknown,Smith_Burgess_2002,61.0,True,True,True
-Labrador,67,54.45,-61.88333333333333,46.0,1,1967-07-01,46,09/1967 & 1968,Labrador | 67,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,46,54.333333333333336,-65.18333333333334,46.0,1,1967-07-01,46,09/1967 & 1968,Labrador | 46,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,44,54.8,-67.0,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 44,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,28,54.766666666666666,-74.3,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 28,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,70,55.333333333333336,-61.55,46.0,1,1967-07-01,46,09/1967 & 1968,Labrador | 70,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Labrador,69,55.4,-62.46666666666667,41.0,1,1967-07-01,41,09/1967 & 1968,Labrador | 69,,unknown,Smith_Burgess_2002,41.0,True,True,True
-Quebec,18,55.583333333333336,-75.66666666666667,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 18,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,16,55.46666666666667,-77.23333333333333,46.0,1,1967-07-01,46,09/1967 & 1968,Quebec | 16,,unknown,Smith_Burgess_2002,46.0,True,True,True
-Quebec,13,55.016666666666666,-77.88333333333334,84.0,1,1967-07-01,53-84,09/1967 & 1968,Quebec | 13,,unknown,Smith_Burgess_2002,84.0,True,True,True
-Kangiqsualujjuaq Valley,Site #1,58.5,-65.83,180.0,1,1988-07-01,120-180,1988,Kangiqsualujjuaq Valley | Site #1,,unknown,Smith_Burgess_2002,180.0,True,True,True
-Kangiqsualujjuaq Valley,Site #2,58.5,-65.83,180.0,1,1988-07-01,110-180,1988,Kangiqsualujjuaq Valley | Site #2,,unknown,Smith_Burgess_2002,180.0,True,True,True
-Kangiqsualujjuaq Valley,Site #3,58.5,-65.83,200.0,1,1986-07-01,150-200,1986,Kangiqsualujjuaq Valley | Site #3,,unknown,Smith_Burgess_2002,200.0,True,True,True
-Kangiqsualujjuaq,Till site,58.5,-65.5,150.0,1,1985-07-01,150,1984 - 1987,Kangiqsualujjuaq | Till site,,unknown,Smith_Burgess_2002,150.0,True,True,True
-Kangiqsualujjuaq,PF mounds,58.5,-65.5,135.0,1,1984-07-01,85-135,1984 - 1985,Kangiqsualujjuaq | PF mounds,,unknown,Smith_Burgess_2002,135.0,True,True,True
-Kangiqsualujjuaq,Tidal marsh,58.5,-65.5,100.0,1,1985-07-01,100,1984 - 1986,Kangiqsualujjuaq | Tidal marsh,,unknown,Smith_Burgess_2002,100.0,True,True,True
+site_location,source_site_identifier,lat,lon,thaw_depth,pf_observed,source_value_approximate,date,source_active_layer_text,source_period,site_id,obs_limit,method,source,pf_depth,quality_flag_date_assigned,quality_flag_date_source_approximate,quality_flag_source_unit_or_code_recoded,quality_flag_source_value_approximate
+Northwest Territories,3,60.766666666666666,-115.88333333333334,91.0,1,True,1962-07-01,76 to 91,09/1962,Northwest Territories | 3,,unknown,Smith_Burgess_2002,91.0,True,True,True,True
+Northwest Territories,5,60.71666666666667,-115.9,91.0,1,True,1962-07-01,76 to 91,09/1962,Northwest Territories | 5,,unknown,Smith_Burgess_2002,91.0,True,True,True,True
+Northwest Territories,9,60.65,-116.01666666666667,51.0,1,False,1962-07-01,51,09/1962,Northwest Territories | 9,,unknown,Smith_Burgess_2002,51.0,True,True,True,False
+Northwest Territories,18,60.56666666666667,-116.1,168.0,1,True,1962-07-01,53 to 168,09/1962,Northwest Territories | 18,,unknown,Smith_Burgess_2002,168.0,True,True,True,True
+Northwest Territories,23,60.5,-116.28333333333333,61.0,1,False,1962-07-01,61,09/1962,Northwest Territories | 23,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Northwest Territories,26,60.46666666666667,-116.3,76.0,1,True,1962-07-01,61 to 76,09/1962,Northwest Territories | 26,,unknown,Smith_Burgess_2002,76.0,True,True,True,True
+Northwest Territories,31,60.4,-116.36666666666666,91.0,1,False,1962-07-01,91,09/1962,Northwest Territories | 31,,unknown,Smith_Burgess_2002,91.0,True,True,True,False
+Northwest Territories,32,60.35,-116.4,69.0,1,False,1962-07-01,69,09/1962,Northwest Territories | 32,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+Northwest Territories,34,60.28333333333333,-116.55,145.0,1,False,1962-07-01,145,09/1962,Northwest Territories | 34,,unknown,Smith_Burgess_2002,145.0,True,True,True,False
+Northwest Territories,33,60.28333333333333,-116.55,61.0,1,False,1962-07-01,61,09/1962,Northwest Territories | 33,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Northwest Territories,35,60.266666666666666,-116.56666666666666,76.0,1,True,1962-07-01,46 to 76,09/1962,Northwest Territories | 35,,unknown,Smith_Burgess_2002,76.0,True,True,True,True
+Northwest Territories,39,60.06666666666667,-116.81666666666666,61.0,1,False,1962-07-01,61,09/1962,Northwest Territories | 39,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Redknife Hills A,85-13 A,60.57,-120.29,100.0,1,True,1985-07-01,>100,08/85-08/86,Redknife Hills A | 85-13 A,,unknown,Smith_Burgess_2002,100.0,True,True,True,True
+Redknife Hills B,85-13 B,60.57,-120.29,100.0,1,True,1985-07-01,<100,08/85-08/86,Redknife Hills B | 85-13 B,,unknown,Smith_Burgess_2002,100.0,True,True,True,True
+Moraine South,85-11,61.28,-120.8,100.0,1,False,1985-07-01,100,03/85-03/86,Moraine South | 85-11,,unknown,Smith_Burgess_2002,100.0,True,True,True,False
+Jean Marie Ck.,85-12B,61.19,-120.7,75.0,1,False,1984-07-01,75,09/84-09/85,Jean Marie Ck. | 85-12B,,unknown,Smith_Burgess_2002,75.0,True,True,True,False
+Norman Wells Pump Stn,84-1,65.29,-126.88,100.0,1,True,1984-07-01,<100,06/84-06/85,Norman Wells Pump Stn | 84-1,,unknown,Smith_Burgess_2002,100.0,True,True,True,True
+Canyon Ck North,84-2A,65.29,-126.88,190.0,1,False,1984-07-01,190,06/84-06/85,Canyon Ck North | 84-2A,,unknown,Smith_Burgess_2002,190.0,True,True,True,False
+Canyon Ck North,84-2B,65.27,-126.52,140.0,1,False,1984-07-01,140,09/84-09/85,Canyon Ck North | 84-2B,,unknown,Smith_Burgess_2002,140.0,True,True,True,False
+Canyon Ck South,84-2C,65.22,-126.51,135.0,1,False,1984-07-01,135,09/84-09/85,Canyon Ck South | 84-2C,,unknown,Smith_Burgess_2002,135.0,True,True,True,False
+Baker Lake,Thelon River,64.3,-96.0,75.0,1,False,1975-07-01,75,1974 - 1976,Baker Lake | Thelon River,,unknown,Smith_Burgess_2002,75.0,True,True,True,False
+Devon Island:TrueloveLowlands,Upland Plateau (G),75.65,-84.38333333333334,30.0,1,True,1972-07-01,<30,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Upland Plateau (G),,unknown,Smith_Burgess_2002,30.0,True,True,True,True
+Devon Island:TrueloveLowlands,Granite Gneiss (F),75.66666666666667,-84.45,223.0,1,False,1972-07-01,223,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Granite Gneiss (F),,unknown,Smith_Burgess_2002,223.0,True,True,True,False
+Devon Island:TrueloveLowlands,Tundra-Meadow (C),75.66666666666667,-84.46666666666667,70.0,1,False,1972-07-01,70,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Tundra-Meadow (C),,unknown,Smith_Burgess_2002,70.0,True,True,True,False
+Devon Island:TrueloveLowlands,Limestone-Inland (E),75.66666666666667,-84.6,140.0,1,False,1972-07-01,140,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Limestone-Inland (E),,unknown,Smith_Burgess_2002,140.0,True,True,True,False
+Devon Island:TrueloveLowlands,Limestone-Coast (D),75.68333333333334,-84.65,122.0,1,False,1972-07-01,122,05/1972 - 05/1973,Devon Island:TrueloveLowlands | Limestone-Coast (D),,unknown,Smith_Burgess_2002,122.0,True,True,True,False
+Rea Point,-,75.36,-105.75,53.0,1,True,1986-07-01,25-53,1985-1987,Rea Point,,unknown,Smith_Burgess_2002,53.0,True,True,True,True
+Alert,-,82.5,-62.43333333333333,8.0,1,True,1979-07-01,<0.8,08/1979 to 08/1980,Alert,,unknown,Smith_Burgess_2002,8.0,True,True,True,True
+Yukon Territory,83,60.166666666666664,-129.9,53.0,1,False,1964-07-01,53,09/1964,Yukon Territory | 83,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Yukon Territory,94,60.083333333333336,-132.65,46.0,1,False,1964-07-01,46,09/1964,Yukon Territory | 94,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Yukon Territory,93,60.083333333333336,-132.65,46.0,1,False,1964-07-01,46,09/1964,Yukon Territory | 93,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Yukon Territory,95,60.13333333333333,-132.9,69.0,1,False,1964-07-01,69,09/1964,Yukon Territory | 95,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+Yukon Territory,97,60.13333333333333,-132.9,71.0,1,False,1964-07-01,71,09/1964,Yukon Territory | 97,,unknown,Smith_Burgess_2002,71.0,True,True,True,False
+Yukon Territory,96,60.13333333333333,-132.9,69.0,1,False,1964-07-01,69,09/1964,Yukon Territory | 96,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+Yukon Territory,99,60.266666666666666,-133.08333333333334,61.0,1,False,1964-07-01,61,09/1964,Yukon Territory | 99,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Yukon Territory,101,60.3,-133.23333333333332,56.0,1,False,1964-07-01,56,09/1964,Yukon Territory | 101,,unknown,Smith_Burgess_2002,56.0,True,True,True,False
+Yukon Territory,100,60.3,-133.23333333333332,48.0,1,False,1964-07-01,48,09/1964,Yukon Territory | 100,,unknown,Smith_Burgess_2002,48.0,True,True,True,False
+Yukon Territory,103,60.43333333333333,-133.95,48.0,1,False,1964-07-01,48,09/1964,Yukon Territory | 103,,unknown,Smith_Burgess_2002,48.0,True,True,True,False
+Yukon Territory,108,60.516666666666666,-134.5,56.0,1,False,1964-07-01,56,09/1964,Yukon Territory | 108,,unknown,Smith_Burgess_2002,56.0,True,True,True,False
+Kathleen Canyon Dam Site,-,60.75,-137.41666666666666,50.0,1,True,1961-07-01,30 to 50,09/1961,Kathleen Canyon Dam Site,,unknown,Smith_Burgess_2002,50.0,True,True,True,True
+Alsek River,-,60.583333333333336,-137.25,36.0,1,True,1961-07-01,30 to 36,09/1961,Alsek River,,unknown,Smith_Burgess_2002,36.0,True,True,True,True
+Yukon Territory,128,61.13333333333333,-135.66666666666666,30.0,1,False,1964-07-01,30,09/1964,Yukon Territory | 128,,unknown,Smith_Burgess_2002,30.0,True,True,True,False
+Yukon Territory,131,61.38333333333333,-135.91666666666666,61.0,1,False,1964-07-01,61,09/1964,Yukon Territory | 131,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Yukon Territory,116,61.7,-139.95,61.0,1,False,1964-07-01,61,09/1964,Yukon Territory | 116,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Yukon Territory,117,61.733333333333334,-140.01666666666668,76.0,1,False,1964-07-01,76,09/1964,Yukon Territory | 117,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Yukon Territory,118,61.833333333333336,-140.16666666666666,61.0,1,False,1964-07-01,61,09/1964,Yukon Territory | 118,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Yukon Territory,119,61.95,-140.33333333333334,61.0,1,False,1964-07-01,61,09/1964,Yukon Territory | 119,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Yukon Territory,138,62.833333333333336,-136.7,46.0,1,False,1964-07-01,46,09/1964,Yukon Territory | 138,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Yukon Territory,134,62.166666666666664,-136.4,46.0,1,False,1964-07-01,46,09/1964,Yukon Territory | 134,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Yukon Territory,140,63.38333333333333,-136.5,46.0,1,False,1964-07-01,46,09/1964,Yukon Territory | 140,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Yukon Territory,141,63.43333333333333,-137.26666666666668,53.0,1,False,1964-07-01,53,09/1964,Yukon Territory | 141,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Yukon Territory,141,63.43333333333333,-137.26666666666668,79.0,1,False,1964-07-01,79,09/1964,Yukon Territory | 141,,unknown,Smith_Burgess_2002,79.0,True,True,True,False
+Yukon Territory,143,63.733333333333334,-138.01666666666668,107.0,1,False,1964-07-01,107,09/1964,Yukon Territory | 143,,unknown,Smith_Burgess_2002,107.0,True,True,True,False
+British Columbia,5,56.7,-122.0,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 5,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,11,57.06666666666667,-122.83333333333333,76.0,1,False,1964-07-01,76,09/1964,British Columbia | 11,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+British Columbia,13,57.21666666666667,-122.85,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 13,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,29,57.833333333333336,-122.96666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 29,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,30,57.833333333333336,-122.96666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 30,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,29,57.833333333333336,-122.96666666666667,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 29,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,31,57.95,-122.98333333333333,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 31,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,25,57.71666666666667,-123.0,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 25,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,26,57.71666666666667,-123.0,38.0,1,False,1964-07-01,38,09/1964,British Columbia | 26,,unknown,Smith_Burgess_2002,38.0,True,True,True,False
+British Columbia,28,57.71666666666667,-123.0,41.0,1,False,1964-07-01,41,09/1964,British Columbia | 28,,unknown,Smith_Burgess_2002,41.0,True,True,True,False
+British Columbia,18,57.38333333333333,-123.0,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 18,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,16,57.3,-123.0,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 16,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,20,57.483333333333334,-123.01666666666667,107.0,1,False,1964-07-01,107,09/1964,British Columbia | 20,,unknown,Smith_Burgess_2002,107.0,True,True,True,False
+British Columbia,20,57.483333333333334,-123.01666666666667,46.0,1,False,1964-07-01,46,09/1964,British Columbia | 20,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+British Columbia,22,57.63333333333333,-123.01666666666667,41.0,1,False,1964-07-01,41,09/1964,British Columbia | 22,,unknown,Smith_Burgess_2002,41.0,True,True,True,False
+British Columbia,23,57.63333333333333,-123.01666666666667,46.0,1,False,1964-07-01,46,09/1964,British Columbia | 23,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+British Columbia,44,58.516666666666666,-122.76666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 44,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,46,58.56666666666667,-122.76666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 46,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,48,58.65,-122.81666666666666,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 48,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,42,58.38333333333333,-122.85,43.0,1,False,1964-07-01,43,09/1964,British Columbia | 42,,unknown,Smith_Burgess_2002,43.0,True,True,True,False
+British Columbia,35,58.166666666666664,-122.85,56.0,1,False,1964-07-01,56,09/1964,British Columbia | 35,,unknown,Smith_Burgess_2002,56.0,True,True,True,False
+British Columbia,36,58.21666666666667,-122.88333333333334,114.0,1,False,1964-07-01,114,09/1964,British Columbia | 36,,unknown,Smith_Burgess_2002,114.0,True,True,True,False
+British Columbia,41,58.333333333333336,-122.91666666666667,56.0,1,False,1964-07-01,56,09/1964,British Columbia | 41,,unknown,Smith_Burgess_2002,56.0,True,True,True,False
+British Columbia,38,58.25,-122.91666666666667,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 38,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,41,58.333333333333336,-122.91666666666667,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 41,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,33,58.016666666666666,-122.98333333333333,69.0,1,False,1964-07-01,69,09/1964,British Columbia | 33,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+British Columbia,32,58.016666666666666,-122.98333333333333,69.0,1,False,1964-07-01,69,09/1964,British Columbia | 32,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+British Columbia,39,58.266666666666666,-123.0,46.0,1,False,1964-07-01,46,09/1964,British Columbia | 39,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+British Columbia,54,58.8,-123.5,46.0,1,False,1964-07-01,46,09/1964,British Columbia | 54,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+British Columbia,52,58.8,-123.5,58.0,1,False,1964-07-01,58,09/1964,British Columbia | 52,,unknown,Smith_Burgess_2002,58.0,True,True,True,False
+British Columbia,50,58.8,-123.5,69.0,1,False,1964-07-01,69,09/1964,British Columbia | 50,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+British Columbia,56,58.56666666666667,-124.15,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 56,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,58,58.55,-124.7,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 58,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,60,58.61666666666667,-124.95,64.0,1,False,1964-07-01,64,09/1964,British Columbia | 60,,unknown,Smith_Burgess_2002,64.0,True,True,True,False
+British Columbia,62,58.61666666666667,-124.95,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 62,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,61,58.61666666666667,-124.95,61.0,1,False,1964-07-01,61,09/1964,British Columbia | 61,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+British Columbia,122,58.38333333333333,-130.0,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 122,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,73,59.61666666666667,-127.26666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 73,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,71,59.61666666666667,-127.26666666666667,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 71,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+British Columbia,75,60.0,-127.63333333333334,46.0,1,False,1964-07-01,46,09/1964,British Columbia | 75,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+British Columbia,78,60.0,-128.0,53.0,1,False,1964-07-01,53,09/1964,British Columbia | 78,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Beaverlodge,-,55.21666666666667,-119.43333333333334,60.0,1,True,1961-07-01,50-60,09/1961,Beaverlodge,,unknown,Smith_Burgess_2002,60.0,True,True,True,True
+Alberta,87,57.8,-117.66666666666667,84.0,1,False,1962-07-01,84,09/1962,Alberta | 87,,unknown,Smith_Burgess_2002,84.0,True,True,True,False
+Alberta,86,57.8,-117.66666666666667,91.0,1,False,1962-07-01,91,09/1962,Alberta | 86,,unknown,Smith_Burgess_2002,91.0,True,True,True,False
+Alberta,88,57.78333333333333,-117.68333333333334,84.0,1,False,1962-07-01,84,09/1962,Alberta | 88,,unknown,Smith_Burgess_2002,84.0,True,True,True,False
+Alberta,85,58.016666666666666,-117.16666666666667,76.0,1,False,1962-07-01,76,09/1962,Alberta | 85,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Alberta,83,58.8,-117.38333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 83,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,41,59.983333333333334,-116.98333333333333,61.0,1,False,1962-07-01,61,09/1962,Alberta | 41,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,44,59.95,-117.01666666666667,76.0,1,False,1962-07-01,76,09/1962,Alberta | 44,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Alberta,49,59.93333333333333,-117.03333333333333,66.0,1,False,1962-07-01,66,09/1962,Alberta | 49,,unknown,Smith_Burgess_2002,66.0,True,True,True,False
+Alberta,55,59.86666666666667,-117.05,243.0,1,False,1962-07-01,243,09/1962,Alberta | 55,,unknown,Smith_Burgess_2002,243.0,True,True,True,False
+Alberta,54,59.88333333333333,-117.05,61.0,1,False,1962-07-01,61,09/1962,Alberta | 54,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,53,59.9,-117.05,61.0,1,False,1962-07-01,61,09/1962,Alberta | 53,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,56,59.81666666666667,-117.06666666666666,76.0,1,False,1962-07-01,76,09/1962,Alberta | 56,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Alberta,58,59.8,-117.06666666666666,61.0,1,False,1962-07-01,61,09/1962,Alberta | 58,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,57,59.81666666666667,-117.06666666666666,61.0,1,False,1962-07-01,61,09/1962,Alberta | 57,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,62,59.68333333333333,-117.15,130.0,1,True,1962-07-01,61-130,09/1962,Alberta | 62,,unknown,Smith_Burgess_2002,130.0,True,True,True,True
+Alberta,63,59.63333333333333,-117.18333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 63,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,64,59.61666666666667,-117.18333333333334,76.0,1,False,1962-07-01,76,09/1962,Alberta | 64,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Alberta,68,59.516666666666666,-117.18333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 68,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,65,59.583333333333336,-117.18333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 65,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,66,59.56666666666667,-117.2,366.0,1,False,1962-07-01,366,09/1962,Alberta | 66,,unknown,Smith_Burgess_2002,366.0,True,True,True,False
+Alberta,69,59.43333333333333,-117.21666666666667,51.0,1,False,1962-07-01,51,09/1962,Alberta | 69,,unknown,Smith_Burgess_2002,51.0,True,True,True,False
+Alberta,72,59.36666666666667,-117.3,61.0,1,False,1962-07-01,61,09/1962,Alberta | 72,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,73,59.28333333333333,-117.35,61.0,1,False,1962-07-01,61,09/1962,Alberta | 73,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,74,59.2,-117.51666666666667,61.0,1,False,1962-07-01,61,09/1962,Alberta | 74,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,77,59.13333333333333,-117.61666666666666,183.0,1,False,1962-07-01,183,09/1962,Alberta | 77,,unknown,Smith_Burgess_2002,183.0,True,True,True,False
+Alberta,80,59.0,-117.63333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 80,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Alberta,76,59.166666666666664,-117.63333333333334,61.0,1,False,1962-07-01,61,09/1962,Alberta | 76,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,34,53.9,-105.95,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 34,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,34,53.9,-105.95,46.0,1,False,1963-07-01,46,09/1963,Saskatchewan | 34,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Saskatchewan,116,54.61666666666667,-101.91666666666667,61.0,1,True,1963-07-01,53-61,09/1963,Saskatchewan | 116,,unknown,Smith_Burgess_2002,61.0,True,True,True,True
+Saskatchewan,119,54.65,-102.0,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 119,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,115,54.666666666666664,-102.03333333333333,53.0,1,False,1963-07-01,53,09/1963,Saskatchewan | 115,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Saskatchewan,114,54.68333333333333,-102.16666666666667,84.0,1,False,1963-07-01,84,09/1963,Saskatchewan | 114,,unknown,Smith_Burgess_2002,84.0,True,True,True,False
+Saskatchewan,111,54.7,-102.3,53.0,1,False,1963-07-01,53,09/1963,Saskatchewan | 111,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Saskatchewan,109,54.71666666666667,-102.33333333333333,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 109,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,108,54.8,-102.46666666666667,53.0,1,False,1963-07-01,53,09/1963,Saskatchewan | 108,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Saskatchewan,106,54.733333333333334,-102.58333333333333,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 106,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,117,54.833333333333336,-102.58333333333333,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 117,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,118,54.85,-102.58333333333333,69.0,1,False,1963-07-01,69,09/1963,Saskatchewan | 118,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+Saskatchewan,105,54.71666666666667,-102.76666666666667,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 105,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,100,54.55,-103.5,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 100,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,98,54.483333333333334,-103.55,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 98,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,97,54.483333333333334,-103.55,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 97,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,90,54.55,-104.05,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 90,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,84,54.36666666666667,-104.53333333333333,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 84,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,78,54.2,-104.7,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 78,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,94,54.483333333333334,-104.83333333333333,53.0,1,False,1963-07-01,53,09/1963,Saskatchewan | 94,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Saskatchewan,96,54.483333333333334,-104.83333333333333,69.0,1,False,1963-07-01,69,09/1963,Saskatchewan | 96,,unknown,Smith_Burgess_2002,69.0,True,True,True,False
+Saskatchewan,48,54.96666666666667,-105.33333333333333,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 48,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,39,54.333333333333336,-105.5,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 39,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,70,55.483333333333334,-105.0,46.0,1,False,1963-07-01,46,09/1963,Saskatchewan | 70,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Saskatchewan,55,55.483333333333334,-105.0,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 55,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,64,55.483333333333334,-105.0,46.0,1,False,1963-07-01,46,09/1963,Saskatchewan | 64,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Saskatchewan,76,55.483333333333334,-105.0,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 76,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,63,55.483333333333334,-105.0,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 63,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,58,55.483333333333334,-105.0,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 58,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,57,55.483333333333334,-105.0,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 57,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Saskatchewan,56,55.483333333333334,-105.0,91.0,1,False,1963-07-01,91,09/1963,Saskatchewan | 56,,unknown,Smith_Burgess_2002,91.0,True,True,True,False
+Saskatchewan,69,55.483333333333334,-105.0,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 69,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,60,55.483333333333334,-105.0,66.0,1,False,1963-07-01,66,09/1963,Saskatchewan | 60,,unknown,Smith_Burgess_2002,66.0,True,True,True,False
+Saskatchewan,59,55.483333333333334,-105.0,46.0,1,False,1963-07-01,46,09/1963,Saskatchewan | 59,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Saskatchewan,61,55.483333333333334,-105.0,76.0,1,False,1963-07-01,76,09/1963,Saskatchewan | 61,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Saskatchewan,24,56.5,-109.55,61.0,1,False,1963-07-01,61,09/1963,Saskatchewan | 24,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,37,53.88333333333333,-95.0,61.0,1,False,1965-07-01,61,09/1965,Manitoba | 37,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,38,53.9,-95.63333333333334,46.0,1,False,1965-07-01,46,09/1965,Manitoba | 38,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Manitoba,39,53.916666666666664,-96.51666666666667,48.0,1,False,1965-07-01,48,09/1965,Manitoba | 39,,unknown,Smith_Burgess_2002,48.0,True,True,True,False
+Manitoba,40,53.85,-97.36666666666666,53.0,1,False,1965-07-01,53,09/1965,Manitoba | 40,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,36,54.55,-94.31666666666666,51.0,1,False,1965-07-01,51,09/1965,Manitoba | 36,,unknown,Smith_Burgess_2002,51.0,True,True,True,False
+Manitoba,41,54.15,-97.88333333333334,43.0,1,False,1965-07-01,43,09/1965,Manitoba | 41,,unknown,Smith_Burgess_2002,43.0,True,True,True,False
+Manitoba,194,54.61666666666667,-99.66666666666667,76.0,1,False,1963-07-01,76,09/1963,Manitoba | 194,,unknown,Smith_Burgess_2002,76.0,True,True,True,False
+Manitoba,197,54.61666666666667,-99.66666666666667,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 197,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,192,54.583333333333336,-99.83333333333333,46.0,1,False,1963-07-01,46,09/1963,Manitoba | 192,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Manitoba,187,54.88333333333333,-99.88333333333334,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 187,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,186,54.88333333333333,-99.88333333333334,84.0,1,False,1963-07-01,84,09/1963,Manitoba | 186,,unknown,Smith_Burgess_2002,84.0,True,True,True,False
+Manitoba,185,54.81666666666667,-99.98333333333333,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 185,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,190,54.55,-99.98333333333333,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 190,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,178,54.63333333333333,-100.0,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 178,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,153,54.5,-100.0,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 153,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,183,54.8,-100.0,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 183,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,183,54.7,-100.0,76.0,1,True,1963-07-01,46-76,09/1963,Manitoba | 183,,unknown,Smith_Burgess_2002,76.0,True,True,True,True
+Manitoba,176,54.666666666666664,-100.1,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 176,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,175,54.65,-100.13333333333334,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 175,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,174,54.63333333333333,-100.15,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 174,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,172,54.61666666666667,-100.18333333333334,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 172,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,171,54.583333333333336,-100.3,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 171,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,169,54.56666666666667,-100.4,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 169,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,167,54.53333333333333,-100.46666666666667,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 167,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,165,54.55,-100.58333333333333,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 165,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,163,54.53333333333333,-100.68333333333334,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 163,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,161,54.516666666666666,-100.75,53.0,1,False,1963-07-01,53,09/1963,Manitoba | 161,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Manitoba,-,54.78333333333333,-101.01666666666667,61.0,1,False,1963-07-01,61,09/1963,Manitoba,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,152,54.46666666666667,-101.3,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 152,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,125,54.333333333333336,-101.33333333333333,61.0,1,False,1963-07-01,61,09/1963,Manitoba | 125,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,-,54.166666666666664,-101.38333333333334,61.0,1,False,1963-07-01,61,09/1963,Manitoba,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Manitoba,34,55.333333333333336,-91.66666666666667,61.0,1,True,1965-07-01,48-61,09/1965,Manitoba | 34,,unknown,Smith_Burgess_2002,61.0,True,True,True,True
+Manitoba,35,55.0,-92.71666666666667,61.0,1,True,1965-07-01,53-61,09/1965,Manitoba | 35,,unknown,Smith_Burgess_2002,61.0,True,True,True,True
+Manitoba,26,55.55,-99.96666666666667,91.0,1,False,1963-07-01,91,09/1963,Manitoba | 26,,unknown,Smith_Burgess_2002,91.0,True,True,True,False
+"Churchill, Man.",2,58.75,-94.0,94.0,1,False,1975-07-01,94,1974 - 1976,"Churchill, Man. | 2",,unknown,Smith_Burgess_2002,94.0,True,True,True,False
+"Churchill, Man.",1,58.75,-94.0,777.0,1,False,1975-07-01,777,1974 - 1976,"Churchill, Man. | 1",,unknown,Smith_Burgess_2002,777.0,True,True,True,False
+"Churchill, Man.",3,58.75,-94.0,52.0,1,False,1975-07-01,52,1974 - 1976,"Churchill, Man. | 3",,unknown,Smith_Burgess_2002,52.0,True,True,True,False
+Northern Ontario,5,51.78333333333333,-81.08333333333333,64.0,1,True,1965-07-01,33-64,09/1965,Northern Ontario | 5,,unknown,Smith_Burgess_2002,64.0,True,True,True,True
+Northern Ontario,9,53.416666666666664,-83.33333333333333,81.0,1,False,1965-07-01,81,09/1965,Northern Ontario | 9,,unknown,Smith_Burgess_2002,81.0,True,True,True,False
+Northern Ontario,22,53.416666666666664,-84.66666666666667,84.0,1,True,1965-07-01,69-84,09/1965,Northern Ontario | 22,,unknown,Smith_Burgess_2002,84.0,True,True,True,True
+Northern Ontario,11,53.916666666666664,-85.91666666666667,43.0,1,False,1965-07-01,43,09/1965,Northern Ontario | 11,,unknown,Smith_Burgess_2002,43.0,True,True,True,False
+Northern Ontario,30,53.38333333333333,-89.88333333333334,61.0,1,False,1965-07-01,61,09/1965,Northern Ontario | 30,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Northern Ontario,31,53.53333333333333,-89.88333333333334,56.0,1,True,1965-07-01,51-56,09/1965,Northern Ontario | 31,,unknown,Smith_Burgess_2002,56.0,True,True,True,True
+Northern Ontario,21,54.0,-84.95,46.0,1,False,1965-07-01,46,09/1965,Northern Ontario | 21,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Northern Ontario,33,54.63333333333333,-91.0,53.0,1,False,1965-07-01,53,09/1965,Northern Ontario | 33,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Northern Ontario,13,55.13333333333333,-85.25,91.0,1,True,1965-07-01,30-91,09/1965,Northern Ontario | 13,,unknown,Smith_Burgess_2002,91.0,True,True,True,True
+Northern Ontario,14,55.13333333333333,-85.75,53.0,1,False,1965-07-01,53,09/1965,Northern Ontario | 14,,unknown,Smith_Burgess_2002,53.0,True,True,True,False
+Northern Ontario,15,55.2,-86.71666666666667,84.0,1,True,1965-07-01,46-84,09/1965,Northern Ontario | 15,,unknown,Smith_Burgess_2002,84.0,True,True,True,True
+Northern Ontario,20,55.916666666666664,-87.83333333333333,61.0,1,False,1965-07-01,61,09/1965,Northern Ontario | 20,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Northern Ontario,19,55.583333333333336,-88.33333333333333,46.0,1,False,1965-07-01,46,09/1965,Northern Ontario | 19,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Northern Ontario,32,55.833333333333336,-91.0,76.0,1,True,1965-07-01,66-76,09/1965,Northern Ontario | 32,,unknown,Smith_Burgess_2002,76.0,True,True,True,True
+Mont Jacques-Cartier (PQ),-,48.93333333333333,-65.91666666666667,600.0,1,True,1978-07-01,>600,1977 - 1979,Mont Jacques-Cartier (PQ),,unknown,Smith_Burgess_2002,600.0,True,True,True,True
+Labrador,90,51.916666666666664,-56.46666666666667,48.0,1,False,1967-07-01,48,09/1967 & 1968,Labrador | 90,,unknown,Smith_Burgess_2002,48.0,True,True,True,False
+Quebec,55,51.3,-63.45,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 55,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,38,52.5,-70.76666666666667,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 38,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,85,53.4,-56.85,46.0,1,False,1967-07-01,46,09/1967 & 1968,Labrador | 85,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,80,53.93333333333333,-59.916666666666664,36.0,1,False,1967-07-01,36,09/1967 & 1968,Labrador | 80,,unknown,Smith_Burgess_2002,36.0,True,True,True,False
+Labrador,43,53.666666666666664,-67.0,46.0,1,False,1967-07-01,46,09/1967 & 1968,Labrador | 43,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,35,53.35,-70.96666666666667,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 35,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,78,54.0,-59.0,61.0,1,False,1967-07-01,61,09/1967 & 1968,Labrador | 78,,unknown,Smith_Burgess_2002,61.0,True,True,True,False
+Labrador,67,54.45,-61.88333333333333,46.0,1,False,1967-07-01,46,09/1967 & 1968,Labrador | 67,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,46,54.333333333333336,-65.18333333333334,46.0,1,False,1967-07-01,46,09/1967 & 1968,Labrador | 46,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,44,54.8,-67.0,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 44,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,28,54.766666666666666,-74.3,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 28,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,70,55.333333333333336,-61.55,46.0,1,False,1967-07-01,46,09/1967 & 1968,Labrador | 70,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Labrador,69,55.4,-62.46666666666667,41.0,1,False,1967-07-01,41,09/1967 & 1968,Labrador | 69,,unknown,Smith_Burgess_2002,41.0,True,True,True,False
+Quebec,18,55.583333333333336,-75.66666666666667,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 18,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,16,55.46666666666667,-77.23333333333333,46.0,1,False,1967-07-01,46,09/1967 & 1968,Quebec | 16,,unknown,Smith_Burgess_2002,46.0,True,True,True,False
+Quebec,13,55.016666666666666,-77.88333333333334,84.0,1,True,1967-07-01,53-84,09/1967 & 1968,Quebec | 13,,unknown,Smith_Burgess_2002,84.0,True,True,True,True
+Kangiqsualujjuaq Valley,Site #1,58.5,-65.83,180.0,1,True,1988-07-01,120-180,1988,Kangiqsualujjuaq Valley | Site #1,,unknown,Smith_Burgess_2002,180.0,True,True,True,True
+Kangiqsualujjuaq Valley,Site #2,58.5,-65.83,180.0,1,True,1988-07-01,110-180,1988,Kangiqsualujjuaq Valley | Site #2,,unknown,Smith_Burgess_2002,180.0,True,True,True,True
+Kangiqsualujjuaq Valley,Site #3,58.5,-65.83,200.0,1,True,1986-07-01,150-200,1986,Kangiqsualujjuaq Valley | Site #3,,unknown,Smith_Burgess_2002,200.0,True,True,True,True
+Kangiqsualujjuaq,PF mounds,58.5,-65.5,135.0,1,True,1984-07-01,85-135,1984 - 1985,Kangiqsualujjuaq | PF mounds,,unknown,Smith_Burgess_2002,135.0,True,True,True,True

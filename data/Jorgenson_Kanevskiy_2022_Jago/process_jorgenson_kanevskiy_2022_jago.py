@@ -5,8 +5,8 @@ metadata_schema_version = 1
 source_key = "Jorgenson_Kanevskiy_2022_Jago"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
-original_author = "jrowland"
-last_substantive_update = "2025-07-25"
+original_author = "jschwenk + Codex"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Mark Jorgenson and Mikhail Kanevskiy. (2022). Jago Alaska Topography,
 Vegetation, Soils, and Site-Environmental Data 2009-2018.
@@ -15,7 +15,7 @@ Arctic Data Center. doi:10.18739/A2XP6V496.
 processing_assumptions = [
   "SoilPFrost code p is treated as permafrost present, a as absent, and u as unresolved.",
   "pf_depth is set equal to thaw_depth only when pf_observed is present.",
-  "The source SoilObsDep_cm field is retained as obs_limit.",
+  "obs_limit is left blank for permafrost-presence rows because SoilObsDep_cm is a profile or sampling depth, not a censoring limit on an already observed thaw depth.",
 ]
 temporal_handling = [
   "Dates are parsed from the source Date column and reformatted to calendar dates.",
@@ -27,6 +27,7 @@ manual_steps = []
 known_limitations = [
   "method is exported as unknown because the source archive does not specify a clean controlled-vocabulary method.",
   "Rows with unresolved SoilPFrost codes are dropped rather than exported with missing pf_observed.",
+  "This dedicated release is primary for 93 matching site-years also compiled in Jorgenson_Kanevskiy_2025; the copies are removed in the 2025 inventory processor.",
 ]
 external_dependencies = []
 notes = ""
@@ -71,7 +72,7 @@ for _, row in df.iterrows():
         'pf_observed': pf_observed,
         'pf_depth': pf_depth,
         'method': 'unknown',
-        'obs_limit': row['SoilObsDep_cm'],
+        'obs_limit': np.nan,
         'org_thick': row['SoilOrgSurfThk_cm'],
         'source' : source
     })

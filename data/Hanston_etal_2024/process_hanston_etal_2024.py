@@ -4,7 +4,7 @@ source_key = "Hanston_etal_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Hanston et al. 2024 thaw-depth measurements from Kougarok and Teller compiled
 for CUSP release in the Hanston_etal_2024 source directory.
@@ -14,6 +14,7 @@ processing_assumptions = [
   "pf_depth is left empty because the measurements were made mid-summer rather than at full seasonal thaw.",
   "The Kougarok and Teller site tables are concatenated after harmonizing the same key columns.",
   "method is set to tp for all rows because the source consists of thaw-probe measurements.",
+  "The assumed-state and assumed-limit flags apply only to rows classified as absence by the 119 cm threshold.",
 ]
 temporal_handling = [
   "Dates are parsed from YYYYMMDD strings in the source CSVs and normalized to calendar dates.",
@@ -72,6 +73,8 @@ df['hanston_reported_depth_cm'] = df['thaw_depth']
 absence = df['pf_observed'].eq(0)
 df['obs_limit'] = np.where(absence, 130.0, np.nan)
 df.loc[absence, 'thaw_depth'] = np.nan
+df['quality_flag_obs_limit_assumed'] = absence
+df['quality_flag_pf_state_assumed'] = absence
 df['method'] = 'tp'
 #df.drop(['ID', 'Method', 'Year', 'Horizontal_distance_m',
 #       'Depth_to_permafrost_cm', 'Depth_cm', 'Horizontal_to_permafrost_cm', 'Relative_age', 'Geomorphic_unit', 'Count'], axis=1, inplace=True)

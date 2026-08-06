@@ -4,7 +4,7 @@ source_key = "Minsley_2017"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Pastick, N.J.; Kass, M.A.; Wylie, B.K.; James, S.R.; Rey, D.M.; Minsley, B.J.;
 Ebel, B.A. 2018. Alaska permafrost characterization: Geophysical and related
@@ -28,6 +28,7 @@ spatial_handling = [
 manual_steps = []
 known_limitations = [
   "Rows with probe rejection shallower than 100 cm do not establish permafrost state and are excluded.",
+  "Minsley_2017 is the primary CUSP source for nine campaign-date/location/state/depth matches also present as contextual active-layer values in Ebel_2018; those copies are removed in the Ebel processor.",
 ]
 external_dependencies = []
 notes = ""

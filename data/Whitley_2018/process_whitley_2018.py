@@ -6,7 +6,7 @@ source_key = "Whitley_2018"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "Annalise Khandelwal"
-last_substantive_update = "2026-04-10"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Whitley, M.; Frost, G.; Jorgenson, M. T.; Macander, M.; Maio, C. V.; Winder,
 S. G. 2018. ABoVE: Permafrost Measurements and Distribution Across the Y-K
@@ -16,7 +16,8 @@ processing_assumptions = [
   "Source UTM coordinates are transformed from EPSG:26903 to WGS84 before export.",
   "A single campaign-midpoint date of 2016-07-13 is assigned to all rows.",
   "Where pf_observed = 1, thaw_depth is taken from frost_bottom when available, otherwise from frost_top.",
-  "pf_depth is set equal to thaw_depth for permafrost-present records, and obs_limit is fixed at 125 cm.",
+  "pf_depth is set equal to thaw_depth for permafrost-present records.",
+  "obs_limit is fixed at 125 cm only for permafrost-absence rows; those rows receive the assumed-limit flag.",
   "method is set to tp for all processed rows.",
 ]
 temporal_handling = [
@@ -74,7 +75,9 @@ mask = df['pf_observed'] == 1
 df.loc[mask & (df['frost_bottom'] != -9999), 'thaw_depth'] = df.loc[mask & (df['frost_bottom'] != -9999), 'frost_bottom']
 df.loc[mask & (df['frost_bottom'] == -9999), 'thaw_depth'] = df.loc[mask & (df['frost_bottom'] == -9999), 'frost_top']
 df['pf_depth'] = df['thaw_depth'] # using the observed thaw depth where dataset indicates presence of PF
-df["obs_limit"] = 125
+absence = df['pf_observed'].eq(0)
+df["obs_limit"] = np.where(absence, 125.0, np.nan)
+df['quality_flag_obs_limit_assumed'] = absence
 df["source"] = "Whitley_2018"
 df["method"] = "tp"
 

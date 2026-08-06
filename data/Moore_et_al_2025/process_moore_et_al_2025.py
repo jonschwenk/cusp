@@ -6,7 +6,7 @@ source_key = "Moore_et_al_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-05"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Moore, M.A., K. Schaefer, L.K. Clayton, E.E. Hoy, M. Auclair,
 K. Bakian-Dogaheh, M.J. Battaglia, K. Bennett, W.R. Bolton,
@@ -37,6 +37,7 @@ https://doi.org/10.5281/zenodo.4670463
 processing_assumptions = [
   "ALT == -9999 and rows with missing lat/lon are dropped before aggregation.",
   "Rows matching the original Jafarov_2016 GPR and probe products by method, coordinates rounded to six decimals, and depth rounded to 0.0001 cm are removed before Moore aggregation, irrespective of the conflicting dates in the synthesis table.",
+  "All valid rows attributed to the Natali team are removed before aggregation because the direct Natali_2023 release contains the underlying 2016-2018 transect observations with their actual dates.",
   "Malformed Douglas Farmers Loop dates are decoded with an explicit source-specific mapping after annual depth vectors are checked against the original Douglas workbook.",
   "Douglas Farmers Loop station numbers and coordinates are restored from the official ORNL DAAC point geometry because the synthesis import removed zeroes from station identifiers and collapsed distinct stations such as 1, 10, and 100.",
   "Duplicate rows at the same site_name/latitude/longitude/date are averaged for ALT.",
@@ -60,8 +61,10 @@ manual_steps = [
 known_limitations = [
   "The source file labels the measurement ALT rather than supplying a separate binary permafrost field, so conversion from numeric ALT to presence is flagged as a source-context state assignment.",
   "The Jafarov source-specific filter is guarded by expected match counts (57,294 GPR and 1,297 probe rows) so a changed input cannot silently alter deduplication.",
+  "The Natali filter is guarded at 1,962 valid synthesis rows; Moore assigns all of them the implausible date 2013-08-11, while the direct source records their 2016-2018 campaign dates.",
   "The Farmers Loop repair is guarded at 1,488 corrected date rows and 1,917 coordinate-restored rows. Fourteen 2014-2020 site-year depth vectors match the older Douglas deposit exactly except for one T1 2016 value; the newer Moore value is retained for that point.",
   "The T1 date 2022-09-17 is decoded from the malformed month/day field and assigned to the otherwise missing 2022 block based on the source sequence and stated temporal coverage; those rows carry date_source_approximate.",
+  "Rows assigned that approximate 2022 date carry both date_assigned and date_source_approximate; validated workbook date corrections carry only the source-code-recoded flag.",
   "CALM overlap review found spatial/site-year overlap with CALM but no exact coordinate/date/depth duplicate rows; source documentation indicates ABoVE/SMALT field observations, so Moore_et_al_2025 is treated as independent for now.",
 ]
 external_dependencies = [
@@ -88,6 +91,7 @@ FARMERS_LOOP_GEOMETRY_FILE = (
 )
 EXPECTED_JAFAROV_GPR_COPIES = 57_294
 EXPECTED_JAFAROV_PROBE_COPIES = 1_297
+EXPECTED_NATALI_COPIES = 1_962
 EXPECTED_FARMERS_LOOP_CORRECTED_DATES = 1_488
 EXPECTED_FARMERS_LOOP_COORDINATES = 1_917
 
@@ -400,6 +404,20 @@ def remove_jafarov_copies(df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, int
 
     return df.loc[~(gpr_copies | probe_copies)].copy(), counts
 
+
+def remove_natali_copies(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Remove direct Natali transects republished with a false Moore date."""
+
+    team = df["team_name"].astype("string").str.strip().str.lower()
+    copies = team.eq("natali")
+    count = int(copies.sum())
+    if count != EXPECTED_NATALI_COPIES:
+        raise RuntimeError(
+            f"Expected {EXPECTED_NATALI_COPIES:,} valid Moore/Natali copies; "
+            f"found {count:,}. Review the source files before proceeding."
+        )
+    return df.loc[~copies].copy(), count
+
 def main():
     df = pd.read_csv(INPUT_FILE, low_memory=False)
 
@@ -410,6 +428,7 @@ def main():
     df = df[df["longitude"] != -9999]
 
     df, removed_jafarov = remove_jafarov_copies(df)
+    df, removed_natali = remove_natali_copies(df)
     df = repair_farmers_loop_import(df)
 
     # Parse dates
@@ -471,8 +490,8 @@ def main():
         "method": result["_method"],
         "source": source,
         "quality_flag_summary_statistic": result["_native_count"].gt(1),
-        "quality_flag_pf_state_assumed": True,
         "quality_flag_source_unit_or_code_recoded": result["_date_repaired"],
+        "quality_flag_date_assigned": result["_date_source_approximate"],
         "quality_flag_date_source_approximate": result["_date_source_approximate"],
         "quality_flag_coord_lookup_or_interpolated": result["_coord_repaired"],
         "_native_count": result["_native_count"],
@@ -498,8 +517,9 @@ def main():
     ]
     provenance_columns = [
         "gpr_native_count", "gpr_aggregation_spacing_m",
-        "quality_flag_summary_statistic", "quality_flag_pf_state_assumed",
+        "quality_flag_summary_statistic",
         "quality_flag_source_unit_or_code_recoded",
+        "quality_flag_date_assigned",
         "quality_flag_date_source_approximate",
         "quality_flag_coord_lookup_or_interpolated",
     ]
@@ -510,7 +530,8 @@ def main():
     out.to_csv(_ROOT_DIR / "data" / source / f"processed_{source.lower()}.csv", index=False)
     print(
         f"Removed {removed_jafarov['gpr']:,} Jafarov GPR and "
-        f"{removed_jafarov['probe']:,} Jafarov probe copies; repaired "
+        f"{removed_jafarov['probe']:,} Jafarov probe copies plus "
+        f"{removed_natali:,} Natali copies; repaired "
         f"{EXPECTED_FARMERS_LOOP_CORRECTED_DATES:,} Farmers Loop dates and "
         f"{EXPECTED_FARMERS_LOOP_COORDINATES:,} coordinates; wrote {len(out):,} rows."
     )

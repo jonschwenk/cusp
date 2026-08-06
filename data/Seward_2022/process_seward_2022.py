@@ -4,7 +4,7 @@ source_key = "Seward_2022"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Thaler, E.; Del Vecchio, J.; Farley, M.; Thomas, L.; Rowland, J. 2024.
 Active Layer Depth and Permafrost Temperatures at the Teller 47 Field Site,
@@ -16,6 +16,7 @@ processing_assumptions = [
   "pf_depth is set equal to thaw_depth where pf_observed = 1.",
   "obs_limit is fixed at 120 cm for absence rows and method is set to tp for all processed observations.",
   "For source PF = 0, the reported capped depth is preserved as provenance but cleared from canonical thaw_depth; obs_limit is 120 cm.",
+  "The assumed-limit flag applies only to source PF = 0 rows.",
 ]
 temporal_handling = [
   "All rows are assigned the single campaign-average date 2022-08-16 because the processed source table does not preserve per-observation dates.",
@@ -68,6 +69,7 @@ gdf['seward_reported_depth_cm'] = gdf['thaw_depth']
 absence = gdf['pf_observed'].eq(0)
 gdf['obs_limit'] = np.where(absence, 120.0, np.nan)
 gdf.loc[absence, 'thaw_depth'] = np.nan
+gdf['quality_flag_obs_limit_assumed'] = absence
 gdf['method'] = 'tp'
 
 

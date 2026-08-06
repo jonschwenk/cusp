@@ -4,7 +4,7 @@ source_key = "Patton_2021"
 release_clearance = "approved"
 permission_basis = "published_literature"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Patton, A. I.; Rathburn, S. L.; Capps, D. M.; McGrath, D.; Brown, R. A. 2021.
 Ongoing landslide deformation in thawing permafrost. Geophysical Research
@@ -76,7 +76,6 @@ def load_transect(relative_path: str, delimiter: str, site_id: str, date: str) -
             "thaw_depth": points["alt_m"] * 100.0,
             "method": "gp",
             "source": SOURCE,
-            "quality_flag_pf_state_assumed": True,
         }
     )
 

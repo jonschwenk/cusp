@@ -6,7 +6,7 @@ source_key = "Smith_Burgess_2000"
 release_clearance = "approved"
 permission_basis = "published_literature"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-08-06"
 source_dataset = '''
 Smith, S.; Burgess, M. M. 2000. Ground temperature database for northern
 Canada. Geological Survey of Canada, Open File 3954.
@@ -32,6 +32,7 @@ known_limitations = [
   "The processed output uses only the active-layer-thickness information from the broader ground-temperature database.",
   "Temporal precision is limited to an inferred midpoint year.",
   "Coordinates and active-layer values are compiled from heterogeneous original references and may have source-specific precision not recoverable from this workbook.",
+  "Bounded, approximate, or ranged active-layer text is converted to one representative numeric value and carries source_value_approximate.",
 ]
 external_dependencies = []
 notes = ""
@@ -87,10 +88,12 @@ def clean_thickness(series: pd.Series) -> pd.DataFrame:
 
     # flag: 0 if the *original* text contains 'no', else 1
     flag = (~txt.str.contains(r"\bno\b", na=True)).astype(int)
+    approximate = numeric.notna() & ~txt.str.fullmatch(r"\d+(?:\.\d+)?", na=False)
 
     return pd.DataFrame({
         "thickness_cm_int": numeric,
-        "is_no_flag": flag
+        "is_no_flag": flag,
+        "source_value_approximate": approximate,
     })
 # ------- extract a date from the period column
 def extract_mid_year(val):
@@ -208,6 +211,9 @@ combined_df['pf_depth'] = combined_df['thaw_depth'].where(~absence)
 combined_df['quality_flag_date_assigned'] = True
 combined_df['quality_flag_date_source_approximate'] = True
 combined_df['quality_flag_source_unit_or_code_recoded'] = True
+combined_df['quality_flag_source_value_approximate'] = combined_df[
+    'source_value_approximate'
+]
 
 #drop site without a measurement date
 combined_df['date'] = combined_df['date'].replace('', pd.NA)
