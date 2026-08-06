@@ -89,6 +89,12 @@ def _write_if_nonempty(df_out: pd.DataFrame, path: Path) -> None:
     write_csv(df_out, path)
 
 
+def _input_column_count(df: pd.DataFrame) -> int:
+    """Count source-file columns without the QA-only row index."""
+
+    return int(len(df.columns) - ("row_index" in df.columns))
+
+
 def run_observations_validation(
     input_path: str | Path,
     *,
@@ -144,7 +150,7 @@ def run_observations_validation(
         "ok": ok,
         "counts": counts,
         "n_rows": int(len(df)),
-        "n_cols": int(len(df.columns)),
+        "n_cols": _input_column_count(df),
     }
 
     if out_dir is not None:
@@ -219,7 +225,7 @@ def run_aggregated_validation(
         "ok": ok,
         "counts": counts,
         "n_rows": int(len(aggregated)),
-        "n_cols": int(len(aggregated.columns)),
+        "n_cols": _input_column_count(aggregated),
     }
 
     if out_dir is not None:
@@ -319,7 +325,7 @@ def run_observations_audit(
     summary = AuditSummary(
         input_path=str(input_path),
         n_rows=int(len(df)),
-        n_cols=int(len(df.columns)),
+        n_cols=_input_column_count(df),
         cutoff_future_year=cutoff_future_year,
         n_missing_cusp_obs_id=int((id_res.stats or {}).get("n_missing_cusp_obs_id", 0)),
         n_duplicate_cusp_obs_id=int((id_res.stats or {}).get("n_duplicate_cusp_obs_id", 0)),

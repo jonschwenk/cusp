@@ -24,7 +24,7 @@ earthengine authenticate
 Then pass a Google Cloud / Earth Engine project that your account can use as
 `--gee-project <your-earth-engine-project>`.
 
-The examples below use `exports/latest/cusp_v1.0.csv` as the input release
+The examples below use `exports/latest/cusp_v1.1.csv` as the input release
 file. Replace that with the path to the CUSP release file you downloaded or
 exported.
 
@@ -62,7 +62,7 @@ The main aggregation knobs are:
 
 ```bash
 python -m cusp.aggregate \
-  --input exports/latest/cusp_v1.0.csv \
+  --input exports/latest/cusp_v1.1.csv \
   --output runs/examples/aggregated_100m_example.csv \
   --membership-output runs/examples/aggregated_100m_example_membership.csv \
   --flags-output runs/examples/aggregated_100m_example_qc_flags.csv \
@@ -84,7 +84,7 @@ prefer:
 ```powershell
 $DistanceM = 100
 $TemporalLinkDays = 31
-$InputPath = "exports\latest\cusp_v1.0.csv"
+$InputPath = "exports\latest\cusp_v1.1.csv"
 $OutDir = "runs\examples"
 $Stem = "aggregated_${DistanceM}m_example"
 
@@ -169,22 +169,21 @@ python -m cusp.features `
   --resume
 ```
 
-## Feature Table For A Release
+## Feature Table For Observation Rows
 
 Aggregated feature tables are useful for modeling and exploration, but they are
-different from the release feature table.
+different from observation-keyed feature tables.
 
-The release feature table is sampled from the rebuilt observation table in the
-repository:
+An observation-keyed table can be sampled from a versioned release:
 
 ```bash
 python -m cusp.features \
-  --input exports/latest/cusp_v1.0.csv \
-  --output runs/examples/cusp_v1.0_features.csv \
-  --manifest runs/examples/cusp_v1.0_features_manifest.json \
+  --input exports/latest/cusp_v1.1.csv \
+  --output runs/examples/cusp_v1.1_features.csv \
+  --manifest runs/examples/cusp_v1.1_features_manifest.json \
   --gee-project <your-earth-engine-project> \
   --resume
 ```
 
-This output is keyed to `cusp_obs_id` and can be packaged as
-`cusp_features_vX.Y.csv` with `python -m cusp.export`.
+This derived output is keyed to `cusp_obs_id`, but it is not part of the
+canonical CUSP release bundle.

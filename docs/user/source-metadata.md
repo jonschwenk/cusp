@@ -61,7 +61,9 @@ flags during the build.
 ## Source Reference Crosswalk
 
 The generated `data/source_reference_crosswalk.csv` table links included source
-keys to citation metadata from `data/cusp_sources_bibtex.csv`.
+keys to citation metadata parsed from the master `data/cusp_sources.bib` file.
+The build also writes the complete parsed table to
+`data/cusp_sources_bibtex.csv`; it should not be edited by hand.
 
 | Column | Meaning |
 |---|---|

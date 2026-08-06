@@ -4,6 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import pandas as pd
+
 from cusp.qc.cli import run_aggregated_validation, run_observations_audit, run_observations_validation
 
 
@@ -18,11 +20,13 @@ class QcCliTests(unittest.TestCase):
         result = run_observations_validation(OBSERVATIONS_PATH)
         self.assertTrue(result.ok)
         self.assertEqual(result.summary["counts"]["schema_mismatch"], 0)
+        self.assertEqual(result.summary["n_cols"], len(pd.read_csv(OBSERVATIONS_PATH, nrows=0).columns))
 
     def test_run_aggregated_validation_on_current_release_outputs(self) -> None:
         result = run_aggregated_validation(AGGREGATED_PATH, membership_path=MEMBERSHIP_PATH)
         self.assertTrue(result.ok)
         self.assertEqual(result.summary["counts"]["schema_mismatch"], 0)
+        self.assertEqual(result.summary["n_cols"], len(pd.read_csv(AGGREGATED_PATH, nrows=0).columns))
 
     def test_run_observations_audit_writes_summary(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -30,6 +34,7 @@ class QcCliTests(unittest.TestCase):
             payload = run_observations_audit(OBSERVATIONS_PATH, out_dir=out_dir)
 
             self.assertEqual(payload["input_path"], str(OBSERVATIONS_PATH))
+            self.assertEqual(payload["n_cols"], len(pd.read_csv(OBSERVATIONS_PATH, nrows=0).columns))
             self.assertTrue((out_dir / "qc_summary.json").exists())
 
 

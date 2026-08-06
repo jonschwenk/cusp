@@ -11,7 +11,7 @@ For contributor-oriented instructions on extending the sampler, see
 ## Run Feature Sampling
 
 ```bash
-python -m cusp.features --input exports/latest/cusp_v1.0.csv
+python -m cusp.features --input exports/latest/cusp_v1.1.csv
 ```
 
 The sampler writes:
@@ -37,9 +37,9 @@ Then pass the project explicitly when sampling:
 
 ```bash
 python -m cusp.features \
-  --input exports/latest/cusp_v1.0.csv \
-  --output runs/examples/cusp_v1.0_features.csv \
-  --manifest runs/examples/cusp_v1.0_features_manifest.json \
+  --input exports/latest/cusp_v1.1.csv \
+  --output runs/examples/cusp_v1.1_features.csv \
+  --manifest runs/examples/cusp_v1.1_features_manifest.json \
   --gee-project <your-earth-engine-project> \
   --resume
 ```
@@ -60,8 +60,9 @@ The sampler can read any point-like CUSP table that includes:
 - `lon`
 - either `date` or `year`
 
-For a released feature table, use the observation-level CUSP table so the
-result is keyed to `cusp_obs_id`.
+Use the observation-level CUSP release as input so the derived result remains
+keyed to `cusp_obs_id`. Feature tables are not part of the canonical CUSP
+release bundle.
 
 ## Current Base Feature Set
 

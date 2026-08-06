@@ -24,7 +24,6 @@ The detailed export rules are documented in
 | File | Purpose |
 | --- | --- |
 | `cusp_vX.Y.csv` | Canonical observation-level dataset |
-| `cusp_features_vX.Y.csv` | Environmental features sampled with Google Earth Engine and keyed to `cusp_obs_id`, when included |
 | `cusp_sources_vX.Y.bib` | BibTeX entries for the included source datasets and publications |
 | `RELEASE_INFO.md` | Release metadata, hashes, and build context |
 
@@ -33,13 +32,14 @@ The detailed export rules are documented in
 Use `cusp_vX.Y.csv` for most analyses. It contains one row per accepted
 observation in the stable public schema.
 
-Use `cusp_features_vX.Y.csv` when you need the environmental information
-sampled for the same observations with Google Earth Engine. It is keyed to
-`cusp_obs_id` and should be joined back to the main CUSP table.
-
 Use `cusp_sources_vX.Y.bib` when preparing citations for a release. If you use
 only a subset of sources, the citation helper can write a smaller BibTeX file
 for the rows you used.
+
+Environmental feature tables are not canonical release products. They can be
+generated from the observation CSV with the optional
+[feature-sampling workflow](../user/feature-sampling.md), keyed by
+`cusp_obs_id`.
 
 For source-level caveats and citation crosswalks generated inside the working
 repository, see [Source metadata](../user/source-metadata.md).

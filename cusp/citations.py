@@ -14,6 +14,25 @@ from cusp.data_utils import _ROOT_DIR
 
 DATA_DIR = _ROOT_DIR / "data"
 DEFAULT_MASTER_BIB_PATH = DATA_DIR / "cusp_sources.bib"
+BIBTEX_TABLE_COLUMNS = [
+    "source",
+    "entrytype",
+    "author",
+    "year",
+    "title",
+    "journal",
+    "booktitle",
+    "publisher",
+    "institution",
+    "version",
+    "volume",
+    "number",
+    "pages",
+    "doi",
+    "url",
+    "howpublished",
+    "note",
+]
 
 
 def load_cusp_table(path: Path) -> pd.DataFrame:
@@ -52,11 +71,11 @@ def extract_source_keys(df: pd.DataFrame) -> list[str]:
     return sorted(sources)
 
 
-def parse_bibtex_entries(path: Path) -> dict[str, str]:
-    """Parse a BibTeX file into a mapping from entry key to full entry text."""
+def _iter_bibtex_entries(path: Path) -> list[tuple[str, str]]:
+    """Return BibTeX keys and full entry text in source-file order."""
 
     text = path.read_text(encoding="utf-8")
-    entries: dict[str, str] = {}
+    entries: list[tuple[str, str]] = []
 
     current_lines: list[str] = []
     current_key: str | None = None
@@ -74,14 +93,14 @@ def parse_bibtex_entries(path: Path) -> dict[str, str]:
                 raise ValueError(f"Could not parse BibTeX entry header: {line.strip()}")
             current_key = header[1].split(",", 1)[0].strip()
             if brace_balance == 0:
-                entries[current_key] = "".join(current_lines).strip() + "\n"
+                entries.append((current_key, "".join(current_lines).strip() + "\n"))
                 current_lines = []
                 current_key = None
         else:
             current_lines.append(line)
             brace_balance += line.count("{") - line.count("}")
             if brace_balance == 0:
-                entries[current_key] = "".join(current_lines).strip() + "\n"
+                entries.append((current_key, "".join(current_lines).strip() + "\n"))
                 current_lines = []
                 current_key = None
 
@@ -89,6 +108,91 @@ def parse_bibtex_entries(path: Path) -> dict[str, str]:
         raise ValueError(f"Unterminated BibTeX entry for key: {current_key}")
 
     return entries
+
+
+def parse_bibtex_entries(path: Path) -> dict[str, str]:
+    """Parse a BibTeX file into a mapping from entry key to full entry text."""
+
+    return dict(_iter_bibtex_entries(path))
+
+
+def _split_bibtex_fields(body: str) -> list[str]:
+    """Split a BibTeX entry body at top-level commas."""
+
+    fields: list[str] = []
+    current: list[str] = []
+    brace_depth = 0
+    in_quotes = False
+    escaped = False
+
+    for char in body:
+        if char == '"' and brace_depth == 0 and not escaped:
+            in_quotes = not in_quotes
+        elif not in_quotes and not escaped:
+            if char == "{":
+                brace_depth += 1
+            elif char == "}":
+                brace_depth -= 1
+
+        if char == "," and brace_depth == 0 and not in_quotes:
+            if "".join(current).strip():
+                fields.append("".join(current).strip())
+            current = []
+        else:
+            current.append(char)
+
+        escaped = char == "\\" and not escaped
+        if char != "\\":
+            escaped = False
+
+    if "".join(current).strip():
+        fields.append("".join(current).strip())
+    return fields
+
+
+def _unwrap_bibtex_value(value: str) -> str:
+    """Remove one matching outer brace or quote pair from a field value."""
+
+    value = value.strip()
+    while len(value) >= 2 and (
+        (value[0] == "{" and value[-1] == "}")
+        or (value[0] == '"' and value[-1] == '"')
+    ):
+        value = value[1:-1].strip()
+    return value
+
+
+def parse_bibtex_table(path: Path) -> pd.DataFrame:
+    """Parse the master BibTeX file into the generated source metadata table."""
+
+    records: list[dict[str, str]] = []
+    for source, entry_text in _iter_bibtex_entries(path):
+        header = re.match(
+            r"\s*@(?P<entrytype>[^\s{]+)\s*\{\s*[^,]+,",
+            entry_text,
+            flags=re.DOTALL,
+        )
+        if header is None:
+            raise ValueError(f"Could not parse BibTeX entry header for key: {source}")
+
+        body = entry_text[header.end() :].rstrip()
+        if not body.endswith("}"):
+            raise ValueError(f"Could not parse BibTeX entry body for key: {source}")
+        body = body[:-1]
+
+        record = {column: "" for column in BIBTEX_TABLE_COLUMNS}
+        record["source"] = source
+        record["entrytype"] = header.group("entrytype").lower()
+        for field in _split_bibtex_fields(body):
+            if "=" not in field:
+                continue
+            name, value = field.split("=", 1)
+            name = name.strip().lower()
+            if name in record:
+                record[name] = _unwrap_bibtex_value(value)
+        records.append(record)
+
+    return pd.DataFrame.from_records(records, columns=BIBTEX_TABLE_COLUMNS)
 
 
 def build_bibtex_subset(

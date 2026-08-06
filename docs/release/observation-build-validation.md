@@ -3,7 +3,7 @@
 ## Scope
 
 This page records the latest validated state of the observation-level CUSP
-build. The current snapshot was generated on 2026-08-04 after standardizing
+build. The current snapshot was generated on 2026-08-06 after standardizing
 dense GPR sampling, resolving the Moore/Jafarov overlap, enforcing explicit
 observation limits for instrument-based permafrost-absence rows, and restoring
 the flagged visual Koyukuk classifications.
@@ -18,23 +18,23 @@ python -m cusp.qc audit-observations --out outputs/qc_audit
 python -m pytest -q
 ```
 
-The final build and tests were run under Python 3.12.
+The final build and tests were run under Python 3.13.
 
 ## Current Snapshot
 
-- canonical observations: `78,230` rows and `13` columns
+- canonical observations: `79,389` rows and `12` columns
 - included sources: `57`
 - date range: `1952-06-01` through `2024-10-11`
-- permafrost observed: `60,986`, including `114` visually interpreted rows
-- permafrost not detected to a positive observation limit: `17,044`
+- permafrost observed: `62,135`, including `114` visually interpreted rows
+- permafrost not detected to a positive observation limit: `17,054`
 - visually interpreted permafrost absence without a point-specific observation
   limit: `200`
-- all-fields observations: `78,230` rows
+- all-fields observations: `79,389` rows
 - source metadata and source-reference crosswalk: `57` rows each
-- hard-deleted input rows: `54`
+- hard-deleted input rows: `55`
 - build-level QC flag rows: `0`
 
-The 54 hard deletions comprise 39 rows without coordinates and 15 exact
+The 55 hard deletions comprise 39 rows without coordinates and 16 exact
 duplicates across the required observation fields. The deletion log preserves
 their source rows and reasons.
 
@@ -94,9 +94,10 @@ There are 9,409 rows without `site_id`: 9,308 from `Pawley_2018`, 56 from
 `Koyukuk_2018`, and 45 from `Douglas_Koyukuk_2022`. Coordinates are present,
 and missing source identifiers remain warning-level rather than a hard gate.
 
-The source-reference crosswalk is complete except for bibliographic metadata
-for `Pastick`. Bonnaventure now links to the 2026 paper and notes that CUSP's
-point file was shared directly rather than distributed with the publication.
+The `Pastick` crosswalk entry identifies the source as an unpublished
+compilation and records the limits of its component-level attribution.
+Bonnaventure links to the 2026 paper and notes that CUSP's point file was
+shared directly rather than distributed with the publication.
 
 Koyukuk contains 56 retained direct field observations and 314 retained points
 sampled from visually interpreted permafrost/non-permafrost polygons. The
@@ -105,6 +106,7 @@ can be removed as a group for instrument-only or depth-bounded analyses.
 
 ## Verdict
 
-The canonical observation table is structurally sound and suitable as the
-current modeler-facing working dataset. Release packaging, version assignment,
-and the remaining `Pastick` citation cleanup are separate release tasks.
+The canonical observation table is structurally sound and suitable for the
+v1.1 data release. The official release bundle omits derived environmental
+features; users can generate those separately with the feature-sampling
+workflow.

@@ -373,6 +373,7 @@ class BuildTests(unittest.TestCase):
             crosswalk = tmp / "source_reference_crosswalk.csv"
             source_metadata = tmp / "source_metadata.csv"
             source_quality = tmp / "source_quality_metadata.csv"
+            bibtex = tmp / "cusp_sources_bibtex.csv"
             manifest = tmp / "observation_release_manifest.json"
 
             write_build_outputs(
@@ -385,6 +386,7 @@ class BuildTests(unittest.TestCase):
                 source_reference_path=crosswalk,
                 source_metadata_path=source_metadata,
                 source_quality_metadata_path=source_quality,
+                bibtex_path=bibtex,
                 manifest_path=manifest,
             )
 

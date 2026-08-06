@@ -11,6 +11,7 @@ from cusp.citations import (
     extract_bibtex_for_table,
     extract_source_keys,
     parse_bibtex_entries,
+    parse_bibtex_table,
 )
 
 
@@ -49,6 +50,29 @@ class CitationsTests(unittest.TestCase):
             self.assertIn("@article{B", bib_text)
             self.assertIn("@misc{A", bib_text)
             self.assertEqual(missing, ["C"])
+
+    def test_parse_bibtex_table_handles_multiline_and_nested_values(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            bib_path = Path(tmpdir) / "sources.bib"
+            bib_path.write_text(
+                "@article{A,\n"
+                "  author = {Alpha, A. and Beta, B.},\n"
+                "  title = {A title with {nested} braces, and a comma},\n"
+                "  publisher = {{Example Organization}},\n"
+                "  doi = {10.1234/example},\n"
+                "}\n",
+                encoding="utf-8",
+            )
+
+            table = parse_bibtex_table(bib_path)
+
+            self.assertEqual(len(table), 1)
+            self.assertEqual(table.loc[0, "source"], "A")
+            self.assertEqual(table.loc[0, "entrytype"], "article")
+            self.assertEqual(table.loc[0, "author"], "Alpha, A. and Beta, B.")
+            self.assertEqual(table.loc[0, "title"], "A title with {nested} braces, and a comma")
+            self.assertEqual(table.loc[0, "publisher"], "Example Organization")
+            self.assertEqual(table.loc[0, "doi"], "10.1234/example")
 
     def test_extract_bibtex_for_table_csv(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

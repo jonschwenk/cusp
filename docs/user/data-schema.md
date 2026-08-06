@@ -3,7 +3,7 @@
 This document describes the stable public columns in the main CUSP release
 table.
 
-The versioned release file is named like `cusp_v1.0.csv`,
+The versioned release file is named like `cusp_v1.1.csv`,
 `cusp_v1.1.csv`, or `cusp_v2.0.csv`.
 
 For naming and export layout, see

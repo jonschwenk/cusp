@@ -41,7 +41,13 @@ known_limitations = [
 external_dependencies = [
   "data/NCSS_Lab_Data_Mart/processed_ncss_lab_data_mart.csv is required for source-specific NCSS overlap filtering.",
 ]
-notes = "Current source key is retained for repo continuity but should eventually be renamed to NRCS_Alaska."
+notes = '''
+The Pastick source key identifies the unpublished compilation supplied to CUSP.
+It is not renamed to NRCS_Alaska because only YFlats_NRCS and
+WesternAKSitePhoriz are identified as NRCS-derived in the supplied metadata;
+the remaining component shapefiles do not contain complete original-source
+citations.
+'''
 """
 import geopandas as gpd
 import pandas as pd

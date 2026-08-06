@@ -32,11 +32,11 @@ It writes review files without changing the observations.
 
 ## Latest Result
 
-Validated on 2026-08-04 under Python 3.12:
+Validated on 2026-08-06 under Python 3.13:
 
 - hard-gate status: passed
-- canonical table: `78,230` rows and `13` columns
-- complete test suite: `56 passed`
+- canonical table: `79,389` rows and `12` columns
+- complete test suite: `59 passed` with `26` passing subtests
 - processing metadata: `57` structured headers, `0` validation errors
 - build-level QC flag log: `0` rows
 
@@ -59,8 +59,8 @@ Validated on 2026-08-04 under Python 3.12:
 
 Current `pf_observed` counts:
 
-- presence: `60,986`
-- absence: `17,244`, comprising `17,044` depth-bounded records and `200`
+- presence: `62,135`
+- absence: `17,254`, comprising `17,054` depth-bounded records and `200`
   flagged visual Koyukuk classifications without a point-specific limit
 
 ## Build-Enforced Semantics
