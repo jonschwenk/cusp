@@ -328,7 +328,7 @@ def add_inferred_quality_flags(df: pd.DataFrame) -> pd.DataFrame:
             notes.str.contains("rock|gravel|road|water|obstruct|probe length|bottom", regex=True, na=False),
         )
     if "rock" in flagged.columns:
-        add("refusal_or_obstruction_note", flagged["rock"].notna() & flagged["rock"].astype("string").str.strip().ne(""))
+        add("refusal_or_obstruction_note", truthy_series(flagged["rock"]))
 
     return flagged
 

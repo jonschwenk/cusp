@@ -179,6 +179,32 @@ class BuildTests(unittest.TestCase):
                     "obs_limit": None,
                     "method": "tp",
                 },
+                {
+                    "source": "Example_A",
+                    "site_id": "A4",
+                    "lat": 65.3,
+                    "lon": -147.3,
+                    "date": "2020-08-04",
+                    "pf_observed": 1,
+                    "thaw_depth": 40.0,
+                    "pf_depth": 40.0,
+                    "obs_limit": None,
+                    "method": "tp",
+                    "rock": "N",
+                },
+                {
+                    "source": "Example_A",
+                    "site_id": "A5",
+                    "lat": 65.4,
+                    "lon": -147.4,
+                    "date": "2020-08-05",
+                    "pf_observed": 1,
+                    "thaw_depth": 40.0,
+                    "pf_depth": 40.0,
+                    "obs_limit": None,
+                    "method": "tp",
+                    "rock": "Y",
+                },
             ]
         )
 
@@ -195,6 +221,14 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(
             outputs.observations.set_index("site_id").loc["A3", "quality_flags"],
             "UB",
+        )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A4", "quality_flags"],
+            "",
+        )
+        self.assertEqual(
+            outputs.observations.set_index("site_id").loc["A5", "quality_flags"],
+            "RO",
         )
 
     def test_validate_data_rejects_absence_without_positive_limit(self) -> None:
