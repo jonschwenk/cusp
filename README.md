@@ -26,8 +26,9 @@ understand, cite, rebuild, or extend the dataset.
 
 ## Contributing
 
-See [Suggest a dataset](https://jonschwenk.github.io/cusp/contributing/suggest-dataset/)
-to propose data for inclusion in CUSP.
+[Suggest or add data to CUSP](https://jonschwenk.github.io/cusp/contributing/suggest-dataset/).
+A public link is enough to get started; for unpublished data, contact
+[cusp.data@gmail.com](mailto:cusp.data@gmail.com).
 
 ## License
 

@@ -9,6 +9,8 @@ the [User Guide](../user/index.md).
 
 Maintainer pages are useful when you need to:
 
+- ingest an accepted source into the canonical dataset
+- document processing decisions and source metadata
 - prepare or check a release
 - understand versioned export rules
 - inspect QA gates and validation records
@@ -16,6 +18,8 @@ Maintainer pages are useful when you need to:
 
 ## Maintainer Pages
 
+- [Data ingestion](adding-data.md)
+- [Process script headers](process-script-header-guidelines.md)
 - [Release process](../release/index.md)
 - [Source release clearance](source-release-clearance-guidelines.md)
 - [Versioning and exports](../release/versioning-and-exports.md)

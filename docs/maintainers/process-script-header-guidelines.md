@@ -32,7 +32,7 @@ the process script, then checks whether the expected fields are present.
 | --- | --- | --- | --- | --- |
 | `metadata_schema_version` | yes | integer | Input the metadata schema version number. | `1` |
 | `source_key` | yes | string | Use the exact source directory name. | `"Example_Source"` |
-| `release_clearance` | yes | `approved`, `needs_review`, `deferred`, `do_not_release` | Contributors should usually use `needs_review`; maintainers update this after review. | `"needs_review"` |
+| `release_clearance` | yes | `approved`, `needs_review`, `deferred`, `do_not_release` | New sources should usually use `needs_review`; maintainers update this after review. | `"needs_review"` |
 | `permission_basis` | yes | `self_generated`, `published_literature`, `public_repository_terms`, `emailed_approval`, `verbal_approval`, `institutional_approval`, `other`, `needs_review` | Record why you think the source can be included. | `"public_repository_terms"` |
 | `original_author` | no | string | Person who wrote or substantially updated the processing script. | `"Your Name"` |
 | `last_substantive_update` | yes | `YYYY-MM-DD` string | Date of the last meaningful processing or metadata update. | `"2026-05-15"` |
@@ -116,4 +116,4 @@ The metadata generator can:
 - report scripts with structured TOML metadata
 - report scripts with legacy free-form docstrings
 - report parse or validation errors
-- run in strict mode for contributor or CI checks
+- run in strict mode for local or CI checks
