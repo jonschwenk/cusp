@@ -54,9 +54,9 @@ class ReadmeTrackerTests(unittest.TestCase):
             updated = readme.read_text(encoding="utf-8")
             self.assertIn("# Before", updated)
             self.assertIn("After", updated)
-            self.assertIn("[v2.3]", updated)
-            self.assertIn("| Total observations | 4 |", updated)
-            self.assertIn("| Included sources | 3 |", updated)
+            self.assertIn(">v2.3</a>", updated)
+            self.assertIn("<strong>4</strong><br><sub>Total observations</sub>", updated)
+            self.assertIn("<strong>3</strong><br><sub>Included sources</sub>", updated)
             self.assertTrue(synchronize_readme(readme_path=readme, release_csv=release_csv, check=True))
 
     def test_check_detects_stale_tracker_without_writing(self) -> None:

@@ -84,9 +84,9 @@ class ExportTests(unittest.TestCase):
             self.assertIn("CUSP Release v1.0", release_info)
             self.assertIn("cusp_v1.0.csv", release_info)
             readme = readme_path.read_text(encoding="utf-8")
-            self.assertIn("[v1.0]", readme)
-            self.assertIn("| Total observations | 2 |", readme)
-            self.assertIn("| Included sources | 2 |", readme)
+            self.assertIn(">v1.0</a>", readme)
+            self.assertIn("<strong>2</strong><br><sub>Total observations</sub>", readme)
+            self.assertIn("<strong>2</strong><br><sub>Included sources</sub>", readme)
 
     def test_export_rejects_non_observation_feature_table(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
