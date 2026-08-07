@@ -1,41 +1,67 @@
-# Suggest A Dataset
+# Suggest Or Add Data To CUSP
 
-We highly welcome additions that can help CUSP grow, whether they come from an
-unpublished personal collection, a field campaign, a data repository, or a
-published source. A dataset does not need to be ready for ingestion before it
-is worth suggesting.
+CUSP grows when people point us to useful public data or offer observations
+from their own field work. A dataset does not need to be formatted for CUSP or
+ready for ingestion before it is worth sharing with us.
 
-All fields in the dataset-candidate issue form are optional, but it is helpful
-if you can complete as many as possible.
+You do not need to write processing code, investigate duplication, determine
+licensing, or know whether a source meets every CUSP requirement. CUSP
+maintainers handle evaluation and ingestion. Original datasets remain
+individually identified in CUSP so users can find and cite the source work.
 
-## Information To Include If You Have It
+!!! tip "A link is enough"
+    For public data, a repository page, DOI, paper, project page, or download
+    link is enough to start the review.
 
-Any of the following can help us understand and evaluate a suggested dataset:
+## Publicly Available Data
 
-- a dataset landing page
-- a DOI or other persistent identifier
-- a paper with supplementary data
-- a project page describing field observations
-- a repository record from Arctic Data Center, NSIDC, ORNL DAAC, PANGAEA,
-  Zenodo, Dryad, DataONE, or a similar archive
+Open the short data-intake issue and paste the best link or citation you have.
+Please link to the canonical repository or source rather than uploading a copy
+to the issue.
 
-## What We Look For
+[Suggest or add data to CUSP](https://github.com/jonschwenk/cusp/issues/new?template=dataset_candidate.yml){ .md-button .md-button--primary }
 
-High-priority candidates usually have:
+If you do not use GitHub, email the link or description to
+[cusp.data@gmail.com](mailto:cusp.data@gmail.com). A maintainer can record the
+suggestion in the issue tracker.
 
-- observation-like rows rather than only gridded or modeled output
-- coordinates or site locations
-- observation dates or years
-- permafrost presence, active-layer thickness, thaw depth, frost-table depth,
-  or depth-to-permafrost information
-- enough citation and licensing information to support public reuse
+## Unpublished Or Nonpublic Data
 
-Maintainers use issue status and simple priority labels to track progress. If a
-candidate is not a fit for CUSP, the issue can be closed with a short reason so
-the decision remains findable.
+The GitHub issue is public, so do not attach unpublished or restricted files or
+post private contact information. Open an issue with a public-safe description,
+select **Unpublished or not publicly available**, and then email
+[cusp.data@gmail.com](mailto:cusp.data@gmail.com) with the issue number. We will
+coordinate communications and data sharing by email.
 
-## Suggest A Dataset
+If even a brief public description would be inappropriate, email us first. A
+CUSP maintainer can help determine what information can be recorded in the
+tracking issue.
 
-Open a dataset candidate issue here:
+## What CUSP Can Use
 
-[Suggest a CUSP dataset candidate](https://github.com/jonschwenk/cusp/issues/new?template=dataset_candidate.yml){ .md-button .md-button--primary }
+CUSP focuses on geolocated, direct observations relevant to near-surface
+permafrost, including:
+
+- permafrost presence or absence
+- active-layer thickness, thaw depth, or frost-table depth
+- depth to permafrost
+- soil-pit, core, auger, probe, or related field observations
+- field geophysics such as GPR or ERT when the measurements can be represented
+  appropriately
+
+Coordinates, dates, methods, citation information, and permission for public
+reuse will eventually be needed, but you do not need to investigate all of
+those before contacting us. If you are unsure whether data fit, please submit
+them for consideration.
+
+## What Happens Next
+
+1. A CUSP maintainer reviews the tracking issue and investigates the source.
+2. We check scope, access, spatial and temporal information, permissions, and
+   possible overlap with data already in CUSP.
+3. We follow up in the issue or through `cusp.data@gmail.com` when we need help
+   from the person suggesting or providing the data.
+4. The CUSP team handles processing, quality flags, deduplication, and release
+   integration.
+5. The issue records the outcome and, for accepted data, links the source to
+   the corresponding CUSP update.

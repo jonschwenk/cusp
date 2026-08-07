@@ -1,13 +1,18 @@
 # Contributing
 
-CUSP would not be possible without the contributions from the community. Part
-of CUSP's mission is to continue aggregating near-surface permafrost
-observations as they become available. If you have a dataset, even unpublished,
-that you would like to add, please suggest it following the instructions below.
-If you are aware of publicly available data that CUSP does not yet contain,
-please let us know.
+CUSP depends on people sharing observations and pointing us toward sources we
+have missed. You can suggest public data or offer an unpublished dataset through
+our short GitHub intake form. A link or brief description is enough to begin.
 
-- [Suggest a dataset](suggest-dataset.md)
-- [Adding data](adding-data.md)
-- [Adding new GEE features](adding-gee-features.md)
-- [Process script header guidelines](process-script-header-guidelines.md)
+To contribute data, complete the short intake form. You do not need to reformat
+the files, write CUSP processing code, or investigate duplicates. The CUSP team
+evaluates candidate sources and handles ingestion into the canonical dataset.
+
+[Suggest or add data to CUSP](suggest-dataset.md){ .md-button .md-button--primary }
+
+For unpublished data or questions that should not be posted publicly, contact
+[cusp.data@gmail.com](mailto:cusp.data@gmail.com). Please do not attach
+unpublished or restricted files to a public GitHub issue.
+
+Developers who want to extend the optional environmental-feature workflow can
+also see [Adding new GEE features](adding-gee-features.md).

@@ -11,7 +11,7 @@ source citations and tools that make the synthesis easier to check, rebuild,
 and extend.
 
 [Start with the data](getting-started/release-products.md){ .md-button .md-button--primary }
-[Suggest a dataset](contributing/suggest-dataset.md){ .md-button }
+[Suggest or add data](contributing/suggest-dataset.md){ .md-button }
 
 </section>
 
@@ -36,10 +36,10 @@ summaries, or add environmental information from Google Earth Engine.
 </div>
 
 <div class="cusp-card" markdown="1">
-### Contribute Data
+### Grow CUSP
 
-Suggest a dataset, prepare a new dataset, or add an environmental layer to the
-feature sampler.
+Point us to published observations or offer a dataset you hold. A link or brief
+description is enough; CUSP maintainers handle ingestion.
 
 [Contributing guide](contributing/index.md)
 </div>
@@ -63,7 +63,7 @@ current release.
 | Use the released data | [Release products](getting-started/release-products.md) |
 | Read the public columns | [Data schema](user/data-schema.md) |
 | Rebuild or process CUSP on your computer | [Command examples](user/cli-examples.md) |
-| Add or suggest a source dataset | [Suggest a dataset](contributing/suggest-dataset.md) |
+| Suggest or add a source dataset | [Share data with CUSP](contributing/suggest-dataset.md) |
 | Rebuild the current release artifacts | [Rebuild CUSP](reproducibility/rebuild-cusp.md) |
 
 ## Core CUSP Data

@@ -51,16 +51,16 @@ nav:
       - Source Metadata: user/source-metadata.md
   - Contributing:
       - contributing/index.md
-      - Suggest a Dataset: contributing/suggest-dataset.md
-      - Adding Data: contributing/adding-data.md
+      - Suggest or Add Data: contributing/suggest-dataset.md
       - Adding GEE Features: contributing/adding-gee-features.md
-      - Process Script Headers: contributing/process-script-header-guidelines.md
   - Reproducibility:
       - reproducibility/index.md
       - Rebuild CUSP: reproducibility/rebuild-cusp.md
       - External Data Sources: reproducibility/external-data-sources.md
   - For Maintainers:
       - maintainers/index.md
+      - Data Ingestion: maintainers/adding-data.md
+      - Process Script Headers: maintainers/process-script-header-guidelines.md
       - Source Release Clearance: maintainers/source-release-clearance-guidelines.md
       - release/index.md
       - Versioning And Exports: release/versioning-and-exports.md

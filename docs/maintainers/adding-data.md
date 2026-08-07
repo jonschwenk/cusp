@@ -1,21 +1,10 @@
 # Adding New Data To CUSP
 
-CUSP maintainers will add datasets as they have time. Contributors are also
-welcome to add datasets directly by preparing the data and opening a pull
-request.
-
-## Git Workflow
-
-1. Fork or clone the CUSP repository.
-2. Create a branch for your dataset.
-3. Add the source files, processing script, and processed table under
-   `data/<Source_Key>/`.
-4. Rebuild and check CUSP locally.
-5. Open a pull request and describe what was added.
-
-```bash
-git checkout -b add-example-2026
-```
+CUSP maintainers and invited collaborators use this workflow after a candidate
+source has been reviewed through the
+[data-intake process](../contributing/suggest-dataset.md). The CUSP team owns
+the canonical processing decisions, quality flags, deduplication, validation,
+and release integration.
 
 ## What To Add
 
@@ -120,7 +109,8 @@ as clearly as possible, including:
 - method mapping to the CUSP vocabulary
 - obvious within-source duplicates
 - known cross-source overlap and the exact rule used to resolve it
-- obvious invalid rows that only the source contributor can interpret correctly
+- obvious invalid rows requiring source-specific interpretation or follow-up
+  with source contacts
 - row-level quality flags for approximate dates, bounded observations,
   interpolated coordinates, summary statistics, source quality flags, or other
   caveats defined in `data/quality_flag_definitions.csv`
@@ -164,7 +154,7 @@ If your source changes the official dataset contents, that should usually be
 treated as a new dataset version under
 [Versioning and exports](../release/versioning-and-exports.md).
 
-## Pull Request Checklist
+## Ingestion Checklist
 
 - create `data/<Source_Key>/`
 - add `process_<source_key_lower>.py`
@@ -177,5 +167,5 @@ treated as a new dataset version under
 - run QA
 
 Maintainers make final release-clearance decisions. See
-[Source release clearance](../maintainers/source-release-clearance-guidelines.md)
-for the maintainer review model.
+[Source release clearance](source-release-clearance-guidelines.md) for the
+maintainer review model.
