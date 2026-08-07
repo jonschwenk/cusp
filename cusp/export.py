@@ -15,6 +15,7 @@ import pandas as pd
 
 from cusp.citations import build_bibtex_subset
 from cusp.data_utils import _ROOT_DIR
+from cusp.readme_tracker import DEFAULT_README_PATH, synchronize_readme
 
 
 DATA_DIR = _ROOT_DIR / "data"
@@ -236,8 +237,10 @@ def export_release_bundle(
     master_bib_input: Path = DEFAULT_MASTER_BIB_INPUT,
     export_root: Path = EXPORTS_DIR,
     changes_markdown: str = DEFAULT_CHANGES,
+    readme_path: Path = DEFAULT_README_PATH,
+    refresh_readme: bool | None = None,
 ) -> tuple[Path, Path]:
-    """Export the flat, versioned release bundle to archived and latest directories."""
+    """Export the release bundle and refresh the README for official exports."""
 
     version_tag = normalize_dataset_version(dataset_version)
     canonical = load_canonical_table(canonical_input)
@@ -309,6 +312,14 @@ def export_release_bundle(
         copy_file(archived_dir / features_name, latest_dir / features_name)
     copy_file(bib_archived_path, latest_dir / bib_name)
     copy_file(release_info_path, latest_dir / release_info_name)
+
+    should_refresh_readme = (
+        export_root.resolve() == EXPORTS_DIR.resolve()
+        if refresh_readme is None
+        else refresh_readme
+    )
+    if should_refresh_readme:
+        synchronize_readme(readme_path=readme_path, release_csv=latest_dir / canonical_name)
 
     return archived_dir, latest_dir
 

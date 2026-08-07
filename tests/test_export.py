@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from cusp.export import export_release_bundle, normalize_dataset_version
+from cusp.readme_tracker import TRACKER_END, TRACKER_START
 
 
 class ExportTests(unittest.TestCase):
@@ -23,6 +24,7 @@ class ExportTests(unittest.TestCase):
             features_path = tmp / "cusp_observations_features.csv"
             bib_path = tmp / "sources.bib"
             export_root = tmp / "exports"
+            readme_path = tmp / "README.md"
 
             canonical = pd.DataFrame(
                 {
@@ -55,6 +57,10 @@ class ExportTests(unittest.TestCase):
                 "@misc{A,\n  title = {Title A},\n}\n\n@article{B,\n  title = {Title B},\n}\n",
                 encoding="utf-8",
             )
+            readme_path.write_text(
+                f"# CUSP\n\n{TRACKER_START}\nstale\n{TRACKER_END}\n",
+                encoding="utf-8",
+            )
 
             archived_dir, latest_dir = export_release_bundle(
                 dataset_version="1.0",
@@ -63,6 +69,8 @@ class ExportTests(unittest.TestCase):
                 master_bib_input=bib_path,
                 export_root=export_root,
                 changes_markdown="- Initial release.\n",
+                readme_path=readme_path,
+                refresh_readme=True,
             )
 
             self.assertTrue((archived_dir / "cusp_v1.0.csv").exists())
@@ -75,6 +83,10 @@ class ExportTests(unittest.TestCase):
             release_info = (archived_dir / "RELEASE_INFO.md").read_text(encoding="utf-8")
             self.assertIn("CUSP Release v1.0", release_info)
             self.assertIn("cusp_v1.0.csv", release_info)
+            readme = readme_path.read_text(encoding="utf-8")
+            self.assertIn("[v1.0]", readme)
+            self.assertIn("| Total observations | 2 |", readme)
+            self.assertIn("| Included sources | 2 |", readme)
 
     def test_export_rejects_non_observation_feature_table(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
