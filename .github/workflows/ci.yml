@@ -34,6 +34,9 @@ jobs:
       - name: Validate processing-script metadata
         run: python -m cusp.generate_process_script_metadata --check --strict
 
+      - name: Validate README data tracker
+        run: python -m cusp.readme_tracker --check
+
       - name: Build canonical observation artifacts
         run: python -m cusp.build
 

@@ -179,7 +179,8 @@ That means:
 4. Run the scripted release gate, including strict docs validation, with
    `python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke`.
 5. Package the official bundle with `python -m cusp.export` and no
-   `--features-input` argument.
+   `--features-input` argument. Official exports also refresh the generated
+   release tracker in `README.md` from `exports/latest/cusp_vX.Y.csv`.
 6. Review `RELEASE_INFO.md`, file hashes, and row/source counts.
 7. Commit the archived bundle, refresh `exports/latest/`, tag the data version,
    and publish the matching GitHub Release.
@@ -187,6 +188,13 @@ That means:
 The release gate writes test exports and aggregation outputs under
 `runs/release_gate/`. Those files validate the workflow but are not official
 release artifacts.
+
+The README tracker can also be refreshed or checked directly:
+
+```bash
+python -m cusp.readme_tracker
+python -m cusp.readme_tracker --check
+```
 
 ## Current Release Sequence
 
