@@ -2,7 +2,6 @@
   --cusp-ink: #173b3a;
   --cusp-muted: #5f6f70;
   --cusp-rule: #d7e5e3;
-  --cusp-warm: #b45f1b;
 }
 
 .md-typeset h1,
@@ -17,22 +16,42 @@
 }
 
 .md-typeset .cusp-hero {
-  background: linear-gradient(135deg, #eef8f6 0%, #ffffff 72%);
-  border: 1px solid var(--cusp-rule);
-  border-top: 4px solid var(--cusp-warm);
-  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 100%;
   margin: 0 0 1.6rem;
-  padding: 2.2rem;
+  min-width: 0;
+  overflow-x: hidden;
+  padding: 0 0 1.4rem;
+  border-bottom: 1px solid var(--cusp-rule);
+  width: 100%;
 }
 
-.md-typeset .cusp-hero h1 {
-  margin-bottom: 0.45rem;
+.md-typeset .cusp-brand-lockup {
+  aspect-ratio: 2 / 1;
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+  object-fit: contain;
+  width: 40rem;
+}
+
+.md-typeset .cusp-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .md-typeset .cusp-hero p {
   color: var(--cusp-muted);
   font-size: 1.05rem;
-  max-width: 52rem;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .md-typeset .cusp-card-grid {
@@ -72,6 +91,6 @@
 
 @media screen and (max-width: 44.9375em) {
   .md-typeset .cusp-hero {
-    padding: 1.25rem;
+    padding-bottom: 1rem;
   }
 }

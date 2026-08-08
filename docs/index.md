@@ -1,6 +1,8 @@
 <section class="cusp-hero" markdown="1">
 
-# CUSP
+# CUSP { .cusp-visually-hidden }
+
+<img class="cusp-brand-lockup" src="assets/branding/cusp-logo-lockup.png" alt="CUSP: CommUnity near-Surface Permafrost dataset">
 
 The CommUnity near-Surface Permafrost dataset is a data synthesis for
 near-surface permafrost, active-layer, thaw-depth, and related field
