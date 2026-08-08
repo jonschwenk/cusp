@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/branding/cusp-logo-lockup.png" alt="CUSP: CommUnity near-Surface Permafrost dataset" width="900">
+</p>
+
 # CommUnity near-Surface Permafrost (CUSP)
 
 CUSP is a synthesis of near-surface permafrost observations from published
