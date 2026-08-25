@@ -40,6 +40,9 @@ jobs:
       - name: Build canonical observation artifacts
         run: python -m cusp.build
 
+      - name: Check tracked generated artifacts
+        run: git diff --exit-code -- data/cusp_sources_bibtex.csv
+
       - name: Build 30 m aggregation artifacts
         run: python -m cusp.aggregate
 

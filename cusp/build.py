@@ -15,6 +15,15 @@ from pandas.api.types import is_integer_dtype
 
 from cusp.citations import DEFAULT_MASTER_BIB_PATH, parse_bibtex_table
 from cusp.data_utils import _ROOT_DIR
+from cusp.schema_contract import (
+    ALLOWED_METHODS as CONTRACT_ALLOWED_METHODS,
+    CANONICAL_COLUMNS as CONTRACT_CANONICAL_COLUMNS,
+    OBS_ID_COMPONENT_COLUMNS as CONTRACT_OBS_ID_COMPONENT_COLUMNS,
+    build_cusp_obs_id,
+    quality_flag_vocabulary_matches,
+    stable_scalar_string,
+    validate_canonical_dataframe,
+)
 from cusp.source_quality_metadata import build_source_metadata, build_source_quality_metadata
 
 
@@ -36,25 +45,10 @@ QUALITY_FLAGS_COLUMN = "quality_flags"
 QUALITY_FLAG_PREFIX = "quality_flag_"
 
 
-CANONICAL_COLUMNS = [
-    "cusp_obs_id",
-    "source",
-    "site_id",
-    "lat",
-    "lon",
-    "date",
-    "pf_observed",
-    "thaw_depth",
-    "pf_depth",
-    "obs_limit",
-    "method",
-    "quality_flags",
-]
-OBS_ID_COMPONENT_COLUMNS = [
-    column for column in CANONICAL_COLUMNS if column not in {"cusp_obs_id", "quality_flags"}
-]
+CANONICAL_COLUMNS = list(CONTRACT_CANONICAL_COLUMNS)
+OBS_ID_COMPONENT_COLUMNS = list(CONTRACT_OBS_ID_COMPONENT_COLUMNS)
 INTERNAL_BUILD_COLUMNS = {"_build_row_number", "build_action", "build_reason"}
-ALLOWED_METHODS = {"gp", "tp", "pit", "aug", "pit_aug", "tp_pit", "tt", "temp", "unknown"}
+ALLOWED_METHODS = set(CONTRACT_ALLOWED_METHODS)
 METHOD_NORMALIZATION_MAP = {
     "Frost Probe Transect or Grid": "tp",
     "Frost Probe Transect or Grid & Borehole": "tp_pit",
@@ -125,28 +119,6 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
-
-
-def stable_scalar_string(value: object) -> str:
-    """Serialize a scalar into a deterministic string for ID generation."""
-
-    if pd.isna(value):
-        return ""
-    if isinstance(value, (float, np.floating)):
-        return format(float(value), ".12g")
-    if isinstance(value, (int, np.integer)):
-        return str(int(value))
-    return str(value)
-
-
-def build_cusp_obs_id(df: pd.DataFrame) -> pd.Series:
-    """Build deterministic observation IDs from the canonical non-ID fields."""
-
-    serialized = df.loc[:, OBS_ID_COMPONENT_COLUMNS].apply(
-        lambda row: "|".join(stable_scalar_string(row[column]) for column in OBS_ID_COMPONENT_COLUMNS),
-        axis=1,
-    )
-    return serialized.map(lambda value: f"obs_{hashlib.sha256(value.encode('utf-8')).hexdigest()[:16]}")
 
 
 def list_available_sources(data_dir: Path = DATA_DIR) -> list[str]:
@@ -569,6 +541,17 @@ def normalize_methods(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def normalize_identifier_strings(df: pd.DataFrame) -> pd.DataFrame:
+    """Store string-valued ID components as strings without changing their hashes."""
+
+    df = df.copy()
+    for column in ("source", "site_id", "date", "method"):
+        df[column] = df[column].map(
+            lambda value: pd.NA if pd.isna(value) else stable_scalar_string(value)
+        )
+    return df
+
+
 def stable_allfields_column_order(df: pd.DataFrame) -> list[str]:
     """Return a deterministic column order with canonical fields first."""
 
@@ -730,6 +713,11 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
     working = raw_allfields.copy()
     working = normalize_methods(working)
     quality_definitions = load_quality_flag_definitions()
+    if not quality_flag_vocabulary_matches(DEFAULT_QUALITY_FLAG_DEFINITIONS):
+        raise ValueError(
+            "data/quality_flag_definitions.csv does not match the frozen schema contract. "
+            "Flag additions must be made additively in both files."
+        )
     source_quality_flags = load_source_quality_flags()
     validate_quality_flags(working, quality_definitions, source_quality_flags)
     working = add_inferred_quality_flags(working)
@@ -739,11 +727,13 @@ def build_release_tables(raw_allfields: pd.DataFrame) -> BuildOutputs:
 
     sort_cols = [column for column in OBS_ID_COMPONENT_COLUMNS if column in working.columns]
     working = working.sort_values(sort_cols, kind="mergesort", na_position="last").reset_index(drop=True)
+    working = normalize_identifier_strings(working)
     working["cusp_obs_id"] = build_cusp_obs_id(working)
     row_quality_flags = collect_quality_flags_for_rows(working, source_quality_flags)
     working["quality_flags"] = build_quality_flags_column(row_quality_flags, quality_definitions)
     qc_flags = build_qc_flags(working)
     canonical = working.loc[:, CANONICAL_COLUMNS].copy()
+    validate_canonical_dataframe(canonical).raise_for_errors("Generated canonical observation table")
 
     allfields_columns = stable_allfields_column_order(working)
     observations_allfields = working.loc[:, allfields_columns].copy()

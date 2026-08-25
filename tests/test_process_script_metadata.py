@@ -3,8 +3,17 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
 
-from cusp.process_script_metadata import build_metadata_record, parse_structured_metadata
+import cusp.generate_process_script_metadata as metadata_cli
+from cusp.process_script_metadata import (
+    CSV_COLUMNS,
+    build_metadata_record,
+    metadata_csv_matches,
+    parse_structured_metadata,
+    write_metadata_csv,
+)
 
 
 STRUCTURED_DOCSTRING = """
@@ -67,6 +76,46 @@ class ProcessScriptMetadataTests(unittest.TestCase):
             self.assertEqual(record["structured_metadata_present"], "yes")
             self.assertGreater(int(record["validation_error_count"]), 0)
             self.assertIn("does not match source directory", record["validation_errors"])
+
+    def test_metadata_csv_match_requires_exact_columns_and_records(self) -> None:
+        record = {column: "" for column in CSV_COLUMNS}
+        record["source_directory"] = "Example_Source"
+        record["validation_error_count"] = "0"
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = Path(tmpdir) / "metadata.csv"
+            write_metadata_csv([record], output)
+            self.assertTrue(metadata_csv_matches([record], output))
+
+            changed = dict(record)
+            changed["notes"] = "changed"
+            self.assertFalse(metadata_csv_matches([changed], output))
+
+    def test_check_mode_detects_stale_csv_without_writing(self) -> None:
+        record = {column: "" for column in CSV_COLUMNS}
+        record["source_directory"] = "Example_Source"
+        record["validation_error_count"] = "0"
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = Path(tmpdir) / "metadata.csv"
+            output.write_text("stale\n", encoding="utf-8")
+            args = SimpleNamespace(
+                paths=[],
+                output=str(output),
+                check=True,
+                strict=True,
+            )
+            with (
+                patch.object(metadata_cli, "parse_args", return_value=args),
+                patch.object(metadata_cli, "resolve_script_paths", return_value=[]),
+                patch.object(metadata_cli, "build_metadata_records", return_value=[record]),
+                patch.object(metadata_cli, "write_metadata_csv") as write_mock,
+            ):
+                exit_code = metadata_cli.main()
+
+            self.assertEqual(exit_code, 1)
+            write_mock.assert_not_called()
+            self.assertEqual(output.read_text(encoding="utf-8"), "stale\n")
 
 
 if __name__ == "__main__":

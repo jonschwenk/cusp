@@ -34,15 +34,23 @@ This is intentionally simpler than a `vX.Y.Z` scheme.
 
 ## Version-Bump Policy
 
+The canonical 12-column observation contract is permanent beginning with
+v1.1. A version bump does not authorize adding, removing, renaming, or
+reordering canonical columns, changing their logical types or meanings, or
+changing the observation-ID algorithm. If CUSP eventually needs an
+incompatible table, it will be published as a separately named product while
+`cusp_vX.Y.csv` retains this contract.
+
 ### Major bump
 
-Use a major bump when the public contract changes in a breaking way.
+Use a major bump for a substantial change to the dataset or release model that
+still preserves the canonical observation contract.
 
 Examples:
 
-- canonical observation schema changes incompatibly
-- official release bundle structure changes in a way users must adapt to
-- the meaning of core fields changes incompatibly
+- a separately named official product is introduced
+- the official bundle gains a substantial new product family
+- release policy changes substantially without altering `cusp_vX.Y.csv`
 
 ### Minor bump
 
@@ -96,6 +104,7 @@ This is the canonical public CUSP dataset:
 - integrated into the CUSP release schema
 - deduplicated
 - QA/QC checked
+- validated against the frozen v1.1 schema contract
 
 In repository rebuilds, this file is exported from the working observation
 table produced by `python -m cusp.build`.
@@ -174,7 +183,9 @@ That means:
 ## Recommended Release Workflow
 
 1. Rebuild the canonical dataset with `python -m cusp.build`.
-2. Validate processing metadata and the canonical observation table.
+2. Validate processing metadata and the canonical observation table. These
+   checks enforce the frozen schema, controlled vocabularies, row semantics,
+   and deterministic observation IDs.
 3. Decide the next dataset version.
 4. Run the scripted release gate, including strict docs validation, with
    `python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke`.
@@ -199,4 +210,6 @@ python -m cusp.readme_tracker --check
 ## Current Release Sequence
 
 The existing v1.0 archive is published retroactively as the historical initial
-release. The corrected and expanded observation build is published as v1.1.
+release. It predates the canonical `quality_flags` column. The corrected and
+expanded v1.1 observation build establishes the permanent 12-column contract;
+future releases are complete snapshots that retain it.

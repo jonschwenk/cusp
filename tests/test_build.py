@@ -33,7 +33,7 @@ class BuildTests(unittest.TestCase):
         raw = pd.DataFrame(
             [
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A1",
                     "lat": 65.0,
                     "lon": -147.0,
@@ -46,7 +46,7 @@ class BuildTests(unittest.TestCase):
                     "extra_col": "keep",
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A1",
                     "lat": 65.0,
                     "lon": -147.0,
@@ -59,7 +59,7 @@ class BuildTests(unittest.TestCase):
                     "extra_col": "duplicate",
                 },
                 {
-                    "source": "Example_B",
+                    "source": "Daanen_2017",
                     "site_id": None,
                     "lat": 0.0,
                     "lon": 0.0,
@@ -72,7 +72,7 @@ class BuildTests(unittest.TestCase):
                     "extra_col": "drop",
                 },
                 {
-                    "source": "Example_C",
+                    "source": "Daanen_2017",
                     "site_id": None,
                     "lat": 66.0,
                     "lon": -150.0,
@@ -103,7 +103,7 @@ class BuildTests(unittest.TestCase):
         raw = pd.DataFrame(
             [
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A1",
                     "lat": 65.0,
                     "lon": -147.0,
@@ -117,7 +117,7 @@ class BuildTests(unittest.TestCase):
                     "quality_flag_date_assigned": True,
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A2",
                     "lat": 65.1,
                     "lon": -147.1,
@@ -144,7 +144,7 @@ class BuildTests(unittest.TestCase):
         raw = pd.DataFrame(
             [
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A1",
                     "lat": 65.0,
                     "lon": -147.0,
@@ -156,7 +156,7 @@ class BuildTests(unittest.TestCase):
                     "method": "unknown",
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A2",
                     "lat": 65.1,
                     "lon": -147.1,
@@ -168,7 +168,7 @@ class BuildTests(unittest.TestCase):
                     "method": "temp",
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A3",
                     "lat": 65.2,
                     "lon": -147.2,
@@ -180,7 +180,7 @@ class BuildTests(unittest.TestCase):
                     "method": "tp",
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A4",
                     "lat": 65.3,
                     "lon": -147.3,
@@ -193,7 +193,7 @@ class BuildTests(unittest.TestCase):
                     "rock": "N",
                 },
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A5",
                     "lat": 65.4,
                     "lon": -147.4,
@@ -348,7 +348,7 @@ class BuildTests(unittest.TestCase):
         raw = pd.DataFrame(
             [
                 {
-                    "source": "Example_A",
+                    "source": "Daanen_2017",
                     "site_id": "A1",
                     "lat": 65.0,
                     "lon": -147.0,

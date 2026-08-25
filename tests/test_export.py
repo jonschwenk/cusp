@@ -8,6 +8,7 @@ import pandas as pd
 
 from cusp.export import export_release_bundle, normalize_dataset_version
 from cusp.readme_tracker import TRACKER_END, TRACKER_START
+from cusp.schema_contract import build_cusp_obs_id
 
 
 class ExportTests(unittest.TestCase):
@@ -28,25 +29,25 @@ class ExportTests(unittest.TestCase):
 
             canonical = pd.DataFrame(
                 {
-                    "cusp_obs_id": ["obs_a", "obs_b"],
-                    "source": ["A", "B"],
+                    "source": ["Daanen_2017", "Hanston_etal_2024"],
                     "site_id": ["s1", "s2"],
                     "lat": [10.0, 11.0],
                     "lon": [20.0, 21.0],
                     "date": ["2020-08-01", "2020-08-02"],
                     "pf_observed": [1, 0],
-                    "thaw_depth": [30.0, 40.0],
-                    "pf_depth": [30.0, 40.0],
-                    "obs_limit": [None, None],
+                    "thaw_depth": [30.0, None],
+                    "pf_depth": [30.0, None],
+                    "obs_limit": [120.0, 100.0],
                     "method": ["tp", "pit"],
                     "quality_flags": ["", "LB"],
                 }
             )
+            canonical.insert(0, "cusp_obs_id", build_cusp_obs_id(canonical))
             canonical.to_csv(canonical_path, index=False)
 
             features = pd.DataFrame(
                 {
-                    "cusp_obs_id": ["obs_a", "obs_b"],
+                    "cusp_obs_id": canonical["cusp_obs_id"].tolist(),
                     "sand": [0.1, 0.2],
                     "soil_oc": [10.0, 20.0],
                 }
@@ -54,7 +55,8 @@ class ExportTests(unittest.TestCase):
             features.to_csv(features_path, index=False)
 
             bib_path.write_text(
-                "@misc{A,\n  title = {Title A},\n}\n\n@article{B,\n  title = {Title B},\n}\n",
+                "@misc{Daanen_2017,\n  title = {Title A},\n}\n\n"
+                "@article{Hanston_etal_2024,\n  title = {Title B},\n}\n",
                 encoding="utf-8",
             )
             readme_path.write_text(
@@ -97,8 +99,7 @@ class ExportTests(unittest.TestCase):
 
             canonical = pd.DataFrame(
                 {
-                    "cusp_obs_id": ["obs_a"],
-                    "source": ["A"],
+                    "source": ["Daanen_2017"],
                     "site_id": ["s1"],
                     "lat": [10.0],
                     "lon": [20.0],
@@ -111,9 +112,10 @@ class ExportTests(unittest.TestCase):
                     "quality_flags": [""],
                 }
             )
+            canonical.insert(0, "cusp_obs_id", build_cusp_obs_id(canonical))
             canonical.to_csv(canonical_path, index=False)
             pd.DataFrame({"cusp_30m_id": ["agg_a"], "soil_oc": [1.0]}).to_csv(features_path, index=False)
-            bib_path.write_text("@misc{A,\n  title = {Title A},\n}\n", encoding="utf-8")
+            bib_path.write_text("@misc{Daanen_2017,\n  title = {Title A},\n}\n", encoding="utf-8")
 
             with self.assertRaises(ValueError):
                 export_release_bundle(

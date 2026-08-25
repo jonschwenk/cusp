@@ -13,14 +13,23 @@ python -m cusp.qc validate-observations --out outputs/qc_tests
 
 They require:
 
-- the exact canonical observation schema
-- present and unique `cusp_obs_id`
+- the exact frozen column names and order
+- contract-compliant logical types, nullability, units, and encodings
+- present, unique, correctly formatted, and deterministically reproduced
+  `cusp_obs_id`
 - binary `pf_observed`
-- supported `method` values
+- registered source keys and supported `method` values
+- well-formed, defined, deduplicated, canonically ordered quality flags
 - present and valid coordinates
-- parseable and in-range dates
+- valid `YYYY-MM-DD` dates in the supported range
 - nonnegative depth values
 - no zero observation limits
+- valid presence, absence, depth, observation-limit, `UB`, and `VI`
+  relationships
+
+The machine-readable source of truth is
+`cusp/canonical_observation_schema.json`. The build, exporter, QA command, and
+test suite all load the same contract.
 
 The diagnostic audit runs with:
 
@@ -32,11 +41,11 @@ It writes review files without changing the observations.
 
 ## Latest Result
 
-Validated on 2026-08-06 under Python 3.13:
+Validated on 2026-08-25 under Python 3.13:
 
 - hard-gate status: passed
 - canonical table: `79,389` rows and `12` columns
-- complete test suite: `59 passed` with `26` passing subtests
+- complete test suite: `74 passed` with `26` passing subtests
 - processing metadata: `57` structured headers, `0` validation errors
 - build-level QC flag log: `0` rows
 

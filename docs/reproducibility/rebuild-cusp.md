@@ -10,6 +10,17 @@ python -m cusp.qc validate-observations
 ```
 
 That rebuilds and validates the canonical observation table in `data/`.
+The build and QA commands both enforce the machine-readable frozen schema in
+`cusp/canonical_observation_schema.json`.
+
+Validate the maintained source-processing metadata without modifying it:
+
+```bash
+python -m cusp.generate_process_script_metadata --check --strict
+```
+
+Check mode fails if `PROCESS_SCRIPT_METADATA.csv` is stale and never rewrites
+the file.
 
 ## Optional Derived Workflows
 
@@ -42,6 +53,13 @@ test. Feature sampling remains available as an optional derived workflow.
 
 ## Reproducibility Notes
 
-Some original source inputs are too large or too awkward to store directly in
-GitHub. Those cases are documented in
-[External data sources](external-data-sources.md).
+The release build is reproducible from the processed source tables committed
+to the repository. Re-creating every processed source table from its earliest
+raw input is a different scope: some processors require manual steps, files
+that are too large for GitHub, or external services and data. Those
+requirements are recorded per source in `PROCESS_SCRIPT_METADATA.csv` and are
+described in [External data sources](external-data-sources.md).
+
+For exact historical bytes, checksums, and citations, use the complete snapshot
+under `exports/archived/vX.Y/`. Rebuilding from the current source tree creates
+the current dataset state, not an earlier release.

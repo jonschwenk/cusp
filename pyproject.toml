@@ -65,3 +65,6 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 include = ["cusp*"]
+
+[tool.setuptools.package-data]
+cusp = ["canonical_observation_schema.json"]

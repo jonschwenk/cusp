@@ -15,6 +15,7 @@ from cusp.process_script_metadata import (
     build_metadata_records,
     discover_process_scripts,
     is_process_script,
+    metadata_csv_matches,
     path_display,
     summarize_records,
     write_metadata_csv,
@@ -73,13 +74,26 @@ def main() -> int:
     output_path = Path(args.output)
     if not output_path.is_absolute():
         output_path = REPO_ROOT / output_path
-    write_metadata_csv(records, output_path)
 
+    has_errors = any(int(record["validation_error_count"]) > 0 for record in records)
+    if args.check:
+        is_stale = not args.paths and not metadata_csv_matches(records, output_path)
+        if is_stale:
+            print(
+                f"{path_display(output_path)} is missing or stale; regenerate it without --check.",
+                file=sys.stderr,
+            )
+        else:
+            scope = "targeted scripts" if args.paths else path_display(output_path)
+            print(f"Validated {len(records)} records against {scope} without writing files")
+        print(summarize_records(records))
+        return 1 if has_errors or is_stale else 0
+
+    write_metadata_csv(records, output_path)
     print(f"Wrote {len(records)} records to {path_display(output_path)}")
     print(summarize_records(records))
 
-    has_errors = any(int(record["validation_error_count"]) > 0 for record in records)
-    if args.check or args.strict:
+    if args.strict:
         return 1 if has_errors else 0
     return 0
 

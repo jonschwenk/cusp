@@ -3,7 +3,7 @@
 This document describes the stable public columns in the main CUSP release
 table.
 
-The versioned release file is named like `cusp_v1.1.csv`,
+The versioned release file is named like `cusp_v1.0.csv`,
 `cusp_v1.1.csv`, or `cusp_v2.0.csv`.
 
 For naming and export layout, see
@@ -15,11 +15,32 @@ The schema-defining release file is:
 
 - `cusp_vX.Y.csv`
 
+### Frozen contract
+
+The 12-column canonical observation contract is frozen beginning with CUSP
+v1.1. Future releases will preserve:
+
+- column names and order
+- logical types, nullability, units, and meanings
+- the semicolon-delimited `quality_flags` representation
+- the `cusp_obs_id` construction algorithm
+
+The machine-readable contract is maintained in
+`cusp/canonical_observation_schema.json` and is enforced during builds,
+exports, QA validation, and automated tests. New information that does not fit
+this table will be published in a sidecar table or a separately named product,
+not by changing the canonical columns.
+
+Source keys, method codes, and quality-flag codes may be added. Additions are
+append-only: an existing code will not be removed, repurposed, or assigned a
+different meaning. The historical v1.0 file predates the `quality_flags`
+column; integrations should use v1.1 or later as the stable contract.
+
 ### Column definitions
 
 | Column | Meaning | Type / format | Nulls allowed |
 |---|---|---|---|
-| `cusp_obs_id` | Stable opaque CUSP observation identifier | string | no |
+| `cusp_obs_id` | Deterministic opaque identifier for the canonical observation content | `obs_` plus 16 lowercase hexadecimal characters | no |
 | `source` | Canonical CUSP source key | string | no |
 | `site_id` | Source-provided site or point identifier | string | yes |
 | `lat` | Latitude in WGS84 | decimal degrees | no |
@@ -54,6 +75,18 @@ The schema-defining release file is:
   cell within a source/site/date survey. Native counts and spacing are retained
   in the all-fields table rather than the stable public schema.
 
+### Observation identifiers and snapshots
+
+`cusp_obs_id` is a deterministic content identifier built from `source`,
+`site_id`, coordinates, date, permafrost state, depth fields, observation
+limit, and method. Quality flags are intentionally excluded so a caveat can be
+corrected without breaking joins. A correction to any identifier component
+creates a new ID; the previous ID is not reassigned to different content.
+
+Every versioned release is a complete snapshot, not a patch. Consumers can
+replace an older release with the new file and use `cusp_obs_id` to identify
+unchanged, added, and retired observations.
+
 ### Quality flags
 
 The `quality_flags` column contains semicolon-delimited mnemonic codes such as
@@ -81,7 +114,7 @@ The method column uses short codes:
 | Method | Meaning |
 | --- | --- |
 | `aug` | auger observation |
-| `gp` | ground probing or frost probing where the source uses that terminology |
+| `gp` | ground-penetrating radar (GPR) interpretation |
 | `pit` | soil pit or excavation |
 | `pit_aug` | combined pit and auger information |
 | `temp` | temperature profile or temperature-based interpretation |

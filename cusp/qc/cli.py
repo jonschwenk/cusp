@@ -12,7 +12,11 @@ from typing import Any
 import pandas as pd
 
 from cusp.aggregate import AGGREGATED_COLUMNS
-from cusp.build import ALLOWED_METHODS, CANONICAL_COLUMNS
+from cusp.schema_contract import (
+    ALLOWED_METHODS,
+    CANONICAL_COLUMNS,
+    validate_canonical_dataframe,
+)
 
 from .aggregate import (
     check_cusp_30m_id,
@@ -38,7 +42,7 @@ from .io import load_observations_csv
 from .reporting import ensure_out_dir, write_csv, write_json
 
 
-EXPECTED_OBSERVATION_COLUMNS = ["row_index"] + CANONICAL_COLUMNS
+EXPECTED_OBSERVATION_COLUMNS = ["row_index"] + list(CANONICAL_COLUMNS)
 EXPECTED_COMBINED_COLUMNS = EXPECTED_OBSERVATION_COLUMNS
 EXPECTED_AGGREGATED_COLUMNS = ["row_index"] + AGGREGATED_COLUMNS
 
@@ -105,15 +109,22 @@ def run_observations_validation(
     """Run the supported hard-gate validation on cusp_observations.csv."""
 
     input_path = Path(input_path)
+    contract_df = pd.read_csv(input_path, low_memory=False)
+    contract_result = validate_canonical_dataframe(contract_df)
     df = load_observations_csv(input_path)
 
-    counts: dict[str, int] = {}
-    outputs: list[tuple[str, pd.DataFrame]] = []
-
-    schema_ok = df.columns.tolist() == EXPECTED_OBSERVATION_COLUMNS
-    counts["schema_mismatch"] = 0 if schema_ok else 1
-    if not schema_ok:
-        outputs.append(("schema_mismatch.csv", _schema_details(EXPECTED_OBSERVATION_COLUMNS, df.columns.tolist())))
+    counts: dict[str, int] = {
+        "schema_mismatch": contract_result.counts["column_mismatch"],
+        "invalid_contract_nullability": contract_result.counts["invalid_nullability"],
+        "invalid_contract_types": contract_result.counts["invalid_type"],
+        "invalid_contract_formats": contract_result.counts["invalid_format"],
+        "invalid_contract_vocabulary": contract_result.counts["invalid_vocabulary"],
+        "invalid_contract_relationships": contract_result.counts["invalid_relationship"],
+        "invalid_contract_identifiers": contract_result.counts["identifier_mismatch"],
+    }
+    outputs: list[tuple[str, pd.DataFrame]] = [
+        ("schema_contract_violations.csv", contract_result.details_frame())
+    ]
 
     id_res = check_cusp_obs_id(df)
     counts["invalid_cusp_obs_id"] = id_res.count()

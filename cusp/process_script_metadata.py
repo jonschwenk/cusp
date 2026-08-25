@@ -296,6 +296,28 @@ def write_metadata_csv(records: list[dict[str, str]], output_path: Path) -> None
         writer.writerows(records)
 
 
+def metadata_csv_matches(records: list[dict[str, str]], output_path: Path) -> bool:
+    """Return whether an existing metadata CSV exactly matches generated records."""
+
+    if not output_path.exists():
+        return False
+    with output_path.open("r", newline="", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        if tuple(reader.fieldnames or ()) != CSV_COLUMNS:
+            return False
+        existing = [dict(row) for row in reader]
+
+    def normalized(row: dict[str, str]) -> dict[str, str]:
+        return {
+            column: row.get(column, "").replace("\r\n", "\n").replace("\r", "\n")
+            for column in CSV_COLUMNS
+        }
+
+    existing = [normalized(row) for row in existing]
+    expected = [normalized(record) for record in records]
+    return existing == expected
+
+
 def summarize_records(records: list[dict[str, str]]) -> str:
     counter = Counter(record["metadata_status"] for record in records)
     parts = [f"{status}={count}" for status, count in sorted(counter.items())]

@@ -16,6 +16,7 @@ import pandas as pd
 from cusp.citations import build_bibtex_subset
 from cusp.data_utils import _ROOT_DIR
 from cusp.readme_tracker import DEFAULT_README_PATH, synchronize_readme
+from cusp.schema_contract import validate_canonical_dataframe
 
 
 DATA_DIR = _ROOT_DIR / "data"
@@ -23,22 +24,6 @@ EXPORTS_DIR = _ROOT_DIR / "exports"
 DEFAULT_CANONICAL_INPUT = DATA_DIR / "cusp_observations.csv"
 DEFAULT_MASTER_BIB_INPUT = DATA_DIR / "cusp_sources.bib"
 DEFAULT_CHANGES = "- Initial public CUSP release.\n"
-REQUIRED_CANONICAL_COLUMNS = {
-    "cusp_obs_id",
-    "source",
-    "site_id",
-    "lat",
-    "lon",
-    "date",
-    "pf_observed",
-    "thaw_depth",
-    "pf_depth",
-    "obs_limit",
-    "method",
-    "quality_flags",
-}
-
-
 @dataclass(frozen=True)
 class ArtifactSummary:
     filename: str
@@ -100,9 +85,7 @@ def load_canonical_table(path: Path) -> pd.DataFrame:
     """Load and validate the canonical observation table."""
 
     df = pd.read_csv(path, low_memory=False)
-    missing = sorted(REQUIRED_CANONICAL_COLUMNS.difference(df.columns))
-    if missing:
-        raise ValueError(f"Canonical input is missing required columns: {missing}")
+    validate_canonical_dataframe(df).raise_for_errors(f"Canonical input {path}")
     return df
 
 

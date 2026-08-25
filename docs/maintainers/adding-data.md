@@ -19,6 +19,9 @@ data/
 ```
 
 Use the source directory name as the canonical `source_key`.
+Register that key by appending it to the `source` vocabulary in
+`cusp/canonical_observation_schema.json`. This is an intentional registry
+update, not a schema change.
 
 ## Step 1: Create The Process Script
 
@@ -80,6 +83,13 @@ Processors may also add observation-quality flags using boolean columns named
 `quality_flag_<flag>`, where `<flag>` is listed in
 `data/quality_flag_definitions.csv`. The build validates these names and writes
 semicolon-delimited flag codes into the main-table `quality_flags` column.
+
+The canonical 12-column table is frozen. Do not add source-specific columns to
+it. Keep source-specific provenance in the processed and all-fields tables or
+publish new release information as a sidecar. New source, method, or quality
+flag codes may be appended to the machine-readable contract, but existing
+codes and meanings must not be changed. A new quality flag must also be added
+to `data/quality_flag_definitions.csv`.
 
 Important expectations:
 
@@ -157,6 +167,7 @@ treated as a new dataset version under
 ## Ingestion Checklist
 
 - create `data/<Source_Key>/`
+- append the source key to the machine-readable contract
 - add `process_<source_key_lower>.py`
 - add TOML metadata docstring
 - write `processed_<source_key_lower>.csv`

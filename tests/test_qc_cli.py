@@ -37,6 +37,21 @@ class QcCliTests(unittest.TestCase):
             self.assertEqual(payload["n_cols"], len(pd.read_csv(OBSERVATIONS_PATH, nrows=0).columns))
             self.assertTrue((out_dir / "qc_summary.json").exists())
 
+    def test_observation_validation_reports_contract_violations(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmp = Path(tmpdir)
+            input_path = tmp / "invalid_observations.csv"
+            out_dir = tmp / "validation"
+            frame = pd.read_csv(OBSERVATIONS_PATH, nrows=1)
+            frame.loc[0, "quality_flags"] = "ZZ"
+            frame.to_csv(input_path, index=False)
+
+            result = run_observations_validation(input_path, out_dir=out_dir)
+
+            self.assertFalse(result.ok)
+            self.assertGreater(result.summary["counts"]["invalid_contract_vocabulary"], 0)
+            self.assertTrue((out_dir / "schema_contract_violations.csv").exists())
+
 
 if __name__ == "__main__":
     unittest.main()

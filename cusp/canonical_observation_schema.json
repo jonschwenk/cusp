@@ -1,0 +1,241 @@
+{
+  "name": "cusp_observations",
+  "contract_version": "1.0",
+  "established_in_dataset_version": "v1.1",
+  "format": "CSV",
+  "encoding": "UTF-8",
+  "delimiter": ",",
+  "null_representation": "",
+  "columns": [
+    {
+      "name": "cusp_obs_id",
+      "type": "string",
+      "nullable": false,
+      "description": "Stable opaque identifier for the exact canonical observation content.",
+      "pattern": "^obs_[0-9a-f]{16}$"
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "nullable": false,
+      "description": "Canonical CUSP source key.",
+      "vocabulary": "source"
+    },
+    {
+      "name": "site_id",
+      "type": "string",
+      "nullable": true,
+      "description": "Source-provided site or point identifier."
+    },
+    {
+      "name": "lat",
+      "type": "number",
+      "nullable": false,
+      "description": "Latitude in WGS84 decimal degrees.",
+      "minimum": -90.0,
+      "maximum": 90.0
+    },
+    {
+      "name": "lon",
+      "type": "number",
+      "nullable": false,
+      "description": "Longitude in WGS84 decimal degrees.",
+      "minimum": -180.0,
+      "maximum": 180.0
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "nullable": false,
+      "description": "Observation date in YYYY-MM-DD format.",
+      "format": "%Y-%m-%d"
+    },
+    {
+      "name": "pf_observed",
+      "type": "integer",
+      "nullable": false,
+      "description": "Permafrost presence indicator.",
+      "values": [0, 1]
+    },
+    {
+      "name": "thaw_depth",
+      "type": "number",
+      "nullable": true,
+      "description": "Thaw depth below ground surface in centimeters.",
+      "units": "cm",
+      "minimum": 0.0
+    },
+    {
+      "name": "pf_depth",
+      "type": "number",
+      "nullable": true,
+      "description": "Depth to permafrost below ground surface in centimeters.",
+      "units": "cm",
+      "minimum": 0.0
+    },
+    {
+      "name": "obs_limit",
+      "type": "number",
+      "nullable": true,
+      "description": "Observation limit below ground surface in centimeters.",
+      "units": "cm",
+      "exclusive_minimum": 0.0
+    },
+    {
+      "name": "method",
+      "type": "string",
+      "nullable": false,
+      "description": "Observation method code.",
+      "vocabulary": "method"
+    },
+    {
+      "name": "quality_flags",
+      "type": "string",
+      "nullable": true,
+      "description": "Semicolon-delimited quality flag codes.",
+      "vocabulary": "quality_flags",
+      "separator": ";",
+      "pattern": "^[A-Z]{2}(;[A-Z]{2})*$"
+    }
+  ],
+  "vocabularies": {
+    "source": {
+      "extension_policy": "additive_only",
+      "values": [
+        "Bakian_Dogaheh_2020",
+        "Barrow_CALM_U1",
+        "Bonnaventure_Whati",
+        "CALM",
+        "Cable_2017",
+        "Chapin_2025",
+        "Daanen_2017",
+        "Douglas_Koyukuk_2022",
+        "Ebel_2018",
+        "Fisher_2016",
+        "Hanston_etal_2024",
+        "Hollingsworth_2005",
+        "Holloway_2019",
+        "Jafarov_2016",
+        "James_2019",
+        "James_2020",
+        "Jones_2025",
+        "Jones_Jones_2025",
+        "Jorgenson_Kanevskiy_2022_Gosling",
+        "Jorgenson_Kanevskiy_2022_Jago",
+        "Jorgenson_Kanevskiy_2025",
+        "Kling_2016",
+        "Kling_2025",
+        "Koyukuk_2018",
+        "Langer_etal_2020",
+        "Minsley_2015",
+        "Minsley_2017",
+        "Minsley_2021",
+        "Moore_et_al_2025",
+        "Myers-Smith_2005",
+        "NCSS_Lab_Data_Mart",
+        "Natali_2023",
+        "Obu_etal_2016",
+        "PERMOS_2024",
+        "Pastick",
+        "Patton_2021",
+        "Pawley_2018",
+        "Peirce_2020",
+        "Petrone_etal_2016",
+        "Ruess_2025",
+        "Scheer_etal_2023",
+        "Schwenk_PFRR",
+        "Selawik",
+        "Seward",
+        "Seward_2022",
+        "Smith_Burgess_2000",
+        "Smith_Burgess_2002",
+        "Talucci_2024",
+        "Utqiagvik_ERT_GPR",
+        "Veremeeva_etal_2025",
+        "ViPER_2018",
+        "Wagner_2019",
+        "Walker_2022",
+        "Wang_2018",
+        "Whitley_2018",
+        "Zhang_2019",
+        "Zhao_2021"
+      ]
+    },
+    "method": {
+      "extension_policy": "additive_only",
+      "values": [
+        "aug",
+        "gp",
+        "pit",
+        "pit_aug",
+        "temp",
+        "tp",
+        "tp_pit",
+        "tt",
+        "unknown"
+      ]
+    },
+    "quality_flags": {
+      "extension_policy": "additive_only",
+      "definitions_path": "data/quality_flag_definitions.csv",
+      "values": [
+        "LB",
+        "UB",
+        "OA",
+        "PB",
+        "DA",
+        "DS",
+        "CS",
+        "CI",
+        "CF",
+        "DR",
+        "SS",
+        "TI",
+        "GI",
+        "VI",
+        "ME",
+        "FE",
+        "PA",
+        "MU",
+        "RC",
+        "VA",
+        "DO",
+        "RO"
+      ]
+    }
+  },
+  "identifier": {
+    "column": "cusp_obs_id",
+    "unique": true,
+    "algorithm": "sha256_first_16_hex",
+    "separator": "|",
+    "float_serialization": ".12g",
+    "components": [
+      "source",
+      "site_id",
+      "lat",
+      "lon",
+      "date",
+      "pf_observed",
+      "thaw_depth",
+      "pf_depth",
+      "obs_limit",
+      "method"
+    ],
+    "semantics": "The identifier represents exact canonical observation content. A correction to any component retires the former identifier and creates a new one. Quality flags do not affect the identifier."
+  },
+  "row_rules": [
+    "Absence rows have blank thaw_depth and pf_depth.",
+    "Absence rows have a positive obs_limit unless quality_flags includes VI.",
+    "Presence rows have thaw_depth or pf_depth unless quality_flags includes UB.",
+    "Reported thaw_depth and pf_depth do not exceed a non-null obs_limit.",
+    "When both depths are present, thaw_depth does not exceed pf_depth."
+  ],
+  "evolution_policy": {
+    "column_names_order_types_nullability_and_meanings": "frozen",
+    "existing_vocabulary_meanings": "frozen",
+    "new_vocabulary_values": "additive_only",
+    "new_information": "Publish in sidecar tables or a separately named product rather than changing the canonical observation table.",
+    "release_semantics": "Every dataset release is a complete snapshot."
+  }
+}

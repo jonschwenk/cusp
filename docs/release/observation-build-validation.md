@@ -3,7 +3,7 @@
 ## Scope
 
 This page records the latest validated state of the observation-level CUSP
-build. The current snapshot was generated on 2026-08-06 after standardizing
+build. The current snapshot was generated on 2026-08-25 after standardizing
 dense GPR sampling, resolving the Moore/Jafarov overlap, enforcing explicit
 observation limits for instrument-based permafrost-absence rows, and restoring
 the flagged visual Koyukuk classifications.
@@ -42,10 +42,11 @@ their source rows and reasons.
 
 All hard gates passed:
 
-- exact canonical schema
-- present and unique `cusp_obs_id`
+- exact frozen canonical schema, logical types, nullability, and encodings
+- present, unique, and deterministically reproduced `cusp_obs_id`
 - binary `pf_observed`
-- supported observation method codes
+- registered source keys, supported observation method codes, and valid
+  quality-flag codes
 - present, globally valid coordinates
 - parseable, in-range dates
 - nonnegative depth fields
