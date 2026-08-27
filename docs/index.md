@@ -66,7 +66,7 @@ current release.
 | Read the public columns | [Data schema](user/data-schema.md) |
 | Rebuild or process CUSP on your computer | [Command examples](user/cli-examples.md) |
 | Suggest or add a source dataset | [Share data with CUSP](contributing/suggest-dataset.md) |
-| Rebuild the current release artifacts | [Rebuild CUSP](reproducibility/rebuild-cusp.md) |
+| Rebuild the current working dataset | [Rebuild CUSP](reproducibility/rebuild-cusp.md) |
 
 ## Core CUSP Data
 

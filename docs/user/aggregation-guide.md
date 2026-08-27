@@ -6,16 +6,19 @@ independent observations, when you want to reduce the influence of dense local
 sampling, or when you plan to join CUSP to environmental layers that are much
 coarser than individual field points.
 
-The CUSP aggregation tool groups nearby observations within a chosen spatial
-and temporal window. The default settings are `30 m` and `31 days`, but you can
-set whatever distance and time limits are appropriate for your analysis.
+The CUSP aggregation tool puts observations into projected grid cells, then
+links dates within each cell and calendar year. The default settings are
+`30 m` cells and a maximum `31`-day gap between consecutive observations, but
+you can choose values appropriate for your analysis.
 
 ## What Aggregation Does
 
 The aggregation workflow:
 
 - starts from a CUSP observation table
-- groups observations that fall in the same projected grid cell and date window
+- groups observations that fall in the same projected grid cell
+- starts a new temporal group whenever the gap between consecutive dates is
+  greater than the linkage threshold
 - keeps annual separation so records from different years are not grouped
   together
 - allows grouping across sources
@@ -29,8 +32,8 @@ Important default settings:
 | Setting | Default | Meaning |
 | --- | ---: | --- |
 | Distance threshold | `30 m` | Observations are grouped within projected 30 m grid cells unless you pass a different `--distance-m` value. |
-| Temporal linkage | `31 days` | Within the same year and grid cell, observations can be linked when neighboring observation dates are no more than 31 days apart. |
-| Effective total window | up to `62 days` | A grouped date can include observations as much as 31 days before and 31 days after the representative date. |
+| Temporal linkage | `31 days` | Within the same year and grid cell, consecutive observations remain linked when their date gap is no more than 31 days. |
+| Total group span | not fixed | The rule is single-linkage: a chain of qualifying date gaps can produce a group spanning more than 31 or 62 days. |
 | Annual separation | preserved | Observations from different calendar years are not grouped together. |
 | Grouping projection | `EPSG:3413` | Spatial grouping is computed in a projected Arctic coordinate system. |
 | Output coordinates | `EPSG:4326` | Aggregated latitude and longitude are exported in WGS84. |
@@ -63,6 +66,10 @@ Common options:
 | `--manifest-output` | Parameters, row counts, hashes, and run metadata. |
 | `--distance-m` | Spatial grouping threshold in meters. The default is `30`. |
 | `--temporal-link-days` | Temporal linkage threshold in days. The default is `31`. |
+
+The output `date` is the latest member date in each group. Because grouping is
+based on consecutive date gaps, `--temporal-link-days` is not a symmetric
+window around that output date and does not impose a hard maximum group span.
 
 ## Example: Custom Aggregation
 

@@ -1,0 +1,59 @@
+```mermaid
+flowchart TD
+    start([Start with one CUSP observation row])
+
+    reported{Does the source report a row-specific observation limit?}
+    keep_reported[Keep reported obs_limit\nFlags: none unless source-specific caveat applies]
+
+    presence{Is permafrost observed?}
+    measured_presence{Does the row have measured pf_depth or thaw_depth?}
+    presence_blank[obs_limit may remain blank\nObserved depth carries the key information\nFlags: none for obs_limit]
+    presence_review[Review source\nPresence without depth or limit is under-specified\nPossible flags: OA or draft OL]
+
+    absence_depth{Does the absence row contain a measured depth?}
+    row_depth[Use row measured depth as obs_limit]
+    row_depth_flag[Flags: PB if profile-bottom absence\nor OA if interpreted observation limit]
+
+    source_protocol{Does source documentation give a protocol,\ninstrument, or profile limit?}
+    protocol_limit[Use documented source/protocol limit]
+    protocol_flag[Flags: OA for assumed protocol limit\nor PB for profile-bottom absence]
+
+    same_method{Does the same source and method have\npositive pf_depth/thaw_depth values that bound the data domain?}
+    max_depth[Use conservative max observed depth\nwithin the same source and method]
+    max_depth_flag[Flags: OA\nDocument source-specific rationale]
+
+    unresolved{Can a defensible limit be inferred another way?}
+    custom_rule[Apply documented source-specific rule\nFlags: OA/PB/other source-specific flags]
+    keep_unresolved[Keep only with unresolved-limit caveat\nor defer/drop from canonical release\nPossible flag: draft OL]
+
+    output([Output row with obs_limit decision\nand quality_flags])
+
+    start --> reported
+    reported -- yes --> keep_reported --> output
+    reported -- no --> presence
+
+    presence -- yes --> measured_presence
+    measured_presence -- yes --> presence_blank --> output
+    measured_presence -- no --> presence_review --> unresolved
+
+    presence -- no --> absence_depth
+    absence_depth -- yes --> row_depth --> row_depth_flag --> output
+    absence_depth -- no --> source_protocol
+
+    source_protocol -- yes --> protocol_limit --> protocol_flag --> output
+    source_protocol -- no --> same_method
+
+    same_method -- yes --> max_depth --> max_depth_flag --> output
+    same_method -- no --> unresolved
+
+    unresolved -- yes --> custom_rule --> output
+    unresolved -- no --> keep_unresolved --> output
+
+    classDef decision fill:#eef8f6,stroke:#173b3a,stroke-width:1px,color:#173b3a;
+    classDef action fill:#fff,stroke:#d7e5e3,stroke-width:1px,color:#173b3a;
+    classDef caution fill:#fff5e8,stroke:#b45f1b,stroke-width:1px,color:#173b3a;
+
+    class reported,presence,measured_presence,absence_depth,source_protocol,same_method,unresolved decision;
+    class keep_reported,presence_blank,row_depth,row_depth_flag,protocol_limit,protocol_flag,max_depth,max_depth_flag,custom_rule action;
+    class presence_review,keep_unresolved caution;
+```

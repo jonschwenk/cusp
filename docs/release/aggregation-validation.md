@@ -2,9 +2,11 @@
 
 ## Scope
 
-This document records the first rebuild of the default `30m` aggregation
-workflow from the canonical observation-level table. The `30m` aggregation is a
-reproducible derivative, not an official versioned release artifact for v1.
+This document records the latest validated rebuild of the default `30m`
+aggregation workflow from the canonical observation-level table. The current
+snapshot was rebuilt on 2026-08-27 from all 79,389 working observation rows.
+The `30m` aggregation is a reproducible derivative, not an official versioned
+release artifact for v1.
 
 Artifacts produced by `python -m cusp.aggregate`:
 
@@ -26,17 +28,16 @@ The current aggregation path:
   geometry is written
 - uses a `30 m` cell size for the default `30m` workflow
 - separates aggregation groups by calendar year
-- within each spatial cell-year group, links observations into temporal groups
-  using a symmetric `31`-day forward/backward rule
-- this corresponds to a `62`-day total temporal window, implemented as a
-  `31`-day linkage threshold between neighboring observations in the same
-  cell-year sequence
+- within each spatial cell-year group, starts a new temporal group when the
+  gap between consecutive sorted dates exceeds `31` days
+- uses single-linkage, so a chain of qualifying gaps can span more than `31`
+  or `62` days even though each consecutive gap remains within the threshold
 - aggregates across sources rather than restricting to within-source groups
 
 ## Current Rebuild Snapshot
 
 - `aggregated_30m.csv`
-  - rows: `27,691`
+  - rows: `34,462`
   - columns:
     - `cusp_30m_id`
     - `year`
@@ -48,16 +49,17 @@ The current aggregation path:
     - `pf_depth`
     - `obs_limit`
     - `method`
+    - `quality_flags`
     - `aggregated_sources`
     - `n_grouped`
 - `aggregated_30m_membership.csv`
-  - rows: `249,012`
-  - unique aggregated groups: `27,691`
-  - unique member observations: `249,012`
+  - rows: `79,389`
+  - unique aggregated groups: `34,462`
+  - unique member observations: `79,389`
 - `aggregated_30m_excluded_rows.csv`
   - rows: `0`
 - `aggregated_30m_qc_flags.csv`
-  - rows: `1,349`
+  - rows: `1,538`
 - `aggregated_30m.gpkg`
   - CRS: `EPSG:4326`
 
@@ -75,15 +77,17 @@ The current aggregation path:
 - `method` is preserved when all retained observations in the group share one
   method value; heterogeneous groups are labeled `mixed`, while truly unknown
   source-level methods can still remain `unknown`.
+- `quality_flags` contains the sorted union of member observation flags.
 - `aggregated_sources` records the unique contributing `source` values for each
-  aggregated row so downstream users can trace citation provenance.
+  aggregated row as a comma-delimited list so downstream users can trace
+  citation provenance.
 
 ## Current QC Flag Counts
 
-- `mixed_pf_observed`: `615`
-- `mixed_method`: `329`
-- `multi_date_window`: `309`
-- `mixed_source`: `96`
+- `multi_date_window`: `683`
+- `mixed_method`: `381`
+- `mixed_pf_observed`: `291`
+- `mixed_source`: `183`
 
 These are audit outputs, not automatic blockers.
 
@@ -108,7 +112,10 @@ The old legacy aggregation CSVs have now been removed from the repo:
 - `aggregated_5000m_year.csv`
 - `aggregated_500m_noyear.csv`
 
-## Remaining Questions To Confirm
+The rebuilt aggregation and its membership table passed
+`python -m cusp.qc validate-aggregated` with no hard-gate failures.
+
+## Confirmed CRS Behavior
 
 No open CRS decision remains for v1:
 

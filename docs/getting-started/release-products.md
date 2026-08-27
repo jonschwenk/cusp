@@ -6,8 +6,7 @@ files used inside the repository.
 
 ## Where To Get Releases
 
-The latest release files are expected to be available in the repository on the
-`main` branch:
+The latest release files are available in the repository on the `main` branch:
 
 [Latest CUSP version](https://github.com/jonschwenk/cusp/tree/main/exports/latest){ .md-button .md-button--primary }
 

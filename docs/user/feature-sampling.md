@@ -11,7 +11,12 @@ For contributor-oriented instructions on extending the sampler, see
 ## Run Feature Sampling
 
 ```bash
-python -m cusp.features --input exports/latest/cusp_v1.1.csv
+python -m cusp.features \
+  --input exports/latest/cusp_v1.1.csv \
+  --output runs/examples/cusp_v1.1_features.csv \
+  --manifest runs/examples/cusp_v1.1_features_manifest.json \
+  --gee-project <your-earth-engine-project> \
+  --resume
 ```
 
 The sampler writes:
@@ -64,6 +69,11 @@ Use the observation-level CUSP release as input so the derived result remains
 keyed to `cusp_obs_id`. Feature tables are not part of the canonical CUSP
 release bundle.
 
+The archived `cusp_features_v1.0.csv` file is part of the historical v1.0
+snapshot and is keyed to v1.0 observations. Do not treat it as a feature
+sidecar for v1.1 or later releases; sample features from the observation
+release you are actually using.
+
 ## Current Base Feature Set
 
 `base_v1` is the default set of environmental features sampled when you do not
@@ -85,8 +95,8 @@ request a custom feature list.
 | `slope`, `aspect`, `curvature_*` | `UMN/PGC/ArcticDEM/V4/2m_mosaic` | 2 m mosaic | Static |
 | `sand`, `silt`, `clay` | `projects/soilgrids-isric` | 250 m | Static |
 | `soil_oc` | `projects/soilgrids-isric/soc_mean` | 250 m | Static |
-| `temperature` | `ECMWF/ERA5/MONTHLY` | about 31 km | 20-year antecedent mean through the observation year |
-| `precip` | `ECMWF/ERA5/MONTHLY` | about 31 km | 20-year antecedent mean through the observation year, rescaled to annual precipitation |
+| `temperature` | `ECMWF/ERA5/MONTHLY` | about 31 km | Mean monthly 2 m air temperature from the lookback start through the observation year |
+| `precip` | `ECMWF/ERA5/MONTHLY` | about 31 km | Mean monthly total precipitation over the same interval, multiplied by 12 |
 | `swo_landsat` | `JRC/GSW1_4/MonthlyHistory` | 30 m | 1999-2021 occurrence window |
 | `merit90_hand` | `MERIT/Hydro/v1_0_1` | about 90 m | Static |
 
@@ -104,7 +114,7 @@ sampler uses the available overlap. If there is no overlap, it writes `NaN`.
 | Curvature method | `LoG` |
 | Curvature window sizes | `3`, `5`, `7`, `9` |
 | Curvature sigma | `1.0` |
-| Climate averaging window | `20 years` |
+| Climate lookback parameter | `20 years` |
 
 The sampler writes the output CSV and manifest after each completed feature
 family. If a long run is interrupted, rerun the same command with `--resume` to
@@ -119,10 +129,14 @@ Current derived-feature behavior:
 
 - SoilGrids texture outputs are depth-weighted sand, silt, and clay fractions.
 - SoilGrids organic carbon is depth-weighted across depth bands.
-- ERA5 temperature is a 20-year antecedent monthly mean through the observation
-  year.
+- With the default `--climate-avg-years 20`, ERA5 sampling requests January 1
+  of `observation year - 20` through December 31 of the observation year. This
+  is inclusive, so it can cover 21 named calendar years before source-coverage
+  clipping.
+- ERA5 temperature remains in the source band's native kelvin units.
 - ERA5 precipitation is sampled from monthly total precipitation, averaged over
-  the antecedent window, and multiplied by `12` to express an annualized value.
+  the requested interval, and multiplied by `12` to express an annualized
+  value in meters per year.
 - JRC Global Surface Water monthly classes are converted to a 1999-2021 water
   occurrence percentage.
 - Terrain curvature is derived from ArcticDEM elevation with the configured

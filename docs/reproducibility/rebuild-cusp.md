@@ -36,7 +36,12 @@ Feature sampling requires Google Earth Engine authentication and a project your
 account can use:
 
 ```bash
-python -m cusp.features --input exports/latest/cusp_v1.1.csv --gee-project <your-earth-engine-project>
+python -m cusp.features \
+  --input exports/latest/cusp_v1.1.csv \
+  --output runs/examples/cusp_v1.1_features.csv \
+  --manifest runs/examples/cusp_v1.1_features_manifest.json \
+  --gee-project <your-earth-engine-project> \
+  --resume
 ```
 
 ## Release Gate

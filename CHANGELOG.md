@@ -14,6 +14,21 @@ This file is intended to track changes to:
 
 ### Added
 
+- machine-readable frozen observation contract in
+  `cusp/canonical_observation_schema.json`
+- shared schema-contract validation for builds, exports, QA, and tests
+
+### Changed
+
+- canonical observation validation now enforces column order, logical types,
+  nullability, vocabularies, row semantics, and deterministic `cusp_obs_id`
+- source, method, and quality-flag vocabulary additions are now explicitly
+  append-only
+
+## [v1.1] - 2026-08-07
+
+### Added
+
 - supported module entry points for:
   - `python -m cusp.build`
   - `python -m cusp.aggregate`
@@ -62,6 +77,13 @@ This file is intended to track changes to:
 - stale legacy aggregated CSVs
 - old analysis, collation, resampling, ML-prep, and temp-feature code paths
   from the active repo surface
+
+## [v1.0] - 2026-08-07
+
+### Added
+
+- initial public CUSP observation, environmental-feature, and bibliography
+  bundle
 
 ## Release template
 

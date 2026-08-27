@@ -151,7 +151,7 @@ temporal summaries of CUSP observations. The default output name is:
 | `obs_limit` | Maximum grouped observation limit | centimeters |
 | `method` | Grouped method label | controlled vocabulary; may be `mixed` |
 | `quality_flags` | Union of grouped quality flag codes | string |
-| `aggregated_sources` | Semicolon-delimited contributing source keys | string |
+| `aggregated_sources` | Comma-delimited contributing source keys | string |
 | `n_grouped` | Number of grouped observation rows | integer |
 
 ### Aggregation behavior
@@ -160,7 +160,9 @@ temporal summaries of CUSP observations. The default output name is:
 - outputs are exported in `EPSG:4326`
 - grouping preserves annual separation
 - grouping is allowed across sources
-- temporal linkage uses a symmetric `31` days backward / `31` days forward rule
+- temporal groups use single-linkage on consecutive dates: a new group starts
+  when a date gap exceeds `31` days by default
+- a chain of qualifying gaps can span more than `31` or `62` days
 
 ## Aggregation sidecars
 

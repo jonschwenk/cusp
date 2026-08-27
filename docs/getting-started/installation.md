@@ -7,6 +7,8 @@ However, the CUSP repository contains a number of
 
 CUSP cannot be downloaded from conda or pip. To use the tools, clone the GitHub
 repository and create the conda environment from the included environment file.
+The supported package requires Python 3.11 or newer; the environment file
+installs a compatible Python version.
 
 ```bash
 git clone https://github.com/jonschwenk/cusp.git

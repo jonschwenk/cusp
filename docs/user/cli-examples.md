@@ -47,8 +47,9 @@ The main aggregation knobs are:
   the commands below use `100`.
 - `--temporal-link-days`: maximum day gap used to link neighboring
   observations within the same grid cell and calendar year. The default
-  release behavior uses `31`, which creates a symmetric seasonal linkage
-  window without merging the whole year into one group.
+  behavior uses `31`. Because dates are linked consecutively, a chain of
+  qualifying gaps can span more than 31 days; the calendar-year boundary is
+  always preserved.
 - `--output`: the aggregated point table. This is the main table most users
   inspect or model with.
 - `--membership-output`: row-level provenance mapping every contributing

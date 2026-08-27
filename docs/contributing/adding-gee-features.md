@@ -102,7 +102,10 @@ If the feature should be sampled by default, add it to `BASE_FEATURE_SET`.
 If not, leave it out and users can request it explicitly with:
 
 ```bash
-python -m cusp.features --feature-set none --features my_feature
+python -m cusp.features \
+  --input exports/latest/cusp_v1.1.csv \
+  --feature-set none \
+  --features my_feature
 ```
 
 ## Step 4: Document Coverage And Caveats
