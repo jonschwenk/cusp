@@ -11,6 +11,8 @@ from cusp.process_script_metadata import (
     CSV_COLUMNS,
     REPO_ROOT,
     build_metadata_record,
+    build_metadata_records,
+    discover_process_scripts,
     metadata_csv_matches,
     parse_structured_metadata,
     path_display,
@@ -39,6 +41,28 @@ notes = ""
 
 
 class ProcessScriptMetadataTests(unittest.TestCase):
+    def test_mixed_case_source_paths_have_portable_order(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
+            cable = repo_root / "data" / "Cable_2017" / "process_cable_2017.py"
+            calm = repo_root / "data" / "CALM" / "process_calm.py"
+            for script in (calm, cable):
+                script.parent.mkdir(parents=True)
+                script.write_text("", encoding="utf-8")
+
+            discovered = discover_process_scripts(repo_root)
+            self.assertEqual([path.parent.name for path in discovered], ["Cable_2017", "CALM"])
+
+            with patch(
+                "cusp.process_script_metadata.build_metadata_record",
+                side_effect=lambda path, strict=False: {"source_directory": path.parent.name},
+            ):
+                records = build_metadata_records([calm, cable])
+            self.assertEqual(
+                [record["source_directory"] for record in records],
+                ["Cable_2017", "CALM"],
+            )
+
     def test_path_display_uses_portable_separators(self) -> None:
         path = REPO_ROOT / "data" / "Example_Source" / "process_example_source.py"
         self.assertEqual(

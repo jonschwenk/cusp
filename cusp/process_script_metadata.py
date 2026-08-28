@@ -93,12 +93,21 @@ def is_process_script(path: Path) -> bool:
     return path.suffix == ".py" and path.name.startswith(SCRIPT_PREFIXES)
 
 
+def portable_path_sort_key(path: Path) -> tuple[str, str]:
+    """Return a case-insensitive, platform-independent path ordering key."""
+
+    display = path.as_posix()
+    return display.casefold(), display
+
+
 def discover_process_scripts(repo_root: Path | None = None) -> list[Path]:
     root = repo_root or REPO_ROOT
     data_dir = root / "data"
     scripts = []
-    for source_dir in sorted(p for p in data_dir.iterdir() if p.is_dir()):
-        scripts.extend(sorted(p for p in source_dir.iterdir() if is_process_script(p)))
+    source_dirs = (path for path in data_dir.iterdir() if path.is_dir())
+    for source_dir in sorted(source_dirs, key=portable_path_sort_key):
+        process_scripts = (path for path in source_dir.iterdir() if is_process_script(path))
+        scripts.extend(sorted(process_scripts, key=portable_path_sort_key))
     return scripts
 
 
@@ -201,7 +210,7 @@ def find_processed_output(source_dir: Path) -> str:
     if exact.exists():
         return path_display(exact)
 
-    matches = sorted(source_dir.glob("processed_*.csv"))
+    matches = sorted(source_dir.glob("processed_*.csv"), key=portable_path_sort_key)
     if len(matches) == 1:
         return path_display(matches[0])
     if len(matches) > 1:
@@ -286,7 +295,8 @@ def build_metadata_record(script_path: Path, strict: bool = False) -> dict[str, 
 
 
 def build_metadata_records(script_paths: list[Path], strict: bool = False) -> list[dict[str, str]]:
-    return [build_metadata_record(path, strict=strict) for path in sorted(script_paths)]
+    ordered_paths = sorted(script_paths, key=portable_path_sort_key)
+    return [build_metadata_record(path, strict=strict) for path in ordered_paths]
 
 
 def write_metadata_csv(records: list[dict[str, str]], output_path: Path) -> None:

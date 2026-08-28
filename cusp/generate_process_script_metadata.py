@@ -17,6 +17,7 @@ from cusp.process_script_metadata import (
     is_process_script,
     metadata_csv_matches,
     path_display,
+    portable_path_sort_key,
     summarize_records,
     write_metadata_csv,
 )
@@ -63,7 +64,7 @@ def resolve_script_paths(raw_paths: list[str]) -> list[Path]:
         if not is_process_script(path):
             raise ValueError(f"{raw_path} is not a recognized process script")
         paths.append(path)
-    return sorted(paths)
+    return sorted(paths, key=portable_path_sort_key)
 
 
 def main() -> int:
