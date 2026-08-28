@@ -1,15 +1,19 @@
-# User Guide
+# CUSP Tools
 
-CUSP provides command-line Python tools for working with the dataset. These
-pages show how to rebuild CUSP, check files, aggregate observations, and sample
-environmental features on your own computer.
+You do not need these tools to open or analyze a CUSP release. They support
+common follow-on tasks when you want reproducible citation, aggregation,
+environmental sampling, or a complete rebuild.
 
-- [Rebuild and processing commands](cli-examples.md)
-- [Aggregation](aggregation-guide.md)
-- [Feature sampling](feature-sampling.md)
-- [Quality flags](quality-flags.md)
-- [Source metadata](source-metadata.md)
+| Tool | What it does | Start here |
+| --- | --- | --- |
+| Citation helper | Writes a BibTeX file for the sources represented in a filtered or aggregated CUSP table | [Attribution and BibTeX](data-use-and-attribution.md) |
+| Aggregation | Creates spatial and temporal observation summaries with membership provenance | [Aggregation guide](aggregation-guide.md) |
+| Feature sampling | Adds optional environmental variables from Google Earth Engine | [Feature sampling](feature-sampling.md) |
+| Build and QA | Rebuilds the working observation table and validates generated products | [Command examples](cli-examples.md) |
 
-For the core data contract, start with the
-[data schema](data-schema.md). For release files and citation guidance, see
-[Getting Started](../getting-started/index.md).
+[Install the tools](../getting-started/installation.md) before running the
+commands. Source-level audit products are described under
+[Source metadata](source-metadata.md).
+
+For basic analysis of a downloaded release, start with
+[Using the data](../getting-started/using-the-data.md).

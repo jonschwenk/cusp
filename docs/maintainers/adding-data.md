@@ -2,7 +2,7 @@
 
 CUSP maintainers and invited collaborators use this workflow after a candidate
 source has been reviewed through the
-[data-intake process](../contributing/suggest-dataset.md). The CUSP team owns
+[data-intake process](../contributing/index.md). The CUSP team owns
 the canonical processing decisions, quality flags, deduplication, validation,
 and release integration.
 

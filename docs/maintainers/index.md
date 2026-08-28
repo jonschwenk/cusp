@@ -4,11 +4,13 @@
     This section is still undergoing construction.
 
 This section collects the more technical material behind a CUSP release. Most
-new users should start with [Getting Started](../getting-started/index.md) or
-the [User Guide](../user/index.md).
+new users should start with [Get CUSP](../getting-started/index.md) or browse the
+[CUSP tools](../user/index.md).
 
 Maintainer pages are useful when you need to:
 
+- rebuild CUSP from its processed source tables
+- identify external inputs needed for a reproducible build
 - ingest an accepted source into the canonical dataset
 - document processing decisions and source metadata
 - prepare or check a release
@@ -18,6 +20,9 @@ Maintainer pages are useful when you need to:
 
 ## Maintainer Pages
 
+- [Reproducibility](../reproducibility/index.md)
+- [Rebuild CUSP](../reproducibility/rebuild-cusp.md)
+- [External data sources](../reproducibility/external-data-sources.md)
 - [Data ingestion](adding-data.md)
 - [Process script headers](process-script-header-guidelines.md)
 - [Release process](../release/index.md)

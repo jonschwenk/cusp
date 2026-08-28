@@ -99,7 +99,7 @@ def render_tracker(tracker: ReleaseTracker) -> str:
         "</strong><br><sub>ALT / thaw-depth measurements</sub></td>\n"
         "  </tr>\n"
         "</table>\n"
-        "<p align=\"center\"><sub>ALT / thaw-depth measurements also carry a "
+        "<p><sub><strong>Note:</strong> ALT / thaw-depth measurements also carry a "
         "permafrost state, so this count overlaps the presence/absence counts."
         "</sub></p>\n"
         f"{TRACKER_END}"

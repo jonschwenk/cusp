@@ -1,7 +1,7 @@
 # Installation
 
 You do not need to install CUSP in order to use the dataset; you may just
-download it directly from the [release products](release-products.md) page.
+download it directly from the [Download CUSP](release-products.md) page.
 However, the CUSP repository contains a number of
 [command-line tools](../user/cli-examples.md) that may be useful to you.
 

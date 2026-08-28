@@ -57,6 +57,8 @@ class ReadmeTrackerTests(unittest.TestCase):
             self.assertIn(">v2.3</a>", updated)
             self.assertIn("<strong>4</strong><br><sub>Total observations</sub>", updated)
             self.assertIn("<strong>3</strong><br><sub>Included sources</sub>", updated)
+            self.assertIn("<p><sub><strong>Note:</strong> ALT / thaw-depth", updated)
+            self.assertNotIn('<p align="center"><sub>ALT / thaw-depth', updated)
             self.assertTrue(synchronize_readme(readme_path=readme, release_csv=release_csv, check=True))
 
     def test_check_detects_stale_tracker_without_writing(self) -> None:

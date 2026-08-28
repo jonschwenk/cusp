@@ -32,9 +32,9 @@
   display: block;
   height: auto;
   margin: 0 auto 1rem;
-  max-width: 100%;
+  max-width: 75%;
   object-fit: contain;
-  width: 40rem;
+  width: 30rem;
 }
 
 .md-typeset .cusp-visually-hidden {
@@ -52,6 +52,23 @@
   font-size: 1.05rem;
   max-width: 100%;
   overflow-wrap: break-word;
+}
+
+.md-typeset .cusp-button-row {
+  margin: 0.8rem 0 1rem;
+}
+
+.md-typeset .cusp-button-row > p {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  width: 100%;
+}
+
+.md-typeset .cusp-button-row--center > p {
+  justify-content: center;
 }
 
 .md-typeset .cusp-card-grid {
@@ -91,6 +108,7 @@
 
 @media screen and (max-width: 44.9375em) {
   .md-typeset .cusp-hero {
+    max-width: calc(100vw - 2rem);
     padding-bottom: 1rem;
   }
 }

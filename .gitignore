@@ -14,6 +14,9 @@ runs/
 site/
 client_secret*.json
 
+# Local documentation drafts
+docs/assets/obs-limit-decision-workflow.mmd
+
 # Rebuild/generated data artifacts
 data/cusp_observations.csv
 data/cusp_observations_allfields.csv

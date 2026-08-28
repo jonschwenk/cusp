@@ -5,7 +5,7 @@ rebuild the dataset, make spatial summaries, or sample environmental
 information on your own computer.
 
 If you only want to use the released data, start with
-[Release products](../getting-started/release-products.md).
+[Download CUSP](../getting-started/release-products.md).
 
 They assume you are running from the repository root with the `cusp`
 environment activated:

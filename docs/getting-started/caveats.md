@@ -1,138 +1,148 @@
 # Caveats
 
-**It is recommended that you read this page *in full* before using CUSP in any
-way.**
+**Please read this page in full before using CUSP.**
 
-CUSP brings many source datasets into one shared format. That makes the data
-easier to use, but it also means that some source-specific choices have already
-been made before the records appear in the release table. Users should treat
-CUSP as a carefully documented synthesis, not as a replacement for reading the
-source datasets and publications behind the records they use.
+CUSP combines observations from many datasets in one shared table. This makes
+the data easier to find and compare, but it does not make all measurements
+equivalent. Some source-specific interpretation and conversion are needed
+before a record can fit the common CUSP columns. Treat CUSP as a documented
+synthesis, and consult the original datasets and publications when their
+methods or limitations matter to your study.
 
 ## Source Differences
 
-CUSP sources were collected for different projects, at different times, with
-different measurement methods. A shared row format cannot remove those
-differences. Important variation may remain in:
+Each source dataset was collected for its own research purpose, at a particular
+time, and with particular field methods. Important differences remain in:
 
 - field method, such as thaw probing, augering, pits, thaw tubes, temperature
   profiles, geophysics, or remote-sensing-assisted interpretation
 - observation season and timing within the thaw season
-- whether a record reports direct permafrost presence, thaw depth, active-layer
-  thickness, depth to permafrost, or an observation limit
+- what was reported, such as permafrost presence, thaw depth, active-layer
+  thickness, depth to permafrost, or the deepest depth examined
 - spatial sampling design, from dense local grids to widely separated field
   sites
 - original coordinate precision and site-location reporting
 
-The `method` and `source` columns are meant to help users keep those differences
-visible during analysis.
+Use the `method` and `source` columns to keep these differences visible during
+analysis. A row from one method should not automatically be treated as
+interchangeable with a row from another.
 
 ## Quality Flags
 
 The main release table includes `quality_flags`, a semicolon-delimited list of
-compact caveat codes. A blank value means no current quality flag applies. For
-example, `LB;DA` means the row has both a lower-bound absence flag and an
-assigned-date flag.
+short codes that call attention to known caveats or processing choices. For
+example, `LB;DA` means that permafrost was not reached within the reported
+observation depth and that CUSP assigned a representative date. A blank value
+means that no current flag applies; it does not mean that the measurement is
+exact or free of uncertainty.
 
-The code definitions live in `data/quality_flag_definitions.csv`. Use that file
-when you need to exclude specific caveats such as coordinate source flags,
-geophysics-inferred observations, or lower-bound absence observations.
+See the [quality flag definitions](../user/quality-flags.md#flag-definitions)
+for the meaning of every code. Consult those definitions before excluding
+specific caveats such as coordinate source flags, geophysics-inferred
+observations, or lower-bound absence observations. A flag records a caveat or
+processing choice; it is not by itself a reason to discard a row.
 
-## Interpretation During Processing
+## How Source Data Become CUSP Rows
 
-Each source has its own processing script. Those scripts convert source files
-into the common CUSP schema and may need to make documented interpretation
-choices. Common examples include:
+Each source has processing code that translates its original fields into the
+common CUSP columns. Depending on the source, this may involve:
 
 - converting depths to centimeters
-- converting source-specific permafrost or frost-table labels into
-  `pf_observed`
+- translating source-specific permafrost or frost-table labels into the CUSP
+  presence field, `pf_observed`
 - mapping source methods into the CUSP method vocabulary
 - deriving `pf_depth`, `thaw_depth`, or `obs_limit` from source fields
-- treating source sentinel values, blanks, or special codes as missing values
+- recognizing source-specific missing-value codes, blanks, or special values
 - assigning campaign-level or year-level dates when the source does not provide
   exact observation dates
-- filtering rows that are duplicate, invalid, outside the source scope, or not
-  usable as near-surface permafrost observations
+- removing duplicate or invalid rows and records outside CUSP's scope
 
-These choices are part of the synthesis. When they matter for your analysis,
-check the source-processing script and the original source documentation.
+These decisions are documented in the source-processing code and metadata.
+Check those records and the original source documentation when a particular
+measurement, flag, or conversion matters to your analysis.
 
 ## Presence, Absence, And Observation Limits
 
-`pf_observed = 1` means permafrost was observed in the source workflow.
-`pf_observed = 0` means permafrost was not observed within the reported
-observation context. It does not always mean that permafrost is absent at all
-depths, nearby locations, or later dates.
+`pf_observed` is a simple summary of what the original record reported:
 
-Instrument-based CUSP absence rows have a positive `obs_limit`. Their meaning
-is therefore "permafrost was not detected to this depth," not "permafrost is
-absent at all depths." Canonical `pf_depth` and `thaw_depth` values are blank on
-absence rows. Source values used to establish a limit are retained in the
-all-fields table when available.
+- `pf_observed = 1` means that the source reported permafrost at that location
+  and time.
+- `pf_observed = 0` means that the source did not find permafrost within the
+  depth or observation represented by the row. It does not mean that
+  permafrost is absent at every depth, at nearby locations, or at later dates.
 
-The supported exception is an explicitly flagged visual presence/absence
-classification. These rows carry `VI` and may have a blank `obs_limit` because
-no point-specific subsurface search depth exists. Treat them as qualitative
-classifications, and filter out `VI` when an analysis requires instrument-based
-or depth-bounded observations.
+For a probe, pit, core, temperature profile, or similar below-ground
+measurement that did not reach permafrost, `obs_limit` records the deepest
+depth supported by the observation. For example, a row with
+`pf_observed = 0` and `obs_limit = 120` means that permafrost was not detected
+in the upper 120 cm. It makes no claim below 120 cm. `pf_depth` and
+`thaw_depth` are blank on these no-detection rows.
 
-A reported numeric thaw depth or depth to permafrost is treated as a detection,
-regardless of how deep it is. An absence is created only from an explicit
-no-detection statement, bound, sentinel, or source binary state with a usable
-observation limit, except for the explicit `VI` case above. `LB` identifies
-lower-bound absences; flags such as `OA` and `PB` distinguish assumed limits
-from profile-bottom limits.
+Some sources provide visual or mapped presence/absence classifications rather
+than a below-ground measurement at one point. These rows carry the `VI` flag
+and may have no `obs_limit`. Treat them as qualitative classifications, and
+exclude `VI` rows when an analysis requires a measured search depth.
+
+When a source reports a numeric thaw depth or depth to permafrost, CUSP treats
+that record as a detection. CUSP creates a no-detection row only when the source
+explicitly reports that permafrost was not found and provides enough
+information to describe the observation limit, apart from the flagged visual
+case above. `LB` marks lower-bound no-detections; `OA` and `PB` indicate whether
+the limit was assigned from documented context or taken from the bottom of a
+measured profile.
 
 ## Dates And Seasonality
 
-Near-surface permafrost observations are seasonally sensitive. Thaw depth and
-active-layer thickness can change substantially within a single summer. CUSP
-preserves dates where possible, but some sources only support approximate
-dates, campaign dates, or year-level timing. Users should be careful when
-combining records from different parts of the thaw season.
+Thaw depth and active-layer thickness can change substantially during a single
+summer. CUSP preserves exact dates when the source provides them, but some
+records have only an approximate date, a campaign date, or a year. Check date
+flags and avoid treating observations from different parts of the thaw season
+as directly comparable without considering that timing.
 
 ## Location And Scale
 
-CUSP uses point coordinates when possible, but coordinate precision varies by
-source. Some records may represent a plot, transect, grid cell, field site, or
-sampling area rather than a precisely surveyed point. This matters when joining
-CUSP to environmental rasters, especially coarse climate, soil, or surface
-water layers.
+CUSP uses point coordinates when possible, but coordinate precision varies.
+A coordinate may identify a precise measurement point or may stand for a plot,
+transect, grid cell, field site, or larger sampling area. Review spatial quality
+flags before making fine-scale map comparisons or sampling environmental
+rasters at a CUSP coordinate.
 
 ## Dense Sampling
 
-Some CUSP sources contain many observations in a very small area. Those records
-are valuable, but they can overweight a local field site in analyses that assume
-independent or evenly distributed observations.
+Some sources contain many closely spaced measurements from one field site.
+Those observations are valuable, but they can give that site disproportionate
+influence in an analysis that treats every row as independent.
 
-For dense GPR data, CUSP defaults to one mean row per occupied 5 m by 5 m
-projected grid cell within each source, site, and observation date. Different
-dates and thaw years remain separate even where their spatial footprints
-overlap. A source may use a documented exception when its survey design
-requires one. Processed and all-fields tables retain the native-point count and
-aggregation spacing, so a 5 m row should not be interpreted as a single native
-instrument pick.
+For dense ground-penetrating radar (GPR) surveys, CUSP normally summarizes
+native measurements as one mean row per occupied 5 m by 5 m grid cell for each
+source, site, and observation date. Measurements from different dates or thaw
+years remain separate. The supporting tables retain the number of native
+measurements and the aggregation spacing, so a summarized 5 m row should not
+be interpreted as one original instrument reading. A source may use a
+documented exception when its survey design requires one.
 
-Cross-source deduplication is source-specific. When a synthesis republishes an
-identifiable original dataset, CUSP retains the original source and filters the
-copies in the synthesis processor. Spatial overlap alone is not grounds for
-removal, particularly when observations represent different thaw years.
+Duplicate handling also depends on source documentation. When a later
+synthesis republishes an identifiable original dataset, CUSP keeps the
+original source and removes the copied records from the later synthesis.
+Records are not removed merely because their coordinates overlap, especially
+when they represent different dates or thaw years.
 
 The [aggregation guide](../user/aggregation-guide.md) describes one way to create
 spatial and temporal summaries when that is more appropriate for your use case.
 
 ## Feature Sampling
 
-The feature table, when used, contains environmental variables sampled from
-Google Earth Engine. Those features inherit the uncertainty, spatial resolution,
-temporal coverage, and processing choices of the source raster products. They
-should not be treated as field measurements taken at the CUSP observation site.
+Optional feature tables contain environmental values sampled from Google Earth
+Engine products. These values inherit the uncertainty, spatial resolution,
+time coverage, and processing choices of the original raster products. They
+are contextual data, not field measurements collected with the CUSP
+observation.
 
 For details, see [GEE feature sampling](../user/feature-sampling.md).
 
 ## Attribution
 
-Permafrost observations are costly in time and money. If you use CUSP, you are
-responsible for citing CUSP and the original datasets or publications behind the
-records you used. See [Data use and attribution](../user/data-use-and-attribution.md).
+Scientific publications using CUSP are expected to cite CUSP and every
+original dataset or publication represented in the rows used. See
+[Attribution and BibTeX](../user/data-use-and-attribution.md) for the required
+workflow and citation helper.

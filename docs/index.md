@@ -4,80 +4,68 @@
 
 <img class="cusp-brand-lockup" src="assets/branding/cusp-logo-lockup.png" alt="CUSP: CommUnity near-Surface Permafrost dataset">
 
-The CommUnity near-Surface Permafrost dataset is a data synthesis for
-near-surface permafrost, active-layer, thaw-depth, and related field
-observations.
+The CommUnity near-Surface Permafrost dataset brings near-surface permafrost,
+active-layer, thaw-depth, and related field observations from many sources into
+one documented, observation-level table.
 
-CUSP brings many published and field datasets into one documented table, with
-source citations and tools that make the synthesis easier to check, rebuild,
-and extend.
+<div class="cusp-button-row cusp-button-row--center" markdown="1">
 
-[Start with the data](getting-started/release-products.md){ .md-button .md-button--primary }
-[Suggest or add data](contributing/suggest-dataset.md){ .md-button }
+[Download CUSP](getting-started/release-products.md){ .md-button .md-button--primary }
+[Read the caveats](getting-started/caveats.md){ .md-button }
+
+</div>
 
 </section>
 
 <div class="cusp-card-grid" markdown="1">
 
 <div class="cusp-card" markdown="1">
-### Use CUSP
+### Get The Data
 
-Find the release files, understand the columns, and cite the dataset and
-underlying sources correctly.
+Download the current observation table, its version-matched source
+bibliography, and release metadata.
 
-[Release products](getting-started/release-products.md)
+[Download CUSP](getting-started/release-products.md)
 </div>
 
 <div class="cusp-card" markdown="1">
-### Work With The Data
+### Use The Data
 
-Use the CUSP tools to rebuild the data, check the files, create spatial
-summaries, or add environmental information from Google Earth Engine.
+Learn what one row means, how to read quality flags, and which caveats matter
+before filtering or analysis.
 
-[Rebuild and process CUSP](user/cli-examples.md)
+[Start using CUSP](getting-started/using-the-data.md)
 </div>
 
 <div class="cusp-card" markdown="1">
-### Grow CUSP
+### Cite The Sources
 
-Point us to published observations or offer a dataset you hold. A link or brief
-description is enough; CUSP maintainers handle ingestion.
+Credit the exact CUSP release and the original datasets behind the rows you
+use. The citation helper creates a subset-specific BibTeX file.
 
-[Contributing guide](contributing/index.md)
+[Attribution and BibTeX](user/data-use-and-attribution.md)
 </div>
 
 <div class="cusp-card" markdown="1">
-### See How CUSP Is Built
+### Contribute Data
 
-Review the source inputs, rebuild steps, and known limitations behind the
-current release.
+Point us to a public dataset or offer observations you hold. A link or short
+description is enough to begin.
 
-[Build and source notes](reproducibility/index.md)
+[Suggest or add data](contributing/index.md)
 </div>
 
 </div>
 
-## First Steps
+## Tools Included
 
-| If you want to... | Start here |
-| --- | --- |
-| Understand what CUSP is and is not | [What CUSP is](getting-started/what-is-cusp.md) |
-| Use the released data | [Release products](getting-started/release-products.md) |
-| Read the public columns | [Data schema](user/data-schema.md) |
-| Rebuild or process CUSP on your computer | [Command examples](user/cli-examples.md) |
-| Suggest or add a source dataset | [Share data with CUSP](contributing/suggest-dataset.md) |
-| Rebuild the current working dataset | [Rebuild CUSP](reproducibility/rebuild-cusp.md) |
+You do not need to install anything to use the released CSV. The repository
+also provides optional tools to:
 
-## Core CUSP Data
+- generate a BibTeX file for the sources represented in your filtered table
+- aggregate observations into spatial and temporal summaries
+- sample environmental features from Google Earth Engine
+- rebuild and validate the synthesis from its processed source tables
 
-Each CUSP release is meant to be small enough to understand and specific enough
-to cite.
-
-| File | What it is for |
-| --- | --- |
-| `cusp_vX.Y.csv` | Main CUSP table with one row per accepted observation |
-| `cusp_sources_vX.Y.bib` | BibTeX entries for included source datasets and publications |
-| `RELEASE_INFO.md` | Release metadata, hashes, and build context |
-
-Environmental feature sampling is available as an optional derived workflow,
-but feature tables are not part of the canonical data release.
+[Browse the CUSP tools](user/index.md){ .md-button }
+[See how CUSP is built](reproducibility/index.md){ .md-button }

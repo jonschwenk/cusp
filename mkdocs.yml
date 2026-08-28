@@ -29,36 +29,36 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      title: This page's contents
   - pymdownx.details
   - pymdownx.superfences
 
 nav:
-  - Home: index.md
-  - Getting Started:
+  - Get CUSP:
       - getting-started/index.md
-      - What CUSP Is: getting-started/what-is-cusp.md
-      - Caveats: getting-started/caveats.md
-      - Release Products: getting-started/release-products.md
-      - Installation: getting-started/installation.md
+      - Download The Data: getting-started/release-products.md
+      - Caveats And Limits: getting-started/caveats.md
+      - Using The Data: getting-started/using-the-data.md
+      - Attribution And BibTeX: user/data-use-and-attribution.md
       - Data Schema: user/data-schema.md
-      - Attribution: user/data-use-and-attribution.md
-  - User Guide:
+      - Quality Flag Definitions: user/quality-flags.md
+      - What CUSP Is: getting-started/what-is-cusp.md
+  - Contribute:
+      - contributing/index.md
+      - Add GEE Features: contributing/adding-gee-features.md
+  - Tools:
       - user/index.md
-      - Command Examples: user/cli-examples.md
+      - Installation: getting-started/installation.md
       - Aggregation: user/aggregation-guide.md
       - Feature Sampling: user/feature-sampling.md
-      - Quality Flags: user/quality-flags.md
+      - Command Examples: user/cli-examples.md
       - Source Metadata: user/source-metadata.md
-  - Contributing:
-      - contributing/index.md
-      - Suggest or Add Data: contributing/suggest-dataset.md
-      - Adding GEE Features: contributing/adding-gee-features.md
-  - Reproducibility:
-      - reproducibility/index.md
-      - Rebuild CUSP: reproducibility/rebuild-cusp.md
-      - External Data Sources: reproducibility/external-data-sources.md
   - For Maintainers:
       - maintainers/index.md
+      - Reproducibility:
+          - reproducibility/index.md
+          - Rebuild CUSP: reproducibility/rebuild-cusp.md
+          - External Data Sources: reproducibility/external-data-sources.md
       - Data Ingestion: maintainers/adding-data.md
       - Process Script Headers: maintainers/process-script-header-guidelines.md
       - Source Release Clearance: maintainers/source-release-clearance-guidelines.md

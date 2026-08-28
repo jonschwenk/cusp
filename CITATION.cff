@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: >-
+  If you use CUSP in a publication, cite this dataset and every original data
+  source represented in your analysis.
+title: "CUSP: CommUnity near-Surface Permafrost data synthesis"
+type: dataset
+authors:
+  - name: "CUSP contributors"
+version: "1.1"
+date-released: "2026-08-06"
+repository-code: "https://github.com/jonschwenk/cusp"
+url: "https://jonschwenk.github.io/cusp/"

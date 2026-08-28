@@ -6,5 +6,5 @@ repository.
 - [Rebuild CUSP](rebuild-cusp.md)
 - [External data sources](external-data-sources.md)
 
-More technical validation records live under
-[For Maintainers](../maintainers/index.md).
+Release procedures and validation records are listed on the
+[For Maintainers](../maintainers/index.md) overview.

@@ -9,9 +9,11 @@ from unittest.mock import patch
 import cusp.generate_process_script_metadata as metadata_cli
 from cusp.process_script_metadata import (
     CSV_COLUMNS,
+    REPO_ROOT,
     build_metadata_record,
     metadata_csv_matches,
     parse_structured_metadata,
+    path_display,
     write_metadata_csv,
 )
 
@@ -37,6 +39,13 @@ notes = ""
 
 
 class ProcessScriptMetadataTests(unittest.TestCase):
+    def test_path_display_uses_portable_separators(self) -> None:
+        path = REPO_ROOT / "data" / "Example_Source" / "process_example_source.py"
+        self.assertEqual(
+            path_display(path),
+            "data/Example_Source/process_example_source.py",
+        )
+
     def test_parse_structured_docstring(self) -> None:
         status, metadata, errors = parse_structured_metadata(
             STRUCTURED_DOCSTRING,

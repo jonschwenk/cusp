@@ -10,7 +10,8 @@ trustworthy-to-untrustworthy ranking.
 
 ## Flag Definitions
 
-The canonical vocabulary lives in `data/quality_flag_definitions.csv`.
+The table below is the user-facing quality-flag vocabulary. Its machine-readable
+source is maintained in `data/quality_flag_definitions.csv`.
 
 | Code | Flag | Category | Definition |
 |---|---|---|---|

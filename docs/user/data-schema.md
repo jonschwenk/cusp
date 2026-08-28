@@ -56,18 +56,21 @@ column; integrations should use v1.1 or later as the stable contract.
 ### Notes
 
 - `site_id` is warning-only if missing. Some sources do not provide a site ID.
-- `pf_observed = 1` means permafrost was observed in the source workflow.
-- `pf_observed = 0` normally means permafrost was not observed down to the
-  positive depth recorded in `obs_limit`; it is a depth-bounded absence.
-- Instrument-based absence rows must have `obs_limit > 0`. The only supported
-  exception is an explicitly flagged visual presence/absence classification
-  (`VI`), for which `obs_limit` may be blank because no point-specific search
-  depth exists.
-- Every absence row has blank canonical `pf_depth` and `thaw_depth` values.
+- `pf_observed = 1` means the source reported permafrost at that place and
+  time.
+- `pf_observed = 0` normally means the source did not find permafrost down to
+  the positive depth recorded in `obs_limit`; it is a depth-bounded
+  no-detection, not a claim that permafrost is absent at every depth.
+- Below-ground measurements with `pf_observed = 0` must have
+  `obs_limit > 0`. The exception is a visual or mapped presence/absence
+  classification flagged `VI`; `obs_limit` may be blank because no
+  point-specific search depth exists.
+- Every no-detection row has blank canonical `pf_depth` and `thaw_depth`
+  values.
 - A numeric detected `pf_depth` or `thaw_depth` is represented as
   `pf_observed = 1`, regardless of its depth.
-- Numeric nulls mean not reported, not measured, or not inferable from the
-  source workflow.
+- Numeric nulls mean that the value was not reported, not measured, or could
+  not be determined from the original data.
 - `thaw_depth`, `pf_depth`, and `obs_limit` are all recorded in centimeters
   below ground surface.
 - `quality_flags` is blank when no current quality flag applies.
@@ -90,14 +93,12 @@ unchanged, added, and retired observations.
 ### Quality flags
 
 The `quality_flags` column contains semicolon-delimited mnemonic codes such as
-`LB`, `DA`, or `TI;SS`. Code definitions are maintained in:
-
-- `data/quality_flag_definitions.csv`
-
-Each definition includes the full flag name, compact code, category, and
-description. The flags describe caveats, not a trustworthy-to-untrustworthy
-ranking. See [Quality flags](quality-flags.md) for the full vocabulary and
-[Source metadata](source-metadata.md) for source-level quality summaries.
+`LB`, `DA`, or `TI;SS`. See the complete
+[quality flag definitions](quality-flags.md#flag-definitions) for each code's
+full name, category, and meaning. The flags describe caveats, not a
+trustworthy-to-untrustworthy ranking. The machine-readable vocabulary is
+maintained in `data/quality_flag_definitions.csv`; [Source metadata](source-metadata.md)
+provides source-level quality summaries.
 
 | Example code | Meaning |
 |---|---|

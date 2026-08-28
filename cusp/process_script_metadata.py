@@ -238,9 +238,9 @@ def blank_metadata_values() -> dict[str, str]:
 
 def path_display(path: Path) -> str:
     try:
-        return str(path.relative_to(REPO_ROOT))
+        return path.relative_to(REPO_ROOT).as_posix()
     except ValueError:
-        return str(path)
+        return path.as_posix()
 
 
 def build_metadata_record(script_path: Path, strict: bool = False) -> dict[str, str]:
