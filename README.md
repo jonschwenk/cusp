@@ -4,8 +4,6 @@
   </a>
 </p>
 
-# CommUnity near-Surface Permafrost (CUSP)
-
 CUSP brings geolocated near-surface permafrost observations from published
 datasets, research groups, collaborators, and our own field work into one
 documented table. It includes permafrost presence and absence, active-layer and
