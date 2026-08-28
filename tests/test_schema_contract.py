@@ -102,6 +102,7 @@ class CanonicalSchemaContractTests(unittest.TestCase):
 
     def test_types_vocabularies_and_ids_are_enforced(self) -> None:
         invalid_type = valid_observation()
+        invalid_type["site_id"] = invalid_type["site_id"].astype(object)
         invalid_type.loc[0, "site_id"] = 123
         self.assertGreater(validate_canonical_dataframe(invalid_type).counts["invalid_type"], 0)
 
