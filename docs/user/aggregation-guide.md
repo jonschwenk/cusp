@@ -40,10 +40,32 @@ Important default settings:
 
 ## Run The Default Aggregation
 
+From a CUSP repository checkout, run the default workflow from the repository
+root. It reads `data/cusp_observations.csv` and writes the aggregation bundle to
+`data/`:
+
 ```bash
 python -m cusp.aggregate
 python -m cusp.qc validate-aggregated
 ```
+
+The defaults are relative to your current working directory, not to the Python
+installation directory. If you installed the tools separately or downloaded a
+versioned release CSV, identify the input and choose a directory for the
+generated bundle:
+
+```bash
+python -m cusp.aggregate \
+  --input downloads/cusp_v1.1.csv \
+  --data-dir runs/default-aggregation
+
+python -m cusp.qc validate-aggregated \
+  --input runs/default-aggregation/aggregated_30m.csv \
+  --membership runs/default-aggregation/aggregated_30m_membership.csv
+```
+
+Explicit input or output paths override the corresponding path derived from
+`--data-dir`.
 
 ## Important Options
 
@@ -57,6 +79,7 @@ Common options:
 
 | Option | What it controls |
 | --- | --- |
+| `--data-dir` | Directory used for default input and output paths. The default is `./data`. |
 | `--input` | Observation-level table to aggregate. |
 | `--output` | Aggregated CSV to write. |
 | `--membership-output` | Table linking each original `cusp_obs_id` to an aggregated group. |

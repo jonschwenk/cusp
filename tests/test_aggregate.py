@@ -8,12 +8,55 @@ from pathlib import Path
 import pandas as pd
 
 from cusp.aggregate import (
+    DEFAULT_CANONICAL_INPUT,
     build_aggregation_tables,
+    load_canonical_observations,
+    parse_args,
+    resolve_aggregation_paths,
     write_aggregation_outputs,
 )
 
 
 class AggregateTests(unittest.TestCase):
+    def test_default_cli_paths_do_not_depend_on_install_location(self) -> None:
+        args = parse_args([])
+        paths = resolve_aggregation_paths(args.data_dir)
+
+        self.assertEqual(DEFAULT_CANONICAL_INPUT, Path("data/cusp_observations.csv"))
+        self.assertFalse(paths.canonical_input.is_absolute())
+        self.assertEqual(paths.canonical_input, Path("data/cusp_observations.csv"))
+        self.assertEqual(paths.aggregated_output, Path("data/aggregated_30m.csv"))
+
+    def test_data_dir_sets_defaults_and_explicit_paths_win(self) -> None:
+        args = parse_args(
+            [
+                "--data-dir",
+                "workspace",
+                "--input",
+                "downloads/cusp_v1.1.csv",
+                "--output",
+                "results/custom.csv",
+            ]
+        )
+        paths = resolve_aggregation_paths(
+            args.data_dir,
+            canonical_input=args.input,
+            aggregated_output=args.output,
+        )
+
+        self.assertEqual(paths.canonical_input, Path("downloads/cusp_v1.1.csv"))
+        self.assertEqual(paths.aggregated_output, Path("results/custom.csv"))
+        self.assertEqual(paths.membership_output, Path("workspace/aggregated_30m_membership.csv"))
+
+    def test_missing_input_error_explains_how_to_select_data(self) -> None:
+        missing = Path("missing") / "cusp_observations.csv"
+        with self.assertRaises(FileNotFoundError) as caught:
+            load_canonical_observations(missing)
+
+        message = str(caught.exception)
+        self.assertIn("--input PATH", message)
+        self.assertIn("--data-dir DIR", message)
+
     def test_aggregation_splits_by_temporal_linkage_and_builds_membership(self) -> None:
         canonical = pd.DataFrame(
             [

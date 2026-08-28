@@ -13,17 +13,18 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
-from cusp.build import DATA_DIR, display_path, sha256_file
+from cusp.build import display_path, sha256_file
 
 
-DEFAULT_CANONICAL_INPUT = DATA_DIR / "cusp_observations.csv"
-DEFAULT_AGGREGATED_OUTPUT = DATA_DIR / "aggregated_30m.csv"
-DEFAULT_MEMBERSHIP_OUTPUT = DATA_DIR / "aggregated_30m_membership.csv"
-DEFAULT_FLAGS_OUTPUT = DATA_DIR / "aggregated_30m_qc_flags.csv"
-DEFAULT_EXCLUDED_OUTPUT = DATA_DIR / "aggregated_30m_excluded_rows.csv"
-DEFAULT_GPKG_OUTPUT = DATA_DIR / "aggregated_30m.gpkg"
+DEFAULT_DATA_DIR = Path("data")
+DEFAULT_CANONICAL_INPUT = DEFAULT_DATA_DIR / "cusp_observations.csv"
+DEFAULT_AGGREGATED_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m.csv"
+DEFAULT_MEMBERSHIP_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m_membership.csv"
+DEFAULT_FLAGS_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m_qc_flags.csv"
+DEFAULT_EXCLUDED_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m_excluded_rows.csv"
+DEFAULT_GPKG_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m.gpkg"
 DEFAULT_GPKG_LAYER = "aggregated_30m"
-DEFAULT_MANIFEST_OUTPUT = DATA_DIR / "aggregated_30m_manifest.json"
+DEFAULT_MANIFEST_OUTPUT = DEFAULT_DATA_DIR / "aggregated_30m_manifest.json"
 
 DEFAULT_DISTANCE_M = 30.0
 DEFAULT_TEMPORAL_LINK_DAYS = 31
@@ -70,6 +71,41 @@ class AggregationOutputs:
     aggregated_gdf: gpd.GeoDataFrame
 
 
+@dataclass(frozen=True)
+class AggregationPaths:
+    canonical_input: Path
+    aggregated_output: Path
+    membership_output: Path
+    flags_output: Path
+    excluded_output: Path
+    gpkg_output: Path
+    manifest_output: Path
+
+
+def resolve_aggregation_paths(
+    data_dir: Path = DEFAULT_DATA_DIR,
+    *,
+    canonical_input: Path | None = None,
+    aggregated_output: Path | None = None,
+    membership_output: Path | None = None,
+    flags_output: Path | None = None,
+    excluded_output: Path | None = None,
+    gpkg_output: Path | None = None,
+    manifest_output: Path | None = None,
+) -> AggregationPaths:
+    """Resolve CLI paths without relying on the package installation directory."""
+
+    return AggregationPaths(
+        canonical_input=canonical_input or data_dir / DEFAULT_CANONICAL_INPUT.name,
+        aggregated_output=aggregated_output or data_dir / DEFAULT_AGGREGATED_OUTPUT.name,
+        membership_output=membership_output or data_dir / DEFAULT_MEMBERSHIP_OUTPUT.name,
+        flags_output=flags_output or data_dir / DEFAULT_FLAGS_OUTPUT.name,
+        excluded_output=excluded_output or data_dir / DEFAULT_EXCLUDED_OUTPUT.name,
+        gpkg_output=gpkg_output or data_dir / DEFAULT_GPKG_OUTPUT.name,
+        manifest_output=manifest_output or data_dir / DEFAULT_MANIFEST_OUTPUT.name,
+    )
+
+
 def stable_scalar_string(value: object) -> str:
     """Serialize a scalar into a deterministic string for IDs/details."""
 
@@ -84,6 +120,13 @@ def stable_scalar_string(value: object) -> str:
 
 def load_canonical_observations(path: Path = DEFAULT_CANONICAL_INPUT) -> pd.DataFrame:
     """Load the canonical observation-level table used for supported aggregation."""
+
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"Canonical observation table not found at {path}. "
+            "Pass --input PATH for a downloaded CUSP release CSV, or use "
+            "--data-dir DIR to select the directory containing cusp_observations.csv."
+        )
 
     df = pd.read_csv(path, low_memory=False)
     missing = [column for column in REQUIRED_INPUT_COLUMNS if column not in df.columns]
@@ -420,28 +463,49 @@ def write_aggregation_outputs(
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     """Parse CLI arguments for the supported aggregation build."""
 
     parser = argparse.ArgumentParser(description="Build the release-facing 30 m CUSP aggregation bundle.")
-    parser.add_argument("--input", type=Path, default=DEFAULT_CANONICAL_INPUT, help="Canonical observation table to aggregate.")
-    parser.add_argument("--output", type=Path, default=DEFAULT_AGGREGATED_OUTPUT)
-    parser.add_argument("--membership-output", type=Path, default=DEFAULT_MEMBERSHIP_OUTPUT)
-    parser.add_argument("--flags-output", type=Path, default=DEFAULT_FLAGS_OUTPUT)
-    parser.add_argument("--excluded-output", type=Path, default=DEFAULT_EXCLUDED_OUTPUT)
-    parser.add_argument("--gpkg-output", type=Path, default=DEFAULT_GPKG_OUTPUT)
+    parser.add_argument(
+        "--data-dir",
+        type=Path,
+        default=DEFAULT_DATA_DIR,
+        help="Directory used for default input and output paths. Default: ./data.",
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=None,
+        help="Canonical observation table to aggregate. Default: <data-dir>/cusp_observations.csv.",
+    )
+    parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--membership-output", type=Path, default=None)
+    parser.add_argument("--flags-output", type=Path, default=None)
+    parser.add_argument("--excluded-output", type=Path, default=None)
+    parser.add_argument("--gpkg-output", type=Path, default=None)
     parser.add_argument("--gpkg-layer", default=DEFAULT_GPKG_LAYER)
-    parser.add_argument("--manifest-output", type=Path, default=DEFAULT_MANIFEST_OUTPUT)
+    parser.add_argument("--manifest-output", type=Path, default=None)
     parser.add_argument("--distance-m", type=float, default=DEFAULT_DISTANCE_M)
     parser.add_argument("--temporal-link-days", type=int, default=DEFAULT_TEMPORAL_LINK_DAYS)
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
 def main() -> None:
     """Build the supported 30 m aggregated release artifacts."""
 
     args = parse_args()
-    canonical = load_canonical_observations(args.input)
+    paths = resolve_aggregation_paths(
+        args.data_dir,
+        canonical_input=args.input,
+        aggregated_output=args.output,
+        membership_output=args.membership_output,
+        flags_output=args.flags_output,
+        excluded_output=args.excluded_output,
+        gpkg_output=args.gpkg_output,
+        manifest_output=args.manifest_output,
+    )
+    canonical = load_canonical_observations(paths.canonical_input)
     outputs = build_aggregation_tables(
         canonical,
         distance_m=args.distance_m,
@@ -449,13 +513,13 @@ def main() -> None:
     )
     write_aggregation_outputs(
         outputs,
-        aggregated_path=args.output,
-        membership_path=args.membership_output,
-        flags_path=args.flags_output,
-        excluded_path=args.excluded_output,
-        gpkg_path=args.gpkg_output,
+        aggregated_path=paths.aggregated_output,
+        membership_path=paths.membership_output,
+        flags_path=paths.flags_output,
+        excluded_path=paths.excluded_output,
+        gpkg_path=paths.gpkg_output,
         gpkg_layer=args.gpkg_layer,
-        manifest_path=args.manifest_output,
+        manifest_path=paths.manifest_output,
         distance_m=args.distance_m,
         temporal_link_days=args.temporal_link_days,
     )

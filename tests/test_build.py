@@ -296,6 +296,18 @@ class BuildTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "Unknown quality flags"):
             validate_quality_flags(raw, definitions)
 
+    def test_quality_flag_definitions_preserve_commas(self) -> None:
+        definitions = load_quality_flag_definitions()
+        description = definitions.loc[
+            definitions["flag"] == "date_source_approximate",
+            "flag_description",
+        ].item()
+
+        self.assertEqual(
+            description,
+            "Source flags the observation date as approximate, range-based, or otherwise imprecise.",
+        )
+
     def test_build_source_reference_crosswalk_filters_to_included_sources(self) -> None:
         observations_metadata = pd.DataFrame({"source": ["A", "B"]})
         bib = pd.DataFrame(

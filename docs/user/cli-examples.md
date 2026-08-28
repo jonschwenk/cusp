@@ -30,7 +30,7 @@ exported.
 
 ## Generate An Aggregated Derivative
 
-The default aggregation is:
+From the repository root, the default aggregation is:
 
 ```bash
 python -m cusp.aggregate
