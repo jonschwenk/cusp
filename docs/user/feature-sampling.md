@@ -10,12 +10,22 @@ For contributor-oriented instructions on extending the sampler, see
 
 ## Run Feature Sampling
 
+From the repository root, authenticate and enter a Google Cloud / Earth Engine
+project ID that your account can use:
+
+```bash
+earthengine authenticate
+read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
+```
+
+Then run the sampler in the same Bash session:
+
 ```bash
 python -m cusp.features \
   --input exports/latest/cusp_v1.1.csv \
   --output runs/examples/cusp_v1.1_features.csv \
   --manifest runs/examples/cusp_v1.1_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
 
@@ -32,24 +42,8 @@ Each user should authenticate with their own Google Earth Engine account and
 run sampling through a Google Cloud / Earth Engine project they own or have
 permission to use.
 
-One-time local setup:
-
-```bash
-earthengine authenticate
-```
-
-Then pass the project explicitly when sampling:
-
-```bash
-python -m cusp.features \
-  --input exports/latest/cusp_v1.1.csv \
-  --output runs/examples/cusp_v1.1_features.csv \
-  --manifest runs/examples/cusp_v1.1_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
-  --resume
-```
-
-Internally, the sampler calls `ee.Initialize(project=<your-earth-engine-project>)`.
+The setup and sampling commands above pass the project explicitly. Internally,
+the sampler forwards that value to `ee.Initialize(project=...)`.
 If a user has configured a default Earth Engine project outside CUSP, they can
 omit `--gee-project`, but passing it explicitly is clearer and more
 reproducible.

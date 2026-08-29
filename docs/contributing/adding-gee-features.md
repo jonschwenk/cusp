@@ -63,16 +63,19 @@ coverage gaps.
 Add a sampling function in
 [registry.py](https://github.com/jonschwenk/cusp/blob/main/cusp/features/registry.py).
 
-The simplest pattern is:
+The simplest pattern is a static, single-band image. This copyable example
+uses a real MERIT Hydro asset under a deliberately separate feature name; use
+the same structure with the asset, band, and output name appropriate for your
+feature:
 
 ```python
-def sample_my_feature(table, config, context):
-    image = context.ee.Image("MY/DATASET/PATH").select("band_name")
+def sample_example_hand(table, config, context):
+    image = context.ee.Image("MERIT/Hydro/v1_0_1").select("hnd")
     return _sample_static_image(
         table=table,
         config=config,
         context=context,
-        output_name="my_feature",
+        output_name="example_hand",
         image=image,
     )
 ```
@@ -95,17 +98,29 @@ Each feature should define:
 - `sample_fn`
 - optional `notes`
 
+For the function above, add this immediately after the existing
+`FEATURE_REGISTRY` dictionary in `registry.py`:
+
+```python
+FEATURE_REGISTRY["example_hand"] = FeatureDefinition(
+    key="example_hand",
+    output_columns=("example_hand",),
+    description="Example height above nearest drainage feature.",
+    source_label="MERIT/Hydro/v1_0_1",
+    temporal_mode="static",
+    sample_fn=sample_example_hand,
+)
+```
+
 ## Step 3: Decide Whether It Belongs In `base_v1`
 
 If the feature should be sampled by default, add it to `BASE_FEATURE_SET`.
 
-If not, leave it out and users can request it explicitly with:
+If not, leave it out. Confirm that the registry resolves it before starting a
+live Earth Engine request:
 
 ```bash
-python -m cusp.features \
-  --input exports/latest/cusp_v1.1.csv \
-  --feature-set none \
-  --features my_feature
+python -c "from cusp.features.registry import resolve_feature_keys; print(resolve_feature_keys(['example_hand'], feature_set='none'))"
 ```
 
 ## Step 4: Document Coverage And Caveats
@@ -136,16 +151,32 @@ logic too.
 
 ## Step 6: Run A Smoke Test
 
-A good first smoke test is a tiny subset with one feature:
+A good first smoke test is a tiny subset with one feature. First create the
+input from the current release:
+
+```python
+from pathlib import Path
+
+import pandas as pd
+
+output = Path("runs/examples/cusp_v1.1_smoke25.csv")
+output.parent.mkdir(parents=True, exist_ok=True)
+pd.read_csv("exports/latest/cusp_v1.1.csv", nrows=25).to_csv(output, index=False)
+```
+
+Then authenticate, enter a usable project ID, and sample the newly registered
+feature:
 
 ```bash
+earthengine authenticate
+read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 python -m cusp.features \
-  --input /tmp/aggregated_30m_smoke25.csv \
-  --output /tmp/my_feature_smoke.csv \
-  --manifest /tmp/my_feature_smoke_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --input runs/examples/cusp_v1.1_smoke25.csv \
+  --output runs/examples/example_hand_smoke.csv \
+  --manifest runs/examples/example_hand_smoke_manifest.json \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --feature-set none \
-  --features my_feature \
+  --features example_hand \
   --chunk-size 25
 ```
 

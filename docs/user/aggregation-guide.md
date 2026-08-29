@@ -50,18 +50,18 @@ python -m cusp.qc validate-aggregated
 ```
 
 The defaults are relative to your current working directory, not to the Python
-installation directory. If you installed the tools separately or downloaded a
-versioned release CSV, identify the input and choose a directory for the
-generated bundle:
+installation directory. If you installed the tools and downloaded a versioned
+release CSV, run the following from the directory containing
+`cusp_v1.1.csv`:
 
 ```bash
 python -m cusp.aggregate \
-  --input downloads/cusp_v1.1.csv \
-  --data-dir runs/default-aggregation
+  --input cusp_v1.1.csv \
+  --data-dir cusp_aggregation
 
 python -m cusp.qc validate-aggregated \
-  --input runs/default-aggregation/aggregated_30m.csv \
-  --membership runs/default-aggregation/aggregated_30m_membership.csv
+  --input cusp_aggregation/aggregated_30m.csv \
+  --membership cusp_aggregation/aggregated_30m_membership.csv
 ```
 
 Explicit input or output paths override the corresponding path derived from

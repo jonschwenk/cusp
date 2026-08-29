@@ -15,14 +15,16 @@ conda activate cusp
 ```
 
 Feature sampling uses your own Google Earth Engine login and project. Before
-running feature examples, authenticate once with:
+running feature examples, authenticate once and enter a project ID your
+account can use. The variable remains available to later commands in the same
+Bash session:
 
 ```bash
 earthengine authenticate
+read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 ```
 
-Then pass a Google Cloud / Earth Engine project that your account can use as
-`--gee-project <your-earth-engine-project>`.
+The feature examples pass that value explicitly through `--gee-project`.
 
 The examples below use `exports/latest/cusp_v1.1.csv` as the input release
 file. Replace that with the path to the CUSP release file you downloaded or
@@ -135,7 +137,7 @@ python -m cusp.features \
   --input runs/examples/aggregated_100m_example.csv \
   --output runs/examples/aggregated_100m_example_features.csv \
   --manifest runs/examples/aggregated_100m_example_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --feature-set none \
   --features soil_oc,merit_hand \
   --resume
@@ -148,14 +150,14 @@ python -m cusp.features \
   --input runs/examples/aggregated_100m_example.csv \
   --output runs/examples/aggregated_100m_example_base_v1_features.csv \
   --manifest runs/examples/aggregated_100m_example_base_v1_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
 
 PowerShell users can run the smoke feature example with:
 
 ```powershell
-$GeeProject = "<your-earth-engine-project>"
+$GeeProject = Read-Host "Google Cloud / Earth Engine project ID"
 $InputPath = "runs\examples\aggregated_100m_example.csv"
 $OutDir = "runs\examples"
 $Stem = [System.IO.Path]::GetFileNameWithoutExtension($InputPath)
@@ -182,7 +184,7 @@ python -m cusp.features \
   --input exports/latest/cusp_v1.1.csv \
   --output runs/examples/cusp_v1.1_features.csv \
   --manifest runs/examples/cusp_v1.1_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
 

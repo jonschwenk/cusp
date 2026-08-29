@@ -157,7 +157,10 @@ The public citation model is now intentionally simple:
 Supported helper:
 
 ```bash
-python -m cusp.citations --input path/to/your_cusp_table.csv --output references.bib
+python -m cusp.citations \
+  --input exports/latest/cusp_v1.1.csv \
+  --master-bib exports/latest/cusp_sources_v1.1.bib \
+  --output runs/examples/cusp_v1.1_references.bib
 ```
 
 This works with tables that contain either:
@@ -189,9 +192,10 @@ That means:
 3. Decide the next dataset version.
 4. Run the scripted release gate, including strict docs validation, with
    `python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke`.
-5. Package the official bundle with `python -m cusp.export` and no
-   `--features-input` argument. Official exports also refresh the generated
-   release tracker in `README.md` from `exports/latest/cusp_vX.Y.csv`.
+5. Package the official bundle with `python -m cusp.export --version 1.1` and
+   no `--features-input` argument, updating the version for the release being
+   prepared. Official exports also refresh the generated release tracker in
+   `README.md` from `exports/latest/cusp_vX.Y.csv`.
 6. Review `RELEASE_INFO.md`, file hashes, and row/source counts.
 7. Commit the archived bundle, refresh `exports/latest/`, tag the data version,
    and publish the matching GitHub Release.

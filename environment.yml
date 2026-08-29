@@ -16,6 +16,7 @@ dependencies:
   - unidecode
   - mkdocs
   - mkdocs-material
+  - pytest
 # Excel support:
   - openpyxl            # read/write .xlsx
   - xlrd=1.2.*          # only if you need to read legacy .xls

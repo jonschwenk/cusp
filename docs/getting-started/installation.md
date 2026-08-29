@@ -15,9 +15,12 @@ git clone https://github.com/jonschwenk/cusp.git
 cd cusp
 conda env create -f environment.yml
 conda activate cusp
+python -m pip install -e .
 ```
 
-After activating the environment, run CUSP commands from the repository root.
+The editable install makes the CUSP command modules available while you work
+in the checkout. Run rebuild and release commands from the repository root
+because those workflows use repository data and configuration files.
 
 ```bash
 python -m cusp.build --help

@@ -36,11 +36,13 @@ Feature sampling requires Google Earth Engine authentication and a project your
 account can use:
 
 ```bash
+earthengine authenticate
+read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 python -m cusp.features \
   --input exports/latest/cusp_v1.1.csv \
   --output runs/examples/cusp_v1.1_features.csv \
   --manifest runs/examples/cusp_v1.1_features_manifest.json \
-  --gee-project <your-earth-engine-project> \
+  --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
 

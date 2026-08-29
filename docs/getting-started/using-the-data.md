@@ -49,10 +49,16 @@ score. Decide which flags matter for your scientific question before filtering.
 For example, this identifies lower-bound absence rows without removing them:
 
 ```python
+import pandas as pd
+
+cusp = pd.read_csv("cusp_v1.1.csv", low_memory=False)
 flag_sets = cusp["quality_flags"].fillna("").str.split(";")
 has_lower_bound_absence = flag_sets.map(lambda flags: "LB" in flags)
 
 lower_bound_absences = cusp.loc[has_lower_bound_absence]
+lower_bound_absences.to_csv("lower_bound_absences.csv", index=False)
+
+print(f"Saved {len(lower_bound_absences):,} rows")
 ```
 
 See the complete [quality flag definitions](../user/quality-flags.md#flag-definitions).
@@ -71,12 +77,15 @@ After creating your final subset, the CUSP citation helper can inspect its
 
 ```bash
 python -m cusp.citations \
-  --input path/to/final_cusp_subset.csv \
-  --master-bib exports/latest/cusp_sources_v1.1.bib \
-  --output references.bib
+  --input lower_bound_absences.csv \
+  --master-bib cusp_sources_v1.1.bib \
+  --output lower_bound_absence_references.bib
 ```
 
-Using the helper requires the [CUSP tools](../user/index.md). See
+This command continues the example above and assumes the downloaded
+`cusp_sources_v1.1.bib` file is in the same directory. For your analysis,
+point `--input` at your final table and choose any output filename. Using the
+helper requires the [CUSP tools](../user/index.md). See
 [Attribution and BibTeX](../user/data-use-and-attribution.md) for the full
 citation responsibilities.
 
