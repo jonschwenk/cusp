@@ -17,6 +17,13 @@ aggregate observations, sample environmental features, validate data, rebuild
 the synthesis, and generate a BibTeX bibliography for the sources represented
 in your analysis.
 
+> [!NOTE]
+> CUSP data are temporarily distributed through this GitHub repository. They
+> will eventually be served through the
+> [Arctic Data Collaborative (ARDAC)](https://arcticdatascience.org/), which is
+> being prepared as the official distribution home for CUSP. Until that
+> transition is complete, the releases published here remain authoritative.
+
 <p align="center">
   <strong><a href="https://jonschwenk.github.io/cusp/getting-started/release-products/">Download CUSP</a></strong>
   &nbsp;&middot;&nbsp;
