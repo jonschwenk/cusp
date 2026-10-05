@@ -1,0 +1,215 @@
+site_id,source,date,lat,lon,pf_observed,pf_depth,thaw_depth,obs_limit,method,ID,Site_Name,SiteCode,Country,Region,Elevation,METHOD,METHOD_PLAIN,calm_site_code,calm_year,calm_ald_raw
+CALM_FRA1A,Streletskiy_2026,2010-09-01,45.878173,6.887653,1,519,519,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2010,519
+CALM_FRA1A,Streletskiy_2026,2011-09-01,45.878173,6.887653,1,591,591,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2011,591
+CALM_FRA1A,Streletskiy_2026,2014-09-01,45.878173,6.887653,1,477,477,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2014,477
+CALM_FRA1A,Streletskiy_2026,2015-09-01,45.878173,6.887653,1,630,630,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2015,630
+CALM_FRA1A,Streletskiy_2026,2016-09-01,45.878173,6.887653,1,678,678,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2016,678
+CALM_FRA1A,Streletskiy_2026,2018-09-01,45.878173,6.887653,1,704,704,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2018,704
+CALM_FRA1A,Streletskiy_2026,2019-09-01,45.878173,6.887653,1,684,684,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2019,684
+CALM_FRA1A,Streletskiy_2026,2020-09-01,45.878173,6.887653,1,706,706,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2020,706
+CALM_FRA1A,Streletskiy_2026,2021-09-01,45.878173,6.887653,1,650,650,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2021,650
+CALM_FRA1A,Streletskiy_2026,2022-09-01,45.878173,6.887653,1,764,764,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2022,764
+CALM_FRA1A,Streletskiy_2026,2023-09-01,45.878173,6.887653,1,794,794,,temp,61,Aiguille du Midi SE,FRA1a,FRA,Switzerland,3753.0,T/B10,Borehole,FRA1A,2023,794
+CALM_FRA1B,Streletskiy_2026,2010-09-01,45.878679,6.887216,1,182,182,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2010,182
+CALM_FRA1B,Streletskiy_2026,2011-09-01,45.878679,6.887216,1,230,230,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2011,230
+CALM_FRA1B,Streletskiy_2026,2012-09-01,45.878679,6.887216,1,147,147,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2012,147
+CALM_FRA1B,Streletskiy_2026,2013-09-01,45.878679,6.887216,1,220,220,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2013,220
+CALM_FRA1B,Streletskiy_2026,2014-09-01,45.878679,6.887216,1,126,126,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2014,126
+CALM_FRA1B,Streletskiy_2026,2015-09-01,45.878679,6.887216,1,243,243,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2015,243
+CALM_FRA1B,Streletskiy_2026,2016-09-01,45.878679,6.887216,1,251,251,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2016,251
+CALM_FRA1B,Streletskiy_2026,2017-09-01,45.878679,6.887216,1,261,261,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2017,261
+CALM_FRA1B,Streletskiy_2026,2018-09-01,45.878679,6.887216,1,258,258,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2018,258
+CALM_FRA1B,Streletskiy_2026,2019-09-01,45.878679,6.887216,1,262,262,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2019,262
+CALM_FRA1B,Streletskiy_2026,2020-09-01,45.878679,6.887216,1,258,258,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2020,258
+CALM_FRA1B,Streletskiy_2026,2021-09-01,45.878679,6.887216,1,239,239,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2021,239
+CALM_FRA1B,Streletskiy_2026,2022-09-01,45.878679,6.887216,1,272,272,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2022,272
+CALM_FRA1B,Streletskiy_2026,2023-09-01,45.878679,6.887216,1,279,279,,temp,62,Aiguille du Midi NW,FRA1b,FRA,Switzerland,3745.0,T/B10,Borehole,FRA1B,2023,279
+CALM_FRA1C,Streletskiy_2026,2010-09-01,45.878585,6.888098,1,306,306,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2010,306
+CALM_FRA1C,Streletskiy_2026,2011-09-01,45.878585,6.888098,1,270,270,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2011,270
+CALM_FRA1C,Streletskiy_2026,2012-09-01,45.878585,6.888098,1,330,330,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2012,330
+CALM_FRA1C,Streletskiy_2026,2013-09-01,45.878585,6.888098,1,338,338,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2013,338
+CALM_FRA1C,Streletskiy_2026,2014-09-01,45.878585,6.888098,1,204,204,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2014,204
+CALM_FRA1C,Streletskiy_2026,2015-09-01,45.878585,6.888098,1,360,360,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2015,360
+CALM_FRA1C,Streletskiy_2026,2016-09-01,45.878585,6.888098,1,367,367,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2016,367
+CALM_FRA1C,Streletskiy_2026,2018-09-01,45.878585,6.888098,1,459,459,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2018,459
+CALM_FRA1C,Streletskiy_2026,2019-09-01,45.878585,6.888098,1,414,414,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2019,414
+CALM_FRA1C,Streletskiy_2026,2020-09-01,45.878585,6.888098,1,450,450,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2020,450
+CALM_FRA1C,Streletskiy_2026,2021-09-01,45.878585,6.888098,1,352,352,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2021,352
+CALM_FRA1C,Streletskiy_2026,2022-09-01,45.878585,6.888098,1,493,493,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2022,493
+CALM_FRA1C,Streletskiy_2026,2023-09-01,45.878585,6.888098,1,429,429,,temp,63,Aiguille du Midi NE,FRA1c,FRA,Switzerland,3738.0,TB/10,Borehole,FRA1C,2023,429
+CALM_IT2,Streletskiy_2026,2008-09-01,45.920046,7.693595,1,390,390,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2008,390
+CALM_IT2,Streletskiy_2026,2009-09-01,45.920046,7.693595,1,480,480,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2009,480
+CALM_IT2,Streletskiy_2026,2010-09-01,45.920046,7.693595,1,381,381,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2010,381
+CALM_IT2,Streletskiy_2026,2011-09-01,45.920046,7.693595,1,509,509,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2011,509
+CALM_IT2,Streletskiy_2026,2012-09-01,45.920046,7.693595,1,539,539,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2012,539
+CALM_IT2,Streletskiy_2026,2013-09-01,45.920046,7.693595,1,453,453,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2013,453
+CALM_IT2,Streletskiy_2026,2014-09-01,45.920046,7.693595,1,315,315,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2014,315
+CALM_IT2,Streletskiy_2026,2015-09-01,45.920046,7.693595,1,567,567,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2015,567
+CALM_IT2,Streletskiy_2026,2016-09-01,45.920046,7.693595,1,547,547,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2016,547
+CALM_IT2,Streletskiy_2026,2017-09-01,45.920046,7.693595,1,542,542,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2017,542
+CALM_IT2,Streletskiy_2026,2018-09-01,45.920046,7.693595,1,550,550,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2018,550
+CALM_IT2,Streletskiy_2026,2019-09-01,45.920046,7.693595,1,596,596,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2019,596
+CALM_IT2,Streletskiy_2026,2020-09-01,45.920046,7.693595,1,674,674,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2020,674
+CALM_IT2,Streletskiy_2026,2021-09-01,45.920046,7.693595,1,598,598,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2021,598
+CALM_IT2,Streletskiy_2026,2022-09-01,45.920046,7.693595,1,711,711,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2022,711
+CALM_IT2,Streletskiy_2026,2023-09-01,45.920046,7.693595,1,766,766,,temp,59,Cime Bianche,IT2,IT,Switzerland,3100.0,T/B41,Borehole,IT2,2023,766
+CALM_IT3,Streletskiy_2026,2000-09-01,45.5187,10.4569,1,214,214,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2000,214
+CALM_IT3,Streletskiy_2026,2001-09-01,45.5187,10.4569,1,215,215,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2001,215
+CALM_IT3,Streletskiy_2026,2002-09-01,45.5187,10.4569,1,200,200,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2002,200
+CALM_IT3,Streletskiy_2026,2004-09-01,45.5187,10.4569,1,260,260,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2004,260
+CALM_IT3,Streletskiy_2026,2005-09-01,45.5187,10.4569,1,259,259,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2005,259
+CALM_IT3,Streletskiy_2026,2006-09-01,45.5187,10.4569,1,285,285,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2006,285
+CALM_IT3,Streletskiy_2026,2007-09-01,45.5187,10.4569,1,252,252,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2007,252
+CALM_IT3,Streletskiy_2026,2008-09-01,45.5187,10.4569,1,368,368,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2008,368
+CALM_IT3,Streletskiy_2026,2009-09-01,45.5187,10.4569,1,330,330,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2009,330
+CALM_IT3,Streletskiy_2026,2010-09-01,45.5187,10.4569,1,281,281,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2010,281
+CALM_IT3,Streletskiy_2026,2011-09-01,45.5187,10.4569,1,290,290,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2011,290
+CALM_IT3,Streletskiy_2026,2012-09-01,45.5187,10.4569,1,337,337,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2012,337
+CALM_IT3,Streletskiy_2026,2013-09-01,45.5187,10.4569,1,286,286,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2013,286
+CALM_IT3,Streletskiy_2026,2014-09-01,45.5187,10.4569,1,349,349,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2014,349
+CALM_IT3,Streletskiy_2026,2015-09-01,45.5187,10.4569,1,356,356,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2015,356
+CALM_IT3,Streletskiy_2026,2016-09-01,45.5187,10.4569,1,294,294,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2016,294
+CALM_IT3,Streletskiy_2026,2017-09-01,45.5187,10.4569,1,342,342,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2017,342
+CALM_IT3,Streletskiy_2026,2018-09-01,45.5187,10.4569,1,365,365,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2018,365
+CALM_IT3,Streletskiy_2026,2019-09-01,45.5187,10.4569,1,355,355,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2019,355
+CALM_IT3,Streletskiy_2026,2020-09-01,45.5187,10.4569,1,408,408,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2020,408
+CALM_IT3,Streletskiy_2026,2021-09-01,45.5187,10.4569,1,401,401,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2021,401
+CALM_IT3,Streletskiy_2026,2022-09-01,45.5187,10.4569,1,465,465,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2022,465
+CALM_IT3,Streletskiy_2026,2023-09-01,45.5187,10.4569,1,454,454,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2023,454
+CALM_IT3,Streletskiy_2026,2024-09-01,45.5187,10.4569,1,475,475,,temp,60,Stelvio,IT3,IT,Switzerland,2612.0,T/B100,Borehole,IT3,2024,475
+CALM_M1,Streletskiy_2026,2010-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2010,360
+CALM_M1,Streletskiy_2026,2011-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2011,360
+CALM_M1,Streletskiy_2026,2012-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2012,360
+CALM_M1,Streletskiy_2026,2013-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2013,360
+CALM_M1,Streletskiy_2026,2014-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2014,360
+CALM_M1,Streletskiy_2026,2015-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2015,360
+CALM_M1,Streletskiy_2026,2016-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2016,360
+CALM_M1,Streletskiy_2026,2017-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2017,360
+CALM_M1,Streletskiy_2026,2018-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2018,360
+CALM_M1,Streletskiy_2026,2019-09-01,47.68889,108.2625,1,360,360,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2019,360
+CALM_M1,Streletskiy_2026,2020-09-01,47.68889,108.2625,1,500,500,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2020,500
+CALM_M1,Streletskiy_2026,2021-09-01,47.68889,108.2625,1,500,500,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2021,500
+CALM_M1,Streletskiy_2026,2022-09-01,47.68889,108.2625,1,510,510,,temp,115,Baganuur Depression,M 1,MNG,Hentei,1350.0,T/B15,Borehole,M1,2022,510
+CALM_M11,Streletskiy_2026,2010-09-01,50.43861,100.15028,1,580,580,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2010,580
+CALM_M11,Streletskiy_2026,2011-09-01,50.43861,100.15028,1,580,580,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2011,580
+CALM_M11,Streletskiy_2026,2012-09-01,50.43861,100.15028,1,580,580,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2012,580
+CALM_M11,Streletskiy_2026,2013-09-01,50.43861,100.15028,1,580,580,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2013,580
+CALM_M11,Streletskiy_2026,2014-09-01,50.43861,100.15028,1,580,580,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2014,580
+CALM_M11,Streletskiy_2026,2015-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2015,600
+CALM_M11,Streletskiy_2026,2016-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2016,600
+CALM_M11,Streletskiy_2026,2017-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2017,600
+CALM_M11,Streletskiy_2026,2018-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2018,600
+CALM_M11,Streletskiy_2026,2019-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2019,600
+CALM_M11,Streletskiy_2026,2020-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2020,600
+CALM_M11,Streletskiy_2026,2021-09-01,50.43861,100.15028,1,600,600,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2021,600
+CALM_M11,Streletskiy_2026,2022-09-01,50.43861,100.15028,1,620,620,,temp,119,Hatgal – lake terrace,M11,MNG,Hovsgol,1662.0,T/B6,Borehole,M11,2022,620
+CALM_M13A,Streletskiy_2026,2008-09-01,51.18722,99.4975,1,170,170,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2008,170
+CALM_M13A,Streletskiy_2026,2009-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2009,175
+CALM_M13A,Streletskiy_2026,2010-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2010,175
+CALM_M13A,Streletskiy_2026,2011-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2011,175
+CALM_M13A,Streletskiy_2026,2013-09-01,51.18722,99.4975,1,168,168,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2013,168
+CALM_M13A,Streletskiy_2026,2014-09-01,51.18722,99.4975,1,170,170,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2014,170
+CALM_M13A,Streletskiy_2026,2015-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2015,175
+CALM_M13A,Streletskiy_2026,2016-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2016,175
+CALM_M13A,Streletskiy_2026,2017-09-01,51.18722,99.4975,1,170,170,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2017,170
+CALM_M13A,Streletskiy_2026,2018-09-01,51.18722,99.4975,1,170,170,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2018,170
+CALM_M13A,Streletskiy_2026,2019-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2019,175
+CALM_M13A,Streletskiy_2026,2020-09-01,51.18722,99.4975,1,175,175,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2020,175
+CALM_M13A,Streletskiy_2026,2021-09-01,51.18722,99.4975,1,180,180,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2021,180
+CALM_M13A,Streletskiy_2026,2022-09-01,51.18722,99.4975,1,180,180,,temp,120,Darhad Khuurch,M13 A,MNG,Hovsgol,1558.0,T/B100,Borehole,M13A,2022,180
+CALM_M2A,Streletskiy_2026,2010-09-01,47.75444,107.25,1,340,340,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2010,340
+CALM_M2A,Streletskiy_2026,2011-09-01,47.75444,107.25,1,345,345,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2011,345
+CALM_M2A,Streletskiy_2026,2012-09-01,47.75444,107.25,1,345,345,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2012,345
+CALM_M2A,Streletskiy_2026,2013-09-01,47.75444,107.25,1,355,355,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2013,355
+CALM_M2A,Streletskiy_2026,2014-09-01,47.75444,107.25,1,350,350,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2014,350
+CALM_M2A,Streletskiy_2026,2015-09-01,47.75444,107.25,1,365,365,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2015,365
+CALM_M2A,Streletskiy_2026,2016-09-01,47.75444,107.25,1,370,370,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2016,370
+CALM_M2A,Streletskiy_2026,2017-09-01,47.75444,107.25,1,370,370,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2017,370
+CALM_M2A,Streletskiy_2026,2018-09-01,47.75444,107.25,1,370,370,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2018,370
+CALM_M2A,Streletskiy_2026,2019-09-01,47.75444,107.25,1,380,380,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2019,380
+CALM_M2A,Streletskiy_2026,2020-09-01,47.75444,107.25,1,385,385,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2020,385
+CALM_M2A,Streletskiy_2026,2021-09-01,47.75444,107.25,1,375,375,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2021,375
+CALM_M2A,Streletskiy_2026,2022-09-01,47.75444,107.25,1,385,385,,temp,116,Nalaikh – northern slope,M2 A,MNG,Hentei,1512.0,T/T/B50,Borehole,M2A,2022,385
+CALM_M6A,Streletskiy_2026,2010-09-01,48.08194,99.37333,1,290,290,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2010,290
+CALM_M6A,Streletskiy_2026,2011-09-01,48.08194,99.37333,1,300,300,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2011,300
+CALM_M6A,Streletskiy_2026,2012-09-01,48.08194,99.37333,1,305,305,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2012,305
+CALM_M6A,Streletskiy_2026,2013-09-01,48.08194,99.37333,1,300,300,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2013,300
+CALM_M6A,Streletskiy_2026,2014-09-01,48.08194,99.37333,1,295,295,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2014,295
+CALM_M6A,Streletskiy_2026,2015-09-01,48.08194,99.37333,1,305,305,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2015,305
+CALM_M6A,Streletskiy_2026,2016-09-01,48.08194,99.37333,1,305,305,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2016,305
+CALM_M6A,Streletskiy_2026,2017-09-01,48.08194,99.37333,1,295,295,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2017,295
+CALM_M6A,Streletskiy_2026,2018-09-01,48.08194,99.37333,1,300,300,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2018,300
+CALM_M6A,Streletskiy_2026,2019-09-01,48.08194,99.37333,1,300,300,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2019,300
+CALM_M6A,Streletskiy_2026,2020-09-01,48.08194,99.37333,1,290,290,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2020,290
+CALM_M6A,Streletskiy_2026,2021-09-01,48.08194,99.37333,1,305,305,,temp,117,Terkh – valley bottom,M6 A,MNG,Hangai,2050.0,T/B15,Borehole,M6A,2021,305
+CALM_M7A,Streletskiy_2026,2003-09-01,48.04111,100.39167,1,160,160,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2003,160
+CALM_M7A,Streletskiy_2026,2004-09-01,48.04111,100.39167,1,160,160,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2004,160
+CALM_M7A,Streletskiy_2026,2010-09-01,48.04111,100.39167,1,165,165,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2010,165
+CALM_M7A,Streletskiy_2026,2011-09-01,48.04111,100.39167,1,165,165,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2011,165
+CALM_M7A,Streletskiy_2026,2012-09-01,48.04111,100.39167,1,165,165,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2012,165
+CALM_M7A,Streletskiy_2026,2013-09-01,48.04111,100.39167,1,165,165,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2013,165
+CALM_M7A,Streletskiy_2026,2014-09-01,48.04111,100.39167,1,165,165,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2014,165
+CALM_M7A,Streletskiy_2026,2015-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2015,170
+CALM_M7A,Streletskiy_2026,2016-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2016,170
+CALM_M7A,Streletskiy_2026,2017-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2017,170
+CALM_M7A,Streletskiy_2026,2018-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2018,170
+CALM_M7A,Streletskiy_2026,2019-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2019,170
+CALM_M7A,Streletskiy_2026,2020-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2020,170
+CALM_M7A,Streletskiy_2026,2021-09-01,48.04111,100.39167,1,170,170,,temp,118,Chuluut – pingo top,M7 A,MNG,Hangai,1870.0,T/B15,Borehole,M7A,2021,170
+CALM_R5,Streletskiy_2026,2023-09-01,70.28333,68.9,1,99,99,,tp,76,"Vaskiny Dachy, Yamal Peninsula",R5,RUS,West Siberia,29.0,100/T/B10,Probing,R5,2023,99
+CALM_R5A,Streletskiy_2026,2023-09-01,70.28333,68.9,1,79,79,,tp,77,"Vaskiny Dachy, Yamal Peninsula",R5a,RUS,West Siberia,45.0,50,Probing,R5A,2023,79
+CALM_R5B,Streletskiy_2026,2023-09-01,70.2755,68.89164,1,80,80,,tp,78,"Vaskiny Dachi, Yamal Peninsula",R5b,RUS,West Siberia,35.0,50,Probing,R5B,2023,80
+CALM_R5C,Streletskiy_2026,2023-09-01,70.2955,68.88347,1,126,126,,tp,79,"Vaskiny Dachi, Yamal Peninsula",R5c,RUS,West Siberia,25.0,50,Probing,R5C,2023,126
+CALM_U20,Streletskiy_2026,2017-09-01,70.8645,-153.91,1,41,41,,temp,24,Drew Point,U20,USA,North America,5.0,T/B640,Borehole,U20,2017,41
+CALM_U20,Streletskiy_2026,2018-09-01,70.8645,-153.91,1,39,39,,temp,24,Drew Point,U20,USA,North America,5.0,T/B640,Borehole,U20,2018,39
+CALM_U20,Streletskiy_2026,2019-09-01,70.8645,-153.91,1,48,48,,temp,24,Drew Point,U20,USA,North America,5.0,T/B640,Borehole,U20,2019,48
+CALM_U21,Streletskiy_2026,2017-09-01,69.98962,-153.09,1,45,45,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2017,45
+CALM_U21,Streletskiy_2026,2018-09-01,69.98962,-153.09,1,42,42,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2018,42
+CALM_U21,Streletskiy_2026,2019-09-01,69.98962,-153.09,1,66,66,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2019,66
+CALM_U21,Streletskiy_2026,2020-09-01,69.98962,-153.09,1,40,40,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2020,40
+CALM_U21,Streletskiy_2026,2021-09-01,69.98962,-153.09,1,39,39,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2021,39
+CALM_U21,Streletskiy_2026,2022-09-01,69.98962,-153.09,1,41,41,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2022,41
+CALM_U21,Streletskiy_2026,2023-09-01,69.98962,-153.09,1,58,58,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2023,58
+CALM_U21,Streletskiy_2026,2024-09-01,69.98962,-153.09,1,45,45,,temp,25,Inigok,U21,USA,North America,53.0,T/B625,Borehole,U21,2024,45
+CALM_U22,Streletskiy_2026,2017-09-01,70.33523,-152.05,1,31,31,,temp,26,Fish Creek,U22,USA,North America,31.0,T/B735,Borehole,U22,2017,31
+CALM_U22,Streletskiy_2026,2018-09-01,70.33523,-152.05,1,30,30,,temp,26,Fish Creek,U22,USA,North America,31.0,T/B735,Borehole,U22,2018,30
+CALM_U22,Streletskiy_2026,2019-09-01,70.33523,-152.05,1,41,41,,temp,26,Fish Creek,U22,USA,North America,31.0,T/B735,Borehole,U22,2019,41
+CALM_U24,Streletskiy_2026,2017-09-01,69.3957,-152.14,1,35,35,,temp,27,Umiat,U24,USA,North America,201.0,T/B640,Borehole,U24,2017,35
+CALM_U24,Streletskiy_2026,2018-09-01,69.3957,-152.14,1,33,33,,temp,27,Umiat,U24,USA,North America,201.0,T/B640,Borehole,U24,2018,33
+CALM_U24,Streletskiy_2026,2019-09-01,69.3957,-152.14,1,41,41,,temp,27,Umiat,U24,USA,North America,201.0,T/B640,Borehole,U24,2019,41
+CALM_U24,Streletskiy_2026,2020-09-01,69.3957,-152.14,1,30,30,,temp,27,Umiat,U24,USA,North America,201.0,T/B640,Borehole,U24,2020,30
+CALM_U25,Streletskiy_2026,2017-09-01,70.1959,-161.08,1,55,55,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2017,55
+CALM_U25,Streletskiy_2026,2018-09-01,70.1959,-161.08,1,52,52,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2018,52
+CALM_U25,Streletskiy_2026,2019-09-01,70.1959,-161.08,1,66,66,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2019,66
+CALM_U25,Streletskiy_2026,2020-09-01,70.1959,-161.08,1,57,57,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2020,57
+CALM_U25,Streletskiy_2026,2021-09-01,70.1959,-161.08,1,51,51,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2021,51
+CALM_U25,Streletskiy_2026,2022-09-01,70.1959,-161.08,1,46,46,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2022,46
+CALM_U25,Streletskiy_2026,2023-09-01,70.1959,-161.08,1,56,56,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2023,56
+CALM_U25,Streletskiy_2026,2024-09-01,70.1959,-161.08,1,52,52,,temp,28,Tunalik,U25,USA,North America,26.0,T/B393,Borehole,U25,2024,52
+CALM_U29,Streletskiy_2026,2018-09-01,69.8894,-142.98,1,37,37,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2018,37
+CALM_U29,Streletskiy_2026,2019-09-01,69.8894,-142.98,1,55,55,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2019,55
+CALM_U29,Streletskiy_2026,2020-09-01,69.8894,-142.98,1,44,44,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2020,44
+CALM_U29,Streletskiy_2026,2021-09-01,69.8894,-142.98,1,48,48,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2021,48
+CALM_U29,Streletskiy_2026,2022-09-01,69.8894,-142.98,1,40,40,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2022,40
+CALM_U29,Streletskiy_2026,2023-09-01,69.8894,-142.98,1,61,61,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2023,61
+CALM_U29,Streletskiy_2026,2024-09-01,69.8894,-142.98,1,57,57,,temp,29,Niguanak,U29,USA,North America,84.0,T/B/30?,Borehole,U29,2024,57
+CALM_U30,Streletskiy_2026,2017-09-01,69.7516,-154.62,1,120,120,,temp,30,Koluktak,U30,USA,North America,60.0,T/B/,Borehole,U30,2017,120
+CALM_U30,Streletskiy_2026,2018-09-01,69.7516,-154.62,1,120,120,,temp,30,Koluktak,U30,USA,North America,60.0,T/B/,Borehole,U30,2018,120
+CALM_U30,Streletskiy_2026,2019-09-01,69.7516,-154.62,1,120,120,,temp,30,Koluktak,U30,USA,North America,60.0,T/B/,Borehole,U30,2019,120
+CALM_U30,Streletskiy_2026,2020-09-01,69.7516,-154.62,1,120,120,,temp,30,Koluktak,U30,USA,North America,60.0,T/B/,Borehole,U30,2020,120
+CALM_U37,Streletskiy_2026,2017-09-01,70.0366,-157.08,1,44,44,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2017,44
+CALM_U37,Streletskiy_2026,2018-09-01,70.0366,-157.08,1,44,44,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2018,44
+CALM_U37,Streletskiy_2026,2019-09-01,70.0366,-157.08,1,58,58,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2019,58
+CALM_U37,Streletskiy_2026,2020-09-01,70.0366,-157.08,1,45,45,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2020,45
+CALM_U37,Streletskiy_2026,2021-09-01,70.0366,-157.08,1,40,40,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2021,40
+CALM_U37,Streletskiy_2026,2022-09-01,70.0366,-157.08,1,37,37,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2022,37
+CALM_U37,Streletskiy_2026,2023-09-01,70.0366,-157.08,1,44,44,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2023,44
+CALM_U37,Streletskiy_2026,2024-09-01,70.0366,-157.08,1,40,40,,temp,31,Piksiksak,U37,USA,North America,33.0,T/B/,Borehole,U37,2024,40
+CALM_U38,Streletskiy_2026,2017-09-01,70.5685,-152.97,1,29,29,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2017,29
+CALM_U38,Streletskiy_2026,2018-09-01,70.5685,-152.97,1,23,23,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2018,23
+CALM_U38,Streletskiy_2026,2019-09-01,70.5685,-152.97,1,31,31,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2019,31
+CALM_U38,Streletskiy_2026,2020-09-01,70.5685,-152.97,1,22,22,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2020,22
+CALM_U38,Streletskiy_2026,2021-09-01,70.5685,-152.97,1,22,22,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2021,22
+CALM_U38,Streletskiy_2026,2022-09-01,70.5685,-152.97,1,23,23,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2022,23
+CALM_U38,Streletskiy_2026,2023-09-01,70.5685,-152.97,1,33,33,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2023,33
+CALM_U38,Streletskiy_2026,2024-09-01,70.5685,-152.97,1,29,29,,temp,32,East Teshekpuk,U38,USA,North America,7.0,T/B/,Borehole,U38,2024,29

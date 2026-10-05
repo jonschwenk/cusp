@@ -6,7 +6,7 @@ source_key = "CALM"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-10-05"
 source_dataset = '''
 Streletskiy, Dmitry A; CALM; GTN-P; Wieczorek, Mareike; Heim,
 Birgit; Bartsch, Annett (2025): GTN-P CALM: 35 years of Active Layer
@@ -22,6 +22,7 @@ processing_assumptions = [
   "ALD values reported with a leading < are treated as upper-bound observations where permafrost was confirmed but the exact thaw depth is not recoverable; pf_observed is set to 1 and the exact thaw_depth/pf_depth are left missing.",
   "ESA CCI validation comments are preserved as provenance and are not used to filter observations.",
   "The CALM Event label is used as site_id because it is stable and unique across the file.",
+  "Streletskiy_2026 retains this source for 2212 overlapping annual site-code/year observations, including depth disagreements and three nonexact/bounded observations; the synthesis processor records exclusions and does not overwrite the original CALM values or methods. Date matching uses source year rather than the assigned September 1 day. CALM_South contains the separate original Southern Hemisphere workbook and has no shared site/year observations with this Northern Hemisphere export.",
 ]
 temporal_handling = [
   "The source reports year-only annual end-of-thaw-season ALT values.",

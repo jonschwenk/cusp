@@ -1,0 +1,7 @@
+{
+  "CH1:2022": {
+    "reason": "unresolved_permos_quality_conflict",
+    "reference": "https://doi.org/10.13093/permos-2024-01",
+    "evidence": "Figshare reports 724 cm for CH1 (Corvatsch/Murtel) in 2022. PERMOS alt_20240529.csv, borehole_id 6 (COR_0287, calm_id CH1), reports missing ALT with comment 'Unreliable data at respective depths.' The replacement borehole COR_0315 (id 48) reports 3.79 m in 2022. Do not revive an unreliable annual value or conflate the two boreholes."
+  }
+}

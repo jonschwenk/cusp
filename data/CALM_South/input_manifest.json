@@ -1,0 +1,32 @@
+{
+  "gtnp_pt_486.json": {
+    "url": "https://data.gtn-p.org/api/pt/486",
+    "retrieved": "2026-10-05",
+    "sha256": "c9e54e53e660eac188db8c96bb3a2098f3808ac95f206460215dbf35fa31ce78"
+  },
+  "gtnp_pt_662.json": {
+    "url": "https://data.gtn-p.org/api/pt/662",
+    "retrieved": "2026-10-05",
+    "sha256": "5301dee3f337d70b9bb8c794c0199bdcdbe17b683de937ade1c443cf8839ecf8"
+  },
+  "gtnp_pt_663.json": {
+    "url": "https://data.gtn-p.org/api/pt/663",
+    "retrieved": "2026-10-05",
+    "sha256": "8f58987ad9133bfeccb2449ce5d4944eccb77acc6f1ecf57d779963a9154dc3f"
+  },
+  "calm_a11_metadata.htm": {
+    "url": "https://www2.gwu.edu/~calm/data/webforms/a11_f.htm",
+    "retrieved": "2026-10-05",
+    "sha256": "75ebb320b7cd9d2a6311223e8d637fdb446069ebffdef003e0cfe36956921469"
+  },
+  "calm_a25_metadata.htm": {
+    "url": "https://www2.gwu.edu/~calm/data/webforms/a25_f.htm",
+    "retrieved": "2026-10-05",
+    "sha256": "be6004b514db1deeadbae425e601be8cdbb0299103de9c73fb482096399b4f46"
+  },
+  "CALM_S_Summary.xls": {
+    "url": "https://www2.gwu.edu/~calm/data/CALM_S_Summary.xls",
+    "retrieved": "2026-10-05",
+    "sha256": "895f2f6e91773b832a9714e649df9301efcbb3b00ba3b818e81b49e2c6663a90"
+  }
+}

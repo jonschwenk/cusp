@@ -6,7 +6,7 @@ source_key = "PERMOS_2024"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-21"
+last_substantive_update = "2026-10-05"
 
 source_dataset = '''
 PERMOS 2024: PERMOS Database. Swiss Permafrost Monitoring Network,
@@ -50,6 +50,7 @@ known_limitations = [
   "Eighteen retained rows use site-level coordinates because borehole coordinates are absent in borehole_20240529.csv.",
   "Rows flagged as PERMOS guesses are included but flagged in permos_guess.",
   "PERMOS ALT is derived from in situ thermistor data rather than direct manual probing.",
+  "Streletskiy_2026 screens candidate additions against retained PERMOS calm_id/year observations (zero additional direct matches in Figshare version 1). It separately defers CH1 2022: COR_0287 (borehole id 6) has an unreliable-data comment and missing ALT, while COR_0315 (id 48) is a replacement borehole with a different annual ALT. Existing PERMOS observations are preserved, not replaced using site-coordinate proximity.",
 ]
 
 external_dependencies = [

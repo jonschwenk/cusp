@@ -1,0 +1,74 @@
+{
+  "retrieved": "2026-10-05",
+  "sites": {
+    "A15A": {
+      "lat": -62.67028,
+      "lon": -60.38222,
+      "coordinate_reference": "https://data.gtn-p.org/api/pt/486",
+      "coordinate_note": "Workbook latitude has invalid DMS minutes (62 67 S). Use the GTN-P Mount Reina Sofia location (274 m), also shared by the later PG1 borehole; a representative site coordinate, not a surveyed grid-node location.",
+      "method": "temp",
+      "method_reference": "https://doi.org/10.1029/2006JF000544",
+      "method_note": "Early annual series assigned to shallow-borehole temperature monitoring; composite workbook code also describes a grid and a later deeper borehole."
+    },
+    "A15B": {
+      "method": "temp",
+      "method_reference": "https://doi.org/10.1029/2006JF000544",
+      "method_note": "Composite 50/T/B2.4 code assigned to temperature monitoring, rather than interpreting grid size as proof of probing."
+    },
+    "A16": {
+      "lat": -62.985651,
+      "lon": -60.678711,
+      "coordinate_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "coordinate_note": "Workbook 62 98 S / 60 67 W is not valid DMS. Use the explicitly matched A16 coordinates from the versioned synthesis, not an inferred DMS repair."
+    },
+    "A26": {
+      "lat": -62.9837,
+      "lon": -60.715667,
+      "coordinate_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "coordinate_note": "Workbook 62 98 S / 60 72 W is not valid DMS. Use the explicitly matched A26 coordinates from the versioned synthesis."
+    },
+    "A17A": {
+      "lat": -60.7083,
+      "lon": -45.5941,
+      "coordinate_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "coordinate_note": "Use the versioned synthesis's more precise A17A longitude instead of the workbook's rounded -46 degrees."
+    },
+    "A18": {
+      "method": "tp",
+      "method_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "method_note": "Composite 100/T code classified as Probing by the synthesis; annual instrument cannot be recovered independently for every year."
+    },
+    "A25": {
+      "method": "tp",
+      "method_reference": "https://www2.gwu.edu/~calm/data/webforms/a25_f.htm",
+      "method_note": "CALM metadata describes mechanical probing of a 100 by 100 m grid, with thermistors as complementary monitoring."
+    },
+    "A27": {
+      "method": "tp",
+      "method_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "method_note": "Composite 70/T/G/B2.0 code classified as Probing by the synthesis; retain the mixed-method description and flag approximate assignment."
+    },
+    "A28": {
+      "method": "tp",
+      "method_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "method_note": "Composite 50/T/B0.9 code classified as Probing by the synthesis; flag approximate assignment."
+    },
+    "A34": {
+      "method": "temp",
+      "method_reference": "https://doi.org/10.6084/m9.figshare.32885756.v1",
+      "method_note": "Composite 70/T/B code classified as Borehole by the synthesis; flag approximate assignment."
+    },
+    "A24": {
+      "lat": -70.762778,
+      "lon": 11.795,
+      "coordinate_reference": "https://data.gtn-p.org/api/pt/663",
+      "coordinate_note": "Workbook longitude 11.47.76E has invalid DMS seconds. Use the GTN-P Novolazarevskaya site location as a representative coordinate; grid/borehole offsets are unresolved."
+    },
+    "A29": {
+      "lat": -67.665556,
+      "lon": 45.841944,
+      "coordinate_reference": "https://data.gtn-p.org/api/pt/662",
+      "coordinate_note": "Workbook places Molodyozhnaya at 45.86 W. GTN-P locates the named station at 45.841944 E. Preserve the raw west coordinate and explicitly flag the lookup/sign correction."
+    }
+  }
+}

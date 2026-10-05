@@ -12,6 +12,9 @@ Cable_2017,summary_statistic
 CALM,date_assigned
 CALM,summary_statistic
 CALM,coord_site_level
+CALM_South,date_assigned
+CALM_South,summary_statistic
+CALM_South,coord_site_level
 Chapin_2025,summary_statistic
 Chapin_2025,date_assigned
 Chapin_2025,coord_lookup_or_interpolated
@@ -56,6 +59,10 @@ Smith_Burgess_2000,source_unit_or_code_recoded
 Smith_Burgess_2002,date_assigned
 Smith_Burgess_2002,source_unit_or_code_recoded
 Smith_Burgess_2002,possible_duplicate_or_overlap
+Streletskiy_2026,date_assigned
+Streletskiy_2026,summary_statistic
+Streletskiy_2026,coord_site_level
+Streletskiy_2026,method_approximate_or_unknown
 Talucci_2024,model_or_estimate
 Talucci_2024,summary_statistic
 Talucci_2024,date_assigned
