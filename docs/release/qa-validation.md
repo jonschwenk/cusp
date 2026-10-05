@@ -41,11 +41,13 @@ It writes review files without changing the observations.
 
 ## Latest Result
 
-Validated on 2026-08-25 under Python 3.13:
+Validated on 2026-10-03 under Python 3.13 after the
+[unreleased Pastick correction](observation-build-validation.md#unreleased-pastick-correction).
+Published v1.1 artifacts are unchanged.
 
 - hard-gate status: passed
-- canonical table: `79,389` rows and `12` columns
-- complete test suite: `74 passed` with `26` passing subtests
+- canonical table: `79,603` rows and `12` columns
+- complete test suite: `92 passed`, `1 skipped`, with `118` passing subtests
 - processing metadata: `57` structured headers, `0` validation errors
 - build-level QC flag log: `0` rows
 
@@ -68,8 +70,8 @@ Validated on 2026-08-25 under Python 3.13:
 
 Current `pf_observed` counts:
 
-- presence: `62,135`
-- absence: `17,254`, comprising `17,054` depth-bounded records and `200`
+- presence: `62,198`
+- absence: `17,405`, comprising `17,205` depth-bounded records and `200`
   flagged visual Koyukuk classifications without a point-specific limit
 
 ## Build-Enforced Semantics

@@ -4,7 +4,8 @@
 
 This document records the latest validated rebuild of the default `30m`
 aggregation workflow from the canonical observation-level table. The current
-snapshot was rebuilt on 2026-08-27 from all 79,389 working observation rows.
+snapshot was rebuilt on 2026-10-03 from all 79,603 working observation rows,
+including the [unreleased Pastick correction](observation-build-validation.md#unreleased-pastick-correction).
 The `30m` aggregation is a reproducible derivative, not an official versioned
 release artifact for v1.
 
@@ -37,7 +38,7 @@ The current aggregation path:
 ## Current Rebuild Snapshot
 
 - `aggregated_30m.csv`
-  - rows: `34,462`
+  - rows: `34,656`
   - columns:
     - `cusp_30m_id`
     - `year`
@@ -53,13 +54,13 @@ The current aggregation path:
     - `aggregated_sources`
     - `n_grouped`
 - `aggregated_30m_membership.csv`
-  - rows: `79,389`
-  - unique aggregated groups: `34,462`
-  - unique member observations: `79,389`
+  - rows: `79,603`
+  - unique aggregated groups: `34,656`
+  - unique member observations: `79,603`
 - `aggregated_30m_excluded_rows.csv`
   - rows: `0`
 - `aggregated_30m_qc_flags.csv`
-  - rows: `1,538`
+  - rows: `1,539`
 - `aggregated_30m.gpkg`
   - CRS: `EPSG:4326`
 
@@ -86,7 +87,7 @@ The current aggregation path:
 
 - `multi_date_window`: `683`
 - `mixed_method`: `381`
-- `mixed_pf_observed`: `291`
+- `mixed_pf_observed`: `292`
 - `mixed_source`: `183`
 
 These are audit outputs, not automatic blockers.

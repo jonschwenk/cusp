@@ -4,7 +4,7 @@ source_key = "Pastick"
 release_clearance = "approved"
 permission_basis = "emailed_approval"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-06"
+last_substantive_update = "2026-10-03"
 source_dataset = '''
 Pastick, Neal. Unpublished Alaska pedon and near-surface permafrost data
 compiled from multiple sources, including NRCS-derived products represented in
@@ -16,6 +16,7 @@ processing_assumptions = [
   "WesternAKSitePhoriz obs_limit is taken as the deepest horizon bottom for each pedon, and organic thickness is derived from O-horizon bottoms when present.",
   "WesternAKSitePhoriz absence rows are flagged because absence is interpreted only to the bottom of the recorded soil profile.",
   "WesternAKSitePhoriz/numeric-ID pit rows that overlap with NCSS_Lab_Data_Mart are removed in favor of NCSS: same pf_observed status and within 1 m, regardless of Pastick's update-like date fields or small depth/profile-bottom differences.",
+  "NCSS overlap filtering removes 58 matched pit rows by row position, preserving unrelated observations even when component tables reuse index labels.",
   "For Innoko probe rows, numeric Depth is permafrost depth for presence and the reported observation limit for absence; source >2m codes are conservatively recoded to a 200 cm absence limit.",
   "Innoko water/mud/see-note rows without a positive observation depth are excluded because they do not support a usable permafrost-absence limit.",
   "Five additional absence rows with zero-depth WesternAKSitePhoriz/Gates records are excluded because no defensible observation limit can be recovered.",
@@ -66,7 +67,7 @@ from cusp import data_utils
 
 
 source = 'Pastick'
-all_dfs = []
+EXPECTED_NCSS_OVERLAPS = 58
 
 
 def normalize_pf_observed(values):
@@ -134,10 +135,11 @@ def remove_ncss_overlaps(df, threshold_m=1.0):
         & df["lon"].notna()
         & df["pf_observed"].notna()
     )
-    remove_index = set()
-    candidates = df.loc[candidate_mask, ["lat", "lon", "pf_observed"]]
+    # Component tables can reuse index labels; only matched row positions may be dropped.
+    remove_mask = np.zeros(len(df), dtype=bool)
 
-    for index, row in candidates.iterrows():
+    for position in np.flatnonzero(candidate_mask.fillna(False).to_numpy(dtype=bool)):
+        row = df.iloc[position]
         nearby = ncss[
             ncss["pf_observed"].eq(int(row["pf_observed"]))
             & ncss["lat"].between(row["lat"] - 0.001, row["lat"] + 0.001)
@@ -147,235 +149,250 @@ def remove_ncss_overlaps(df, threshold_m=1.0):
             continue
         for _, ncss_row in nearby.iterrows():
             if distance_m(row["lat"], row["lon"], ncss_row["lat"], ncss_row["lon"]) <= threshold_m:
-                remove_index.add(index)
+                remove_mask[position] = True
                 break
 
-    if remove_index:
-        print(f"Removed {len(remove_index)} Pastick rows already represented by NCSS_Lab_Data_Mart.")
-    return df.drop(index=list(remove_index)).copy()
+    removed_count = int(remove_mask.sum())
+    if removed_count:
+        print(f"Removed {removed_count} Pastick rows already represented by NCSS_Lab_Data_Mart.")
+    return df.iloc[~remove_mask].copy()
 
-# YFlats_NRCS
 
-gdf = gpd.read_file(_ROOT_DIR / "data" / source /"YFlats_NRCS.shp")
-gdf = gdf.rename(columns={"Pfrost_dpt": "pf_depth", "Pfrost": "pf_observed", "Org_Thick": "org_thick",
-                        "Rock": "rock","Dpth_of_ob": "obs_limit","User_Site": "site_id",
-                        "Observatio": "date",
-                        'LatDD':'lat',
-                        'LongDD':'lon','Method':'method'
-                        })
+def main():
+    all_dfs = []
+    # YFlats_NRCS
 
-gdf.drop(['Rec_ID','DATUM'],axis=1, inplace=True)
+    gdf = gpd.read_file(_ROOT_DIR / "data" / source /"YFlats_NRCS.shp")
+    gdf = gdf.rename(columns={"Pfrost_dpt": "pf_depth", "Pfrost": "pf_observed", "Org_Thick": "org_thick",
+                            "Rock": "rock","Dpth_of_ob": "obs_limit","User_Site": "site_id",
+                            "Observatio": "date",
+                            'LatDD':'lat',
+                            'LongDD':'lon','Method':'method'
+                            })
 
-gdf['pf_observed'] = normalize_pf_observed(gdf['pf_observed']).astype(int)
-gdf['site_id'] = gdf['site_id'].fillna('YFlats_NRCS');
-gdf['transect_name'] = np.nan;
-gdf['transect_point'] = np.nan; 
-gdf['source'] = source
-gdf['thaw_depth'] = np.where(gdf['pf_observed'] == 1, gdf['pf_depth'], np.nan)
-gdf['method'] = 'pit_aug'
-gdf = gdf[~((gdf['lat'] == 0) & (gdf['lon'] == 0))].copy()
+    gdf.drop(['Rec_ID','DATUM'],axis=1, inplace=True)
 
-df = pd.DataFrame(gdf.drop('geometry', axis=1))
-data_utils.check_columns(df)
-all_dfs.append(df)
-
-# WesternAKSitePhoriz
-gdf = gpd.read_file(_ROOT_DIR / "data" / source /"WesternAKSitePhoriz.shp")
-gdf = gdf[['hzname', 'hzdept','hzdepb','objwlupdat','siteobsiid','geometry','latstddeci','longstddec']]
-gdf=gdf.dropna()
-
-# GET cores with PF
-# dry permafrost: hzname contains ff
-# ice rich permafrost: hzname contains f
-#  non permafrost soils:  hzname contains no f
-# hzdept: top of horizon depth
-gdf_pf = gdf[gdf.hzname.str.contains('f')]
-#get a list of the unique pedon sites
-pf_unqsite=(np.unique(gdf_pf.siteobsiid))
-pfDepth = [];obsdepth=[];lat =[];long=[];site=[];date=[];pfobs=[];othick = [];rock = []; method =[]
-for u in pf_unqsite:
-    pfU = gdf_pf[gdf_pf.siteobsiid==u]
-    pfU=pfU.reset_index()
-    pfDepth.append(np.min(pfU.hzdept))
-    obsdepth.append(np.max(pfU.hzdepb))
-    lat.append(pfU.latstddeci[0]);long.append(pfU.longstddec[0])
-    date.append(pfU.objwlupdat[0])
-    site.append(u)
-    pfobs.append(1)
-    fpU = gdf[gdf.siteobsiid==u] #extract full soil profile to get the organic layer
-    opfU = fpU[fpU.hzname.str.contains('O')]
-    othick.append(np.max(opfU.hzdepb))
-    rock.append('N')
-    method.append('pit')
-
-df = pd.DataFrame({'pf_depth':np.array(pfDepth),
-                          'lat':np.array(lat),
-                          'lon':np.array(long),
-                          'site_id':np.array(site),
-                          'date':np.array(date),
-                          'pf_observed':np.array(pfobs),
-                          'org_thick':np.array(othick),
-                          'rock':np.array(rock),
-                          'obs_limit':np.array(obsdepth),
-                          'method':np.array(method)}) 
-
-gdf[~gdf.siteobsiid.isin(gdf_pf.siteobsiid)]
-# index for non permafrost cores
-gdf_np= gdf[~gdf.siteobsiid.isin(gdf_pf.siteobsiid)]
-npf_unqsite=(np.unique(gdf_np.siteobsiid))
-pfDepth = [];obsdepth=[];lat =[];long=[];site=[];date=[];pfobs=[];othick = [];rock = []; method =[]
-for u in npf_unqsite:
-    pfU = gdf_np[gdf_np.siteobsiid==u]
-    pfU=pfU.reset_index()
-    pfDepth.append(np.nan)
-    obsdepth.append(np.max(pfU.hzdepb))
-    lat.append(pfU.latstddeci[0]);long.append(pfU.longstddec[0])
-    date.append(pfU.objwlupdat[0])
-    site.append(u)
-    pfobs.append(0)
-    opfU = pfU[pfU.hzname.str.contains('O')]
-    othick.append(np.max(opfU.hzdepb))
-    rock.append('N')
-    method.append('pit')
-
-ndf = pd.DataFrame({'pf_depth':np.array(pfDepth),
-                          'lat':np.array(lat),
-                          'lon':np.array(long),
-                          'site_id':np.array(site),
-                          'date':np.array(date),
-                          'pf_observed':np.array(pfobs),
-                          'org_thick':np.array(othick),
-                          'rock':np.array(rock),
-                          'obs_limit':np.array(obsdepth),
-                          'method':np.array(method)})   
-
-# Merge the dataframes
-df = pd.concat([df, ndf], ignore_index=True)
-df['quality_flag_obs_limit_profile_bottom'] = df['pf_observed'].eq(0)
-#df=df.reset_index()
-df['source'] = source
-df['thaw_depth'] = np.nan
-data_utils.check_columns(df)
-all_dfs.append(df)
-
-# Remaining sites
-sites = ['Delta_Projected_albers','Denali5_Projected_Albers','Denali6_Projected_Albers','Fbnks_Projected_Albers','FtGreely_Projected_Albers','Gates_Projected_Albers',
-         'Gulkana_Projected_Albers', 'Innoko_Projected_Albers', 'Kusko_Projected_Albers', 'Nenana_Projected_Albers', 'Yuk_char_Projected_Albers']
-for site in sites:
-    # site=sites[7]
-    file = site + ".shp"
-    gdf = gpd.read_file(_ROOT_DIR / "data" / source / file)
-    gdf = gdf.to_crs(epsg=4326)
-    gdf['lon'] = [g.coords.xy[0][0] for g in gdf.geometry.values] 
-    gdf['lat'] = [g.coords.xy[1][0] for g in gdf.geometry.values] 
-
-    col_renaming =  {
-        "date": ["date_", "dateobs", "day", "obs_date", "date", 'Date_', 'DATE_','Date','Obs_Date','Day'],
-        "pf_depth": ["depth", "dpt", "pfrost_dpt", 'Pfrost_dpt', 'Depth'],
-        "obs_limit": ["dpth_of_ob", "obs_depth",'Dpth_of_ob',],
-        "pf_observed": ["pfrost", "pf_ob", "pf_observed",'Pfrost'],
-        "rock" : ['Rock'],
-        'transect_name' : ['TRANSECTst'],
-        'transect_point' :['STOPst'],
-        'org_thick' :['Org_Thick'],
-        'site_id' : ['Unique_ID', 'SiteID','OBJECTID_1', 'Site']
-    }
-
-    gdf = data_utils.standardize_column_names(dfs=[gdf],
-                            cols=col_renaming)[0]
-
-    if 'site_id' not in gdf.columns:
-        gdf['site_id'] = pd.NA
-    gdf['site_id'] = gdf['site_id'].fillna(site)
+    gdf['pf_observed'] = normalize_pf_observed(gdf['pf_observed']).astype(int)
+    gdf['site_id'] = gdf['site_id'].fillna('YFlats_NRCS');
+    gdf['transect_name'] = np.nan;
+    gdf['transect_point'] = np.nan;
     gdf['source'] = source
-
-    gdf['pf_observed'] = normalize_pf_observed(gdf['pf_observed'])
-    gdf = gdf[~pd.isna(gdf['pf_observed'])].copy()
-    gdf['pf_observed'] = gdf['pf_observed'].astype(int)
-
-    is_innoko = site == 'Innoko_Projected_Albers'
-    if is_innoko:
-        source_depth = pd.to_numeric(gdf['pf_depth'], errors='coerce')
-        source_bottom = gdf['Bottom'].astype('string').str.strip()
-        point_type = gdf['Pnt_type'].astype('string').str.strip()
-        presence = gdf['pf_observed'].eq(1)
-        absence = gdf['pf_observed'].eq(0)
-        over_two_m = absence & source_bottom.eq('>2m')
-
-        gdf['pastick_bottom'] = source_bottom
-        gdf['pastick_point_type'] = point_type
-        gdf['pastick_source_method'] = gdf['Method']
-        gdf['pastick_point'] = gdf['Point']
-        gdf['pf_depth'] = source_depth.where(presence)
-        gdf['thaw_depth'] = gdf['pf_depth']
-        gdf['obs_limit'] = source_depth.where(absence)
-        gdf.loc[over_two_m, 'obs_limit'] = 200.0
-        gdf['method'] = 'tp'
-        gdf['quality_flag_coord_lookup_or_interpolated'] = point_type.eq('Estimated')
-        gdf['quality_flag_source_unit_or_code_recoded'] = over_two_m
-
-        unusable_absence = absence & (
-            gdf['obs_limit'].isna() | gdf['obs_limit'].le(0)
-        )
-        print(
-            f"Removed {int(unusable_absence.sum())} Innoko absence rows without "
-            "a usable observation limit."
-        )
-        gdf = gdf.loc[~unusable_absence].copy()
-
-    toremove = ['Unique_ID', 'DATUM', 'UTMZONE', 'UTMEAST', 'UTMNORTH', 'LatDD', 'LongDD', 'geometry',
-                'Method', 'LatDD84', 'LongDD84', 'Day', 'Zone', 'Lat', 'Lon', 'Easting', 'Northing',
-                'Bottom', 'Pnt_type', 'Point','OBJECTID', 'Datum', 'UTM_Zone', 'UTM_Northi', 'UTM_Eastin',
-                'Long_']
-    for tr in toremove:
-        if tr in gdf.columns:
-            gdf.drop(tr, axis=1, inplace=True)
-
-    if not is_innoko:
-        if 'obs_limit' not in gdf.columns:
-            gdf['obs_limit'] = np.nan
-        gdf.loc[gdf['obs_limit'] == 0, 'obs_limit'] = np.nan
-        gdf['thaw_depth'] = np.nan
-        gdf['method'] = 'unknown'
-    # if 'obs_depth' not in gdf.columns:
-    #     gdf['obs_depth'] = np.nan
-
-    data_utils.check_columns(gdf)
-
+    gdf['thaw_depth'] = np.where(gdf['pf_observed'] == 1, gdf['pf_depth'], np.nan)
+    gdf['method'] = 'pit_aug'
     gdf = gdf[~((gdf['lat'] == 0) & (gdf['lon'] == 0))].copy()
-    all_dfs.append(pd.DataFrame(gdf))
 
-final = pd.concat(all_dfs)
-final.loc[final['pf_observed'] == 0, 'pf_depth'] = np.nan
-final.loc[final['obs_limit'] == 0, 'obs_limit'] = np.nan
-final['pastick_source_obs_limit_cm'] = final['obs_limit']
-numeric_obs_limit = pd.to_numeric(final['obs_limit'], errors='coerce')
-numeric_pf_depth = pd.to_numeric(final['pf_depth'], errors='coerce')
-contradictory_presence_limit = (
-    final['pf_observed'].eq(1)
-    & numeric_obs_limit.notna()
-    & numeric_pf_depth.notna()
-    & numeric_obs_limit.lt(numeric_pf_depth)
-)
-existing_recode_flag = final.get(
-    'quality_flag_source_unit_or_code_recoded',
-    pd.Series(False, index=final.index),
-).fillna(False).astype(bool)
-final['quality_flag_source_unit_or_code_recoded'] = (
-    existing_recode_flag | contradictory_presence_limit
-)
-final.loc[contradictory_presence_limit, 'obs_limit'] = np.nan
-final = final[~((final['lat'] == 0) & (final['lon'] == 0))].copy()
-final = remove_ncss_overlaps(final)
-unusable_absence = final['pf_observed'].eq(0) & final['obs_limit'].isna()
-if unusable_absence.any():
-    print(
-        f"Removed {int(unusable_absence.sum())} additional Pastick absence rows "
-        "without a usable observation limit."
+    df = pd.DataFrame(gdf.drop('geometry', axis=1))
+    data_utils.check_columns(df)
+    all_dfs.append(df)
+
+    # WesternAKSitePhoriz
+    gdf = gpd.read_file(_ROOT_DIR / "data" / source /"WesternAKSitePhoriz.shp")
+    gdf = gdf[['hzname', 'hzdept','hzdepb','objwlupdat','siteobsiid','geometry','latstddeci','longstddec']]
+    gdf=gdf.dropna()
+
+    # GET cores with PF
+    # dry permafrost: hzname contains ff
+    # ice rich permafrost: hzname contains f
+    #  non permafrost soils:  hzname contains no f
+    # hzdept: top of horizon depth
+    gdf_pf = gdf[gdf.hzname.str.contains('f')]
+    #get a list of the unique pedon sites
+    pf_unqsite=(np.unique(gdf_pf.siteobsiid))
+    pfDepth = [];obsdepth=[];lat =[];long=[];site=[];date=[];pfobs=[];othick = [];rock = []; method =[]
+    for u in pf_unqsite:
+        pfU = gdf_pf[gdf_pf.siteobsiid==u]
+        pfU=pfU.reset_index()
+        pfDepth.append(np.min(pfU.hzdept))
+        obsdepth.append(np.max(pfU.hzdepb))
+        lat.append(pfU.latstddeci[0]);long.append(pfU.longstddec[0])
+        date.append(pfU.objwlupdat[0])
+        site.append(u)
+        pfobs.append(1)
+        fpU = gdf[gdf.siteobsiid==u] #extract full soil profile to get the organic layer
+        opfU = fpU[fpU.hzname.str.contains('O')]
+        othick.append(np.max(opfU.hzdepb))
+        rock.append('N')
+        method.append('pit')
+
+    df = pd.DataFrame({'pf_depth':np.array(pfDepth),
+                              'lat':np.array(lat),
+                              'lon':np.array(long),
+                              'site_id':np.array(site),
+                              'date':np.array(date),
+                              'pf_observed':np.array(pfobs),
+                              'org_thick':np.array(othick),
+                              'rock':np.array(rock),
+                              'obs_limit':np.array(obsdepth),
+                              'method':np.array(method)})
+
+    gdf[~gdf.siteobsiid.isin(gdf_pf.siteobsiid)]
+    # index for non permafrost cores
+    gdf_np= gdf[~gdf.siteobsiid.isin(gdf_pf.siteobsiid)]
+    npf_unqsite=(np.unique(gdf_np.siteobsiid))
+    pfDepth = [];obsdepth=[];lat =[];long=[];site=[];date=[];pfobs=[];othick = [];rock = []; method =[]
+    for u in npf_unqsite:
+        pfU = gdf_np[gdf_np.siteobsiid==u]
+        pfU=pfU.reset_index()
+        pfDepth.append(np.nan)
+        obsdepth.append(np.max(pfU.hzdepb))
+        lat.append(pfU.latstddeci[0]);long.append(pfU.longstddec[0])
+        date.append(pfU.objwlupdat[0])
+        site.append(u)
+        pfobs.append(0)
+        opfU = pfU[pfU.hzname.str.contains('O')]
+        othick.append(np.max(opfU.hzdepb))
+        rock.append('N')
+        method.append('pit')
+
+    ndf = pd.DataFrame({'pf_depth':np.array(pfDepth),
+                              'lat':np.array(lat),
+                              'lon':np.array(long),
+                              'site_id':np.array(site),
+                              'date':np.array(date),
+                              'pf_observed':np.array(pfobs),
+                              'org_thick':np.array(othick),
+                              'rock':np.array(rock),
+                              'obs_limit':np.array(obsdepth),
+                              'method':np.array(method)})
+
+    # Merge the dataframes
+    df = pd.concat([df, ndf], ignore_index=True)
+    df['quality_flag_obs_limit_profile_bottom'] = df['pf_observed'].eq(0)
+    #df=df.reset_index()
+    df['source'] = source
+    df['thaw_depth'] = np.nan
+    data_utils.check_columns(df)
+    all_dfs.append(df)
+
+    # Remaining sites
+    sites = ['Delta_Projected_albers','Denali5_Projected_Albers','Denali6_Projected_Albers','Fbnks_Projected_Albers','FtGreely_Projected_Albers','Gates_Projected_Albers',
+             'Gulkana_Projected_Albers', 'Innoko_Projected_Albers', 'Kusko_Projected_Albers', 'Nenana_Projected_Albers', 'Yuk_char_Projected_Albers']
+    for site in sites:
+        # site=sites[7]
+        file = site + ".shp"
+        gdf = gpd.read_file(_ROOT_DIR / "data" / source / file)
+        gdf = gdf.to_crs(epsg=4326)
+        gdf['lon'] = [g.coords.xy[0][0] for g in gdf.geometry.values]
+        gdf['lat'] = [g.coords.xy[1][0] for g in gdf.geometry.values]
+
+        col_renaming =  {
+            "date": ["date_", "dateobs", "day", "obs_date", "date", 'Date_', 'DATE_','Date','Obs_Date','Day'],
+            "pf_depth": ["depth", "dpt", "pfrost_dpt", 'Pfrost_dpt', 'Depth'],
+            "obs_limit": ["dpth_of_ob", "obs_depth",'Dpth_of_ob',],
+            "pf_observed": ["pfrost", "pf_ob", "pf_observed",'Pfrost'],
+            "rock" : ['Rock'],
+            'transect_name' : ['TRANSECTst'],
+            'transect_point' :['STOPst'],
+            'org_thick' :['Org_Thick'],
+            'site_id' : ['Unique_ID', 'SiteID','OBJECTID_1', 'Site']
+        }
+
+        gdf = data_utils.standardize_column_names(dfs=[gdf],
+                                cols=col_renaming)[0]
+
+        if 'site_id' not in gdf.columns:
+            gdf['site_id'] = pd.NA
+        gdf['site_id'] = gdf['site_id'].fillna(site)
+        gdf['source'] = source
+
+        gdf['pf_observed'] = normalize_pf_observed(gdf['pf_observed'])
+        gdf = gdf[~pd.isna(gdf['pf_observed'])].copy()
+        gdf['pf_observed'] = gdf['pf_observed'].astype(int)
+
+        is_innoko = site == 'Innoko_Projected_Albers'
+        if is_innoko:
+            source_depth = pd.to_numeric(gdf['pf_depth'], errors='coerce')
+            source_bottom = gdf['Bottom'].astype('string').str.strip()
+            point_type = gdf['Pnt_type'].astype('string').str.strip()
+            presence = gdf['pf_observed'].eq(1)
+            absence = gdf['pf_observed'].eq(0)
+            over_two_m = absence & source_bottom.eq('>2m')
+
+            gdf['pastick_bottom'] = source_bottom
+            gdf['pastick_point_type'] = point_type
+            gdf['pastick_source_method'] = gdf['Method']
+            gdf['pastick_point'] = gdf['Point']
+            gdf['pf_depth'] = source_depth.where(presence)
+            gdf['thaw_depth'] = gdf['pf_depth']
+            gdf['obs_limit'] = source_depth.where(absence)
+            gdf.loc[over_two_m, 'obs_limit'] = 200.0
+            gdf['method'] = 'tp'
+            gdf['quality_flag_coord_lookup_or_interpolated'] = point_type.eq('Estimated')
+            gdf['quality_flag_source_unit_or_code_recoded'] = over_two_m
+
+            unusable_absence = absence & (
+                gdf['obs_limit'].isna() | gdf['obs_limit'].le(0)
+            )
+            print(
+                f"Removed {int(unusable_absence.sum())} Innoko absence rows without "
+                "a usable observation limit."
+            )
+            gdf = gdf.loc[~unusable_absence].copy()
+
+        toremove = ['Unique_ID', 'DATUM', 'UTMZONE', 'UTMEAST', 'UTMNORTH', 'LatDD', 'LongDD', 'geometry',
+                    'Method', 'LatDD84', 'LongDD84', 'Day', 'Zone', 'Lat', 'Lon', 'Easting', 'Northing',
+                    'Bottom', 'Pnt_type', 'Point','OBJECTID', 'Datum', 'UTM_Zone', 'UTM_Northi', 'UTM_Eastin',
+                    'Long_']
+        for tr in toremove:
+            if tr in gdf.columns:
+                gdf.drop(tr, axis=1, inplace=True)
+
+        if not is_innoko:
+            if 'obs_limit' not in gdf.columns:
+                gdf['obs_limit'] = np.nan
+            gdf.loc[gdf['obs_limit'] == 0, 'obs_limit'] = np.nan
+            gdf['thaw_depth'] = np.nan
+            gdf['method'] = 'unknown'
+        # if 'obs_depth' not in gdf.columns:
+        #     gdf['obs_depth'] = np.nan
+
+        data_utils.check_columns(gdf)
+
+        gdf = gdf[~((gdf['lat'] == 0) & (gdf['lon'] == 0))].copy()
+        all_dfs.append(pd.DataFrame(gdf))
+
+    final = pd.concat(all_dfs, ignore_index=True)
+    final.loc[final['pf_observed'] == 0, 'pf_depth'] = np.nan
+    final.loc[final['obs_limit'] == 0, 'obs_limit'] = np.nan
+    final['pastick_source_obs_limit_cm'] = final['obs_limit']
+    numeric_obs_limit = pd.to_numeric(final['obs_limit'], errors='coerce')
+    numeric_pf_depth = pd.to_numeric(final['pf_depth'], errors='coerce')
+    contradictory_presence_limit = (
+        final['pf_observed'].eq(1)
+        & numeric_obs_limit.notna()
+        & numeric_pf_depth.notna()
+        & numeric_obs_limit.lt(numeric_pf_depth)
     )
-    final = final.loc[~unusable_absence].copy()
-outfile = "processed_" + source + ".csv"
-final.to_csv(_ROOT_DIR / "data" / source / outfile, index=False)
+    existing_recode_flag = final.get(
+        'quality_flag_source_unit_or_code_recoded',
+        pd.Series(False, index=final.index),
+    ).fillna(False).astype(bool)
+    final['quality_flag_source_unit_or_code_recoded'] = (
+        existing_recode_flag | contradictory_presence_limit
+    )
+    final.loc[contradictory_presence_limit, 'obs_limit'] = np.nan
+    final = final[~((final['lat'] == 0) & (final['lon'] == 0))].copy()
+    rows_before_overlap = len(final)
+    final = remove_ncss_overlaps(final)
+    removed_count = rows_before_overlap - len(final)
+    if removed_count != EXPECTED_NCSS_OVERLAPS:
+        raise ValueError(
+            f"Expected {EXPECTED_NCSS_OVERLAPS} Pastick/NCSS overlaps; "
+            f"found {removed_count}. Review the source inputs before updating the count."
+        )
+    unusable_absence = final['pf_observed'].eq(0) & final['obs_limit'].isna()
+    if unusable_absence.any():
+        print(
+            f"Removed {int(unusable_absence.sum())} additional Pastick absence rows "
+            "without a usable observation limit."
+        )
+        final = final.loc[~unusable_absence].copy()
+    outfile = "processed_" + source + ".csv"
+    final.to_csv(_ROOT_DIR / "data" / source / outfile, index=False)
+
+
+if __name__ == "__main__":
+    main()
 
 
 
