@@ -9,6 +9,8 @@ Status: ingestion finalized with explicit maintainer authorization on 2026-10-05
 Source: [Streletskiy (2026), Figshare version 1](https://doi.org/10.6084/m9.figshare.32885756.v1),
 `CALM_Sites_Data.csv`, file id 66270764, retrieved 2026-10-05, CC BY 4.0.
 `figshare_metadata.json` preserves the repository version, citation, and license.
+Git preserves the raw CSV byte-for-byte, including its upstream CRLF line
+endings, so its pinned provenance checksum is identical on Windows and Linux.
 The related [paper](https://doi.org/10.1038/s43247-026-03824-1) is also a guide to
 original providers, not the producer of all the underlying measurements.
 

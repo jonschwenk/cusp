@@ -30,6 +30,8 @@ This file is intended to track changes to:
   80,264 observations from 60 sources and extends the date range to 2025-02-01
 - source attribution and data-use examples updated for v1.2
 - release exports use LF line endings and preserve their bytes in Git checkouts
+- pinned Streletskiy source CSV retains its upstream CRLF bytes so its original
+  SHA-256 checksum is platform-independent
 - v1.2 is published on GitHub for ARDAC workflow testing; Zenodo deposition is
   explicitly deferred
 - canonical observation validation now enforces column order, logical types,

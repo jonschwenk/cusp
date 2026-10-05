@@ -3,3 +3,6 @@ exports/** text eol=lf
 # Do not change checkout behavior for previously published snapshots.
 exports/archived/v1.0/* !text !eol
 exports/archived/v1.1/* !text !eol
+
+# This pinned upstream CSV includes CRLF bytes in its provenance checksum.
+data/Streletskiy_2026/CALM_Sites_Data.csv -text whitespace=cr-at-eol
