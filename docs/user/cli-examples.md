@@ -26,7 +26,7 @@ read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 
 The feature examples pass that value explicitly through `--gee-project`.
 
-The examples below use `exports/latest/cusp_v1.1.csv` as the input release
+The examples below use `exports/latest/cusp_v1.2.csv` as the input release
 file. Replace that with the path to the CUSP release file you downloaded or
 exported.
 
@@ -65,7 +65,7 @@ The main aggregation knobs are:
 
 ```bash
 python -m cusp.aggregate \
-  --input exports/latest/cusp_v1.1.csv \
+  --input exports/latest/cusp_v1.2.csv \
   --output runs/examples/aggregated_100m_example.csv \
   --membership-output runs/examples/aggregated_100m_example_membership.csv \
   --flags-output runs/examples/aggregated_100m_example_qc_flags.csv \
@@ -87,7 +87,7 @@ prefer:
 ```powershell
 $DistanceM = 100
 $TemporalLinkDays = 31
-$InputPath = "exports\latest\cusp_v1.1.csv"
+$InputPath = "exports\latest\cusp_v1.2.csv"
 $OutDir = "runs\examples"
 $Stem = "aggregated_${DistanceM}m_example"
 
@@ -181,9 +181,9 @@ An observation-keyed table can be sampled from a versioned release:
 
 ```bash
 python -m cusp.features \
-  --input exports/latest/cusp_v1.1.csv \
-  --output runs/examples/cusp_v1.1_features.csv \
-  --manifest runs/examples/cusp_v1.1_features_manifest.json \
+  --input exports/latest/cusp_v1.2.csv \
+  --output runs/examples/cusp_v1.2_features.csv \
+  --manifest runs/examples/cusp_v1.2_features_manifest.json \
   --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```

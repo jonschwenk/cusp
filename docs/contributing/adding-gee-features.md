@@ -18,7 +18,7 @@ The main code is in:
 
 The sampler can read:
 
-- the main CUSP release table, such as `cusp_v1.1.csv`
+- the main CUSP release table, such as `cusp_v1.2.csv`
 - an aggregated CUSP table
 - any point-like table with:
     - a canonical ID (`cusp_obs_id` or `cusp_30m_id`)
@@ -159,9 +159,9 @@ from pathlib import Path
 
 import pandas as pd
 
-output = Path("runs/examples/cusp_v1.1_smoke25.csv")
+output = Path("runs/examples/cusp_v1.2_smoke25.csv")
 output.parent.mkdir(parents=True, exist_ok=True)
-pd.read_csv("exports/latest/cusp_v1.1.csv", nrows=25).to_csv(output, index=False)
+pd.read_csv("exports/latest/cusp_v1.2.csv", nrows=25).to_csv(output, index=False)
 ```
 
 Then authenticate, enter a usable project ID, and sample the newly registered
@@ -171,7 +171,7 @@ feature:
 earthengine authenticate
 read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 python -m cusp.features \
-  --input runs/examples/cusp_v1.1_smoke25.csv \
+  --input runs/examples/cusp_v1.2_smoke25.csv \
   --output runs/examples/example_hand_smoke.csv \
   --manifest runs/examples/example_hand_smoke_manifest.json \
   --gee-project "$CUSP_GEE_PROJECT" \

@@ -99,6 +99,10 @@ records have only an approximate date, a campaign date, or a year. Check date
 flags and avoid treating observations from different parts of the thaw season
 as directly comparable without considering that timing.
 
+v1.2 includes Southern Hemisphere sites, where the thaw season occurs at a
+different time of year. Do not apply a Northern Hemisphere summer-month filter
+to the entire table.
+
 ## Location And Scale
 
 CUSP uses point coordinates when possible, but coordinate precision varies.

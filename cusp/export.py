@@ -133,7 +133,7 @@ def copy_text(path: Path, text: str) -> None:
     """Write UTF-8 text to a path, creating parents when needed."""
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
+    path.write_text(text, encoding="utf-8", newline="\n")
 
 
 def copy_file(src: Path, dst: Path) -> None:
@@ -207,8 +207,11 @@ def release_info_markdown(
         f"- The master bibliography file is `cusp_sources_{dataset_version}.bib`.\n"
         f"- To extract only the entries you need from a filtered CUSP table, run:\n\n"
         f"```bash\n"
-        f"python -m cusp.citations --input path/to/your_cusp_table.csv --output references.bib\n"
+        f"python -m cusp.citations --input cusp_{dataset_version}.csv "
+        f"--master-bib cusp_sources_{dataset_version}.bib --output references.bib\n"
         f"```\n"
+        f"\nRun from the downloaded bundle directory. For a study, replace "
+        f"`--input` with your final filtered table.\n"
     )
 
 
@@ -245,7 +248,7 @@ def export_release_bundle(
     release_info_name = "RELEASE_INFO.md"
 
     canonical_archived_path = archived_dir / canonical_name
-    canonical.to_csv(canonical_archived_path, index=False)
+    canonical.to_csv(canonical_archived_path, index=False, lineterminator="\n")
     artifacts: list[ArtifactSummary] = [
         summarize_artifact(canonical_archived_path, "Canonical CUSP dataset.", rows=len(canonical))
     ]
@@ -253,7 +256,7 @@ def export_release_bundle(
     features_note = "not included"
     if features is not None:
         features_archived_path = archived_dir / features_name
-        features.to_csv(features_archived_path, index=False)
+        features.to_csv(features_archived_path, index=False, lineterminator="\n")
         artifacts.append(
             summarize_artifact(
                 features_archived_path,

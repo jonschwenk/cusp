@@ -1,7 +1,7 @@
 """
 metadata_schema_version = 1
 source_key = "Crater_Lake_AERT_2024"
-release_clearance = "needs_review"
+release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
 last_substantive_update = "2026-10-05"
@@ -38,7 +38,7 @@ known_limitations = [
 external_dependencies = [
   "pandas and CUSP's data_utils; processing is offline. CALM_South is the documented overlap source, not a required input to reproduce the direct probe measurements.",
 ]
-notes = "Zenodo v1.0 and the related paper are CC BY 4.0. Working ingestion prepared under issue #41; release clearance remains needs_review. No official release export is modified."
+notes = "Zenodo v1.0 and the related paper are CC BY 4.0. Prepared under issue #41. Jon Schwenk explicitly approved all ten manual probes for public CUSP v1.2 on 2026-10-05, with site-level coordinates and component-to-summary overlap retained. This approval excludes ERT-derived depths."
 """
 
 from __future__ import annotations

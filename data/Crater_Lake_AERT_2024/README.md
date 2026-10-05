@@ -1,8 +1,10 @@
 # Crater Lake Direct Probes
 
 Tracking: [issue #41](https://github.com/jonschwenk/cusp/issues/41).
-Working ingestion prepared on 2026-10-05; `release_clearance = "needs_review"`.
-No official release has been changed.
+Prepared on 2026-10-05; `release_clearance = "approved"`.
+Jon Schwenk explicitly approved the ten manual probes for public CUSP v1.2
+on 2026-10-05, including their site-level coordinates and overlap flags.
+This approval does not include ERT-derived depths.
 
 ## Source And Reproduction
 

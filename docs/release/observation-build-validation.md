@@ -3,16 +3,17 @@
 ## Scope
 
 This page records the latest validated state of the observation-level CUSP
-build. The current snapshot was generated on 2026-10-03 after correcting the
-Pastick NCSS-overlap filter. It retains the earlier dense GPR standardization,
+build. The v1.2 snapshot was generated on 2026-10-05 after correcting the
+Pastick NCSS-overlap filter and adding CALM-South, Streletskiy et al. (2026),
+and ten direct Crater Lake probes. It retains the earlier dense GPR standardization,
 Moore/Jafarov overlap resolution, explicit observation limits for
 instrument-based permafrost-absence rows, and flagged visual Koyukuk
 classifications.
 
-This is an unreleased working build. Published v1.1 artifacts remain unchanged
-at 79,389 observations.
+The v1.2 release contains 80,264 observations from 60 sources. Published v1.1
+artifacts remain unchanged at 79,389 observations.
 
-## Unreleased Pastick Correction
+## Pastick Correction
 
 [Issue 37](https://github.com/jonschwenk/cusp/issues/37) corrected removal by
 reused DataFrame index labels. The filter now removes only the 58 numeric-ID
@@ -24,7 +25,8 @@ The processed Pastick table grows from 7,718 to 7,933 rows, restoring 156
 source rows remain unchanged. One restored Denali5 row is an exact duplicate
 under the canonical build rules, so the final table gains 214 observations,
 not 215. All published v1.1 observation IDs and values are preserved in the
-working build; the source count and date range are unchanged.
+v1.2 release. The correction alone does not change the source count or date
+range; the three new sources extend the release through 2025-02-01.
 
 Regression tests cover duplicate index labels, actual removal counts,
 distance and eligibility checks, unchanged input rows, empty input, and a
@@ -47,15 +49,15 @@ The final build and tests were run under Python 3.13.
 
 ## Current Snapshot
 
-- canonical observations: `79,603` rows and `12` columns
-- included sources: `57`
-- date range: `1952-06-01` through `2024-10-11`
-- permafrost observed: `62,198`, including `114` visually interpreted rows
-- permafrost not detected to a positive observation limit: `17,205`
+- canonical observations: `80,264` rows and `12` columns
+- included sources: `60`
+- date range: `1952-06-01` through `2025-02-01`
+- permafrost observed: `62,848`, including `114` visually interpreted rows
+- permafrost not detected to a positive observation limit: `17,216`
 - visually interpreted permafrost absence without a point-specific observation
   limit: `200`
-- all-fields observations: `79,603` rows
-- source metadata and source-reference crosswalk: `57` rows each
+- all-fields observations: `80,264` rows
+- source metadata and source-reference crosswalk: `60` rows each
 - hard-deleted input rows: `56`
 - build-level QC flag rows: `0`
 
@@ -85,7 +87,7 @@ Additional build invariants also passed:
 - every absence row has blank canonical `pf_depth` and `thaw_depth`
 - every depth-bounded absence row carries the lower-bound flag `LB`
 - every presence row without an exact depth carries the upper-bound flag `UB`
-- all 57 processing-script metadata headers are valid structured TOML
+- all 60 processing-script metadata headers are valid structured TOML
 - normalized coordinate/date/state/depth/method matching found no remaining
   exact cross-source duplicate groups
 
@@ -132,8 +134,8 @@ can be removed as a group for instrument-only or depth-bounded analyses.
 
 ## Verdict
 
-The corrected working observation table passes the hard validation gates.
-The Pastick correction is intended for the next release, not a replacement of
-published v1.1 files. The official release bundle omits derived environmental
+The v1.2 observation table passes the hard validation gates.
+The Pastick correction is included in v1.2, not a replacement of published
+v1.1 files. The official release bundle omits derived environmental
 features; users can generate those separately with the feature-sampling
 workflow.

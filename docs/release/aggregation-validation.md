@@ -4,8 +4,9 @@
 
 This document records the latest validated rebuild of the default `30m`
 aggregation workflow from the canonical observation-level table. The current
-snapshot was rebuilt on 2026-10-03 from all 79,603 working observation rows,
-including the [unreleased Pastick correction](observation-build-validation.md#unreleased-pastick-correction).
+snapshot was rebuilt on 2026-10-05 from all 80,264 v1.2 observation rows,
+including the [Pastick correction](observation-build-validation.md#pastick-correction)
+and the three new sources.
 The `30m` aggregation is a reproducible derivative, not an official versioned
 release artifact for v1.
 
@@ -38,7 +39,7 @@ The current aggregation path:
 ## Current Rebuild Snapshot
 
 - `aggregated_30m.csv`
-  - rows: `34,656`
+  - rows: `35,311`
   - columns:
     - `cusp_30m_id`
     - `year`
@@ -54,9 +55,9 @@ The current aggregation path:
     - `aggregated_sources`
     - `n_grouped`
 - `aggregated_30m_membership.csv`
-  - rows: `79,603`
-  - unique aggregated groups: `34,656`
-  - unique member observations: `79,603`
+  - rows: `80,264`
+  - unique aggregated groups: `35,311`
+  - unique member observations: `80,264`
 - `aggregated_30m_excluded_rows.csv`
   - rows: `0`
 - `aggregated_30m_qc_flags.csv`
@@ -118,7 +119,13 @@ The rebuilt aggregation and its membership table passed
 
 ## Confirmed CRS Behavior
 
-No open CRS decision remains for v1:
+The default grouping CRS is unchanged:
 
 - aggregation distance is computed in projected `EPSG:3413`
 - exported geometries remain in user-facing `EPSG:4326`
+
+v1.2 also includes Southern Hemisphere sites. This Arctic projection is not
+suitable for interpreting their cells as a 30 m ground-scale aggregation.
+Passing the structural QA gate does not validate that scientific choice; use
+the canonical observations and a suitable projection for those sites. See the
+[aggregation caveat](../user/aggregation-guide.md#run-the-default-aggregation).

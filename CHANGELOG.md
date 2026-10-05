@@ -12,14 +12,26 @@ This file is intended to track changes to:
 
 ## [Unreleased]
 
+## [v1.2] - 2026-10-05
+
 ### Added
 
+- 437 CALM-South annual observations, 214 additional Streletskiy et al. (2026)
+  annual observations, and ten direct Crater Lake probes
 - machine-readable frozen observation contract in
   `cusp/canonical_observation_schema.json`
 - shared schema-contract validation for builds, exports, QA, and tests
 
 ### Changed
 
+- restored 214 canonical Pastick observations incorrectly removed by an
+  NCSS-overlap filter operating on repeated DataFrame indices
+- all v1.1 rows, field values, and observation IDs remain unchanged; v1.2 has
+  80,264 observations from 60 sources and extends the date range to 2025-02-01
+- source attribution and data-use examples updated for v1.2
+- release exports use LF line endings and preserve their bytes in Git checkouts
+- v1.2 is published on GitHub for ARDAC workflow testing; Zenodo deposition is
+  explicitly deferred
 - canonical observation validation now enforces column order, logical types,
   nullability, vocabularies, row semantics, and deterministic `cusp_obs_id`
 - source, method, and quality-flag vocabulary additions are now explicitly

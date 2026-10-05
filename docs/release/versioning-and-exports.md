@@ -81,8 +81,8 @@ Use a real export tree inside the repo workspace:
 ```text
 exports/
   latest/
-    cusp_v1.1.csv
-    cusp_sources_v1.1.bib
+    cusp_v1.2.csv
+    cusp_sources_v1.2.bib
     RELEASE_INFO.md
   archived/
     v1.0/
@@ -90,6 +90,10 @@ exports/
     v1.1/
       cusp_v1.1.csv
       cusp_sources_v1.1.bib
+      RELEASE_INFO.md
+    v1.2/
+      cusp_v1.2.csv
+      cusp_sources_v1.2.bib
       RELEASE_INFO.md
 ```
 
@@ -169,9 +173,9 @@ Supported helper:
 
 ```bash
 python -m cusp.citations \
-  --input exports/latest/cusp_v1.1.csv \
-  --master-bib exports/latest/cusp_sources_v1.1.bib \
-  --output runs/examples/cusp_v1.1_references.bib
+  --input exports/latest/cusp_v1.2.csv \
+  --master-bib exports/latest/cusp_sources_v1.2.bib \
+  --output runs/examples/cusp_v1.2_references.bib
 ```
 
 This works with tables that contain either:
@@ -202,8 +206,8 @@ That means:
    and deterministic observation IDs.
 3. Decide the next dataset version.
 4. Run the scripted release gate, including strict docs validation, with
-   `python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke`.
-5. Package the official bundle with `python -m cusp.export --version 1.1` and
+   `python -m cusp.release_gate --version 1.2 --skip-feature-export --skip-gee-smoke`.
+5. Package the official bundle with `python -m cusp.export --version 1.2` and
    no `--features-input` argument, updating the version for the release being
    prepared. Official exports also refresh the generated release tracker in
    `README.md` from `exports/latest/cusp_vX.Y.csv`.
@@ -216,6 +220,10 @@ That means:
 9. Upload and publish the exact bundle on Zenodo after verifying its checksums.
 10. Publish a GitHub Release containing files byte-identical to the Zenodo
     record.
+
+For v1.2, publish the validated bundle on GitHub without a Zenodo deposit so
+ARDAC can test its release-sync workflow. Record that exception in the release
+notes; the Zenodo migration remains planned, not completed.
 
 The release gate writes test exports and aggregation outputs under
 `runs/release_gate/`. Those files validate the workflow but are not official

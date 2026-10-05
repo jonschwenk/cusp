@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from cusp.readme_tracker import find_latest_release_csv
 from cusp.schema_contract import (
     CANONICAL_COLUMNS,
     OBS_ID_COMPONENT_COLUMNS,
@@ -82,6 +83,11 @@ class CanonicalSchemaContractTests(unittest.TestCase):
 
     def test_v11_release_conforms_to_contract(self) -> None:
         result = validate_canonical_dataframe(pd.read_csv(V11_PATH, low_memory=False))
+        self.assertTrue(result.ok, result.details_frame().to_string(index=False))
+
+    def test_latest_release_conforms_to_contract(self) -> None:
+        latest = find_latest_release_csv(REPO_ROOT / "exports" / "latest")
+        result = validate_canonical_dataframe(pd.read_csv(latest, low_memory=False))
         self.assertTrue(result.ok, result.details_frame().to_string(index=False))
 
     def test_v10_predates_quality_flag_contract(self) -> None:

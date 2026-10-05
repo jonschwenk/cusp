@@ -1,0 +1,5 @@
+# Preserve release checksums across Windows and Unix checkouts.
+exports/** text eol=lf
+# Do not change checkout behavior for previously published snapshots.
+exports/archived/v1.0/* !text !eol
+exports/archived/v1.1/* !text !eol

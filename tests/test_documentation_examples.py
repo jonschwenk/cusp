@@ -15,6 +15,7 @@ from types import SimpleNamespace
 import pandas as pd
 
 from cusp.features.models import FeatureDefinition
+from cusp.readme_tracker import find_latest_release_csv
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -118,6 +119,12 @@ def documented_cusp_commands() -> list[DocumentedCliCommand]:
 
 
 class DocumentationExampleTests(unittest.TestCase):
+    def test_latest_release_paths_in_code_blocks_exist(self) -> None:
+        for block in documentation_code_blocks():
+            for filename in re.findall(r"exports[/\\]latest[/\\]([A-Za-z0-9_.-]+)", block.code):
+                with self.subTest(block=block.label, filename=filename):
+                    self.assertTrue((REPO_ROOT / "exports" / "latest" / filename).is_file())
+
     def test_python_blocks_compile(self) -> None:
         for block in documentation_code_blocks():
             if block.language != "python":
@@ -217,11 +224,10 @@ class DocumentationExampleTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as temp_dir:
             workdir = Path(temp_dir)
-            shutil.copy2(REPO_ROOT / "exports" / "latest" / "cusp_v1.1.csv", workdir)
-            shutil.copy2(
-                REPO_ROOT / "exports" / "latest" / "cusp_sources_v1.1.bib",
-                workdir,
-            )
+            release_csv = find_latest_release_csv(REPO_ROOT / "exports" / "latest")
+            version = release_csv.stem.removeprefix("cusp_")
+            shutil.copy2(release_csv, workdir)
+            shutil.copy2(release_csv.with_name(f"cusp_sources_{version}.bib"), workdir)
 
             for block in python_blocks:
                 result = subprocess.run(
@@ -273,7 +279,7 @@ class DocumentationExampleTests(unittest.TestCase):
             block for block in python_blocks if 'FEATURE_REGISTRY["example_hand"]' in block.code
         )
         smoke_input_block = next(
-            block for block in python_blocks if "cusp_v1.1_smoke25.csv" in block.code
+            block for block in python_blocks if "_smoke25.csv" in block.code
         )
 
         namespace: dict[str, object] = {
@@ -311,7 +317,7 @@ class DocumentationExampleTests(unittest.TestCase):
             workdir = Path(temp_dir)
             release_dir = workdir / "exports" / "latest"
             release_dir.mkdir(parents=True)
-            shutil.copy2(REPO_ROOT / "exports" / "latest" / "cusp_v1.1.csv", release_dir)
+            shutil.copy2(find_latest_release_csv(REPO_ROOT / "exports" / "latest"), release_dir)
             result = subprocess.run(
                 [sys.executable, "-c", smoke_input_block.code],
                 cwd=workdir,
@@ -324,7 +330,12 @@ class DocumentationExampleTests(unittest.TestCase):
                 0,
                 f"{smoke_input_block.label} failed:\n{result.stdout}\n{result.stderr}",
             )
-            smoke_input = pd.read_csv(workdir / "runs" / "examples" / "cusp_v1.1_smoke25.csv")
+            smoke_command = next(
+                command for command in documented_cusp_commands()
+                if command.block.path == page and command.module == "cusp.features"
+            )
+            smoke_path = smoke_command.tokens[smoke_command.tokens.index("--input") + 1]
+            smoke_input = pd.read_csv(workdir / smoke_path)
             self.assertEqual(len(smoke_input), 25)
 
 

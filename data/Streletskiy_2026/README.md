@@ -73,7 +73,8 @@ trend estimates, and significance statistics are not CUSP observations.
 The six tracked leads below were reviewed on 2026-10-05 without author contact.
 Ten public Crater Lake manual probes were prepared as
 [`Crater_Lake_AERT_2024`](../Crater_Lake_AERT_2024/README.md), with site-level
-coordinates, overlap flags, and release clearance still `needs_review`.
+coordinates and overlap flags; Jon Schwenk approved their inclusion in v1.2
+on 2026-10-05.
 The remaining native data and ERT interpretation were deferred or found
 incompatible with CUSP; closed issues preserve public-file inventories,
 interpretation concerns, and explicit conditions for revisiting them.

@@ -39,9 +39,9 @@ account can use:
 earthengine authenticate
 read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 python -m cusp.features \
-  --input exports/latest/cusp_v1.1.csv \
-  --output runs/examples/cusp_v1.1_features.csv \
-  --manifest runs/examples/cusp_v1.1_features_manifest.json \
+  --input exports/latest/cusp_v1.2.csv \
+  --output runs/examples/cusp_v1.2_features.csv \
+  --manifest runs/examples/cusp_v1.2_features_manifest.json \
   --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
@@ -51,7 +51,7 @@ python -m cusp.features \
 The release gate runs the main checks in one place:
 
 ```bash
-python -m cusp.release_gate --version 1.1 --skip-feature-export --skip-gee-smoke
+python -m cusp.release_gate --version 1.2 --skip-feature-export --skip-gee-smoke
 ```
 
 The official data bundle does not include an environmental feature table, so

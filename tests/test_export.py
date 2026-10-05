@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from cusp.export import export_release_bundle, normalize_dataset_version
+from cusp.export import export_release_bundle, normalize_dataset_version, sha256_file
 from cusp.readme_tracker import TRACKER_END, TRACKER_START
 from cusp.schema_contract import build_cusp_obs_id
 
@@ -85,6 +85,12 @@ class ExportTests(unittest.TestCase):
             release_info = (archived_dir / "RELEASE_INFO.md").read_text(encoding="utf-8")
             self.assertIn("CUSP Release v1.0", release_info)
             self.assertIn("cusp_v1.0.csv", release_info)
+            for path in archived_dir.iterdir():
+                with self.subTest(artifact=path.name):
+                    self.assertNotIn(b"\r\n", path.read_bytes())
+                    self.assertEqual(path.read_bytes(), (latest_dir / path.name).read_bytes())
+                    if path.name != "RELEASE_INFO.md":
+                        self.assertIn(sha256_file(path), release_info)
             readme = readme_path.read_text(encoding="utf-8")
             self.assertIn(">v1.0</a>", readme)
             self.assertIn("<strong>2</strong><br><sub>Total observations</sub>", readme)

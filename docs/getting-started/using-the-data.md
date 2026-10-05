@@ -18,7 +18,7 @@ This Python example loads the table and parses the observation date:
 ```python
 import pandas as pd
 
-cusp = pd.read_csv("cusp_v1.1.csv", parse_dates=["date"])
+cusp = pd.read_csv("cusp_v1.2.csv", parse_dates=["date"])
 
 print(cusp.shape)
 print(cusp.columns.tolist())
@@ -51,7 +51,7 @@ For example, this identifies lower-bound absence rows without removing them:
 ```python
 import pandas as pd
 
-cusp = pd.read_csv("cusp_v1.1.csv", low_memory=False)
+cusp = pd.read_csv("cusp_v1.2.csv", low_memory=False)
 flag_sets = cusp["quality_flags"].fillna("").str.split(";")
 has_lower_bound_absence = flag_sets.map(lambda flags: "LB" in flags)
 
@@ -78,12 +78,12 @@ After creating your final subset, the CUSP citation helper can inspect its
 ```bash
 python -m cusp.citations \
   --input lower_bound_absences.csv \
-  --master-bib cusp_sources_v1.1.bib \
+  --master-bib cusp_sources_v1.2.bib \
   --output lower_bound_absence_references.bib
 ```
 
 This command continues the example above and assumes the downloaded
-`cusp_sources_v1.1.bib` file is in the same directory. For your analysis,
+`cusp_sources_v1.2.bib` file is in the same directory. For your analysis,
 point `--input` at your final table and choose any output filename. Using the
 helper requires the [CUSP tools](../user/index.md). See
 [Attribution and BibTeX](../user/data-use-and-attribution.md) for the full

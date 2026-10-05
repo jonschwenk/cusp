@@ -51,13 +51,13 @@ the source bibliography you need:
 
 ```bash
 python -m cusp.citations \
-  --input cusp_v1.1.csv \
-  --master-bib cusp_sources_v1.1.bib \
-  --output cusp_v1.1_references.bib
+  --input cusp_v1.2.csv \
+  --master-bib cusp_sources_v1.2.bib \
+  --output cusp_v1.2_references.bib
 ```
 
 The command above can be run unchanged from a directory containing the two
-downloaded v1.1 release files. It verifies the workflow against the complete
+downloaded v1.2 release files. It verifies the workflow against the complete
 release. For a study, change `--input` to the final filtered or aggregated
 table so the output contains only the original sources actually used.
 

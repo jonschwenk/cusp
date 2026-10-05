@@ -6,18 +6,21 @@ files used inside the repository.
 
 ## Current Release
 
-The current public release is **CUSP v1.1**. Download the observation table and
+The current public release is **CUSP v1.2**. Download the observation table and
 keep its source bibliography and release metadata with your analysis.
 
 <div class="cusp-button-row" markdown="1">
 
-[Download the v1.1 CSV](https://github.com/jonschwenk/cusp/releases/download/v1.1/cusp_v1.1.csv){ .md-button .md-button--primary }
-[Download the source BibTeX](https://github.com/jonschwenk/cusp/releases/download/v1.1/cusp_sources_v1.1.bib){ .md-button }
-[Download release metadata](https://github.com/jonschwenk/cusp/releases/download/v1.1/RELEASE_INFO.md){ .md-button }
+[Download the v1.2 CSV](https://github.com/jonschwenk/cusp/releases/download/v1.2/cusp_v1.2.csv){ .md-button .md-button--primary }
+[Download the source BibTeX](https://github.com/jonschwenk/cusp/releases/download/v1.2/cusp_sources_v1.2.bib){ .md-button }
+[Download release metadata](https://github.com/jonschwenk/cusp/releases/download/v1.2/RELEASE_INFO.md){ .md-button }
 
 </div>
 
-[View v1.1 release notes and checksums](https://github.com/jonschwenk/cusp/releases/tag/v1.1)
+[View v1.2 release notes and checksums](https://github.com/jonschwenk/cusp/releases/tag/v1.2)
+
+This release is hosted on GitHub for the ARDAC integration workflow test.
+The planned Zenodo deposit is deferred; no CUSP DOI has been assigned to v1.2.
 
 ## Other Versions And Repository Copy
 
