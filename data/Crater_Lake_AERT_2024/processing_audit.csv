@@ -1,0 +1,16 @@
+date,source_field,source_depth_cm,decision
+2009-02-15,"[3,2]",34.0,retained_direct_probe
+2010-01-30,"[3,2]",33.0,retained_direct_probe
+2011-02-10,"[3,2]",29.5,retained_direct_probe
+2019-02-04,"[3,2]",29.5,retained_direct_probe
+2020-02-15,"[3,2]",34.0,retained_direct_probe
+2009-02-15,"[3,3]",33.0,retained_direct_probe
+2010-01-30,"[3,3]",30.0,retained_direct_probe
+2011-02-10,"[3,3]",26.0,retained_direct_probe
+2019-02-04,"[3,3]",29.5,retained_direct_probe
+2020-02-15,"[3,3]",35.0,retained_direct_probe
+2009-02-15,mean,33.5,excluded_derived_mean
+2010-01-30,mean,31.5,excluded_derived_mean
+2011-02-10,mean,27.8,excluded_derived_mean
+2019-02-04,mean,29.5,excluded_derived_mean
+2020-02-15,mean,34.5,excluded_derived_mean

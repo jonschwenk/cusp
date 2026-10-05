@@ -5,6 +5,7 @@
 Make every official CUSP data release:
 
 - citable
+- identifiable with an immutable version DOI
 - reproducible
 - easy to find as the current `latest`
 - easy to recover later as an archived historical snapshot
@@ -19,6 +20,15 @@ The canonical bundle contains the observation-level dataset, the bibliography
 for included sources, and a release record with checksums. Aggregation and
 environmental feature sampling remain supported derived workflows, but their
 outputs are not canonical release artifacts.
+
+Zenodo is the designated preservation and DOI service for official dataset
+releases. Until the initial Zenodo version chain is published, the existing
+GitHub Releases remain authoritative. After migration, GitHub remains the
+development repository and provides an exact release mirror. ARDAC may serve
+and visualize a release, but it must identify the CUSP version and
+version-specific Zenodo DOI being served. See the
+[Zenodo release archive](../maintainers/zenodo-releases.md) for the deposit and
+versioning workflow.
 
 ## Version Format
 
@@ -113,7 +123,7 @@ table produced by `python -m cusp.build`.
 
 The original v1.0 repository bundle included `cusp_features_v1.0.csv`, an
 observation-level Google Earth Engine feature table. The retroactive v1.0
-GitHub Release preserves that file as part of the historical snapshot.
+archive preserves that file as part of the historical snapshot.
 
 It is not part of the canonical release contract. Beginning with v1.1, CUSP
 releases omit feature tables. Users can generate one from a chosen observation
@@ -149,6 +159,7 @@ It should include:
 
 The public citation model is now intentionally simple:
 
+- cite the version-specific CUSP DOI for the exact release used, once assigned
 - export one BibTeX file: `cusp_sources_vX.Y.bib`
 - use source keys in the data table as BibTeX entry keys
 - provide a helper command to extract only the needed entries from any filtered
@@ -197,8 +208,14 @@ That means:
    prepared. Official exports also refresh the generated release tracker in
    `README.md` from `exports/latest/cusp_vX.Y.csv`.
 6. Review `RELEASE_INFO.md`, file hashes, and row/source counts.
-7. Commit the archived bundle, refresh `exports/latest/`, tag the data version,
-   and publish the matching GitHub Release.
+7. Follow the [Zenodo release workflow](../maintainers/zenodo-releases.md) to
+   create a new-version draft, reserve its DOI, and finalize the release
+   record.
+8. Rerun the release checks, commit the archived bundle, refresh
+   `exports/latest/`, and tag the data version.
+9. Upload and publish the exact bundle on Zenodo after verifying its checksums.
+10. Publish a GitHub Release containing files byte-identical to the Zenodo
+    record.
 
 The release gate writes test exports and aggregation outputs under
 `runs/release_gate/`. Those files validate the workflow but are not official

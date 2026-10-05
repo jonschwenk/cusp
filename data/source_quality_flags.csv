@@ -18,6 +18,8 @@ CALM_South,coord_site_level
 Chapin_2025,summary_statistic
 Chapin_2025,date_assigned
 Chapin_2025,coord_lookup_or_interpolated
+Crater_Lake_AERT_2024,coord_site_level
+Crater_Lake_AERT_2024,possible_duplicate_or_overlap
 Douglas_Koyukuk_2022,obs_limit_assumed
 Ebel_2018,possible_duplicate_or_overlap
 Fisher_2016,date_assigned

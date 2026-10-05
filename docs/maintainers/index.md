@@ -28,6 +28,7 @@ Maintainer pages are useful when you need to:
 - [Release process](../release/index.md)
 - [Source release clearance](source-release-clearance-guidelines.md)
 - [Versioning and exports](../release/versioning-and-exports.md)
+- [Zenodo release archive](zenodo-releases.md)
 - [QA validation](../release/qa-validation.md)
 - [Observation build validation](../release/observation-build-validation.md)
 - [Aggregation validation](../release/aggregation-validation.md)

@@ -70,6 +70,14 @@ trend estimates, and significance statistics are not CUSP observations.
 
 ## Future Provider Leads
 
+The six tracked leads below were reviewed on 2026-10-05 without author contact.
+Ten public Crater Lake manual probes were prepared as
+[`Crater_Lake_AERT_2024`](../Crater_Lake_AERT_2024/README.md), with site-level
+coordinates, overlap flags, and release clearance still `needs_review`.
+The remaining native data and ERT interpretation were deferred or found
+incompatible with CUSP; closed issues preserve public-file inventories,
+interpretation concerns, and explicit conditions for revisiting them.
+
 Annual observations already available in the original workbook or this synthesis
 are ingested; obtaining contact-only native files is not a prerequisite. These
 are optional opportunities for **additional detail or years**, not outstanding
@@ -94,9 +102,11 @@ requirements for this ingestion:
   southern holdings do not replace the full original CALM-South annual workbook.
 - [Crater Lake A-ERT (#41)](https://github.com/jonschwenk/cusp/issues/41): the
   [Farzamian et al. (2024) study](https://tc.copernicus.org/articles/18/4197/2024/)
-  links public field-geophysics files and an interpretation workflow. Assess
-  compatible observed-depth results and overlap before proposing ingestion;
-  raw resistivity and inversion cells are not themselves CUSP observations.
+  links public field-geophysics files and ten dated manual probe measurements.
+  The probes were prepared with site-level coordinates and component-to-summary
+  overlap documented; ERT-derived depths remain deferred because their threshold
+  and sensitivity choices require scientific review. Raw resistivity and
+  inversion cells are not themselves CUSP observations.
 - [Crater Lake 50 cm temperatures (#42)](https://github.com/jonschwenk/cusp/issues/42):
   a [public Zenodo archive](https://doi.org/10.5281/zenodo.15849051) includes
   16 located sensors. Single-depth temperatures alone do not yield exact ALT or

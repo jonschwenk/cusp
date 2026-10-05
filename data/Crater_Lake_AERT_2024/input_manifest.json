@@ -1,0 +1,39 @@
+{
+  "archive": {
+    "file": "AERT-v1.0.zip",
+    "url": "https://zenodo.org/api/records/13754727/files/teddiherring/AERT-v1.0.zip/content",
+    "resolved_url": "https://zenodo.org/api/records/13754727/files/teddiherring/AERT-v1.0.zip/content",
+    "retrieved": "2026-10-05T17:24:08.281683+00:00",
+    "bytes": 6698433,
+    "sha256": "87690894b954f6d332443bddc6f0f60df8bc3075d407afd69745b76e358df0b7",
+    "content_type": "application/octet-stream"
+  },
+  "license": "CC BY 4.0",
+  "record_url": "https://doi.org/10.5281/zenodo.13754727",
+  "extracted_file": {
+    "path": "probing_data.txt",
+    "archive_member": "teddiherring-AERT-8f0a8c7/data_AERT/probing_data.txt",
+    "bytes": 151,
+    "sha256": "a1758dd1372f5bcb5c198fffa614940f1762058bbd8623492f4e536ead86c947"
+  },
+  "unit_evidence": {
+    "archive_member": "teddiherring-AERT-8f0a8c7/data_processing_AERT.ipynb",
+    "sha256": "f27b11b18f0a1cde880e131a1844486cce049a53312fd1e1deb9e8cbdb25771f",
+    "detail": "The archived notebook plots the probing mean divided by 100 on the thaw-depth axis in metres.",
+    "code_lines": [
+      "ax[1].plot(dt[n_surveys_proc_2010:],np.abs(z_thaw[n_surveys_proc_2010:]),'r',label='Interpreted thaw depth\\nusing maximum gradients')",
+      "probedata = pd.read_csv('data_AERT/probing_data.txt',delimiter='\\t')",
+      "        ax[1].plot(datetime.datetime.strptime(probedata['date'].iloc[i], '%Y-%m-%d'),probedata['mean'].iloc[i]/100,'ko',markersize=10,label='Probed thaw depth')",
+      "    a.set_ylabel('Depth (m)',fontsize=fs+8)"
+    ]
+  },
+  "coordinate_evidence": {
+    "paper": "https://doi.org/10.5194/tc-18-4197-2024",
+    "section": "2.1 Study area and monitoring setup at Crater Lake CALM-S",
+    "latitude_dms": "62 59 06.7 S",
+    "longitude_dms": "60 40 44.8 W",
+    "support": "Representative site, not surveyed grid nodes",
+    "quality_flag": "CS"
+  },
+  "reviewed_utc": "2026-10-05T17:37:32.264981+00:00"
+}

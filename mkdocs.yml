@@ -64,6 +64,7 @@ nav:
       - Source Release Clearance: maintainers/source-release-clearance-guidelines.md
       - release/index.md
       - Versioning And Exports: release/versioning-and-exports.md
+      - Zenodo Release Archive: maintainers/zenodo-releases.md
       - QA Validation: release/qa-validation.md
       - Observation Build Validation: release/observation-build-validation.md
       - Aggregation Validation: release/aggregation-validation.md
