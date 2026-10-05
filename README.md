@@ -40,14 +40,14 @@ in your analysis.
 <!-- CUSP_DATA_TRACKER:START -->
 <table>
   <tr>
-    <td align="center" width="33%"><strong><a href="https://github.com/jonschwenk/cusp/releases/tag/v1.1">v1.1</a></strong><br><sub>Latest release</sub></td>
-    <td align="center" width="33%"><strong>79,389</strong><br><sub>Total observations</sub></td>
-    <td align="center" width="33%"><strong>57</strong><br><sub>Included sources</sub></td>
+    <td align="center" width="33%"><strong><a href="https://github.com/jonschwenk/cusp/releases/tag/v1.2">v1.2</a></strong><br><sub>Latest release</sub></td>
+    <td align="center" width="33%"><strong>80,264</strong><br><sub>Total observations</sub></td>
+    <td align="center" width="33%"><strong>60</strong><br><sub>Included sources</sub></td>
   </tr>
   <tr>
-    <td align="center"><strong>62,135</strong><br><sub>Permafrost presence</sub></td>
-    <td align="center"><strong>17,254</strong><br><sub>Permafrost absence</sub></td>
-    <td align="center"><strong>59,051</strong><br><sub>ALT / thaw-depth measurements</sub></td>
+    <td align="center"><strong>62,848</strong><br><sub>Permafrost presence</sub></td>
+    <td align="center"><strong>17,416</strong><br><sub>Permafrost absence</sub></td>
+    <td align="center"><strong>59,710</strong><br><sub>ALT / thaw-depth measurements</sub></td>
   </tr>
 </table>
 <p><sub><strong>Note:</strong> ALT / thaw-depth measurements also carry a permafrost state, so this count overlaps the presence/absence counts.</sub></p>
