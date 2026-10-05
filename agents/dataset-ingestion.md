@@ -36,8 +36,10 @@ Do not force an ingestion merely because a candidate was proposed. A careful
 recommendation that a source is out of scope, inaccessible, redundant, or too
 ambiguous is a successful outcome.
 
-New sources must use `release_clearance = "needs_review"`. An agent must never
-approve a source for release on the maintainer's behalf.
+New sources must initially use `release_clearance = "needs_review"`. An agent
+may record `approved` only after explicit maintainer authorization, documenting
+the decision separately from the evidence for reuse permission. Authorization
+does not create an upstream license or extend a synthesis license to its inputs.
 
 ## Ways to start the workflow
 
@@ -128,6 +130,30 @@ Classify the result as one of:
 Do not begin a full implementation until the source reaches one of the two
 proceed states, either directly or through a maintainer decision.
 
+### Accessible syntheses and contact-only providers
+
+Prefer original provider files when they are readily downloadable and offer
+clearer provenance or detail. If the original files are available only by
+contacting authors, but compatible observations are already downloadable in a
+published synthesis, ingest the accessible synthesis after the usual scientific,
+permission, and overlap checks. Author contact is not a prerequisite; CUSP does
+not routinely chase every contributing provider for the same observations.
+
+- Identify the synthesis and version actually used as the observation source.
+  Preserve original provider/site identifiers and available provider references;
+  never present the synthesis author as the original observer.
+- Keep native-source observations already represented in CUSP, and filter their
+  identifiable copies from the synthesis. This policy does not relax
+  deduplication or allow conflicts, ambiguous zeros, or modeled values to pass.
+- Cite the accessed synthesis and retain attribution to the underlying providers.
+  Check its reuse terms without assuming they license separately downloaded
+  original files.
+- Treat inaccessible finer-scale records, earlier years, and later updates as
+  optional follow-ups, not blockers to the accessible annual observations. Record
+  what is already covered and what could genuinely add observations. Revisit
+  contact-only records if a public archive appears or a provider offers them;
+  do not require an author-contact campaign.
+
 ## Phase 2: source audit
 
 Create a concrete inventory before transforming the data:
@@ -202,7 +228,8 @@ cross-source proximity filter.
 4. Establish a retention rule. Normally prefer the original direct source over
    a synthesis, or the representation with clearer provenance, native
    coordinates, dates, methods, and observation limits. Ask the maintainer when
-   neither representation is clearly preferable.
+   neither representation is clearly preferable. An unavailable original file
+   does not prevent using an accessible synthesis under the policy above.
 5. Remove only rows supported by the documented rule. Retain uncertain records
    with an appropriate limitation or quality flag unless the maintainer decides
    otherwise.
@@ -355,8 +382,9 @@ Finish with a concise ingestion report containing:
   retained representation, assertions, and unresolved overlap.
 - **Limitations:** ambiguities, approximations, quality flags, and records not
   represented.
-- **Permission:** evidence found, current basis, and why clearance remains
-  `needs_review`.
+- **Permission:** evidence found, current basis, clearance status, and any explicit
+  maintainer authorization; identify outstanding uncertainty without inventing
+  a license.
 - **Verification:** commands run and their results.
 - **Maintainer decisions:** every question still requiring human scientific or
   release judgment.

@@ -137,6 +137,15 @@ original-source rows and implement the filter inside the synthesis processor.
 Record the compared sources, match fields, expected match counts, date handling,
 and remaining uncertainty in both process-script headers.
 
+If original provider files are available only by contacting authors but the
+observations are downloadable in a published synthesis, use the accessible
+synthesis after checking its measurement semantics, permissions, and overlap.
+Author contact is not a prerequisite. Identify the synthesis and version actually
+used, preserve provider identifiers and attribution, and keep native-source
+records already in CUSP rather than adding their copies. Inaccessible finer-scale
+or longer records can remain optional follow-ups; see the
+[dataset-ingestion runbook](https://github.com/jonschwenk/cusp/blob/main/agents/dataset-ingestion.md).
+
 ## Step 5: Validate The Metadata
 
 Check that the metadata docstring is parseable and complete:
