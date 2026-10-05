@@ -4,8 +4,8 @@
 
 - Dataset version: `v1.2`
 - Code version: `0.1`
-- Git commit: `0d580d5d3bf7e348c0d7ab309ca59356f6473319`
-- Generated at (UTC): `2026-10-05T18:50:49.752816+00:00`
+- Git commit: `b9658423d16978f42b6153e12c5fd47f6c482c65`
+- Generated at (UTC): `2026-10-05T18:56:08.096164+00:00`
 - Canonical rows: `80264`
 - Included sources: `60`
 - Date range: `1952-06-01` to `2025-02-01`
@@ -44,6 +44,9 @@ This is a net addition of **875 observations and three sources** over v1.1.
   and export checks. New exports use LF line endings for reproducible checksums
   across Windows and Unix checkouts. Environmental features and aggregations
   remain optional derivatives, not official release assets.
+- Preserved the Streletskiy raw CSV's upstream line endings in Git so its
+  provenance checksum and processing checks also pass on Linux. No source
+  values or released observations change as a result.
 
 ### Hosting And Attribution
 
