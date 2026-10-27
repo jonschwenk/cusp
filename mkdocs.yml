@@ -66,6 +66,7 @@ nav:
       - Versioning And Exports: release/versioning-and-exports.md
       - v1.2 Release Notes: release/v1.2-changes.md
       - Zenodo Release Archive: maintainers/zenodo-releases.md
+      - LANL GitHub Mirror: maintainers/github-mirror.md
       - QA Validation: release/qa-validation.md
       - Observation Build Validation: release/observation-build-validation.md
       - Aggregation Validation: release/aggregation-validation.md

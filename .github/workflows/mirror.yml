@@ -1,0 +1,57 @@
+name: Mirror to LANL
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "**"
+  create:
+  delete:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lanl-repository-mirror
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    if: github.repository == 'jonschwenk/cusp'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Synchronize branches and tags
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MIRROR_SSH_KEY: ${{ secrets.LANL_CUSP_MIRROR_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          : "${MIRROR_SSH_KEY:?Missing LANL_CUSP_MIRROR_SSH_KEY secret}"
+          umask 077
+          key_path="$(mktemp "$RUNNER_TEMP/cusp-mirror-key.XXXXXX")"
+          known_hosts="$(mktemp "$RUNNER_TEMP/cusp-mirror-hosts.XXXXXX")"
+          trap 'rm -f -- "$key_path" "$known_hosts"' EXIT
+          printf '%s\n' "$MIRROR_SSH_KEY" > "$key_path"
+
+          # Trust GitHub's host keys obtained through its authenticated HTTPS API.
+          gh api meta --jq '.ssh_keys[] | "github.com " + .' > "$known_hosts"
+          test -s "$known_hosts"
+          export GIT_SSH_COMMAND="ssh -i \"$key_path\" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=\"$known_hosts\""
+
+          mirror_dir="$(mktemp -d "$RUNNER_TEMP/cusp-mirror.XXXXXX")"
+          git init --bare --initial-branch=main "$mirror_dir"
+          git -C "$mirror_dir" fetch --no-tags \
+            https://github.com/jonschwenk/cusp.git \
+            '+refs/heads/*:refs/heads/*' \
+            '+refs/tags/*:refs/tags/*'
+          git -C "$mirror_dir" show-ref --verify --quiet refs/heads/main
+
+          # Mirror only user-owned refs, not GitHub's internal pull-request refs.
+          git -C "$mirror_dir" push --atomic --prune \
+            git@github.com:lanl/cusp.git \
+            '+refs/heads/*:refs/heads/*' \
+            '+refs/tags/*:refs/tags/*'
