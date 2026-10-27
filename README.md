@@ -79,6 +79,8 @@ contact [cusp.data@gmail.com](mailto:cusp.data@gmail.com).
 
 ## License
 
+LANL copyright identifier: **O5078**.
+
 Copyright 2026 Triad National Security, LLC. All rights reserved.
 
 This program was produced under U.S. Government contract 89233218CNA000001 for
