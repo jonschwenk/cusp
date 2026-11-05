@@ -1,0 +1,26 @@
+
+"ID","PRECISION","ACCURACY","SENSOR_MANUFACTURER","SENSOR_MANUFACTURER_MODEL","LOGGER_MANUFACTURER","LOGGER_MANUFACTURER_MODEL","UNITS","RADIATION_SHIELD","METHOD_ID"
+4,.01,.2,"YSI","44007","Campbell Scientific","CR1000-55","?C",,3
+5,.01,.1,"Campbell Scientific","HC2-S3-L","Campbell Scientific","CR1000-55","?C",,3
+6,.01,.8,"Campbell Scientific","HC2-S3-L","Campbell Scientific","CR1000-55","percent",,4
+7,.01,.3,"RM-Young","05103AP-10-L","Campbell Scientific","CR1000-55","m/s",,2
+8,.1,3,"RM-Young","05103AP-10-L","Campbell Scientific","CR1000-55","degrees",,1
+12,.03,.25,"Onset","TMCx-HD","Onset HOBO","U12-006","?C","4 inch PVC cap",3
+15,.001,.2,"Measurement Specialties","44007RC","Campbell Scientific","CR1000X","?C",,3
+2,,,"unknown ","unknown",,,"?C",,3
+9,,,"EBA","unknown","Campbell Scientific","CR1000-55","?C",,3
+10,.002,.15,"Onset","TMCx-HD","Onset HOBO","UX120-006M","?C",,3
+13,,,,,"Campbell Scientific","CR1000x","?C",,3
+1,.001,.1,"Campbell Scientific","44212","Campbell Scientific","CR1000-55","?C",,3
+3,.03,.25,"Onset","TMCx-HD","Onset HOBO","U12-006","?C",,3
+11,.01,.1,"RST Instruments","TH0022-EL380013P","RST Instruments","TH2016B","?C",,3
+14,.001,.05,"LogR Systems Inc.",,"LogR Systems Inc.","ULOGC16-32_V2","?C",,3
+16,,,"RST Instruments",,"RST Instruments",,"?C",,3
+22,.02,.21,"Onset","TMCx-HD","Onset HOBO","Pro v2 U23-003","?C",,3
+17,,.1,"BAPI","THPROBE-10k-2","Microedge","LPTH-1","?C",,3
+18,,,,,"Onset","U12-004","?C",,3
+21,.1,.1,"Geoprecision","Tnode","Geoprecision","2W Minilogger","?C",,3
+19,,,,,"Onset","U12-006","?C",,3
+20,,,,,"Onset","UX120-006M","?C",,3
+23,,,"RST Instruments",,"RST Instruments","DT2040 VW Multi Channel Logger","?C",,3
+24,,,"Contact fcalmels@yukonu.ca for data request",,,,,,

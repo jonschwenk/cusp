@@ -1,0 +1,14 @@
+{
+  "checked": "2026-11-03",
+  "catalogue": "https://open.yukon.ca/data/permafrost-database",
+  "licence": "Open Government Licence - Yukon, version 2.0",
+  "terms_url": "https://yukon.ca/en/your-government/open-government/open-government-licence-yukon",
+  "attribution": "Contains information licensed under the Open Government Licence - Yukon.",
+  "provider": "Yukon Geological Survey, Government of Yukon",
+  "exception": "The licence does not grant third-party rights the provider is not authorized to license. Preserve original provider attribution.",
+  "release_clearance": "approved",
+  "maintainer_authorization": {
+    "date": "2026-11-05",
+    "basis": "Maintainer accepted the reviewed 973-observation ingestion and requested committing, incrementing the dataset version, and pushing the commit and tag. Provider reuse terms and third-party-rights qualifications remain unchanged."
+  }
+}

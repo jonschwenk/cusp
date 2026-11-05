@@ -1,0 +1,15 @@
+{
+  "raw_rows": 32722705,
+  "types": {
+    "Ground temperature": 32476218,
+    "Air temperature": 246487
+  },
+  "excluded": {
+    "not_point_subsurface_at_most_10m": 4912348,
+    "not_ground_temperature": 246487,
+    "invalid_or_sentinel_temperature": 8
+  },
+  "annual_point_groups": 7979,
+  "thaw_depth_rows": 0,
+  "seconds": 323.7091442000019
+}

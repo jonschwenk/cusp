@@ -47,3 +47,6 @@ data/_write_probe.csv
 data/NCSS_Lab_Data_Mart/ncss_labdatagpkg.zip
 data/NCSS_Lab_Data_Mart/ncss_labdata.gpkg
 data/NCSS_Lab_Data_Mart/dry_run/
+
+# Large original Yukon thermal export; checked compact evidence is versioned.
+data/Yukon_Permafrost_Database/temperature.zip

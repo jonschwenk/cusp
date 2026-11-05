@@ -1,0 +1,10 @@
+{
+  "export_date": "2025-09-21",
+  "retrieved": "2026-11-03",
+  "temperature_archive_sha256": "bc7b954bd29399d67c94744c2f3e5bef7923079168fbbca125d6b6be7d4b91f7",
+  "processor_inputs": {
+    "Yukon_Permafrost_Geotech_Data.zip": "c2f4b3069289646f939aa1117a41b4017ca2730d05cd3e655341cc2ce5443dc9",
+    "thermal_annual_audit.csv": "47af1dbb0eba574f6e37f7e6476261451f1d59130d3d02cd925edbb09adfd29e",
+    "PFT_LOCATIONS.CSV": "8a43bf08ecca654a67e152deccb6670104f09c94c7b29eee3c90a1c56ea2fe6f"
+  }
+}

@@ -12,6 +12,26 @@ This file is intended to track changes to:
 
 ## [Unreleased]
 
+## [v1.3] - 2026-11-05
+
+### Added
+
+- 973 Yukon Permafrost Database observations: 46 explicit thaw depths, 129
+  source-labelled permafrost bounds, 624 late-summer frozen-ground bounds,
+  170 temperature-derived bounds and four bounded non-detections
+- reproducible source processing, pinned raw/compact thermal evidence, scientific
+  and overlap audits, excluded-candidate sensitivity tables and regression tests
+
+### Changed
+
+- v1.3 contains 81,237 observations from 61 sources; all v1.2 rows, canonical
+  values and observation IDs are preserved
+- Yukon inclusion and its documented assumptions approved by the maintainer
+  on 2026-11-05; unresolved candidates remain excluded
+- citation metadata, current downloads, README tracker and archived/latest
+  bundles updated for v1.3; Python package version remains 0.1
+- Zenodo migration remains deferred; no DOI is assigned by this release
+
 ## [v1.2] - 2026-10-05
 
 ### Added

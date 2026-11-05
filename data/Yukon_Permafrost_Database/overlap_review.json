@@ -1,0 +1,12 @@
+{
+  "excluded_site_date_keys": [],
+  "decision": "No proven republished observations; independent boreholes retained. See overlap_screening_summary.json and README.",
+  "expected_tier_counts": {
+    "late_summer_frozen_bound": 624,
+    "source_permafrost_bound": 129,
+    "direct_thaw": 46,
+    "explicit_profile_non_detection": 1,
+    "two_year_temperature_bound": 170,
+    "continuous_unfrozen_profile_non_detection": 3
+  }
+}

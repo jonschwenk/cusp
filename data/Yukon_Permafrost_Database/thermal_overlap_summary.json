@@ -1,0 +1,117 @@
+{
+  "location_count": 241,
+  "annual_summary_rows": 10663,
+  "stations_with_valid_subsurface_annual_values": 170,
+  "stations_within_2000m": [
+    "HPW_Dempster_km421_field",
+    "HPW_Dempster_km421_road",
+    "HPW_Dempster_km421_toe",
+    "HPW_Shakwak_10_slope",
+    "HPW_Shakwak_11_slope",
+    "HPW_Shakwak_12_centre",
+    "HPW_Shakwak_12_slope",
+    "HPW_Shakwak_1_centre",
+    "HPW_Shakwak_1_slope",
+    "HPW_Shakwak_1_toe",
+    "HPW_Shakwak_2_centre",
+    "HPW_Shakwak_2_slope",
+    "HPW_Shakwak_2_toe",
+    "HPW_Shakwak_3_centre",
+    "HPW_Shakwak_3_slope",
+    "HPW_Shakwak_4_centre",
+    "HPW_Shakwak_4_slope",
+    "HPW_Shakwak_5_centre",
+    "HPW_Shakwak_5_slope",
+    "HPW_Shakwak_5_toe",
+    "HPW_Shakwak_6_slope",
+    "HPW_Shakwak_7_slope",
+    "HPW_Shakwak_8_slope",
+    "HPW_Shakwak_9_centre",
+    "HPW_Shakwak_9_slope",
+    "HPW_Shakwak_orig_berm",
+    "HPW_Shakwak_orig_centre",
+    "HPW_Shakwak_orig_natural",
+    "YGS_BeaverCreek",
+    "YukonU_AH_1863.5_PS_R",
+    "YukonU_AH_1863.5_PS_R_2",
+    "YukonU_AH_1865.2_PS_R",
+    "YukonU_AH_1865.9_PS_R",
+    "YukonU_OCF_S1_2018_BH1_F"
+  ],
+  "stations_with_shared_years_within_2000m": [
+    "HPW_Shakwak_10_slope",
+    "HPW_Shakwak_11_slope",
+    "HPW_Shakwak_12_centre",
+    "HPW_Shakwak_12_slope",
+    "HPW_Shakwak_1_centre",
+    "HPW_Shakwak_1_slope",
+    "HPW_Shakwak_1_toe",
+    "HPW_Shakwak_2_centre",
+    "HPW_Shakwak_2_slope",
+    "HPW_Shakwak_2_toe",
+    "HPW_Shakwak_3_centre",
+    "HPW_Shakwak_3_slope",
+    "HPW_Shakwak_4_centre",
+    "HPW_Shakwak_4_slope",
+    "HPW_Shakwak_5_centre",
+    "HPW_Shakwak_5_slope",
+    "HPW_Shakwak_5_toe",
+    "HPW_Shakwak_6_slope",
+    "HPW_Shakwak_7_slope",
+    "HPW_Shakwak_8_slope",
+    "HPW_Shakwak_9_centre",
+    "HPW_Shakwak_9_slope",
+    "HPW_Shakwak_orig_berm",
+    "HPW_Shakwak_orig_centre",
+    "HPW_Shakwak_orig_natural",
+    "YGS_BeaverCreek"
+  ],
+  "exact_alias_matches": [],
+  "temperature_archive_sha256": "bc7b954bd29399d67c94744c2f3e5bef7923079168fbbca125d6b6be7d4b91f7",
+  "location_accuracy_counts": {
+    "20": 3,
+    "10": 25,
+    "30": 1,
+    "5": 47,
+    "1": 3,
+    "7": 16,
+    "40": 1,
+    "": 138,
+    "6": 4,
+    "4": 2,
+    "8": 1
+  },
+  "sensitivity": [
+    {
+      "radius_m": 10,
+      "stations": 0,
+      "stations_shared_years": 0
+    },
+    {
+      "radius_m": 50,
+      "stations": 0,
+      "stations_shared_years": 0
+    },
+    {
+      "radius_m": 100,
+      "stations": 0,
+      "stations_shared_years": 0
+    },
+    {
+      "radius_m": 500,
+      "stations": 27,
+      "stations_shared_years": 26
+    },
+    {
+      "radius_m": 1000,
+      "stations": 32,
+      "stations_shared_years": 26
+    },
+    {
+      "radius_m": 2000,
+      "stations": 34,
+      "stations_shared_years": 26
+    }
+  ],
+  "exclusions": 0
+}

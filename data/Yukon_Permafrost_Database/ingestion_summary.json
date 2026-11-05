@@ -1,0 +1,30 @@
+{
+  "total": 973,
+  "tier_counts": {
+    "late_summer_frozen_bound": 624,
+    "source_permafrost_bound": 129,
+    "direct_thaw": 46,
+    "explicit_profile_non_detection": 1,
+    "two_year_temperature_bound": 170,
+    "continuous_unfrozen_profile_non_detection": 3
+  },
+  "clearance": "approved",
+  "audit_decisions": {
+    "no_supported_permafrost_evidence": 2131,
+    "retained_late_summer_frozen_bound": 624,
+    "retained_source_permafrost_bound": 129,
+    "retained_explicit_profile_non_detection": 1,
+    "hold_coordinate_disagreement": 10,
+    "hold_missing_hole_depth": 31,
+    "retained_direct_thaw": 46,
+    "hold_kzk_transcription": 77,
+    "retained_continuous_unfrozen_profile_non_detection": 3,
+    "hold_inconsistent_dates": 9,
+    "hold_insufficient_two_year_cold_evidence": 3538,
+    "retained_two_year_temperature_bound": 170,
+    "supported_deeper_sensor_not_separate_observation": 265,
+    "hold_unknown_instrument_accuracy": 3797,
+    "hold_station_metadata_no": 208,
+    "hold_sensor_provider_change_or_comments": 1
+  }
+}

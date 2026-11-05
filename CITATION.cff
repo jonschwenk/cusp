@@ -6,7 +6,7 @@ title: "CUSP: CommUnity near-Surface Permafrost data synthesis"
 type: dataset
 authors:
   - name: "CUSP contributors"
-version: "1.2"
-date-released: "2026-10-05"
+version: "1.3"
+date-released: "2026-11-05"
 repository-code: "https://github.com/jonschwenk/cusp"
 url: "https://jonschwenk.github.io/cusp/"
