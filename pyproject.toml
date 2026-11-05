@@ -45,6 +45,7 @@ earthengine = [
     "geemap",
 ]
 source-processing = [
+    "matplotlib",
     "netCDF4",
     "openpyxl",
     "scikit-learn",

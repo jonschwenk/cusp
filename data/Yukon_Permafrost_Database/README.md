@@ -146,6 +146,42 @@ artifacts remain under `runs/yukon_candidate_20261103/`.
 
 ## Validation and review
 
+### Public spatial review
+
+The issue review includes two figures generated directly from the immutable
+v1.3 observations, joined one to one with the source evidence. Reproduce them
+offline in the CUSP environment with `matplotlib` installed.
+
+```powershell
+python data/Yukon_Permafrost_Database/plot_ingestion_review.py
+```
+
+- [Sampling locations](review/sampling_locations.png) draws all 973 observations
+  at their recorded coordinates, spanning 831 site IDs and 827 coordinate pairs
+  from 1972 to 2023. Coincident sites and repeated thermal years overlap.
+- [Thaw measurements and depth bounds](review/depth_review.png) separates the
+  46 measured thaw depths, 753 geotechnical upper bounds, temperature-derived
+  upper bounds at 28 stations and four bounded non-detections. Measured thaw
+  depths span 40–240 cm in one small cluster in August–September 2005. The source
+  supplies date-specific thaw boundaries, with annual maximum ALT unavailable.
+- The thermal depth panel selects the latest retained qualifying observation
+  at each station. Its endpoints vary from 2012 to 2020 and bounds from 100 to
+  950 cm. The Beaver Creek inset resolves 23 nearby stations. September 1 is an
+  assigned annual label, and consecutive-year evidence windows overlap.
+- [Review observations](review/review_observations.csv) retains every released
+  observation ID and canonical field, with evidence tier, thermal years,
+  plotted quantity, depth in cm and depth-panel selection. All 170 thermal
+  station-year rows are included. No temporal averaging is used for the maps.
+- [Review summary](review/review_summary.json) records row counts, input hashes
+  after LF line-ending normalization, and exact rendered artifact hashes.
+  The clipped public-domain Natural Earth 5.1.2
+  boundaries and [their provenance](review/basemap_provenance.json) are checked
+  in so the renderer can run without network access.
+
+New ingestions follow the public map-review stage in the ingestion runbook.
+For v1.3, the earlier source approval remains recorded above, and the new map
+review precedes Zenodo staging under the maintainer's updated workflow.
+
 Pinned counts and semantic safeguards are tested in
 `tests/test_yukon_permafrost_database.py`. Source metadata, canonical and aggregate
 QC, full tests and strict docs are included in the staging validation report.

@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python
   - geopandas
+  - matplotlib
   - pip
   - xarray
   - utm

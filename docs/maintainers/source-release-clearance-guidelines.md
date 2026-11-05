@@ -26,7 +26,11 @@ decision.
    processing assumptions, and permission basis in its docstring.
 4. New sources should usually start with `release_clearance = "needs_review"`.
 5. A maintainer reviews the permission basis, processing assumptions, quality
-   flags, known limitations, and validation results.
+   flags, known limitations, validation results and reproducible maps in the
+   tracking issue. Maps show new observation locations and interpretable
+   measured depths or depth bounds with units. Record explicit scientific and
+   release approval in that issue before starting the Zenodo version draft or
+   upload. See [Adding a dataset](adding-data.md#step-8-post-public-spatial-review).
 6. The maintainer updates `release_clearance` to `approved`, `deferred`, or
    `do_not_release`, and the metadata generator updates
    `PROCESS_SCRIPT_METADATA.csv`.

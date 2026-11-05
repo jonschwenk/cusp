@@ -1,0 +1,11 @@
+{
+  "source_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_50m_admin_1_states_provinces.geojson",
+  "version": "5.1.2",
+  "retrieved": "2026-11-05",
+  "license": "Natural Earth public domain",
+  "license_url": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "source_sha256": "69a0e06e640b2d505858ae1cb63034e4677f3000b35a98e16312932b98c426b9",
+  "output_sha256": "03f6aa8dc64526e42e8cfed095e34c3ba189f5373bc1b1fd5257a5766280a947",
+  "preparation": "Administrative level 1 polygons clipped to longitude -170 to -100 and latitude 43 to 79 in EPSG:4326. Source name and country retained.",
+  "features": 17
+}

@@ -363,12 +363,47 @@ Some generated metadata may need to be regenerated before its `--check` mode
 can pass; follow the command help and existing maintainer workflow. Run the
 widest relevant validation after generation.
 
+## Phase 6: public spatial review
+
+Before maintainer approval, prepare a reproducible mapping package for the
+source tracking issue. Post the maps and review details in issue comments so maintainers and
+the public can inspect the newly ingested observations.
+
+- Include a map of the newly ingested geographic positions. Where the source
+  has interpretable numeric values, include maps or panels for active-layer or
+  thaw depth and permafrost depth. Keep those measurement types distinct and
+  label their units.
+- Show bounded observations and non-detections in a way that does not imply a
+  measured depth or confirmed permafrost depth. State the observation limit
+  and its units when available. Use a presence-only map when no numeric
+  quantity can be interpreted.
+- Describe how repeated observations are displayed. If points are aggregated,
+  state the grouping, statistic, and spatial or temporal scale, and link the
+  unaggregated observation data when available.
+- Make the plotted data reproducible and reviewable. Include or link the exact
+  plot data and the map-generation code or workflow, with units, observation
+  counts, date coverage, and material caveats. Report records omitted from a
+  map and why.
+- Embed the rendered maps using stable public image links in the issue
+  comments. Ensure the images remain accessible to reviewers without repository
+  credentials.
+
+The Yukon review script and checked maps provide a source-specific example at
+[`data/Yukon_Permafrost_Database/plot_ingestion_review.py`](../data/Yukon_Permafrost_Database/plot_ingestion_review.py).
+Derive the plotted quantities and repeat handling from each source's semantics.
+
+Keep clearance at `needs_review` while the issue review is open. A maintainer
+must explicitly approve both the scientific interpretation and public release
+in the tracking issue before any Zenodo staging or publication begins. Record
+the resulting clearance decision according to the
+[`source-release clearance guidelines`](../docs/maintainers/source-release-clearance-guidelines.md).
+
 Review the final diff and generated artifacts. Expected source, schema,
 metadata, documentation, and aggregate changes are acceptable. Investigate
 unrelated changes rather than reverting user work. Do not publish a release or
 change source clearance unless explicitly asked.
 
-## Phase 6: maintainer handoff
+## Phase 7: maintainer handoff
 
 Finish with a concise ingestion report containing:
 
@@ -388,6 +423,9 @@ Finish with a concise ingestion report containing:
 - **Verification:** commands run and their results.
 - **Maintainer decisions:** every question still requiring human scientific or
   release judgment.
+- **Public spatial review** includes the tracking issue, map links, plot-data
+  and workflow links, measurement types and units shown, repeat or aggregation
+  handling, counts, date coverage, and caveats.
 
 The handoff should give the maintainer enough information to review the source
 without reconstructing the entire investigation from terminal history.

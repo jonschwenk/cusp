@@ -1,0 +1,29 @@
+{
+  "dataset_version": "v1.3",
+  "rows": 973,
+  "sites": 831,
+  "coordinate_pairs": 827,
+  "date_min": "1972-04-18",
+  "date_max": "2023-10-15",
+  "tier_counts": {
+    "continuous_unfrozen_profile_non_detection": 3,
+    "direct_thaw": 46,
+    "explicit_profile_non_detection": 1,
+    "late_summer_frozen_bound": 624,
+    "source_permafrost_bound": 129,
+    "two_year_temperature_bound": 170
+  },
+  "thermal_depth_panel_selection": "Latest retained thermal_year per site, endpoints 2012\u20132020",
+  "thermal_rows": 170,
+  "thermal_depth_panel_symbols": 28,
+  "input_sha256_lf": {
+    "exports/archived/v1.3/cusp_v1.3.csv": "db5d1007f1127d6b36925ee3e6cd07b008e0be2d64493286157fad8ffa268754",
+    "data/Yukon_Permafrost_Database/processed_yukon_permafrost_database.csv": "95b3a0b47cc934c79eb54651796f53345858f773543998e6a6860cdfa00d3531",
+    "data/Yukon_Permafrost_Database/review/basemap.geojson": "03f6aa8dc64526e42e8cfed095e34c3ba189f5373bc1b1fd5257a5766280a947"
+  },
+  "outputs_sha256": {
+    "sampling_locations.png": "711411cc11f62fd3b87e36546813ca6da50bd7931398295628a4d06c58ea7f43",
+    "depth_review.png": "f666a0bfa2e4eadfd02fbc0c164b95924aa3205ea39c9302533b2ba1b4e8c271",
+    "review_observations.csv": "e2f62ebe837be494a272620ed55ff8ae4772e3c63f03ad0eb66dcdffcf3e22b4"
+  }
+}

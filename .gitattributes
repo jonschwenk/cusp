@@ -10,3 +10,8 @@ data/Streletskiy_2026/CALM_Sites_Data.csv -text whitespace=cr-at-eol
 # Pinned Yukon provider tables and compact raw-extrema evidence retain CRLF bytes.
 data/Yukon_Permafrost_Database/*.CSV -text whitespace=cr-at-eol
 data/Yukon_Permafrost_Database/thermal_annual_audit.csv -text whitespace=cr-at-eol
+
+# Public review tables and manifests retain the recorded checksum bytes.
+data/Yukon_Permafrost_Database/review/*.csv text eol=lf
+data/Yukon_Permafrost_Database/review/*.json text eol=lf
+data/Yukon_Permafrost_Database/review/*.geojson text eol=lf

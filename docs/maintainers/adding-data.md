@@ -169,6 +169,35 @@ python -m cusp.aggregate
 python -m cusp.qc validate-aggregated
 ```
 
+## Step 8: Post Public Spatial Review
+
+Before approving a new source, prepare maps and post a review package in the
+source tracking issue. Include stable
+public image embeds for a map of newly ingested locations and, when numeric
+measurements are interpretable, maps or panels of active-layer or thaw depth
+and permafrost depth. Label units and keep the measurement types distinct.
+
+Show observation bounds and non-detections without implying a measured depth or
+confirmed permafrost depth. Include observation limits and units when
+available. Use a presence-only map when no numeric quantity can be interpreted.
+Describe how repeated observations are shown. If points are aggregated, report
+the grouping, statistic, and spatial or temporal scale.
+
+Link the exact plotted data and map-generation code or workflow so the review
+can be reproduced. Include units, observation counts, date coverage, omitted
+records and reasons, and material caveats. Post the package in issue comments
+with links reviewers can open without repository credentials.
+
+The [Yukon review maps and rendering script](https://github.com/jonschwenk/cusp/tree/main/data/Yukon_Permafrost_Database#public-spatial-review)
+provide an example. Derive the plotted quantities and repeat handling from the
+new source's measurement semantics.
+
+The maintainer must explicitly approve the scientific interpretation and
+public release in the tracking issue before Zenodo staging or publication
+begins. Keep the source at `release_clearance = "needs_review"` until that
+review is complete, then record the decision using the
+[source release-clearance guidelines](source-release-clearance-guidelines.md).
+
 If your source changes the official dataset contents, that should usually be
 treated as a new dataset version under
 [Versioning and exports](../release/versioning-and-exports.md).
@@ -185,6 +214,8 @@ treated as a new dataset version under
 - run the source script
 - rebuild the working observation table
 - run QA
+- post reproducible maps and plot data in the public tracking issue
+- obtain explicit scientific and release approval in that issue before Zenodo staging
 
 Maintainers make final release-clearance decisions. See
 [Source release clearance](source-release-clearance-guidelines.md) for the
