@@ -1,5 +1,8 @@
 # Observation Build Validation
 
+For the v1.3 validation and current counts, see [v1.3 release notes](v1.3-changes.md).
+The dated v1.2 results below are retained as historical evidence.
+
 ## Scope
 
 This page records the latest validated state of the observation-level CUSP

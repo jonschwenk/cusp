@@ -40,7 +40,7 @@ Important default settings:
 
 !!! warning "Southern Hemisphere observations"
 
-    v1.2 includes Southern Hemisphere sites. The default aggregation projection,
+    Beginning with v1.2, CUSP includes Southern Hemisphere sites. The default aggregation projection,
     `EPSG:3413`, is designed for the Arctic: a 30 m projected cell does not have
     the intended ground scale at these sites. Use the canonical observations
     and a suitable local or Southern Hemisphere projection for their spatial
@@ -60,11 +60,11 @@ python -m cusp.qc validate-aggregated
 The defaults are relative to your current working directory, not to the Python
 installation directory. If you installed the tools and downloaded a versioned
 release CSV, run the following from the directory containing
-`cusp_v1.2.csv`:
+`cusp_v1.3.csv`:
 
 ```bash
 python -m cusp.aggregate \
-  --input cusp_v1.2.csv \
+  --input cusp_v1.3.csv \
   --data-dir cusp_aggregation
 
 python -m cusp.qc validate-aggregated \
@@ -106,7 +106,7 @@ window around that output date and does not impose a hard maximum group span.
 
 ```bash
 python -m cusp.aggregate \
-  --input exports/latest/cusp_v1.2.csv \
+  --input exports/latest/cusp_v1.3.csv \
   --output runs/examples/aggregated_100m_example.csv \
   --membership-output runs/examples/aggregated_100m_example_membership.csv \
   --flags-output runs/examples/aggregated_100m_example_qc_flags.csv \

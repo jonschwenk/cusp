@@ -1,5 +1,8 @@
 # Formal QA Validation
 
+For the v1.3 validation and current counts, see [v1.3 release notes](v1.3-changes.md).
+The dated v1.2 results below are retained as historical evidence.
+
 This page records the current QA layer and the latest validated result for the
 canonical CUSP observation table.
 

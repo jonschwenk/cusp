@@ -1,13 +1,13 @@
-# CUSP Release v1.2
+# CUSP Release v1.3
 
 ## Summary
 
-- Dataset version: `v1.2`
+- Dataset version: `v1.3`
 - Code version: `0.1`
-- Git commit: `b9658423d16978f42b6153e12c5fd47f6c482c65`
-- Generated at (UTC): `2026-10-05T18:56:08.096164+00:00`
-- Canonical rows: `80264`
-- Included sources: `60`
+- Git commit: `371a2db0a7eedd2cc52aed3c4e894ba6a45060a7`
+- Generated at (UTC): `2026-11-05T15:02:41.362593+00:00`
+- Canonical rows: `81237`
+- Included sources: `61`
 - Date range: `1952-06-01` to `2025-02-01`
 - Feature export: not included
 
@@ -15,58 +15,79 @@
 
 | File | Rows | Size (bytes) | SHA-256 | Note |
 |---|---:|---:|---|---|
-| `cusp_v1.2.csv` | 80264 | 9158084 | `76a6c1365ec75c719f3881d0ff834c541166acfe9f114cc69087050c328523f9` | Canonical CUSP dataset. |
-| `cusp_sources_v1.2.bib` | 60 | 23865 | `f4ee7eb1ef89a7d96b844266bb73dc94efcb8bf6073e5ab5fafeb2bb9c8243ff` | BibTeX entries for all sources present in the canonical release. |
+| `cusp_v1.3.csv` | 81237 | 9287890 | `db5d1007f1127d6b36925ee3e6cd07b008e0be2d64493286157fad8ffa268754` | Canonical CUSP dataset. |
+| `cusp_sources_v1.3.bib` | 61 | 24333 | `5f6d40adecf67e41719304bb8e92ce89d38a366b492abf095be7b5c4463530c3` | BibTeX entries for all sources present in the canonical release. |
 
 ## Changes In This Release
 
-Released on 2026-10-05 as a complete observation-level snapshot:
-**80,264 observations from 60 sources**, covering 1952-06-01 to 2025-02-01.
-This is a net addition of **875 observations and three sources** over v1.1.
+# CUSP v1.3
 
-- Added 437 CALM-South annual observations, including 11 depth bounds, from
-  the original public workbook. These extend CUSP into the Southern Hemisphere.
-- Added 214 Northern Hemisphere annual observations from Streletskiy et al.
-  (2026). Retained existing original CALM, PERMOS, and CALM-South records instead
-  of their synthesis copies; excluded unresolved depth conflicts and ambiguous
-  zeros. Available synthesis records do not require contacting each provider.
-- Added ten exact-date Crater Lake manual probes from the public A-ERT archive.
-  These use representative site coordinates (`CS`) and overlap flags (`DO`)
-  because they overlap CALM-South annual grid summaries; they are not independent
-  evidence of site-year conditions. No ERT-derived depths were ingested.
-- Fixed the Pastick overlap filter's handling of repeated DataFrame indices,
-  restoring 214 canonical observations wrongly excluded alongside the 58
-  intended NCSS matches. One additional restored source row is an exact
-  duplicate and remains excluded by the canonical build.
-- Preserved every v1.1 observation, field value, and observation ID. The frozen
-  12-column contract, units, method codes, and ID algorithm are unchanged.
-- Updated source attribution, processing metadata, executable documentation,
-  and export checks. New exports use LF line endings for reproducible checksums
-  across Windows and Unix checkouts. Environmental features and aggregations
-  remain optional derivatives, not official release assets.
-- Preserved the Streletskiy raw CSV's upstream line endings in Git so its
-  provenance checksum and processing checks also pass on Linux. No source
-  values or released observations change as a result.
+Released on 2026-11-05 as a complete observation-level snapshot:
+**81,237 observations from 61 sources**, covering 1952-06-01 to 2025-02-01.
+This adds **973 Yukon Permafrost Database observations** to v1.2. Every v1.2
+observation, canonical field value and observation ID is preserved.
 
-### Hosting And Attribution
+## Yukon observations
 
-v1.2 is published on GitHub for the **ARDAC release-sync workflow test**.
-No Zenodo deposit or CUSP version DOI is created for this release at this stage.
-The planned Zenodo archive migration is deferred until partner testing is done.
+The Yukon Geological Survey exports dated 2025-09-21 contribute:
 
-Cite CUSP v1.2 and every original data source used in your analysis. Keep the
-version-matched bibliography and `RELEASE_INFO.md`, which records the build
-commit, counts, and SHA-256 checksums. Published historical v1.0 and v1.1
-GitHub releases are unchanged.
+| Observation type | Rows |
+|---|---:|
+| Explicit dated thaw boundaries | 46 |
+| Source-labelled permafrost interval bounds | 129 |
+| Additional late-summer frozen-ground bounds | 624 |
+| Temperature-derived presence bounds | 170 |
+| Bounded non-detections | 4 |
+| **Total** | **973** |
+
+These are 969 presence observations and four bounded non-detections. Only the
+46 explicit thaw records supply exact depths; the other presence records retain
+blank exact-depth fields and upper-bound flags. Late-summer frozen-ground
+interpretations carry `PA`. The 170 thermal records at 28 stations require two
+consecutive well-covered cold years with documented instrument accuracy;
+they carry `TI`, `UB`, `DA` and `SS`, and do not supply interpolated ALT.
+Repeated thermal summaries share support between adjacent two-year windows.
+
+Unresolved KZK transcription problems, coordinate conflicts, inconsistent dates
+and unknown thermal accuracy remain excluded. Sensitivity-only results are not
+part of the release. Stewart Crossing does not meet the thermal inclusion rule.
+No provenance-supported cross-source duplicate removal was needed. The 86
+retained thermal observations near CALM_C24 in shared monitoring years carry
+`DO` for spatial/campaign dependence; different measurement support is retained.
+
+The maintainer approved the reviewed source and documented assumptions for
+v1.3 on 2026-11-05. Original provider attribution and the Open Government Licence
+- Yukon qualifications remain recorded. The detailed processor, pinned inputs,
+row accounting, scientific review and overlap evidence are in
+[`data/Yukon_Permafrost_Database`](https://github.com/jonschwenk/cusp/tree/v1.3/data/Yukon_Permafrost_Database).
+
+## Validation and compatibility
+
+The permanent 12-column contract, units and observation-ID algorithm are unchanged.
+The release gate checks canonical and aggregation QC, exports and strict docs;
+the pytest suite additionally covers the Yukon semantic safeguards and pinned
+counts. The processor is byte-reproducible across different Python hash seeds.
+Final validation on 2026-11-05 passed the release gate and **133 pytest tests
+plus 167 subtests**, with one expected Windows-only Bash-check skip. All 80,264
+v1.2 rows, canonical values and IDs were compared directly with v1.3 and preserved.
+Historical archives remain byte-identical. The separate Python package version
+remains 0.1; v1.3 identifies the dataset snapshot.
+
+## Hosting and attribution
+
+The v1.3 bundle is distributed through GitHub and the repository's immutable
+archive and `latest` copy. Zenodo migration remains deferred; this release
+does not assign a DOI. Cite CUSP v1.3 and every original source represented in
+the data used, retaining the version-matched bibliography and `RELEASE_INFO.md`.
 
 ## Citation Notes
 
-- The canonical dataset file is `cusp_v1.2.csv`.
-- The master bibliography file is `cusp_sources_v1.2.bib`.
+- The canonical dataset file is `cusp_v1.3.csv`.
+- The master bibliography file is `cusp_sources_v1.3.bib`.
 - To extract only the entries you need from a filtered CUSP table, run:
 
 ```bash
-python -m cusp.citations --input cusp_v1.2.csv --master-bib cusp_sources_v1.2.bib --output references.bib
+python -m cusp.citations --input cusp_v1.3.csv --master-bib cusp_sources_v1.3.bib --output references.bib
 ```
 
 Run from the downloaded bundle directory. For a study, replace `--input` with your final filtered table.

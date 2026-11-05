@@ -39,9 +39,9 @@ account can use:
 earthengine authenticate
 read -r -p "Google Cloud / Earth Engine project ID: " CUSP_GEE_PROJECT
 python -m cusp.features \
-  --input exports/latest/cusp_v1.2.csv \
-  --output runs/examples/cusp_v1.2_features.csv \
-  --manifest runs/examples/cusp_v1.2_features_manifest.json \
+  --input exports/latest/cusp_v1.3.csv \
+  --output runs/examples/cusp_v1.3_features.csv \
+  --manifest runs/examples/cusp_v1.3_features_manifest.json \
   --gee-project "$CUSP_GEE_PROJECT" \
   --resume
 ```
