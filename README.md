@@ -18,12 +18,12 @@ the synthesis, and generate a BibTeX bibliography for the sources represented
 in your analysis.
 
 > [!NOTE]
-> CUSP is moving its official versioned data archive to Zenodo so that every
-> release has a persistent DOI. The
-> [Arctic Data Collaborative (ARDAC)](https://arcticdatascience.org/) is being
-> prepared as the visualization and data-access portal, while GitHub will
-> remain the development and contribution home. Until the first Zenodo records
-> are published, the releases published here remain authoritative.
+> CUSP v1.3 is archived on Zenodo as [version 1.3](https://doi.org/10.5281/zenodo.23984191)
+> under the [CUSP dataset concept record](https://doi.org/10.5281/zenodo.22802355).
+> Follow the citation displayed on the Zenodo record when citing this release.
+> The [Arctic Data Collaborative (ARDAC)](https://arcticdatascience.org/) is
+> being prepared as a visualization and data-access portal. GitHub remains
+> the development and contribution home.
 
 <p align="center">
   <strong><a href="https://jonschwenk.github.io/cusp/getting-started/release-products/">Download CUSP</a></strong>

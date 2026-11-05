@@ -21,11 +21,12 @@ for included sources, and a release record with checksums. Aggregation and
 environmental feature sampling remain supported derived workflows, but their
 outputs are not canonical release artifacts.
 
-Zenodo is the designated preservation and DOI service for official dataset
-releases. Until the initial Zenodo version chain is published, the existing
-GitHub Releases remain authoritative. After migration, GitHub remains the
-development repository and provides an exact release mirror. ARDAC may serve
-and visualize a release, but it must identify the CUSP version and
+Zenodo is the preservation and DOI service for official dataset releases.
+CUSP v1.3 is published in the Zenodo version chain with DOI
+[10.5281/zenodo.23984191](https://doi.org/10.5281/zenodo.23984191) and belongs
+to the [CUSP dataset concept record](https://doi.org/10.5281/zenodo.22802355).
+GitHub provides the development repository and exact release mirrors. ARDAC
+may serve and visualize a release, and should identify the CUSP version and
 version-specific Zenodo DOI being served. See the
 [Zenodo release archive](../maintainers/zenodo-releases.md) for the deposit and
 versioning workflow.
@@ -167,7 +168,7 @@ It should include:
 
 The public citation model is now intentionally simple:
 
-- cite the version-specific CUSP DOI for the exact release used, once assigned
+- cite the version-specific CUSP DOI for the exact release used
 - export one BibTeX file: `cusp_sources_vX.Y.bib`
 - use source keys in the data table as BibTeX entry keys
 - provide a helper command to extract only the needed entries from any filtered
@@ -225,10 +226,9 @@ That means:
 10. Publish a GitHub Release containing files byte-identical to the Zenodo
     record.
 
-For v1.2, publish the validated bundle on GitHub without a Zenodo deposit so
-ARDAC can test its release-sync workflow. Record that exception in the release
-notes; the Zenodo migration remains planned, not completed. v1.3 continues
-GitHub distribution while that migration remains deferred.
+Versions v1.0 through v1.2 are archived in the Zenodo version chain. CUSP v1.3
+continues that existing release family, with matching GitHub release files as
+mirrors.
 
 The release gate writes test exports and aggregation outputs under
 `runs/release_gate/`. Those files validate the workflow but are not official

@@ -11,16 +11,19 @@ keep its source bibliography and release metadata with your analysis.
 
 <div class="cusp-button-row" markdown="1">
 
+[Download the complete v1.3 Zenodo bundle](https://zenodo.org/records/23984191/files/v1.3.zip?download=1){ .md-button .md-button--primary }
 [Download the v1.3 CSV](https://github.com/jonschwenk/cusp/releases/download/v1.3/cusp_v1.3.csv){ .md-button .md-button--primary }
 [Download the source BibTeX](https://github.com/jonschwenk/cusp/releases/download/v1.3/cusp_sources_v1.3.bib){ .md-button }
 [Download release metadata](https://github.com/jonschwenk/cusp/releases/download/v1.3/RELEASE_INFO.md){ .md-button }
 
 </div>
 
-[View v1.3 release notes and checksums](https://github.com/jonschwenk/cusp/releases/tag/v1.3)
+The version-specific DOI is [10.5281/zenodo.23984191](https://doi.org/10.5281/zenodo.23984191).
+The [Zenodo record](https://zenodo.org/records/23984191) is part of the
+[CUSP dataset concept record](https://doi.org/10.5281/zenodo.22802355). The
+GitHub downloads remain available as flat-file mirrors.
 
-This release is hosted on GitHub while the planned Zenodo migration remains
-deferred; no CUSP DOI has been assigned to v1.3.
+[View v1.3 GitHub release notes and checksums](https://github.com/jonschwenk/cusp/releases/tag/v1.3)
 
 ## Other Versions And Repository Copy
 

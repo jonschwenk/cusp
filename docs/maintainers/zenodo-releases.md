@@ -4,10 +4,10 @@ This page defines the archival model for official CUSP dataset releases. It is
 written for maintainers preparing or depositing a release.
 
 !!! note "Verified archive status"
-    The existing CUSP Zenodo family contains v1.0, v1.1 and v1.2. Its version
-    chain was checked on 2026-11-05, and every file inside the deposited v1.2
-    ZIP matches the corresponding local archived file byte for byte. The next
-    deposit is v1.3, following public map review in the ingestion issue.
+    The existing CUSP Zenodo family contains v1.0 through v1.3. Its version
+    chain was checked on 2026-11-05. Every file inside the deposited v1.2 and
+    v1.3 ZIPs matches the corresponding local archived file byte for byte.
+    The v1.3 deposit followed approved public map review in the ingestion issue.
 
 ## Existing Version Chain
 
@@ -18,17 +18,24 @@ Continue this family using **New version** on its latest published record.
 | v1.0 | [10.5281/zenodo.22802356](https://doi.org/10.5281/zenodo.22802356) |
 | v1.1 | [10.5281/zenodo.22802827](https://doi.org/10.5281/zenodo.22802827) |
 | v1.2 | [10.5281/zenodo.23171354](https://doi.org/10.5281/zenodo.23171354) |
+| v1.3 | [10.5281/zenodo.23984191](https://doi.org/10.5281/zenodo.23984191) |
 
 The concept DOI is
 [10.5281/zenodo.22802355](https://doi.org/10.5281/zenodo.22802355).
-The v1.2 record uses resource type Dataset and license CC BY 4.0. Preserve the
+The records use resource type Dataset and license CC BY 4.0. Preserve the
 existing reviewed creator order, affiliations, ORCIDs and contributor metadata
 when creating the next draft, subject to any maintainer-approved updates.
 
-The v1.2 deposit contains `v1.2.zip` with the three release files inside a
-`v1.2/` directory. Its contents were verified against `exports/archived/v1.2/`.
+The v1.2 and v1.3 deposits contain a `vX.Y.zip` with the three release files
+inside a `vX.Y/` directory. The v1.3 ZIP has SHA-256
+`448f4d00901642ee2b60cdc467fd099ea61d1363b75f3b8ce1f99a67858918ab`
+and contains the exact files from `exports/archived/v1.3/`. Its public download
+was verified against the local ZIP and every archived member after publication.
+
 The public record establishes the existing metadata and archive structure.
-Authenticated API access still requires a locally configured Zenodo token.
+Deposits can use an authenticated browser session. Authenticated API access
+requires a locally configured Zenodo token. The v1.3 release used the existing
+maintainer browser session and inherited the family's management access.
 
 ## Repository Roles
 
@@ -162,11 +169,11 @@ before starting this sequence. The map requirements are described in
 8. Update `CITATION.cff`, README and documentation links, and notify ARDAC of
    the version DOI and checksums.
 
-The v1.3 GitHub Release already exists. Deposit its exact archived files after
-the public map review is approved. Record the new Zenodo DOI in current
-citation and documentation metadata while retaining the published bundle's
-original bytes. Its `RELEASE_INFO.md` describes the hosting status when the
-GitHub release was created.
+The v1.3 GitHub Release preceded its Zenodo deposit. The maintainer approved
+the public maps, upload and publication on 2026-11-05. The Zenodo deposit
+contains the exact archived files, and the version DOI is recorded in current
+citation and documentation metadata. Its `RELEASE_INFO.md` describes the
+hosting status when the GitHub release was created.
 
 Metadata-only corrections may be made on a published Zenodo record. Any change
 to data or deposited files requires a new version; never silently replace an
