@@ -5,7 +5,7 @@ source_key = "Petrone_etal_2016"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-08-04"
+last_substantive_update = "2026-11-16"
 source_dataset = '''
 Petrone, Johannes; Sohlenius, Gustav; Johansson, Emma; Lindborg, Tobias;
 Näslund, Jens-Ove; Strömgren, Mårten; Brydsten, Lars. 2016. Using
@@ -33,6 +33,7 @@ known_limitations = [
   "The processed output does not include non-permafrost observations, so absence conditions are not represented directly.",
   "obs_limit is left missing because the workbooks do not provide a consistent usable observation-limit field.",
   "A 2026-08-04 cross-source footprint and coordinate/depth/date audit found no overlap with the retained Jafarov_2016, Moore_et_al_2025, or Patton_2021 GPR observations, so no cross-source rows are removed here.",
+  "Sjoberg_2026_Two_Boat_Lake occupies part of the same catchment and includes positions close to these probe and GPR transects. The August 2011 campaign and the May 2017 spring steel-rod measurements are separate field visits. Retain both sources without a proximity filter.",
 ]
 external_dependencies = []
 notes = ""

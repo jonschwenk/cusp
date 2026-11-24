@@ -6,7 +6,7 @@ source_key = "Veremeeva_etal_2025"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-05-21"
+last_substantive_update = "2026-11-24"
 
 source_dataset = '''
 Veremeeva, Alexandra; Morgenstern, Anne; Gottschalk, Milena; Junger,
@@ -42,6 +42,7 @@ manual_steps = [
 ]
 
 known_limitations = [
+  "MyThaw_2026 Samoylov point visits were screened against 31 ALLena observations in 2021 and 14 in 2022 within 1 km of the site. No same-day candidates were found; preserve the separate visits without cross-source deletion. Distances are candidate screening criteria and do not establish duplicates.",
   "The local raw file is the main ALLena table. It does not include the separate detailed tables for sites with more than three thaw-depth measurements.",
   "For source rows with more than three measurements, CUSP retains only the source-provided mean/min/max/NOBS summary available in the main table.",
   "The method mapping for measurement tape on core uses aug as the closest current CUSP method vocabulary term.",

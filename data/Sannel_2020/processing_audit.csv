@@ -1,0 +1,30 @@
+source,site_id,date,lon,lat,method,pf_observed,thaw_depth,pf_depth,obs_limit,quality_flag_lower_bound_absence,quality_flag_summary_statistic,quality_flag_coord_site_level,quality_flag_coord_source_flagged,quality_flag_date_source_approximate,upstream_measurement,upstream_landscape_unit,decision
+Sannel_2020,T1,2010-09-02,20.901966667,68.462,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Peat plateau edge,retained_bound
+Sannel_2020,T2,2010-09-02,20.90205,68.4621,tp,1,57.0,57.0,,False,True,True,True,False,"57 (57, 57, 58)",Peat plateau,retained_mean
+Sannel_2020,T3,2010-09-02,20.901766667,68.4623,tp,1,54.0,54.0,,False,True,True,True,False,"54 (52, 55, 56)",Peat plateau,retained_mean
+Sannel_2020,T4,2010-09-02,20.901566667,68.462366667,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Depression in the peat plateau,retained_bound
+Sannel_2020,T5,2010-09-02,20.901916667,68.462033333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Lake shoreline,retained_bound
+Sannel_2020,T6,2010-09-02,20.90165,68.462183333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Lake shoreline,retained_bound
+Sannel_2020,T7,2010-09-02,20.901666667,68.4622,tp,1,65.0,65.0,,False,True,True,True,False,"65 (62, 63, 69)",Peat plateau edge,retained_mean
+Sannel_2020,T8,2010-09-02,20.9015,68.4621,tp,,,,,False,False,True,True,False,No data (in water),Lake,excluded_in_water
+Sannel_2020,T9,2010-09-02,20.90255,68.461983333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Fen ,retained_bound
+Sannel_2020,T1,2011-09-03,20.901966667,68.462,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Peat plateau edge,retained_bound
+Sannel_2020,T2,2011-09-03,20.90205,68.4621,tp,1,59.0,59.0,,False,True,True,True,False,"59 (56, 57, 63)",Peat plateau,retained_mean
+Sannel_2020,T3,2011-09-03,20.901766667,68.4623,tp,1,56.0,56.0,,False,True,True,True,False,"56 (55, 55, 57)",Peat plateau,retained_mean
+Sannel_2020,T4,2011-09-03,20.901566667,68.462366667,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Depression in the peat plateau,retained_bound
+Sannel_2020,T5,2011-09-03,20.901916667,68.462033333,tp,,,,,False,False,True,True,False,No data (in water),Lake shoreline,excluded_in_water
+Sannel_2020,T6,2011-09-03,20.90165,68.462183333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Lake shoreline,retained_bound
+Sannel_2020,T7,2011-09-03,20.901666667,68.4622,tp,1,84.0,84.0,,False,True,True,True,False,"84 (74, 76, 100)",Peat plateau edge,retained_mean
+Sannel_2020,T8,2011-09-03,20.9015,68.4621,tp,,,,,False,False,True,True,False,No data (in water),Lake,excluded_in_water
+Sannel_2020,T9,2011-09-03,20.90255,68.461983333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Fen ,retained_bound
+Sannel_2020,T1,2012-08-23,20.901966667,68.462,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Peat plateau edge,retained_bound
+Sannel_2020,T2,2012-08-23,20.90205,68.4621,tp,1,51.0,51.0,,False,True,True,True,False,"51 (49, 51, 52)",Peat plateau,retained_mean
+Sannel_2020,T3,2012-08-23,20.901766667,68.4623,tp,1,47.0,47.0,,False,True,True,True,False,"47 (43, 47, 51)",Peat plateau,retained_mean
+Sannel_2020,T4,2012-08-23,20.901566667,68.462366667,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Depression in the peat plateau,retained_bound
+Sannel_2020,T5,2012-08-23,20.901916667,68.462033333,tp,,,,,False,False,True,True,False,No data (in water),Lake shoreline,excluded_in_water
+Sannel_2020,T6,2012-08-23,20.90165,68.462183333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Lake shoreline,retained_bound
+Sannel_2020,T7,2012-08-23,20.901666667,68.4622,tp,1,57.0,57.0,,False,True,True,True,False,"57 (56, 58, 58)",Peat plateau edge,retained_mean
+Sannel_2020,T8,2012-08-23,20.9015,68.4621,tp,,,,,False,False,True,True,False,No data (in water),Lake,excluded_in_water
+Sannel_2020,T9,2012-08-23,20.90255,68.461983333,tp,0,,,100,True,False,True,True,False,">100 (>100, >100, >100)",Fen ,retained_bound
+Sannel_2020,T1,2005-09-23,20.901966667,68.462,tp,1,75.0,75.0,,False,False,True,True,False,75,Peat plateau edge,retained_installation
+Sannel_2020,T4,2006-09-04,20.901566667,68.462366667,tp,1,115.0,115.0,,False,False,True,True,True,115,Depression in the peat plateau,retained_installation

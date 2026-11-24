@@ -6,7 +6,7 @@ source_key = "CALM"
 release_clearance = "approved"
 permission_basis = "public_repository_terms"
 original_author = "jschwenk + Codex"
-last_substantive_update = "2026-11-05"
+last_substantive_update = "2026-11-24"
 source_dataset = '''
 Streletskiy, Dmitry A; CALM; GTN-P; Wieczorek, Mareike; Heim,
 Birgit; Bartsch, Annett (2025): GTN-P CALM: 35 years of Active Layer
@@ -33,6 +33,8 @@ spatial_handling = [
 ]
 manual_steps = []
 known_limitations = [
+  "MyThaw_2026 adds dated seasonal point measurements at Toolik, Zackenberg and Samoylov monitoring programmes. Retain existing annual CALM summaries and new seasonal points with DO on the new source. Assigned September 1 dates in this export do not establish identity with exact field visits; no cross-source observations are removed.",
+  "Zastruzny_2024's dated 2015 Disko transect is about 2.65 km from CALM_G3 and postdates its four retained 1997-2000 annual observations. Coordinates, dates, and observation support indicate separate campaigns; both are retained.",
   "The v1.3 Yukon_Permafrost_Database thermal boreholes near CALM_C24 share 2010-2014 coverage but have distinct station positions, operators and temperature-derived support versus this 50 m probe grid/transect. Retain existing CALM unchanged; 86 retained Yukon shared-period thermal observations carry DO for contextual dependence. No coordinate-only duplicate removal is made.",
   "This PANGAEA file is an annual site-level time-series export, not the individual CALM grid-node raw measurements.",
   "A small number of event metadata records lack a recoverable method detail and are assigned method = unknown.",
